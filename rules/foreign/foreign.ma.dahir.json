@@ -1,0 +1,55 @@
+{
+  "id": "foreign.ma.dahir",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ma",
+  "tags": [
+    "foreign",
+    "mena",
+    "ma"
+  ],
+  "pattern": "\\b[Dd]ahir\\s+n°\\s*(?P<number>1[-.][0-9]{2}[-.][0-9]{1,4})(?:\\s+du\\s+(?P<hijri>[^()\\n]{4,40}?\\s1[34][0-9]{2})\\s+\\((?P<date>[0-9]{1,2}(?:er)?\\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\\s+(?:19|20)[0-9]{2})\\))?",
+  "priority": 58,
+  "normalize": "Dahir n° {number}",
+  "authority_key": "ma.dahir/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Moroccan dahir citation: Dahir n° 1-YY-NNN du <Hijri date> (<Gregorian date>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check the Secrétariat général du gouvernement (sgg.gov.ma) Bulletin Officiel: dahirs are headed 'Dahir n° 1-YY-NNN du <Hijri> (<Gregorian>)'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Dahir n° 1-58-376 du 3 joumada I 1378 (15 novembre 1958) réglemente les associations.",
+        "spans": [[0, 57]],
+        "groups": {
+          "number": "1-58-376",
+          "hijri": "3 joumada I 1378",
+          "date": "15 novembre 1958"
+        }
+      },
+      {
+        "text": "Voir le dahir n° 1-11-03 portant promulgation.",
+        "spans": [[8, 25]]
+      },
+      {
+        "text": "Dahir n° 1.04.22 du 2004 en vigueur.",
+        "spans": [[0, 17]]
+      }
+    ],
+    "negative": [
+      "Le dahir royal a été publié.",
+      "Dahir n° 58-376 sans le préfixe.",
+      "dahir n° sans numéro."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Dahir prefix is always 1 (royal act). The date example in the first positive is from recollection, not verified."
+}

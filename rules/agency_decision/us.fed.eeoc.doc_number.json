@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.eeoc.doc_number",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.eeoc",
+  "pattern": "\\bEEOC\\s+DOC\\s+(?P<number>[0-9]{10})\\b",
+  "priority": 60,
+  "normalize": "EEOC DOC {number}",
+  "authority_key": "us.eeoc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "labor"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Equal Employment Opportunity Commission (EEOC)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Equal Employment Opportunity Commission (EEOC), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Budnik v. Chertoff, EEOC DOC 0520070154 (2006).",
+        "spans": [
+          [
+            20,
+            39
+          ]
+        ],
+        "groups": {
+          "number": "0520070154"
+        }
+      },
+      {
+        "text": "Smith v. Donahoe, EEOC DOC 0120133080 (2013).",
+        "spans": [
+          [
+            18,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "Compare EEOC DOC 0120142048 with EEOC DOC 0520150345.",
+        "spans": [
+          [
+            8,
+            27
+          ],
+          [
+            33,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The EEOC DOC portal opened in 2006.",
+      "EEOC DOC numbers have 10 digits.",
+      "EEOC docket 0520070154 is sealed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

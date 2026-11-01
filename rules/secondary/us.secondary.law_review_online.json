@@ -1,0 +1,59 @@
+{
+  "id": "us.secondary.law_review_online",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "law_review"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<journal>(?:(?:[A-Z][A-Za-z'’.-]*|&|of|on|in|for|and|the)\\s){0,8}(?:L\\.\\s?(?:Rev|J)\\.|L\\.J\\.)\\s?(?:F\\.|Forum|Online|Sidebar|Bull\\.|Pocket\\s+Part|In\\s+Brief|Dialogue|Discourse|Headnotes))\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\b)?(?:\\s+\\((?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)(?:,\\s+(?P<url>https?://[^\\s<>()\\[\\]]*[^\\s<>()\\[\\].,;:]))?)?",
+  "priority": 55,
+  "normalize": "{volume} {journal} {page}",
+  "authority_key": "journal/{volume}/{journal}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book R30 (Full Citation for Journals, Magazines & Newspaper Articles) and Indigo Book R32.2 (print source with parallel URL) applied to online companions (Harv. L. Rev. F., Yale L.J.F., Colum. L. Rev. Online, Stan. L. Rev. Online, U. Pa. L. Rev. Online)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Jane Roe, Title, 133 Harv. L. Rev. F. 1, 4 (2019).",
+        "spans": [[17, 49]],
+        "groups": {
+          "volume": "133",
+          "journal": "Harv. L. Rev. F.",
+          "page": "1",
+          "pin": "4",
+          "year": "2019"
+        }
+      },
+      {
+        "text": "See 128 Yale L.J.F. 500 (2018), https://www.yalelawjournal.org/forum/example",
+        "spans": [[4, 76]]
+      },
+      {
+        "text": "Under 72 Stan. L. Rev. Online 112, the claim fails.",
+        "spans": [[6, 33]]
+      },
+      {
+        "text": "119 Colum. L. Rev. Online 87, 90 (2019).",
+        "spans": [[0, 39]]
+      }
+    ],
+    "negative": [
+      "The forum ran 133 sessions.",
+      "Online review of 128 cases took a year.",
+      "Harv. L. Rev. online issues number 4."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Outranks us.secondary.law_review so the companion's suffix stays in the journal name."
+}

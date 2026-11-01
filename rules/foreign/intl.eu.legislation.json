@@ -1,0 +1,69 @@
+{
+  "id": "intl.eu.legislation",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?:(?P<author>Council|Commission|European\\s+Parliament\\s+and\\s+(?:of\\s+the\\s+)?Council|Parliament\\s+and\\s+Council)\\s+)?(?P<type>(?:Implementing\\s+|Delegated\\s+)?(?:Regulation|Directive|Decision))\\s+(?:\\((?P<org>EU|EC|EEC|Euratom|EU,\\s+Euratom)\\)\\s+)?(?:No\\.?\\s+)?(?P<number>[0-9]{1,4}/[0-9]{1,4})(?:/(?P<suffix>EU|EC|EEC|Euratom|CFSP|JHA))?\\b",
+  "reject": [
+    "^(?:Regulation|Directive|Decision)\\s+(?:No\\.?\\s+)?[0-9]{1,4}/[0-9]{1,4}$"
+  ],
+  "priority": 60,
+  "normalize": "{type} {number}",
+  "authority_key": "eu.act/{type}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "EU Interinstitutional Style Guide 1.2.1 (Regulation (EU) 2016/679; Directive 2000/31/EC; Council Regulation (EC) No 1/2003); Bluebook R21.9",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the EU Interinstitutional Style Guide, section 1.2 (numbering of acts: Regulation (EU) 2016/679, Directive 2000/31/EC) and Bluebook R21.9.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Regulation (EU) 2016/679 of the European Parliament and of the Council.",
+        "spans": [[4, 28]],
+        "groups": {
+          "type": "Regulation",
+          "org": "EU",
+          "number": "2016/679"
+        }
+      },
+      {
+        "text": "Council Regulation 1/2003, 2003 O.J. (L 1) 1 (EC).",
+        "spans": [[0, 25]]
+      },
+      {
+        "text": "The e-Commerce Directive 2000/31/EC applies.",
+        "spans": [[15, 35]]
+      },
+      {
+        "text": "Commission Implementing Decision (EU) 2016/1250 (Privacy Shield).",
+        "spans": [[0, 47]]
+      },
+      {
+        "text": "Council Directive 93/13/EEC on unfair terms.",
+        "spans": [[0, 27]]
+      },
+      {
+        "text": "Regulation (EC) No 1907/2006 (REACH).",
+        "spans": [[0, 28]]
+      }
+    ],
+    "negative": [
+      "Regulation 12/34 of the city code.",
+      "The council decision of 2016 was final.",
+      "Directive 7 of the handbook."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A bare `Regulation 12/34` is vetoed: it needs an issuing institution, an (EU)/(EC) marker or a /EC-style suffix."
+}

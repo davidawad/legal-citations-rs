@@ -1,0 +1,42 @@
+{"start": 38, "end": 53, "kind": "docket", "jurisdiction": "us.fl.sup", "text": "No. SC2024-1135", "normalized": "No. SC2024-1135", "form": "docket number"}
+{"start": 242, "end": 252, "kind": "court_rule", "jurisdiction": "us.fl", "text": "rule 3.851", "normalized": "Fla. R. Crim. P. 3.851", "form": "prose section reference", "optional": true, "note": "Florida criminal rule named without its code"}
+{"start": 298, "end": 329, "kind": "constitution", "jurisdiction": "us.fl", "text": "art. V, § 3(b)(1), Fla. Const.", "normalized": "Fla. Const. art. V, § 3(b)(1)", "form": "constitution"}
+{"start": 687, "end": 709, "kind": "case", "jurisdiction": "us.scotus", "text": "373 U.S. 83, 87 (1963)", "normalized": "373 U.S. 83", "form": "U.S. Reports", "note": "Brady v. Maryland named earlier, separated by words"}
+{"start": 1117, "end": 1164, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Jones v. State, 212 So. 3d\n321, 325 (Fla. 2017)", "normalized": "212 So. 3d 321", "form": "regional reporter"}
+{"start": 4270, "end": 4294, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Jones, 212 So. 3d at 326", "normalized": "212 So. 3d at 326", "form": "short case (at)"}
+{"start": 8827, "end": 8848, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Brady, 373 U.S. at 87", "normalized": "373 U.S. at 87", "form": "short case (at)"}
+{"start": 8859, "end": 8901, "kind": "case", "jurisdiction": "us.scotus", "text": "Kyles v. Whitley, 514 U.S. 419, 433 (1995)", "normalized": "514 U.S. 419", "form": "U.S. Reports"}
+{"start": 9045, "end": 9093, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Rogers v.\nState, 782 So. 2d 373, 378 (Fla. 2001)", "normalized": "782 So. 2d 373", "form": "regional reporter"}
+{"start": 9103, "end": 9148, "kind": "case", "jurisdiction": "us.scotus", "text": "Strickler v. Greene,\n527 U.S. 263, 281 (1999)", "normalized": "527 U.S. 263", "form": "U.S. Reports"}
+{"start": 9483, "end": 9533, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Sheppard v. State, 338 So. 3d 803, 827 (Fla. 2022)", "normalized": "338 So. 3d 803", "form": "regional reporter"}
+{"start": 9543, "end": 9592, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Duckett v. State, 231 So. 3d 393, 400 (Fla. 2017)", "normalized": "231 So. 3d 393", "form": "regional reporter"}
+{"start": 9672, "end": 9732, "kind": "case", "jurisdiction": "us.fed.app.ca11", "text": "Scott\nv. United States, 890 F.3d 1239, 1251 (11th Cir. 2018)", "normalized": "890 F.3d 1239", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9979, "end": 10030, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Johnson v. State, 135 So. 3d\n1002, 1028 (Fla. 2014)", "normalized": "135 So. 3d 1002", "form": "regional reporter"}
+{"start": 10040, "end": 10093, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Lightbourne v. State, 841 So. 2d\n431, 437 (Fla. 2003)", "normalized": "841 So. 2d 431", "form": "regional reporter"}
+{"start": 10655, "end": 10708, "kind": "case", "jurisdiction": "us.scotus", "text": "Youngblood v. West\nVirginia, 547 U.S. 867, 869 (2006)", "normalized": "547 U.S. 867", "form": "U.S. Reports"}
+{"start": 10906, "end": 10935, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Strickler, 527 U.S. at\n281-82", "normalized": "527 U.S. at 281", "form": "short case (at)"}
+{"start": 11762, "end": 11814, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "Bowen v.\nMaynard, 799 F.2d 593, 613 (10th Cir. 1986)", "normalized": "799 F.2d 593", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 12025, "end": 12050, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Kyles,\n514 U.S. at 444-45", "normalized": "514 U.S. at 444", "form": "short case (at)"}
+{"start": 12420, "end": 12447, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Sheppard, 338 So.\n3d at 827", "normalized": "338 So. 3d at 827", "form": "short case (at)"}
+{"start": 12694, "end": 12746, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Provenzano v. State, 616 So. 2d 428, 430 (Fla. 1993)", "normalized": "616 So. 2d 428", "form": "regional reporter"}
+{"start": 12941, "end": 12986, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Way v. State, 760 So. 2d 903,\n911 (Fla. 2000)", "normalized": "760 So. 2d 903", "form": "regional reporter"}
+{"start": 13510, "end": 13535, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Rogers, 782 So. 2d at 378", "normalized": "782 So. 2d at 378", "form": "short case (at)"}
+{"start": 13672, "end": 13694, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Kyles, 514 U.S.\nat 438", "normalized": "514 U.S. at 438", "form": "short case (at)"}
+{"start": 14406, "end": 14435, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Strickler, 527 U.S. at 280-82", "normalized": "527 U.S. at 280", "form": "short case (at)"}
+{"start": 14671, "end": 14698, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Sheppard, 338 So. 3d at 827", "normalized": "338 So. 3d at 827", "form": "short case (at)"}
+{"start": 14731, "end": 14778, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Smith v. State, 931 So. 2d 790, 796 (Fla. 2006)", "normalized": "931 So. 2d 790", "form": "regional reporter"}
+{"start": 15099, "end": 15136, "kind": "case", "jurisdiction": "us.scotus", "text": "Smith v. Cain, 565 U.S. 73,\n75 (2012)", "normalized": "565 U.S. 73", "form": "U.S. Reports"}
+{"start": 15178, "end": 15200, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Kyles, 514 U.S. at\n434", "normalized": "514 U.S. at 434", "form": "short case (at)"}
+{"start": 15399, "end": 15425, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Strickler, 527\nU.S. at 289", "normalized": "527 U.S. at 289", "form": "short case (at)"}
+{"start": 15543, "end": 15615, "kind": "case", "jurisdiction": "us.fed.app.ca11", "text": "Smith v.\nSec’y, Dep’t of Corr., 572 F.3d 1327, 1347 (11th Cir. 2009)", "normalized": "572 F.3d 1327", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 15987, "end": 15990, "kind": "id", "jurisdiction": "us.fed.app.ca11", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 16822, "end": 16846, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Jones, 212 So. 3d at 329", "normalized": "212 So. 3d at 329", "form": "short case (at)"}
+{"start": 16977, "end": 17026, "kind": "case", "jurisdiction": "us.fl.sup", "text": "Hoffman v. State, 800 So. 2d 174, 180\n(Fla. 2001)", "normalized": "800 So. 2d 174", "form": "regional reporter"}
+{"start": 17215, "end": 17240, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Rogers, 782 So.\n2d at 383", "normalized": "782 So. 2d at 383", "form": "short case (at)"}
+{"start": 18270, "end": 18432, "kind": "case", "jurisdiction": "us.fed.app.ca6", "text": "Bies v. Sheldon, 775 F.3d\n\n3. As noted, the State relied on these elements of sadism to\nlink Jones to the murder of Keith Gross.\n- 15 -\n\n\f386, 400 (6th Cir. 2014)", "normalized": "775 F.3d 386", "form": "F./F.2d/F.3d/F.4th", "note": "cite interrupted by footnote 3 and page number; span covers raw bytes"}
+{"start": 18587, "end": 18643, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Comstock v. Humphries,\n786 F.3d 701, 713 (9th Cir. 2015)", "normalized": "786 F.3d 701", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 19321, "end": 19348, "kind": "case_short", "jurisdiction": "us.fl.sup", "text": "Sheppard, 338 So. 3d at 827", "normalized": "338 So. 3d at 827", "form": "short case (at)"}
+{"start": 21221, "end": 21270, "kind": "case", "jurisdiction": "us.scotus", "text": "Turner v. United States, 582 U.S. 313, 324 (2017)", "normalized": "582 U.S. 313", "form": "U.S. Reports"}
+{"start": 21305, "end": 21346, "kind": "case", "jurisdiction": "us.scotus", "text": "Cone v. Bell, 556 U.S. 449, 469-70 (2009)", "normalized": "556 U.S. 449", "form": "U.S. Reports"}
+{"start": 21493, "end": 21496, "kind": "id", "jurisdiction": "us.scotus", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 27560, "end": 27589, "kind": "docket", "jurisdiction": "us.fl.trial", "text": "Case No. 052009CF031876AXXXXX", "normalized": "Case No. 052009CF031876AXXXXX", "form": "docket number"}

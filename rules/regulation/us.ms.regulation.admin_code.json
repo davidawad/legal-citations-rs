@@ -1,0 +1,50 @@
+{
+  "id": "us.ms.regulation.admin_code",
+  "kind": "regulation",
+  "jurisdiction": "us.ms",
+  "pattern": "\\b(?P<title>[0-9]{1,2})-(?P<part>[0-9]{1,4})\\s?Miss\\.\\s?(?:Admin\\.\\s?)?Code\\s?R\\.\\s?(?:§\\s?)?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,3})+)",
+  "priority": 65,
+  "normalize": "{title}-{part} Miss. Code R. § {rule}",
+  "authority_key": "us.ms.admin_code/{title}/{part}/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Mississippi) administrative compilation: T-P Miss. Code R. § N.N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Mississippi) and the official Mississippi administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 11-1 Miss. Code R. § 1.1.",
+        "spans": [[4, 29]],
+        "groups": {
+          "title": "11",
+          "part": "1",
+          "rule": "1.1"
+        }
+      },
+      {
+        "text": "The court relied on 23-200 Miss. Admin. Code R. 1.3 in reaching its holding.",
+        "spans": [[20, 51]]
+      },
+      {
+        "text": "Under 30-2601 Miss. Code R. § 3.2.1, the permit fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Mississippi agency adopted 12 new rules in 2020.",
+      "Under Miss. Code R., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

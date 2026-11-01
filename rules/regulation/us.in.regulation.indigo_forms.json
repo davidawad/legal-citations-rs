@@ -1,0 +1,71 @@
+{
+  "id": "us.in.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.in",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sInd\\.\\s?Admin\\.\\s?Code\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Indiana: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Indiana, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 233",
+      "corpus/formats/indigo.jsonl line 234"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 5 Ind. Admin. Code 405 (2015).",
+        "spans": [[4, 26]],
+        "groups": {}
+      },
+      {
+        "text": "See 29 Ind. Admin. Code 327 (2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 9 Ind. Admin. Code 405 (West 2015).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 57 Ind. Admin. Code 327 (West 2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 8 Ind. Admin. Code 738 (5348).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 52 Ind. Admin. Code 651 (5347).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 2 Ind. Admin. Code 738 (West 5348).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 81 Ind. Admin. Code 651 (West 5347).",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The Indiana code was amended in 2015.",
+      "Section 12 of the Indiana rules is long.",
+      "Title five of the Indiana compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

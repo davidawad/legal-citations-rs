@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ae.statute.arabic",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?P<type>مرسوم\\s+بقانون\\s+اتحادي|قانون\\s+اتحادي)\\s+رقم\\s*\\(?\\s*(?P<number>[0-9٠-٩]{1,3})\\s*\\)?\\s+لسنة\\s+(?P<year>[0-9٠-٩]{4})",
+  "priority": 60,
+  "normalize": "{type} رقم {number} لسنة {year}",
+  "authority_key": "ae.law.ar/{type}/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "UAE federal legislation as cited in Arabic: قانون اتحادي رقم N لسنة YYYY and مرسوم بقانون اتحادي رقم N لسنة YYYY",
+    "opened": false,
+    "source_url": "https://elaws.moj.gov.ae",
+    "how_to_verify": "Cannot be opened in this run; verify against the UAE Ministry of Justice legislation portal (elaws.moj.gov.ae) and the Official Gazette.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "قانون اتحادي رقم 5 لسنة 1985 في شأن المعاملات المدنية",
+        "spans": [[0, 46]],
+        "groups": {
+          "number": "5",
+          "year": "1985"
+        }
+      },
+      {
+        "text": "مرسوم بقانون اتحادي رقم (32) لسنة 2021",
+        "spans": [[0, 62]]
+      },
+      {
+        "text": "وفقا للقانون اتحادي رقم ٨ لسنة ٢٠٠٤ المعدل",
+        "spans": [[13, 64]]
+      }
+    ],
+    "negative": [
+      "صدر قانون اتحادي جديد في 1985",
+      "مرسوم بقانون اتحادي بشأن الشركات",
+      "صدر القانون في سنة 1985"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Plain قانون رقم and مرسوم بقانون رقم (no اتحادي) and Arabic Cabinet/Ministerial resolutions are shared with other Arab states and are deliberately not matched."
+}

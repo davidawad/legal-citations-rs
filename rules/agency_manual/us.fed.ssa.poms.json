@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.ssa.poms",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.ssa",
+  "tags": [
+    "social_security"
+  ],
+  "pattern": "\\bPOMS\\s+(?P<part>DI|SI|GN|RS|HI|SL|NL|RM|PR|VB|DM|EM|TC|MS)\\s+(?P<section>[0-9]{5}\\.[0-9]{3}[A-Z]?(?:\\.[A-Z0-9]+)*)",
+  "priority": 60,
+  "normalize": "POMS {part} {section}",
+  "authority_key": "us.poms/{part}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "SSA Program Operations Manual System (`POMS DI 24515.061`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open POMS at https://secure.ssa.gov/apps10/poms.nsf and compare the part and section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The agency's own guidance is POMS DI 24515.061.",
+        "spans": [
+          [
+            29,
+            46
+          ]
+        ],
+        "groups": {
+          "part": "DI",
+          "section": "24515.061"
+        }
+      },
+      {
+        "text": "See POMS SI 00810.010.",
+        "spans": [
+          [
+            4,
+            21
+          ]
+        ]
+      },
+      {
+        "text": "Compare POMS GN 03104.200 with POMS RS 00615.020.",
+        "spans": [
+          [
+            8,
+            25
+          ],
+          [
+            31,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The POMS was updated.",
+      "POMS DI",
+      "POMS DI 245"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

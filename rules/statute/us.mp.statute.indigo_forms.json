@@ -1,0 +1,54 @@
+{
+  "id": "us.mp.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.mp",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sN\\.\\s?Mar\\.\\s?I\\.\\s?Code\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Northern Mariana Islands: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Northern Mariana Islands, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 874"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 49 N. Mar. I. Code § 57 (2015).",
+        "spans": [[4, 28]],
+        "groups": {}
+      },
+      {
+        "text": "See 13 N. Mar. I. Code § 9 (2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 72 N. Mar. I. Code § 81 (5348).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 46 N. Mar. I. Code § 2 (5347).",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The Northern Mariana Islands code was amended in 2015.",
+      "Section 12 of the Northern Mariana Islands rules is long.",
+      "Title five of the Northern Mariana Islands compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

@@ -1,0 +1,62 @@
+{"start": 162, "end": 205, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4) of the New DIFC Court’s Law", "normalized": "Art 31(4) DIFC Courts Law", "form": "DIFC/UAE law"}
+{"start": 352, "end": 360, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC 45.2", "normalized": "RDC 45.2", "form": "DIFC rule (RDC)"}
+{"start": 428, "end": 461, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 34 of New DIFC Courts Law", "normalized": "Art 34 DIFC Courts Law", "form": "DIFC/UAE law"}
+{"start": 466, "end": 472, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC 44", "normalized": "RDC 44", "form": "DIFC rule (RDC)"}
+{"start": 517, "end": 522, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC 4", "normalized": "RDC 4", "form": "DIFC rule (RDC)"}
+{"start": 1721, "end": 1742, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "Part 44.75 of the RDC", "normalized": "RDC 44.75", "form": "DIFC rule (RDC)"}
+{"start": 2050, "end": 2083, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article (29) of the New Court Law", "normalized": "Art 29 DIFC Courts Law", "form": "DIFC/UAE law"}
+{"start": 2107, "end": 2120, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article (29)B", "normalized": "Art 29(B) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 2363, "end": 2370, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "Part 50", "normalized": "RDC Part 50", "form": "prose section reference", "optional": true}
+{"start": 2406, "end": 2416, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 29", "normalized": "Art 29 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 2498, "end": 2508, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31", "normalized": "Art 31 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 2638, "end": 2651, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 2653, "end": 2666, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(2)", "normalized": "Art 31(2) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 2967, "end": 2980, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 3285, "end": 3295, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 29", "normalized": "Art 29 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 3722, "end": 3732, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31", "normalized": "Art 31 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 3787, "end": 3797, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 29", "normalized": "Art 29 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 3911, "end": 3918, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "Part 50", "normalized": "RDC Part 50", "form": "prose section reference", "optional": true}
+{"start": 3987, "end": 4000, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 24(G)", "normalized": "Art 24(G) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 4152, "end": 4163, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 4216, "end": 4227, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 4538, "end": 4549, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 4782, "end": 4849, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Meydan Group LLC v Banyan Tree Corporate Pte Ltd [2014] DIFC CA 005", "normalized": "[2014] DIFC CA 005", "form": "DIFC case"}
+{"start": 4866, "end": 4923, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "DNB Bank ASA v Gulf Eyadah Corporation [2015] DIFC CA 007", "normalized": "[2015] DIFC CA 007", "form": "DIFC case"}
+{"start": 4942, "end": 4986, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Trafigura Pte Ltd v Gupta [2025] DIFC CA 001", "normalized": "[2025] DIFC CA 001", "form": "DIFC case", "note": "footnote number 18 glued after the span"}
+{"start": 5047, "end": 5124, "kind": "foreign", "jurisdiction": "foreign.gb", "text": "Adare Finance DAC v Yellowstone Capital Management SA [2021] EWHC 1680 (Comm)", "normalized": "[2021] EWHC 1680 (Comm)", "form": "English case"}
+{"start": 5129, "end": 5171, "kind": "foreign", "jurisdiction": "foreign.gb", "text": "Schefenacker v Horvat [2020] EWHC 506 (Ch)", "normalized": "[2020] EWHC 506 (Ch)", "form": "English case"}
+{"start": 5615, "end": 5626, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 6158, "end": 6169, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 6668, "end": 6681, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 6719, "end": 6732, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 6874, "end": 6910, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Judicial Authority Law No 16 of 2011", "normalized": "Dubai Law No 16 of 2011", "form": "DIFC/UAE law"}
+{"start": 7383, "end": 7468, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Serene Resources DMCC v Energen DMCC (CJT Application No. 002/2025, 2 September 2025)", "normalized": "CJT Application No. 002/2025", "form": "DIFC case", "note": "Joint/Conflict of Jurisdiction Tribunal decision cited by application number and date"}
+{"start": 7936, "end": 8080, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Techteryx Ltd (1) Aria Commodities DMCC (2) Mashreq Bank PSC (3) Emirates Nbd Bank PJSC (4) Abu Dhabi Islamic Bank PJSC [2025] DIFC DEC 001/2025", "normalized": "[2025] DIFC DEC 001/2025", "form": "DIFC case"}
+{"start": 8970, "end": 8976, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Meydan", "normalized": "[2014] DIFC CA 005", "form": "short case (at)", "optional": true, "note": "defined case name alone in a list of authorities"}
+{"start": 9035, "end": 9043, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "DNB Bank", "normalized": "[2015] DIFC CA 007", "form": "short case (at)", "optional": true, "note": "defined case name alone in a list of authorities"}
+{"start": 9115, "end": 9237, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Carmon Reestrutura-engenharis E Servicos Tecnios Especiais, (Su) LDA v Antonio Joao Catete Lopes Cuenda [2014] DIFC CA 003", "normalized": "[2014] DIFC CA 003", "form": "DIFC case"}
+{"start": 9254, "end": 9263, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Trafigura", "normalized": "[2025] DIFC CA 001", "form": "short case (at)", "optional": true, "note": "case name alone in a list of authorities"}
+{"start": 9265, "end": 9307, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Lateef v Liela & Others [2020] ARB 21/2020", "normalized": "[2020] ARB 21/2020", "form": "DIFC case"}
+{"start": 9390, "end": 9441, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Ozias & Anor v Obadiah and Anor [2025] ENF 269/2023", "normalized": "[2025] ENF 269/2023", "form": "DIFC case"}
+{"start": 9507, "end": 9553, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Oskar v Olindo and Ors [2024] DIFC CA 009/2024", "normalized": "[2024] DIFC CA 009/2024", "form": "DIFC case"}
+{"start": 10337, "end": 10350, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 10379, "end": 10397, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "Part 50 of the RDC", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 10404, "end": 10413, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC 45.23", "normalized": "RDC 45.23", "form": "DIFC rule (RDC)", "note": "could be RDC 45.2 with a glued footnote 3, but footnote numbering here runs 6-22, so read as rule 45.23"}
+{"start": 11076, "end": 11089, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 11662, "end": 11672, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 29", "normalized": "Art 29 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 11695, "end": 11708, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 15(3)", "normalized": "Art 15(3) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 12018, "end": 12028, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31", "normalized": "Art 31 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 12376, "end": 12397, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 15(1) and (3)", "normalized": "Art 15(1), (3) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 12917, "end": 12926, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Trafigura", "normalized": "[2025] DIFC CA 001", "form": "short case (at)", "optional": true, "note": "case name alone, no pin"}
+{"start": 13226, "end": 13258, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 14A(2), (3), (5) and (6)", "normalized": "Art 14A(2), (3), (5), (6) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 13536, "end": 13549, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 15(4)", "normalized": "Art 15(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 13893, "end": 13903, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31", "normalized": "Art 31 DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 13924, "end": 13937, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(1)", "normalized": "Art 31(1) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 14051, "end": 14064, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 29(4)", "normalized": "Art 29(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 14170, "end": 14183, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 14335, "end": 14348, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 15749, "end": 15762, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 15934, "end": 15945, "kind": "court_rule", "jurisdiction": "foreign.ae", "text": "RDC Part 50", "normalized": "RDC Part 50", "form": "DIFC rule (RDC)"}
+{"start": 15972, "end": 15985, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Article 31(4)", "normalized": "Art 31(4) DIFC Courts Law", "form": "prose section reference", "optional": true}
+{"start": 16164, "end": 16179, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Carmon at [155]", "normalized": "[2014] DIFC CA 003 at [155]", "form": "short case (at)"}
+{"start": 16196, "end": 16214, "kind": "foreign", "jurisdiction": "foreign.ae", "text": "Trafigura at [136]", "normalized": "[2025] DIFC CA 001 at [136]", "form": "short case (at)"}

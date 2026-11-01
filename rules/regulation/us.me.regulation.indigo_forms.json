@@ -1,0 +1,54 @@
+{
+  "id": "us.me.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.me",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sMe\\.\\s?Code\\sR\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Maine: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Maine, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 321"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 5-57-49 Me. Code R. § 33 (LexisNexis 2015).",
+        "spans": [[4, 29]],
+        "groups": {}
+      },
+      {
+        "text": "See 45-25-73 Me. Code R. § 81 (LexisNexis 2014).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 8-81-72 Me. Code R. § 66 (LexisNexis 5348).",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 78-58-16 Me. Code R. § 14 (LexisNexis 5347).",
+        "spans": [[4, 30]]
+      }
+    ],
+    "negative": [
+      "The Maine code was amended in 2015.",
+      "Section 12 of the Maine rules is long.",
+      "Title five of the Maine compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

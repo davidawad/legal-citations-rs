@@ -1,0 +1,59 @@
+{
+  "id": "foreign.uk.regnal_statute",
+  "kind": "foreign",
+  "jurisdiction": "foreign.gb",
+  "tags": [
+    "foreign",
+    "uk"
+  ],
+  "pattern": "\\b(?P<regnal>[0-9]{1,2}(?:\\s*&\\s*[0-9]{1,2})?)\\s+(?P<monarch>Geo\\.|Vict\\.|Edw\\.|Eliz\\.|W\\.\\s?&\\s?M\\.|Will\\.|Wm\\.|Jac\\.|Car\\.|Hen\\.|Ric\\.|Anne|Phil\\.\\s?&\\s?M\\.|Ph\\.\\s?&\\s?M\\.)(?:\\s+(?P<ordinal>[0-9]|I{1,3}|IV|V|VI{1,3}|VIII))?,?\\s+(?:c|ch|cap)\\.?\\s+(?P<chapter>[0-9]{1,3})\\b(?:,\\s+§§?\\s*(?P<section>[0-9]{1,3}))?",
+  "priority": 60,
+  "normalize": "{regnal} {monarch}, c. {chapter}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (United Kingdom: older statutes cited by regnal year, <regnal year> <monarch> <ordinal>, c. <chapter>) and OSCOLA 2.4.1",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (United Kingdom, statutes before 1963) and OSCOLA (4th ed.) 2.4.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Children and Young Person's Act of 1933, 23 Geo. 5, ch. 12, prevented execution.",
+        "spans": [[41, 58]],
+        "groups": {
+          "regnal": "23",
+          "monarch": "Geo.",
+          "ordinal": "5",
+          "chapter": "12"
+        }
+      },
+      {
+        "text": "Parliament enacted the Criminal Justice Act, 11 & 12 Geo. 6, ch. 58.",
+        "spans": [[45, 67]]
+      },
+      {
+        "text": "Bill of Rights, 1 W. & M., ch. 2, § 10.",
+        "spans": [[16, 39]]
+      },
+      {
+        "text": "Statute of Frauds, 29 Car. 2, c. 3 (1677).",
+        "spans": [[19, 34]]
+      }
+    ],
+    "negative": [
+      "In 1933 George 5 reigned.",
+      "The Geo. Society met 23 times.",
+      "Chapter 12 of the Geo. book."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: the same regnal year and chapter recur across sessions; the year of enactment disambiguates and is not part of the form."
+}

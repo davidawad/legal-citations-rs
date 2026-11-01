@@ -1,0 +1,54 @@
+{
+  "id": "foreign.il.nevo",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\((?:פורסם\\s+בנבו|פורסם\\s+בתקדין|נבו|תקדין|Nevo|Takdin|published\\s+in\\s+Nevo|Nevo\\s+database)[,:]?\\s+(?P<date>[0-9]{1,2}\\.[0-9]{1,2}\\.(?:19|20)[0-9]{2})\\)",
+  "priority": 50,
+  "normalize": "(Nevo {date})",
+  "authority_key": "il.nevo/{date}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Nevo/Takdin database publication parenthetical: (פורסם בנבו, d.m.yyyy)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check any Israeli brief or judgment: unreported decisions end with (פורסם בנבו, <date>).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ע\"א 1234/05 כהן נ' לוי (פורסם בנבו, 12.3.2015).",
+        "spans": [[32, 64]],
+        "groups": {
+          "date": "12.3.2015"
+        }
+      },
+      {
+        "text": "Cohen v. Levi (Nevo, 1.1.2016).",
+        "spans": [[14, 30]]
+      },
+      {
+        "text": "נקבע (פורסם בתקדין 30.11.2012) כי כך.",
+        "spans": [[9, 45]]
+      }
+    ],
+    "negative": [
+      "The Nevo database is paid.",
+      "(Nevo, soon) is vague.",
+      "(פורסם בנבו) ללא תאריך."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Only the publication parenthetical is matched, not the case it follows."
+}

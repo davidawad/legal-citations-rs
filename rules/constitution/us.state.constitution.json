@@ -1,0 +1,51 @@
+{
+  "id": "us.state.constitution",
+  "kind": "constitution",
+  "jurisdiction": "us.state",
+  "pattern": "\\b(?P<state>(?:[A-Z][a-z]{1,10}\\.|N\\.\\s?[A-Z]\\.|[A-Z][a-z]{2,12}|S\\.\\s?[CD]\\.)(?:\\s[A-Z][a-z]{1,10}\\.)?)\\s+Const\\.\\s*(?P<part>art|amend)\\.\\s*(?P<number>[IVXLC]+|[0-9]+)(?:\\s*,\\s*§\\s*(?P<section>[0-9]+[a-z]?))?",
+  "priority": 40,
+  "normalize": "{state} Const. {part}. {number}",
+  "authority_key": "us.state.const/{state}/{part}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 11 and T1 (state constitutions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 11 and T1 state entries.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cal. Const. art. I, § 7.",
+        "spans": [[0, 28]],
+        "groups": {
+          "state": "See Cal.",
+          "part": "art",
+          "number": "I",
+          "section": "7"
+        }
+      },
+      {
+        "text": "The court relied on N.J. Const. art. I, ¶ 1 in reaching its holding.",
+        "spans": [[20, 38]]
+      },
+      {
+        "text": "Under Tex. Const. art. 1, § 19, the claim fails.",
+        "spans": [[0, 31]]
+      }
+    ],
+    "negative": [
+      "The club's constitution was amended in 2020.",
+      "Article 5 of the contract governs disputes.",
+      "The state constitution convention met in 1912."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State token is an abbreviation; authority key keeps it as written."
+}

@@ -1,0 +1,79 @@
+{
+  "id": "us.fed.dist.local_rule_with_court",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?P<court>(?:[NSEWCM]\\.\\s?D\\.|D\\.)\\s?(?:[A-Z][a-z]{1,6}\\.|[A-Z]\\.(?:\\s?[A-Z]\\.)+)(?:\\s?[A-Z][a-z]{1,6}\\.)?)\\s+(?P<label>(?:(?:Civ\\.|Civil|Crim\\.|Criminal|Patent|Pat\\.|Bankr\\.|ADR|Adm\\.)\\s+)?(?:L\\.\\s?R\\.|LR|L\\.\\s?(?:Civ\\.|Cr\\.|Crim\\.|Pat\\.)\\s?R\\.|LCvR|LCrR|LCR|LRCiv|LRCrim|LPR|Local\\s+(?:Civ(?:il|\\.)\\s+|Crim(?:inal|\\.)\\s+|Patent\\s+|Bankr(?:uptcy|\\.)\\s+)?R(?:ule|\\.)))\\s?(?P<rule>(?:CV-|CR-)?[0-9]+(?:[.\\-][0-9]+)*[A-Za-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 58,
+  "normalize": "{court} {label} {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (local rules, with the court named)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the district's local rules on its uscourts.gov site and compare the rule label and numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See C.D. Cal. L.R. 7-3.",
+        "spans": [
+          [
+            4,
+            22
+          ]
+        ],
+        "groups": {
+          "court": "C.D. Cal.",
+          "rule": "7-3"
+        }
+      },
+      {
+        "text": "Briefing is limited by N.D. Cal. Civ. L.R. 7-3(a) and D. Del. LR 7.1.1.",
+        "spans": [
+          [
+            23,
+            49
+          ],
+          [
+            54,
+            70
+          ]
+        ]
+      },
+      {
+        "text": "Compare S.D.N.Y. Local Civ. R. 56.1 with E.D. Tex. Local Rule CV-7(h) and D.D.C. LCvR 7(m).",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            69
+          ],
+          [
+            74,
+            90
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The C.D. Cal. local rules are long.",
+      "N.D. Cal. Civ. L.R. pages",
+      "D. Del. LR guidance"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

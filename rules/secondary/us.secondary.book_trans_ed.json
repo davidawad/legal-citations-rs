@@ -1,0 +1,56 @@
+{
+  "id": "us.secondary.book_trans_ed",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<title>[A-Z][^,()]{1,120}?)(?:\\s+(?P<page>[0-9]{1,5}))?\\s+\\((?P<contributor>[A-Z][^()]{1,60}?)\\s+(?P<role>trans\\.|eds?\\.),\\s*(?:(?P<publisher>[A-Z][^()]{0,60}?)\\s+)?(?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)(?:\\s+\\((?P<original_year>[0-9]{3,4})\\))?",
+  "reject_before": [
+    "(?:^|[^,\\s])\\s*$"
+  ],
+  "priority": 20,
+  "normalize": "{title} ({contributor} {role}, {year})",
+  "authority_key": "book/{title}/{year}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.75,
+  "provenance": {
+    "encodes": "Indigo Book R28 (Full Citation for Books & Non-Periodicals): <author>, <title> (<name> trans.|ed., <publisher> <year>) (<orig. year>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Gabriel García Márquez, One Hundred Years of Solitude (Gregory Rabassa trans., Harper & Row 2003) (1967).",
+        "spans": [[26, 106]],
+        "groups": {
+          "title": "One Hundred Years of Solitude",
+          "contributor": "Gregory Rabassa",
+          "role": "trans.",
+          "publisher": "Harper & Row",
+          "year": "2003",
+          "original_year": "1967"
+        }
+      },
+      {
+        "text": "Alexis de Tocqueville, Democracy in America 52 (Harvey C. Mansfield & Delba Winthrop trans., 2000) (1835).",
+        "spans": [[23, 105]]
+      },
+      {
+        "text": "James Madison, The Federalist No. 10 (Clinton Rossiter ed., 1961).",
+        "spans": [[15, 65]]
+      }
+    ],
+    "negative": [
+      "Gregory Rabassa translated it in 2003.",
+      "The editors (Levy and Atwan) chose 2015 essays.",
+      "Harper & Row printed 2003 copies."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

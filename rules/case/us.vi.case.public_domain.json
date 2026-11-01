@@ -1,0 +1,51 @@
+{
+  "id": "us.vi.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.vi",
+  "pattern": "\\b(?P<year>20(?:19|[2-9][0-9]))\\s+(?P<court>VI(?:\\s+Super)?)\\s+(?P<number>[0-9]{1,3})(?P<suffix>U?(?:M(?:-[0-9])?|W)?)\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.vi.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "V.I. Sup. Ct. R. 106(d), Promulgation No. 2018-008 (opinions from January 1, 2019: year, VI or VI Super, number; U, M and W suffixes)",
+    "opened": true,
+    "source_url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Promolugation%20Orders/S.Ct.Prom.20180008%20Full2.pdf",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Doe v. Roe, 2019 VI 22, ¶¶ 13-14.",
+        "spans": [[12, 22]],
+        "groups": {
+          "year": "2019",
+          "court": "VI",
+          "number": "22",
+          "suffix": ""
+        }
+      },
+      {
+        "text": "See People v. Smith, 2020 VI Super 45, ¶ 9.",
+        "spans": [[21, 37]]
+      },
+      {
+        "text": "Jones v. Brown, 2019 VI 1U.",
+        "spans": [[16, 26]]
+      }
+    ],
+    "negative": [
+      "Super Bowl VI drew 2019 fans in 22 states.",
+      "In 2019 the VI team scored 22 points.",
+      "Chapter VI of the 2020 report has 45 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet. Years before 2019 are not matched: the system began January 1, 2019."
+}

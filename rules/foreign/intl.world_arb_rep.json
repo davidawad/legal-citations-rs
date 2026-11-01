@@ -1,0 +1,54 @@
+{
+  "id": "intl.world_arb_rep",
+  "kind": "foreign",
+  "jurisdiction": "intl",
+  "tags": [
+    "international",
+    "arbitration"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+World\\s+Arb\\.\\s+Rep\\.\\s+\\((?P<issue>[0-9]{1,3})\\)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} World Arb. Rep. ({issue}) {page}",
+  "authority_key": "world_arb_rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): World Arbitration Reporter, <vol> World Arb. Rep. (<issue>) <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Smith v. Brown, 4 World Arb. Rep. (12) 3301 (1990).",
+        "spans": [[16, 43]],
+        "groups": {
+          "volume": "4",
+          "issue": "12",
+          "page": "3301"
+        }
+      },
+      {
+        "text": "The tribunal relied on 4 World Arb. Rep. (12) 3301, 3305–3307 in its award.",
+        "spans": [[23, 63]]
+      },
+      {
+        "text": "Under 2 World Arb. Rep. (3) 1101, the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "The world arbitration report listed 12 cases.",
+      "World Arb. Rep. issues ran 4 a year.",
+      "Rep. 12 voted on 3301 bills."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

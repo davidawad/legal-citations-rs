@@ -1,0 +1,70 @@
+{
+  "id": "us.uniform.court_rule.evidence",
+  "kind": "court_rule",
+  "jurisdiction": "us.uniform",
+  "pattern": "\\bUnif\\.\\s?R\\.\\s?Evid\\.\\s?(?P<rule>[0-9]{3,4}(?:\\.[0-9])?)(?P<sub>(?:\\([a-z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "Unif. R. Evid. {rule}{sub}",
+  "authority_key": "us.uniform.evid/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "uniform"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, R18.1 (Rules of Evidence and Procedure)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R18.1 (Rules of Evidence and Procedure), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Competency is governed by Unif. R. Evid. 601.",
+        "spans": [
+          [
+            26,
+            44
+          ]
+        ],
+        "groups": {
+          "rule": "601"
+        }
+      },
+      {
+        "text": "Business records come in under Unif. R. Evid. 803(6).",
+        "spans": [
+          [
+            31,
+            52
+          ]
+        ]
+      },
+      {
+        "text": "Compare Unif. R. Evid. 702 with Unif. R. Evid. 1001.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Unif. R. Evid. drafters met in 1953.",
+      "Uniform rules of evidence 601 and 602 differ.",
+      "Rule 601 of the uniform rules is short."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,58 @@
+{
+  "id": "intl.eu.cjeu_case_reported",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\bCase\\s+(?P<number>(?:[CT]-)?[0-9]{1,4}/[0-9]{2}(?:\\s+P)?),\\s+(?P<name>[^,;()\\[\\]]{3,160}?),\\s+(?P<reporter>\\[(?:19|20)[0-9]{2}\\]\\s+[0-9]{1,2}\\s+C\\.\\s?M\\.\\s?L\\.\\s?R\\.|(?:19|20)[0-9]{2}\\s+(?:E\\.\\s?C\\.\\s?R\\.|C\\.\\s?M\\.\\s?L\\.\\s?R\\.|CEC\\s+\\(CCH\\)|Common\\s+Mkt\\.\\s+Rep\\.\\s+\\(CCH\\)\\s+¶))\\s+(?P<page>(?:I{1,2}-)?[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 65,
+  "normalize": "Case {number}, {name}, {reporter} {page}",
+  "authority_key": "eu.case/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): <case no.>, <case name>, <year> E.C.R. <page> (or C.M.L.R., Common Mkt. Rep. (CCH), CEC (CCH), in that order)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Case C-213/89, R v. Sec’y of State for Transp. ex parte Factortame Ltd., [1990] 3 C.M.L.R. 375.",
+        "spans": [[0, 96]],
+        "groups": {
+          "number": "C-213/89",
+          "name": "R v. Sec’y of State for Transp. ex parte Factortame Ltd.",
+          "page": "375"
+        }
+      },
+      {
+        "text": "See Case C-6/90, Francovich v. Italy, 1991 E.C.R. I-5357.",
+        "spans": [[4, 56]]
+      },
+      {
+        "text": "Case 26/62, Van Gend en Loos v. Nederlandse Administratie der Belastingen, 1963 E.C.R. 1.",
+        "spans": [[0, 88]]
+      },
+      {
+        "text": "Case 120/78, Rewe-Zentral AG v. Bundesmonopolverwaltung für Branntwein, 1979 Common Mkt. Rep. (CCH) ¶ 8543.",
+        "spans": [[0, 108]]
+      }
+    ],
+    "negative": [
+      "The case, Francovich, was decided in 1991.",
+      "Case files, boxes 6 to 90, were moved.",
+      "The Factortame case ran 375 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The whole Bluebook EU case cite as one span, so a case number and a reporter separated by the case name read as one citation."
+}

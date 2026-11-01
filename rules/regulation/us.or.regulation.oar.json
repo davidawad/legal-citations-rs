@@ -1,0 +1,49 @@
+{
+  "id": "us.or.regulation.oar",
+  "kind": "regulation",
+  "jurisdiction": "us.or",
+  "pattern": "\\b(?:Or\\.\\s?Admin\\.\\s?R\\.|OAR)\\s?(?P<rule>[0-9]{3}-[0-9]{3}-[0-9]{4})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Or. Admin. R. {rule}{sub}",
+  "authority_key": "us.or.oar/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Oregon) administrative compilation: Or. Admin. R. NNN-NNN-NNNN; local form OAR NNN-NNN-NNNN (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Oregon) and the official Oregon administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Or. Admin. R. 340-041-0001.",
+        "spans": [[4, 30]],
+        "groups": {
+          "rule": "340-041-0001",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on OAR 137-003-0501 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under OAR 340-041-0028(4)(a), the permit fails.",
+        "spans": [[6, 28]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Oregon agency adopted 12 new rules in 2020.",
+      "Under Or. Admin. R., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

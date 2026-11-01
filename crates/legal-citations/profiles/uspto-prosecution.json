@@ -1,0 +1,18 @@
+{
+  "name": "uspto-prosecution",
+  "description": "Patent and trademark prosecution before the USPTO: every USPTO rule, 35 and 15 U.S.C., 37 C.F.R., the Federal Register, USPQ and Federal Circuit and Supreme Court reporters.",
+  "include": [
+    "tag:uspto",
+    "jurisdiction:us.fed.uspto",
+    "rule:us.case.uspq",
+    "rule:us.fed.statute.usc",
+    "rule:us.fed.regulation.cfr",
+    "rule:us.fed.federal_register",
+    "jurisdiction:us.scotus",
+    "jurisdiction:us.fed.app"
+  ],
+  "exclude": [
+    "rule:us.fed.uspto.ptab_exhibit"
+  ],
+  "note": "PTAB exhibit cites are litigation record cites, so they are excluded; use the ptab profile for trials."
+}

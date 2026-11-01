@@ -1,0 +1,57 @@
+{
+  "id": "us.ok.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ok",
+  "pattern": "Okla(?:homa)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?tit\\.\\s*(?P<title>[0-9\\w]+),?\\s*§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Oklahoma) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Oklahoma entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py OKLA pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Okla. Stat. tit. 21, § 701.7.",
+        "spans": [[4, 33]],
+        "groups": {
+          "title": "21",
+          "section": "701.7"
+        }
+      },
+      {
+        "text": "The court relied on Okla. Stat. Ann. tit. 21, § 701.7 in reaching its holding.",
+        "spans": [[20, 54]]
+      },
+      {
+        "text": "Under Okla. Stat. tit. 21, § 701.14, the claim fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "okla",
+    "order": 49,
+    "pattern": "Okla(?:homa)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?tit\\.\\s*(?P<title>[\\d\\w]+),?\\s*§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

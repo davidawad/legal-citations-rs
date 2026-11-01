@@ -1,0 +1,295 @@
+{
+ "schema": "legal-citations-rs.gold-manifest/1",
+ "note": "Gold corpus for cite-eval. Texts are NOT committed: `cite-eval fetch` downloads each url, extracts it as `extraction` says, keeps the `excerpt` (from the first `from` through the first `to` after it), checks sha256 and writes corpus/cache/gold/<id>.txt (gitignored). Labels: corpus/gold/<id>.jsonl, conventions in corpus/gold/README.md. Every label was made by an AI agent (Claude), single rater.",
+ "documents": [
+  {
+   "id": "scotus-tahlequah-v-bond",
+   "title": "City of Tahlequah v. Bond, 595 U.S. 9 (2021) (per curiam)",
+   "court": "U.S. Supreme Court",
+   "category": "scotus",
+   "date": "2021-10-18",
+   "url": "https://www.supremecourt.gov/opinions/21pdf/595us1r2_8njq.pdf",
+   "extraction": "pdftotext",
+   "sha256": "28b8028db44c8168f3e331c2b64c66dffe54a721f98a5caf79fefa532400d76d",
+   "source": "new (supremecourt.gov preliminary print)"
+  },
+  {
+   "id": "scotus-10776818",
+   "title": "Kennedy v. Braidwood Management, Inc.",
+   "court": "U.S. Supreme Court",
+   "category": "scotus",
+   "date": "2025-06-27",
+   "url": "https://storage.courtlistener.com/pdf/2025/06/27/kennedy_v._braidwood_management_inc._1.pdf",
+   "extraction": "pdftotext",
+   "sha256": "9b5d3a7dc8c3ba0da49f41e71774d1e729b43dadc12c680204eadaab4fcd23a7",
+   "source": "corpus/manifest.json scotus-10776818",
+   "excerpt": {
+    "from": "Justice Kavanaugh delivered the opinion of the Court.",
+    "to": "consent of the Senate.” 520 U. S., at 663."
+   }
+  },
+  {
+   "id": "ca5-11042124",
+   "title": "Quality Proc Svc v. Whitney Oil",
+   "court": "5th Cir.",
+   "category": "circuit",
+   "date": "2026-10-21",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/21/quality_proc_svc_v._whitney_oil.pdf",
+   "extraction": "pdftotext",
+   "sha256": "2c5a70e93499c9efd8cbba2e978b51a11e152c86253837d206d644b21d5935dd",
+   "source": "corpus/manifest.json ca5-11042124"
+  },
+  {
+   "id": "ca7-11040773",
+   "title": "John Lewis v. Frank Bisignano",
+   "court": "7th Cir.",
+   "category": "circuit",
+   "date": "2026-10-20",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/20/john_lewis_v._frank_bisignano.pdf",
+   "extraction": "pdftotext",
+   "sha256": "382f224260916a426d19e9f316322ac8f2b7351520e0770c8186cad1a42cc84e",
+   "source": "corpus/manifest.json ca7-11040773"
+  },
+  {
+   "id": "ca9-11038158",
+   "title": "United States v. Anderson",
+   "court": "9th Cir.",
+   "category": "circuit",
+   "date": "2026-10-19",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/19/united_states_v._anderson.pdf",
+   "extraction": "pdftotext",
+   "sha256": "6d4310301081c31af910330ea11522efcb90f94142afc36abae212d89c863487",
+   "source": "corpus/manifest.json ca9-11038158"
+  },
+  {
+   "id": "cafc-10990709",
+   "title": "Teva Pharmaceuticals International Gmbh v. Eli Lilly and Company",
+   "court": "Fed. Cir.",
+   "category": "circuit",
+   "date": "2026-09-30",
+   "url": "https://storage.courtlistener.com/pdf/2026/09/30/teva_pharmaceuticals_international_gmbh_v._eli_lilly_and_company.pdf",
+   "extraction": "pdftotext",
+   "sha256": "5b0ceca204cd3b9f83f76e090baf1de7cf955fee7d82f66358f7d582ee4f16b0",
+   "source": "corpus/manifest.json cafc-10990709"
+  },
+  {
+   "id": "dcd-11042118",
+   "title": "Quarles v. Brown",
+   "court": "D.D.C.",
+   "category": "district",
+   "date": "2026-10-21",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/21/quarles_v._brown.pdf",
+   "extraction": "pdftotext",
+   "sha256": "174790f2ec3ebb18a5757855c1f972bb3cb2891c1fa87953327e6e648b12b3ec",
+   "source": "corpus/manifest.json dcd-11042118"
+  },
+  {
+   "id": "gi-mad-1_25-cv-13452-0",
+   "title": "Lacroix v. Leatherman et al",
+   "court": "D. Mass.",
+   "category": "district",
+   "date": "",
+   "url": "https://www.govinfo.gov/content/pkg/USCOURTS-mad-1_25-cv-13452/pdf/USCOURTS-mad-1_25-cv-13452-0.pdf",
+   "extraction": "pdftotext",
+   "sha256": "4f7fb0272e60169247b3de902e27212683dc2eb63166f304473f96276815feb3",
+   "source": "corpus/manifest.json gi-mad-1_25-cv-13452-0"
+  },
+  {
+   "id": "cal-10983061",
+   "title": "Bonta v. Bianco",
+   "court": "Cal. Sup. Ct.",
+   "category": "state",
+   "date": "2026-09-24",
+   "url": "https://storage.courtlistener.com/pdf/2026/09/24/bonta_v._bianco.pdf",
+   "extraction": "pdftotext",
+   "sha256": "729790a17598a565f73de804d19c91bbae180fc17c7c9e3ed9960721f656e91e",
+   "source": "corpus/manifest.json cal-10983061",
+   "excerpt": {
+    "from": "The state Constitution designates the Attorney General",
+    "to": "(Cal Const., art. V, § 13; id., former\n§ 21.)"
+   }
+  },
+  {
+   "id": "ny-10879076",
+   "title": "Volokh v. James",
+   "court": "N.Y. Ct. App.",
+   "category": "state",
+   "date": "2026-06-23",
+   "url": "https://storage.courtlistener.com/html/2026/06/23/volokh_v._james_1.html",
+   "extraction": "html",
+   "sha256": "f4b68fad1699d82d4ac33fe88b3aeefd34655e5fd225fab43b31a2ab4cd69b9b",
+   "source": "corpus/manifest.json ny-10879076",
+   "excerpt": {
+    "from": "[*1]",
+    "to": "We accordingly answer the first certified question in the affirmative.FN5"
+   }
+  },
+  {
+   "id": "tex-11036931",
+   "title": "Uatp Management, LLC; Uatp Ip, LLC; Ua Attractions, LLC; Rachelle Nurse-Goodly; And Joseph Goodly v. Chiniqua Geter as Next Friend of K.G., a Minor",
+   "court": "Tex. Sup. Ct.",
+   "category": "state",
+   "date": "2026-10-16",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/16/uatp_management_llc_uatp_ip_llc_ua_attractions_llc_rachelle.pdf",
+   "extraction": "pdftotext",
+   "sha256": "61eb293b444103a0ad6518de34cbfe989274e591370a0606b243e531696b39ce",
+   "source": "corpus/manifest.json tex-11036931"
+  },
+  {
+   "id": "fla-11035062",
+   "title": "Henry Lee Jones v. State of Florida",
+   "court": "Fla. Sup. Ct.",
+   "category": "state",
+   "date": "2026-10-15",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/15/henry_lee_jones_v._state_of_florida.pdf",
+   "extraction": "pdftotext",
+   "sha256": "eb052743228dadac3f8eefd29169da20050dc58930f04a8f7776de58e93ba59e",
+   "source": "corpus/manifest.json fla-11035062"
+  },
+  {
+   "id": "ill-10982909",
+   "title": "Chicago Title Land Trust Co. v. Watkin",
+   "court": "Ill. Sup. Ct.",
+   "category": "state",
+   "date": "2026-09-24",
+   "url": "https://storage.courtlistener.com/pdf/2026/09/24/chicago_title_land_trust_co._v._watkin.pdf",
+   "extraction": "pdftotext",
+   "sha256": "26e6d95cd029e72b91fc9178bb07ef35c6cc748aceb88f6d7f030583f3697cdc",
+   "source": "corpus/manifest.json ill-10982909"
+  },
+  {
+   "id": "ohio-11041988",
+   "title": "State v. Dowell",
+   "court": "Ohio Sup. Ct.",
+   "category": "state",
+   "date": "2026-10-21",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/21/state_v._dowell_1.pdf",
+   "extraction": "pdftotext",
+   "sha256": "d127c1f1f83a63752953f690980ae8cb89ac392ed08d4c529baf46747896da3c",
+   "source": "corpus/manifest.json ohio-11041988",
+   "excerpt": {
+    "from": "[Until this opinion appears in the Ohio Official Reports advance sheets, it may be cited as State",
+    "to": "arrives at the hospital for examination."
+   }
+  },
+  {
+   "id": "del-11035319",
+   "title": "Ana Maria Turner v. Lam Research Corporation",
+   "court": "Del. Sup. Ct.",
+   "category": "state",
+   "date": "2026-10-15",
+   "url": "https://storage.courtlistener.com/pdf/2026/10/15/ana_maria_turner_v._lam_research_corporation.pdf",
+   "extraction": "pdftotext",
+   "sha256": "07a19e1336e351464b84cc8dade3cbacbf111b80a44d0b278efcc12ac27223c6",
+   "source": "corpus/manifest.json del-11035319"
+  },
+  {
+   "id": "ptab-ipr2025-00687",
+   "title": "IPR2025-00687, Paper 40 (PTAB)",
+   "court": "PTAB (IPR)",
+   "category": "agency",
+   "date": "",
+   "url": "https://www.uspto.gov/sites/default/files/documents/IPR2025_00687_paper40.pdf",
+   "extraction": "pdftotext",
+   "sha256": "4f1511cd988dec373f0278662f6fbe772d727b24f5e3d5064353ae94e42a6141",
+   "source": "corpus/manifest.json ptab-ipr2025-00687"
+  },
+  {
+   "id": "nlrb-atlantic-veal",
+   "title": "Atlantic Veal & Lamb, Inc., 342 NLRB 418 (2004)",
+   "court": "NLRB",
+   "category": "agency",
+   "date": "2004-06-30",
+   "url": "https://web.archive.org/web/20150602083034id_/https://apps.nlrb.gov/link/document.aspx/09031d458000769e",
+   "extraction": "pdftotext",
+   "source": "new; Internet Archive copy of apps.nlrb.gov/link/document.aspx/09031d458000769e (nlrb.gov timed out)",
+   "sha256": "094b53fd2cd344404480ac6563c54eb4031e57370c76b164d8619e78b4842108",
+   "excerpt": {
+    "from": "On August 19, 2003, Administrative Law Judge D.",
+    "to": "the actual content of the testimony\noffered."
+   }
+  },
+  {
+   "id": "bia-lopez-rico",
+   "title": "Matter of Lopez Rico, 29 I&N Dec. 780 (BIA 2026)",
+   "court": "BIA",
+   "category": "agency",
+   "date": "2026-07-23",
+   "url": "https://www.justice.gov/eoir/media/1453751/dl?inline",
+   "extraction": "pdftotext",
+   "source": "new (justice.gov EOIR volume 29)",
+   "sha256": "c8a35d2127338a30fb5de3c103d7a1276664c9799dcb3496e901fed7234163ae"
+  },
+  {
+   "id": "irs-rr-2023-2",
+   "title": "Rev. Rul. 2023-2",
+   "court": "IRS",
+   "category": "agency",
+   "date": "2023-03-29",
+   "url": "https://www.irs.gov/pub/irs-drop/rr-23-02.pdf",
+   "extraction": "pdftotext",
+   "source": "new (irs.gov irs-drop)",
+   "sha256": "4e8774ef835c24d1588ddc8c7116d37d614dc0f8cac4b910913ac7b6c93d3007"
+  },
+  {
+   "id": "fr-2024-08065",
+   "title": "Retirement Security Rule: Definition of an Investment Advice Fiduciary, 89 Fed. Reg. 32122 (Apr. 25, 2024), preamble excerpt",
+   "court": "DOL EBSA (Federal Register)",
+   "category": "agency",
+   "date": "2024-04-25",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2024-04-25/html/2024-08065.htm",
+   "extraction": "html",
+   "source": "new (govinfo)",
+   "sha256": "6e6a1c4e707f671f0afdb5101c5f46684f92f0b92ba3c80c6a7bf628bd498a84",
+   "excerpt": {
+    "from": "2. Prior Rulemakings",
+    "to": "magistrate judge's report and recommendations."
+   }
+  },
+  {
+   "id": "ylj-forum-tribal-tax",
+   "title": "Christensen & Appleby, State Tax Exemptions for Tribal Cultural Property, Yale L.J. Forum (2026), Part I excerpt",
+   "court": "Yale Law Journal Forum",
+   "category": "secondary",
+   "date": "2026-07-20",
+   "url": "https://yalelawjournal.org/pdf/state-tax-exemptions-for-tribal-cultural-property-1.pdf",
+   "extraction": "pdftotext",
+   "source": "new (yalelawjournal.org)",
+   "sha256": "d5184640e7cfb853021689eedc988c3ef664b59f1b52cfca91f43ca0c427f1c0",
+   "excerpt": {
+    "from": "state taxation on the transfer of culturally",
+    "to": "plays in sustaining Indigenous cultural practices."
+   }
+  },
+  {
+   "id": "uksc-2026-7-boyd",
+   "title": "Boyd v Public Prosecution Service for Northern Ireland [2026] UKSC 7",
+   "court": "UK Supreme Court",
+   "category": "foreign",
+   "date": "2026-02-25",
+   "url": "https://caselaw.nationalarchives.gov.uk/uksc/2026/7/data.html",
+   "extraction": "html",
+   "source": "new (National Archives Find Case Law)",
+   "sha256": "ded98fdf999e8a72ee7eca57ab90cf46f46991505ee4a6b79d6e8dad96d8ff49",
+   "excerpt": {
+    "from": "Hilary Term\n[2026] UKSC 7",
+    "to": "the variation order should remain quashed."
+   }
+  },
+  {
+   "id": "difc-orlagh-v-orchid",
+   "title": "Orlagh v Orchid [2026] DIFC CA 001",
+   "court": "DIFC Court of Appeal",
+   "category": "foreign",
+   "date": "2026-05-06",
+   "url": "https://www.difccourts.ae/rules-decisions/judgments-orders/court-appeal/orlagh-v-orchid-2026-difc-ca-001",
+   "extraction": "html",
+   "source": "new (difccourts.ae)",
+   "sha256": "ffcfc48a85a471f62177a0b29cfd8225ff52401beb12c18eea7ee88ca120caf7",
+   "excerpt": {
+    "from": "The Grounds of Appeal\n\n32.",
+    "to": "such constructions should be preferred.”"
+   }
+  }
+ ]
+}

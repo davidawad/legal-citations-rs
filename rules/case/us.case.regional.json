@@ -1,0 +1,63 @@
+{
+  "id": "us.case.regional",
+  "kind": "case",
+  "jurisdiction": "us.state",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>A\\.(?:\\s?[23]d)?|P\\.(?:\\s?[23]d)?|N\\.\\s?E\\.(?:\\s?[23]d)?|N\\.\\s?W\\.(?:\\s?2d)?|S\\.\\s?E\\.(?:\\s?2d)?|S\\.\\s?W\\.(?:\\s?[23]d)?|So\\.(?:\\s?[23]d)?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (National Reporter System regional reporters) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Smith v. Jones, 100 A.3d 200 (Pa. 2014).",
+        "spans": [[20, 32]],
+        "groups": {
+          "volume": "100",
+          "reporter": "A.3d",
+          "page": "200"
+        }
+      },
+      {
+        "text": "The court relied on Doe v. Roe, 300 P.3d 1 (Cal. 2013) in reaching its holding.",
+        "spans": [[32, 42]]
+      },
+      {
+        "text": "Under Alpha v. Beta, 50 N.E.2d 100 (Ill. 1943), the claim fails.",
+        "spans": [[21, 34]]
+      },
+      {
+        "text": "Plaintiff cites Gamma v. Delta, 900 S.W.2d 5 (Tex. 1995) for this point.",
+        "spans": [[32, 44]]
+      },
+      {
+        "text": "As stated in Eps v. Zeta, 12 So. 3d 4 (Fla. 2009), the rule applies.",
+        "spans": [[26, 37]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

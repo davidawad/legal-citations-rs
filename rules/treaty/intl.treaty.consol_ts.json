@@ -1,0 +1,53 @@
+{
+  "id": "intl.treaty.consol_ts",
+  "kind": "treaty",
+  "jurisdiction": "intl",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,3})\\s+Consol\\.\\s?T\\.\\s?S\\.\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} Consol. T.S. {page}",
+  "authority_key": "consol_ts/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Parry's Consolidated Treaty Series (1648-1919), <vol> Consol. T.S. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Treaty of Paris, Fr.-Gr. Brit., Feb. 10, 1763, 42 Consol. T.S. 279.",
+        "spans": [[32, 66]],
+        "groups": {
+          "date": "Feb. 10, 1763",
+          "volume": "42",
+          "page": "279"
+        }
+      },
+      {
+        "text": "Treaty of Westphalia, Oct. 24, 1648, 1 Consol. T.S. 271.",
+        "spans": [[22, 55]]
+      },
+      {
+        "text": "The court relied on 42 Consol. T.S. 279 in reaching its holding.",
+        "spans": [[20, 39]]
+      }
+    ],
+    "negative": [
+      "The consolidated statement ran 279 pages.",
+      "S. 279 was consolidated with S. 280.",
+      "Consol. Edison serves 42 towns."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

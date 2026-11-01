@@ -1,0 +1,50 @@
+{
+  "id": "us.ar.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.ar",
+  "pattern": "\\b(?P<year>20(?:09|[1-9][0-9]))\\s+(?P<court>Ark\\.(?:\\s+App\\.)?)\\s+(?P<number>[0-9]{1,3})\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.ar.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Ark. Sup. Ct. R. 5-2(b)(3), (d)(2) (decisions after Feb. 14, 2009: year, Ark. or Ark. App., sequential number; page pins)",
+    "opened": true,
+    "source_url": "https://web.archive.org/web/20170130045944id_/https://courts.arkansas.gov/rules-and-administrative-orders/court-rules/rule-5-2-opinions",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Doe v. State, 2009 Ark. App. 318, at 7, 2009 WL 240613, at *8.",
+        "spans": [[14, 32]],
+        "groups": {
+          "year": "2009",
+          "court": "Ark. App.",
+          "number": "318"
+        }
+      },
+      {
+        "text": "See Smith v. Jones, 2015 Ark. 123, at 4.",
+        "spans": [[20, 33]]
+      },
+      {
+        "text": "Under 2020 Ark. 5, the claim fails.",
+        "spans": [[6, 17]]
+      }
+    ],
+    "negative": [
+      "In 2015 Ark. officials met 12 times.",
+      "The 2009 Ark. App. guide is long.",
+      "Little Rock, Ark., hosted 123 events in 2015."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet. Opened in lcr-uc3 via a Wayback Machine copy of the official rule page (the live site refused connections). Years before 2009 are left to the Ark. reporter rule."
+}

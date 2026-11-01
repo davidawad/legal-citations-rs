@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.tax.case.tcm_prentice_hall",
+  "kind": "case",
+  "jurisdiction": "us.fed.tax",
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+T\\.\\s?C\\.\\s?M\\.\\s+\\((?P<publisher>P-H|RIA)\\)\\s+¶\\s?(?P<para>[0-9]{2},[0-9]{3}|(?:19|20)[0-9]{2}-[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "{year} T.C.M. ({publisher}) ¶ {para}",
+  "authority_key": "us.tcm/{publisher}/{para}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "tax"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T1 (Tax Court memorandum decisions, T.C.M. (P-H) and (RIA))",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T1 (Tax Court memorandum decisions, T.C.M. (P-H) and (RIA)), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Brown v. Comm’r, 1989 T.C.M. (P-H) ¶ 89,112.",
+        "spans": [
+          [
+            19,
+            46
+          ]
+        ],
+        "groups": {
+          "year": "1989",
+          "publisher": "P-H",
+          "para": "89,112"
+        }
+      },
+      {
+        "text": "See 1995 T.C.M. (RIA) ¶ 95,343.",
+        "spans": [
+          [
+            4,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "Compare 1990 T.C.M. (P-H) ¶ 90,001 with 2001 T.C.M. (RIA) ¶ 2001-123.",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            70
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The 1989 T.C.M. volume (P-H) is bound.",
+      "T.C.M. (P-H) ¶ 89,112 lacks a year.",
+      "In 1989 the T.C.M. had 112 decisions."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

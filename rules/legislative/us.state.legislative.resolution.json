@@ -1,0 +1,80 @@
+{
+  "id": "us.state.legislative.resolution",
+  "kind": "legislative",
+  "jurisdiction": "us.state",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\b(?P<type>H\\.\\s?J\\.\\s?R\\.|S\\.\\s?J\\.\\s?R\\.|H\\.\\s?C\\.\\s?R\\.|S\\.\\s?C\\.\\s?R\\.|A\\.\\s?C\\.\\s?R\\.|A\\.\\s?J\\.\\s?R\\.|H\\.\\s?R\\.\\s?C\\.|S\\.\\s?R\\.\\s?C\\.|H\\.\\s?J\\.\\s?M\\.|S\\.\\s?J\\.\\s?M\\.)\\s+(?:No\\.\\s*)?(?P<number>[0-9]{1,4})\\b",
+  "reject_before": [
+    "[A-Za-z]\\.$",
+    "[0-9]\\s$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 45,
+  "normalize": "{type} {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 13.2 (state joint and concurrent resolutions)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.2 and the state legislature's resolution numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The voters ratified H.J.R. 12.",
+        "spans": [
+          [
+            20,
+            29
+          ]
+        ],
+        "groups": {
+          "type": "H.J.R.",
+          "number": "12"
+        }
+      },
+      {
+        "text": "See S.J.R. 5; S.C.R. 10.",
+        "spans": [
+          [
+            4,
+            12
+          ],
+          [
+            14,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare A.C.R. 12 with H.C.R. No. 3.",
+        "spans": [
+          [
+            8,
+            17
+          ],
+          [
+            23,
+            35
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "H.J.R. pending",
+      "The S.J.R. vote",
+      "H.J.R. history"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,56 @@
+{
+  "id": "us.fed.rules.supreme_court",
+  "kind": "court_rule",
+  "jurisdiction": "us.scotus",
+  "pattern": "\\b(?:Sup\\.\\s?Ct\\.\\s?R\\.|S\\.\\s?Ct\\.\\s?R\\.|Supreme\\s+Court\\s+Rule)\\s*(?P<rule>(?P<rule_no>[0-9]+)(?:\\.[0-9]+)?)(?P<sub>(?:\\([a-z0-9]{1,4}\\))*)",
+  "reject_before": ["[A-Za-z]'s\\s+$"],
+  "priority": 60,
+  "normalize": "Sup. Ct. R. {rule}",
+  "authority_key": "us.rules.scotus/{rule_no}",
+  "url_templates": [
+    "https://www.law.cornell.edu/rules/supct/rule_{rule_no}"
+  ],
+  "url_decoders": [
+    "law.cornell.edu/rules/supct/rule_{rule_no}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (Rules of the Supreme Court) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9.3.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Sup. Ct. R. 14.1(g).",
+        "spans": [[4, 23]],
+        "groups": {
+          "rule": "14.1",
+          "rule_no": "14",
+          "sub": "(g)"
+        }
+      },
+      {
+        "text": "The court relied on Supreme Court Rule 33.1 in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under S. Ct. R. 10, the claim fails.",
+        "spans": [[6, 18]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The local rules of the game were posted.",
+      "See 3 Hall's Sup. Ct. R. 45 (N.Y. Super. Ct. 1830)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "reject_before keeps `Sup. Ct. R.` from splitting the reporter `Hall's Sup. Ct. R.` (a possessive right before it). The key is the rule (`14.1` is paragraph 1 of rule 14), so it decodes from Cornell's one page per rule. url_templates verified by HTTP fetch on 2026-10-23: https://www.law.cornell.edu/rules/supct/rule_14 answers 200 (also rule_10 and rule_33; rule_14.1 answers 404, hence {rule_no})."
+}

@@ -1,0 +1,86 @@
+{
+  "id": "unrecognized.section",
+  "kind": "unrecognized",
+  "jurisdiction": "unknown",
+  "pattern": "\\b(?P<code>(?:[A-Z][A-Za-z'&.]*\\s+){0,5}(?:[A-Z][A-Za-z'.]*\\.|Code|Laws|Rules|Regulations|Ordinances?|Charter)\\s*(?:Ann\\.\\s*)?(?:tit\\.\\s*[0-9A-Za-z]+,?\\s*)?)§§?\\s*(?P<section>[0-9][0-9A-Za-z]*(?:[.:\\-–][0-9A-Za-z]+)*(?:\\([0-9A-Za-z]{1,4}\\))*)",
+  "reject": [
+    "^(?:See|Cf|But|Under|In|The|This|That|These|Those|Id|Ibid|Accord|Compare|Contra|Section|Sections|And|Or|Also|Its|Their|Our|Each|Both|Any|Every|Per|Pursuant)\\b"
+  ],
+  "priority": 1,
+  "normalize": "{code}§ {section}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.4,
+  "provenance": {
+    "encodes": "Statutory-citation shape (code name, section sign, section) of Bluebook R. 12.3; a heuristic for codes no rule names",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Not a citation rule: check each hit against Bluebook T1/T2 or the code's official citation form; a real code belongs in a statute or regulation rule.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Guam Code Ann. tit. 7, § 25104.",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "The tribe relies on Navajo Nation Code tit. 7, § 204 for the claim.",
+        "spans": [
+          [
+            20,
+            53
+          ]
+        ]
+      },
+      {
+        "text": "The statute, V.I. Code Ann. tit. 14, § 922, governs theft.",
+        "spans": [
+          [
+            13,
+            43
+          ]
+        ]
+      },
+      {
+        "text": "Both N. Mar. I. Code § 1101 and Am. Samoa Code Ann. § 3.0208 apply.",
+        "spans": [
+          [
+            5,
+            28
+          ],
+          [
+            33,
+            62
+          ]
+        ]
+      },
+      {
+        "text": "Territorial law, P.R. Laws Ann. tit. 33, § 4061, controls.",
+        "spans": [
+          [
+            17,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Under § 1983 the plaintiff must show a deprivation.",
+      "See § 5 above for the definitions.",
+      "Section 12 of the contract sets the fee.",
+      "The total cost was $ 500 and the deposit 10 percent."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Catch-all layer. A bare section sign (§ 1983) is a short form of an earlier statute and is never flagged; a leading signal word is skipped by reject."
+}

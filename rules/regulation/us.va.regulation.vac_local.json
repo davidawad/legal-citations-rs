@@ -1,0 +1,50 @@
+{
+  "id": "us.va.regulation.vac_local",
+  "kind": "regulation",
+  "jurisdiction": "us.va",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\s?VAC\\s?(?P<section>[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,4})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "{title} Va. Admin. Code § {section}{sub}",
+  "authority_key": "us.va.vac/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Virginia) administrative compilation: NVACN-N-N (Virginia local form) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Virginia) and the official Virginia administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 9VAC25-260-10.",
+        "spans": [[4, 17]],
+        "groups": {
+          "title": "9",
+          "section": "25-260-10",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 12VAC30-50-130 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under 9 VAC 5-80-1605(B), the permit fails.",
+        "spans": [[6, 24]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Virginia agency adopted 12 new rules in 2020.",
+      "Under VAC, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Same authority key as us.va.regulation.vac."
+}

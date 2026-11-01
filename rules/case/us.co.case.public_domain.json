@@ -1,0 +1,51 @@
+{
+  "id": "us.co.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.co",
+  "pattern": "\\b(?P<year>20(?:1[2-9]|[2-9][0-9]))\\s+(?P<court>COA?)\\s+(?P<number>[0-9]{1,3})(?P<suffix>M(?:-[0-9])?)?\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.co.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Colo. Chief Justice Directive 12-01 (opinions announced for publication from January 1, 2012: year, CO or COA, number; M suffix for modified opinions)",
+    "opened": true,
+    "source_url": "https://www.coloradojudicial.gov/sites/default/files/2023-08/CJD%2012-01.pdf",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "People v. Smith, 2012 CO 22, ¶¶ 13-14.",
+        "spans": [[17, 27]],
+        "groups": {
+          "year": "2012",
+          "court": "CO",
+          "number": "22"
+        }
+      },
+      {
+        "text": "See Doe v. Roe, 2016 COA 12, ¶ 5.",
+        "spans": [[16, 27]]
+      },
+      {
+        "text": "Jones v. Brown, 2012 CO 1M, ¶ 3.",
+        "spans": [[16, 26]]
+      }
+    ],
+    "negative": [
+      "Highway CO 22 was closed in 2012.",
+      "In 2016 Colorado had 12 new towns.",
+      "The 2016 CO Fair ran 12 days.",
+      "She left CO in 2012 after 22 years."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet."
+}

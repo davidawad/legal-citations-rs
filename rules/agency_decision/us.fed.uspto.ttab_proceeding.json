@@ -1,0 +1,73 @@
+{
+  "id": "us.fed.uspto.ttab_proceeding",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "tags": [
+    "ttab",
+    "uspto",
+    "trademark"
+  ],
+  "pattern": "\\b(?P<type>Opposition|Cancellation|Concurrent\\s+Use(?:\\s+Proceeding)?)\\s+Nos?\\.\\s*(?P<number>9[1-5][0-9]{6})\\b",
+  "priority": 60,
+  "normalize": "{type} No. {number}",
+  "authority_key": "us.ttab/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "TBMP §§ 101.03, 303 and 307 (TTAB proceeding numbers: 91 oppositions, 92 cancellations, 94 concurrent use)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open TTABVUE at https://ttabvue.uspto.gov and compare the eight-digit proceeding numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board sustained Opposition No. 91234567.",
+        "spans": [
+          [
+            20,
+            43
+          ]
+        ],
+        "groups": {
+          "type": "Opposition",
+          "number": "91234567"
+        }
+      },
+      {
+        "text": "See Cancellation No. 92012345.",
+        "spans": [
+          [
+            4,
+            29
+          ]
+        ]
+      },
+      {
+        "text": "Compare Concurrent Use No. 94002345 with Opposition No. 91198765.",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            64
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Opposition No. 12345",
+      "The opposition was filed.",
+      "Cancellation No. 9201234"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

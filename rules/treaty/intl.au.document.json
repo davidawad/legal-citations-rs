@@ -1,0 +1,52 @@
+{
+  "id": "intl.au.document",
+  "kind": "treaty",
+  "jurisdiction": "intl.au",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\b(?:OAU|AU)\\s+Doc\\.\\s+(?P<symbol>[A-Z][A-Za-z]{1,10}/[A-Za-z0-9.()/-]*[A-Za-z0-9)])",
+  "priority": 60,
+  "normalize": "OAU Doc. {symbol}",
+  "authority_key": "au/doc/{symbol}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.7 form applied to Organization of African Unity / African Union documents (OAU Doc. <symbol>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.7 and an African Union treaty page (au.int) for its document symbol.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "African Charter on the Rights and Welfare of the Child, Art. 5(3), OAU Doc. CAB/LEG/24.9/49 (1990).",
+        "spans": [[67, 91]],
+        "groups": {
+          "symbol": "CAB/LEG/24.9/49"
+        }
+      },
+      {
+        "text": "African Charter on Human and Peoples' Rights, June 27, 1981, OAU Doc. CAB/LEG/67/3.",
+        "spans": [[61, 82]]
+      },
+      {
+        "text": "See AU Doc. Assembly/AU/Dec.1(I).",
+        "spans": [[4, 32]]
+      }
+    ],
+    "negative": [
+      "The OAU met in Addis Ababa.",
+      "OAU documents number 49.",
+      "AU Doc folder is empty."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Kind treaty like the U.N. document rules, because Indigo files intergovernmental documents with treaties."
+}

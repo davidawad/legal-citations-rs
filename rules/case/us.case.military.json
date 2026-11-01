@@ -1,0 +1,77 @@
+{
+  "id": "us.case.military",
+  "kind": "case",
+  "jurisdiction": "us.fed.military",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?P<reporter>M\\.\\s?J\\.|C\\.\\s?M\\.\\s?A\\.|C\\.\\s?M\\.\\s?R\\.)\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.1 (Military Justice Reporter; Court of Military Appeals; Court-Martial Reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1.1 for the M.J., C.M.A. and C.M.R. reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See United States v. Nerad, 69 M.J. 138 (C.A.A.F. 2010).",
+        "spans": [
+          [
+            28,
+            39
+          ]
+        ],
+        "groups": {
+          "volume": "69",
+          "reporter": "M.J.",
+          "page": "138"
+        }
+      },
+      {
+        "text": "The court followed United States v. Jacoby, 11 C.M.A. 428, 29 C.M.R. 244 (1960).",
+        "spans": [
+          [
+            44,
+            57
+          ],
+          [
+            59,
+            72
+          ]
+        ]
+      },
+      {
+        "text": "Compare 80 M.J. 1 with 29 C.M.R. 244.",
+        "spans": [
+          [
+            8,
+            17
+          ],
+          [
+            23,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The M.J. reporter began in 1975.",
+      "The C.M.A. had 3 judges.",
+      "69 MJ was the call sign."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-23 (resolve to the cited authority: 69 M.J. 138 -> United States v. Nerad; 11 C.M.A. 428 and 29 C.M.R. 244 -> United States v. Jacoby)."
+}

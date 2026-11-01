@@ -1,0 +1,75 @@
+{
+  "id": "us.ne.legislative.bill",
+  "kind": "legislative",
+  "jurisdiction": "us.ne",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\bL\\.?\\s?B\\.?\\s+(?P<number>[0-9]{1,4}[A-Z]?)\\b(?:,\\s+(?P<leg>[0-9]{2,3})(?:st|nd|rd|th|d)\\s+Leg\\.,\\s+[0-9](?:st|nd|rd|th|d)\\s+Sess\\.(?:\\s+\\((?:Neb\\.\\s+)?(?:19|20)[0-9]{2}\\))?)?",
+  "reject_before": [
+    "[A-Za-z]\\.$",
+    "[0-9]\\s$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 50,
+  "normalize": "L.B. {number}",
+  "authority_key": "us.ne.bill/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Nebraska Legislature legislative bills (`LB 123`, `L.B. 123, 106th Leg., 1st Sess.`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Nebraska Legislature bill search at https://nebraskalegislature.gov and compare the LB numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Unicameral passed LB 123.",
+        "spans": [
+          [
+            22,
+            28
+          ]
+        ],
+        "groups": {
+          "number": "123"
+        }
+      },
+      {
+        "text": "See L.B. 1107, 106th Leg., 2d Sess. (2020).",
+        "spans": [
+          [
+            4,
+            42
+          ]
+        ]
+      },
+      {
+        "text": "Compare LB 2 with L.B. 427.",
+        "spans": [
+          [
+            8,
+            12
+          ],
+          [
+            18,
+            26
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "LB pending",
+      "The L.B. vote",
+      "LB guidance"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

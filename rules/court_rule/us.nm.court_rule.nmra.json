@@ -1,0 +1,49 @@
+{
+  "id": "us.nm.court_rule.nmra",
+  "kind": "court_rule",
+  "jurisdiction": "us.nm",
+  "pattern": "\\b(?:Rule)\\s?(?P<rule>[0-9]{1,2}-[0-9]{3}(?:\\.[0-9])?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)\\s?NMRA",
+  "priority": 60,
+  "normalize": "Rule {rule}{sub}",
+  "authority_key": "us.nm.rules.nmra/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New Mexico) New Mexico Rules Annotated (NMRA): Rule N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Rule 23-112 NMRA (the citation rule, read for us.nm.case.public_domain) and confirm its form for citing rules: Rule N-NNN NMRA.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Rule 1-012(B)(6) NMRA.",
+        "spans": [[4, 25]],
+        "groups": {
+          "rule": "1-012",
+          "sub": "(B)(6)"
+        }
+      },
+      {
+        "text": "The court relied on Rule 11-803 NMRA in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under Rule 12-213(A)(4) NMRA, the claim fails.",
+        "spans": [[6, 28]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The New Mexico rules committee met 12 times in 2020.",
+      "Under Rule as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. One rule covers every NMRA rule set: the set is the number's prefix (1- civil, 11- evidence, 12- appellate). The normalize form omits the trailing NMRA."
+}

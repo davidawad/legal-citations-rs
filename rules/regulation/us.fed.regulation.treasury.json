@@ -1,0 +1,51 @@
+{
+  "id": "us.fed.regulation.treasury",
+  "kind": "regulation",
+  "jurisdiction": "us.fed.irs",
+  "pattern": "\\bTreas\\.\\s?Reg\\.\\s*§\\s*(?P<section>[0-9]+\\.[0-9]+[A-Za-z]?(?:\\([0-9a-z]{1,4}\\))*(?:-[0-9]+[A-Za-z]?)?)(?P<subsection>(?:\\([0-9A-Za-z]{1,6}\\))*)",
+  "priority": 60,
+  "normalize": "Treas. Reg. § {section}{subsection}",
+  "authority_key": "us.cfr/26/{section}",
+  "url_templates": [
+    "https://www.law.cornell.edu/cfr/text/26/{section}"
+  ],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.5.1 and T1 (Treasury Regulations) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.5.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Treas. Reg. § 1.501(c)(3)-1.",
+        "spans": [[4, 32]],
+        "groups": {
+          "section": "1.501(c)(3)-1",
+          "subsection": ""
+        }
+      },
+      {
+        "text": "The court relied on Treas. Reg. § 301.7701-3 in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under Treas. Reg. § 1.170A-1(c), the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "Form 10-K was filed in March.",
+      "The guidelines run 12 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authority key is the 26 C.F.R. section, so a CFR link is congruent. url_templates verified by HTTP fetch on 2026-10-23: https://www.law.cornell.edu/cfr/text/26/301.7701-3 answers 200 with 26 CFR § 301.7701-3 (also 1.501(c)(3)-1 and 1.401-1; 9.999-9 answers 404)."
+}

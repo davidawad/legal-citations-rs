@@ -1,0 +1,70 @@
+{
+  "id": "us.tx.docket.puc_docket",
+  "kind": "docket",
+  "jurisdiction": "us.tx",
+  "tags": [
+    "utilities"
+  ],
+  "pattern": "\\b(?:PUC|P\\.\\s?U\\.\\s?C\\.)\\s+(?:Docket|Project)\\s+No\\.\\s*(?P<number>[0-9]{4,5})\\b",
+  "priority": 60,
+  "normalize": "PUC Docket No. {number}",
+  "authority_key": "us.tx.puc_docket/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Public Utility Commission of Texas docket and project numbers",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the PUCT Interchange at https://interchange.puc.texas.gov and compare control numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Commission approved the settlement in PUC Docket No. 46449.",
+        "spans": [
+          [
+            42,
+            62
+          ]
+        ],
+        "groups": {
+          "number": "46449"
+        }
+      },
+      {
+        "text": "See PUC Project No. 51840.",
+        "spans": [
+          [
+            4,
+            25
+          ]
+        ]
+      },
+      {
+        "text": "Compare P.U.C. Docket No. 9300 with PUC Docket No. 40443.",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            56
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "PUC Docket No. 12",
+      "The PUC docket",
+      "PUC No. 46449"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

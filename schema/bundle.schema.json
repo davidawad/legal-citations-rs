@@ -1,0 +1,612 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bundle",
+  "description": "Every rule, for use from other languages.",
+  "type": "object",
+  "properties": {
+    "before_window": {
+      "description": "Bytes of text before a match that `reject_before` patterns see.",
+      "type": "integer",
+      "format": "uint",
+      "minimum": 0
+    },
+    "format": {
+      "description": "Always `legal-citation-rules`.",
+      "type": "string"
+    },
+    "license": {
+      "description": "License of the rule data (`MIT`).",
+      "type": "string"
+    },
+    "matching": {
+      "description": "How to run a rule outside Rust.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notice": {
+      "description": "Third-party notices that must travel with the bundle (`rules/NOTICE`).",
+      "type": "string"
+    },
+    "rules": {
+      "description": "Every rule, active and retired, in file-path order.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/BundledRule"
+      }
+    },
+    "rules_hash": {
+      "description": "Registry hash, as in reports.",
+      "type": "string"
+    },
+    "version": {
+      "description": "Format version.",
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "license",
+    "notice",
+    "rules_hash",
+    "before_window",
+    "matching",
+    "rules"
+  ],
+  "$defs": {
+    "BundledRule": {
+      "description": "One rule in the bundle.",
+      "type": "object",
+      "properties": {
+        "js": {
+          "description": "Its patterns in ECMAScript form.",
+          "$ref": "#/$defs/JsPatterns"
+        },
+        "path": {
+          "description": "Path in the repository, e.g. `rules/statute/us.fed.statute.usc.json`.",
+          "type": "string"
+        },
+        "rule": {
+          "description": "The rule (schema: `rule.schema.json`).",
+          "$ref": "#/$defs/RuleDef"
+        }
+      },
+      "required": [
+        "path",
+        "rule",
+        "js"
+      ]
+    },
+    "Examples": {
+      "description": "Examples that pin a rule's behavior. `positive[0]` is the documentation\nexample and must be matched by exactly this rule (self-example guard).",
+      "type": "object",
+      "properties": {
+        "negative": {
+          "description": "Realistic texts no rule of this kind may match.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "positive": {
+          "description": "Texts the rule must match, with exact spans.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Positive"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "positive",
+        "negative"
+      ]
+    },
+    "Family": {
+      "description": "Coarse grouping of rules for selection (`family:agency`). Derived from the\nkind ([`Kind::family`]); a rule file may override it with `\"family\"`.",
+      "oneOf": [
+        {
+          "description": "Cases and short case cites.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Codified statutes and constitutions.",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Regulations (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Court rules.",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency materials: Federal Register, manuals, decisions, guidance.",
+          "type": "string",
+          "const": "agency"
+        },
+        {
+          "description": "Legislative materials: session laws, bills, reports.",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Record and docket cites.",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary sources.",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaties and foreign authority.",
+          "type": "string",
+          "const": "international"
+        },
+        {
+          "description": "`Id.` and `supra`, which refer to any family.",
+          "type": "string",
+          "const": "short_form"
+        },
+        {
+          "description": "The catch-all layer.",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "JsPatterns": {
+      "description": "A rule's patterns rewritten for ECMAScript and .NET.",
+      "type": "object",
+      "properties": {
+        "flags": {
+          "description": "RegExp flags to compile every pattern here with.",
+          "type": "string"
+        },
+        "legacy": {
+          "description": "`rule.legacy.pattern`, if any.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pattern": {
+          "description": "`rule.pattern`.",
+          "type": "string"
+        },
+        "reject": {
+          "description": "`rule.reject`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reject_before": {
+          "description": "`rule.reject_before`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "flags",
+        "pattern",
+        "reject",
+        "reject_before"
+      ]
+    },
+    "Kind": {
+      "description": "Closed citation-kind taxonomy. Extending it is a code change on purpose:\npolicy, findings and consumers all switch on it.",
+      "oneOf": [
+        {
+          "description": "Full case citation: volume, reporter, page.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Short case citation: `449 U.S. at 389`.",
+          "type": "string",
+          "const": "case_short"
+        },
+        {
+          "description": "`Id.` / `Ibid.`",
+          "type": "string",
+          "const": "id"
+        },
+        {
+          "description": "`Smith, supra`",
+          "type": "string",
+          "const": "supra"
+        },
+        {
+          "description": "Codified statute (U.S.C., state codes).",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Session law (Pub. L., Stat.).",
+          "type": "string",
+          "const": "session_law"
+        },
+        {
+          "description": "Codified regulation (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Federal Register.",
+          "type": "string",
+          "const": "federal_register"
+        },
+        {
+          "description": "Constitution.",
+          "type": "string",
+          "const": "constitution"
+        },
+        {
+          "description": "Court rule (FRCP, FRAP, FRE, circuit and local rules).",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency manual (MPEP, TBMP, TMEP).",
+          "type": "string",
+          "const": "agency_manual"
+        },
+        {
+          "description": "Agency decision or ruling (Rev. Rul., PTAB/TTAB decisions).",
+          "type": "string",
+          "const": "agency_decision"
+        },
+        {
+          "description": "Record cite (ER-139, JA 16, Ex. 1001, TTABVUE, ECF No.).",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary source (Restatement, treatise, law review).",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaty.",
+          "type": "string",
+          "const": "treaty"
+        },
+        {
+          "description": "Foreign authority.",
+          "type": "string",
+          "const": "foreign"
+        },
+        {
+          "description": "Docket number.",
+          "type": "string",
+          "const": "docket"
+        },
+        {
+          "description": "Legislative material (bills, committee reports, Cong. Rec., hearings, CRS reports).",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Executive material (executive orders, proclamations, presidential memoranda).",
+          "type": "string",
+          "const": "executive"
+        },
+        {
+          "description": "Short statute or regulation citation by section alone: `§ 1983`.",
+          "type": "string",
+          "const": "statute_short"
+        },
+        {
+          "description": "Citation-shaped text no specific rule matched (catch-all layer,\nconfidence below 0.5, finding CITE011).",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "Legacy": {
+      "description": "The frozen pre-extraction pattern this rule replaces, kept only so the\nlegacy parity mode reproduces the old behavior byte for byte.",
+      "type": "object",
+      "properties": {
+        "order": {
+          "description": "Position in the old `CITATION_PATTERNS` list.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "pattern": {
+          "description": "Old pattern text, verbatim.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Old `cite_type` name.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "order",
+        "pattern"
+      ]
+    },
+    "Measured": {
+      "description": "Measured precision, written only by `cite-detect eval`.",
+      "type": "object",
+      "properties": {
+        "corpus": {
+          "description": "Corpus identity (manifest hash).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "date": {
+          "description": "ISO date of the measurement.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "n": {
+          "description": "Sample size behind `precision`.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "default": null,
+          "minimum": 0
+        },
+        "precision": {
+          "description": "Precision in `[0, 1]` or the string `\"unmeasured\"`."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "precision"
+      ]
+    },
+    "Positive": {
+      "description": "A positive example: text plus every expected span and optional groups of\nthe first span.",
+      "type": "object",
+      "properties": {
+        "groups": {
+          "description": "Expected named groups of the first match (subset check).",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {}
+        },
+        "spans": {
+          "description": "Every expected `[start, end)` UTF-8 byte span for this rule.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            },
+            "maxItems": 2,
+            "minItems": 2
+          }
+        },
+        "text": {
+          "description": "Input text.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "spans"
+      ]
+    },
+    "Provenance": {
+      "description": "Where a rule's knowledge comes from. `opened` is true only when the rule\ntext (Bluebook rule, court rule, statute) was actually read by whoever\nwrote the pattern; otherwise the rule is reported as unverified everywhere.",
+      "type": "object",
+      "properties": {
+        "derived_from": {
+          "description": "Lineage: earlier patterns this rule descends from.",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        },
+        "encodes": {
+          "description": "The rule or convention the pattern encodes, e.g. `Bluebook R. 12.3 (21st ed.)`.",
+          "type": "string"
+        },
+        "how_to_verify": {
+          "description": "Concrete steps to verify an unopened rule.",
+          "type": "string",
+          "default": ""
+        },
+        "opened": {
+          "description": "True only if `encodes` was actually opened and read.",
+          "type": "boolean"
+        },
+        "source_url": {
+          "description": "Where the encoded rule can be read, if public.",
+          "type": "string",
+          "default": ""
+        },
+        "third_party": {
+          "description": "Third-party data or wording used, with license (see NOTICE).",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "encodes",
+        "opened"
+      ]
+    },
+    "RuleDef": {
+      "description": "One recognizer rule, deserialized from `rules/**/<id>.json`.",
+      "type": "object",
+      "properties": {
+        "authority_key": {
+          "description": "Authority identity template, e.g. `us.usc/{title}/{section}`.\n`{name|filter}` passes the group through a filter, in this and every\nother template: `digits` keeps the ASCII digits (`12,345` -> `12345`),\n`slug` the lowercased ASCII letters and digits (`H.R. ` -> `hr`).",
+          "type": "string",
+          "default": ""
+        },
+        "base_confidence": {
+          "description": "Base confidence before feature adjustments.",
+          "type": "number",
+          "format": "double",
+          "default": 0.9
+        },
+        "examples": {
+          "description": "Examples.",
+          "$ref": "#/$defs/Examples"
+        },
+        "family": {
+          "description": "Family override; omit to use the kind's family ([`Kind::family`]).",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Family"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "description": "Stable dotted id, never reused.",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "description": "Dotted jurisdiction, e.g. `us.fed`, `us.ca`, `us.fed.uspto`.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Citation kind.",
+          "$ref": "#/$defs/Kind"
+        },
+        "legacy": {
+          "description": "Frozen legacy pattern for parity mode.",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Legacy"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "measured": {
+          "description": "Measured precision (written by `eval`).",
+          "$ref": "#/$defs/Measured",
+          "default": {
+            "corpus": null,
+            "date": null,
+            "n": null,
+            "precision": "unmeasured"
+          }
+        },
+        "normalize": {
+          "description": "Display template over named groups, e.g. `{title} U.S.C. § {section}`.",
+          "type": "string",
+          "default": ""
+        },
+        "note": {
+          "description": "Free-form notes.",
+          "type": "string",
+          "default": ""
+        },
+        "pattern": {
+          "description": "Rust `regex` pattern with named groups.",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Overlap tie-break, higher wins.",
+          "type": "integer",
+          "format": "int32",
+          "default": 50
+        },
+        "provenance": {
+          "description": "Provenance.",
+          "$ref": "#/$defs/Provenance"
+        },
+        "reject": {
+          "description": "Patterns that veto a match: when one finds a match inside the matched\ntext, the match is dropped and the search resumes one character after\nits start. Stands in for the look-around the `regex` crate lacks.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reject_before": {
+          "description": "Patterns that veto a match by what precedes it: each is run on the up\nto [`BEFORE_WINDOW`] bytes ending at the match start (so anchor it with\n`$`, e.g. `[A-Za-z]\\\\.$` keeps `L.R.` from matching inside `A.L.R.`).\nA vetoed match is dropped like a `reject`ed one. Stands in for the\nlook-behind the `regex` crate lacks.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "retired": {
+          "description": "Retired rules stay in the registry with a reason.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "tags": {
+          "description": "Cross-cutting collections (`ptab`, `tax`), selected with `tag:<name>`.\nLowercase `[a-z0-9_-]`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "url_decoders": {
+          "description": "URL shapes (host + path, `{group}` placeholders) that decode a link\ntarget back to this rule's groups.",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        },
+        "url_templates": {
+          "description": "Templates that build a source URL from named groups (only for hosts\nverified by an HTTP fetch; the rule's note records the date and a\nsample URL).",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "jurisdiction",
+        "pattern",
+        "provenance",
+        "examples"
+      ]
+    }
+  }
+}

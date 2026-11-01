@@ -1,0 +1,85 @@
+{
+  "id": "us.record.motion_papers",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "brief"
+  ],
+  "pattern": "\\b(?P<doc>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:Mem\\.(?:\\s+(?:of\\s+)?(?:L\\.|Law))?(?:\\s+(?:in\\s+)?(?:Supp\\.|Opp['’]n|Opp\\.))?(?:\\s+(?:of|to)\\s+(?:Mot\\.|Pl\\.['’]s\\s+Mot\\.|Defs?\\.['’]s?\\s+Mot\\.))?|Mot\\.(?:\\s+(?:to\\s+Dismiss|for\\s+Summ\\.\\s+J\\.|Summ\\.\\s+J\\.|for\\s+Prelim\\.\\s+Inj\\.))?|Opp['’]n)|(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)(?:Reply|Resp\\.|Response|Sur-?[Rr]eply))\\s+(?:at\\s+)?(?P<page>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b(?:,\\s+(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+(?:19|20)[0-9]{2})?",
+  "reject": [
+    "^(?:See|Cf|Compare|But|Accord|Contra|Also|And|Or|The|In|Under|Per|With|From|E\\.g|Our|My|His|Her|Its|Their|Your|This|That|These|Those|A|An|Each|Every|Any|No|Its|Which|Whose)\\b"
+  ],
+  "reject_before": [
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 54,
+  "normalize": "{doc} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17 / R10.8.3 (court documents and record cites); Indigo Book R24",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The motion fails. Opp’n at 4–6.",
+        "spans": [
+          [
+            18,
+            34
+          ]
+        ],
+        "groups": {
+          "page": "4–6"
+        }
+      },
+      {
+        "text": "See Mem. Opp’n 7.",
+        "spans": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "text": "The defendants answer this. (Defs.’ Reply 3.)",
+        "spans": [
+          [
+            29,
+            45
+          ]
+        ]
+      },
+      {
+        "text": "Compare Pl.’s Mem. in Supp. of Mot. at 10 with Opp’n at 4–6.",
+        "spans": [
+          [
+            8,
+            43
+          ],
+          [
+            49,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Mot. was denied.",
+      "A reply 3 days later.",
+      "Their Reply arrived."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Party filings (`Defs.’ Reply 3`) are reported by us.record.party_document (60) and `Mem. Opp’n 7` ties with us.record.bare_document (55); this rule adds a bare Opp’n, Mot. and Mem. of L. forms."
+}

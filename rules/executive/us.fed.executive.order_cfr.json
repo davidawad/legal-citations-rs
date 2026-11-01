@@ -1,0 +1,65 @@
+{
+  "id": "us.fed.executive.order_cfr",
+  "kind": "executive",
+  "jurisdiction": "us.fed.eop",
+  "pattern": "\\b(?:Exec(?:\\.|utive)\\s+Order|E\\.\\s?O\\.)\\s+(?:No\\.\\s?)?(?P<thousands>[0-9]{1,2}),?(?P<rest>[0-9]{3}),\\s+3\\s+C\\.\\s?F\\.\\s?R\\.\\s+(?P<page>[0-9]{1,4})",
+  "priority": 70,
+  "normalize": "Exec. Order No. {thousands},{rest}, 3 C.F.R. {page}",
+  "authority_key": "us.eo/{thousands}{rest}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Executive Office of the President (Executive Orders: cite to 3 C.F.R.)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Executive Office of the President (Executive Orders: cite to 3 C.F.R.), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The order is Exec. Order 13,136, 3 C.F.R. 216 (Sep. 3, 1999).",
+        "spans": [
+          [
+            13,
+            45
+          ]
+        ],
+        "groups": {
+          "thousands": "13",
+          "rest": "136",
+          "page": "216"
+        }
+      },
+      {
+        "text": "See Exec. Order No. 12,866, 3 C.F.R. 638 (1994).",
+        "spans": [
+          [
+            4,
+            40
+          ]
+        ]
+      },
+      {
+        "text": "Under Executive Order 11,246, 3 C.F.R. 339 (1964–1965), contractors comply.",
+        "spans": [
+          [
+            6,
+            42
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Exec. Orders are compiled in title 3.",
+      "The order cited 3 regulations on page 216.",
+      "Executive orders 13 and 3 were cited."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "An executive order with its 3 C.F.R. source, one span; outranks us.fed.executive.order and the C.F.R. rules."
+}

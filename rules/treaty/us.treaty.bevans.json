@@ -1,0 +1,53 @@
+{
+  "id": "us.treaty.bevans",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,2})\\s+Bevans\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} Bevans {page}",
+  "authority_key": "us.bevans/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Bevans, Treaties and Other International Agreements of the United States (1776-1949), <vol> Bevans <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Treaty of Ghent, U.S.-Gr. Brit., Dec. 24, 1814, 12 Bevans 41.",
+        "spans": [[33, 60]],
+        "groups": {
+          "date": "Dec. 24, 1814",
+          "volume": "12",
+          "page": "41"
+        }
+      },
+      {
+        "text": "Convention Respecting Fisheries, U.S.-Gr. Brit., Oct. 20, 1818, 12 Bevans 57.",
+        "spans": [[49, 76]]
+      },
+      {
+        "text": "The court relied on 12 Bevans 57 in reaching its holding.",
+        "spans": [[20, 32]]
+      }
+    ],
+    "negative": [
+      "Charles Bevans compiled 12 volumes.",
+      "The Bevans family had 41 cousins.",
+      "Bevans wrote on Dec. 24, 1814."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

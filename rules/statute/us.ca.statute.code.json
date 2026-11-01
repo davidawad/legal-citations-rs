@@ -1,0 +1,61 @@
+{
+  "id": "us.ca.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ca",
+  "pattern": "Cal\\.\\s+(?P<code>[A-Za-z\\. &]{2,30}?)\\s*(?:Code\\s+)?§\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (California) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, California entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py CAL pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cal. Civ. Code § 1550.",
+        "spans": [[4, 26]],
+        "groups": {
+          "code": "Civ.",
+          "section": "1550"
+        }
+      },
+      {
+        "text": "The court relied on Cal. Penal Code § 187(a) in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under Cal. Civ. Code § 1557, the claim fails.",
+        "spans": [[6, 28]]
+      },
+      {
+        "text": "The UCL claim arises under Cal. Bus. & Prof. Code § 17200 (Deering 2013).",
+        "spans": [[27, 58]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "cal",
+    "order": 7,
+    "pattern": "Cal\\.\\s+(?P<code>[A-Za-z\\. ]{2,30}?)\\s*(?:Code\\s+)?§\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

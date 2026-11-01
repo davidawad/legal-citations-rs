@@ -1,0 +1,54 @@
+{
+  "id": "intl.eu.parl_doc",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?:Eur\\.\\s+Parl\\.|Parl\\.\\s+Eur\\.)\\s+Doc\\.\\s+\\((?P<series>COM|SEC)\\s?(?P<number>[0-9]{1,4}(?:/[0-9]{1,4})?)\\)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "Eur. Parl. Doc. ({series} {number}) {page}",
+  "authority_key": "eu.parl_doc/{series}/{number}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Parliament Working Session or Session Documents, Eur. Parl. Doc. (COM <no.>) <page>; Parl. Eur. Doc. (SEC <no.>) <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Eur. Parl. Doc. (COM 85) 310 (1985).",
+        "spans": [[4, 32]],
+        "groups": {
+          "series": "COM",
+          "number": "85",
+          "page": "310"
+        }
+      },
+      {
+        "text": "The court relied on Parl. Eur. Doc. (SEC 85) 310 in its judgment.",
+        "spans": [[20, 48]]
+      },
+      {
+        "text": "Under Eur. Parl. Doc. (COM 2000/7) 12, the claim fails.",
+        "spans": [[6, 37]]
+      }
+    ],
+    "negative": [
+      "The European Parliament printed 310 documents.",
+      "COM 85 was the session code.",
+      "Parl. Eur. staff number 85."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,59 @@
+{
+  "id": "intl.treaty.unts",
+  "kind": "treaty",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "un"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,4})\\s+U\\.\\s?N\\.\\s?T\\.\\s?S\\.\\s+(?P<page>[0-9]{1,6})\\b(?:,\\s+(?P<pin>[0-9]{1,6}[-–][0-9]{1,6})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} U.N.T.S. {page}",
+  "authority_key": "unts/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): <treaty name>, <parties>, <date>, <vol> U.N.T.S. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Vienna Convention on the Law of Treaties, May 23, 1969, 1155 U.N.T.S. 331.",
+        "spans": [[46, 77]],
+        "groups": {
+          "date": "May 23, 1969",
+          "volume": "1155",
+          "page": "331"
+        }
+      },
+      {
+        "text": "The court relied on 999 U.N.T.S. 171 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under 1833 U.N.T.S. 3, 397–98, the claim fails.",
+        "spans": [[6, 31]]
+      },
+      {
+        "text": "International Covenant on Civil and Political Rights, Dec. 16, 1966, 999 U.N.T.S. 171.",
+        "spans": [[54, 85]]
+      }
+    ],
+    "negative": [
+      "The United Nations held 3 sessions.",
+      "Treaty negotiations lasted 12 days.",
+      "The U.S. team scored 5 goals.",
+      "Signed on May 23, 1969, by 45 states."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The signing date before the volume is part of the citation (Indigo T6 form), so it is spanned when present. Only a page range is taken as a pin: a single number after the comma is usually the volume of a parallel cite (1577 U.N.T.S. 3, 28 I.L.M. 1448)."
+}

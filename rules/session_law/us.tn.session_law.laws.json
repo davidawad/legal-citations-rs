@@ -1,0 +1,93 @@
+{
+  "id": "us.tn.session_law.laws",
+  "kind": "session_law",
+  "jurisdiction": "us.tn",
+  "pattern": "\\b(?P<year>(?:1[6-9]|20)[0-9]{2})(?:-(?P<pamphlet>[0-9]{1,2}))?\\s(?P<series>Tenn\\.\\s?Code\\sAnn\\.\\s?Adv\\.\\s?Legis\\.\\s?Serv\\.|Tenn\\.\\s?Legis\\.\\s?Serv\\.|Tenn\\.\\s?Priv\\.\\s?Acts|Tenn\\.\\s?Pub\\.\\s?Acts)\\s(?:ch\\.\\s?[0-9]{1,4},\\s?§\\s?[0-9]{1,4}[a-z]?,\\s)?(?:No\\.\\s?[0-9]{1,3},\\s)?(?P<page>[0-9]{1,5}(?:-[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{year} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Tennessee: Session laws",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Tennessee, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 739",
+      "corpus/formats/indigo.jsonl line 740",
+      "corpus/formats/indigo.jsonl line 741",
+      "corpus/formats/indigo.jsonl line 742"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2015 Tenn. Pub. Acts 1818.",
+        "spans": [[4, 29]],
+        "groups": {
+          "year": "2015",
+          "series": "Tenn. Pub. Acts",
+          "page": "1818"
+        }
+      },
+      {
+        "text": "See 2014 Tenn. Pub. Acts 1760.",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 2015 Tenn. Priv. Acts 441.",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 2014 Tenn. Priv. Acts 808.",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 2015-1 Tenn. Code Ann. Adv. Legis. Serv. 1086 (LexisNexis).",
+        "spans": [[4, 49]]
+      },
+      {
+        "text": "See 2014-6 Tenn. Code Ann. Adv. Legis. Serv. 894 (LexisNexis).",
+        "spans": [[4, 48]]
+      },
+      {
+        "text": "See 2015 Tenn. Legis. Serv. 324 (West).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 2014 Tenn. Legis. Serv. 165 (West).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 2013 Tenn. Pub. Acts 77.",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 2013 Tenn. Priv. Acts 77.",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 2013 Tenn. Code Ann. Adv. Legis. Serv. 77.",
+        "spans": [[4, 45]]
+      },
+      {
+        "text": "See 2013 Tenn. Legis. Serv. 77.",
+        "spans": [[4, 30]]
+      }
+    ],
+    "negative": [
+      "The Tenn. Code Ann. Adv. Legis. Serv. volumes are shelved by year.",
+      "In Tennessee, 12 session laws took effect in 2015.",
+      "Page 2351 of the Tennessee laws index is blank."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

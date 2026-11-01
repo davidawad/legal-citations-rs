@@ -1,0 +1,74 @@
+{
+  "id": "us.fed.dist.txed.patent_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist.txed",
+  "tags": [
+    "local_rules",
+    "patent"
+  ],
+  "pattern": "\\b(?:P\\.\\s?R\\.|Patent\\s+Rule)\\s?(?P<rule>[1-4]-[0-9]{1,2})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "reject_before": [
+    "Local\\s$"
+  ],
+  "priority": 56,
+  "normalize": "P. R. {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "E.D. Tex. Local Patent Rules, Appendix M (`P. R. 3-1`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open E.D. Tex. Local Rules Appendix M (Patent Rules) at https://www.txed.uscourts.gov and compare the `P. R. 3-1` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Infringement contentions are due under P. R. 3-1.",
+        "spans": [
+          [
+            39,
+            48
+          ]
+        ],
+        "groups": {
+          "rule": "3-1"
+        }
+      },
+      {
+        "text": "See P.R. 3-1(a) and P.R. 4-3.",
+        "spans": [
+          [
+            4,
+            15
+          ],
+          [
+            20,
+            28
+          ]
+        ]
+      },
+      {
+        "text": "The court applies Patent Rule 3-6(b).",
+        "spans": [
+          [
+            18,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "P.R. Laws Ann. tit. 31, § 3371",
+      "The P.R. 3 team won.",
+      "Patent Rule changes"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

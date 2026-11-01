@@ -1,0 +1,71 @@
+{
+  "id": "us.oh.case.ohio_state",
+  "kind": "case",
+  "jurisdiction": "us.oh",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>Ohio\\s?St\\.(?:\\s?[23]d)?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Ohio): Ohio State Reports, Ohio St., Ohio St. 2d, Ohio St. 3d (21st ed.); Ohio courts write Ohio St.3d without the space",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1, Ohio entry, and the Supreme Court of Ohio Writing Manual; compare with reporters-db reporters.json.",
+    "derived_from": [
+      "docs/measurements/2026-10-22-real-text.md (Ohio State Reports missed in State v. Dowell)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "State v. Moreland, 50 Ohio St.3d 58, 62 (1990).",
+        "spans": [[19, 35]],
+        "groups": {
+          "volume": "50",
+          "reporter": "Ohio St.3d",
+          "page": "58"
+        }
+      },
+      {
+        "text": "See State v. Perry, 10 Ohio St.2d 175 (1967).",
+        "spans": [[20, 37]],
+        "groups": {
+          "volume": "10",
+          "reporter": "Ohio St.2d",
+          "page": "175"
+        }
+      },
+      {
+        "text": "Under Doe v. Roe, 150 Ohio St. 303 (1948), the claim fails.",
+        "spans": [[18, 34]],
+        "groups": {
+          "volume": "150",
+          "reporter": "Ohio St.",
+          "page": "303"
+        }
+      },
+      {
+        "text": "Plaintiff cites Alpha v. Beta, 100 Ohio St. 3d 7 (2003).",
+        "spans": [[31, 48]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "He moved to 50 Ohio Street in 1990 and stayed 3 years.",
+      "Ohio State beat Michigan 42 to 27 in 2024.",
+      "The 3 Ohio St. campuses enrolled 60,000 students."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Added in lcr-f8h. Ohio St.3d (no space) is the Ohio courts' own style; the Bluebook spacing is also accepted. Parallel N.E. cites are matched by us.case.regional. url_templates: CourtListener /c/, verified by HTTP fetch on 2026-10-23: https://www.courtlistener.com/c/Ohio%20St.3d/50/58/ redirects to the opinion State v. Moreland (also Ohio St.2d 10/175 and Ohio St. 150/303)."
+}

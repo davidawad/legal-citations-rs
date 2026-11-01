@@ -1,0 +1,56 @@
+legal-citations-rs
+Copyright (C) 2026 David Awad.
+
+Licensing is split:
+- Code (everything outside rules/): GPL-3.0-or-later (see LICENSE).
+- Rule data (rules/, the regex JSON rules, and the `just dist` bundle built from
+  them): MIT (see rules/LICENSE). rules/NOTICE carries the third-party notices
+  that must travel with the rules (reporters-db BSD-2-Clause, Indigo Book CC0).
+
+Vendored third-party data:
+- reporters-db, Free Law Project, BSD-2-Clause, https://github.com/freelawproject/reporters-db
+  third_party/reporters-db/reporters.json is reporters_db/data/reporters.json at
+  upstream commit faddc86aad58ebde19d81b6f1ba64d229a801092 (2026-10-15), unmodified
+  (see third_party/reporters-db/UPSTREAM). crates/xtask-rules generates the case
+  rules in rules/case/generated/ from it; those rules embed
+  reporter abbreviations, names and date ranges taken from that file. Its license
+  (third_party/reporters-db/LICENSE) is reproduced here:
+
+  Copyright (c) 2014, Free Law Project
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Prior art consulted (no code or data vendored):
+- eyecite, Free Law Project, BSD-2-Clause, https://github.com/freelawproject/eyecite
+  (overlap resolution and backward-only short-form resolution model)
+- citeurl, Simon Raindrum Sherred, MIT, https://github.com/raindrum/citeurl
+  (reference for state statute shapes and URL templates)
+
+Initial patterns derive from the author's own legal_citation_patterns.py /
+legal-citation-patterns crate (dotfiles), relicensed here by the author.
+
+Third-party data:
+- The Indigo Book: A Manual of Legal Citation (Sprigman et al., Public Resource, 2016),
+  https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0 1.0 public domain dedication
+  ("No Rights Reserved"). corpus/formats/indigo.jsonl transcribes its citation formats and
+  example citations (read 2026-10-23); see corpus/formats/README.md.

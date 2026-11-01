@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.eeoc.decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.eeoc",
+  "pattern": "\\bEEOC\\s+(?:Dec(?:ision|\\.)?|Appeal|Request|Petition)\\s+No\\.\\s?(?P<number>[0-9]{2}-[0-9]{3,5}|[0-9]{7,10})\\b",
+  "priority": 60,
+  "normalize": "EEOC No. {number}",
+  "authority_key": "us.eeoc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Equal Employment Opportunity Commission decisions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for EEOC; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Complainant v. Dep't of Def., EEOC Appeal No. 0120142048 (2016).",
+        "spans": [
+          [
+            34,
+            60
+          ]
+        ],
+        "groups": {
+          "number": "0120142048"
+        }
+      },
+      {
+        "text": "The Commission so ruled in EEOC Decision No. 71-2620, 4 Fair Empl. Prac. Cas. (BNA) 23.",
+        "spans": [
+          [
+            27,
+            52
+          ]
+        ]
+      },
+      {
+        "text": "Reconsideration was denied, EEOC Request No. 0520150345, and EEOC Dec. No. 72-0679 is distinguishable.",
+        "spans": [
+          [
+            28,
+            55
+          ],
+          [
+            61,
+            82
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The EEOC received 71 charges.",
+      "Her EEOC charge was filed in 2016.",
+      "The appeal No. 2 was dismissed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.dol.mine_act_modification",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.dol",
+  "pattern": "\\bDocket\\s+No\\.\\s?(?P<number>M-(?:19|20)[0-9]{2}-[0-9]{3}-[A-Z])\\b",
+  "priority": 60,
+  "normalize": "Docket No. {number}",
+  "authority_key": "us.dol.msha/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "labor"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Labor (Mine Act petition-for-modification decisions)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Labor (Mine Act petition-for-modification decisions), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Proposed Decision and Order, In re Smith Coal Co., Docket No. M-2014-012-C (Dep’t of Labor June 3, 2014).",
+        "spans": [
+          [
+            51,
+            74
+          ]
+        ],
+        "groups": {
+          "number": "M-2014-012-C"
+        }
+      },
+      {
+        "text": "Decision and Order, In re Brown Mining LLC, Docket No. M-2012-031-C.",
+        "spans": [
+          [
+            44,
+            67
+          ]
+        ]
+      },
+      {
+        "text": "Compare Docket No. M-2009-001-M with Docket No. M-2015-010-C.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            60
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Docket No. M is for mines.",
+      "The 2014 docket listed 12 mines.",
+      "Docket M lists 2014 mines."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

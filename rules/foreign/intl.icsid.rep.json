@@ -1,0 +1,54 @@
+{
+  "id": "intl.icsid.rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.icsid",
+  "tags": [
+    "international",
+    "arbitration",
+    "investment"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+ICSID\\s+Rep\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} ICSID Rep. {page}",
+  "authority_key": "intl.icsid/rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): ICSID Reports, <vol> ICSID Rep. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Maffezini v. Spain, ICSID Case No. ARB/97/7, 5 ICSID Rep. 396 (2000).",
+        "spans": [[45, 61]],
+        "groups": {
+          "volume": "5",
+          "page": "396"
+        }
+      },
+      {
+        "text": "Metalclad Corp. v. Mexico, 5 ICSID Rep. 212 (2000).",
+        "spans": [[27, 43]]
+      },
+      {
+        "text": "The tribunal relied on 5 ICSID Rep. 212, 230–232 in reaching its award.",
+        "spans": [[23, 50]]
+      }
+    ],
+    "negative": [
+      "ICSID reported 396 cases.",
+      "The ICSID repository has 5 rooms.",
+      "Rep. 212 voted no."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

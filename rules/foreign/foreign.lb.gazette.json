@@ -1,0 +1,53 @@
+{
+  "id": "foreign.lb.gazette",
+  "kind": "foreign",
+  "jurisdiction": "foreign.lb",
+  "tags": [
+    "foreign",
+    "mena",
+    "lb"
+  ],
+  "pattern": "(?:\\bLebanese\\s+Official\\s+Gazette|\\bJournal\\s+Officiel\\s+(?:libanais|du\\s+Liban))\\s+(?:No\\.?|n°)\\s*(?P<number>[0-9]{1,4})\\b",
+  "priority": 55,
+  "normalize": "Official Gazette No. {number}",
+  "authority_key": "lb.gazette/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Lebanese Official Gazette (al-Jarida al-Rasmiyya / Journal Officiel libanais) issue number",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check legiliban.ul.edu.lb or archive Lebanese Official Gazette issues for numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Published in the Lebanese Official Gazette No. 12.",
+        "spans": [[17, 49]],
+        "groups": {
+          "number": "12"
+        }
+      },
+      {
+        "text": "Journal Officiel libanais n° 28 du 1992.",
+        "spans": [[0, 32]]
+      },
+      {
+        "text": "Journal Officiel du Liban n° 45 en 2010.",
+        "spans": [[0, 32]]
+      }
+    ],
+    "negative": [
+      "Official Gazette No. 12 with no country.",
+      "Lebanese Gazette is a paper.",
+      "Journal Officiel libanais seul."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

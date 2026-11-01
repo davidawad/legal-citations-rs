@@ -1,0 +1,72 @@
+{
+  "id": "us.uniform.uniform_act",
+  "kind": "statute",
+  "jurisdiction": "us.uniform",
+  "tags": [
+    "uniform-law"
+  ],
+  "pattern": "\\bUnif(?:\\.|orm)\\s+(?P<title>(?:[A-Z][A-Za-z.'’&-]*\\s+){0,6}?(?:Act|Code))\\s+§{1,2}\\s?(?P<section>[0-9]+(?:[.\\-][0-9A-Za-z]+)*)(?P<subsection>(?:\\([0-9a-z]{1,4}\\))*)",
+  "priority": 55,
+  "normalize": "Unif. {title} § {section}{subsection}",
+  "authority_key": "us.uniform/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (uniform acts) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (uniform acts) and check the `Unif. Trust Code § 105 (Unif. L. Comm'n 2000)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Unif. Trust Code § 105(b) (Unif. L. Comm'n 2000).",
+        "spans": [
+          [
+            4,
+            30
+          ]
+        ],
+        "groups": {
+          "title": "Trust Code",
+          "section": "105",
+          "subsection": "(b)"
+        }
+      },
+      {
+        "text": "Execution formalities appear in Unif. Probate Code § 2-502 and its comment.",
+        "spans": [
+          [
+            32,
+            59
+          ]
+        ]
+      },
+      {
+        "text": "Compare Uniform Trade Secrets Act § 1(4) with Unif. Fraudulent Transfer Act § 4.",
+        "spans": [
+          [
+            8,
+            41
+          ],
+          [
+            47,
+            81
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The uniform act was adopted in 2000.",
+      "Uniform Commercial Code adoption varies.",
+      "The Uniform Law Commission met in 2020."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Kind statute: Bluebook R. 12.9.4 and the Indigo Book cite uniform acts as statutes (section form, not a title and page)."
+}

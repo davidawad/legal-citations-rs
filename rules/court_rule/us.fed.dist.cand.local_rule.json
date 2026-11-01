@@ -1,0 +1,79 @@
+{
+  "id": "us.fed.dist.cand.local_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist.cand",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?P<label>Civil|Crim\\.|Criminal|ADR|Patent|Habeas|Admiralty)\\s+(?:L\\.\\s?R\\.|Local\\s+Rule)\\s?(?P<rule>[0-9]{1,2}-[0-9]{1,2}(?:\\.[0-9])?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 56,
+  "normalize": "{label} L.R. {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "N.D. Cal. Civil, Criminal, ADR and Patent Local Rules (labels `Civil L.R.`, `Crim. L.R.`, `ADR L.R.`, `Patent L.R.`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the N.D. Cal. local rules at https://www.cand.uscourts.gov/rules/local-rules/ and compare the label and N-N numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The motion must comply with Civil L.R. 7-3.",
+        "spans": [
+          [
+            28,
+            42
+          ]
+        ],
+        "groups": {
+          "label": "Civil",
+          "rule": "7-3"
+        }
+      },
+      {
+        "text": "Infringement contentions are due under Patent L.R. 3-1 and Patent L.R. 3-2(a).",
+        "spans": [
+          [
+            39,
+            54
+          ],
+          [
+            59,
+            77
+          ]
+        ]
+      },
+      {
+        "text": "See Crim. L.R. 47-2; ADR L.R. 6-1; Civil Local Rule 79-5(b).",
+        "spans": [
+          [
+            4,
+            19
+          ],
+          [
+            21,
+            33
+          ],
+          [
+            35,
+            59
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Civil L.R. compliance matters.",
+      "Patent L.R. Disclosures",
+      "Civil rule 7-3 and Patent rule 3"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

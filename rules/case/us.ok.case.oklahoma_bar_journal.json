@@ -1,0 +1,68 @@
+{
+  "id": "us.ok.case.oklahoma_bar_journal",
+  "kind": "case",
+  "jurisdiction": "us.ok",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+(?:OBJ|O\\.\\s?B\\.\\s?J\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} OBJ {page}",
+  "authority_key": "us.ok.obj/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T3 Oklahoma: public domain citation format (Oklahoma Bar Journal parallel)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T3 Oklahoma: public domain citation format (Oklahoma Bar Journal parallel), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Robinson v. State, 1997 OK CR 24, ¶ 3, 68 OBJ 1379, 1381.",
+        "spans": [
+          [
+            40,
+            51
+          ]
+        ],
+        "groups": {
+          "volume": "68",
+          "page": "1379"
+        }
+      },
+      {
+        "text": "See 85 O.B.J. 1012.",
+        "spans": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "text": "Compare 68 OBJ 1379 with 70 O.B.J. 22.",
+        "spans": [
+          [
+            8,
+            19
+          ],
+          [
+            25,
+            37
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The OBJ editors met 3 times.",
+      "OBJ 1379 is a file number.",
+      "In 1997, OBJ issue 68 printed it."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

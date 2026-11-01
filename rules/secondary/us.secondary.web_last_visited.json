@@ -1,0 +1,53 @@
+{
+  "id": "us.secondary.web_last_visited",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "web"
+  ],
+  "pattern": "(?:\\b(?P<site>[A-Z0-9][^,():;\\n]{0,60}?),\\s+)?(?P<url>https?://[^\\s<>()\\[\\]]*[^\\s<>()\\[\\].,;:])(?:\\s+\\[(?P<archive>https?://[^\\s<>()\\[\\]]*[^\\s<>()\\[\\].,;:])\\])?\\s+\\(last\\s+(?:visited|modified|updated)\\s+(?P<visited>(?:Jan\\.|Feb\\.|Mar\\.|Apr\\.|May|June|July|Aug\\.|Sept\\.|Oct\\.|Nov\\.|Dec\\.|January|February|March|April|August|September|October|November|December)\\s+[0-9]{1,2},\\s+(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)",
+  "priority": 45,
+  "normalize": "{url} (last visited {visited})",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book R33 (Basic Formula for Internet Sources): R33.5.2, <site>, <URL> (last visited <date>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ESPN, http://www.espn.go.com/ (last visited Apr. 8, 2015).",
+        "spans": [[0, 57]],
+        "groups": {
+          "site": "ESPN",
+          "url": "http://www.espn.go.com/",
+          "visited": "Apr. 8, 2015"
+        }
+      },
+      {
+        "text": "Parker Higgins & Sarah Jeong, Archive of 5 Useful Articles Newsletter, 5 Useful Articles, http://tinyletter.com/5ua (last visited March 2, 2015).",
+        "spans": [[71, 144]]
+      },
+      {
+        "text": "Superfan Suits, http://www.superfansuits.com/ (last visited Feb. 21, 2015) (motto: “Tight and Bright”).",
+        "spans": [[0, 74]]
+      }
+    ],
+    "negative": [
+      "I last visited ESPN in April 2015.",
+      "See http://www.espn.go.com/ for scores.",
+      "The site (last visited in 2015) is gone."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates: none (the cited URL is in the text; there is no fixed host to verify)."
+}

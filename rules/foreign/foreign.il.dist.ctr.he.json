@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.dist.ctr.he",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.dist.ctr",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>[א-ת]{1,3}[\"״][א-ת])\\s+\\(מחוזי\\s+(?P<district>מרכז(?:-לוד)?)\\)\\s+(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 58,
+  "normalize": "{court} (מחוזי {district}) {number}",
+  "authority_key": "il.dist.ctr/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Israeli Uniform Rules of Legal Citation (Hebrew): <case type> (מחוזי <district>) <docket>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ראו ת\"א (מחוזי מרכז) 1234/05 כהן נ' לוי.",
+        "spans": [[7, 42]],
+        "groups": {
+          "court": "ת\"א",
+          "district": "מרכז",
+          "number": "1234/05"
+        }
+      },
+      {
+        "text": "ע\"א (מחוזי מרכז-לוד) 8765/12 נדחה.",
+        "spans": [[0, 42]]
+      },
+      {
+        "text": "בהליך ת\"פ (מחוזי מרכז) 12345-05-19 הוגש כתב אישום.",
+        "spans": [[11, 50]]
+      }
+    ],
+    "negative": [
+      "בית המשפט המחוזי מרכז דן בתיק.",
+      "הסעיף (מחוזי מרכז) נמחק.",
+      "ת\"א (מחוזי) ללא מספר."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Hebrew district-court form: case type, then (מחוזי + district) then docket. Party names and date follow in running citation; not captured. Recalled, not fetched."
+}

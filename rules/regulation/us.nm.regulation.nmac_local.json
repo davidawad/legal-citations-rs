@@ -1,0 +1,49 @@
+{
+  "id": "us.nm.regulation.nmac_local",
+  "kind": "regulation",
+  "jurisdiction": "us.nm",
+  "pattern": "\\b(?P<rule>[0-9]{1,2}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,4})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)\\s?NMAC",
+  "priority": 65,
+  "normalize": "N.M. Code R. § {rule}{sub}",
+  "authority_key": "us.nm.nmac/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New Mexico) administrative compilation: N.N.N.N NMAC (New Mexico local form, Rule 23-112 NMRA) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (New Mexico) and the official New Mexico administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 20.6.2.3103 NMAC.",
+        "spans": [[4, 20]],
+        "groups": {
+          "rule": "20.6.2.3103",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 8.200.410.10 NMAC in reaching its holding.",
+        "spans": [[20, 37]]
+      },
+      {
+        "text": "Under 19.15.17.8(A) NMAC, the permit fails.",
+        "spans": [[6, 24]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The New Mexico agency adopted 12 new rules in 2020.",
+      "Under NMAC, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Same authority key as us.nm.regulation.nmac."
+}

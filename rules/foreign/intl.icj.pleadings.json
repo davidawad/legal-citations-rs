@@ -1,0 +1,52 @@
+{
+  "id": "intl.icj.pleadings",
+  "kind": "foreign",
+  "jurisdiction": "intl.icj",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+I\\.\\s?C\\.\\s?J\\.\\s+Pleadings\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} I.C.J. Pleadings {page}",
+  "authority_key": "intl.icj/pleadings/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations): I.C.J. Pleadings, Oral Arguments, and Documents (1946-date), <year> I.C.J. Pleadings <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Corfu Channel (U.K. v. Alb.), 1949 I.C.J. Pleadings 1.",
+        "spans": [[30, 53]],
+        "groups": {
+          "volume": "1949",
+          "page": "1"
+        }
+      },
+      {
+        "text": "Fisheries (U.K. v. Nor.), 1951 I.C.J. Pleadings 45.",
+        "spans": [[26, 50]]
+      },
+      {
+        "text": "The court relied on 1951 I.C.J. Pleadings 45, 50–52 in its opinion.",
+        "spans": [[20, 53]]
+      }
+    ],
+    "negative": [
+      "The pleadings ran 45 pages.",
+      "The 1951 court docs ran 116 pages.",
+      "I.C.J. Pleadings volumes number 45."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

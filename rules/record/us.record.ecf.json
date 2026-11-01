@@ -1,0 +1,65 @@
+{
+  "id": "us.record.ecf",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:ECF|Dkt\\.|D\\.I\\.)\\s*(?:Nos?\\.\\s*)?(?P<number>[0-9]{1,5})(?:-(?P<attachment>[0-9]{1,3}))?\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,4}(?:\\s?[-–]\\s?[0-9]{1,4})?))?(?:,\\s+PageID(?:\\.|\\s?#)\\s?(?P<page_id>[0-9]{1,6}(?:\\s?[-–]\\s?[0-9]{1,6})?))?",
+  "priority": 55,
+  "normalize": "ECF No. {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17.1.4 / R. 10.8.3 (docket and ECF citations)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook B17 (Bluepages) and R. 10.8.3.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See ECF No. 12.",
+        "spans": [[4, 14]],
+        "groups": {
+          "number": "12"
+        }
+      },
+      {
+        "text": "The court relied on Dkt. 45 in reaching its holding.",
+        "spans": [[20, 27]]
+      },
+      {
+        "text": "Under D.I. 112, the claim fails.",
+        "spans": [[6, 14]]
+      },
+      {
+        "text": "The order says so. ECF No. 12, at 5.",
+        "spans": [[19, 35]],
+        "groups": {
+          "number": "12",
+          "pin": "5"
+        }
+      },
+      {
+        "text": "See ECF No. 12-3 (the lease) and ECF No. 40-1 at 2-4.",
+        "spans": [[4, 16], [33, 52]]
+      },
+      {
+        "text": "The ruling is at ECF No. 88, PageID.1234-36.",
+        "spans": [[17, 43]]
+      }
+    ],
+    "negative": [
+      "The ER doctor saw 139 patients.",
+      "Exhibit hall 3 opens at noon.",
+      "The appendix lists 23 items.",
+      "The ECF system was down at 5 p.m."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "dot-1ij4xz.10: an attachment (`ECF No. 12-3`), a pin (`ECF No. 12, at 5`) and a Sixth Circuit PageID (`ECF No. 88, PageID.1234`) are part of the cite; a list (`ECF Nos. 12, 14`) is us.record.ecf_list."
+}

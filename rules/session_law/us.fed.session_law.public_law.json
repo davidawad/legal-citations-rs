@@ -1,0 +1,53 @@
+{
+  "id": "us.fed.session_law.public_law",
+  "kind": "session_law",
+  "jurisdiction": "us.fed",
+  "pattern": "\\bPub\\.\\s?L\\.\\s?(?:No\\.\\s?)?(?P<congress>[0-9]{1,3})[-–](?P<number>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "Pub. L. No. {congress}-{number}",
+  "authority_key": "us.plaw/{congress}/{number}",
+  "url_templates": [
+    "https://www.govinfo.gov/link/plaw/{congress}/public/{number}"
+  ],
+  "url_decoders": [
+    "govinfo.gov/link/plaw/{congress}/public/{number}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.4 (session laws) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.4.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Pub. L. No. 111-148.",
+        "spans": [[4, 23]],
+        "groups": {
+          "congress": "111",
+          "number": "148"
+        }
+      },
+      {
+        "text": "The court relied on Pub. L. 112-29 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under Pub.L. No. 115-97, the claim fails.",
+        "spans": [[6, 23]]
+      }
+    ],
+    "negative": [
+      "The public library has 111 public computers.",
+      "The statue was installed in 1919.",
+      "Their status was pending for 12 days."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

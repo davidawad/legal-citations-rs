@@ -1,0 +1,71 @@
+{
+  "id": "us.state.legislative.journal",
+  "kind": "legislative",
+  "jurisdiction": "us.state",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\b(?P<chamber>House|Senate|Assembly|H\\.|S\\.|Assemb\\.|Sen\\.)\\s+J(?:our(?:nal)?|\\.)\\.?,\\s+(?P<session>(?:19|20)[0-9]{2}(?:-(?:19|20)?[0-9]{2})?\\s+(?:Reg\\.|Spec\\.|Extra(?:ordinary)?\\.?|[0-9](?:st|nd|rd|th|d)\\s+(?:Spec\\.|Extra\\.))\\s+Sess\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{chamber} J., {session} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 13.5 (state legislative journals)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.5 and the state legislature's journal for the session.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The motion failed. S. Journal, 2019 Reg. Sess. 123 (Fla.).",
+        "spans": [
+          [
+            19,
+            50
+          ]
+        ],
+        "groups": {
+          "chamber": "S.",
+          "page": "123"
+        }
+      },
+      {
+        "text": "See Assemb. J., 2019-2020 Reg. Sess. 1234 (Cal.).",
+        "spans": [
+          [
+            4,
+            41
+          ]
+        ]
+      },
+      {
+        "text": "Compare House Journal, 2010 Spec. Sess. 45 with Senate J., 2021 1st Spec. Sess. 7.",
+        "spans": [
+          [
+            8,
+            42
+          ],
+          [
+            48,
+            81
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Senate Journal was printed.",
+      "S. Journal, 2019 Reg. Sess.",
+      "House Journal entries"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

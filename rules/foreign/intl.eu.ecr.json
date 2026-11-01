@@ -1,0 +1,57 @@
+{
+  "id": "intl.eu.ecr",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+E\\.\\s?C\\.\\s?R\\.\\s+(?P<page>(?:I{1,2}-)?[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{year} E.C.R. {page}",
+  "authority_key": "eu.ecr/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): Reports of cases before the Court of Justice (E.C.R.), <year> E.C.R. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Van Gend en Loos v. Nederlandse Administratie der Belastingen, 1963 E.C.R. 1.",
+        "spans": [[63, 76]],
+        "groups": {
+          "year": "1963",
+          "page": "1"
+        }
+      },
+      {
+        "text": "Case C-6/90, Francovich v. Italy, 1991 E.C.R. I-5357.",
+        "spans": [[34, 52]]
+      },
+      {
+        "text": "Case T-201/04, Microsoft Corp. v. Comm’n, 2007 E.C.R. II-3601.",
+        "spans": [[44, 63]]
+      },
+      {
+        "text": "The court relied on 1964 E.C.R. 585, 593–595 in its judgment.",
+        "spans": [[20, 46]]
+      }
+    ],
+    "negative": [
+      "The ECR office opened in 1963.",
+      "1991 E.C. regulations filled 5357 pages.",
+      "E.C.R. volumes number 1 to 40."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Since 1990 the reports have parts I (Court of Justice) and II (General Court) with prefixed pages."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "us.treaty.statutes_at_large",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)(?P<volume>[0-9]{1,2})\\s+Stat\\.\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 65,
+  "normalize": "{volume} Stat. {page}",
+  "authority_key": "us.stat/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Statutes at Large (treaties 1778-1949), <treaty name>, <parties>, <date>, <vol> Stat. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Treaty of Peace, U.S.-Gr. Brit., Sept. 3, 1783, 8 Stat. 80.",
+        "spans": [[33, 58]],
+        "groups": {
+          "date": "Sept. 3, 1783",
+          "volume": "8",
+          "page": "80"
+        }
+      },
+      {
+        "text": "Treaty of Guadalupe Hidalgo, U.S.-Mex., Feb. 2, 1848, 9 Stat. 922.",
+        "spans": [[40, 65]]
+      },
+      {
+        "text": "Kellogg-Briand Pact, Aug. 27, 1928, 46 Stat. 2343, T.S. No. 796.",
+        "spans": [[21, 49]]
+      }
+    ],
+    "negative": [
+      "Pub. L. No. 111-148, 124 Stat. 119 (2010).",
+      "The statute was signed Sept. 3, 1783.",
+      "Stat. 80 is the code for the form."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A treaty in the Statutes at Large is cited with its signing date right before the volume; the date tells it from a session law, so this rule requires it and outranks us.fed.session_law.statutes_at_large only then."
+}

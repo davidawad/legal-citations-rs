@@ -1,0 +1,49 @@
+{
+  "id": "us.ca.court_rule.rules_of_court",
+  "kind": "court_rule",
+  "jurisdiction": "us.ca",
+  "pattern": "(?:(?:Cal\\.|California)\\s+(?:Rules\\s+of\\s+Court,\\s+rules?\\s+|R\\.\\s?Ct\\.\\s?))\\s?(?P<rule>[0-9]{1,2}\\.[0-9]{1,4})(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Cal. Rules of Court, rule {rule}{sub}",
+  "authority_key": "us.ca.rules.rules_of_court/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (California) California Rules of Court: Cal. Rules of Court, rule N; local form Cal. Rules of Court, rule N (California Style Manual) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (California) and the official California Rules of Court; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cal. Rules of Court, rule 8.204(a)(1)(B).",
+        "spans": [[4, 44]],
+        "groups": {
+          "rule": "8.204",
+          "sub": "(a)(1)(B)"
+        }
+      },
+      {
+        "text": "The court relied on Cal. R. Ct. 3.1110 in reaching its holding.",
+        "spans": [[20, 38]]
+      },
+      {
+        "text": "Under California Rules of Court, rule 8.1115(a), the claim fails.",
+        "spans": [[6, 47]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The California rules committee met 12 times in 2020.",
+      "Under Cal. Rules of Court, as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. Code of Civil Procedure and Evidence Code cites are statutes (us.ca.statute.code)."
+}

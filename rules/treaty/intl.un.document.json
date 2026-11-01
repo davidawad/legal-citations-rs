@@ -1,0 +1,60 @@
+{
+  "id": "intl.un.document",
+  "kind": "treaty",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "un"
+  ],
+  "pattern": "\\bU\\.\\s?N\\.\\s?Docs?\\.\\s+(?P<symbol>[A-Z][A-Z0-9]*(?:\\.[0-9]+)?(?:/[A-Za-z0-9()\\-]+(?:\\.[A-Za-z0-9()\\-]+)*)+)",
+  "priority": 62,
+  "normalize": "U.N. Doc. {symbol}",
+  "authority_key": "un/doc/{symbol}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations): U.N. Doc. <document symbol>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "S.C. Res. 1373, U.N. Doc. S/RES/1373 (Sept. 28, 2001).",
+        "spans": [[16, 36]],
+        "groups": {
+          "symbol": "S/RES/1373"
+        }
+      },
+      {
+        "text": "U.N. Secretary-General, Report on the Rule of Law, U.N. Doc. S/2004/616 (Aug. 23, 2004).",
+        "spans": [[51, 71]]
+      },
+      {
+        "text": "U.N. SCOR, 58th Sess., 4701st mtg., U.N. Doc. S/PV.4701 (Feb. 5, 2003).",
+        "spans": [[36, 55]]
+      },
+      {
+        "text": "Human Rights Committee, General Comment No. 31, U.N. Doc. CCPR/C/21/Rev.1/Add.13 (May 26, 2004).",
+        "spans": [[48, 80]]
+      },
+      {
+        "text": "See U.N. Doc. A/8028.",
+        "spans": [[4, 20]]
+      }
+    ],
+    "negative": [
+      "The U.N. doctor treated 616 patients.",
+      "A U.N. document was filed in 2004.",
+      "The U.N. Doc. room is on floor 3."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A document symbol always has a slash (A/RES/61/295, S/PV.4701). url_templates: none; undocs.org answers 200 with the same language page for a real and a made-up symbol (A/RES/61/295, A/RES/99/9999; 2026-10-23), so a fetch cannot verify it."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "us.fed.omb.budget",
+  "kind": "executive",
+  "jurisdiction": "us.fed.omb",
+  "pattern": "\\bOffice\\s+of\\s+Mgmt\\.\\s+&\\s+Budget,\\s+Exec\\.\\s+Office\\s+of\\s+the\\s+President,\\s+(?P<title>[A-Z][^,()]{2,80}?),\\s+Fiscal\\s+Year\\s+(?P<fy>(?:19|20)[0-9]{2})(?:,\\s+at\\s+(?P<page>[0-9]{1,4}))?",
+  "priority": 60,
+  "normalize": "Office of Mgmt. & Budget, {title}, Fiscal Year {fy}",
+  "authority_key": "us.omb.budget/{fy}/{title}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Executive Office of the President (Budgets)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Executive Office of the President (Budgets), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Office of Mgmt. & Budget, Exec. Office of the President, Budget of the United States Government, Fiscal Year 2014 (2013).",
+        "spans": [
+          [
+            0,
+            113
+          ]
+        ],
+        "groups": {
+          "fy": "2014"
+        }
+      },
+      {
+        "text": "Office of Mgmt. & Budget, Exec. Office of the President, Analytical Perspectives, Fiscal Year 2016, at 35 (2015).",
+        "spans": [
+          [
+            0,
+            105
+          ]
+        ]
+      },
+      {
+        "text": "See Office of Mgmt. & Budget, Exec. Office of the President, Historical Tables, Fiscal Year 2020, at 21.",
+        "spans": [
+          [
+            4,
+            103
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Office of Mgmt. & Budget released the budget in 2013.",
+      "Fiscal Year 2014 ended in September.",
+      "Budget of the United States Government, Fiscal Year 2014, ran long."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

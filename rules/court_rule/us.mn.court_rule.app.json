@@ -1,0 +1,49 @@
+{
+  "id": "us.mn.court_rule.app",
+  "kind": "court_rule",
+  "jurisdiction": "us.mn",
+  "pattern": "\\b(?:Minn\\.\\s?R\\.\\s?Civ\\.\\s?App\\.\\s?P\\.)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Minn. R. Civ. App. P. {rule}{sub}",
+  "authority_key": "us.mn.rules.app/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Minnesota) Minnesota Rules of Civil Appellate Procedure: Minn. R. Civ. App. P. N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Minnesota) and the official Minnesota Rules of Civil Appellate Procedure; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Minn. R. Civ. App. P. 128.02.",
+        "spans": [[4, 32]],
+        "groups": {
+          "rule": "128.02",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Minn. R. Civ. App. P. 103.03(a) in reaching its holding.",
+        "spans": [[20, 51]]
+      },
+      {
+        "text": "Under Minn. R. Civ. App. P. 104.01, the claim fails.",
+        "spans": [[6, 34]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Minnesota rules committee met 12 times in 2020.",
+      "Under Minn. R. Civ. App. P. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

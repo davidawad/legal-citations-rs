@@ -1,0 +1,75 @@
+{
+  "id": "us.fed.dist.wawd.local_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist.wawd",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?P<label>LCR|LCrR|LMJR)\\s?(?P<rule>[0-9]{1,2}(?:\\.[0-9]+)*[A-Za-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "reject_before": [
+    "[0-9]\\s?$"
+  ],
+  "priority": 54,
+  "normalize": "{label} {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "W.D. Wash. Local Rules (`LCR`, `LCrR`, `LMJR`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the W.D. Wash. local rules at https://www.wawd.uscourts.gov/local-rules-and-orders and compare the `LCR 7(d)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Noting dates are set by LCR 7(d).",
+        "spans": [
+          [
+            24,
+            32
+          ]
+        ],
+        "groups": {
+          "label": "LCR",
+          "rule": "7",
+          "sub": "(d)"
+        }
+      },
+      {
+        "text": "See LCrR 12(b).",
+        "spans": [
+          [
+            4,
+            14
+          ]
+        ]
+      },
+      {
+        "text": "Compare LCR 26(c)(1) with LMJR 3.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            32
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The LCR team",
+      "LCR guidance",
+      "a CLCR 7 form"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

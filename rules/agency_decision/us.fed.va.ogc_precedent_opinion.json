@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.va.ogc_precedent_opinion",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.va",
+  "tags": [
+    "veterans"
+  ],
+  "pattern": "\\b(?:VAOPGCPREC|VAOGCPREC|VA\\s+Gen\\.\\s+Couns\\.\\s+Prec\\.|VA\\s+O\\.?G\\.?C\\.?\\s+Prec\\.(?:\\s+Op\\.)?|O\\.\\s?G\\.\\s?C\\.\\s+Prec\\.)\\s+(?P<number>[0-9]{1,2}-(?:19|20)?[0-9]{2})\\b",
+  "priority": 60,
+  "normalize": "VAOPGCPREC {number}",
+  "authority_key": "us.vaopgcprec/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "VA General Counsel precedent opinions, 38 C.F.R. § 14.507 (`VAOPGCPREC 7-2003`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the VA OGC precedent opinions at https://www.va.gov/ogc/precedentopinions.asp and compare the numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board is bound. VAOPGCPREC 7-2003.",
+        "spans": [
+          [
+            20,
+            37
+          ]
+        ],
+        "groups": {
+          "number": "7-2003"
+        }
+      },
+      {
+        "text": "See VA Gen. Couns. Prec. 3-2000.",
+        "spans": [
+          [
+            4,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "Compare VAOGCPREC 3-97 with O.G.C. Prec. 6-96.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            45
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "VAOPGCPREC pending",
+      "The VA General Counsel opined.",
+      "VAOPGCPREC 7"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

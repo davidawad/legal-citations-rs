@@ -1,0 +1,54 @@
+{
+  "id": "us.ia.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ia",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Iowa\\sAdmin\\.\\s?Bull\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Iowa: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Iowa, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 247"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 26 Iowa Admin. Bull. 1439 (May 25, 2015).",
+        "spans": [[4, 29]],
+        "groups": {
+          "volume": "26",
+          "series": "Iowa Admin. Bull.",
+          "page": "1439"
+        }
+      },
+      {
+        "text": "See 26 Iowa Admin. Bull. 305 (Sept. 1, 2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 12 Iowa Admin. Bull. 77.",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The Iowa Admin. Bull. is published monthly.",
+      "Volume 12 of the Iowa register has 77 pages.",
+      "In 2015 the Iowa Admin. Bull. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

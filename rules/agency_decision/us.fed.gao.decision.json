@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.gao.decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.gao",
+  "pattern": "\\b(?:(?:Comp\\.\\s?Gen\\.\\s?(?:Dec\\.\\s?)?)|GAO\\s+)?B-(?P<number>[0-9]{6})(?:\\.(?P<sub>[0-9]{1,3}))?\\b",
+  "priority": 60,
+  "normalize": "B-{number}",
+  "authority_key": "us.gao/b-{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "GAO decision file numbers (`B-412581.3`); Bluebook R. 14.3 and T1.2 (Comptroller General)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a GAO bid protest decision on gao.gov and Bluebook T1.2 (Comptroller General).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Matter of Vectrus Sys. Corp., B-412581.3, Dec. 21, 2016, 2016 CPD ¶ 344.",
+        "spans": [
+          [
+            34,
+            44
+          ]
+        ],
+        "groups": {
+          "number": "412581",
+          "sub": "3"
+        }
+      },
+      {
+        "text": "The protest was denied, Comp. Gen. Dec. B-321640 (Aug. 22, 2011).",
+        "spans": [
+          [
+            24,
+            48
+          ]
+        ]
+      },
+      {
+        "text": "Compare GAO B-330776 with B-401068.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            34
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The B-52 bomber flew in 1955.",
+      "Form B-1234 was filed late.",
+      "Unit B-12 is vacant."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "`.N` suffixes are kept in `sub` but not in the authority key, so supplemental decisions share an authority."
+}

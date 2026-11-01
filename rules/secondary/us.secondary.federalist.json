@@ -1,0 +1,53 @@
+{
+  "id": "us.secondary.federalist",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "founding"
+  ],
+  "pattern": "\\bThe\\s+Federalist\\s+No\\.\\s+(?P<number>[0-9]{1,2})\\b(?:,\\s+at\\s+(?P<pin>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?(?:\\s+\\((?P<author>Alexander\\s+Hamilton|James\\s+Madison|John\\s+Jay|Hamilton|Madison|Jay)(?:\\s+or\\s+(?:Alexander\\s+Hamilton|James\\s+Madison|Hamilton|Madison))?\\))?",
+  "priority": 55,
+  "normalize": "The Federalist No. {number}",
+  "authority_key": "federalist/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R15.9 (The Federalist No. <n>, at <page> (<author>) (<editor> ed., <year>))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R15.9 (collected works) example for The Federalist.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See The Federalist No. 78, at 465 (Alexander Hamilton) (Clinton Rossiter ed., 1961).",
+        "spans": [[4, 54]],
+        "groups": {
+          "number": "78",
+          "pin": "465",
+          "author": "Alexander Hamilton"
+        }
+      },
+      {
+        "text": "The Federalist No. 10 (James Madison) warns of faction.",
+        "spans": [[0, 37]]
+      },
+      {
+        "text": "As The Federalist No. 51 explains, ambition counteracts ambition.",
+        "spans": [[3, 24]]
+      }
+    ],
+    "negative": [
+      "The Federalist papers number 85.",
+      "Federalist No. 10 club meets Fridays.",
+      "The Federalist Society met 78 times."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The paper number is the authority; the editor parenthetical that may follow belongs to the edition, not the paper."
+}

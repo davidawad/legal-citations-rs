@@ -1,0 +1,58 @@
+{
+  "id": "foreign.de.code",
+  "kind": "foreign",
+  "jurisdiction": "foreign.de",
+  "tags": [
+    "foreign",
+    "germany"
+  ],
+  "pattern": "(?:§§?|Art\\.)\\s*(?P<section>[0-9]{1,4}[a-z]?)(?:\\s+(?:Abs\\.|para\\.)\\s*(?P<para>[0-9]{1,2}))?(?:\\s+(?:S\\.|Satz|sentence)\\s*[0-9]{1,2})?(?:\\s+(?:Nr\\.|no\\.)\\s*[0-9]{1,2})?\\s+(?P<code>BGB|StGB|ZPO|StPO|HGB|GG|AktG|GmbHG|UWG|GWB|InsO|VwVfG|EGBGB|UrhG|PatG|MarkenG|BDSG|AO|EStG|KStG|UStG|ArbGG|KSchG|FamFG|GVG|VwGO|BVerfGG)\\b",
+  "priority": 60,
+  "normalize": "§ {section} {code}",
+  "authority_key": "de.code/{code}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (Germany: codes cited § <n> <code abbreviation>, e.g. § 823 BGB; Art. <n> GG for the Basic Law)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (Germany): BVerfGE <vol>, <page>; BGHZ <vol>, <page>; § <n> BGB.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Liability arises under § 823 Abs. 1 BGB.",
+        "spans": [[23, 40]],
+        "groups": {
+          "section": "823",
+          "para": "1",
+          "code": "BGB"
+        }
+      },
+      {
+        "text": "See Art. 1 GG.",
+        "spans": [[4, 13]]
+      },
+      {
+        "text": "§ 242 BGB requires good faith.",
+        "spans": [[0, 10]]
+      },
+      {
+        "text": "Jurisdiction under § 32 ZPO lies.",
+        "spans": [[19, 28]]
+      }
+    ],
+    "negative": [
+      "Section 823 of the code.",
+      "The BGB has 2385 sections.",
+      "§ 823 of the Act"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The code abbreviation after the section is what makes it German; `§ 823` alone is not matched."
+}

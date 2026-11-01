@@ -1,0 +1,71 @@
+{
+  "id": "us.uniform.statute.ula",
+  "kind": "statute",
+  "jurisdiction": "us.uniform",
+  "pattern": "\\b(?P<volume>[0-9]{1,2}[A-Z]?)(?:\\s+Pt\\.\\s+(?P<part>[IVX]{1,4}|[0-9]{1,2}))?\\s+U\\.\\s?L\\.\\s?A\\.\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} U.L.A. {page}",
+  "authority_key": "us.ula/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "uniform"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, R18.4 (Uniform Laws Annotated)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R18.4 (Uniform Laws Annotated), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Unif. Rules of Evidence (1974) § 702 note 24, 13E U.L.A. 114 (2011).",
+        "spans": [
+          [
+            47,
+            61
+          ]
+        ],
+        "groups": {
+          "volume": "13E",
+          "page": "114"
+        }
+      },
+      {
+        "text": "Unif. Mediation Act § 8, 7A Pt. III U.L.A. 137 (2006).",
+        "spans": [
+          [
+            26,
+            47
+          ]
+        ]
+      },
+      {
+        "text": "See 9B U.L.A. 52 and 14 U.L.A. 3.",
+        "spans": [
+          [
+            4,
+            16
+          ],
+          [
+            21,
+            32
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The U.L.A. volumes are bound in red.",
+      "Volume 13E of the U.L.A. covers evidence.",
+      "U.L.A. page 114 discusses it."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

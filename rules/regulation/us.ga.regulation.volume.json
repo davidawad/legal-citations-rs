@@ -1,0 +1,54 @@
+{
+  "id": "us.ga.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ga",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Ga\\.\\s?Gov['’]t\\sReg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Georgia: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Georgia, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 177"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 1 Ga. Gov’t Reg. 1798 (LexisNexis May 2015).",
+        "spans": [[4, 27]],
+        "groups": {
+          "volume": "1",
+          "series": "Ga. Gov’t Reg.",
+          "page": "1798"
+        }
+      },
+      {
+        "text": "See 9 Ga. Gov’t Reg. 102 (LexisNexis Sept. 2014).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 12 Ga. Gov’t Reg. 77.",
+        "spans": [[4, 26]]
+      }
+    ],
+    "negative": [
+      "The Ga. Gov’t Reg. is published monthly.",
+      "Volume 12 of the Georgia register has 77 pages.",
+      "In 2015 the Ga. Gov’t Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

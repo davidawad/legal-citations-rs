@@ -1,0 +1,48 @@
+{
+  "id": "us.wv.regulation.csr",
+  "kind": "regulation",
+  "jurisdiction": "us.wv",
+  "pattern": "\\bW\\.\\s?Va\\.\\s?(?:Code\\s?(?:St\\.\\s?)?R\\.|C\\.S\\.R\\.)\\s?§\\s?(?P<section>[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}(?:\\.[0-9]{1,3})*)",
+  "priority": 65,
+  "normalize": "W. Va. Code R. § {section}",
+  "authority_key": "us.wv.csr/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (West Virginia) administrative compilation: W. Va. Code R. § N-N-N; local form W. Va. C.S.R. § N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (West Virginia) and the official West Virginia administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See W. Va. Code R. § 47-2-1.",
+        "spans": [[4, 28]],
+        "groups": {
+          "section": "47-2-1"
+        }
+      },
+      {
+        "text": "The court relied on W. Va. C.S.R. § 64-21-3 in reaching its holding.",
+        "spans": [[20, 44]]
+      },
+      {
+        "text": "Under W. Va. Code St. R. § 78-3-7.1, the permit fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The West Virginia agency adopted 12 new rules in 2020.",
+      "Under W. Va. Code R., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Priority 65 beats us.wv.statute.code if it reaches into the same text."
+}

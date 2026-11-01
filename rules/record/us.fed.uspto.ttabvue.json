@@ -1,0 +1,49 @@
+{
+  "id": "us.fed.uspto.ttabvue",
+  "kind": "record",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "\\b(?P<entry>[0-9]{1,4})\\s+TTABVUE\\s+(?P<page>[0-9]{1,5}(?:\\s*[-–]\\s*[0-9]{1,5})?)",
+  "priority": 60,
+  "normalize": "{entry} TTABVUE {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "TBMP § 801.03 (TTABVUE record citation form)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open TBMP § 801.03.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 15 TTABVUE 4.",
+        "spans": [[4, 16]],
+        "groups": {
+          "entry": "15",
+          "page": "4"
+        }
+      },
+      {
+        "text": "The court relied on 8 TTABVUE 12-14 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under 120 TTABVUE 3, the claim fails.",
+        "spans": [[6, 19]]
+      }
+    ],
+    "negative": [
+      "The ER doctor saw 139 patients.",
+      "Exhibit hall 3 opens at noon.",
+      "The appendix lists 23 items."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

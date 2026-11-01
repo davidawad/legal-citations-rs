@@ -1,0 +1,78 @@
+{"start": 53, "end": 61, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 40", "normalized": "Paper 40", "form": "page furniture", "optional": true, "note": "this document's own paper number in the header"}
+{"start": 358, "end": 371, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687", "normalized": "IPR2025-00687", "form": "docket number"}
+{"start": 373, "end": 393, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Patent 10,933,370 B2", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 395, "end": 408, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688", "normalized": "IPR2025-00688", "form": "docket number"}
+{"start": 410, "end": 430, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Patent 10,933,370 B2", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 432, "end": 445, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717", "normalized": "IPR2025-00717", "form": "docket number"}
+{"start": 447, "end": 467, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Patent 10,926,218 B2", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 469, "end": 482, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718", "normalized": "IPR2025-00718", "form": "docket number"}
+{"start": 484, "end": 504, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Patent 10,926,218 B2", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 845, "end": 881, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687 (Patent 10,933,370 B2)", "normalized": "IPR2025-00687", "form": "page furniture", "optional": true}
+{"start": 882, "end": 918, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688 (Patent 10,933,370 B2)", "normalized": "IPR2025-00688", "form": "page furniture", "optional": true}
+{"start": 919, "end": 955, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717 (Patent 10,926,218 B2)", "normalized": "IPR2025-00717", "form": "page furniture", "optional": true}
+{"start": 956, "end": 992, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718 (Patent 10,926,218 B2)", "normalized": "IPR2025-00718", "form": "page furniture", "optional": true}
+{"start": 1126, "end": 1134, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 29", "normalized": "Paper 29", "form": "record: PTAB paper"}
+{"start": 1180, "end": 1188, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 34", "normalized": "Paper 34", "form": "record: PTAB paper"}
+{"start": 1354, "end": 1362, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 37", "normalized": "Paper 37", "form": "record: PTAB paper"}
+{"start": 1513, "end": 1542, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "U.S. Patent No. 10,933,370 B2", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 1547, "end": 1564, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’370 patent", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 1573, "end": 1602, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "U.S.\nPatent No. 10,926,218 B2", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 1607, "end": 1624, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’218 patent", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 1630, "end": 1642, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "DR Request 5", "normalized": "Paper 34 at 5", "form": "record: PTAB paper", "note": "short name for Paper 34"}
+{"start": 1731, "end": 1744, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’370 patent", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 1777, "end": 1794, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’218 patent", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 2026, "end": 2037, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 37, 6", "normalized": "Paper 37 at 6", "form": "record: PTAB paper"}
+{"start": 2151, "end": 2168, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’370 patent", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 2173, "end": 2186, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’218 patent", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 2192, "end": 2203, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Decisions 3", "normalized": "Paper 29 at 3", "form": "record: PTAB paper", "note": "short name for Paper 29"}
+{"start": 2447, "end": 2497, "kind": "agency_manual", "jurisdiction": "us.fed.uspto", "text": "Patent Trial and Appeal Board Trial Practice Guide", "normalized": "PTAB Trial Practice Guide § II.D.2 (Dec. 12, 2025)", "form": "agency manual", "optional": true, "note": "title of the Trial Practice Guide cite; footnote 2 and the page header separate it from its section, so the counted label starts at § II.D.2 (README: footnote between name and cite)"}
+{"start": 2545, "end": 2558, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687", "normalized": "IPR2025-00687", "form": "docket number"}
+{"start": 2619, "end": 2632, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688", "normalized": "IPR2025-00688", "form": "docket number"}
+{"start": 2634, "end": 2647, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717", "normalized": "IPR2025-00717", "form": "docket number"}
+{"start": 2653, "end": 2666, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718", "normalized": "IPR2025-00718", "form": "docket number"}
+{"start": 2715, "end": 2728, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687", "normalized": "IPR2025-00687", "form": "docket number"}
+{"start": 2733, "end": 2746, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688", "normalized": "IPR2025-00688", "form": "docket number"}
+{"start": 2752, "end": 2788, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687 (Patent 10,933,370 B2)", "normalized": "IPR2025-00687", "form": "page furniture", "optional": true}
+{"start": 2789, "end": 2825, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688 (Patent 10,933,370 B2)", "normalized": "IPR2025-00688", "form": "page furniture", "optional": true}
+{"start": 2826, "end": 2862, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717 (Patent 10,926,218 B2)", "normalized": "IPR2025-00717", "form": "page furniture", "optional": true}
+{"start": 2863, "end": 2899, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718 (Patent 10,926,218 B2)", "normalized": "IPR2025-00718", "form": "page furniture", "optional": true}
+{"start": 2900, "end": 2925, "kind": "agency_manual", "jurisdiction": "us.fed.uspto", "text": "§ II.D.2 (Dec. 12, 2025)", "normalized": "PTAB Trial Practice Guide § II.D.2 (Dec. 12, 2025)", "form": "agency manual", "note": "Trial Practice Guide cite; its title precedes footnote 2 and the page header"}
+{"start": 3105, "end": 3118, "kind": "agency_manual", "jurisdiction": "us.fed.uspto", "text": "TPG § II.D.2", "normalized": "PTAB Trial Practice Guide § II.D.2", "form": "agency manual"}
+{"start": 3184, "end": 3201, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’370\npatent", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 3246, "end": 3263, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "the ’218 patent", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 3362, "end": 3375, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687", "normalized": "IPR2025-00687", "form": "docket number"}
+{"start": 3377, "end": 3387, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 2, 4", "normalized": "Paper 2 at 4", "form": "record: PTAB paper"}
+{"start": 3389, "end": 3402, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717", "normalized": "IPR2025-00717", "form": "docket number"}
+{"start": 3404, "end": 3414, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 2, 4", "normalized": "Paper 2 at 4", "form": "record: PTAB paper"}
+{"start": 3493, "end": 3506, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’370 patent", "normalized": "U.S. Patent No. 10,933,370", "form": "patent", "optional": true}
+{"start": 3564, "end": 3577, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’218\npatent", "normalized": "U.S. Patent No. 10,926,218", "form": "patent", "optional": true}
+{"start": 3583, "end": 3594, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 1, 10", "normalized": "Paper 1 at 10", "form": "record: PTAB paper"}
+{"start": 3596, "end": 3609, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688", "normalized": "IPR2025-00688", "form": "docket number"}
+{"start": 3611, "end": 3622, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 1, 10", "normalized": "Paper 1 at 10", "form": "record: PTAB paper"}
+{"start": 3624, "end": 3637, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717", "normalized": "IPR2025-00717", "form": "docket number"}
+{"start": 3639, "end": 3655, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 1, 10–11", "normalized": "Paper 1 at 10–11", "form": "record: PTAB paper"}
+{"start": 3657, "end": 3670, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718", "normalized": "IPR2025-00718", "form": "docket number"}
+{"start": 3672, "end": 3688, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 1, 10–11", "normalized": "Paper 1 at 10–11", "form": "record: PTAB paper"}
+{"start": 4424, "end": 4437, "kind": "agency_manual", "jurisdiction": "us.fed.uspto", "text": "TPG § II.D.2", "normalized": "PTAB Trial Practice Guide § II.D.2", "form": "agency manual"}
+{"start": 4446, "end": 4465, "kind": "statute", "jurisdiction": "us.fed", "text": "35 U.S.C. § 316(b)", "normalized": "35 U.S.C. § 316(b)", "form": "U.S.C."}
+{"start": 4546, "end": 4582, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687 (Patent 10,933,370 B2)", "normalized": "IPR2025-00687", "form": "page furniture", "optional": true}
+{"start": 4583, "end": 4619, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688 (Patent 10,933,370 B2)", "normalized": "IPR2025-00688", "form": "page furniture", "optional": true}
+{"start": 4620, "end": 4656, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717 (Patent 10,926,218 B2)", "normalized": "IPR2025-00717", "form": "page furniture", "optional": true}
+{"start": 4657, "end": 4693, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718 (Patent 10,926,218 B2)", "normalized": "IPR2025-00718", "form": "page furniture", "optional": true}
+{"start": 4823, "end": 4848, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’370 and ’218\npatents", "normalized": "U.S. Patent Nos. 10,933,370 and 10,926,218", "form": "patent", "optional": true}
+{"start": 4854, "end": 4948, "kind": "agency_decision", "jurisdiction": "us.fed.uspto", "text": "CrowdStrike, Inc. v. GoSecure, Inc., IPR2025-00068, Paper 25\nat 3–4 (Director June 25, 2025)", "normalized": "IPR2025-00068, Paper 25 at 3–4", "form": "PTAB decision"}
+{"start": 5185, "end": 5202, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 29, 25–26", "normalized": "Paper 29 at 25–26", "form": "record: PTAB paper"}
+{"start": 5204, "end": 5217, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718", "normalized": "IPR2025-00718", "form": "docket number"}
+{"start": 5219, "end": 5233, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 34 at 23", "normalized": "Paper 34 at 23", "form": "record: PTAB paper"}
+{"start": 5497, "end": 5522, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "’370 and ’218 patents", "normalized": "U.S. Patent Nos. 10,933,370 and 10,926,218", "form": "patent", "optional": true}
+{"start": 5826, "end": 5834, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 29", "normalized": "Paper 29", "form": "record: PTAB paper"}
+{"start": 5836, "end": 5849, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688", "normalized": "IPR2025-00688", "form": "docket number"}
+{"start": 5851, "end": 5859, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 29", "normalized": "Paper 29", "form": "record: PTAB paper"}
+{"start": 5861, "end": 5873, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR202500717", "normalized": "IPR2025-00717", "form": "docket number", "note": "hyphen lost in PDF extraction"}
+{"start": 5875, "end": 5883, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 35", "normalized": "Paper 35", "form": "record: PTAB paper"}
+{"start": 5885, "end": 5898, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718", "normalized": "IPR2025-00718", "form": "docket number"}
+{"start": 5900, "end": 5908, "kind": "record", "jurisdiction": "us.fed.uspto", "text": "Paper 34", "normalized": "Paper 34", "form": "record: PTAB paper"}
+{"start": 6044, "end": 6080, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00687 (Patent 10,933,370 B2)", "normalized": "IPR2025-00687", "form": "page furniture", "optional": true}
+{"start": 6081, "end": 6117, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00688 (Patent 10,933,370 B2)", "normalized": "IPR2025-00688", "form": "page furniture", "optional": true}
+{"start": 6118, "end": 6154, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00717 (Patent 10,926,218 B2)", "normalized": "IPR2025-00717", "form": "page furniture", "optional": true}
+{"start": 6155, "end": 6191, "kind": "docket", "jurisdiction": "us.fed.uspto", "text": "IPR2025-00718 (Patent 10,926,218 B2)", "normalized": "IPR2025-00718", "form": "page furniture", "optional": true}

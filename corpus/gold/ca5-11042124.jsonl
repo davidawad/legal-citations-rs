@@ -1,0 +1,48 @@
+{"start": 0, "end": 63, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 1\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 178, "end": 190, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "docket number"}
+{"start": 658, "end": 679, "kind": "docket", "jurisdiction": "us.fed.dist.laed", "text": "USDC No. 2:22-CV-3015", "normalized": "No. 2:22-CV-3015", "form": "docket number"}
+{"start": 1109, "end": 1172, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 2\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 1174, "end": 1186, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 2874, "end": 2937, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 3\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 2939, "end": 2951, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 3549, "end": 3586, "kind": "statute", "jurisdiction": "us.la", "text": "Louisiana Oilfield\nAnti-Indemnity Act", "normalized": "La. Rev. Stat. § 9:2780", "form": "prose section reference", "optional": true, "note": "statute named by title only"}
+{"start": 4103, "end": 4163, "kind": "case", "jurisdiction": "us.scotus", "text": "Budinich v. Becton Dickinson & Co., 486 U.S. 196, 202 (1988)", "normalized": "486 U.S. 196", "form": "U.S. Reports"}
+{"start": 4335, "end": 4394, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "In re Larry Doiron, Inc., 879 F.3d 568, 571 (5th Cir. 2018)", "normalized": "879 F.3d 568", "form": "F./F.2d/F.3d/F.4th", "note": "(en banc) excluded"}
+{"start": 4531, "end": 4558, "kind": "statute", "jurisdiction": "us.la", "text": "La. Rev. Stat. § 9:2780(A)", "normalized": "La. Rev. Stat. § 9:2780(A)", "form": "state code"}
+{"start": 4564, "end": 4626, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Luwisch v. Am. Marine Corp., 956 F.3d 320, 326 (5th Cir. 2020)", "normalized": "956 F.3d 320", "form": "F./F.2d/F.3d/F.4th", "note": "(per curiam) excluded"}
+{"start": 4645, "end": 4648, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4653, "end": 4714, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Barrios v. Centaur, L.L.C., 942 F.3d 670, 680 (5th Cir. 2019)", "normalized": "942 F.3d 670", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 4721, "end": 4784, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 4\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 4786, "end": 4798, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 6134, "end": 6172, "kind": "statute", "jurisdiction": "us.fed", "text": "Shipowners Limitation of Liability Act", "normalized": "46 U.S.C. § 30501", "form": "prose section reference", "optional": true, "note": "statute named by title only"}
+{"start": 6181, "end": 6190, "kind": "statute", "jurisdiction": "us.fed", "text": "Jones\nAct", "normalized": "46 U.S.C. § 30104", "form": "prose section reference", "optional": true, "note": "statute named by title only"}
+{"start": 6261, "end": 6284, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Doiron, 879 F.3d at 576", "normalized": "879 F.3d at 576", "form": "short case (at)"}
+{"start": 6290, "end": 6361, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "In re Crescent Energy Servs., L.L.C., 896 F.3d 350, 359 (5th Cir. 2018)", "normalized": "896 F.3d 350", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6367, "end": 6377, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id. at 360", "normalized": "Id. at 360", "form": "Id."}
+{"start": 6384, "end": 6444, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "In re Aries Marine Corp., 166 F.4th 521, 527 (5th Cir. 2026)", "normalized": "166 F.4th 521", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6451, "end": 6514, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 5\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 6516, "end": 6528, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 7988, "end": 8083, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Offshore Oil Servs., Inc. v. Island Operating Co., Inc., 150 F.4th 677, 684 n.4 (5th\nCir. 2025)", "normalized": "150 F.4th 677", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 8089, "end": 8099, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id. at 684", "normalized": "Id. at 684", "form": "Id."}
+{"start": 8106, "end": 8109, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 8115, "end": 8178, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 6\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 8180, "end": 8192, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 9354, "end": 9426, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Thibodeaux v. Grasso Prod. Mgmt. Inc., 370 F.3d 486, 493 (5th Cir. 2004)", "normalized": "370 F.3d 486", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9589, "end": 9632, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Offshore Oil Servs., Inc., 150 F.4th at 687", "normalized": "150 F.4th at 687", "form": "short case (at)"}
+{"start": 9639, "end": 9684, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "In re Crescent Energy Servs., 896 F.3d at 360", "normalized": "896 F.3d at 360", "form": "short case (at)"}
+{"start": 9695, "end": 9705, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "id. at 361", "normalized": "Id. at 361", "form": "Id."}
+{"start": 9804, "end": 9877, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Genesis Energy, L.P. v. Danos, L.L.C., 152 F.4th 648, 655 (5th Cir. 2025)", "normalized": "152 F.4th 648", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9884, "end": 9929, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "In re Crescent Energy Servs., 896 F.3d at 361", "normalized": "896 F.3d at 361", "form": "short case (at)"}
+{"start": 10238, "end": 10301, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 7\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 10303, "end": 10315, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 11311, "end": 11320, "kind": "statute", "jurisdiction": "us.fed", "text": "Jones Act", "normalized": "46 U.S.C. § 30104", "form": "prose section reference", "optional": true, "note": "statute named by title only (\"Jones Act seamen\")"}
+{"start": 11554, "end": 11597, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Offshore Oil Servs., Inc., 150 F.4th at 685", "normalized": "150 F.4th at 685", "form": "short case (at)"}
+{"start": 11920, "end": 11923, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 11932, "end": 11974, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Genesis Energy, L.P., 152 F.4th at 657 n.8", "normalized": "152 F.4th at 657", "form": "short case (at)"}
+{"start": 12161, "end": 12184, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Doiron, 879 F.3d at 577", "normalized": "879 F.3d at 577", "form": "short case (at)"}
+{"start": 12196, "end": 12241, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "In re Crescent Energy Servs., 896 F.3d at 359", "normalized": "896 F.3d at 359", "form": "short case (at)"}
+{"start": 12331, "end": 12394, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "Case: 25-30560\n\nDocument: 70-1\n\nPage: 8\n\nDate Filed: 10/21/2026", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 12396, "end": 12408, "kind": "docket", "jurisdiction": "us.fed.app.ca5", "text": "No. 25-30560", "normalized": "No. 25-30560", "form": "page furniture", "optional": true}
+{"start": 13010, "end": 13093, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "S. Travel Club, Inc. v. Carnival Air Lines, Inc., 986 F.2d 125, 131 (5th Cir.\n1993)", "normalized": "986 F.2d 125", "form": "F./F.2d/F.3d/F.4th", "note": "(per curiam) excluded"}
+{"start": 13347, "end": 13370, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C.\n§ 1292(a)(3)", "normalized": "28 U.S.C. § 1292(a)(3)", "form": "U.S.C."}
+{"start": 13524, "end": 13592, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "Guillot ex rel.\nT.A.G. v. Russell, 59 F.4th 743, 754 (5th Cir. 2023)", "normalized": "59 F.4th 743", "form": "F./F.2d/F.3d/F.4th"}

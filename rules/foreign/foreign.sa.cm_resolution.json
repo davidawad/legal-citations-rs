@@ -1,0 +1,56 @@
+{
+  "id": "foreign.sa.cm_resolution",
+  "kind": "foreign",
+  "jurisdiction": "foreign.sa",
+  "tags": [
+    "mena",
+    "gcc",
+    "sa"
+  ],
+  "pattern": "\\bCouncil\\s+of\\s+Ministers(?:['’]s?)?\\s+(?:Resolution|Decision)\\s+(?:No\\.?\\s*)?\\(?(?P<number>[0-9]{1,4})\\)?,?\\s+(?:dated\\s+(?P<day>[0-9]{1,2})/(?P<month>[0-9]{1,2})/(?P<year>1[2-5][0-9]{2})|of\\s+(?P<year2>1[2-5][0-9]{2}))\\s*(?:H|AH)\\b",
+  "priority": 60,
+  "normalize": "Council of Ministers Resolution No. {number}",
+  "authority_key": "sa.cm_resolution/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Saudi Council of Ministers resolution cited by number and Hijri date (Resolution No. N dated d/m/yyyyH)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Bureau of Experts (laws.boe.gov.sa) page for a regulation; its preamble gives 'Council of Ministers Resolution No. .. dated ..H'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Council of Ministers Resolution No. 245 dated 16/3/1441H.",
+        "spans": [[4, 60]],
+        "groups": {
+          "number": "245",
+          "day": "16",
+          "month": "3",
+          "year": "1441"
+        }
+      },
+      {
+        "text": "Council of Ministers' Decision No. (678) of 1443 AH approved it.",
+        "spans": [[0, 51]]
+      },
+      {
+        "text": "Council of Ministers Resolution 12, dated 1/1/1440 H",
+        "spans": [[0, 52]]
+      }
+    ],
+    "negative": [
+      "The Council of Ministers resolution on housing passed.",
+      "The Council of Ministers met on 16/3/1441H.",
+      "Resolution No. 245 dated 16/3/1441H was cited."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Hijri date required so other states' councils of ministers are not captured."
+}

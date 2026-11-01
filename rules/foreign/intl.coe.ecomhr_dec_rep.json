@@ -1,0 +1,53 @@
+{
+  "id": "intl.coe.ecomhr_dec_rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.coe",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+Eur\\.\\s+Comm[’']n\\s+H\\.\\s?R\\.\\s+Dec\\.\\s+&\\s+Rep\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 62,
+  "normalize": "{volume} Eur. Comm'n H.R. Dec. & Rep. {page}",
+  "authority_key": "intl.coe/ecomhr_dec_rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Commission of Human Rights Collections of Decisions, <vol> Eur. Comm'n H.R. Dec. & Rep. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "X v. United Kingdom, App. No. 7215/75, 19 Eur. Comm’n H.R. Dec. & Rep. 66 (1978).",
+        "spans": [[39, 75]],
+        "groups": {
+          "volume": "19",
+          "page": "66"
+        }
+      },
+      {
+        "text": "The court relied on 19 Eur. Comm'n H.R. Dec. & Rep. 66, 70–72 in its judgment.",
+        "spans": [[20, 63]]
+      },
+      {
+        "text": "Under 5 Eur. Comm’n H.R. Dec. & Rep. 90, the claim fails.",
+        "spans": [[6, 41]]
+      }
+    ],
+    "negative": [
+      "The European Commission decided 66 cases.",
+      "Rep. 19 voted yes.",
+      "H.R. 66 was tabled."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

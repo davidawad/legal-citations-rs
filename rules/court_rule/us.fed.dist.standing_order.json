@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.dist.standing_order",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?:(?:Civil|Criminal|Civ\\.|Crim\\.|Patent|Judge['’]s)\\s+)?Standing\\s+Order(?:\\s+(?:for|on|re:?|Regarding|Governing|in)\\s+(?:(?:[A-Z][A-Za-z.'’-]*|of|in|the|on|and|to|for)\\s+){1,8}?)?\\s*(?:¶¶?|§§?)\\s*(?P<pin>[0-9IVX]+(?:\\.[0-9A-Za-z]+)*(?:\\([a-z0-9]{1,3}\\))*)",
+  "priority": 55,
+  "normalize": "Standing Order ¶ {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "District judges' standing orders (cited by paragraph or section); Bluebook R. 12.9.3",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a judge's standing order on the district's website (e.g. N.D. Cal. Standing Order for All Judges) and compare paragraph numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Exhibits must be tabbed. Standing Order ¶ 5.",
+        "spans": [
+          [
+            25,
+            44
+          ]
+        ],
+        "groups": {
+          "pin": "5"
+        }
+      },
+      {
+        "text": "See Standing Order for Civil Cases Before Judge Alsup ¶ 4.",
+        "spans": [
+          [
+            4,
+            58
+          ]
+        ]
+      },
+      {
+        "text": "Compare Civil Standing Order § 3.B with Standing Order Regarding Patent Cases ¶ 12(b).",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            87
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The standing order was issued.",
+      "Standing Order for Civil Cases",
+      "A Standing Order applies to 3 cases."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

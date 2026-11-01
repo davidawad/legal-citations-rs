@@ -1,0 +1,49 @@
+{
+  "id": "us.fed.uspto.tbmp",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "\\bTBMP\\s*(?:§§?\\s*)?(?P<section>[0-9]{3,4}(?:\\.[0-9]{1,3})*)(?P<sub>(?:\\([a-z0-9]{1,3}\\))*)",
+  "priority": 60,
+  "normalize": "TBMP § {section}{sub}",
+  "authority_key": "us.uspto.tbmp/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Trademark Trial and Appeal Board Manual of Procedure section citation; Bluebook R. 14 (agency publications) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the current TBMP on uspto.gov.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See TBMP § 1203.02.",
+        "spans": [[4, 19]],
+        "groups": {
+          "section": "1203.02",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on TBMP § 528.01 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under TBMP 309.03(c), the claim fails.",
+        "spans": [[6, 20]]
+      }
+    ],
+    "negative": [
+      "The manual covers 2143 topics.",
+      "The examiner manual was updated.",
+      "Section 1207 of the handbook is long."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "MPEP subsections share the parent page (s2143.html covers 2143.01), so no URL template is generated."
+}

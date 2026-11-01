@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.uspto.patent_short",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "(?:’|')(?P<number>[0-9]{3})\\s+[Pp]atent\\b",
+  "priority": 60,
+  "normalize": "’{number} Patent",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "patent",
+    "uspto"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Commerce, Patent and Trademark Office (Patent short form)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Commerce, Patent and Trademark Office (Patent short form), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The claims of the ’504 Patent are invalid.",
+        "spans": [
+          [
+            18,
+            31
+          ]
+        ],
+        "groups": {
+          "number": "504"
+        }
+      },
+      {
+        "text": "See the ’123 Patent, col. 2.",
+        "spans": [
+          [
+            8,
+            21
+          ]
+        ]
+      },
+      {
+        "text": "Compare the '504 patent with the ’789 patent.",
+        "spans": [
+          [
+            12,
+            23
+          ],
+          [
+            33,
+            46
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The 504 patents were filed.",
+      "Patent ’504 is short for nothing.",
+      "In ’99 patent filings rose."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Short form: an apostrophe and the last three digits of the patent number."
+}

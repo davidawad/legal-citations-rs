@@ -1,0 +1,56 @@
+{
+  "id": "foreign.za.law_reports",
+  "kind": "foreign",
+  "jurisdiction": "foreign.za",
+  "tags": [
+    "foreign",
+    "south_africa"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+\\((?P<volume>[0-9])\\)\\s+(?P<reporter>SA|SACR|BCLR|BLLR)\\s+(?P<page>[0-9]{1,5})\\b(?:\\s+\\((?P<court>CC|SCA|A|[A-Z]{1,4})\\))?",
+  "priority": 60,
+  "normalize": "{year} ({volume}) {reporter} {page}",
+  "authority_key": "za/{reporter}/{year}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "South African Law Reports (<year> (<vol>) SA <page> (<court>)), Bluebook T2 (South Africa)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (South Africa) and SAFLII's neutral citation list.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "S v Makwanyane 1995 (3) SA 391 (CC).",
+        "spans": [[15, 35]],
+        "groups": {
+          "year": "1995",
+          "volume": "3",
+          "reporter": "SA",
+          "page": "391",
+          "court": "CC"
+        }
+      },
+      {
+        "text": "See 2001 (2) SACR 1 (SCA).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "1996 (6) BCLR 752 was followed.",
+        "spans": [[0, 17]]
+      }
+    ],
+    "negative": [
+      "In 1995 (3) SA staff left.",
+      "The SA team scored 391 runs.",
+      "Section 1995 (3) applies."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

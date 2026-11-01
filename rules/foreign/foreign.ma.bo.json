@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ma.bo",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ma",
+  "tags": [
+    "foreign",
+    "mena",
+    "ma"
+  ],
+  "pattern": "\\bBulletin\\s+[Oo]fficiel\\s+n°\\s*(?P<number>[1-7][0-9]{3})\\b(?:\\s+du\\s+(?P<date>[0-9]{1,2}(?:er)?\\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\\s+(?:19|20)[0-9]{2}))?(?:\\s*,?\\s+p\\.\\s*(?P<page>[0-9]{1,5}))?",
+  "priority": 55,
+  "normalize": "Bulletin Officiel n° {number}",
+  "authority_key": "ma.bo/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Moroccan Bulletin Officiel issue number (n° 6240 du 20 mars 2014)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "The search found archive.gazettes.africa BO headers such as 'BULLETIN OFFICIEL N° 6240 — 20-3-2014'. Compare.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Publié au Bulletin Officiel n° 6240 du 20 mars 2014.",
+        "spans": [[11, 53]],
+        "groups": {
+          "number": "6240",
+          "date": "20 mars 2014"
+        }
+      },
+      {
+        "text": "Voir Bulletin officiel n° 5167, p. 1234.",
+        "spans": [[5, 40]]
+      },
+      {
+        "text": "Bulletin Officiel n° 2316 de 1957.",
+        "spans": [[0, 26]]
+      }
+    ],
+    "negative": [
+      "Bulletin Officiel de l'éducation nationale.",
+      "Bulletin Officiel n° 12.",
+      "Bulletin n° 6240 sans officiel."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Search results showed the header form; no full page read. French Bulletin officiel (education.gouv.fr) uses different numbers (1-2 digit) and is excluded by the 4-digit rule."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "us.treaty.senate_exec_doc",
+  "kind": "treaty",
+  "jurisdiction": "us.fed.congress",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\bS\\.\\s?Exec\\.\\s?Doc\\.\\s+No\\.\\s?(?P<number>[A-Z]{1,2}|[0-9]{1,4})\\b(?:,\\s*(?P<congress>[0-9]{1,3})(?:st|nd|rd|th|d)\\s+Cong\\.)?",
+  "priority": 65,
+  "normalize": "S. Exec. Doc. No. {number}",
+  "authority_key": "us.senate_exec_doc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Senate Executive Documents (1778-1980), S. Exec. Doc. No. <letter|no.>, <n>th Cong.",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See S. Exec. Doc. No. C, 95th Cong. (1978).",
+        "spans": [[4, 35]],
+        "groups": {
+          "number": "C",
+          "congress": "95"
+        }
+      },
+      {
+        "text": "The court relied on S. Exec. Doc. No. 12, 81st Cong. (1949) in reaching its holding.",
+        "spans": [[20, 52]]
+      },
+      {
+        "text": "Under S. Exec. Doc. No. L, the claim fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "S. Exec. Rep. No. 12 (1949).",
+      "The Senate executive met 95 times.",
+      "S. Doc. No. 12, 81st Cong. (1949)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Indigo T6 lists Senate Executive Documents as a treaty source; the authority key leaves out the Congress because a lettered document is often cited without it."
+}

@@ -1,0 +1,87 @@
+{
+  "id": "us.co.case.indigo_reporters",
+  "kind": "case",
+  "jurisdiction": "us.co",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>L\\.\\s?Week\\sColo\\.|Colo\\.\\s?Law\\.)\\s(?P<page>[0-9]{1,5})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Colorado: reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Colorado, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 75",
+      "corpus/formats/indigo.jsonl line 78",
+      "corpus/formats/indigo.jsonl line 82",
+      "corpus/formats/indigo.jsonl line 85"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Walker v. Young, 97 Colo. Law. 77 (1993).",
+        "spans": [[21, 37]],
+        "groups": {
+          "volume": "97",
+          "reporter": "Colo. Law.",
+          "page": "77"
+        }
+      },
+      {
+        "text": "See In re Estate of Hall, 99 Colo. Law. 289, 292 (1994).",
+        "spans": [[26, 43]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 33 L. Week Colo. 813 (Colo. 2008).",
+        "spans": [[25, 45]]
+      },
+      {
+        "text": "See Hill v. Campbell, 41 L. Week Colo. 561, 568 (Colo. 2009).",
+        "spans": [[22, 42]]
+      },
+      {
+        "text": "See Hill v. Campbell, 83 Colo. Law. 461 (App. 1993).",
+        "spans": [[22, 39]]
+      },
+      {
+        "text": "See Adams v. Nelson, 129 Colo. Law. 417, 423 (App. 1994).",
+        "spans": [[21, 39]]
+      },
+      {
+        "text": "See Brown v. Davis, 21 L. Week Colo. 21 (Colo. App. 2008).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See State v. Miller, 5 L. Week Colo. 337, 338 (Colo. App. 2009).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Colo. Law. 345 (1990).",
+        "spans": [[16, 33]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 L. Week Colo. 345 (1990).",
+        "spans": [[16, 36]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Colo. Law. is missing.",
+      "The Colo. Law. printed 345 opinions.",
+      "In Colorado, the Colo. Law. began in 1993."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

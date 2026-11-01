@@ -1,0 +1,77 @@
+{
+  "id": "us.ak.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ak",
+  "pattern": "\\b(?:Alaska\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|AS\\s+)§?\\s*(?P<section>\\d+[A-Za-z]?(?:\\.\\d+[A-Za-z]?)+(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Alaska) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Alaska entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py AK pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Alaska Stat. § 11.41.100.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "11.41.100"
+        }
+      },
+      {
+        "text": "The court relied on AS § 11.41.100 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under AS 11.41.100, the claim fails.",
+        "spans": [[6, 18]]
+      },
+      {
+        "text": "Former AS 09.10.070(a)(1) set a two-year limit.",
+        "spans": [[7, 25]],
+        "groups": {
+          "section": "09.10.070(a)(1)"
+        }
+      },
+      {
+        "text": "See Alaska Stat. Ann. § 25.24.160(a)(4).",
+        "spans": [[4, 40]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts.",
+      "The motion to dismiss is DENIED AS MOOT.",
+      "Of counsel: THOMAS M. COOLEY LAW SCHOOL.",
+      "THIS OPINION WAS FILED FOR RECORD AT 8 A.M.",
+      "Before NICOLAS BAURIN, Administrative Patent Judge.",
+      "ON WRIT OF CERTIORARI TO THE SUPREME COURT OF TEXAS\ncertiorari granted.",
+      "DOUGLAS\nUNITED STATES DISTRICT JUDGE",
+      "THE STORY OF THE YOUTH WHO WENT FORTH TO LEARN WHAT FEAR WAS\r\n     KING GRISLY-BEARD",
+      "3. HOW PARTLET DIED AND WAS BURIED, AND HOW CHANTICLEER DIED OF GRIEF",
+      "TO LEARN WHAT FEAR WAS\r\n\r\n\r\nA certain father had two sons.",
+      "THE COURT TREATS THE FILING AS 2 MOTIONS."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ak",
+    "order": 55,
+    "pattern": "(?:Alaska\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|AS\\s+)§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern tightened in lcr-w6i: leading \\b (no match inside WAS, TEXAS, THOMAS) and a digit-first dotted section (title.chapter.section), so all-caps prose like DENIED AS MOOT does not match. Negatives 5-13 (nine texts; DENIED AS MOOT occurred twice) reproduce the 10 false positives in docs/measurements/2026-10-22-real-text.md (7 opinion, 3 Grimm prose; surrounding words reconstructed from the labeled match text). The legacy pattern is frozen for parity. Original examples bootstrapped from parity.json."
+}

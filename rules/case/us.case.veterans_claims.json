@@ -1,0 +1,73 @@
+{
+  "id": "us.case.veterans_claims",
+  "kind": "case",
+  "jurisdiction": "us.fed.cavc",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?P<reporter>Vet\\.\\s?App\\.)\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.1 (United States Court of Appeals for Veterans Claims) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1.1 for the Vet. App. reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Gilbert v. Derwinski, 1 Vet. App. 49, 53 (1990).",
+        "spans": [
+          [
+            26,
+            40
+          ]
+        ],
+        "groups": {
+          "volume": "1",
+          "reporter": "Vet. App.",
+          "page": "49"
+        }
+      },
+      {
+        "text": "The Court so held in 33 Vet. App. 123 (2020).",
+        "spans": [
+          [
+            21,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "Compare 25 Vet.App. 1 with 30 Vet. App. 200.",
+        "spans": [
+          [
+            8,
+            21
+          ],
+          [
+            27,
+            43
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Vet. App. reporter began in 1990.",
+      "Veterans filed 49 appeals.",
+      "Vet. App. judges were sworn in at 9 a.m."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-23 (resolve to the cited authority: 1 Vet. App. 49 -> Gilbert v. Derwinski)."
+}

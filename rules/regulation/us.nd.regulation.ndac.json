@@ -1,0 +1,49 @@
+{
+  "id": "us.nd.regulation.ndac",
+  "kind": "regulation",
+  "jurisdiction": "us.nd",
+  "pattern": "\\b(?:N\\.D\\.\\s?Admin\\.\\s?Code|N\\.D\\.A\\.C\\.)\\s?(?:§\\s?)?(?P<section>[0-9]{1,3}(?:\\.[0-9])?-[0-9]{1,2}(?:\\.[0-9])?-[0-9]{1,2}(?:\\.[0-9])?(?:-[0-9]{1,2}(?:\\.[0-9])?)?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "N.D. Admin. Code § {section}{sub}",
+  "authority_key": "us.nd.ndac/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (North Dakota) administrative compilation: N.D. Admin. Code N-N-N-N; local form N.D.A.C. § N-N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (North Dakota) and the official North Dakota administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.D. Admin. Code 33-16-02.1-09.",
+        "spans": [[4, 34]],
+        "groups": {
+          "section": "33-16-02.1-09",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on N.D.A.C. § 75-02-02-08 in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under N.D. Admin. Code § 43-02-03-29(1), the permit fails.",
+        "spans": [[6, 40]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The North Dakota agency adopted 12 new rules in 2020.",
+      "Under N.D. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

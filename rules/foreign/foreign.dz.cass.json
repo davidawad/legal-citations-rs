@@ -1,0 +1,54 @@
+{
+  "id": "foreign.dz.cass",
+  "kind": "foreign",
+  "jurisdiction": "foreign.dz.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "dz"
+  ],
+  "pattern": "\\b(?:Cour\\s+suprême\\s+(?:d['’]Algérie|algérienne)|Cour\\s+de\\s+cassation\\s+algérienne)\\s*,?\\s*(?:ch(?:ambre|\\.)\\s+[a-zé ]{3,20}?\\s*,?\\s*)?(?:arrêt|décision)\\s+n°\\s*(?P<number>[0-9]{1,7})(?:\\s+du\\s+(?P<date>[0-9]{1,2}(?:er)?\\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\\s+(?:19|20)[0-9]{2}))?",
+  "priority": 56,
+  "normalize": "Cour suprême d'Algérie, arrêt n° {number}",
+  "authority_key": "dz.cass/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Algerian Supreme Court (Cour suprême) French cite: arrêt n° <n> du <date>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Revue de la Cour suprême (Algérie) for 'arrêt n°' plus decision date.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cour suprême d'Algérie, arrêt n° 123456 du 8 juillet 2009.",
+        "spans": [[0, 61]],
+        "groups": {
+          "number": "123456",
+          "date": "8 juillet 2009"
+        }
+      },
+      {
+        "text": "Cour suprême algérienne, ch. civile, décision n° 77.",
+        "spans": [[0, 55]]
+      },
+      {
+        "text": "Cour suprême d’Algérie arrêt n° 4567.",
+        "spans": [[0, 42]]
+      }
+    ],
+    "negative": [
+      "La Cour suprême d'Algérie siège à Alger.",
+      "Cour suprême, arrêt n° 123456.",
+      "arrêt n° 123456 algérien."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Form constructed; Conseil d'Etat not covered."
+}

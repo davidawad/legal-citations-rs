@@ -1,0 +1,55 @@
+{
+  "id": "foreign.tr.yargitay",
+  "kind": "foreign",
+  "jurisdiction": "foreign.tr.yargitay",
+  "tags": [
+    "foreign",
+    "mena",
+    "tr"
+  ],
+  "pattern": "\\bYargıtay\\s+(?P<chamber>(?:[0-9]{1,2}\\.\\s?(?:HD|CD|H\\.D\\.|C\\.D\\.|Hukuk\\s+Dairesi|Ceza\\s+Dairesi)|HGK|CGK|HBK|CBK|İBBGK))\\.?,?\\s+E\\.\\s?(?P<esas>(?:19|20)[0-9]{2}/[0-9]{1,6}),?\\s+K\\.\\s?(?P<karar>(?:19|20)[0-9]{2}/[0-9]{1,6})(?:,?\\s+T\\.\\s?(?P<date>[0-9]{1,2}\\.[0-9]{1,2}\\.(?:19|20)[0-9]{2}))?",
+  "priority": 58,
+  "normalize": "Yargıtay {chamber}, E. {esas}, K. {karar}",
+  "authority_key": "tr.yargitay/{chamber}/{esas}/{karar}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Turkish Court of Cassation (Yargıtay) citation: Yargıtay <daire>, E. <yyyy/n>, K. <yyyy/n>, T. <date>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check any Yargıtay decision on karararama.yargitay.gov.tr or kazanci.com: cited as Yargıtay 13. HD., E. 2019/123, K. 2020/456.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Yargıtay 13. HD., E. 2019/123, K. 2020/456 kararında.",
+        "spans": [[0, 43]],
+        "groups": {
+          "chamber": "13. HD",
+          "esas": "2019/123",
+          "karar": "2020/456"
+        }
+      },
+      {
+        "text": "Yargıtay HGK, E. 2018/945, K. 2019/10 sayılı.",
+        "spans": [[0, 38]]
+      },
+      {
+        "text": "Yargıtay 9. Hukuk Dairesi, E. 2021/77, K. 2022/88, T. 12.03.2022.",
+        "spans": [[0, 65]]
+      }
+    ],
+    "negative": [
+      "Yargıtay 13. HD. kararı verdi.",
+      "Yargıtay E. 2019/123 sadece esas.",
+      "E. 2019/123, K. 2020/456 mahkemesiz."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "E. = Esas (docket), K. = Karar (decision)."
+}

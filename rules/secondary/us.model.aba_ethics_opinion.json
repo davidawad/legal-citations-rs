@@ -1,0 +1,68 @@
+{
+  "id": "us.model.aba_ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.model.aba",
+  "pattern": "\\bABA\\s+(?:Comm\\.\\s+on\\s+Ethics\\s+&\\s+Pro(?:f(?:'|’)l|\\.)\\s+Resp(?:onsibility|\\.)?,\\s+)?(?P<type>Formal|Informal)\\s+Op(?:inion|\\.)\\s+(?:No\\.\\s?)?(?P<number>[0-9]{2,4}(?:-[0-9]{3,4})?)\\b",
+  "priority": 60,
+  "normalize": "ABA {type} Op. {number}",
+  "authority_key": "us.aba.ethics/{type}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (ABA ethics opinions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (ethics opinions) and check the `ABA Comm. on Ethics & Pro. Resp., Formal Op. 512 (2024)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See ABA Comm. on Ethics & Pro. Resp., Formal Op. 512 (2024).",
+        "spans": [
+          [
+            4,
+            52
+          ]
+        ],
+        "groups": {
+          "type": "Formal",
+          "number": "512"
+        }
+      },
+      {
+        "text": "The Committee addressed screening in ABA Formal Opinion 09-455.",
+        "spans": [
+          [
+            37,
+            62
+          ]
+        ]
+      },
+      {
+        "text": "Compare ABA Comm. on Ethics & Prof'l Responsibility, Formal Op. 480 with ABA Informal Op. 1414.",
+        "spans": [
+          [
+            8,
+            67
+          ],
+          [
+            73,
+            94
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ABA issued a formal opinion in 2024.",
+      "Formal Op. 512 of the state bar differs.",
+      "The ABA Journal published 512 articles."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State bar opinions (`Formal Op. 512` without `ABA`) are not matched."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "us.sd.regulation.arsd",
+  "kind": "regulation",
+  "jurisdiction": "us.sd",
+  "pattern": "\\b(?:S\\.D\\.\\s?Admin\\.\\s?R\\.|ARSD)\\s?(?P<rule>[0-9]{1,2}:[0-9]{2}:[0-9]{2}(?::[0-9]{2}(?:\\.[0-9]{2})?)?)",
+  "priority": 65,
+  "normalize": "S.D. Admin. R. {rule}",
+  "authority_key": "us.sd.arsd/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (South Dakota) administrative compilation: S.D. Admin. R. N:N:N:N; local form ARSD N:N:N:N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (South Dakota) and the official South Dakota administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See S.D. Admin. R. 74:51:01:01.",
+        "spans": [[4, 30]],
+        "groups": {
+          "rule": "74:51:01:01"
+        }
+      },
+      {
+        "text": "The court relied on ARSD 67:46:02:03 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under ARSD 20:06:03:01.01, the permit fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The South Dakota agency adopted 12 new rules in 2020.",
+      "Under S.D. Admin. R., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

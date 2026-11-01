@@ -1,0 +1,80 @@
+{
+  "id": "us.record.administrative_record",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "agency"
+  ],
+  "pattern": "\\b(?P<label>A\\.\\s?R\\.|C?AR|Admin\\.\\s+R(?:\\.|ec\\.)|Admin\\.\\s+Rec\\.)\\s+(?:at\\s+)?(?P<page>[0-9]{1,6}(?:\\s?[-–]\\s?[0-9]{1,6})?)\\b",
+  "reject_before": [
+    "\\b[A-Z][A-Za-z]{0,4}\\.\\s?$",
+    ",\\s?$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 54,
+  "normalize": "{label} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Administrative record cites in APA and Social Security review (AR, A.R., CAR); Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with administrative-record cites in district court APA opinions; the label is the court's or agency's own.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The agency considered it. AR 123.",
+        "spans": [
+          [
+            26,
+            32
+          ]
+        ],
+        "groups": {
+          "label": "AR",
+          "page": "123"
+        }
+      },
+      {
+        "text": "See A.R. 456-58; CAR 1203.",
+        "spans": [
+          [
+            4,
+            15
+          ],
+          [
+            17,
+            25
+          ]
+        ]
+      },
+      {
+        "text": "The ALJ said so (Admin. R. at 45), and again (AR at 50).",
+        "spans": [
+          [
+            17,
+            32
+          ],
+          [
+            46,
+            54
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The AR-15 rifle",
+      "Little Rock, AR 72201",
+      "The A.R. was lodged."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

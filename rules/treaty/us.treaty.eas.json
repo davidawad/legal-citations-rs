@@ -1,0 +1,52 @@
+{
+  "id": "us.treaty.eas",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?E\\.\\s?A\\.\\s?S\\.\\s+No\\.\\s?(?P<number>[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "E.A.S. No. {number}",
+  "authority_key": "us.eas/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Executive Agreement Series (1922-1945), E.A.S. No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Lend-Lease Agreement, U.S.-U.S.S.R., June 11, 1942, E.A.S. No. 253.",
+        "spans": [[37, 66]],
+        "groups": {
+          "date": "June 11, 1942",
+          "number": "253"
+        }
+      },
+      {
+        "text": "Agreement Respecting Naval and Air Bases, U.S.-Gr. Brit., Sept. 2, 1940, 54 Stat. 2405, E.A.S. No. 181.",
+        "spans": [[88, 102]]
+      },
+      {
+        "text": "The court relied on E.A.S. No. 181 in reaching its holding.",
+        "spans": [[20, 34]]
+      }
+    ],
+    "negative": [
+      "The EAS team had 181 members.",
+      "East Asia Summit No. 3 met in Bali.",
+      "The E.A. office filed 253 forms."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

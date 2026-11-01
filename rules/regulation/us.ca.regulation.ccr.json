@@ -1,0 +1,50 @@
+{
+  "id": "us.ca.regulation.ccr",
+  "kind": "regulation",
+  "jurisdiction": "us.ca",
+  "pattern": "\\bCal\\.\\s?Code\\s?Regs\\.,?\\s?tit\\.\\s?(?P<title>[0-9]{1,2}),?\\s?§§?\\s?(?P<section>[0-9]{1,6}(?:\\.[0-9]{1,3})?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Cal. Code Regs. tit. {title}, § {section}{sub}",
+  "authority_key": "us.ca.ccr/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (California) administrative compilation: Cal. Code Regs. tit. N, § N; local form Cal. Code Regs., tit. N, § N (California Style Manual) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (California) and the official California administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cal. Code Regs. tit. 22, § 51000.",
+        "spans": [[4, 37]],
+        "groups": {
+          "title": "22",
+          "section": "51000",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Cal. Code Regs., tit. 8, § 3203 in reaching its holding.",
+        "spans": [[20, 52]]
+      },
+      {
+        "text": "Under Cal. Code Regs. tit. 14, § 15064.5(b), the permit fails.",
+        "spans": [[6, 44]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The California agency adopted 12 new rules in 2020.",
+      "Under Cal. Code Regs., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. The bare N CCR N form is not matched: Colorado uses the same letters."
+}

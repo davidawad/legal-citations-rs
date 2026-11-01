@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.dist.tlv.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.dist.tlv",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>CC|CivC|CrimC|CA|CrimA|AdminPet|AdminA|CApp|CrimApp|OM|MiscC)\\s+\\((?P<district>TA|T\\.A\\.|Tel[ -]Aviv(?:-Yafo)?)\\)\\s+(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 58,
+  "normalize": "{court} ({district}) {number}",
+  "authority_key": "il.dist.tlv/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Israeli Uniform Rules of Legal Citation / Bluebook T2 (Israel): <case type> (<district>) <docket> for district-court decisions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment. English district-court abbreviation for Tel Aviv seen in Nevo English headers and legal-scholarship footnotes.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See CC (TA) 1234/05 Cohen v. Levi (2006).",
+        "spans": [[4, 19]],
+        "groups": {
+          "court": "CC",
+          "district": "TA",
+          "number": "1234/05"
+        }
+      },
+      {
+        "text": "CA (Tel Aviv) 8765/12 was decided in 2014.",
+        "spans": [[0, 21]]
+      },
+      {
+        "text": "The petition, AdminPet (T.A.) 12345-05-19, was dismissed.",
+        "spans": [[14, 41]]
+      }
+    ],
+    "negative": [
+      "The CC (TA) office is closed.",
+      "Section 12 (TA) 1234/05 of the memo is blank.",
+      "CC 1234/05 without a district."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Court-type abbreviation then district in parentheses then docket. Docket may be n/yy or the post-2012 NNNNN-MM-YY form. No source was fetched; abbreviations are from recollection of Israeli practice."
+}

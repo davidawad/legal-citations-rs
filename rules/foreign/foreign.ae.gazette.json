@@ -1,0 +1,53 @@
+{
+  "id": "foreign.ae.gazette",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?:UAE\\s+Official\\s+Gazette|Official\\s+Gazette\\s+of\\s+the\\s+(?:UAE|United\\s+Arab\\s+Emirates)),?\\s+(?:Issue\\s+)?(?:No\\.?\\s*)?(?P<issue>[0-9]{1,4})(?:\\s*\\((?P<annex>Annex|Supplement)\\))?",
+  "priority": 60,
+  "normalize": "UAE Official Gazette No. {issue}",
+  "authority_key": "ae.gazette/{issue}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "UAE Official Gazette (Al-Jarida Al-Rasmiyya) issue citation as used in English-language writing",
+    "opened": false,
+    "source_url": "https://elaws.moj.gov.ae",
+    "how_to_verify": "Cannot be opened in this run; verify against the UAE Ministry of Justice legislation portal (elaws.moj.gov.ae) and the Official Gazette.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Published in UAE Official Gazette No. 712 (Annex).",
+        "spans": [[13, 49]],
+        "groups": {
+          "issue": "712"
+        }
+      },
+      {
+        "text": "Official Gazette of the UAE, Issue 573.",
+        "spans": [[0, 38]]
+      },
+      {
+        "text": "See UAE Official Gazette, No. 601.",
+        "spans": [[4, 33]]
+      }
+    ],
+    "negative": [
+      "The Official Gazette No. 14 of Ghana.",
+      "The gazette was published.",
+      "UAE Official Gazette appears monthly."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

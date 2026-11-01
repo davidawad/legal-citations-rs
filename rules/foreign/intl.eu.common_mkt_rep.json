@@ -1,0 +1,53 @@
+{
+  "id": "intl.eu.common_mkt_rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+Common\\s+Mkt\\.\\s+Rep\\.\\s+\\(CCH\\)\\s+¶\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} Common Mkt. Rep. (CCH) ¶ {page}",
+  "authority_key": "intl.eu/common_mkt_rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): Common Market Reports (CCH) (1962-1988), <year> Common Mkt. Rep. (CCH) ¶ <para>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Rewe-Zentral AG v. Bundesmonopolverwaltung für Branntwein, 1979 Common Mkt. Rep. (CCH) ¶ 8543.",
+        "spans": [[60, 95]],
+        "groups": {
+          "volume": "1979",
+          "page": "8543"
+        }
+      },
+      {
+        "text": "The court relied on 1964 Common Mkt. Rep. (CCH) ¶ 8023 in its judgment.",
+        "spans": [[20, 55]]
+      },
+      {
+        "text": "Under 1980 Common Mkt. Rep. (CCH) ¶ 8600, the claim fails.",
+        "spans": [[6, 41]]
+      }
+    ],
+    "negative": [
+      "The common market report ran 8543 pages.",
+      "CCH printed 1979 volumes.",
+      "Common Mkt. Rep. issues ran ¶ by ¶."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

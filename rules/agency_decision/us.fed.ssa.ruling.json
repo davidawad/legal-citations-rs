@@ -1,0 +1,111 @@
+{
+  "id": "us.fed.ssa.ruling",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ssa",
+  "pattern": "\\b(?:(?P<type>SSR|SSAR)|Soc\\.\\s+Sec\\.\\s+Rul\\.|S\\.S\\.R\\.)\\s+(?P<number>[0-9]{2}-[0-9]{1,2}(?:[pc]\\b|\\([0-9]{1,2}\\)|\\b))(?:,\\s+(?:(?P<volume>[0-9]{1,3})\\s+Fed\\.\\s?Reg\\.?\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6})|(?P<years>(?:19|20)[0-9]{2}[–-](?:19|20)[0-9]{2})\\s+Soc\\.\\s?Sec\\.\\s?Rep\\.\\s?Serv\\.\\s+(?P<ssrs>[0-9]{1,4})))?",
+  "priority": 58,
+  "normalize": "{type} {number}",
+  "authority_key": "us.ssa/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "social_security"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Social Security Administration (Rulings and Acquiescence Rulings)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Social Security Administration (Rulings and Acquiescence Rulings), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "SSR 62-2, 1960-1974 Soc. Sec. Rep. Serv. 69 (Jan. 1, 1962).",
+        "spans": [
+          [
+            0,
+            43
+          ]
+        ],
+        "groups": {
+          "type": "SSR",
+          "number": "62-2",
+          "years": "1960-1974",
+          "ssrs": "69"
+        }
+      },
+      {
+        "text": "SSR 96-8p, 61 Fed. Reg. 34474 (July 2, 1996).",
+        "spans": [
+          [
+            0,
+            29
+          ]
+        ]
+      },
+      {
+        "text": "SSAR 98-4(6), 63 Fed. Reg. 29771 (June 1, 1998), and SSR 16-3p.",
+        "spans": [
+          [
+            0,
+            32
+          ],
+          [
+            53,
+            62
+          ]
+        ]
+      },
+      {
+        "text": "The ALJ must assess function. SSR 96-8p, 1996 WL 374184.",
+        "spans": [
+          [
+            30,
+            39
+          ]
+        ]
+      },
+      {
+        "text": "See SSR 16-3p; Soc. Sec. Rul. 82-41.",
+        "spans": [
+          [
+            4,
+            13
+          ],
+          [
+            15,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare SSR 00-4p with S.S.R. 85-15.",
+        "spans": [
+          [
+            8,
+            17
+          ],
+          [
+            23,
+            35
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The SSR program began in 1960.",
+      "SSAR rulings number 98.",
+      "SSR stands for 62 things.",
+      "The SSR was rescinded.",
+      "SSR 96",
+      "SSR pending"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Merged from two branches: the Indigo T2 form (SSR/SSAR with a Fed. Reg. or Soc. Sec. Rep. Serv. parallel) and the Soc. Sec. Rul. / S.S.R. spellings (20 C.F.R. § 402.35(b)(1), not opened). The authority key is the ruling number (SSAR numbers carry the circuit in parentheses); normalize falls back to the text for the long spellings, which have no type group. Priority 58 so a bare SSAR number goes to us.fed.ssa.acquiescence_ruling."
+}

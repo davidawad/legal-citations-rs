@@ -1,0 +1,76 @@
+{
+  "id": "us.ma.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ma",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Mass\\.\\s?Code\\sRegs\\.|Mass\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Massachusetts: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Massachusetts, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 358",
+      "corpus/formats/indigo.jsonl line 359",
+      "corpus/formats/indigo.jsonl line 360"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 33 Mass. Code Regs. 17 (2015).",
+        "spans": [[4, 26]],
+        "groups": {
+          "volume": "33",
+          "series": "Mass. Code Regs.",
+          "page": "17"
+        }
+      },
+      {
+        "text": "See 57 Mass. Code Regs. 9 (2014).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See 13 Mass. Code Regs. 1 (LexisNexis 2015).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See 21 Mass. Code Regs. 9 (LexisNexis 2014).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See 1 Mass. Reg. 424 (May 21, 2015).",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "See 17 Mass. Reg. 341 (May 5, 2014).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 12 Mass. Code Regs. 77.",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 12 Mass. Reg. 77.",
+        "spans": [[4, 20]]
+      }
+    ],
+    "negative": [
+      "The Mass. Code Regs. is published monthly.",
+      "Volume 12 of the Massachusetts register has 77 pages.",
+      "In 2015 the Mass. Code Regs. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

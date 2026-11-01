@@ -1,0 +1,84 @@
+{"start": 92, "end": 140, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State\nv. Dowell, Slip Opinion No. 2026-Ohio-4094", "normalized": "2026-Ohio-4094", "form": "page furniture", "optional": true, "note": "reporter's boilerplate self-citation"}
+{"start": 540, "end": 571, "kind": "case", "jurisdiction": "us.oh.sup", "text": "SLIP OPINION NO. 2026-OHIO-4094", "normalized": "2026-Ohio-4094", "form": "page furniture", "optional": true}
+{"start": 715, "end": 763, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Dowell, Slip Opinion No. 2026-Ohio-4094", "normalized": "2026-Ohio-4094", "form": "page furniture", "optional": true, "note": "reporter's boilerplate self-citation"}
+{"start": 781, "end": 793, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 796, "end": 808, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10", "normalized": "R.C. 5122.10", "form": "Ohio R.C."}
+{"start": 870, "end": 882, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 983, "end": 995, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10", "normalized": "R.C. 5122.10", "form": "Ohio R.C."}
+{"start": 1221, "end": 1235, "kind": "docket", "jurisdiction": "us.oh.sup", "text": "Nos. 2025-1103", "normalized": "No. 2025-1103", "form": "docket number"}
+{"start": 1240, "end": 1249, "kind": "docket", "jurisdiction": "us.oh.sup", "text": "2025-1210", "normalized": "No. 2025-1210", "form": "docket number"}
+{"start": 1375, "end": 1387, "kind": "docket", "jurisdiction": "us.oh.app", "text": "No. C-240712", "normalized": "No. C-240712", "form": "docket number"}
+{"start": 1389, "end": 1403, "kind": "case", "jurisdiction": "us.oh.app", "text": "2025-Ohio-2425", "normalized": "2025-Ohio-2425", "form": "Ohio webcite"}
+{"start": 1921, "end": 1933, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C.", "note": "footnote marker 1 glued to the section number (2921.311)"}
+{"start": 2208, "end": 2220, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10", "normalized": "R.C. 5122.10", "form": "Ohio R.C."}
+{"start": 2775, "end": 2808, "kind": "case", "jurisdiction": "us.oh.app", "text": "2025-Ohio-2425, ¶ 14 (1st\nDist.)", "normalized": "2025-Ohio-2425, ¶ 14", "form": "Ohio webcite"}
+{"start": 3017, "end": 3029, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 3033, "end": 3078, "kind": "session_law", "jurisdiction": "us.oh", "text": "2025 Sub.H.B. No. 20 (effective Oct.\n6, 2026)", "normalized": "2025 Sub.H.B. No. 20", "form": "state session law"}
+{"start": 3158, "end": 3170, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C.\n2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 3214, "end": 3233, "kind": "session_law", "jurisdiction": "us.oh", "text": "Am.Sub.H.B. No. 137", "normalized": "Am.Sub.H.B. No. 137", "form": "state session law"}
+{"start": 3235, "end": 3292, "kind": "session_law", "jurisdiction": "us.oh", "text": "148 Ohio Laws, Part I,\n764, 776 (effective Mar. 10, 2000)", "normalized": "148 Ohio Laws, Part I, 764", "form": "state session law"}
+{"start": 3326, "end": 3341, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 3555, "end": 3605, "kind": "case", "jurisdiction": "us.oh.app", "text": "State v. Vargas, 2012-Ohio-2768, ¶ 15 (8th Dist.)", "normalized": "2012-Ohio-2768", "form": "Ohio webcite"}
+{"start": 3882, "end": 3896, "kind": "case", "jurisdiction": "us.oh.sup", "text": "2025-Ohio-5079", "normalized": "2025-Ohio-5079", "form": "Ohio webcite"}
+{"start": 4222, "end": 4234, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 5131, "end": 5152, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10(A)(1)(h)", "normalized": "R.C. 5122.10(A)(1)(h)", "form": "Ohio R.C."}
+{"start": 7221, "end": 7233, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 7273, "end": 7288, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.33(A)", "normalized": "R.C. 2921.33(A)", "form": "Ohio R.C."}
+{"start": 7866, "end": 7909, "kind": "statute", "jurisdiction": "us.oh", "text": "Section 2921.31 of the Revised Code of Ohio", "normalized": "R.C. 2921.31", "form": "Ohio R.C.", "note": "quoted complaint"}
+{"start": 8317, "end": 8360, "kind": "statute", "jurisdiction": "us.oh", "text": "Section\n2921.33 of the Revised Code of Ohio", "normalized": "R.C. 2921.33", "form": "Ohio R.C.", "note": "quoted complaint"}
+{"start": 9095, "end": 9133, "kind": "case_short", "jurisdiction": "us.oh.app", "text": "2025-Ohio-2425 at ¶ 14-15 (1st\nDist.)", "normalized": "2025-Ohio-2425 at ¶ 14-15", "form": "short case (at)"}
+{"start": 9436, "end": 9448, "kind": "id", "jurisdiction": "us.oh.app", "text": "id. at ¶ 10", "normalized": "Id. at ¶ 10", "form": "Id."}
+{"start": 9548, "end": 9560, "kind": "id", "jurisdiction": "us.oh.app", "text": "id. at ¶ 11", "normalized": "Id. at ¶ 11", "form": "Id."}
+{"start": 9852, "end": 9864, "kind": "id", "jurisdiction": "us.oh.app", "text": "Id. at ¶ 12", "normalized": "Id. at ¶ 12", "form": "Id."}
+{"start": 10040, "end": 10052, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10", "normalized": "R.C. 5122.10", "form": "Ohio R.C."}
+{"start": 10107, "end": 10119, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 10146, "end": 10158, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.33", "normalized": "R.C. 2921.33", "form": "Ohio R.C."}
+{"start": 10167, "end": 10181, "kind": "case", "jurisdiction": "us.oh.sup", "text": "2025-Ohio-5079", "normalized": "2025-Ohio-5079", "form": "Ohio webcite"}
+{"start": 10307, "end": 10329, "kind": "case_short", "jurisdiction": "us.oh.app", "text": "Vargas, 2012-Ohio-2768", "normalized": "2012-Ohio-2768", "form": "short case (at)", "note": "short form without pin"}
+{"start": 10429, "end": 10441, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 10705, "end": 10719, "kind": "case", "jurisdiction": "us.oh.sup", "text": "2025-Ohio-5079", "normalized": "2025-Ohio-5079", "form": "Ohio webcite"}
+{"start": 10815, "end": 10818, "kind": "id", "jurisdiction": "us.oh.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 10984, "end": 11022, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Hudson, 2022-Ohio-1435,\n¶ 19", "normalized": "2022-Ohio-1435", "form": "Ohio webcite"}
+{"start": 11024, "end": 11062, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Troisi, 2022-Ohio-3582, ¶ 17", "normalized": "2022-Ohio-3582", "form": "Ohio webcite"}
+{"start": 11249, "end": 11264, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 11439, "end": 11454, "kind": "case_short", "jurisdiction": "us.oh.sup", "text": "Hudson at ¶ 19", "normalized": "2022-Ohio-1435 at ¶ 19", "form": "short case (at)"}
+{"start": 11456, "end": 11494, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Mutter, 2017-Ohio-2928, ¶ 13", "normalized": "2017-Ohio-2928", "form": "Ohio webcite"}
+{"start": 11861, "end": 11899, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Buehner, 2006-Ohio-4707, ¶ 7", "normalized": "2006-Ohio-4707", "form": "Ohio webcite"}
+{"start": 11947, "end": 11959, "kind": "court_rule", "jurisdiction": "us.oh", "text": "Crim.R. 3(A)", "normalized": "Crim.R. 3(A)", "form": "state rule"}
+{"start": 12408, "end": 12425, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 147.51(A)(1)", "normalized": "R.C. 147.51(A)(1)", "form": "Ohio R.C."}
+{"start": 12511, "end": 12527, "kind": "court_rule", "jurisdiction": "us.oh", "text": "Crim.R. 12(C)(2)", "normalized": "Crim.R. 12(C)(2)", "form": "state rule"}
+{"start": 12912, "end": 12949, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Swazey, 2023-Ohio4627, ¶ 23", "normalized": "2023-Ohio-4627", "form": "Ohio webcite", "note": "hyphen lost at line break in extraction"}
+{"start": 12959, "end": 12996, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Palmer, 2012-Ohio-580, ¶ 24", "normalized": "2012-Ohio-580", "form": "Ohio webcite"}
+{"start": 13006, "end": 13021, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 13428, "end": 13443, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(B)", "normalized": "R.C. 2921.31(B)", "form": "Ohio R.C."}
+{"start": 13495, "end": 13538, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C.\n\n7\n\n\fSUPREME COURT OF OHIO\n\n2921.33(D)", "normalized": "R.C. 2921.33(D)", "form": "Ohio R.C.", "note": "split by a page break; span includes the page number and running head"}
+{"start": 13661, "end": 13676, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.33(A)", "normalized": "R.C. 2921.33(A)", "form": "Ohio R.C."}
+{"start": 13893, "end": 13905, "kind": "court_rule", "jurisdiction": "us.oh", "text": "Crim.R. 3(A)", "normalized": "Crim.R. 3(A)", "form": "state rule"}
+{"start": 14510, "end": 14525, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C.", "note": "in a section heading"}
+{"start": 14925, "end": 14940, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 15312, "end": 15386, "kind": "case", "jurisdiction": "us.oh.sup", "text": "Slingluff v. Weaver, 66 Ohio St. 621 (1902), paragraph two of the syllabus", "normalized": "66 Ohio St. 621", "form": "state official reporter", "note": "syllabus pin follows the date"}
+{"start": 15388, "end": 15397, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 1.42", "normalized": "R.C. 1.42", "form": "Ohio R.C."}
+{"start": 15602, "end": 15614, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31", "normalized": "R.C. 2921.31", "form": "Ohio R.C."}
+{"start": 15834, "end": 15843, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 1.42", "normalized": "R.C. 1.42", "form": "Ohio R.C."}
+{"start": 15954, "end": 15999, "kind": "case", "jurisdiction": "us.oh.sup", "text": "Weiss v. Pub. Util. Comm., 2000-Ohio-5,\n¶ 13", "normalized": "2000-Ohio-5", "form": "Ohio webcite"}
+{"start": 16009, "end": 16083, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State ex rel. Purdy v. Clermont Cty. Bd. of Elections, 1997-Ohio-278,\n¶ 9", "normalized": "1997-Ohio-278", "form": "Ohio webcite"}
+{"start": 16093, "end": 16146, "kind": "secondary", "jurisdiction": "us", "text": "Webster’s Third New International Dictionary (1971)", "normalized": "Webster's Third New International Dictionary (1971)", "form": "dictionary"}
+{"start": 16187, "end": 16245, "kind": "case", "jurisdiction": "us.oh.sup", "text": "The Way Internatl. v. Limbach, 50 Ohio St.3d 76, 80 (1990)", "normalized": "50 Ohio St.3d 76", "form": "state official reporter"}
+{"start": 16293, "end": 16343, "kind": "case", "jurisdiction": "us.oh.sup", "text": "Wachendorf v. Shaver, 149 Ohio St. 231, 240 (1948)", "normalized": "149 Ohio St. 231", "form": "state official reporter"}
+{"start": 16361, "end": 16405, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Wells, 146 Ohio St. 131, 137 (1945)", "normalized": "146 Ohio St. 131", "form": "state official reporter"}
+{"start": 16540, "end": 16583, "kind": "case", "jurisdiction": "us.scotus", "text": "Chicago v. Fulton, 592 U.S. 154,\n158 (2021)", "normalized": "592 U.S. 154", "form": "U.S. Reports"}
+{"start": 16593, "end": 16633, "kind": "secondary", "jurisdiction": "us", "text": "Black’s Law Dictionary (11th Ed. 2019)", "normalized": "Black's Law Dictionary (11th ed. 2019)", "form": "dictionary"}
+{"start": 16749, "end": 16802, "kind": "secondary", "jurisdiction": "us", "text": "Webster’s Third New International Dictionary (2002)", "normalized": "Webster's Third New International Dictionary (2002)", "form": "dictionary"}
+{"start": 16821, "end": 16836, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 17203, "end": 17223, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C.\n\n2901.01(A)(12)", "normalized": "R.C. 2901.01(A)(12)", "form": "Ohio R.C."}
+{"start": 17260, "end": 17275, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 17733, "end": 17748, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 18040, "end": 18076, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Smith, 2022-Ohio-269, ¶ 10", "normalized": "2022-Ohio-269", "form": "Ohio webcite"}
+{"start": 18179, "end": 18219, "kind": "case", "jurisdiction": "us.oh.sup", "text": "State v. Tolliver, 2014-Ohio-3744, ¶ 10", "normalized": "2014-Ohio-3744", "form": "Ohio webcite"}
+{"start": 18647, "end": 18668, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10(A)(1)(h)", "normalized": "R.C. 5122.10(A)(1)(h)", "form": "Ohio R.C.", "note": "extraction moved it out of sentence order"}
+{"start": 19078, "end": 19097, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2901.01(A)(12)", "normalized": "R.C. 2901.01(A)(12)", "form": "Ohio R.C."}
+{"start": 19151, "end": 19166, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 2921.31(A)", "normalized": "R.C. 2921.31(A)", "form": "Ohio R.C."}
+{"start": 19559, "end": 19580, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10(A)(1)(h)", "normalized": "R.C. 5122.10(A)(1)(h)", "form": "Ohio R.C."}
+{"start": 19946, "end": 19961, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10(B)", "normalized": "R.C. 5122.10(B)", "form": "Ohio R.C."}
+{"start": 20607, "end": 20619, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10", "normalized": "R.C. 5122.10", "form": "Ohio R.C.", "note": "bracketed insertion in a block quote"}
+{"start": 20973, "end": 20988, "kind": "statute", "jurisdiction": "us.oh", "text": "R.C. 5122.10(C)", "normalized": "R.C. 5122.10(C)", "form": "Ohio R.C."}

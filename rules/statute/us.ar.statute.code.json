@@ -1,0 +1,56 @@
+{
+  "id": "us.ar.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ar",
+  "pattern": "Ark(?:ansas)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Arkansas) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Arkansas entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py ARK pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ark. Code Ann. § 5-13-201.",
+        "spans": [[4, 30]],
+        "groups": {
+          "section": "5-13-201"
+        }
+      },
+      {
+        "text": "The court relied on Ark. Code § 5-13-201 in reaching its holding.",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "Under Ark. Code Ann. § 5-13-208, the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ark",
+    "order": 37,
+    "pattern": "Ark(?:ansas)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

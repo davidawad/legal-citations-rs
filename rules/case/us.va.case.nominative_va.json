@@ -1,0 +1,139 @@
+{
+  "id": "us.va.case.nominative_va",
+  "kind": "case",
+  "jurisdiction": "us.va",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Va\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Hen\\.\\s?\\&\\sM\\.|Va\\.\\s?Cas\\.|Gilmer|Gratt\\.|Leigh|Munf\\.|Rand\\.|Wash\\.|Call|Rob\\.)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Va. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 794",
+      "corpus/formats/indigo.jsonl line 795",
+      "corpus/formats/indigo.jsonl line 796",
+      "corpus/formats/indigo.jsonl line 797",
+      "corpus/formats/indigo.jsonl line 798",
+      "corpus/formats/indigo.jsonl line 799",
+      "corpus/formats/indigo.jsonl line 800",
+      "corpus/formats/indigo.jsonl line 801",
+      "corpus/formats/indigo.jsonl line 802",
+      "corpus/formats/indigo.jsonl line 803"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Evans v. Turner, 42 Va. (1 Gratt.) 145 (1854).",
+        "spans": [[21, 42]],
+        "groups": {
+          "volume": "42",
+          "reporter": "Va.",
+          "nominative_volume": "1",
+          "nominative": "Gratt.",
+          "page": "145"
+        }
+      },
+      {
+        "text": "See Smith v. Jones, 42 Va. (1 Gratt.) 209, 617 (1869).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See State v. Miller, 40 Va. (1 Rob.) 273 (1842).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Brown v. Davis, 40 Va. (1 Rob.) 577, 617 (1843).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See Garcia v. Lee, 28 Va. (1 Leigh) 257 (1832).",
+        "spans": [[19, 39]]
+      },
+      {
+        "text": "See Johnson v. Clark, 28 Va. (1 Leigh) 577, 625 (1838).",
+        "spans": [[22, 42]]
+      },
+      {
+        "text": "See In re Estate of Hall, 22 Va. (1 Rand.) 233 (1823).",
+        "spans": [[26, 46]]
+      },
+      {
+        "text": "See Walker v. Young, 22 Va. (1 Rand.) 577, 617 (1825).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Allen v. King, 21 Va. (Gilmer) 569 (1820).",
+        "spans": [[19, 38]]
+      },
+      {
+        "text": "See Wright v. Scott, 21 Va. (Gilmer) 145, 617 (1820).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Green v. Baker, 15 Va. (1 Munf.) 449 (1813).",
+        "spans": [[20, 40]]
+      },
+      {
+        "text": "See Adams v. Nelson, 15 Va. (1 Munf.) 81, 625 (1817).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Hill v. Campbell, 11 Va. (1 Hen. & M.) 305 (1807).",
+        "spans": [[22, 46]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 11 Va. (1 Hen. & M.) 113, 633 (1808).",
+        "spans": [[25, 49]]
+      },
+      {
+        "text": "See Carter v. Phillips, 5 Va. (1 Call) 345 (1792).",
+        "spans": [[24, 42]]
+      },
+      {
+        "text": "See Evans v. Turner, 5 Va. (1 Call) 465, 609 (1811).",
+        "spans": [[21, 39]]
+      },
+      {
+        "text": "See Smith v. Jones, 3 Va. (1 Va. Cas.) 97 (1800).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See State v. Miller, 3 Va. (1 Va. Cas.) 521, 625 (1814).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Brown v. Davis, 1 Va. (1 Wash.) 217 (1791).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See Garcia v. Lee, 1 Va. (1 Wash.) 257, 625 (1794).",
+        "spans": [[19, 38]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Va. (2 Gratt.) 345 (1850).",
+        "spans": [[16, 37]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Va. reports is missing.",
+      "The Call reports cover Va. cases from 1800 to 1850.",
+      "See Va. (Call) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

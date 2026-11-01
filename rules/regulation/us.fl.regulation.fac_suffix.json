@@ -1,0 +1,49 @@
+{
+  "id": "us.fl.regulation.fac_suffix",
+  "kind": "regulation",
+  "jurisdiction": "us.fl",
+  "pattern": "\\bRule\\s(?P<rule>[0-9]{1,3}[A-Z]{0,2}[0-9]{0,2}-[0-9]{1,3}[A-Z]?\\.[0-9]{3,4}[A-Z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*),\\s?F\\.A\\.C\\.",
+  "priority": 65,
+  "normalize": "Fla. Admin. Code R. {rule}{sub}",
+  "authority_key": "us.fl.fac/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Florida) administrative compilation: Rule N-N.NNN, F.A.C. (Florida local form) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Florida) and the official Florida administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Rule 62-4.050, F.A.C..",
+        "spans": [[4, 25]],
+        "groups": {
+          "rule": "62-4.050",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Rule 64B8-9.003, F.A.C. in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under Rule 69O-170.013(2), F.A.C., the permit fails.",
+        "spans": [[6, 33]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Florida agency adopted 12 new rules in 2020.",
+      "Under Rule 62-4.050 of the agency handbook, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Same authority key as us.fl.fac."
+}

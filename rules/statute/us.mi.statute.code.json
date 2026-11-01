@@ -1,0 +1,60 @@
+{
+  "id": "us.mi.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.mi",
+  "pattern": "(?:Mich(?:igan)?\\.\\s+Comp(?:iled)?\\.\\s+Laws?\\s+(?:(?:Ann|Serv)\\.\\s+)?|MCL\\s+)§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Michigan) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Michigan entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py MICH pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mich. Comp. Laws § 750.520b.",
+        "spans": [[4, 32]],
+        "groups": {
+          "section": "750.520b"
+        }
+      },
+      {
+        "text": "The court relied on MCL 750.520b in reaching its holding.",
+        "spans": [[20, 32]]
+      },
+      {
+        "text": "Under Mich. Comp. Laws Ann. § 600.1, the claim fails.",
+        "spans": [[6, 36]]
+      },
+      {
+        "text": "The Lexis cite is Mich. Comp. Laws Serv. § 801.67 (LexisNexis 2015).",
+        "spans": [[18, 50]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "mich",
+    "order": 13,
+    "pattern": "(?:Mich(?:igan)?\\.\\s+Comp(?:iled)?\\.\\s+Laws?\\s+(?:Ann\\.\\s+)?|MCL\\s+)§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

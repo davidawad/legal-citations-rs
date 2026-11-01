@@ -1,0 +1,52 @@
+{
+  "id": "intl.iccwbo.case_no",
+  "kind": "foreign",
+  "jurisdiction": "intl.iccwbo",
+  "tags": [
+    "international",
+    "arbitration"
+  ],
+  "pattern": "\\bICC\\s+(?:Case|Arbitration)\\s+No\\.\\s+(?P<number>[0-9]{3,6}(?:/[A-Z]{2,4}(?:/[A-Z]{2,4})?)?)\\b",
+  "priority": 60,
+  "normalize": "ICC Case No. {number}",
+  "authority_key": "iccwbo/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "International Chamber of Commerce arbitration case numbers (ICC Case No. <n>[/<initials>]), as cited in Bluebook T7 Int'l Comm. Arb. reports",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.6 and T7 (International Chamber of Commerce Arbitration) and an ICC award's case-number line.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Final Award, ICC Case No. 7331 (1994).",
+        "spans": [[13, 30]],
+        "groups": {
+          "number": "7331"
+        }
+      },
+      {
+        "text": "Partial Award, ICC Case No. 16348/GZ/MHM (2011).",
+        "spans": [[15, 40]]
+      },
+      {
+        "text": "The tribunal in ICC Arbitration No. 8486 held otherwise.",
+        "spans": [[16, 40]]
+      }
+    ],
+    "negative": [
+      "The ICC case load hit 7331.",
+      "The ICC award was final.",
+      "ICC No. 5 rules apply."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

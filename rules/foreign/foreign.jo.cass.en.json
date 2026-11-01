@@ -1,0 +1,55 @@
+{
+  "id": "foreign.jo.cass.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.jo.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "jo"
+  ],
+  "pattern": "\\bCassation\\s+(?P<chamber>Civil|Criminal|Penal)\\s+(?:Decision\\s+|Appeal\\s+)?No\\.?\\s*(?P<number>[0-9]{1,5})/(?P<year>(?:19|20)[0-9]{2})\\b",
+  "priority": 56,
+  "normalize": "Cassation {chamber} {number}/{year}",
+  "authority_key": "jo.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Jordanian Court of Cassation (Mahkamat al-Tamyiz): Cassation Civil/Criminal No. <n>/<yyyy>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Qistas or Adaleh Jordanian case-law databases: Court of Cassation decisions are cited as 'تمييز حقوق رقم N/YYYY'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cassation Civil No. 1234/2005 (Jordan).",
+        "spans": [[4, 33]],
+        "groups": {
+          "chamber": "Civil",
+          "number": "1234",
+          "year": "2005"
+        }
+      },
+      {
+        "text": "Cassation Criminal Decision No. 55/2010 held.",
+        "spans": [[0, 39]]
+      },
+      {
+        "text": "Cassation Penal Appeal No. 8/1999 is old.",
+        "spans": [[0, 33]]
+      }
+    ],
+    "negative": [
+      "Cassation Civil 1234 pending.",
+      "The Cassation panel met in 2005.",
+      "Cassation Civil No. 5/05 short year."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "English rendering unverified."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.executive.proclamation",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b(?:Presidential\\s+)?(?:Proclamation\\s+(?:No\\.\\s?)?|Proc\\.\\s+No\\.\\s?)(?P<thousands>[0-9]{1,2}),?(?P<rest>[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "Proclamation No. {thousands},{rest}",
+  "authority_key": "us.proclamation/{thousands}{rest}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.7 (presidential proclamations) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 and check the `Proclamation No. 9645, 82 Fed. Reg. 45,161 (Sept. 27, 2017)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Proclamation No. 9645, 82 Fed. Reg. 45,161 (Sept. 27, 2017).",
+        "spans": [
+          [
+            4,
+            25
+          ]
+        ],
+        "groups": {
+          "thousands": "9",
+          "rest": "645"
+        }
+      },
+      {
+        "text": "The monument was reduced by Presidential Proclamation 9681 in 2017.",
+        "spans": [
+          [
+            28,
+            58
+          ]
+        ]
+      },
+      {
+        "text": "Compare Proc. No. 10,141 with Proclamation 10,315.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            49
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The proclamation was read aloud in 2017.",
+      "Under Rev. Proc. 2020-23 the deadline moved.",
+      "Proclamation No. 5 of the town council passed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

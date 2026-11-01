@@ -1,0 +1,49 @@
+{
+  "id": "us.ct.court_rule.practice_book",
+  "kind": "court_rule",
+  "jurisdiction": "us.ct",
+  "pattern": "(?:(?:Conn\\.\\s?)?Practice\\s+Book\\s+§§?\\s?)\\s?(?P<rule>[0-9]{1,2}[a-z]?-[0-9]{1,3}[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Conn. Practice Book § {rule}{sub}",
+  "authority_key": "us.ct.rules.practice_book/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Connecticut) Connecticut Practice Book (Superior Court and appellate rules): Conn. Practice Book § N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Connecticut) and the official Connecticut Practice Book (Superior Court and appellate rules); confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Practice Book § 10-30.",
+        "spans": [[4, 26]],
+        "groups": {
+          "rule": "10-30",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Conn. Practice Book § 17-49 in reaching its holding.",
+        "spans": [[20, 48]]
+      },
+      {
+        "text": "Under Practice Book § 61-10(a), the claim fails.",
+        "spans": [[6, 31]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Connecticut rules committee met 12 times in 2020.",
+      "Under Practice Book § as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

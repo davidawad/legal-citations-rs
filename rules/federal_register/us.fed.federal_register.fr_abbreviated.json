@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.federal_register.fr_abbreviated",
+  "kind": "federal_register",
+  "jurisdiction": "us.fed",
+  "tags": [
+    "rulemaking"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+FR\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6})(?:\\s?[-–]\\s?(?P<page_end>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6}))?\\b",
+  "priority": 60,
+  "normalize": "{volume} Fed. Reg. {page}",
+  "authority_key": "us.fr/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Federal Register Document Drafting Handbook (the Register's own `86 FR 7037` citation form); 1 C.F.R. § 18.12",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Document Drafting Handbook at https://www.archives.gov/federal-register/write/handbook and compare the `FR` citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The agency proposed the rule at 86 FR 12345.",
+        "spans": [
+          [
+            32,
+            43
+          ]
+        ],
+        "groups": {
+          "volume": "86",
+          "page": "12345"
+        }
+      },
+      {
+        "text": "See 85 FR 7037-38 (Feb. 6, 2020).",
+        "spans": [
+          [
+            4,
+            17
+          ]
+        ]
+      },
+      {
+        "text": "Compare 84 FR 12,345 with 87 FR 100–102.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            41
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The FR notice",
+      "86 FR",
+      "FR 12345"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "",
+  "retired": "Duplicate of us.fed.federal_register.fr_abbrev (two branches added the same `86 FR 7037` form); merged into it."
+}

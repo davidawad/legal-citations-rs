@@ -1,0 +1,16 @@
+{
+  "name": "federal-litigation",
+  "description": "Federal court practice: federal statutes, regulations, session laws, constitution, rules, the Supreme Court and federal reporters, agency materials, treaties, Westlaw/Lexis, secondary sources, record and docket cites.",
+  "include": [
+    "jurisdiction:us.fed",
+    "jurisdiction:us.scotus",
+    "jurisdiction:us.treaty",
+    "family:international",
+    "family:secondary",
+    "family:record",
+    "rule:us.case.westlaw",
+    "rule:us.case.lexis"
+  ],
+  "exclude": [],
+  "note": "State authority cited in federal court is not included; combine with a state profile."
+}

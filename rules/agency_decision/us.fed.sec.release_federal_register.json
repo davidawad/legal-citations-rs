@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.sec.release_federal_register",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.sec",
+  "pattern": "\\b(?P<act>(?:Securities|Exchange|Investment\\s+Company|Investment\\s+Advisers|Advisers|Trust\\s+Indenture|Public\\s+Utility\\s+Holding\\s+Company))\\s+Act\\s+Release\\s+No\\.\\s?(?P<number>(?:33|34|IC|IA|39)-[0-9]{1,3}(?:,?[0-9]{3})?|[0-9]{1,3}(?:,?[0-9]{3})?),\\s+(?P<volume>[0-9]{1,3})\\s+Fed\\.\\s?Reg\\.?\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6})",
+  "priority": 65,
+  "normalize": "{act} Act Release No. {number}, {volume} Fed. Reg. {page}",
+  "authority_key": "us.sec.release/{act}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "securities"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Securities and Exchange Commission (Releases: cite the Federal Register)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Securities and Exchange Commission (Releases: cite the Federal Register), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "SEC Whistleblower Rules, Exchange Act Release No. 75592, 80 Fed. Reg 47829 (Aug. 10, 2015).",
+        "spans": [
+          [
+            25,
+            74
+          ]
+        ],
+        "groups": {
+          "number": "75592",
+          "volume": "80",
+          "page": "47829"
+        }
+      },
+      {
+        "text": "See Securities Act Release No. 33-10890, 86 Fed. Reg. 2080 (Jan. 11, 2021).",
+        "spans": [
+          [
+            4,
+            58
+          ]
+        ]
+      },
+      {
+        "text": "Compare Investment Advisers Act Release No. 5248, 84 Fed. Reg. 33,669 with none.",
+        "spans": [
+          [
+            8,
+            69
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Exchange Act Release No. was not assigned in 2015.",
+      "The release, 80 pages in the Fed. Reg., ran long.",
+      "SEC Whistleblower Rules (2015) took effect."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The release and its Federal Register source as one cite; outranks us.fed.sec.release and us.fed.federal_register."
+}

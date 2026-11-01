@@ -1,0 +1,57 @@
+{
+  "id": "us.tx.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.tx",
+  "pattern": "Tex(?:as)?\\.\\s+(?P<code>[A-Za-z][A-Za-z\\. &]{1,35}?)\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Texas) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Texas entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py TEX pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Tex. Bus. & Com. Code Ann. § 17.46.",
+        "spans": [[4, 39]],
+        "groups": {
+          "code": "Bus. & Com.",
+          "section": "17.46"
+        }
+      },
+      {
+        "text": "The court relied on Tex. Penal Code § 21.11 in reaching its holding.",
+        "spans": [[20, 44]]
+      },
+      {
+        "text": "Under Texas. Fam. Code §§ 5.1, the claim fails.",
+        "spans": [[6, 31]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "tex",
+    "order": 9,
+    "pattern": "Tex(?:as)?\\.\\s+(?P<code>[A-Za-z][A-Za-z\\. &]{1,35}?)\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

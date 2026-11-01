@@ -1,0 +1,68 @@
+{
+  "id": "us.secondary.restatement",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "ali"
+  ],
+  "pattern": "Restatement\\s+\\((?P<edition>[A-Za-z]+)\\)\\s+of\\s+(?P<subject>[A-Za-z][A-Za-z. ]*?(?::\\s+[A-Z][A-Za-z. ]*?)?)\\s+§\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*)(?:\\s+(?:cmt\\.|illus\\.)\\s+(?P<comment>[a-z0-9]{1,3})\\b)?",
+  "priority": 50,
+  "normalize": "Restatement ({edition}) of {subject} § {section}",
+  "authority_key": "restatement/{edition}/{subject}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book R18.2 (Restatements): Restatement (<series>) of <subject> § <section>[ cmt. <letter>] (Am. Law Inst. <year>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py RESTATEMENT_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Restatement (Second) of Contracts § 90.",
+        "spans": [[4, 43]],
+        "groups": {
+          "edition": "Second",
+          "subject": "Contracts",
+          "section": "90"
+        }
+      },
+      {
+        "text": "The court relied on Restatement (Third) of Torts § 1.2 in reaching its holding.",
+        "spans": [[20, 55]]
+      },
+      {
+        "text": "Under Restatement (Second) of Agency § 1, the claim fails.",
+        "spans": [[6, 41]]
+      },
+      {
+        "text": "Restatement (Third) of Prop.: Servitudes § 7.1 (Am. Law Inst. 2000).",
+        "spans": [[0, 47]]
+      },
+      {
+        "text": "Restatement (Third) of The Law Governing Lawyers § 2 cmt. e (Am. Law Inst. 2000).",
+        "spans": [[0, 60]]
+      }
+    ],
+    "negative": [
+      "The law review editors met on Tuesday.",
+      "The restatement of earnings was filed in 2020.",
+      "A treatise on gardening runs 400 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A comment or illustration letter after the section is part of the cite; a subject may carry a subtitle after a colon (Prop.: Servitudes).",
+  "legacy": {
+    "type": "restatement",
+    "order": 3,
+    "pattern": "Restatement\\s+\\((?P<edition>[A-Za-z]+)\\)\\s+of\\s+(?P<subject>[A-Za-z ]+?)\\s+§\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*)"
+  }
+}

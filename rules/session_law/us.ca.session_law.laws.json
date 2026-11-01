@@ -1,0 +1,80 @@
+{
+  "id": "us.ca.session_law.laws",
+  "kind": "session_law",
+  "jurisdiction": "us.ca",
+  "pattern": "\\b(?P<year>(?:1[6-9]|20)[0-9]{2})(?:-(?P<pamphlet>[0-9]{1,2}))?\\s(?P<series>Cal\\.\\s?Adv\\.\\s?Legis\\.\\s?Serv\\.|Cal\\.\\s?Legis\\.\\s?Serv\\.|Cal\\.\\s?Stat\\.)\\s(?:ch\\.\\s?[0-9]{1,4},\\s?§\\s?[0-9]{1,4}[a-z]?,\\s)?(?:No\\.\\s?[0-9]{1,3},\\s)?(?P<page>[0-9]{1,5}(?:-[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{year} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 California: Session laws",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 California, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 68",
+      "corpus/formats/indigo.jsonl line 69",
+      "corpus/formats/indigo.jsonl line 70"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2015 Cal. Stat. 686.",
+        "spans": [[4, 23]],
+        "groups": {
+          "year": "2015",
+          "series": "Cal. Stat.",
+          "page": "686"
+        }
+      },
+      {
+        "text": "See 2014 Cal. Stat. 1015.",
+        "spans": [[4, 24]]
+      },
+      {
+        "text": "See 2015 Cal. Legis. Serv. 1650 (West).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 2014 Cal. Legis. Serv. 2304 (West).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 2015-1 Cal. Adv. Legis. Serv. 297 (LexisNexis).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 2014-2 Cal. Adv. Legis. Serv. 277 (LexisNexis).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 2013 Cal. Stat. 77.",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 2013 Cal. Legis. Serv. 77.",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 2013 Cal. Adv. Legis. Serv. 77.",
+        "spans": [[4, 34]]
+      }
+    ],
+    "negative": [
+      "The Cal. Adv. Legis. Serv. volumes are shelved by year.",
+      "In California, 12 session laws took effect in 2015.",
+      "Page 2351 of the California laws index is blank."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

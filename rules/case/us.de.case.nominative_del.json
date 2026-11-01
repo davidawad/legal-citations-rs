@@ -1,0 +1,94 @@
+{
+  "id": "us.de.case.nominative_del",
+  "kind": "case",
+  "jurisdiction": "us.de",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Del\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Houst\\.|Penne\\.|Boyce|Harr\\.|Marv\\.)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Del. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 117",
+      "corpus/formats/indigo.jsonl line 118",
+      "corpus/formats/indigo.jsonl line 119",
+      "corpus/formats/indigo.jsonl line 120",
+      "corpus/formats/indigo.jsonl line 121"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See In re Estate of Hall, 24 Del. (1 Boyce) 97 (1912).",
+        "spans": [[26, 46]],
+        "groups": {
+          "volume": "24",
+          "reporter": "Del.",
+          "nominative_volume": "1",
+          "nominative": "Boyce",
+          "page": "97"
+        }
+      },
+      {
+        "text": "See Walker v. Young, 24 Del. (1 Boyce) 425, 601 (1916).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Allen v. King, 17 Del. (1 Penne.) 49 (1900).",
+        "spans": [[19, 40]]
+      },
+      {
+        "text": "See Wright v. Scott, 17 Del. (1 Penne.) 209, 625 (1905).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Green v. Baker, 15 Del. (1 Marv.) 193 (1894).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See Adams v. Nelson, 15 Del. (1 Marv.) 529, 609 (1895).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Hill v. Campbell, 6 Del. (1 Houst.) 569 (1866).",
+        "spans": [[22, 43]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 6 Del. (1 Houst.) 441, 601 (1881).",
+        "spans": [[25, 46]]
+      },
+      {
+        "text": "See Carter v. Phillips, 1 Del. (1 Harr.) 393 (1838).",
+        "spans": [[24, 44]]
+      },
+      {
+        "text": "See Evans v. Turner, 1 Del. (1 Harr.) 241, 617 (1848).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Del. (2 Boyce) 345 (1850).",
+        "spans": [[16, 37]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Del. reports is missing.",
+      "The Boyce reports cover Del. cases from 1800 to 1850.",
+      "See Del. (Boyce) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "us.fed.uspto.ptab_exhibit",
+  "kind": "record",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "\\bEx(?:hibit|\\.)\\s*(?P<number>[12][0-9]{3})\\b",
+  "priority": 55,
+  "normalize": "Ex. {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "37 C.F.R. § 42.63(c) (exhibit numbering 1001-1999 petitioner, 2001-2999 patent owner)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open 37 C.F.R. § 42.63(c).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ex. 1001.",
+        "spans": [[4, 12]],
+        "groups": {
+          "number": "1001"
+        }
+      },
+      {
+        "text": "The court relied on Exhibit 2003 in reaching its holding.",
+        "spans": [[20, 32]]
+      },
+      {
+        "text": "Under Ex.1003, the claim fails.",
+        "spans": [[6, 13]]
+      }
+    ],
+    "negative": [
+      "The ER doctor saw 139 patients.",
+      "Exhibit hall 3 opens at noon.",
+      "The appendix lists 23 items."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,109 @@
+{
+  "id": "us.fed.federal_register.fr_abbrev",
+  "kind": "federal_register",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+FR\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6})(?:\\s?[-–]\\s?(?P<page_end>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6}))?\\b",
+  "priority": 60,
+  "normalize": "{volume} Fed. Reg. {page}",
+  "authority_key": "us.fr/{volume}/{page|digits}",
+  "url_templates": [
+    "https://www.govinfo.gov/link/fr/{volume}/{page|digits}"
+  ],
+  "url_decoders": [
+    "govinfo.gov/link/fr/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Executive Office of the President (Exec. Order 12,900, 59 FR 9061)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Executive Office of the President (Exec. Order 12,900, 59 FR 9061), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Exec. Order 12,900 appears at 59 FR 9061 (Feb. 22, 1994).",
+        "spans": [
+          [
+            30,
+            40
+          ]
+        ],
+        "groups": {
+          "volume": "59",
+          "page": "9061"
+        }
+      },
+      {
+        "text": "The rule was published at 65 FR 287 (Jan. 4, 2000).",
+        "spans": [
+          [
+            26,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "See 85 FR 43304 and 86 FR 7,009.",
+        "spans": [
+          [
+            4,
+            15
+          ],
+          [
+            20,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "The agency proposed the rule at 86 FR 12345.",
+        "spans": [
+          [
+            32,
+            43
+          ]
+        ]
+      },
+      {
+        "text": "See 85 FR 7037-38 (Feb. 6, 2020).",
+        "spans": [
+          [
+            4,
+            17
+          ]
+        ]
+      },
+      {
+        "text": "Compare 84 FR 12,345 with 87 FR 100–102.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            41
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The FR notice issued in 2019.",
+      "Form FR 2900 is a Federal Reserve report.",
+      "Our 3 FR officers met.",
+      "The FR notice",
+      "86 FR",
+      "FR 12345"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates: govinfo link service, verified by HTTP fetch on 2026-10-23: https://www.govinfo.gov/link/fr/85/12345 redirects to the FR-2020-03-02 PDF at that page (also 88/1000 and 60/5000); a comma page answers 400, so the template and the key use {page|digits} (`12,345` and `12345` are one authority). federalregister.gov sends scripts to a bot check: decoder only. `FR` is the Federal Register's own short abbreviation; Indigo uses it in T2 examples. Same authority key as us.fed.federal_register. Merged with us.fed.federal_register.fr_abbreviated (retired): page ranges (`85 FR 7037-38`) and the Document Drafting Handbook examples.",
+  "tags": [
+    "rulemaking"
+  ]
+}

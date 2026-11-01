@@ -1,0 +1,54 @@
+{
+  "id": "us.secondary.book_in_collection",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "pattern": "\\bin\\s+(?P<collection>[A-Z][^()]{1,120}?)(?:\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?))?\\s+\\((?P<editors>[A-Z][^()]{1,80}?)\\s+eds?\\.,\\s*(?:(?P<edition>[0-9]{1,2}(?:st|nd|rd|th|d))\\s+ed\\.\\s+)?(?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)",
+  "reject_before": [
+    "(?:^|[^,\\s])\\s*$"
+  ],
+  "priority": 21,
+  "normalize": "in {collection} ({editors} eds., {year})",
+  "authority_key": "book/{collection}/{year}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.75,
+  "provenance": {
+    "encodes": "Indigo Book R28 (Full Citation for Books & Non-Periodicals): <author>, <title>, in <collection> <pin> (<editors> eds., <year>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Roger Angell, This Old Man, in The Best American Essays 2015 (Ariel Levy & Robert Atwan eds.,2015).",
+        "spans": [[28, 98]],
+        "groups": {
+          "collection": "The Best American Essays",
+          "pin": "2015",
+          "editors": "Ariel Levy & Robert Atwan",
+          "year": "2015"
+        }
+      },
+      {
+        "text": "Oliver Wendell Holmes, The Path of the Law, in Collected Legal Papers 167 (Harold J. Laski ed., 1920).",
+        "spans": [[44, 101]]
+      },
+      {
+        "text": "Jane Doe, Privacy, in The Oxford Handbook of Law 12–15 (Roger Brownsword et al. eds., 2d ed. 2017).",
+        "spans": [[19, 100]]
+      }
+    ],
+    "negative": [
+      "She worked in The Hague (with colleagues) in 2015.",
+      "Essays appear in The Best American Essays each year.",
+      "Ariel Levy edited 2015 essays."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

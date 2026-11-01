@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.ntsb.report",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ntsb",
+  "pattern": "\\bNTSB/(?P<series>[A-Z]{3})-(?P<number>[0-9]{2}/[0-9]{2})\\b",
+  "priority": 60,
+  "normalize": "NTSB/{series}-{number}",
+  "authority_key": "us.ntsb/report/{series}-{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "NTSB report numbering (`NTSB/AAR-14/01`); Bluebook R. 15 (institutional reports)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open an NTSB accident report cover page on ntsb.gov and check the report number form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Nat'l Transp. Safety Bd., Aircraft Accident Report NTSB/AAR-14/01 (2014).",
+        "spans": [
+          [
+            55,
+            69
+          ]
+        ],
+        "groups": {
+          "series": "AAR",
+          "number": "14/01"
+        }
+      },
+      {
+        "text": "The Board's findings appear in NTSB/HAR-19/02 at 12.",
+        "spans": [
+          [
+            31,
+            45
+          ]
+        ]
+      },
+      {
+        "text": "Compare NTSB/RAR-16/02 with NTSB/MAR-17/01.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            42
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The NTSB/FAA meeting was postponed.",
+      "NTSB reports 14 and 01 were released.",
+      "AAR-14/01 is cited without the agency."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

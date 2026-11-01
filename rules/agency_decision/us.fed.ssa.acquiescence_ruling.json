@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.ssa.acquiescence_ruling",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ssa",
+  "tags": [
+    "social_security"
+  ],
+  "pattern": "\\b(?:AR|SSAR|Acquiescence\\s+Ruling)\\s+(?P<number>[0-9]{2}-[0-9]{1,2})\\((?P<circuit>[0-9]{1,2})\\)",
+  "priority": 60,
+  "normalize": "AR {number}({circuit})",
+  "authority_key": "us.ssa_ar/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "SSA Acquiescence Rulings, 20 C.F.R. § 404.985 (`AR 98-3(6)`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open SSA acquiescence rulings at https://www.ssa.gov/OP_Home/rulings/ar-toc.html and compare the numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Sixth Circuit rule applies. AR 98-4(6).",
+        "spans": [
+          [
+            32,
+            42
+          ]
+        ],
+        "groups": {
+          "number": "98-4",
+          "circuit": "6"
+        }
+      },
+      {
+        "text": "See SSAR 00-1(4).",
+        "spans": [
+          [
+            4,
+            16
+          ]
+        ]
+      },
+      {
+        "text": "Compare Acquiescence Ruling 98-3(6) with AR 97-2(9).",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "AR 98-4",
+      "The AR was issued.",
+      "AR (6)"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

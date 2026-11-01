@@ -1,0 +1,89 @@
+{
+  "id": "us.record.docket_entry",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:Doc(?:ument)?\\.?\\s+(?:No\\.\\s*)?|D\\.\\s?E\\.\\s*(?:No\\.\\s*)?|DE\\s+(?:No\\.\\s*)?|Dkt\\.\\s*#\\s*|Docket\\s+Entry\\s+(?:No\\.\\s*)?|Dkt\\.\\s+Entry\\s+(?:No\\.\\s*)?)(?P<number>[0-9]{1,4})(?:-(?P<attachment>[0-9]{1,3}))?\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,4}(?:\\s?[-–]\\s?[0-9]{1,4})?))?",
+  "reject_before": [
+    "\\b[A-Z][A-Za-z]{0,4}\\.\\s?$",
+    ",\\s?$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 54,
+  "normalize": "Doc. {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Docket-entry cites (Doc., D.E., Dkt. #); Bluebook B17.1.4 (electronic case filing)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The order is short. Doc. 12 at 3.",
+        "spans": [
+          [
+            20,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "12"
+        }
+      },
+      {
+        "text": "See D.E. 45-2; Dkt. #12.",
+        "spans": [
+          [
+            4,
+            13
+          ],
+          [
+            15,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare Doc. No. 7 with DE 103.",
+        "spans": [
+          [
+            8,
+            18
+          ],
+          [
+            24,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "See Document No. 45, at 2; Docket Entry 12-1 at 7-9.",
+        "spans": [
+          [
+            4,
+            25
+          ],
+          [
+            27,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Wilmington, DE 19801",
+      "S. Doc. No. 12",
+      "The Doc. was filed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "dot-1ij4xz.10: a pin (`Doc. No. 12, at 3`) is part of the cite."
+}

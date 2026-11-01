@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.eoir.decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.eoir",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+I\\.?\\s?&\\s?N\\.?\\s+Dec\\.\\s+(?P<page>[0-9]{1,4})\\b(?:,\\s*(?P<pin>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?(?:\\s*\\((?P<body>B\\.?\\s?I\\.?\\s?A\\.?|A\\.?\\s?G\\.?|Att(?:'|’)y\\s+Gen\\.)\\s+(?P<year>(?:19|20)[0-9]{2})\\))?",
+  "priority": 60,
+  "normalize": "{volume} I. & N. Dec. {page}",
+  "authority_key": "us.eoir/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Administrative Decisions Under Immigration and Nationality Laws) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for I. & N. Dec.; EOIR's practice manual uses `27 I&N Dec. 316 (A.G. 2018)`; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Matter of A-B-, 27 I&N Dec. 316 (A.G. 2018).",
+        "spans": [
+          [
+            20,
+            47
+          ]
+        ],
+        "groups": {
+          "volume": "27",
+          "page": "316",
+          "body": "A.G.",
+          "year": "2018"
+        }
+      },
+      {
+        "text": "The Board so held in Matter of Acosta, 19 I. & N. Dec. 211, 233 (B.I.A. 1985), and later cases.",
+        "spans": [
+          [
+            39,
+            77
+          ]
+        ]
+      },
+      {
+        "text": "Cf. Matter of Silva-Trevino, 26 I&N Dec. 826 (BIA 2016) and 24 I&N Dec. 687 (Att'y Gen. 2008).",
+        "spans": [
+          [
+            29,
+            55
+          ],
+          [
+            60,
+            93
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The BIA decided 27 appeals in 316 days.",
+      "An I&N officer reviewed the file.",
+      "Dec. 316 was the last day."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

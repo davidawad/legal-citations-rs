@@ -1,0 +1,49 @@
+{
+  "id": "us.dc.court_rule.civ",
+  "kind": "court_rule",
+  "jurisdiction": "us.dc",
+  "pattern": "\\b(?:D\\.C\\.\\s?Super\\.\\s?Ct\\.\\s?Civ\\.\\s?R\\.)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,2})?(?:-I+)?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "D.C. Super. Ct. Civ. R. {rule}{sub}",
+  "authority_key": "us.dc.rules.civ/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (District of Columbia) District of Columbia Superior Court Civil Rules: D.C. Super. Ct. Civ. R. N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (District of Columbia) and the official District of Columbia Superior Court Civil Rules; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See D.C. Super. Ct. Civ. R. 12(b)(6).",
+        "spans": [[4, 36]],
+        "groups": {
+          "rule": "12",
+          "sub": "(b)(6)"
+        }
+      },
+      {
+        "text": "The court relied on D.C. Super. Ct. Civ. R. 56 in reaching its holding.",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "Under D.C. Super. Ct. Civ. R. 12-I(a), the claim fails.",
+        "spans": [[6, 37]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The District of Columbia rules committee met 12 times in 2020.",
+      "Under D.C. Super. Ct. Civ. R. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

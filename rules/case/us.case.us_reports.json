@@ -1,0 +1,55 @@
+{
+  "id": "us.case.us_reports",
+  "kind": "case",
+  "jurisdiction": "us.scotus",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>U\\.\\s?S\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 10.3.1 and T1 (United States Reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Brown v. Board of Education, 347 U.S. 483, 495 (1954).",
+        "spans": [[33, 45]],
+        "groups": {
+          "volume": "347",
+          "reporter": "U.S.",
+          "page": "483"
+        }
+      },
+      {
+        "text": "The court relied on Upjohn Co. v. United States, 449 U.S. 383 (1981) in reaching its holding.",
+        "spans": [[49, 61]]
+      },
+      {
+        "text": "Under Marbury v. Madison, 5 U.S. 137 (1803), the claim fails.",
+        "spans": [[26, 36]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

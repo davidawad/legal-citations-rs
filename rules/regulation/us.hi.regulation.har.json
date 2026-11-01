@@ -1,0 +1,49 @@
+{
+  "id": "us.hi.regulation.har",
+  "kind": "regulation",
+  "jurisdiction": "us.hi",
+  "pattern": "\\b(?:Haw\\.\\s?Code\\s?R\\.|Haw\\.\\s?Admin\\.\\s?R\\.|HAR)\\s?§\\s?(?P<section>[0-9]{1,2}-[0-9]{1,4}(?:\\.[0-9])?-[0-9]{1,3}(?:\\.[0-9])?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Haw. Code R. § {section}{sub}",
+  "authority_key": "us.hi.har/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Hawaii) administrative compilation: Haw. Code R. § N-N-N; local form HAR § N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Hawaii) and the official Hawaii administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Haw. Code R. § 11-60.1-1.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "11-60.1-1",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on HAR § 17-1720-3 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under Haw. Admin. R. § 12-46-14(a), the permit fails.",
+        "spans": [[6, 35]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Hawaii agency adopted 12 new rules in 2020.",
+      "Under Haw. Code R., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

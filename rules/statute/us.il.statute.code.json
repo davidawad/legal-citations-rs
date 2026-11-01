@@ -1,0 +1,58 @@
+{
+  "id": "us.il.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.il",
+  "pattern": "(?:(?P<chapter>[0-9]+)\\s+)?Ill(?:inois)?\\.\\s+Comp(?:iled)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:(?:ch\\.|§)\\s*(?P<ch_num>[0-9\\w]+),?\\s*§\\s*(?P<section_ch>[0-9\\w/\\-\\.]+)|(?P<sub>[0-9]+)/(?P<section_sub>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*))",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Illinois) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Illinois entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py ILL pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 720 Ill. Comp. Stat. 5/12-3.",
+        "spans": [[4, 31]],
+        "groups": {
+          "chapter": "720",
+          "sub": "5",
+          "section_sub": "12-3"
+        }
+      },
+      {
+        "text": "The court relied on Ill. Comp. Stat. ch. 815, § 505/2 in reaching its holding.",
+        "spans": [[20, 54]]
+      },
+      {
+        "text": "Under Illinois. Compiled. Statutes. 735/5-1, the claim fails.",
+        "spans": [[6, 43]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ill",
+    "order": 10,
+    "pattern": "(?:(?P<chapter>\\d+)\\s+)?Ill(?:inois)?\\.\\s+Comp(?:iled)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:(?:ch\\.|§)\\s*(?P<ch_num>[\\d\\w]+),?\\s*§\\s*(?P<section_ch>[\\d\\w/\\-\\.]+)|(?P<sub>\\d+)/(?P<section_sub>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*))"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

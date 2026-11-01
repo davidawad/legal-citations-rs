@@ -1,0 +1,53 @@
+{
+  "id": "us.secondary.alr",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "alr"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<series>A\\.\\s?L\\.\\s?R\\.\\s?(?:7th|Fed\\.\\s?(?:3d|4th)|Int[’']l))\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\b)?",
+  "priority": 25,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "alr/{series}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R16.7.6 and T13 (American Law Reports series A.L.R.7th, A.L.R. Fed. 3d, A.L.R. Fed. 4th, A.L.R. Int'l)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R15.8 (encyclopedias) and R16.7.6 (A.L.R. annotations), and the Indigo Book R28 book form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 4 A.L.R. Fed. 3d 1.",
+        "spans": [[4, 22]],
+        "groups": {
+          "volume": "4",
+          "series": "A.L.R. Fed. 3d",
+          "page": "1"
+        }
+      },
+      {
+        "text": "The court relied on 12 A.L.R.7th 101 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under 9 A.L.R. Int'l 230, 245, the claim fails.",
+        "spans": [[6, 29]]
+      }
+    ],
+    "negative": [
+      "The ALR staff number 4.",
+      "A.L.R. editors met 12 times.",
+      "Annotations fill 101 volumes."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Only the newer series reporters-db lacks (A.L.R.7th, A.L.R. Fed. 3d and 4th, A.L.R. Int'l); the older series stay case-kind reporters-db rules so their `at` short forms resolve."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.app.internal_operating_procedure",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.app",
+  "tags": [
+    "appellate"
+  ],
+  "pattern": "\\b(?P<court>(?:[1-9]|1[01])(?:st|nd|rd|th|d)\\s+Cir\\.|D\\.C\\.\\s+Cir\\.|Fed\\.\\s+Cir\\.)\\s+(?:I\\.\\s?O\\.\\s?P\\.|IOP|Internal\\s+Operating\\s+Proc(?:edures?|\\.))\\s+(?:No\\.\\s*|#\\s*)?(?P<rule>[0-9IVX]{1,4}(?:[.\\-][0-9A-Za-z]{1,3})*)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 58,
+  "normalize": "{court} I.O.P. {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Federal courts of appeals Internal Operating Procedures (e.g. 3d Cir. I.O.P.); Bluebook R. 12.9.3",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the circuit's Internal Operating Procedures (e.g. https://www2.ca3.uscourts.gov) and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Panels are bound by prior precedent. 3d Cir. I.O.P. 9.1.",
+        "spans": [
+          [
+            37,
+            55
+          ]
+        ],
+        "groups": {
+          "court": "3d Cir.",
+          "rule": "9.1"
+        }
+      },
+      {
+        "text": "See Fed. Cir. IOP #10.",
+        "spans": [
+          [
+            4,
+            21
+          ]
+        ]
+      },
+      {
+        "text": "Compare 5th Cir. I.O.P. 35 with D.C. Cir. Internal Operating Procedures No. 4.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            77
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The 3d Cir. I.O.P. manual",
+      "The circuit's IOP",
+      "Fed. Cir. IOP page"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

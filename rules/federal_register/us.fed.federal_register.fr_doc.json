@@ -1,0 +1,74 @@
+{
+  "id": "us.fed.federal_register.fr_doc",
+  "kind": "federal_register",
+  "jurisdiction": "us.fed",
+  "tags": [
+    "rulemaking"
+  ],
+  "pattern": "\\bFR\\s+Doc\\.?\\s+(?:No\\.\\s*)?(?P<number>E[0-9]-[0-9]{4,5}|(?:19|20)?[0-9]{2}-[0-9]{4,5})\\b",
+  "priority": 60,
+  "normalize": "FR Doc. {number}",
+  "authority_key": "us.fr_doc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Federal Register document numbers (`FR Doc. 2021-12345`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open any Federal Register document on https://www.govinfo.gov and compare the `[FR Doc. 2021-12345 Filed ...]` line.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The notice is FR Doc. 2021-12345.",
+        "spans": [
+          [
+            14,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "2021-12345"
+        }
+      },
+      {
+        "text": "See FR Doc. E9-1234 and FR Doc. 05-12345.",
+        "spans": [
+          [
+            4,
+            19
+          ],
+          [
+            24,
+            40
+          ]
+        ]
+      },
+      {
+        "text": "Compare FR Doc. No. 2020-01234 with FR Doc 2019-98765.",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            53
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The FR Doc. index",
+      "FR Doc. 12",
+      "FR 2021-12345"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

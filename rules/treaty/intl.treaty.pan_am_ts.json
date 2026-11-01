@@ -1,0 +1,53 @@
+{
+  "id": "intl.treaty.pan_am_ts",
+  "kind": "treaty",
+  "jurisdiction": "intl.oas",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,2})\\s+Pan-Am\\.\\s?T\\.\\s?S\\.\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} Pan-Am. T.S. {page}",
+  "authority_key": "pan_am_ts/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Pan-American Treaty Series (1949-date), <vol> Pan-Am. T.S. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Inter-American Treaty of Reciprocal Assistance, Sept. 2, 1947, 4 Pan-Am. T.S. 48.",
+        "spans": [[48, 80]],
+        "groups": {
+          "date": "Sept. 2, 1947",
+          "volume": "4",
+          "page": "48"
+        }
+      },
+      {
+        "text": "Charter of the Organization of American States, Apr. 30, 1948, 1 Pan-Am. T.S. 1.",
+        "spans": [[48, 79]]
+      },
+      {
+        "text": "The court relied on 4 Pan-Am. T.S. 48 in reaching its holding.",
+        "spans": [[20, 37]]
+      }
+    ],
+    "negative": [
+      "The Pan-American highway runs 48 miles here.",
+      "S. 48 was referred to committee.",
+      "A Pan-Am flight left at 4 p.m."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

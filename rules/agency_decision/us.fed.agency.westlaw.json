@@ -1,0 +1,73 @@
+{
+  "id": "us.fed.agency.westlaw",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed",
+  "tags": [
+    "agency",
+    "westlaw"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+WL\\s+(?P<number>[0-9]{3,9})(?:,\\s*at\\s+\\*[0-9]{1,4}(?:\\s?[-–]\\s?\\*?[0-9]{1,4})?)?\\s+\\((?P<agency>N\\.\\s?L\\.\\s?R\\.\\s?B\\.|NLRB|E\\.E\\.O\\.C\\.|EEOC|B\\.I\\.A\\.|BIA|A\\.A\\.O\\.|AAO|T\\.T\\.A\\.B\\.|TTAB|P\\.T\\.A\\.B\\.|PTAB|B\\.P\\.A\\.I\\.|BPAI|M\\.S\\.P\\.B\\.|MSPB|F\\.C\\.C\\.|FCC|F\\.E\\.R\\.C\\.|FERC|S\\.E\\.C\\.|SEC|I\\.R\\.S\\.|IRS|Comp\\.\\s?Gen\\.|G\\.A\\.O\\.|GAO|O\\.L\\.C\\.|OLC|E\\.P\\.A\\.|EPA|E\\.A\\.B\\.|EAB|O\\.S\\.H\\.R\\.C\\.|OSHRC|F\\.L\\.R\\.A\\.|FLRA|A\\.R\\.B\\.|ARB|B\\.R\\.B\\.|BRB|Ben\\.\\s?Rev\\.\\s?Bd\\.|E\\.C\\.A\\.B\\.|ECAB|Bd\\.\\s?Vet\\.\\s?App\\.|B\\.V\\.A\\.|BVA|A\\.S\\.B\\.C\\.A\\.|ASBCA|C\\.B\\.C\\.A\\.|CBCA|F\\.T\\.C\\.|FTC|N\\.T\\.S\\.B\\.|NTSB|D\\.O\\.L\\.|DOL|Dep['’]t\\s|Off\\.\\s|Comm['’]r|(?:[A-Z][A-Za-z.]*\\s+){0,3}(?:Att['’]y\\s+Gen\\.|A\\.G\\.|Comm['’]n|Bd\\.|Trib\\.|Tribunal|P\\.U\\.C\\.|P\\.S\\.C\\.|Agency|Auth\\.))[^()]{0,40}\\)",
+  "priority": 62,
+  "normalize": "{year} WL {number} ({agency})",
+  "authority_key": "westlaw/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.4 and R. 18.3.1 (agency decisions in commercial databases, agency named in the parenthetical)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.4 / R. 18.3.1; the parenthetical names the agency (or adjudicating body), not a court.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board so held. 2020 WL 1234567 (N.L.R.B. Mar. 3, 2020).",
+        "spans": [
+          [
+            19,
+            58
+          ]
+        ],
+        "groups": {
+          "year": "2020",
+          "number": "1234567",
+          "agency": "N.L.R.B."
+        }
+      },
+      {
+        "text": "See In re Smith, 2019 WL 3021234, at *4 (TTAB July 1, 2019).",
+        "spans": [
+          [
+            17,
+            59
+          ]
+        ]
+      },
+      {
+        "text": "Compare 2015 WL 555555 (Ohio Att’y Gen. 2015) with 2018 WL 6093423 (Cal. P.U.C. Nov. 8, 2018).",
+        "spans": [
+          [
+            8,
+            47
+          ],
+          [
+            53,
+            95
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Doe v. Roe, 2020 WL 1234567 (N.D. Cal. Mar. 3, 2020) (unpublished)",
+      "The NLRB WL database",
+      "2020 WL (N.L.R.B.)"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

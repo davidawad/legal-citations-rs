@@ -1,0 +1,58 @@
+{
+  "id": "foreign.in.scc",
+  "kind": "foreign",
+  "jurisdiction": "foreign.in",
+  "tags": [
+    "foreign",
+    "india"
+  ],
+  "pattern": "\\((?P<year>(?:19|20)[0-9]{2})\\)\\s+(?P<volume>[0-9]{1,2})\\s+(?P<reporter>SCC|S\\.C\\.C\\.)(?:\\s+\\((?P<part>Cri|Civ|L&S|Tax)\\))?\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}))?",
+  "priority": 60,
+  "normalize": "({year}) {volume} SCC {page}",
+  "authority_key": "in.scc/{year}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Supreme Court Cases (India): (<year>) <vol> SCC <page> (Bluebook T2 India)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (India) and the Supreme Court of India's citation practice (SCC, AIR, neutral INSC citations).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "K.S. Puttaswamy v. Union of India, (2017) 10 SCC 1.",
+        "spans": [[35, 50]],
+        "groups": {
+          "year": "2017",
+          "volume": "10",
+          "page": "1"
+        }
+      },
+      {
+        "text": "Vishaka v. State of Rajasthan, (1997) 6 S.C.C. 241.",
+        "spans": [[31, 50]]
+      },
+      {
+        "text": "(2014) 5 SCC 438, 470 (NALSA).",
+        "spans": [[0, 21]]
+      },
+      {
+        "text": "(2009) 3 SCC (Cri) 135.",
+        "spans": [[0, 22]]
+      }
+    ],
+    "negative": [
+      "(2017) the SCC heard 10 cases.",
+      "The SCC 2019 term had 65 cases.",
+      "The SCC volume 10 was late."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A round-bracket year before an SCC volume is Indian; Canada's 2019 SCC 65 has no brackets and no volume."
+}

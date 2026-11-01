@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.isrlr",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\[(?P<year>(?:19|20)[0-9]{2}(?:-[0-9]{1,2})?)\\]\\s+(?:(?P<volume>[0-9]{1,2})\\s+)?IsrLR\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 58,
+  "normalize": "[{year}] IsrLR {page}",
+  "authority_key": "il.isrlr/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Israel Law Reports (IsrLR): [<year>(-<vol>)] IsrLR <page>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open an issue of Israel Law Reports (Cambridge) and check how bracketed year and IsrLR pages render.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cohen v. Levi [1992-4] IsrLR 5.",
+        "spans": [[18, 34]],
+        "groups": {
+          "year": "1992-4",
+          "page": "5"
+        }
+      },
+      {
+        "text": "State v. Doe [1999] 3 IsrLR 120 (Isr.).",
+        "spans": [[13, 31]]
+      },
+      {
+        "text": "[2003] IsrLR 77 is cited.",
+        "spans": [[0, 15]]
+      }
+    ],
+    "negative": [
+      "The IsrLR volume is online.",
+      "[1999] ISR 120 is a different report.",
+      "IsrLR 5 alone."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Form recalled from scholarship; bracketed years vary (e.g. [1992-4])."
+}

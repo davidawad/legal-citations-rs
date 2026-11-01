@@ -1,0 +1,55 @@
+{
+  "id": "foreign.ae.difc.enf",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.difc.enf",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae",
+    "difc"
+  ],
+  "pattern": "\\[(?P<year>20[0-9]{2})\\]\\s+DIFC\\s+ENF\\s+(?P<number>[0-9]{1,4})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?)?",
+  "priority": 60,
+  "normalize": "[{year}] DIFC ENF {number}",
+  "authority_key": "ae.difc/{year}/ENF/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "DIFC Courts judgments: [year] DIFC ENF n (enforcement proceedings), the Practice Direction No. 4 of 2016 shape applied to a series the direction does not list",
+    "opened": false,
+    "source_url": "https://www.difccourts.ae/rules-decisions/practice-directions/practice-direction-no-4-2016-neutral-citation-difc-courts-judgments",
+    "how_to_verify": "PD 4/2016 lists only CA, CFI and SCT; check the ENF series against judgments published on difccourts.ae.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Enforced under [2021] DIFC ENF 044.",
+        "spans": [[15, 34]],
+        "groups": {
+          "year": "2021",
+          "number": "044"
+        }
+      },
+      {
+        "text": "See [2019] DIFC ENF 3 at [8].",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "Compare [2020] DIFC ENF 12 with [2022] DIFC ENF 70.",
+        "spans": [[8, 26], [32, 50]]
+      }
+    ],
+    "negative": [
+      "The DIFC ENF sat in 2020.",
+      "In 2020 DIFC ENF 12 matters were filed.",
+      "[2020] DIFC Annual Report ENF 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "One rule per DIFC court series, so the citation's jurisdiction is court-level (--jurisdiction foreign.ae.difc.enf)."
+}

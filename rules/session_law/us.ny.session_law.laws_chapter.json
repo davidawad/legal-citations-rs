@@ -1,0 +1,74 @@
+{
+  "id": "us.ny.session_law.laws_chapter",
+  "kind": "session_law",
+  "jurisdiction": "us.ny",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\bL\\.?\\s+(?P<year>(?:17|18|19|20)[0-9]{2}),\\s+ch\\.?\\s+(?P<chapter>[0-9]{1,4})(?:,\\s+§\\s*(?P<section>[0-9]+[a-z]?))?",
+  "reject_before": [
+    "(?:Pub|Priv|P)\\.\\s?$"
+  ],
+  "priority": 60,
+  "normalize": "L. {year}, ch. {chapter}",
+  "authority_key": "us.ny.laws/{year}/{chapter}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "New York Law Reports Style Manual § 3.1 (session laws: `L 2019, ch 123, § 2`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the New York Law Reports Style Manual § 3.1 at https://www.nycourts.gov/reporter/style-manual and compare the form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The statute was amended by L. 2019, ch. 123.",
+        "spans": [
+          [
+            27,
+            43
+          ]
+        ],
+        "groups": {
+          "year": "2019",
+          "chapter": "123"
+        }
+      },
+      {
+        "text": "See L 2019, ch 55, § 1.",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare L. 1909, ch. 14 with L 2021, ch. 417, § 4.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            50
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "L. 2019 summary",
+      "L., ch. 123",
+      "the L. 2019 table"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

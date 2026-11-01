@@ -1,0 +1,75 @@
+{
+  "id": "us.record.trial_exhibit",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "exhibit"
+  ],
+  "pattern": "\\b(?P<label>PX|DX|JX|GX|CX|RX|PTX|DTX|JTX)[\\s-]?(?P<number>[0-9]{1,5}[A-Z]?)\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,4}))?",
+  "priority": 55,
+  "normalize": "{label} {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Trial exhibit designations (PX, DX, JX, GX); Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with the exhibit designations in a district court's trial exhibit list and pretrial order.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The memo was admitted as PX 123.",
+        "spans": [
+          [
+            25,
+            31
+          ]
+        ],
+        "groups": {
+          "label": "PX",
+          "number": "123"
+        }
+      },
+      {
+        "text": "See DX-45; JX 3 at 7.",
+        "spans": [
+          [
+            4,
+            9
+          ],
+          [
+            11,
+            20
+          ]
+        ]
+      },
+      {
+        "text": "Compare GX 12A with PTX 1004.",
+        "spans": [
+          [
+            8,
+            14
+          ],
+          [
+            20,
+            28
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The PX cable",
+      "DX codes",
+      "JX pages"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

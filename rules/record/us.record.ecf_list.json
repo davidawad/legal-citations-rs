@@ -1,0 +1,51 @@
+{
+  "id": "us.record.ecf_list",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:ECF|Dkt\\.|D\\.I\\.)\\s*Nos\\.\\s*(?P<number>[0-9]{1,5}(?:-[0-9]{1,3})?)(?P<more>(?:(?:,\\s?(?:and\\s)?|\\s(?:and|&)\\s)[0-9]{1,5}(?:-[0-9]{1,3})?)+)\\b",
+  "priority": 56,
+  "normalize": "ECF Nos. {number}{more}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17.1.4 / R. 10.8.3 (docket and ECF citations), several entries at once",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook B17 (Bluepages) and R. 10.8.3.",
+    "derived_from": [
+      "crates/legal-citations/rules/record/us.record.ecf.json"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The parties briefed it twice. ECF Nos. 12, 14.",
+        "spans": [[30, 45]],
+        "groups": {
+          "number": "12",
+          "more": ", 14"
+        }
+      },
+      {
+        "text": "See Dkt. Nos. 45 and 47-2.",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "Compare ECF Nos. 3, 5, and 9 with D.I. Nos. 20 & 21.",
+        "spans": [[8, 28], [34, 51]]
+      }
+    ],
+    "negative": [
+      "The ECF numbers 12 and 14 were sealed.",
+      "Nos. 12, 14 and 16 were argued together.",
+      "The Dkt. lists entries 3, 5 and 9."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "dot-1ij4xz.10: several ECF entries in one cite. Priority 56, above us.record.ecf (55), which would stop at the first number. A list only follows `Nos.`: after `No.` a comma starts a pin or the next cite."
+}

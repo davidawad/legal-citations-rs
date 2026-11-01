@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.ca5.record_on_appeal",
+  "kind": "record",
+  "jurisdiction": "us.fed.ca5",
+  "pattern": "\\bROA\\.(?:(?P<appeal>[0-9]{2}-[0-9]{4,5})\\.)?(?P<page>[0-9]{1,6}(?:\\s?[-–]\\s?[0-9]{1,6})?)\\b",
+  "priority": 56,
+  "normalize": "ROA.{page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "5th Cir. R. 28.2.2 (citation to the record on appeal, ROA.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open 5th Cir. R. 28.2.2 at https://www.ca5.uscourts.gov and compare the `ROA.` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The district court found it. ROA.123.",
+        "spans": [
+          [
+            29,
+            36
+          ]
+        ],
+        "groups": {
+          "page": "123"
+        }
+      },
+      {
+        "text": "See ROA.12345-47.",
+        "spans": [
+          [
+            4,
+            16
+          ]
+        ]
+      },
+      {
+        "text": "Compare ROA.19-10011.123 with ROA.88.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ROA is long.",
+      "ROA. pending",
+      "ROA 123"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,49 @@
+{
+  "id": "us.hi.court_rule.app",
+  "kind": "court_rule",
+  "jurisdiction": "us.hi",
+  "pattern": "\\b(?:Haw\\.\\s?R\\.\\s?App\\.\\s?P\\.|HRAP\\s(?:Rule\\s)?)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Haw. R. App. P. {rule}{sub}",
+  "authority_key": "us.hi.rules.app/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Hawaii) Hawaii Rules of Appellate Procedure: Haw. R. App. P. N; local form HRAP Rule N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Hawaii) and the official Hawaii Rules of Appellate Procedure; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Haw. R. App. P. 28(b)(7).",
+        "spans": [[4, 28]],
+        "groups": {
+          "rule": "28",
+          "sub": "(b)(7)"
+        }
+      },
+      {
+        "text": "The court relied on HRAP Rule 4 in reaching its holding.",
+        "spans": [[20, 31]]
+      },
+      {
+        "text": "Under HRAP 28(b)(4), the claim fails.",
+        "spans": [[6, 19]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Hawaii rules committee met 12 times in 2020.",
+      "Under Haw. R. App. P. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

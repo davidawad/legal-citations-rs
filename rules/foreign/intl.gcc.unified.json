@@ -1,0 +1,52 @@
+{
+  "id": "intl.gcc.unified",
+  "kind": "foreign",
+  "jurisdiction": "intl.gcc",
+  "tags": [
+    "mena",
+    "gcc"
+  ],
+  "pattern": "\\b(?:GCC|Gulf\\s+Cooperation\\s+Council)\\s+(?P<title>(?:Unified|Common|Uniform)(?:\\s+[A-Z][A-Za-z'’-]*){0,6}?\\s+(?:Law|Agreement|Convention|Treaty|Charter))(?:\\s+of\\s+(?P<year>(?:19|20)[0-9]{2}))?",
+  "priority": 60,
+  "normalize": "GCC {title}",
+  "authority_key": "intl.gcc/{title}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "GCC-wide instruments cited by title: GCC Unified/Common/Uniform <subject> Law|Agreement|Convention",
+    "opened": false,
+    "source_url": "https://www.gcc-sg.org",
+    "how_to_verify": "Open the GCC Secretariat legal-instruments pages (gcc-sg.org) and a GCC trademark/customs law reference for the title forms.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Under the GCC Unified Economic Agreement, states agree.",
+        "spans": [[10, 40]],
+        "groups": {
+          "title": "Unified Economic Agreement"
+        }
+      },
+      {
+        "text": "The GCC Common Customs Law of 2003 applies.",
+        "spans": [[4, 34]]
+      },
+      {
+        "text": "Gulf Cooperation Council Unified Trademark Law and GCC Unified Law",
+        "spans": [[0, 46], [51, 66]]
+      }
+    ],
+    "negative": [
+      "The GCC states met in Riyadh.",
+      "GCC Unified approach was adopted.",
+      "Gulf Cooperation Council summit held."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

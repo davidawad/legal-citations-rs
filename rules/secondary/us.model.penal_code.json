@@ -1,0 +1,68 @@
+{
+  "id": "us.model.penal_code",
+  "kind": "secondary",
+  "jurisdiction": "us.model.ali",
+  "pattern": "\\bModel\\s+Penal\\s+Code\\s+§{1,2}\\s?(?P<section>[0-9]{1,3}\\.[0-9]{1,2})(?P<subsection>(?:\\([0-9a-z]{1,4}\\))*)",
+  "priority": 55,
+  "normalize": "Model Penal Code § {section}{subsection}",
+  "authority_key": "us.mpc/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (model codes: Model Penal Code) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (model codes) and check the `Model Penal Code § 2.02 (Am. L. Inst. 1985)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Model Penal Code § 2.02(2)(c) (Am. L. Inst. 1985).",
+        "spans": [
+          [
+            4,
+            34
+          ]
+        ],
+        "groups": {
+          "section": "2.02",
+          "subsection": "(2)(c)"
+        }
+      },
+      {
+        "text": "Attempt is defined in Model Penal Code § 5.01 and its commentary.",
+        "spans": [
+          [
+            22,
+            46
+          ]
+        ]
+      },
+      {
+        "text": "Compare Model Penal Code §§ 210.2 with Model Penal Code §3.04(1).",
+        "spans": [
+          [
+            8,
+            35
+          ],
+          [
+            41,
+            67
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Model Penal Code was completed in 1962.",
+      "Model Penal Code section 2 is general.",
+      "The model penal code § is cited often."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

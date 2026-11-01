@@ -1,0 +1,58 @@
+{
+  "id": "us.state.statute.generic",
+  "kind": "statute",
+  "jurisdiction": "us.state",
+  "pattern": "\\b(?P<state>[A-Z][A-Za-z]{1,15})(?:\\s+[A-Z][A-Za-z]{1,15})?\\.?\\s+(?:Rev(?:ised)?\\.\\s+)?(?:Gen(?:eral)?\\.\\s+)?(?:Comp(?:iled)?\\.\\s+)?(?:Cons(?:olidated)?\\.\\s+)?(?:Ann(?:otated)?\\.\\s+)?(?:Stat(?:utes?|\\.)|Code|Laws?)\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9][0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*)(?P<subsection>(?:\\([^)\\s]{1,6}\\))*)",
+  "priority": 10,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.6,
+  "provenance": {
+    "encodes": "Fallback shape of Bluebook T1 state code citations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for territories not covered by a specific rule (Guam, Puerto Rico, Virgin Islands).",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py GENERIC_STATE_STAT_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Guam Code Ann. § 16.30.",
+        "spans": [[0, 27]],
+        "groups": {
+          "state": "See",
+          "section": "16.30",
+          "subsection": ""
+        }
+      },
+      {
+        "text": "The court relied on Virgin Islands Code Ann. § 14.922 in reaching its holding.",
+        "spans": [[20, 54]]
+      },
+      {
+        "text": "Under Wake Island Stat. § 12-3, the claim fails.",
+        "spans": [[6, 31]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "generic_state",
+    "order": 57,
+    "pattern": "(?P<state>[A-Z][A-Za-z]{1,15})(?:\\s+[A-Za-z]{2,15})?\\s+(?:Rev(?:ised)?\\.\\s+)?(?:Gen(?:eral)?\\.\\s+)?(?:Comp(?:iled)?\\.\\s+)?(?:Cons(?:olidated)?\\.\\s+)?(?:Ann(?:otated)?\\.\\s+)?(?:Stat(?:utes?|\\.)|Code|Laws?)\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d][\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Lowest priority; requires a capitalized jurisdiction word (legacy accepted any word as the second token). Base confidence 0.6."
+}

@@ -1,0 +1,43 @@
+{
+ "note": "Regression gate for cite-eval --gate. Thresholds are point estimates a little below the 2026-10-23 measurement at d5c2ba8 (overall about 2 points below; kinds with at least 50 gold citations about 3 points below). Raise them when coverage improves; lower one only with a written reason.",
+ "overall": {
+  "recall": 0.77,
+  "precision": 0.98,
+  "exact_span": 0.68
+ },
+ "kinds": {
+  "case": {
+   "recall": 0.95,
+   "exact_span": 0.81,
+   "precision": 0.97
+  },
+  "case_short": {
+   "recall": 0.78,
+   "exact_span": 0.86,
+   "precision": 0.97
+  },
+  "foreign": {
+   "recall": 0.41
+  },
+  "id": {
+   "recall": 0.97,
+   "exact_span": 0.71,
+   "precision": 0.97
+  },
+  "record": {
+   "recall": 0.55,
+   "exact_span": 0.49,
+   "precision": 0.97
+  },
+  "statute": {
+   "recall": 0.77,
+   "exact_span": 0.63,
+   "precision": 0.97
+  },
+  "statute_short": {
+   "recall": 0.93,
+   "exact_span": 0.87,
+   "precision": 0.97
+  }
+ }
+}

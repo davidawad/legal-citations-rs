@@ -1,0 +1,796 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Citation",
+  "description": "A detected citation. All spans index the ORIGINAL text.",
+  "type": "object",
+  "properties": {
+    "antecedent": {
+      "description": "Index (in the returned vector) of the citation a short form refers to.",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint",
+      "minimum": 0
+    },
+    "authority": {
+      "description": "Canonical authority identity; short forms inherit their antecedent's.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "description": "Confidence in `[0, 1]`.",
+      "type": "number",
+      "format": "double"
+    },
+    "confidence_terms": {
+      "description": "Each term of the confidence calculation, in order.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Term"
+      }
+    },
+    "core_span": {
+      "description": "Exactly what the rule matched.",
+      "$ref": "#/$defs/Span"
+    },
+    "details": {
+      "description": "Typed fields by shape: case parts, parallel cites and subsequent\nhistory; code, title, sections; agency, document type, number.",
+      "$ref": "#/$defs/Details"
+    },
+    "fields": {
+      "description": "Named fields: rule groups plus `case_name`, `pincite`, `court`, `year`.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "full_span": {
+      "description": "Signal through explanatory parenthetical.",
+      "$ref": "#/$defs/Span"
+    },
+    "furniture": {
+      "description": "Set when the citation is page furniture (running head, repeated\ncaption); the link policy does not require a link on it.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Furniture"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "jurisdiction": {
+      "description": "Dotted jurisdiction: the court's, when the court parenthetical names\none the court table knows (`(Ohio Ct. App. 2010)` is `us.oh`), else\nthe rule's. A resolved short form has its antecedent's.",
+      "type": "string"
+    },
+    "kind": {
+      "description": "Citation kind.",
+      "$ref": "#/$defs/Kind"
+    },
+    "normalized": {
+      "description": "Display form from the rule's `normalize` template.",
+      "type": "string"
+    },
+    "parenthetical": {
+      "description": "Explanatory parenthetical after the citation.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Span"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rule_id": {
+      "description": "Id of the rule that matched (`cite-detect explain <rule_id>`).",
+      "type": "string"
+    },
+    "rule_jurisdiction": {
+      "description": "Dotted jurisdiction of the rule that matched.",
+      "type": "string"
+    },
+    "signal": {
+      "description": "Signal preceding the citation (`See`, `Cf.`, ...).",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "span": {
+      "description": "The citation proper: case name (if any) through the closing date\nparenthetical. Link status is decided on this span.",
+      "$ref": "#/$defs/Span"
+    },
+    "text": {
+      "description": "Text of `span`.",
+      "type": "string"
+    },
+    "urls": {
+      "description": "Candidate source URLs from the rule's verified `url_templates` (a\nresolved short form inherits its antecedent's).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verified_rule": {
+      "description": "True when the rule's encoded authority was actually opened.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "kind",
+    "rule_id",
+    "span",
+    "core_span",
+    "full_span",
+    "text",
+    "fields",
+    "jurisdiction",
+    "rule_jurisdiction",
+    "normalized",
+    "confidence",
+    "confidence_terms",
+    "verified_rule",
+    "details",
+    "urls"
+  ],
+  "$defs": {
+    "AgencyDetails": {
+      "description": "Typed fields of an agency document.",
+      "type": "object",
+      "properties": {
+        "agency": {
+          "description": "Agency, from the rule's jurisdiction (`USPTO`, `IRS`), if known.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "description": "Date or year, when cited.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_type": {
+          "description": "Document type as written (`MPEP`, `Rev. Rul.`, `IPR`, `Fed. Reg.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "number": {
+          "description": "Document number or section.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page": {
+          "description": "Page (Federal Register).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "volume": {
+          "description": "Volume (Federal Register).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "CaseDetails": {
+      "description": "Typed case fields.",
+      "type": "object",
+      "properties": {
+        "case_name": {
+          "description": "Case name (shared by every cite of a parallel group).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "court": {
+          "description": "Court from the date parenthetical.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "description": "Full date when the parenthetical has one (`Sept. 10, 2002`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "history_of": {
+          "description": "On a later decision cited as history: index of the earlier one.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "minimum": 0
+        },
+        "number": {
+          "description": "Database or public-domain number (`2001 WL 12345`, `2025-Ohio-2425`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page": {
+          "description": "First page.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parallel_of": {
+          "description": "On a parallel cite: index of the first cite of its group.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "minimum": 0
+        },
+        "parallels": {
+          "description": "On the first cite of a parallel group: the other cites.",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint",
+            "minimum": 0
+          }
+        },
+        "parties": {
+          "description": "Parties parsed from the case name.",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Parties"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pincites": {
+          "description": "Pincites, one per comma-separated pin (`389-90`, `*3`, `5 n.2`).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reporter": {
+          "description": "Reporter as written.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reporter_canonical": {
+          "description": "Reporter with Bluebook spacing (`F. Supp. 2d`, `N.E.2d`, `S. Ct.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subsequent_history": {
+          "description": "Subsequent history of this decision (`aff'd`, `cert. denied`).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/History"
+          }
+        },
+        "volume": {
+          "description": "Reporter volume.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "description": "Decision year.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pincites",
+        "parallels",
+        "subsequent_history"
+      ]
+    },
+    "CodeDetails": {
+      "description": "Typed fields of a codified provision.",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "The code as written (`U.S.C.`, `Ohio Rev. Code`, `Fed. R. Civ. P.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "edition": {
+          "description": "Edition or publisher from the parenthetical (`West`), or an edition group.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sections": {
+          "description": "Sections or rules cited, without subsections.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subsections": {
+          "description": "Subsection path of the first section: `(a)(1)(B)` is `[\"a\", \"1\", \"B\"]`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "description": "Title or volume (`28` in `28 U.S.C.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "description": "Year from a code parenthetical (`(2018)`) or the rule's year group.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "sections",
+        "subsections"
+      ]
+    },
+    "Details": {
+      "description": "Typed fields of a citation, by shape.",
+      "oneOf": [
+        {
+          "description": "A case or short case cite.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "case"
+            }
+          },
+          "$ref": "#/$defs/CaseDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "A codified provision: statute, regulation, constitution, court rule,\nsession law.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "code"
+            }
+          },
+          "$ref": "#/$defs/CodeDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "An agency document: Federal Register, manual, decision, ruling.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "agency"
+            }
+          },
+          "$ref": "#/$defs/AgencyDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "`Id.` or `supra`.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "short"
+            }
+          },
+          "$ref": "#/$defs/ShortDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "Record, docket, secondary, treaty, foreign, unrecognized: see `fields`.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "other"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    },
+    "Furniture": {
+      "description": "Why a citation is page furniture rather than a cite in the prose.",
+      "oneOf": [
+        {
+          "description": "A slip-opinion running head: `Cite as: 606 U. S. 656 (2025)`.",
+          "type": "string",
+          "const": "running_head"
+        },
+        {
+          "description": "A citation alone on a line that recurs verbatim, such as a PTAB\ncaption (`IPR2025-00687`) repeated on every page.",
+          "type": "string",
+          "const": "repeated_caption"
+        }
+      ]
+    },
+    "History": {
+      "description": "One subsequent-history step: `aff'd, 123 F.3d 456`.",
+      "type": "object",
+      "properties": {
+        "citation": {
+          "description": "Index of the citation of the later decision.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "phrase": {
+          "description": "The history phrase as written (`aff'd`, `cert. denied`).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "phrase",
+        "citation"
+      ]
+    },
+    "Kind": {
+      "description": "Closed citation-kind taxonomy. Extending it is a code change on purpose:\npolicy, findings and consumers all switch on it.",
+      "oneOf": [
+        {
+          "description": "Full case citation: volume, reporter, page.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Short case citation: `449 U.S. at 389`.",
+          "type": "string",
+          "const": "case_short"
+        },
+        {
+          "description": "`Id.` / `Ibid.`",
+          "type": "string",
+          "const": "id"
+        },
+        {
+          "description": "`Smith, supra`",
+          "type": "string",
+          "const": "supra"
+        },
+        {
+          "description": "Codified statute (U.S.C., state codes).",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Session law (Pub. L., Stat.).",
+          "type": "string",
+          "const": "session_law"
+        },
+        {
+          "description": "Codified regulation (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Federal Register.",
+          "type": "string",
+          "const": "federal_register"
+        },
+        {
+          "description": "Constitution.",
+          "type": "string",
+          "const": "constitution"
+        },
+        {
+          "description": "Court rule (FRCP, FRAP, FRE, circuit and local rules).",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency manual (MPEP, TBMP, TMEP).",
+          "type": "string",
+          "const": "agency_manual"
+        },
+        {
+          "description": "Agency decision or ruling (Rev. Rul., PTAB/TTAB decisions).",
+          "type": "string",
+          "const": "agency_decision"
+        },
+        {
+          "description": "Record cite (ER-139, JA 16, Ex. 1001, TTABVUE, ECF No.).",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary source (Restatement, treatise, law review).",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaty.",
+          "type": "string",
+          "const": "treaty"
+        },
+        {
+          "description": "Foreign authority.",
+          "type": "string",
+          "const": "foreign"
+        },
+        {
+          "description": "Docket number.",
+          "type": "string",
+          "const": "docket"
+        },
+        {
+          "description": "Legislative material (bills, committee reports, Cong. Rec., hearings, CRS reports).",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Executive material (executive orders, proclamations, presidential memoranda).",
+          "type": "string",
+          "const": "executive"
+        },
+        {
+          "description": "Short statute or regulation citation by section alone: `§ 1983`.",
+          "type": "string",
+          "const": "statute_short"
+        },
+        {
+          "description": "Citation-shaped text no specific rule matched (catch-all layer,\nconfidence below 0.5, finding CITE011).",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "Parties": {
+      "description": "The parties of a case name.",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "First-named party (`versus` style).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "second": {
+          "description": "Second-named party (`versus` style).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "style": {
+          "description": "Naming style.",
+          "$ref": "#/$defs/PartyStyle"
+        },
+        "subject": {
+          "description": "The subject of an `In re` or `Ex parte` name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "style"
+      ]
+    },
+    "PartyStyle": {
+      "description": "How the parties of a case are named.",
+      "oneOf": [
+        {
+          "description": "`First v. Second`.",
+          "type": "string",
+          "const": "versus"
+        },
+        {
+          "description": "`In re Subject`.",
+          "type": "string",
+          "const": "in_re"
+        },
+        {
+          "description": "`Ex parte Subject`.",
+          "type": "string",
+          "const": "ex_parte"
+        }
+      ]
+    },
+    "ShortDetails": {
+      "description": "Fields of `Id.` and `supra`.",
+      "type": "object",
+      "properties": {
+        "pincites": {
+          "description": "Pincites.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "pincites"
+      ]
+    },
+    "Span": {
+      "description": "A located range of the original input.",
+      "type": "object",
+      "properties": {
+        "char_end": {
+          "description": "Exclusive end, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "char_start": {
+          "description": "Inclusive start, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "col": {
+          "description": "1-based column of `start`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end": {
+          "description": "Exclusive end, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_col": {
+          "description": "1-based column of `end`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_line": {
+          "description": "1-based line of `end`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "line": {
+          "description": "1-based line of `start`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "start": {
+          "description": "Inclusive start, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_end": {
+          "description": "Exclusive end, UTF-16 code units.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_start": {
+          "description": "Inclusive start, UTF-16 code units (editor/LSP positions).",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "char_start",
+        "char_end",
+        "utf16_start",
+        "utf16_end",
+        "line",
+        "col",
+        "end_line",
+        "end_col"
+      ]
+    },
+    "Term": {
+      "description": "One step of the confidence calculation.",
+      "oneOf": [
+        {
+          "description": "Add (or subtract) a value.",
+          "type": "object",
+          "properties": {
+            "add": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "description": "Why.",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "Amount.",
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "required": [
+                "label",
+                "value"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "add"
+          ]
+        },
+        {
+          "description": "Cap the final value.",
+          "type": "object",
+          "properties": {
+            "cap": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "description": "Why.",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "Ceiling.",
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "required": [
+                "label",
+                "value"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "cap"
+          ]
+        }
+      ]
+    }
+  }
+}

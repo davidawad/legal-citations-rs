@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.dol.ofccp",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.dol",
+  "pattern": "\\b(?P<number>(?:19|20)?[0-9]{2}-OFC-[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{number}",
+  "authority_key": "us.dol.ofccp/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "labor"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Labor (OFCCP enforcement decisions)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Labor (OFCCP enforcement decisions), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "OFCCP v. Bank of Am., 97-OFC-16, Secretary's Decision and Order of Remand (Dep't of Labor Mar. 31, 2003).",
+        "spans": [
+          [
+            22,
+            31
+          ]
+        ],
+        "groups": {
+          "number": "97-OFC-16"
+        }
+      },
+      {
+        "text": "OFCCP v. Smith Corp., 2010-OFC-00004, ALJ Recommended Decision and Order.",
+        "spans": [
+          [
+            22,
+            36
+          ]
+        ]
+      },
+      {
+        "text": "Compare 2008-OFC-00003 with 93-OFC-12.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            37
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The OFC had 97 cases.",
+      "OFCCP brought 16 actions in 1997.",
+      "OFC-16 is a form."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

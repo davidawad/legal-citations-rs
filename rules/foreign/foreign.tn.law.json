@@ -1,0 +1,54 @@
+{
+  "id": "foreign.tn.law",
+  "kind": "foreign",
+  "jurisdiction": "foreign.tn",
+  "tags": [
+    "foreign",
+    "mena",
+    "tn"
+  ],
+  "pattern": "\\b(?:[Ll]oi(?:\\s+organique)?|[Dé]écret-loi)\\s+n°\\s*(?P<number>(?:19|20)[0-9]{2}-[0-9]{1,3})\\s+du\\s+(?P<date>[0-9]{1,2}(?:er)?\\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\\s+(?:19|20)[0-9]{2})\\s*,?\\s*(?:publiée?\\s+au\\s+)?(?:JORT|Journal\\s+Officiel\\s+de\\s+la\\s+République\\s+Tunisienne)",
+  "priority": 58,
+  "normalize": "Loi n° {number} du {date}",
+  "authority_key": "tn.law/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Tunisian law: Loi (organique) n° YYYY-NN du <date>, JORT n° ... (year-number, published in the JORT)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check iort.gov.tn or the JORT issue: laws are cited 'Loi n° YYYY-NN du <date>' with the JORT issue.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Loi organique n° 2004-63 du 27 juillet 2004, JORT n° 61.",
+        "spans": [[0, 50]],
+        "groups": {
+          "number": "2004-63",
+          "date": "27 juillet 2004"
+        }
+      },
+      {
+        "text": "Loi n° 2016-33 du 4 mai 2016 publiée au Journal Officiel de la République Tunisienne.",
+        "spans": [[0, 87]]
+      },
+      {
+        "text": "Décret-loi n° 2011-115 du 2 novembre 2011, JORT n° 84.",
+        "spans": [[0, 49]]
+      }
+    ],
+    "negative": [
+      "Loi n° 2004-801 du 6 août 2004 relative à la protection des personnes.",
+      "La loi tunisienne est codifiée.",
+      "Loi n° 2004-63 sans date."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "JORT mention is required: year-number shape is otherwise identical to French loi numbering (Loi n° 2004-801)."
+}

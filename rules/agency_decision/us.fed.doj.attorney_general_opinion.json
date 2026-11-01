@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.doj.attorney_general_opinion",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.doj",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?:U\\.\\s?S\\.\\s+)?Op\\.\\s?Att(?:'|’)y?\\s+Gen\\.\\s+(?P<page>[0-9]{1,4})\\b(?:,\\s(?P<pin>[0-9]{1,6}(?:[-–][0-9]{1,6})?)(?:\\s\\([^()]{0,40}?(?:1[6-9]|20)[0-9]{2}\\)|$))?",
+  "priority": 60,
+  "normalize": "{volume} Op. Att'y Gen. {page}",
+  "authority_key": "us.ag/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Opinions of the Attorneys General) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for Op. Att'y Gen.; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 43 Op. Att'y Gen. 293 (1980).",
+        "spans": [
+          [
+            4,
+            25
+          ]
+        ],
+        "groups": {
+          "volume": "43",
+          "page": "293"
+        }
+      },
+      {
+        "text": "The Attorney General so advised in 39 Op. Att’y Gen. 343, 345 (1939).",
+        "spans": [[35, 70]]
+      },
+      {
+        "text": "Compare 1 Op. Att'y Gen. 1 with 40 Op.Att'y Gen. 58.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            51
+          ]
+        ]
+      },
+      {
+        "text": "Compromise Final Judgments, 36 U.S. Op. Att’ Gen. 40 (1929).",
+        "spans": [[28, 54]]
+      }
+    ],
+    "negative": [
+      "The Att'y Gen. issued 43 opinions.",
+      "Op. Att'y Gen. No. GA-0293 is a state opinion number.",
+      "In 1980 the Op. Att'y Gen. series ended."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State attorney general opinions (`Op. Tex. Att'y Gen.`) are not matched: the state name sits between `Op.` and `Att'y`."
+}

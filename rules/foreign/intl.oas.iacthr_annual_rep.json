@@ -1,0 +1,53 @@
+{
+  "id": "intl.oas.iacthr_annual_rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.oas",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+Rep\\.\\s+Inter-Am\\.\\s+Ct\\.\\s+H\\.\\s?R\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 62,
+  "normalize": "{volume} Rep. Inter-Am. Ct. H.R. {page}",
+  "authority_key": "intl.oas/iacthr_annual_rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.3 (Inter-American and International Tribunal): Annual Reports of the Inter-American Court of Human Rights, <year> Rep. Inter-Am. Ct. H.R. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Annual Report of the Inter-American Court of Human Rights, 1990 Rep. Inter-Am. Ct. H.R. 12.",
+        "spans": [[59, 90]],
+        "groups": {
+          "volume": "1990",
+          "page": "12"
+        }
+      },
+      {
+        "text": "The court relied on 1986 Rep. Inter-Am. Ct. H.R. 45, 47–49 in its judgment.",
+        "spans": [[20, 60]]
+      },
+      {
+        "text": "Under 1994 Rep. Inter-Am. Ct. H.R. 3, the claim fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "H.R. 12 passed in 1990.",
+      "The annual report ran 45 pages.",
+      "Rep. Inter-Am. staff numbered 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

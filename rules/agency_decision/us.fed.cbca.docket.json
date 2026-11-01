@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.cbca.docket",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.cbca",
+  "pattern": "\\bCBCA\\s+(?:No\\.\\s?)?(?P<number>[0-9]{3,5}(?:-[A-Z]{1,4})?)\\b",
+  "priority": 60,
+  "normalize": "CBCA {number}",
+  "authority_key": "us.cbca/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "government-contracts"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Civilian Board of Contract Appeals (CBCA)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Civilian Board of Contract Appeals (CBCA), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "G2G, LLC v. Dept. of Commerce, CBCA 4845-R, 15-1 BCA ¶ 36,163.",
+        "spans": [
+          [
+            31,
+            42
+          ]
+        ],
+        "groups": {
+          "number": "4845-R"
+        }
+      },
+      {
+        "text": "See Brown Builders, Inc. v. Gen. Servs. Admin., CBCA 3901.",
+        "spans": [
+          [
+            48,
+            57
+          ]
+        ]
+      },
+      {
+        "text": "Compare CBCA No. 6123 with CBCA 2100-RATE.",
+        "spans": [
+          [
+            8,
+            21
+          ],
+          [
+            27,
+            41
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The CBCA has 12 judges.",
+      "CBCA decisions issued in 2015.",
+      "Our CBCA practice began 3 years ago."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,861 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AuthoritiesReport",
+  "description": "`authorities --format json`.",
+  "type": "object",
+  "properties": {
+    "files": {
+      "description": "Per-file tables.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AuthorityFile"
+      }
+    },
+    "header": {
+      "description": "Header.",
+      "$ref": "#/$defs/AuthoritiesHeader"
+    }
+  },
+  "required": [
+    "header",
+    "files"
+  ],
+  "$defs": {
+    "AgencyDetails": {
+      "description": "Typed fields of an agency document.",
+      "type": "object",
+      "properties": {
+        "agency": {
+          "description": "Agency, from the rule's jurisdiction (`USPTO`, `IRS`), if known.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "description": "Date or year, when cited.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_type": {
+          "description": "Document type as written (`MPEP`, `Rev. Rul.`, `IPR`, `Fed. Reg.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "number": {
+          "description": "Document number or section.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page": {
+          "description": "Page (Federal Register).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "volume": {
+          "description": "Volume (Federal Register).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "AuthoritiesHeader": {
+      "description": "Header of an authorities report.",
+      "type": "object",
+      "properties": {
+        "registry_hash": {
+          "description": "Hash of the embedded rule registry.",
+          "type": "string"
+        },
+        "schema": {
+          "description": "`cite-detect.authorities/1`.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Always `header`.",
+          "type": "string"
+        },
+        "version": {
+          "description": "Tool version.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "schema",
+        "version",
+        "registry_hash"
+      ]
+    },
+    "Authority": {
+      "description": "One authority with every place it is cited.",
+      "type": "object",
+      "properties": {
+        "details": {
+          "description": "Typed fields of the first full cite.",
+          "$ref": "#/$defs/Details"
+        },
+        "full_cite": {
+          "description": "Full citation as first written, parallel cites included.",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "description": "Jurisdiction of the first full cite.",
+          "type": "string"
+        },
+        "key": {
+          "description": "Authority key (the first full cite's), the grouping identity.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Kind of the first full cite.",
+          "$ref": "#/$defs/Kind"
+        },
+        "normalized": {
+          "description": "Display form of the first full cite (its text when the rule has no\n`normalize` template).",
+          "type": "string"
+        },
+        "occurrences": {
+          "description": "Every occurrence in text order.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Occurrence"
+          }
+        },
+        "pages_cited": {
+          "description": "Every pincite across occurrences, first-seen order, deduplicated.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parallel_keys": {
+          "description": "Keys of parallel cites joined into this authority.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_id": {
+          "description": "Rule of the first full cite.",
+          "type": "string"
+        },
+        "short_forms": {
+          "description": "Occurrences that are short forms.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "subsequent_history": {
+          "description": "Subsequent history.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/HistoryEntry"
+          }
+        },
+        "urls": {
+          "description": "Candidate source URLs (verified templates only).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "key",
+        "parallel_keys",
+        "kind",
+        "rule_id",
+        "jurisdiction",
+        "full_cite",
+        "normalized",
+        "details",
+        "subsequent_history",
+        "occurrences",
+        "short_forms",
+        "pages_cited",
+        "urls"
+      ]
+    },
+    "AuthorityFile": {
+      "description": "Authorities of one input.",
+      "type": "object",
+      "properties": {
+        "authorities": {
+          "description": "Authorities, grouped and sorted.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Authority"
+          }
+        },
+        "citations": {
+          "description": "Citations detected (after selection).",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "file": {
+          "description": "Input label.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "citations",
+        "authorities"
+      ]
+    },
+    "CaseDetails": {
+      "description": "Typed case fields.",
+      "type": "object",
+      "properties": {
+        "case_name": {
+          "description": "Case name (shared by every cite of a parallel group).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "court": {
+          "description": "Court from the date parenthetical.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "description": "Full date when the parenthetical has one (`Sept. 10, 2002`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "history_of": {
+          "description": "On a later decision cited as history: index of the earlier one.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "minimum": 0
+        },
+        "number": {
+          "description": "Database or public-domain number (`2001 WL 12345`, `2025-Ohio-2425`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page": {
+          "description": "First page.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parallel_of": {
+          "description": "On a parallel cite: index of the first cite of its group.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "minimum": 0
+        },
+        "parallels": {
+          "description": "On the first cite of a parallel group: the other cites.",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint",
+            "minimum": 0
+          }
+        },
+        "parties": {
+          "description": "Parties parsed from the case name.",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Parties"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pincites": {
+          "description": "Pincites, one per comma-separated pin (`389-90`, `*3`, `5 n.2`).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reporter": {
+          "description": "Reporter as written.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reporter_canonical": {
+          "description": "Reporter with Bluebook spacing (`F. Supp. 2d`, `N.E.2d`, `S. Ct.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subsequent_history": {
+          "description": "Subsequent history of this decision (`aff'd`, `cert. denied`).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/History"
+          }
+        },
+        "volume": {
+          "description": "Reporter volume.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "description": "Decision year.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pincites",
+        "parallels",
+        "subsequent_history"
+      ]
+    },
+    "CodeDetails": {
+      "description": "Typed fields of a codified provision.",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "The code as written (`U.S.C.`, `Ohio Rev. Code`, `Fed. R. Civ. P.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "edition": {
+          "description": "Edition or publisher from the parenthetical (`West`), or an edition group.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sections": {
+          "description": "Sections or rules cited, without subsections.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subsections": {
+          "description": "Subsection path of the first section: `(a)(1)(B)` is `[\"a\", \"1\", \"B\"]`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "description": "Title or volume (`28` in `28 U.S.C.`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "description": "Year from a code parenthetical (`(2018)`) or the rule's year group.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "sections",
+        "subsections"
+      ]
+    },
+    "Details": {
+      "description": "Typed fields of a citation, by shape.",
+      "oneOf": [
+        {
+          "description": "A case or short case cite.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "case"
+            }
+          },
+          "$ref": "#/$defs/CaseDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "A codified provision: statute, regulation, constitution, court rule,\nsession law.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "code"
+            }
+          },
+          "$ref": "#/$defs/CodeDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "An agency document: Federal Register, manual, decision, ruling.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "agency"
+            }
+          },
+          "$ref": "#/$defs/AgencyDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "`Id.` or `supra`.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "short"
+            }
+          },
+          "$ref": "#/$defs/ShortDetails",
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "description": "Record, docket, secondary, treaty, foreign, unrecognized: see `fields`.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "other"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    },
+    "Form": {
+      "description": "How an occurrence cites its authority.",
+      "oneOf": [
+        {
+          "description": "A full citation.",
+          "type": "string",
+          "const": "full"
+        },
+        {
+          "description": "A parallel cite of a full citation.",
+          "type": "string",
+          "const": "parallel"
+        },
+        {
+          "description": "A short form (`410 U.S. at 116`, `Id.`, `supra`).",
+          "type": "string",
+          "const": "short"
+        },
+        {
+          "description": "A later decision cited as subsequent history.",
+          "type": "string",
+          "const": "history"
+        }
+      ]
+    },
+    "History": {
+      "description": "One subsequent-history step: `aff'd, 123 F.3d 456`.",
+      "type": "object",
+      "properties": {
+        "citation": {
+          "description": "Index of the citation of the later decision.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "phrase": {
+          "description": "The history phrase as written (`aff'd`, `cert. denied`).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "phrase",
+        "citation"
+      ]
+    },
+    "HistoryEntry": {
+      "description": "A subsequent-history entry of an authority.",
+      "type": "object",
+      "properties": {
+        "citation": {
+          "description": "Citation index of the later decision.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "key": {
+          "description": "Its authority key.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phrase": {
+          "description": "The phrase (`aff'd`, `cert. denied`).",
+          "type": "string"
+        },
+        "text": {
+          "description": "Its text.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "phrase",
+        "citation",
+        "text"
+      ]
+    },
+    "Kind": {
+      "description": "Closed citation-kind taxonomy. Extending it is a code change on purpose:\npolicy, findings and consumers all switch on it.",
+      "oneOf": [
+        {
+          "description": "Full case citation: volume, reporter, page.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Short case citation: `449 U.S. at 389`.",
+          "type": "string",
+          "const": "case_short"
+        },
+        {
+          "description": "`Id.` / `Ibid.`",
+          "type": "string",
+          "const": "id"
+        },
+        {
+          "description": "`Smith, supra`",
+          "type": "string",
+          "const": "supra"
+        },
+        {
+          "description": "Codified statute (U.S.C., state codes).",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Session law (Pub. L., Stat.).",
+          "type": "string",
+          "const": "session_law"
+        },
+        {
+          "description": "Codified regulation (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Federal Register.",
+          "type": "string",
+          "const": "federal_register"
+        },
+        {
+          "description": "Constitution.",
+          "type": "string",
+          "const": "constitution"
+        },
+        {
+          "description": "Court rule (FRCP, FRAP, FRE, circuit and local rules).",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency manual (MPEP, TBMP, TMEP).",
+          "type": "string",
+          "const": "agency_manual"
+        },
+        {
+          "description": "Agency decision or ruling (Rev. Rul., PTAB/TTAB decisions).",
+          "type": "string",
+          "const": "agency_decision"
+        },
+        {
+          "description": "Record cite (ER-139, JA 16, Ex. 1001, TTABVUE, ECF No.).",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary source (Restatement, treatise, law review).",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaty.",
+          "type": "string",
+          "const": "treaty"
+        },
+        {
+          "description": "Foreign authority.",
+          "type": "string",
+          "const": "foreign"
+        },
+        {
+          "description": "Docket number.",
+          "type": "string",
+          "const": "docket"
+        },
+        {
+          "description": "Legislative material (bills, committee reports, Cong. Rec., hearings, CRS reports).",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Executive material (executive orders, proclamations, presidential memoranda).",
+          "type": "string",
+          "const": "executive"
+        },
+        {
+          "description": "Short statute or regulation citation by section alone: `§ 1983`.",
+          "type": "string",
+          "const": "statute_short"
+        },
+        {
+          "description": "Citation-shaped text no specific rule matched (catch-all layer,\nconfidence below 0.5, finding CITE011).",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "Occurrence": {
+      "description": "One place the authority is cited.",
+      "type": "object",
+      "properties": {
+        "citation": {
+          "description": "Index into the citation list.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "form": {
+          "description": "How it is cited.",
+          "$ref": "#/$defs/Form"
+        },
+        "full_span": {
+          "description": "Signal through explanatory parenthetical.",
+          "$ref": "#/$defs/Span"
+        },
+        "kind": {
+          "description": "Kind of the citing citation.",
+          "$ref": "#/$defs/Kind"
+        },
+        "pincites": {
+          "description": "Pincites of this occurrence.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "signal": {
+          "description": "Signal, if any.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "span": {
+          "description": "Citation span.",
+          "$ref": "#/$defs/Span"
+        },
+        "text": {
+          "description": "Citation text.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "citation",
+        "form",
+        "kind",
+        "text",
+        "span",
+        "full_span",
+        "pincites"
+      ]
+    },
+    "Parties": {
+      "description": "The parties of a case name.",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "First-named party (`versus` style).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "second": {
+          "description": "Second-named party (`versus` style).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "style": {
+          "description": "Naming style.",
+          "$ref": "#/$defs/PartyStyle"
+        },
+        "subject": {
+          "description": "The subject of an `In re` or `Ex parte` name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "style"
+      ]
+    },
+    "PartyStyle": {
+      "description": "How the parties of a case are named.",
+      "oneOf": [
+        {
+          "description": "`First v. Second`.",
+          "type": "string",
+          "const": "versus"
+        },
+        {
+          "description": "`In re Subject`.",
+          "type": "string",
+          "const": "in_re"
+        },
+        {
+          "description": "`Ex parte Subject`.",
+          "type": "string",
+          "const": "ex_parte"
+        }
+      ]
+    },
+    "ShortDetails": {
+      "description": "Fields of `Id.` and `supra`.",
+      "type": "object",
+      "properties": {
+        "pincites": {
+          "description": "Pincites.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "pincites"
+      ]
+    },
+    "Span": {
+      "description": "A located range of the original input.",
+      "type": "object",
+      "properties": {
+        "char_end": {
+          "description": "Exclusive end, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "char_start": {
+          "description": "Inclusive start, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "col": {
+          "description": "1-based column of `start`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end": {
+          "description": "Exclusive end, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_col": {
+          "description": "1-based column of `end`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_line": {
+          "description": "1-based line of `end`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "line": {
+          "description": "1-based line of `start`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "start": {
+          "description": "Inclusive start, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_end": {
+          "description": "Exclusive end, UTF-16 code units.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_start": {
+          "description": "Inclusive start, UTF-16 code units (editor/LSP positions).",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "char_start",
+        "char_end",
+        "utf16_start",
+        "utf16_end",
+        "line",
+        "col",
+        "end_line",
+        "end_col"
+      ]
+    }
+  }
+}

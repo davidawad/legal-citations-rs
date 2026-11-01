@@ -1,0 +1,56 @@
+{
+  "id": "foreign.ae.adgm.cfi",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.adgm.cfi",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae",
+    "adgm"
+  ],
+  "pattern": "\\[(?P<year>20[0-9]{2})\\]\\s+ADGMCFI\\s+(?P<number>[0-9]{4})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?)?",
+  "priority": 60,
+  "normalize": "[{year}] ADGMCFI {number}",
+  "authority_key": "ae.adgm/{year}/CFI/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "ADGM Courts neutral citation as printed on published judgments: [year] ADGMCFI nnnn (Court of First Instance)",
+    "opened": false,
+    "source_url": "https://www.adgm.com/adgm-courts/judgments",
+    "how_to_verify": "The ADGM Courts judgments list (fetched 2026-10-23) prints [2026] ADGMCFI 0026; no ADGM practice direction on neutral citation was read. Find the ADGM rule or practice direction that prescribes the form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Laktineh v Al Hatta [2020] ADGMCFI 0001 at [12].",
+        "spans": [[20, 47]],
+        "groups": {
+          "year": "2020",
+          "number": "0001",
+          "para": "12"
+        }
+      },
+      {
+        "text": "See [2026] ADGMCFI 0026.",
+        "spans": [[4, 23]]
+      },
+      {
+        "text": "Compare [2021] ADGMCFI 0010 and [2019] ADGMCFI 0001.",
+        "spans": [[8, 27], [32, 51]]
+      }
+    ],
+    "negative": [
+      "The ADGMCFI is a court.",
+      "In 2021 ADGMCFI 12 hearings occurred.",
+      "[2021] ADGM CFI annual review."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "One rule per ADGM court, so the citation's jurisdiction is court-level (--jurisdiction foreign.ae.adgm.cfi)."
+}

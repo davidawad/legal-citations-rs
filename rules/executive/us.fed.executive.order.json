@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.executive.order",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b(?:Exec(?:\\.|utive)\\s+Order|E\\.\\s?O\\.)\\s+(?:No\\.\\s?)?(?P<thousands>[0-9]{1,2}),?(?P<rest>[0-9]{3})(?:-[0-9]{1,4}[A-Z]?)?\\b",
+  "reject": ["-[0-9]{1,4}[A-Z]?$"],
+  "priority": 60,
+  "normalize": "Exec. Order No. {thousands},{rest}",
+  "authority_key": "us.eo/{thousands}{rest}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.7 (executive orders) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 and check the `Exec. Order No. 14,028, 86 Fed. Reg. 26,633 (May 12, 2021)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Exec. Order No. 14,028 (May 12, 2021).",
+        "spans": [
+          [
+            4,
+            26
+          ]
+        ],
+        "groups": {
+          "thousands": "14",
+          "rest": "028"
+        }
+      },
+      {
+        "text": "Regulatory review is governed by Executive Order 12866 and its successors.",
+        "spans": [
+          [
+            33,
+            54
+          ]
+        ]
+      },
+      {
+        "text": "Compare E.O. 13985 with Exec. Order No. 9066.",
+        "spans": [
+          [
+            8,
+            18
+          ],
+          [
+            24,
+            44
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The executive ordered 12 new desks.",
+      "Executive Order No. 5 of the club was repealed.",
+      "The E.O. issued last week.",
+      "Ohio Executive Order 2020-01D closed schools.",
+      "Under Exec. Order No. 2020-01, the Governor declared an emergency.",
+      "Executive Order 2021-12 of the Governor of Texas."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State executive orders are numbered by year (`Executive Order 2020-01`, `Exec. Order No. 2020-01D`); federal ones never carry a dash suffix. The pattern consumes an optional `-NN` suffix and `reject` drops any match that has one, so a state order never matches here, with or without `No.` (lcr-g). base_confidence stays 0.9 for the unsuffixed federal form."
+}

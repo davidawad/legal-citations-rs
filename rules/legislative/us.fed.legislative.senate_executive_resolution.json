@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.legislative.senate_executive_resolution",
+  "kind": "legislative",
+  "jurisdiction": "us.fed",
+  "pattern": "\\bS\\.\\s?Exec\\.\\s?Res\\.\\s?(?P<number>[0-9]{1,5})(?:,\\s*(?P<congress>[0-9]{1,3})(?:st|nd|rd|th|d)\\s+Cong\\.(?:\\s§\\s?(?P<section>[0-9]+[a-z]?(?:\\([0-9A-Za-z]{1,4}\\))*))?)?",
+  "priority": 60,
+  "normalize": "S. Exec. Res. {number}",
+  "authority_key": "us.bill/{congress}/s.exec.res.{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R21.1 (Federal Bills and Resolutions)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R21.1 (Federal Bills and Resolutions), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See S. Exec. Res. 1, 112th Cong. (2011).",
+        "spans": [
+          [
+            4,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "1"
+        }
+      },
+      {
+        "text": "It passed as S. Exec. Res. 2, 106th Cong. (1999).",
+        "spans": [
+          [
+            13,
+            41
+          ]
+        ]
+      },
+      {
+        "text": "Compare S. Exec. Res. 7 with S. Exec. Res. 3, 104th Cong. § 1.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            62
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Senate Executive Resolution passed in 2015.",
+      "S. Exec. Res. numbers restart each Congress, 114 times over.",
+      "The 114th Cong. adopted the senate executive resolution."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "us.fed.legislative.bill does not read the H.R.- and S. Exec.-prefixed resolution abbreviations of R21.1."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "us.mt.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.mt",
+  "pattern": "(?:Mont(?:ana)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?|MCA\\s+)§§?\\s*(?P<section>[0-9]{1,2}-[0-9]+-[0-9][\\w\\-]*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Montana) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Montana entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py MONT pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mont. Code Ann. § 45-5-102.",
+        "spans": [[4, 31]],
+        "groups": {
+          "section": "45-5-102"
+        }
+      },
+      {
+        "text": "The court relied on MCA § 45-5-102 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under Mont. Code Ann. § 45-5-109, the claim fails.",
+        "spans": [[6, 33]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "mont",
+    "order": 45,
+    "pattern": "(?:Mont(?:ana)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?|MCA\\s+)§§?\\s*(?P<section>\\d{1,2}-\\d+-\\d[\\w\\-]*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

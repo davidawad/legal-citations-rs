@@ -1,0 +1,64 @@
+{
+  "id": "us.mp.constitution",
+  "kind": "constitution",
+  "jurisdiction": "us.mp",
+  "pattern": "\\bN\\.\\s?Mar\\.\\s?I\\.\\s?Const\\.\\s?(?P<part>art|amend)\\.\\s?(?P<number>[IVXLC]+|[0-9]{1,3})(?:,\\s?§\\s?(?P<section>[0-9]{1,3}[a-z]?))?",
+  "priority": 60,
+  "normalize": "N. Mar. I. Const. {part}. {number}",
+  "authority_key": "us.mp.const/{part}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R23 (Constitutions), R23.1 and R23.3",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R23 (Constitutions), R23.1 and R23.3, and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "N. Mar. I. Const. art. I, § 3 bars searches.",
+        "spans": [
+          [
+            0,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "Under N. Mar. I. Const. art. X, § 5, taxes apply.",
+        "spans": [
+          [
+            6,
+            36
+          ]
+        ]
+      },
+      {
+        "text": "See N. Mar. I. Const. art. XII, § 1 and N. Mar. I. Const. art. IV.",
+        "spans": [
+          [
+            4,
+            36
+          ],
+          [
+            41,
+            66
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The N. Mar. I. constitution was ratified long ago.",
+      "N. Mar. I. Const. Convention delegates met in 52 sessions.",
+      "Article 5 of the N. Mar. I. charter, section 3, is short."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "R23.3: state (and territory) constitutions take the U.S. Constitution form with the jurisdiction's T12 abbreviation; us.state.constitution does not accept this abbreviation."
+}

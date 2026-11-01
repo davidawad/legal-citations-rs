@@ -1,0 +1,80 @@
+{
+  "id": "us.nh.session_law.laws",
+  "kind": "session_law",
+  "jurisdiction": "us.nh",
+  "pattern": "\\b(?P<year>(?:1[6-9]|20)[0-9]{2})(?:-(?P<pamphlet>[0-9]{1,2}))?\\s(?P<series>N\\.H\\.\\s?Rev\\.\\s?Stat\\.\\s?Ann\\.\\s?Adv\\.\\s?Legis\\.\\s?Serv\\.|N\\.H\\.\\s?Legis\\.\\s?Serv\\.|N\\.H\\.\\s?Laws)\\s(?:ch\\.\\s?[0-9]{1,4},\\s?§\\s?[0-9]{1,4}[a-z]?,\\s)?(?:No\\.\\s?[0-9]{1,3},\\s)?(?P<page>[0-9]{1,5}(?:-[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{year} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 New Hampshire: Session laws",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 New Hampshire, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 441",
+      "corpus/formats/indigo.jsonl line 442",
+      "corpus/formats/indigo.jsonl line 443"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2015 N.H. Laws 2196.",
+        "spans": [[4, 23]],
+        "groups": {
+          "year": "2015",
+          "series": "N.H. Laws",
+          "page": "2196"
+        }
+      },
+      {
+        "text": "See 2014 N.H. Laws 910.",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 2015 N.H. Legis. Serv. 172.",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 2014 N.H. Legis. Serv. 2203.",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 2015-5 N.H. Rev. Stat. Ann. Adv. Legis. Serv. 514 (LexisNexis).",
+        "spans": [[4, 53]]
+      },
+      {
+        "text": "See 2014-3 N.H. Rev. Stat. Ann. Adv. Legis. Serv. 1571 (LexisNexis).",
+        "spans": [[4, 54]]
+      },
+      {
+        "text": "See 2013 N.H. Laws 77.",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 2013 N.H. Legis. Serv. 77.",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 2013 N.H. Rev. Stat. Ann. Adv. Legis. Serv. 77.",
+        "spans": [[4, 50]]
+      }
+    ],
+    "negative": [
+      "The N.H. Laws volumes are shelved by year.",
+      "In New Hampshire, 12 session laws took effect in 2015.",
+      "Page 2351 of the New Hampshire laws index is blank."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

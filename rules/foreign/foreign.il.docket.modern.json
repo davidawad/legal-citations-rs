@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.docket.modern",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>HCJ|CA|CrimA|CivA|LCA|LCrimA|LFA|LAA|CFH|CrimFH|FH|AAA|ADA|EA|RCA|BAA|MApp|CrimApp)\\s+(?P<number>[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 55,
+  "normalize": "{court} {number}",
+  "authority_key": "il/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Israeli court docket numbering since the 2012 case-management system: <seq>-<month>-<yy> (e.g. 12345-05-19)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check a Nevo or courts.gov.il case header: modern numbers are NNNNN-MM-YY (sequence, month filed, year).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See CA 12345-05-19 Cohen v. Levi.",
+        "spans": [[4, 18]],
+        "groups": {
+          "court": "CA",
+          "number": "12345-05-19"
+        }
+      },
+      {
+        "text": "AAA 6789-01-20 was an administrative appeal.",
+        "spans": [[0, 14]]
+      },
+      {
+        "text": "CrimA 4321-10-15 was decided.",
+        "spans": [[0, 16]]
+      }
+    ],
+    "negative": [
+      "CA 12345 is a highway.",
+      "The CA 12-05 memo is undated.",
+      "HCJ hearings resumed on 5-10-19."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Supplements foreign.il.docket, which only handles n/yy. Low base confidence like its sibling."
+}

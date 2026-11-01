@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.sec.administrative_proceeding",
+  "kind": "docket",
+  "jurisdiction": "us.fed.sec",
+  "tags": [
+    "securities"
+  ],
+  "pattern": "\\bAdmin(?:istrative|\\.)\\s+Proc(?:eeding|\\.)\\s+File\\s+No\\.\\s*(?P<number>3-[0-9]{4,5})\\b",
+  "priority": 60,
+  "normalize": "Admin. Proc. File No. {number}",
+  "authority_key": "us.sec_ap/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "SEC administrative proceeding file numbers (`Admin. Proc. File No. 3-12345`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open SEC administrative proceedings at https://www.sec.gov/litigation/admin and compare the file numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Commission instituted proceedings. Admin. Proc. File No. 3-17950.",
+        "spans": [
+          [
+            39,
+            68
+          ]
+        ],
+        "groups": {
+          "number": "3-17950"
+        }
+      },
+      {
+        "text": "See Administrative Proceeding File No. 3-12345.",
+        "spans": [
+          [
+            4,
+            46
+          ]
+        ]
+      },
+      {
+        "text": "Compare Admin. Proc. File No. 3-9876 with Admin. Proceeding File No. 3-20001.",
+        "spans": [
+          [
+            8,
+            36
+          ],
+          [
+            42,
+            76
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Admin. Proc. File No. pending",
+      "The administrative proceeding",
+      "Admin. Proc. File No. 12"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

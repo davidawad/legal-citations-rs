@@ -1,0 +1,54 @@
+{
+  "id": "us.ar.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.ar",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sArk\\.\\s?Code\\sR\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Arkansas: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Arkansas, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 53"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 33-57-73 Ark. Code R. § 57 (LexisNexis 2015).",
+        "spans": [[4, 31]],
+        "groups": {}
+      },
+      {
+        "text": "See 29-97-89 Ark. Code R. § 73 (LexisNexis 2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 66-81-16 Ark. Code R. § 81 (LexisNexis 5348).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 52-21-12 Ark. Code R. § 16 (LexisNexis 5347).",
+        "spans": [[4, 31]]
+      }
+    ],
+    "negative": [
+      "The Arkansas code was amended in 2015.",
+      "Section 12 of the Arkansas rules is long.",
+      "Title five of the Arkansas compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

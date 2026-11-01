@@ -1,0 +1,49 @@
+{
+  "id": "us.ks.regulation.kar",
+  "kind": "regulation",
+  "jurisdiction": "us.ks",
+  "pattern": "\\b(?:Kan\\.\\s?Admin\\.\\s?Regs\\.\\s?(?:§\\s?)?|K\\.A\\.R\\.\\s?)(?P<reg>[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}[a-z]{0,2})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Kan. Admin. Regs. § {reg}{sub}",
+  "authority_key": "us.ks.kar/{reg}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Kansas) administrative compilation: Kan. Admin. Regs. § N-N-N; local form K.A.R. N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Kansas) and the official Kansas administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Kan. Admin. Regs. § 28-16-28b.",
+        "spans": [[4, 34]],
+        "groups": {
+          "reg": "28-16-28b",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on K.A.R. 30-5-118 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under K.A.R. 28-19-350(b), the permit fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Kansas agency adopted 12 new rules in 2020.",
+      "Under Kan. Admin. Regs., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

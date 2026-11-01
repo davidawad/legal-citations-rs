@@ -1,0 +1,54 @@
+{
+  "id": "foreign.za.neutral",
+  "kind": "foreign",
+  "jurisdiction": "foreign.za",
+  "tags": [
+    "foreign",
+    "south_africa"
+  ],
+  "pattern": "\\[(?P<year>(?:19|20)[0-9]{2})\\]\\s+(?P<court>ZACC|ZASCA|ZAGPPHC|ZAGPJHC|ZAWCHC|ZAKZDHC|ZAKZPHC|ZAECGHC|ZALAC|ZALCJHB|ZACAC|ZAEQC|ZAFSHC|ZANCHC|ZALMPPHC|ZANWHC)\\s+(?P<number>[0-9]{1,5})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?|,?\\s+(?:at\\s+)?paras?\\.?\\s+(?P<para2>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 60,
+  "normalize": "[{year}] {court} {number}",
+  "authority_key": "za/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "South African neutral citations ([<year>] ZACC|ZASCA <number>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (South Africa) and SAFLII's neutral citation list.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "S v Makwanyane [1995] ZACC 3.",
+        "spans": [[15, 28]],
+        "groups": {
+          "year": "1995",
+          "court": "ZACC",
+          "number": "3"
+        }
+      },
+      {
+        "text": "The court relied on [2019] ZASCA 45 in its judgment.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under [2020] ZAGPJHC 12 at [7], the claim fails.",
+        "spans": [[6, 30]]
+      }
+    ],
+    "negative": [
+      "The ZACC sat 3 days in 1995.",
+      "[2019] South Africa had 45 rulings.",
+      "ZASCA staff number 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

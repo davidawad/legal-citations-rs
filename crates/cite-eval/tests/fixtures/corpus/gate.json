@@ -1,0 +1,13 @@
+{
+ "note": "fixture gate: passes",
+ "overall": {
+  "recall": 0.5,
+  "precision": 0.5,
+  "exact_span": 0.25
+ },
+ "kinds": {
+  "case": {
+   "recall": 0.5
+  }
+ }
+}

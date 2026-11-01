@@ -1,0 +1,54 @@
+{
+  "id": "us.dc.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.dc",
+  "pattern": "\\b(?:D\\.C\\.\\s?Code\\sMun\\.\\s?Regs\\.\\s?tit\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 District of Columbia: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 District of Columbia, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 151"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See D.C. Code Mun. Regs. tit. 37 § 65 (LexisNexis 2015).",
+        "spans": [[4, 38]],
+        "groups": {}
+      },
+      {
+        "text": "See D.C. Code Mun. Regs. tit. 17 § 65 (LexisNexis 2014).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See D.C. Code Mun. Regs. tit. 61 § 98 (LexisNexis 5348).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See D.C. Code Mun. Regs. tit. 41 § 98 (LexisNexis 5347).",
+        "spans": [[4, 38]]
+      }
+    ],
+    "negative": [
+      "The District of Columbia code was amended in 2015.",
+      "Section 12 of the District of Columbia rules is long.",
+      "Title five of the District of Columbia compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

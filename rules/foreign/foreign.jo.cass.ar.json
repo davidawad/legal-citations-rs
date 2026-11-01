@@ -1,0 +1,55 @@
+{
+  "id": "foreign.jo.cass.ar",
+  "kind": "foreign",
+  "jurisdiction": "foreign.jo.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "jo"
+  ],
+  "pattern": "تمييز\\s+(?P<chamber>حقوق|جزاء)\\s+(?:رقم\\s+)?(?P<number>[0-9٠-٩]{1,5})/(?P<year>(?:19|20)[0-9]{2}|[١٢][٩٠][٠-٩]{2})",
+  "priority": 58,
+  "normalize": "تمييز {chamber} {number}/{year}",
+  "authority_key": "jo.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Jordanian Court of Cassation Arabic: تمييز حقوق|جزاء رقم <n>/<yyyy>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Qistas (qistas.com) or Adaleh: Jordanian cassation decisions are headed تمييز حقوق رقم N/YYYY.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "تمييز حقوق 1234/2005 هيئة عامة.",
+        "spans": [[0, 29]],
+        "groups": {
+          "chamber": "حقوق",
+          "number": "1234",
+          "year": "2005"
+        }
+      },
+      {
+        "text": "انظر تمييز جزاء رقم 55/2010.",
+        "spans": [[9, 43]]
+      },
+      {
+        "text": "تمييز حقوق رقم 8/1999 قديم.",
+        "spans": [[0, 33]]
+      }
+    ],
+    "negative": [
+      "تمييز القرار مقبول.",
+      "تمييز حقوق بلا رقم.",
+      "تمييز حقوق 5/05 قصير."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "حقوق = civil, جزاء = criminal."
+}

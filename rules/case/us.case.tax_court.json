@@ -1,0 +1,73 @@
+{
+  "id": "us.case.tax_court",
+  "kind": "case",
+  "jurisdiction": "us.fed.tax",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+(?P<reporter>T\\.\\s?C\\.\\s?M\\.\\s?\\(CCH\\)|T\\.\\s?C\\.|B\\.\\s?T\\.\\s?A\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.1 (United States Tax Court; Board of Tax Appeals; Tax Court Memorandum Decisions (CCH)) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1.1 for the T.C., B.T.A. and T.C.M. reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Altera Corp. v. Commissioner, 145 T.C. 91 (2015).",
+        "spans": [
+          [
+            34,
+            45
+          ]
+        ],
+        "groups": {
+          "volume": "145",
+          "reporter": "T.C.",
+          "page": "91"
+        }
+      },
+      {
+        "text": "The Board of Tax Appeals so held in Parrott v. Commissioner, 1 B.T.A. 1 (1924).",
+        "spans": [
+          [
+            61,
+            71
+          ]
+        ]
+      },
+      {
+        "text": "Compare Doe v. Commissioner, 119 T.C.M. (CCH) 1234 (2020), with 155 T.C. 12.",
+        "spans": [
+          [
+            29,
+            50
+          ],
+          [
+            64,
+            75
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The T.C. Memo. series is unofficial.",
+      "The Tax Court decided 145 cases.",
+      "T.C. 91 was the room number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-23 (resolve to the cited authority: 145 T.C. 91 -> Altera Corp. v. Commr; 1 B.T.A. 1 -> Parrott v. Commissioner; 50 T.C.M. (CCH) 1 -> Citizens Assur. v. Commissioner)."
+}

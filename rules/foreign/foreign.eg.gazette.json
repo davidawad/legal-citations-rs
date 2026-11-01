@@ -1,0 +1,53 @@
+{
+  "id": "foreign.eg.gazette",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "(?:\\bEgyptian\\s+Official\\s+Gazette\\s+(?:\\(Al-Waqa['’]i['’]?\\s+Al-Misriyya\\)\\s+)?No\\.?|الوقائع\\s+المصرية\\s*[-–،,]?\\s*العدد)\\s*(?P<number>[0-9٠-٩]{1,4})\\b",
+  "priority": 55,
+  "normalize": "Official Gazette No. {number}",
+  "authority_key": "eg.gazette/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Egyptian Official Gazette (al-Waqa'i' al-Misriyya) issue number",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check a Waqa'i' al-Misriyya issue or its citations in Egyptian law reports.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Published in the Egyptian Official Gazette No. 108 in 1948.",
+        "spans": [[17, 50]],
+        "groups": {
+          "number": "108"
+        }
+      },
+      {
+        "text": "الوقائع المصرية العدد 108 تاريخ 1948.",
+        "spans": [[0, 44]]
+      },
+      {
+        "text": "Egyptian Official Gazette (Al-Waqa'i' Al-Misriyya) No. 25.",
+        "spans": [[0, 57]]
+      }
+    ],
+    "negative": [
+      "The Official Gazette No. 108 of an unnamed country.",
+      "الوقائع المصرية بلا عدد.",
+      "Egyptian Gazette is a newspaper."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

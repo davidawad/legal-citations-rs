@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.fda.compliance_policy_guide",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.fda",
+  "tags": [
+    "fda",
+    "health"
+  ],
+  "pattern": "\\b(?:CPG|Compliance\\s+Policy\\s+Guide)\\s*,?\\s*(?:Sec\\.|§)\\s*(?P<section>[0-9]{3}\\.[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "CPG § {section}",
+  "authority_key": "us.fda_cpg/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "FDA Compliance Policy Guides (`CPG Sec. 555.320`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the FDA Compliance Policy Guide manual at https://www.fda.gov and compare section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "FDA's enforcement policy is in CPG Sec. 555.320.",
+        "spans": [
+          [
+            31,
+            47
+          ]
+        ],
+        "groups": {
+          "section": "555.320"
+        }
+      },
+      {
+        "text": "See CPG § 690.800.",
+        "spans": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "text": "Compare Compliance Policy Guide § 555.320 with CPG Sec. 460.200.",
+        "spans": [
+          [
+            8,
+            42
+          ],
+          [
+            48,
+            64
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "CPG Sec. pending",
+      "The CPG manual",
+      "CPG § 555"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

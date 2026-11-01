@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.hhs.dab_decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.hhs",
+  "tags": [
+    "health"
+  ],
+  "pattern": "\\bDAB\\s+(?:No\\.\\s*(?P<number>[0-9]{3,4})|(?P<alj>CR[0-9]{3,5}))\\b",
+  "priority": 60,
+  "normalize": "DAB No. {number}{alj}",
+  "authority_key": "us.dab/{number}{alj}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "HHS Departmental Appeals Board decisions (`DAB No. 2345`, ALJ `DAB CR1234`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open DAB decisions at https://www.hhs.gov/about/agencies/dab/decisions and compare the decision numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board affirmed. DAB No. 2345 (2010).",
+        "spans": [
+          [
+            20,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "2345"
+        }
+      },
+      {
+        "text": "See Golden Living Ctr., DAB CR1234 (2008).",
+        "spans": [
+          [
+            24,
+            34
+          ]
+        ]
+      },
+      {
+        "text": "Compare DAB No. 1810 with DAB CR5678.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The DAB affirmed.",
+      "DAB No. 12",
+      "DAB CR"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

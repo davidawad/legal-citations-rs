@@ -1,0 +1,70 @@
+{
+  "id": "us.ny.secondary.city_bar_ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.ny",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:N\\.\\s?Y\\.\\s?C\\.\\s+Bar(?:\\s+Ass['’]n)?|NYC\\s+Bar|N\\.\\s?Y\\.\\s+City\\s+Bar(?:\\s+Ass['’]n)?|Ass['’]n\\s+of\\s+the\\s+Bar\\s+of\\s+the\\s+City\\s+of\\s+N(?:\\.\\s?Y\\.|ew\\s+York))(?:\\s+Comm(?:\\.|ittee)\\s+on\\s+Pro(?:\\.|f(?:['’]l|essional))(?:\\s+(?:&|and)\\s+Jud(?:\\.|icial))?\\s+Ethics)?,?\\s+(?:Formal\\s+)?Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>(?:19|20)[0-9]{2}-[0-9]{1,2}|[0-9]{2,4})\\b",
+  "priority": 60,
+  "normalize": "N.Y.C. Bar Ass'n Formal Op. {number}",
+  "authority_key": "us.ny.nyc_bar_ethics/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "New York City Bar Association Committee on Professional Ethics formal opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the City Bar ethics opinions at https://www.nycbar.org/reports and compare the opinion numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Fees may be shared. N.Y.C. Bar Ass'n Comm. on Pro. Ethics, Formal Op. 2017-5.",
+        "spans": [
+          [
+            20,
+            76
+          ]
+        ],
+        "groups": {
+          "number": "2017-5"
+        }
+      },
+      {
+        "text": "See NYC Bar Formal Op. 2015-3.",
+        "spans": [
+          [
+            4,
+            29
+          ]
+        ]
+      },
+      {
+        "text": "Compare Ass’n of the Bar of the City of N.Y. Comm. on Prof’l & Jud. Ethics, Formal Op. 2004-02 with N.Y. City Bar Op. 1995-1.",
+        "spans": [
+          [
+            8,
+            98
+          ],
+          [
+            104,
+            128
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The NYC Bar ethics committee",
+      "NYC Bar Formal Op. pending",
+      "N.Y.C. Bar Ass'n annual dinner"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

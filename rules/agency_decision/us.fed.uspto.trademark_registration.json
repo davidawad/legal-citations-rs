@@ -1,0 +1,109 @@
+{
+  "id": "us.fed.uspto.trademark_registration",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "\\b(?:U\\.\\s?S\\.\\s+)?(?:Trademark\\s+)?Reg(?:istration|\\.)\\s+Nos?\\.\\s*(?P<number>[0-9],?[0-9]{3},?[0-9]{3})\\b",
+  "priority": 58,
+  "normalize": "Registration No. {number}",
+  "authority_key": "us.tm.reg/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "tags": [
+    "trademark",
+    "ttab",
+    "uspto"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Commerce, Patent and Trademark Office (Registered trademarks)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Commerce, Patent and Trademark Office (Registered trademarks), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ACME, Registration No. 1,234,567.",
+        "spans": [
+          [
+            6,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "1,234,567"
+        }
+      },
+      {
+        "text": "THE BLUEBOOK A UNIFORM SYSTEM OF CITATION, Registration No. 3,886,986.",
+        "spans": [
+          [
+            43,
+            69
+          ]
+        ]
+      },
+      {
+        "text": "See U.S. Reg. No. 4,567,890 and U.S. Trademark Registration No. 2,000,001.",
+        "spans": [
+          [
+            4,
+            27
+          ],
+          [
+            32,
+            73
+          ]
+        ]
+      },
+      {
+        "text": "The mark is shown in Reg. No. 1,234,567.",
+        "spans": [
+          [
+            21,
+            39
+          ]
+        ]
+      },
+      {
+        "text": "See U.S. Registration No. 5,123,456.",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare U.S. Trademark Reg. No. 3456789 with Registration No. 4,000,001.",
+        "spans": [
+          [
+            8,
+            39
+          ],
+          [
+            45,
+            71
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Registration No. 12 is the voter roll.",
+      "The registration of 1,234,567 voters ended.",
+      "Reg. No. 5 applies.",
+      "Reg. No. 12",
+      "The registration issued in 2019.",
+      "Reg. No. 1,234"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Merged from two branches: Indigo T2 (Registration No. 1,234,567) and Bluebook R. 14.9 / TMEP § 1601 spellings (Reg. Nos., uncommaed numbers; not opened). Not after EPA or Fed. (reject_before). Confidence 0.85: `Registration No.` also names voter and vehicle registrations.",
+  "reject_before": [
+    "(?:EPA|Fed\\.)\\s?$"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "us.oh.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.oh",
+  "pattern": "(?:Ohio\\s+Rev(?:ised)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?|ORC\\s+)§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Ohio) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Ohio entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py OHIO pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ohio Rev. Code § 2907.02.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "2907.02"
+        }
+      },
+      {
+        "text": "The court relied on ORC 2907.02 in reaching its holding.",
+        "spans": [[20, 31]]
+      },
+      {
+        "text": "Under Ohio Rev. Code Ann. § 1.1, the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ohio",
+    "order": 18,
+    "pattern": "(?:Ohio\\s+Rev(?:ised)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?|ORC\\s+)§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

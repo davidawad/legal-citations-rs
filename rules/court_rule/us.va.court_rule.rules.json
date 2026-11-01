@@ -1,0 +1,49 @@
+{
+  "id": "us.va.court_rule.rules",
+  "kind": "court_rule",
+  "jurisdiction": "us.va",
+  "pattern": "\\b(?:Va\\.\\s?(?:Sup\\.\\s?Ct\\.\\s?R\\.|R\\.\\s?Evid\\.))\\s?(?P<rule>[1-9][A]?:[0-9]{1,3}[A-Z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Va. Sup. Ct. R. {rule}{sub}",
+  "authority_key": "us.va.rules.rules/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Virginia) Virginia Rules of the Supreme Court (civil, evidence and appellate parts): Va. Sup. Ct. R. N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Virginia) and the official Virginia Rules of the Supreme Court (civil, evidence and appellate parts); confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Va. Sup. Ct. R. 3:8.",
+        "spans": [[4, 23]],
+        "groups": {
+          "rule": "3:8",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Va. R. Evid. 2:803(6) in reaching its holding.",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "Under Va. Sup. Ct. R. 5:17(c)(1), the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Virginia rules committee met 12 times in 2020.",
+      "Under Va. Sup. Ct. R. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

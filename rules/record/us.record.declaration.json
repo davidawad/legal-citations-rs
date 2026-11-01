@@ -1,0 +1,76 @@
+{
+  "id": "us.record.declaration",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "declaration"
+  ],
+  "pattern": "\\b(?:[A-Z][A-Za-z'’-]+\\s+)?(?:(?:Supp\\.|Suppl\\.|Second|Reply|Rebuttal|Am\\.|Decl\\.)\\s+)?Decl\\.(?:\\s+of\\s+(?:[A-Z][A-Za-z.'’-]*\\s+){1,4}?)?\\s*(?:¶¶?\\s*|at\\s+)(?P<pin>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b(?:,\\s+(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+(?:19|20)[0-9]{2})?",
+  "reject": [
+    "^(?:See|Cf|Compare|But|Accord|Contra|Also|And|Or|The|In|Under|Per|With|From|E\\.g|Our|My|His|Her|Its|Their|Your|This|That|These|Those|A|An|Each|Every|Any|No|Its|Which|Whose)\\b"
+  ],
+  "reject_before": [
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 55,
+  "normalize": "Decl. {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17 / R10.8.3 (court documents and record cites); Indigo Book R24",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "He was present. Decl. ¶ 4.",
+        "spans": [
+          [
+            16,
+            26
+          ]
+        ],
+        "groups": {
+          "pin": "4"
+        }
+      },
+      {
+        "text": "See Smith Decl. ¶¶ 4–6.",
+        "spans": [
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      {
+        "text": "Compare Decl. of Martha Woodmansee at 7 with Supp. Decl. ¶ 3, Jan. 12, 2015.",
+        "spans": [
+          [
+            8,
+            39
+          ],
+          [
+            45,
+            76
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The declaration was signed.",
+      "See Smith Decl. passim.",
+      "Decl. of Independence"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

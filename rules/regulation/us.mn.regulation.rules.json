@@ -1,0 +1,49 @@
+{
+  "id": "us.mn.regulation.rules",
+  "kind": "regulation",
+  "jurisdiction": "us.mn",
+  "pattern": "\\bMinn\\.\\s?R\\.\\s?(?P<rule>[0-9]{4}\\.[0-9]{4})",
+  "priority": 65,
+  "normalize": "Minn. R. {rule}",
+  "authority_key": "us.mn.rules/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Minnesota) administrative compilation: Minn. R. NNNN.NNNN (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Minnesota) and the official Minnesota administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Minn. R. 7050.0222.",
+        "spans": [[4, 22]],
+        "groups": {
+          "rule": "7050.0222"
+        }
+      },
+      {
+        "text": "The court relied on Minn. R. 9505.0210 in reaching its holding.",
+        "spans": [[20, 38]]
+      },
+      {
+        "text": "Under Minn. R. 3400.0020, the permit fails.",
+        "spans": [[6, 24]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Minnesota agency adopted 12 new rules in 2020.",
+      "Under Minn. R., as amended, the permit fails.",
+      "Minn. R. Civ. P. 12.02 governs dismissal."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

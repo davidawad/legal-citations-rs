@@ -1,0 +1,55 @@
+{
+  "id": "us.case.lawyers_edition",
+  "kind": "case",
+  "jurisdiction": "us.scotus",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>L\\.\\s?Ed\\.(?:\\s?2d)?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Lawyers' Edition) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Doe v. Roe, 100 L. Ed. 2d 1 (1988).",
+        "spans": [[16, 31]],
+        "groups": {
+          "volume": "100",
+          "reporter": "L. Ed. 2d",
+          "page": "1"
+        }
+      },
+      {
+        "text": "The court relied on Smith v. Jones, 98 L. Ed. 873 (1954) in reaching its holding.",
+        "spans": [[36, 49]]
+      },
+      {
+        "text": "Under Alpha v. Beta, 12 L.Ed.2d 34 (1964), the claim fails.",
+        "spans": [[21, 34]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

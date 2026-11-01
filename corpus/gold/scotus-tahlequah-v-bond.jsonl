@@ -1,0 +1,36 @@
+{"start": 19, "end": 42, "kind": "case", "jurisdiction": "us.scotus", "text": "Volume 595 U. S. Part 1", "normalized": "595 U.S.", "form": "page furniture", "optional": true, "note": "preliminary print cover"}
+{"start": 708, "end": 721, "kind": "docket", "jurisdiction": "us.scotus", "text": "No. 20–1668", "normalized": "No. 20-1668", "form": "docket number"}
+{"start": 2292, "end": 2311, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U. S. C. § 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 3005, "end": 3087, "kind": "case", "jurisdiction": "us.scotus", "text": "Pearson v.\n\n\f10\n\nCITY OF TAHLEQUAH v. BOND\nPer Curiam\nCallahan, 555 U. S. 223, 231", "normalized": "555 U.S. 223", "form": "U.S. Reports", "note": "syllabus; span crosses page break and running head"}
+{"start": 3194, "end": 3241, "kind": "case", "jurisdiction": "us.scotus", "text": "District\nof Columbia v. Wesby, 583 U. S. 48, 63", "normalized": "583 U.S. 48", "form": "U.S. Reports"}
+{"start": 3498, "end": 3503, "kind": "id", "jurisdiction": "us.scotus", "text": "Ibid.", "normalized": "Ibid.", "form": "Ibid."}
+{"start": 4136, "end": 4149, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "981 F. 3d 808", "normalized": "981 F.3d 808", "form": "F./F.2d/F.3d/F.4th", "note": "judgment line"}
+{"start": 4440, "end": 4470, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "981\nF. 3d 808, 812 (CA10 2020)", "normalized": "981 F.3d 808", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 5261, "end": 5288, "kind": "case", "jurisdiction": "us.scotus", "text": "Cite as: 595 U. S. 9 (2021)", "normalized": "595 U.S. 9", "form": "page furniture", "optional": true}
+{"start": 6730, "end": 6749, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U. S. C. § 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 6965, "end": 7031, "kind": "case", "jurisdiction": "us.fed.dist.oked", "text": "Burke v. Tahlequah, 2019 WL 4674316, *6 (ED Okla.,\nSept. 25, 2019)", "normalized": "2019 WL 4674316", "form": "Westlaw"}
+{"start": 7163, "end": 7168, "kind": "id", "jurisdiction": "us.fed.dist.oked", "text": "Ibid.", "normalized": "Ibid.", "form": "Ibid."}
+{"start": 7233, "end": 7250, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "981 F. 3d, at 826", "normalized": "981 F.3d at 826", "form": "short case (at)"}
+{"start": 7382, "end": 7407, "kind": "case", "jurisdiction": "us.scotus", "text": "CITY OF TAHLEQUAH v. BOND", "normalized": "CITY OF TAHLEQUAH v. BOND", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 7568, "end": 7579, "kind": "id", "jurisdiction": "us.fed.app.ca10", "text": "Id., at 816", "normalized": "Id. at 816", "form": "Id."}
+{"start": 7902, "end": 7913, "kind": "id", "jurisdiction": "us.fed.app.ca10", "text": "Id., at\n823", "normalized": "Id. at 823", "form": "Id."}
+{"start": 7993, "end": 8037, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "Allen v. Muskogee, 119 F. 3d 837\n(CA10 1997)", "normalized": "119 F.3d 837", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 8099, "end": 8116, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "981 F. 3d, at 826", "normalized": "981 F.3d at 826", "form": "short case (at)"}
+{"start": 8656, "end": 8702, "kind": "case", "jurisdiction": "us.scotus", "text": "Pearson v. Callahan,\n555 U. S. 223, 231 (2009)", "normalized": "555 U.S. 223", "form": "U.S. Reports"}
+{"start": 8835, "end": 8889, "kind": "case", "jurisdiction": "us.scotus", "text": "District of Columbia v.\nWesby, 583 U. S. 48, 63 (2018)", "normalized": "583 U.S. 48", "form": "U.S. Reports"}
+{"start": 8899, "end": 8942, "kind": "case", "jurisdiction": "us.scotus", "text": "Malley v. Briggs, 475\nU. S. 335, 341 (1986)", "normalized": "475 U.S. 335", "form": "U.S. Reports"}
+{"start": 9059, "end": 9105, "kind": "case", "jurisdiction": "us.scotus", "text": "Ashcroft v. al-Kidd, 563 U. S. 731, 742 (2011)", "normalized": "563 U.S. 731", "form": "U.S. Reports"}
+{"start": 9331, "end": 9354, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Wesby, 583 U. S., at 63", "normalized": "583 U.S. at 63", "form": "short case (at)"}
+{"start": 9364, "end": 9406, "kind": "case", "jurisdiction": "us.scotus", "text": "Saucier v. Katz, 533 U. S. 194, 202 (2001)", "normalized": "533 U.S. 194", "form": "U.S. Reports"}
+{"start": 9583, "end": 9610, "kind": "case", "jurisdiction": "us.scotus", "text": "Cite as: 595 U. S. 9 (2021)", "normalized": "595 U.S. 9", "form": "page furniture", "optional": true}
+{"start": 9744, "end": 9784, "kind": "case", "jurisdiction": "us.scotus", "text": "Mullenix v. Luna, 577 U. S. 7, 12 (2015)", "normalized": "577 U.S. 7", "form": "U.S. Reports", "note": "(per curiam) parenthetical excluded"}
+{"start": 9958, "end": 10012, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "Estate of Ceballos v. Husk, 919 F. 3d 1204 (CA10\n2019)", "normalized": "919 F.3d 1204", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10014, "end": 10064, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "Hastings v. Barnes, 252 Fed. Appx. 197 (CA10 2007)", "normalized": "252 F. App'x 197", "form": "F. App'x"}
+{"start": 10066, "end": 10086, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "Allen, 119 F. 3d 837", "normalized": "119 F.3d 837", "form": "short case (at)", "note": "short form without pin"}
+{"start": 10092, "end": 10136, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "Sevier v. Lawrence, 60 F. 3d 695\n(CA10 1995)", "normalized": "60 F.3d 695", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10494, "end": 10511, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "119 F. 3d, at 841", "normalized": "119 F.3d at 841", "form": "short case (at)"}
+{"start": 11119, "end": 11141, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "60 F. 3d, at 700–701", "normalized": "60 F.3d at 700-701", "form": "short case (at)"}
+{"start": 11432, "end": 11458, "kind": "case_short", "jurisdiction": "us.scotus", "text": "al-Kidd,\n563 U. S., at 742", "normalized": "563 U.S. at 742", "form": "short case (at)"}
+{"start": 11570, "end": 11621, "kind": "case", "jurisdiction": "us.scotus", "text": "Brosseau v. Haugen, 543 U. S. 194, 200, n. 4\n(2004)", "normalized": "543 U.S. 194", "form": "U.S. Reports", "note": "(per curiam) parenthetical excluded"}
+{"start": 11709, "end": 11734, "kind": "case", "jurisdiction": "us.scotus", "text": "CITY OF TAHLEQUAH v. BOND", "normalized": "CITY OF TAHLEQUAH v. BOND", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 11909, "end": 11931, "kind": "case_short", "jurisdiction": "us.fed.app.ca10", "text": "252 Fed.\nAppx., at 206", "normalized": "252 F. App'x at 206", "form": "short case (at)"}

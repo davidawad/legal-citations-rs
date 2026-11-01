@@ -1,0 +1,53 @@
+{
+  "id": "foreign.ca.constitution_act",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ca",
+  "tags": [
+    "foreign",
+    "canada"
+  ],
+  "pattern": "\\bConstitution\\s+Act,\\s+(?P<year>1867|1982)(?:\\s+\\(UK\\))?(?:,\\s+(?:30\\s+&\\s+31\\s+Vict,?\\s+c\\s+3|being\\s+Schedule\\s+B\\s+to\\s+the\\s+Canada\\s+Act\\s+1982\\s+\\(UK\\),\\s+1982,\\s+c\\s+11))?(?:,\\s+(?:ss?\\.?|§§?)\\s*(?P<section>[0-9]{1,3}(?:\\([0-9a-z]{1,4}\\))*))?",
+  "priority": 60,
+  "normalize": "Constitution Act, {year}",
+  "authority_key": "ca.constitution/{year}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "McGill Guide 2.2 (Constitution Act, 1867 (UK), 30 & 31 Vict, c 3, s 91; Constitution Act, 1982)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the McGill Guide chapter 2 (constitutional statutes) and Bluebook T2 (Canada).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Federal power under the Constitution Act, 1867 (UK), 30 & 31 Vict, c 3, s 91(2).",
+        "spans": [[24, 79]],
+        "groups": {
+          "year": "1867",
+          "section": "91(2)"
+        }
+      },
+      {
+        "text": "See Constitution Act, 1982, s 35.",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "Constitution Act, 1867, s. 92(13) assigns property and civil rights.",
+        "spans": [[0, 33]]
+      }
+    ],
+    "negative": [
+      "The constitution, 1867 edition.",
+      "Constitution Act of 1982 is a US form.",
+      "An act on the constitution in 1867."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The two Canadian constitutional statutes; Canadian Charter cites are foreign.ca.charter."
+}

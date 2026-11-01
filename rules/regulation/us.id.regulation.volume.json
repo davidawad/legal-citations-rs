@@ -1,0 +1,54 @@
+{
+  "id": "us.id.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.id",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Idaho\\sAdmin\\.\\s?Bull\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Idaho: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Idaho, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 201"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 20 Idaho Admin. Bull. 62 (Jan. 25, 2015).",
+        "spans": [[4, 28]],
+        "groups": {
+          "volume": "20",
+          "series": "Idaho Admin. Bull.",
+          "page": "62"
+        }
+      },
+      {
+        "text": "See 28 Idaho Admin. Bull. 1711 (Sept. 5, 2014).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 12 Idaho Admin. Bull. 77.",
+        "spans": [[4, 28]]
+      }
+    ],
+    "negative": [
+      "The Idaho Admin. Bull. is published monthly.",
+      "Volume 12 of the Idaho register has 77 pages.",
+      "In 2015 the Idaho Admin. Bull. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "foreign.ca.charter",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ca",
+  "tags": [
+    "foreign",
+    "canada"
+  ],
+  "pattern": "\\bCanadian\\s+Charter\\s+of\\s+Rights\\s+and\\s+Freedoms,?\\s+(?:ss?\\.?|§§?)\\s*(?P<section>[0-9]{1,2}(?:\\([0-9a-z]{1,3}\\))*)",
+  "priority": 60,
+  "normalize": "Canadian Charter of Rights and Freedoms, s {section}",
+  "authority_key": "ca.charter/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "McGill Guide 2.2 (Canadian Charter of Rights and Freedoms, s <n>, Part I of the Constitution Act, 1982)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the McGill Guide chapter 2 (constitutional statutes) and Bluebook T2 (Canada).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Canadian Charter of Rights and Freedoms, s 7, Part I of the Constitution Act, 1982.",
+        "spans": [[0, 44]],
+        "groups": {
+          "section": "7"
+        }
+      },
+      {
+        "text": "See Canadian Charter of Rights and Freedoms, s. 2(b).",
+        "spans": [[4, 52]]
+      },
+      {
+        "text": "Canadian Charter of Rights and Freedoms § 24(2) excludes evidence.",
+        "spans": [[0, 48]]
+      }
+    ],
+    "negative": [
+      "The Canadian Charter of Rights and Freedoms took effect in 1982.",
+      "The city charter, s 7, is local.",
+      "Charter section 7 rights."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

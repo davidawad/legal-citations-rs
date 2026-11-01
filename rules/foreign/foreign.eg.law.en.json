@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.law.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "\\bEgyptian\\s+(?:Law|Decree[- ]Law|Presidential\\s+Decree)\\s+No\\.?\\s*(?P<number>[0-9]{1,4})\\s+of\\s+(?P<year>1[89][0-9]{2}|20[0-9]{2})\\b",
+  "priority": 57,
+  "normalize": "Egyptian Law No. {number} of {year}",
+  "authority_key": "eg.law/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Egyptian legislation English form: Law No. <n> of <yyyy>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check an English translation of an Egyptian code (e.g. Law No. 131 of 1948) for the 'Law No. n of yyyy' form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Egyptian Law No. 131 of 1948 is the Civil Code.",
+        "spans": [[0, 28]],
+        "groups": {
+          "number": "131",
+          "year": "1948"
+        }
+      },
+      {
+        "text": "See Egyptian Decree-Law No. 17 of 1999.",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "Egyptian Law No. 151 of 2020 protects data.",
+        "spans": [[0, 28]]
+      }
+    ],
+    "negative": [
+      "Law No. 131 of 1948 without a country.",
+      "Egyptian law is codified.",
+      "Egyptian Law No. 5 of 3."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Requires 'Egyptian' prefix so bare 'Law No. 5 of 2000' from other states is not claimed."
+}

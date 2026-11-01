@@ -1,0 +1,59 @@
+{
+  "id": "intl.wto.dispute",
+  "kind": "foreign",
+  "jurisdiction": "intl.wto",
+  "tags": [
+    "international",
+    "trade"
+  ],
+  "pattern": "\\bWT/DS(?P<number>[0-9]{1,3})(?:/(?P<suffix>AB/R(?:/Add\\.[0-9]{1,2})?|R(?:/(?:Add\\.[0-9]{1,2}|[A-Z]{3}))?|RW(?:/[A-Z]{3})?|AB/RW|ARB(?:/[0-9]{1,2})?|[0-9]{1,3}))?",
+  "priority": 60,
+  "normalize": "WT/DS{number}",
+  "authority_key": "wto/ds/{number}",
+  "url_templates": [
+    "https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds{number}_e.htm"
+  ],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.8 (WTO panel and Appellate Body reports, document symbol WT/DS<n>/R and WT/DS<n>/AB/R)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.8 (WTO) and the WTO document symbol guide (docs.wto.org): WT/DS<n>/R, WT/DS<n>/AB/R.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Appellate Body Report, United States—Import Prohibition of Certain Shrimp and Shrimp Products, WT/DS58/AB/R (Oct. 12, 1998).",
+        "spans": [[97, 109]],
+        "groups": {
+          "number": "58",
+          "suffix": "AB/R"
+        }
+      },
+      {
+        "text": "Panel Report, WT/DS27/R/USA (May 22, 1997).",
+        "spans": [[14, 27]]
+      },
+      {
+        "text": "Request for Consultations, WT/DS574/1.",
+        "spans": [[27, 37]]
+      },
+      {
+        "text": "The dispute WT/DS2 concerned gasoline.",
+        "spans": [[12, 18]]
+      }
+    ],
+    "negative": [
+      "The WTO DS body met 58 times.",
+      "WT/58 is not a dispute.",
+      "DS58 was the room."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The URL is the dispute's case page (one per DS number). url_templates verified by HTTP fetch on 2026-10-23: https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds27_e.htm answers 200 with the DS27 case page (also ds26 and ds58; ds9999 redirects to the WTO 404 page)."
+}

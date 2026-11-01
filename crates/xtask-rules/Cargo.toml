@@ -1,0 +1,21 @@
+[package]
+name = "xtask-rules"
+description = "Generates case rules from the vendored reporters-db (third_party/reporters-db), the court table and the Indigo-inventory rules (corpus/formats/indigo.jsonl)."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "xtask-rules"
+path = "src/main.rs"
+
+[dependencies]
+legal-citations = { path = "../legal-citations" }
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

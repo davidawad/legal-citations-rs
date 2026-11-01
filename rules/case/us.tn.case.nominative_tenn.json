@@ -1,0 +1,166 @@
+{
+  "id": "us.tn.case.nominative_tenn",
+  "kind": "case",
+  "jurisdiction": "us.tn",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Tenn\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Mart\\.\\s?\\&\\sYer\\.|Heisk\\.|Overt\\.|Cold\\.|Cooke|Hayw\\.|Meigs|Sneed|Head|Hum\\.|Peck|Swan|Yer\\.)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Tenn. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 720",
+      "corpus/formats/indigo.jsonl line 721",
+      "corpus/formats/indigo.jsonl line 722",
+      "corpus/formats/indigo.jsonl line 723",
+      "corpus/formats/indigo.jsonl line 724",
+      "corpus/formats/indigo.jsonl line 725",
+      "corpus/formats/indigo.jsonl line 726",
+      "corpus/formats/indigo.jsonl line 727",
+      "corpus/formats/indigo.jsonl line 728",
+      "corpus/formats/indigo.jsonl line 729",
+      "corpus/formats/indigo.jsonl line 730",
+      "corpus/formats/indigo.jsonl line 731",
+      "corpus/formats/indigo.jsonl line 732"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Brown v. Davis, 48 Tenn. (1 Heisk.) 353 (1871).",
+        "spans": [[20, 43]],
+        "groups": {
+          "volume": "48",
+          "reporter": "Tenn.",
+          "nominative_volume": "1",
+          "nominative": "Heisk.",
+          "page": "353"
+        }
+      },
+      {
+        "text": "See Garcia v. Lee, 48 Tenn. (1 Heisk.) 361, 609 (1872).",
+        "spans": [[19, 42]]
+      },
+      {
+        "text": "See Johnson v. Clark, 41 Tenn. (1 Cold.) 297 (1863).",
+        "spans": [[22, 44]]
+      },
+      {
+        "text": "See In re Estate of Hall, 41 Tenn. (1 Cold.) 441, 625 (1867).",
+        "spans": [[26, 48]]
+      },
+      {
+        "text": "See Walker v. Young, 38 Tenn. (1 Head) 593 (1858).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Allen v. King, 38 Tenn. (1 Head) 49, 617 (1859).",
+        "spans": [[19, 39]]
+      },
+      {
+        "text": "See Wright v. Scott, 33 Tenn. (1 Sneed) 25 (1854).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Green v. Baker, 33 Tenn. (1 Sneed) 225, 633 (1856).",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "See Adams v. Nelson, 31 Tenn. (1 Swan) 385 (1851).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Hill v. Campbell, 31 Tenn. (1 Swan) 545, 601 (1852).",
+        "spans": [[22, 43]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 20 Tenn. (1 Hum.) 113 (1842).",
+        "spans": [[25, 46]]
+      },
+      {
+        "text": "See Carter v. Phillips, 20 Tenn. (1 Hum.) 553, 633 (1847).",
+        "spans": [[24, 45]]
+      },
+      {
+        "text": "See Evans v. Turner, 19 Tenn. (Meigs) 537 (1838).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Smith v. Jones, 19 Tenn. (Meigs) 89, 633 (1838).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See State v. Miller, 9 Tenn. (1 Yer.) 585 (1823).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Brown v. Davis, 9 Tenn. (1 Yer.) 41, 633 (1831).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See Garcia v. Lee, 8 Tenn. (Mart. & Yer.) 345 (1825).",
+        "spans": [[19, 45]]
+      },
+      {
+        "text": "See Johnson v. Clark, 8 Tenn. (Mart. & Yer.) 113, 617 (1827).",
+        "spans": [[22, 48]]
+      },
+      {
+        "text": "See In re Estate of Hall, 7 Tenn. (Peck) 121 (1821).",
+        "spans": [[26, 44]]
+      },
+      {
+        "text": "See Walker v. Young, 7 Tenn. (Peck) 241, 609 (1823).",
+        "spans": [[21, 39]]
+      },
+      {
+        "text": "See Allen v. King, 4 Tenn. (1 Hayw.) 513 (1816).",
+        "spans": [[19, 40]]
+      },
+      {
+        "text": "See Wright v. Scott, 4 Tenn. (1 Hayw.) 241, 625 (1817).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Green v. Baker, 3 Tenn. (Cooke) 329 (1811).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See Adams v. Nelson, 3 Tenn. (Cooke) 257, 601 (1813).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Hill v. Campbell, 1 Tenn. (1 Overt.) 401 (1798).",
+        "spans": [[22, 44]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 1 Tenn. (1 Overt.) 289, 617 (1807).",
+        "spans": [[25, 47]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Tenn. (2 Heisk.) 345 (1850).",
+        "spans": [[16, 39]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Tenn. reports is missing.",
+      "The Cold. reports cover Tenn. cases from 1800 to 1850.",
+      "See Tenn. (Cold.) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

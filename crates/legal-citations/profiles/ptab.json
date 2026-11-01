@@ -1,0 +1,19 @@
+{
+  "name": "ptab",
+  "description": "Patent Trial and Appeal Board practice: PTAB proceedings and exhibits, the MPEP, 35 U.S.C., 37 C.F.R., the Federal Register, USPQ and Federal Circuit and Supreme Court reporters.",
+  "include": [
+    "tag:ptab",
+    "rule:us.fed.uspto.ptab_*",
+    "rule:us.fed.uspto.mpep",
+    "rule:us.case.uspq",
+    "rule:us.fed.rules.circuit",
+    "rule:us.fed.statute.usc",
+    "rule:us.fed.regulation.cfr",
+    "rule:us.fed.federal_register",
+    "jurisdiction:us.scotus",
+    "jurisdiction:us.fed.app",
+    "family:record"
+  ],
+  "exclude": [],
+  "note": "tag:ptab collects rules that tag themselves; the rule globs cover the rules that exist today."
+}

@@ -1,0 +1,25 @@
+[package]
+name = "cite-detect"
+description = "CLI for legal-citations: detect citations and lint markdown for unlinked or mislinked citations."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "cite-detect"
+path = "src/main.rs"
+
+[dependencies]
+legal-citations = { path = "../legal-citations" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4", features = ["derive"] }
+schemars = "1"
+
+[dev-dependencies]
+legal-citations = { path = "../legal-citations" }

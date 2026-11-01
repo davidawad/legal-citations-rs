@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ma.law",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ma",
+  "tags": [
+    "foreign",
+    "mena",
+    "ma"
+  ],
+  "pattern": "\\b[Ll]oi\\s+(?:organique\\s+)?n°\\s*(?P<number>[0-9]{2}[-.][0-9]{2})\\s*,?\\s+promulguée\\s+par\\s+(?:le\\s+)?[Dd]ahir\\s+n°\\s*(?P<dahir>1[-.][0-9]{2}[-.][0-9]{1,4})",
+  "priority": 59,
+  "normalize": "Loi n° {number} (dahir n° {dahir})",
+  "authority_key": "ma.law/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Moroccan law: Loi n° <num>-<yy> promulguée par le dahir n° 1-YY-NNN",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Bulletin Officiel (sgg.gov.ma): Moroccan laws are cited with the promulgating dahir.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Loi n° 08-05 promulguée par le dahir n° 1-11-170 lui est propre.",
+        "spans": [[0, 51]],
+        "groups": {
+          "number": "08-05",
+          "dahir": "1-11-170"
+        }
+      },
+      {
+        "text": "Loi n° 31-08, promulguée par dahir n° 1-11-03 protège le consommateur.",
+        "spans": [[0, 48]]
+      },
+      {
+        "text": "loi organique n° 02-12 promulguée par le dahir n° 1-12-20 du 2012.",
+        "spans": [[0, 60]]
+      }
+    ],
+    "negative": [
+      "Loi n° 08-05 sans promulgation.",
+      "Loi n° 2004-801 du 6 août 2004 française.",
+      "La loi promulguée est publiée."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Bare 'Loi n° 08-05' (without the dahir) is deliberately not matched: it cannot be separated from Algerian yy-nn numbering. Moroccan numbering is law-number-year-of-adoption. Priority 59, above foreign.ma.dahir (58), so the law keeps the dahir that promulgates it."
+}

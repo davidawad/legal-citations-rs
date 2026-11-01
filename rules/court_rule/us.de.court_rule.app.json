@@ -1,0 +1,49 @@
+{
+  "id": "us.de.court_rule.app",
+  "kind": "court_rule",
+  "jurisdiction": "us.de",
+  "pattern": "\\b(?:Del\\.\\s?Supr?\\.\\s?Ct\\.\\s?R\\.|Supr\\.\\s?Ct\\.\\s?R\\.)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Del. Supr. Ct. R. {rule}{sub}",
+  "authority_key": "us.de.rules.app/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Delaware) Delaware Supreme Court Rules: Del. Supr. Ct. R. N; local form Supr. Ct. R. N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Delaware) and the official Delaware Supreme Court Rules; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Del. Supr. Ct. R. 14(b)(vi).",
+        "spans": [[4, 31]],
+        "groups": {
+          "rule": "14",
+          "sub": "(b)(vi)"
+        }
+      },
+      {
+        "text": "The court relied on Supr. Ct. R. 8 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under Del. Sup. Ct. R. 42(b), the claim fails.",
+        "spans": [[6, 28]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Delaware rules committee met 12 times in 2020.",
+      "Under Del. Supr. Ct. R. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

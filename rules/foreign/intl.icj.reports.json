@@ -1,0 +1,53 @@
+{
+  "id": "intl.icj.reports",
+  "kind": "foreign",
+  "jurisdiction": "intl.icj",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+I\\.\\s?C\\.\\s?J\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\b)?",
+  "priority": 60,
+  "normalize": "{volume} I.C.J. {page}",
+  "authority_key": "intl.icj/reports/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations): I.C.J. Judgments, Advisory Opinions, and Orders (1946-date), <year> I.C.J. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Military and Paramilitary Activities in and Against Nicaragua (Nicar. v. U.S.), Judgment, 1986 I.C.J. 14, 98 (June 27).",
+        "spans": [[90, 108]],
+        "groups": {
+          "volume": "1986",
+          "page": "14",
+          "pin": "98"
+        }
+      },
+      {
+        "text": "Legality of the Threat or Use of Nuclear Weapons, Advisory Opinion, 1996 I.C.J. 226 (July 8).",
+        "spans": [[68, 83]]
+      },
+      {
+        "text": "Avena and Other Mexican Nationals (Mex. v. U.S.), 2004 I.C.J. 12, 60–61 (Mar. 31).",
+        "spans": [[50, 73]]
+      }
+    ],
+    "negative": [
+      "The I.C.J. sat 14 judges in 1986.",
+      "In 1949 the I.C.J. heard 1 case.",
+      "The ICJ issued 226 orders."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The volume is the year. Pleadings and Acts & Docs are separate rules. A single-number pin is kept (Indigo T8.1 prints one) because I.C.J. Reports are almost never cited with a parallel reporter."
+}

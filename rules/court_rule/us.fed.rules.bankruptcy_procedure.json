@@ -1,0 +1,53 @@
+{
+  "id": "us.fed.rules.bankruptcy_procedure",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?:Fed\\.\\s?R\\.\\s?Bankr\\.\\s?P\\.)\\s*(?P<rule>[0-9]+(?:\\.[0-9]+)?)(?P<sub>(?:\\([a-zA-Z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "",
+  "authority_key": "us.rules.frbp/{rule}",
+  "url_templates": [
+    "https://www.law.cornell.edu/rules/frbp/rule_{rule}"
+  ],
+  "url_decoders": [
+    "law.cornell.edu/rules/frbp/rule_{rule}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (Federal Rules of Bankruptcy Procedure) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9.3 and the rule set itself.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Fed. R. Bankr. P. 7001.",
+        "spans": [[4, 26]],
+        "groups": {
+          "rule": "7001",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Fed. R. Bankr. P. 9019(a) in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under Fed.R.Bankr.P. 2004, the claim fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The local rules of the game were posted."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-23: https://www.law.cornell.edu/rules/frbp/rule_7001 answers 200 (also 9019 and 2004; rule_99999 answers 404)."
+}

@@ -1,0 +1,83 @@
+{"start": 7, "end": 18, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 671", "normalized": "26 U.S.C. § 671", "form": "prose section reference", "optional": true, "note": "IRB heading naming the Code section"}
+{"start": 119, "end": 126, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form", "note": "IRB heading"}
+{"start": 174, "end": 189, "kind": "regulation", "jurisdiction": "us.fed", "text": "26 CFR 1.1014-1", "normalized": "26 C.F.R. § 1.1014-1", "form": "C.F.R."}
+{"start": 235, "end": 251, "kind": "agency_decision", "jurisdiction": "us.fed.irs", "text": "Rev. Rul. 2023-2", "normalized": "Rev. Rul. 2023-2", "form": "IRS ruling", "note": "the document's own title"}
+{"start": 293, "end": 329, "kind": "statute", "jurisdiction": "us.fed", "text": "§ 1014 of the Internal Revenue Code", "normalized": "26 U.S.C. § 1014", "form": "I.R.C. section"}
+{"start": 980, "end": 993, "kind": "regulation", "jurisdiction": "us.fed", "text": "26 CFR part 1", "normalized": "26 C.F.R. pt. 1", "form": "C.F.R."}
+{"start": 1440, "end": 1451, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 671", "normalized": "26 U.S.C. § 671", "form": "prose section reference", "optional": true}
+{"start": 2002, "end": 2017, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1012(a)", "normalized": "26 U.S.C. § 1012(a)", "form": "prose section reference", "optional": true}
+{"start": 2420, "end": 2427, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 2429, "end": 2447, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(a)(1)", "normalized": "26 U.S.C. § 1014(a)(1)", "form": "prose section reference", "optional": true}
+{"start": 2505, "end": 2512, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 2524, "end": 2534, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(f)", "normalized": "26 U.S.C. § 1014(f)", "form": "bare § short form"}
+{"start": 2874, "end": 2889, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "prose section reference", "optional": true}
+{"start": 3023, "end": 3033, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 3069, "end": 3087, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(1)", "normalized": "26 U.S.C. § 1014(b)(1)", "form": "prose section reference", "optional": true}
+{"start": 3201, "end": 3219, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(2)", "normalized": "26 U.S.C. § 1014(b)(2)", "form": "prose section reference", "optional": true}
+{"start": 3451, "end": 3469, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(3)", "normalized": "26 U.S.C. § 1014(b)(3)", "form": "prose section reference", "optional": true}
+{"start": 3841, "end": 3859, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(4)", "normalized": "26 U.S.C. § 1014(b)(4)", "form": "prose section reference", "optional": true}
+{"start": 3999, "end": 4017, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(6)", "normalized": "26 U.S.C. § 1014(b)(6)", "form": "prose section reference", "optional": true}
+{"start": 4221, "end": 4239, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(5)", "normalized": "26 U.S.C. § 1014(b)(5)", "form": "prose section reference", "optional": true}
+{"start": 4296, "end": 4322, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(7) and (8)", "normalized": "26 U.S.C. § 1014(b)(7), (8)", "form": "prose section reference", "optional": true}
+{"start": 4340, "end": 4404, "kind": "session_law", "jurisdiction": "us.fed", "text": "section 221(a)(74)(B) of the Tax Increase Prevention Act of 2014", "normalized": "Pub. L. No. 113-295, § 221(a)(74)(B)", "form": "prose section reference", "optional": true, "note": "section of a named act; the Pub. L. and Stat. cites that follow are counted"}
+{"start": 4406, "end": 4424, "kind": "session_law", "jurisdiction": "us.fed", "text": "Public Law 113-295", "normalized": "Pub. L. No. 113-295", "form": "Stat./Pub. L."}
+{"start": 4426, "end": 4466, "kind": "session_law", "jurisdiction": "us.fed", "text": "128 Stat. 4010, 4049 (December 19, 2014)", "normalized": "128 Stat. 4010", "form": "Stat./Pub. L."}
+{"start": 4679, "end": 4722, "kind": "statute", "jurisdiction": "us.fed", "text": "§ 811 of the Internal\nRevenue Code of 1939", "normalized": "I.R.C. 1939 § 811", "form": "I.R.C. section"}
+{"start": 4741, "end": 4759, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(9)", "normalized": "26 U.S.C. § 1014(b)(9)", "form": "prose section reference", "optional": true}
+{"start": 5260, "end": 5270, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 5545, "end": 5558, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(9)", "normalized": "26 U.S.C. § 1014(b)(9)", "form": "bare § short form"}
+{"start": 5605, "end": 5610, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 72", "normalized": "26 U.S.C. § 72", "form": "bare § short form"}
+{"start": 5740, "end": 5746, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 552", "normalized": "26 U.S.C. § 552", "form": "bare § short form"}
+{"start": 5823, "end": 5836, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(5)", "normalized": "26 U.S.C. § 1014(b)(5)", "form": "bare § short form"}
+{"start": 5959, "end": 5969, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 5984, "end": 6003, "kind": "statute", "jurisdiction": "us.fed", "text": "Section 1014(b)(10)", "normalized": "26 U.S.C. § 1014(b)(10)", "form": "prose section reference", "optional": true}
+{"start": 6070, "end": 6077, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2044", "normalized": "26 U.S.C. § 2044", "form": "bare § short form"}
+{"start": 6213, "end": 6226, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(9)", "normalized": "26 U.S.C. § 1014(b)(9)", "form": "bare § short form"}
+{"start": 6287, "end": 6300, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(9)", "normalized": "26 U.S.C. § 1014(b)(9)", "form": "bare § short form"}
+{"start": 6303, "end": 6322, "kind": "regulation", "jurisdiction": "us.fed", "text": "Section 1.1014-1(a)", "normalized": "26 C.F.R. § 1.1014-1(a)", "form": "prose section reference", "optional": true}
+{"start": 6693, "end": 6700, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2032", "normalized": "26 U.S.C. § 2032", "form": "bare § short form"}
+{"start": 6986, "end": 7019, "kind": "statute", "jurisdiction": "us.fed", "text": "the Internal Revenue Code of 1954", "normalized": "Internal Revenue Code of 1954", "form": "prose section reference", "optional": true, "note": "code named by title without a section"}
+{"start": 7038, "end": 7060, "kind": "regulation", "jurisdiction": "us.fed", "text": "Section 1.1014-2(a)(1)", "normalized": "26 C.F.R. § 1.1014-2(a)(1)", "form": "prose section reference", "optional": true}
+{"start": 7441, "end": 7452, "kind": "regulation", "jurisdiction": "us.fed", "text": "§ 1.1014-1", "normalized": "26 C.F.R. § 1.1014-1", "form": "bare § short form", "note": "Treasury regulation by bare §"}
+{"start": 7454, "end": 7476, "kind": "regulation", "jurisdiction": "us.fed", "text": "Section 1.1014-2(b)(2)", "normalized": "26 C.F.R. § 1.1014-2(b)(2)", "form": "prose section reference", "optional": true}
+{"start": 7686, "end": 7719, "kind": "agency_decision", "jurisdiction": "us.fed.irs", "text": "Rev. Rul. 84-139, 1984-2 C.B. 168", "normalized": "Rev. Rul. 84-139, 1984-2 C.B. 168", "form": "IRS ruling"}
+{"start": 8150, "end": 8157, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2103", "normalized": "26 U.S.C. § 2103", "form": "bare § short form"}
+{"start": 8436, "end": 8449, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(1)", "normalized": "26 U.S.C. § 1014(b)(1)", "form": "bare § short form"}
+{"start": 8560, "end": 8576, "kind": "agency_decision", "jurisdiction": "us.fed.irs", "text": "Rev. Rul. 84-139", "normalized": "Rev. Rul. 84-139", "form": "IRS ruling"}
+{"start": 8724, "end": 8734, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 8863, "end": 8873, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 8940, "end": 8950, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 9024, "end": 9034, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 9149, "end": 9162, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(1)", "normalized": "26 U.S.C. § 1014(b)(1)", "form": "bare § short form"}
+{"start": 9256, "end": 9296, "kind": "secondary", "jurisdiction": "us", "text": "Black’s Law Dictionary (11th ed. 2019)", "normalized": "Black’s Law Dictionary (11th ed. 2019)", "form": "dictionary"}
+{"start": 9428, "end": 9434, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 102", "normalized": "26 U.S.C. § 102", "form": "bare § short form"}
+{"start": 9544, "end": 9598, "kind": "case", "jurisdiction": "us.scotus", "text": "United States v. Merriam, 263 U.S. 179, 184\n\n\f7\n(1923)", "normalized": "263 U.S. 179", "form": "U.S. Reports", "note": "page number 7 inside the span"}
+{"start": 9681, "end": 9721, "kind": "secondary", "jurisdiction": "us", "text": "Black’s Law\nDictionary (11th ed. 2019)", "normalized": "Black’s Law Dictionary (11th ed. 2019)", "form": "dictionary"}
+{"start": 9997, "end": 10027, "kind": "secondary", "jurisdiction": "us", "text": "97 C.J.S. Wills § 1861 (2022)", "normalized": "97 C.J.S. Wills § 1861", "form": "book/treatise"}
+{"start": 10173, "end": 10213, "kind": "secondary", "jurisdiction": "us", "text": "Black’s Law Dictionary (11th ed.\n2019)", "normalized": "Black’s Law Dictionary (11th ed. 2019)", "form": "dictionary"}
+{"start": 10218, "end": 10282, "kind": "case", "jurisdiction": "us.fed.app.ca6", "text": "Bacciocco v. United States, 286 F.2d 551, 554-55 (6th Cir. 1961)", "normalized": "286 F.2d 551", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10651, "end": 10664, "kind": "id", "jurisdiction": "us.fed.app.ca6", "text": "Id. at 554-56", "normalized": "Id. at 554-56", "form": "Id."}
+{"start": 10750, "end": 10757, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 10856, "end": 10884, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§§ 1014(b)(2), (3), or (4)", "normalized": "26 U.S.C. § 1014(b)(2), (3), (4)", "form": "bare § short form"}
+{"start": 11102, "end": 11112, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 11130, "end": 11159, "kind": "statute", "jurisdiction": "us.fed", "text": "§ 113(a)(5) of the 1939 Code", "normalized": "I.R.C. 1939 § 113(a)(5)", "form": "I.R.C. section"}
+{"start": 11296, "end": 11305, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 811(a)", "normalized": "I.R.C. 1939 § 811(a)", "form": "bare § short form", "note": "1939 Code"}
+{"start": 11336, "end": 11346, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2031(a)", "normalized": "26 U.S.C. § 2031(a)", "form": "bare § short form"}
+{"start": 11542, "end": 11589, "kind": "legislative", "jurisdiction": "us.fed", "text": "H.R. Rep. No 83-1337 at 4407-08 (March 9, 1954)", "normalized": "H.R. Rep. No. 83-1337", "form": "legislative material"}
+{"start": 11624, "end": 11688, "kind": "case", "jurisdiction": "us.fed.dist.cacd", "text": "Collins v. United States, 318 F. Supp. 382, 386 (C.D. Cal. 1970)", "normalized": "318 F. Supp. 382", "form": "F. Supp."}
+{"start": 12082, "end": 12089, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 12383, "end": 12393, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 12421, "end": 12449, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§§ 1014(b)(2), (3), or (4)", "normalized": "26 U.S.C. § 1014(b)(2), (3), (4)", "form": "bare § short form"}
+{"start": 12569, "end": 12582, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(6)", "normalized": "26 U.S.C. § 1014(b)(6)", "form": "bare § short form"}
+{"start": 12656, "end": 12679, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§§ 1014(b)(9) or (10)", "normalized": "26 U.S.C. § 1014(b)(9), (10)", "form": "bare § short form"}
+{"start": 12860, "end": 12870, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 12920, "end": 12930, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 13097, "end": 13107, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 13357, "end": 13367, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(a)", "normalized": "26 U.S.C. § 1014(a)", "form": "bare § short form"}
+{"start": 13369, "end": 13382, "kind": "id", "jurisdiction": "us.fed.dist.cacd", "text": "Id. at 385-86", "normalized": "Id. at 385-86", "form": "Id."}
+{"start": 13733, "end": 13740, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 13812, "end": 13822, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}
+{"start": 14387, "end": 14403, "kind": "agency_decision", "jurisdiction": "us.fed.irs", "text": "Rev. Rul. 84-139", "normalized": "Rev. Rul. 84-139", "form": "IRS ruling"}
+{"start": 14549, "end": 14556, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014", "normalized": "26 U.S.C. § 1014", "form": "bare § short form"}
+{"start": 14642, "end": 14655, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)(1)", "normalized": "26 U.S.C. § 1014(b)(1)", "form": "bare § short form"}
+{"start": 14698, "end": 14708, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 1014(b)", "normalized": "26 U.S.C. § 1014(b)", "form": "bare § short form"}

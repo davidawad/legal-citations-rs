@@ -1,0 +1,55 @@
+{
+  "id": "foreign.sa.bog",
+  "kind": "foreign",
+  "jurisdiction": "foreign.sa.bog",
+  "tags": [
+    "mena",
+    "gcc",
+    "sa"
+  ],
+  "pattern": "\\b(?:Board\\s+of\\s+Grievances|Diwan\\s+[Aa]l-Mazalim),?\\s+(?:[A-Z][a-z]+\\s+Circuit,?\\s+)?(?P<kind>Decision|Case|Appeal|Judgment)\\s+No\\.?\\s*(?P<number>[0-9]{1,6}(?:/[A-Za-z0-9]{1,4}){0,3})\\s+(?:of|dated)\\s+(?:[0-9]{1,2}/[0-9]{1,2}/)?(?P<year>1[2-5][0-9]{2})\\s*(?:H|AH)\\b",
+  "priority": 60,
+  "normalize": "Board of Grievances {kind} No. {number} of {year}H",
+  "authority_key": "sa.bog/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Board of Grievances (Diwan al-Mazalim) decisions cited as <Decision|Case|Appeal> No. <n>[/circuit codes] of <Hijri year>H",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open reported Board of Grievances collections (Diwan al-Mazalim 'Collection of Administrative and Commercial Principles and Judgments') and a Saudi law-firm article citing them.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Board of Grievances, Decision No. 131/D/TJ/1 of 1428H.",
+        "spans": [[0, 53]],
+        "groups": {
+          "kind": "Decision",
+          "number": "131/D/TJ/1",
+          "year": "1428"
+        }
+      },
+      {
+        "text": "Diwan al-Mazalim Appeal No. 3567/1/Q dated 1437H was upheld.",
+        "spans": [[0, 48]]
+      },
+      {
+        "text": "Board of Grievances, Commercial Circuit, Case No. 1234 dated 5/6/1440 H",
+        "spans": [[0, 71]]
+      }
+    ],
+    "negative": [
+      "The Board of Grievances heard the case.",
+      "Board of Grievances Case No. 12 of 2019",
+      "Decision No. 131 of 1428H"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Number segments after the slash (circuit codes such as D/TJ/1) vary by report; unverified against the official collection."
+}

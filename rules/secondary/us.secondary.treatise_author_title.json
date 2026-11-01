@@ -1,0 +1,63 @@
+{
+  "id": "us.secondary.treatise_author_title",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?P<author>[A-Z][A-Za-z.'’-]*(?:\\s(?:[A-Z][A-Za-z.'’-]*|&|and|et\\sal\\.)){0,7}),\\s+(?P<title>[A-Z][A-Za-z ’'&:-]{3,80}?)\\s+§\\s*(?P<section>[0-9]+(?:[.:][0-9]+)*(?:\\[[A-Za-z0-9]{1,3}\\])*)(?:\\s+at\\s+(?P<pin>[0-9]+(?:[-–][0-9]+)*))?",
+  "priority": 55,
+  "normalize": "{volume} {author}, {title} § {section}",
+  "authority_key": "treatise/{title}/{volume}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book R28 (Full Citation for Books & Non-Periodicals): [<vol>] <author(s)>, <title> § <section> [at <page>] (<ed.> <year>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 5 Wright & Miller, Federal Practice and Procedure § 1357.",
+        "spans": [[4, 61]],
+        "groups": {
+          "volume": "5",
+          "author": "Wright & Miller",
+          "title": "Federal Practice and Procedure",
+          "section": "1357"
+        }
+      },
+      {
+        "text": "The court relied on 18 Moore, Federal Practice § 131.10 in reaching its holding.",
+        "spans": [[20, 56]]
+      },
+      {
+        "text": "Under 2 Corbin, Contracts § 4.1, the claim fails.",
+        "spans": [[6, 32]]
+      },
+      {
+        "text": "1 Melville B. Nimmer & David Nimmer, Nimmer on Copyright § 1.01[B][1][a] at 1–14–15 (2011).",
+        "spans": [[0, 88]]
+      },
+      {
+        "text": "3 Melville Nimmer & David Nimmer, Nimmer on Copyright § 12.01 (Rev. ed. 2015).",
+        "spans": [[0, 62]]
+      },
+      {
+        "text": "4 Charles Alan Wright et al., Federal Practice and Procedure § 1069.2 (4th ed. 2015).",
+        "spans": [[0, 70]]
+      }
+    ],
+    "negative": [
+      "The law review editors met on Tuesday.",
+      "The restatement of earnings was filed in 2020.",
+      "A treatise on gardening runs 400 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Outranks us.secondary.treatise_on so a volume and author before `X on Y` stay in the span."
+}

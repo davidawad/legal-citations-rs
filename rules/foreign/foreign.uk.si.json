@@ -1,0 +1,58 @@
+{
+  "id": "foreign.uk.si",
+  "kind": "foreign",
+  "jurisdiction": "foreign.gb",
+  "tags": [
+    "foreign",
+    "uk"
+  ],
+  "pattern": "\\b(?P<series>S\\.?\\s?I\\.?|S\\.?\\s?S\\.?\\s?I\\.?|S\\.?\\s?R\\.?\\s?(?:\\(NI\\)\\s?)?|W\\.?\\s?S\\.?\\s?I\\.?)\\s+(?P<year>(?:19|20)[0-9]{2})/(?P<number>[0-9]{1,4})\\b",
+  "reject_before": [
+    "[A-Za-z]\\.?$"
+  ],
+  "priority": 60,
+  "normalize": "SI {year}/{number}",
+  "authority_key": "uk.si/{series}/{year}/{number}",
+  "url_templates": [
+    "https://www.legislation.gov.uk/uksi/{year}/{number}"
+  ],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "OSCOLA (4th ed.) 2.4.4 (statutory instruments: <Title> <year>, SI <year>/<number>); Bluebook T2 (United Kingdom)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open OSCOLA (4th ed.) 2.4.4 and legislation.gov.uk numbering (uksi, ssi, nisr, wsi).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Data Protection, Privacy and Electronic Communications (Amendments etc) (EU Exit) Regulations 2019, SI 2019/419.",
+        "spans": [[104, 115]],
+        "groups": {
+          "year": "2019",
+          "number": "419"
+        }
+      },
+      {
+        "text": "Civil Procedure Rules 1998, S.I. 1998/3132, r 3.4.",
+        "spans": [[28, 42]]
+      },
+      {
+        "text": "The Scottish rules are in SSI 2014/209.",
+        "spans": [[26, 38]]
+      }
+    ],
+    "negative": [
+      "The SI unit is 2019 metres.",
+      "Look at OSI 2019/419 for details.",
+      "SI units changed in 2019."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The URL template is right for UK SIs only (SSI, NISR and WSI have their own legislation.gov.uk paths). url_templates verified by HTTP fetch on 2026-10-23: https://www.legislation.gov.uk/uksi/2019/419 answers 200 with that SI (also 2018/1234, which redirects to /made; 2018/99999 answers 400)."
+}

@@ -1,0 +1,68 @@
+{"start": 1143, "end": 1170, "kind": "federal_register", "jurisdiction": "us.fed", "text": "75 FR 65263 (Oct.\n22, 2010)", "normalized": "75 Fed. Reg. 65263", "form": "Fed. Reg.", "note": "rule title before the cite not included"}
+{"start": 1283, "end": 1310, "kind": "federal_register", "jurisdiction": "us.fed", "text": "80 FR 21928\n(Apr. 20, 2015)", "normalized": "80 Fed. Reg. 21928", "form": "Fed. Reg."}
+{"start": 1423, "end": 1449, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 20946 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 20946", "form": "Fed. Reg."}
+{"start": 1564, "end": 1578, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR at 20946", "normalized": "81 Fed. Reg. at 20946", "form": "Fed. Reg."}
+{"start": 1585, "end": 1597, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 20955", "normalized": "Id. at 20955", "form": "Id."}
+{"start": 2121, "end": 2135, "kind": "federal_register", "jurisdiction": "us.fed", "text": "[[Page 32126]]", "normalized": "89 Fed. Reg. 32126", "form": "page furniture", "optional": true}
+{"start": 2861, "end": 2888, "kind": "federal_register", "jurisdiction": "us.fed", "text": "40 FR 50842 (Oct.\n31, 1975)", "normalized": "40 Fed. Reg. 50842", "form": "Fed. Reg."}
+{"start": 2990, "end": 3004, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR at 20955", "normalized": "81 Fed. Reg. at 20955", "form": "Fed. Reg."}
+{"start": 3011, "end": 3014, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 3020, "end": 3023, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4213, "end": 4216, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4222, "end": 4225, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4231, "end": 4246, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 20955-56", "normalized": "Id. at 20955", "form": "Id."}
+{"start": 5251, "end": 5263, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 20946", "normalized": "Id. at 20946", "form": "Id."}
+{"start": 5270, "end": 5282, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 20997", "normalized": "Id. at 20997", "form": "Id."}
+{"start": 5417, "end": 5443, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "Advisory\nOpinion, 2005-23A", "normalized": "DOL Adv. Op. 2005-23A", "form": "agency advisory opinion", "note": "DOL ERISA advisory opinion named in prose"}
+{"start": 5823, "end": 5835, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 20949", "normalized": "Id. at 20949", "form": "Id."}
+{"start": 6733, "end": 6759, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21002 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21002", "form": "Fed. Reg."}
+{"start": 6766, "end": 6792, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21089 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21089", "form": "Fed. Reg."}
+{"start": 6799, "end": 6826, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21002 (April 8, 2016)", "normalized": "81 Fed. Reg. 21002", "form": "Fed. Reg."}
+{"start": 7980, "end": 8026, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "PTEs\n75-1, 77-4, 80-83, 83-1, 84-24 and 86-128", "normalized": "PTE 75-1", "form": "agency exemption (PTE)", "optional": true, "note": "list of DOL prohibited transaction class exemptions named in prose"}
+{"start": 8242, "end": 8253, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21002", "normalized": "81 Fed. Reg. 21002", "form": "Fed. Reg."}
+{"start": 8264, "end": 8284, "kind": "statute", "jurisdiction": "us.fed", "text": "ERISA section 408(a)", "normalized": "29 U.S.C. § 1108(a)", "form": "U.S.C.", "note": "ERISA section numbering"}
+{"start": 8286, "end": 8309, "kind": "statute", "jurisdiction": "us.fed", "text": "Code section 4975(c)(2)", "normalized": "I.R.C. § 4975(c)(2)", "form": "I.R.C. section"}
+{"start": 8350, "end": 8364, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR at 21077", "normalized": "81 Fed. Reg. at 21077", "form": "Fed. Reg."}
+{"start": 8371, "end": 8383, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 21076", "normalized": "Id. at 21076", "form": "Id."}
+{"start": 8390, "end": 8404, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 21078-9", "normalized": "Id. at 21078", "form": "Id."}
+{"start": 8411, "end": 8437, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21139 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21139", "form": "Fed. Reg."}
+{"start": 8439, "end": 8465, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21147 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21147", "form": "Fed. Reg."}
+{"start": 8467, "end": 8493, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81\nFR 21181 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21181", "form": "Fed. Reg."}
+{"start": 8495, "end": 8521, "kind": "federal_register", "jurisdiction": "us.fed", "text": "81 FR 21208 (Apr. 8, 2016)", "normalized": "81 Fed. Reg. 21208", "form": "Fed. Reg."}
+{"start": 9668, "end": 9740, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Nat'l Assoc. for Fixed Annuities v. Perez, 217 F.Supp.3d 1\n(D.D.C. 2016)", "normalized": "217 F. Supp. 3d 1", "form": "F. Supp."}
+{"start": 9972, "end": 10059, "kind": "case", "jurisdiction": "us.fed.app.cadc", "text": "Nat'l Assoc. for\nFixed Annuities v. Perez, No. 16-5345, 2016 BL 452075 (D.C. Cir.\n2016)", "normalized": "2016 BL 452075", "form": "Bloomberg Law", "note": "docket number kept inside the database cite"}
+{"start": 10066, "end": 10100, "kind": "case_short", "jurisdiction": "us.fed.dist.dcd", "text": "NAFA, 217 F. Supp. 3d at 23, 27-28", "normalized": "217 F. Supp. 3d at 23", "form": "short case (at)"}
+{"start": 10107, "end": 10136, "kind": "case", "jurisdiction": "us.fed.app.ca10", "text": "885 F.3d 676 (10th Cir. 2018)", "normalized": "885 F.3d 676", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10142, "end": 10242, "kind": "case", "jurisdiction": "us.fed.dist.mnd", "text": "Thrivent Financial for\nLutherans v. Acosta, No. 16-CV-03289, 2017 WL 5135552 (D. Minn. Nov.\n3, 2017)", "normalized": "2017 WL 5135552", "form": "Westlaw"}
+{"start": 10508, "end": 10531, "kind": "statute", "jurisdiction": "us.fed", "text": "Federal Arbitration Act", "normalized": "9 U.S.C. § 1 et seq.", "form": "prose section reference", "optional": true, "note": "statute named only by title, in an explanatory parenthetical"}
+{"start": 10885, "end": 10899, "kind": "federal_register", "jurisdiction": "us.fed", "text": "[[Page 32127]]", "normalized": "89 Fed. Reg. 32127", "form": "page furniture", "optional": true}
+{"start": 10989, "end": 11015, "kind": "statute", "jurisdiction": "us.fed", "text": "ERISA section 3(21)(A)(ii)", "normalized": "29 U.S.C. § 1002(21)(A)(ii)", "form": "U.S.C.", "note": "ERISA section numbering"}
+{"start": 11020, "end": 11046, "kind": "statute", "jurisdiction": "us.fed", "text": "Code section\n4975(e)(3)(B)", "normalized": "I.R.C. § 4975(e)(3)(B)", "form": "I.R.C. section"}
+{"start": 11693, "end": 11768, "kind": "case", "jurisdiction": "us.fed.dist.txnd", "text": "Chamber of Commerce v. Hugler, 231 F. Supp. 3d 152 (N.D.\nTex. Feb. 8, 2017)", "normalized": "231 F. Supp. 3d 152", "form": "F. Supp."}
+{"start": 12048, "end": 12076, "kind": "case", "jurisdiction": "us.fed.app.ca5", "text": "885 F.3d 360 (5th Cir. 2018)", "normalized": "885 F.3d 360", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 12086, "end": 12096, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "id. at 391", "normalized": "Id. at 391", "form": "Id."}
+{"start": 12313, "end": 12323, "kind": "id", "jurisdiction": "us.fed.app.ca5", "text": "Id. at 369", "normalized": "Id. at 369", "form": "Id."}
+{"start": 12333, "end": 12387, "kind": "case", "jurisdiction": "us.scotus", "text": "Mertens v. Hewitt Associates, 508 U.S.\n248, 262 (1993)", "normalized": "508 U.S. 248", "form": "U.S. Reports"}
+{"start": 14001, "end": 14025, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Chamber, 885 F.3d at 384", "normalized": "885 F.3d at 384", "form": "short case (at)"}
+{"start": 14032, "end": 14057, "kind": "statute", "jurisdiction": "us.fed", "text": "Code section 4975(a), (b)", "normalized": "I.R.C. § 4975(a)", "form": "I.R.C. section"}
+{"start": 14064, "end": 14088, "kind": "case_short", "jurisdiction": "us.fed.app.ca5", "text": "Chamber, 885 F.3d at 384", "normalized": "885 F.3d at 384", "form": "short case (at)"}
+{"start": 14272, "end": 14306, "kind": "agency_manual", "jurisdiction": "us.fed.dol", "text": "Field Assistance Bulletin 2018-\n02", "normalized": "FAB 2018-02", "form": "agency guidance", "optional": true, "note": "DOL Field Assistance Bulletin named in prose"}
+{"start": 14415, "end": 14426, "kind": "agency_manual", "jurisdiction": "us.fed.dol", "text": "FAB 2018-02", "normalized": "FAB 2018-02", "form": "agency guidance", "optional": true}
+{"start": 14433, "end": 14444, "kind": "agency_manual", "jurisdiction": "us.fed.dol", "text": "FAB\n2018-02", "normalized": "FAB 2018-02", "form": "agency guidance", "optional": true}
+{"start": 15414, "end": 15440, "kind": "agency_manual", "jurisdiction": "us.fed.dol", "text": "Interpretive Bulletin 96-1", "normalized": "IB 96-1", "form": "agency guidance", "optional": true}
+{"start": 15442, "end": 15449, "kind": "agency_manual", "jurisdiction": "us.fed.dol", "text": "IB\n96-1", "normalized": "IB 96-1", "form": "agency guidance", "optional": true}
+{"start": 15956, "end": 15982, "kind": "federal_register", "jurisdiction": "us.fed", "text": "85 FR 40589 (July 7, 2020)", "normalized": "85 Fed. Reg. 40589", "form": "Fed. Reg."}
+{"start": 16166, "end": 16177, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "PTE 2020-02", "normalized": "PTE 2020-02", "form": "agency exemption (PTE)", "optional": true}
+{"start": 16440, "end": 16467, "kind": "federal_register", "jurisdiction": "us.fed", "text": "85 FR 82798 (Dec. 18, 2020)", "normalized": "85 Fed. Reg. 82798", "form": "Fed. Reg."}
+{"start": 16562, "end": 16573, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "PTE 2020-02", "normalized": "PTE 2020-02", "form": "agency exemption (PTE)", "optional": true}
+{"start": 17834, "end": 17848, "kind": "id", "jurisdiction": "us.fed", "text": "Id. at 82802-9", "normalized": "Id. at 82802", "form": "Id."}
+{"start": 17855, "end": 17858, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 17864, "end": 17867, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 17873, "end": 17876, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 17882, "end": 18003, "kind": "secondary", "jurisdiction": "us.fed.dol", "text": "New Fiduciary Advice Exemption: PTE 2020-02 Improving\nInvestment Advice for Workers & Retirees Frequently Asked Questions", "normalized": "New Fiduciary Advice Exemption: PTE 2020-02 FAQs", "form": "agency guidance", "optional": true, "note": "agency FAQ web page cited by title and URL; URL excluded"}
+{"start": 18354, "end": 18365, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "PTE 2020-02", "normalized": "PTE 2020-02", "form": "agency exemption (PTE)", "optional": true}
+{"start": 18919, "end": 18930, "kind": "agency_decision", "jurisdiction": "us.fed.dol", "text": "PTE 2020-02", "normalized": "PTE 2020-02", "form": "agency exemption (PTE)", "optional": true}
+{"start": 19199, "end": 19305, "kind": "case", "jurisdiction": "us.fed.dist.flmd", "text": "Am. Sec. Ass'n. v. U.S. Dep't of Labor, No. 8:22-\nCV-330VMC-CPT, 2023 WL 1967573 (M.D. Fla. Feb. 13, 2023)", "normalized": "2023 WL 1967573", "form": "Westlaw", "note": "preceded by 'Compl.,' document designation, excluded"}
+{"start": 19315, "end": 19421, "kind": "case", "jurisdiction": "us.fed.dist.txnd", "text": "Fed'n of Ams. for Consumer Choice v. U.S. Dep't of Labor, No. 3:22-\nCV-00243-K-BT (N.D. Tex. Feb. 2, 2022)", "normalized": "No. 3:22-CV-00243-K-BT", "form": "slip opinion/docket", "note": "complaint cited by docket and filing date; 'Compl.,' excluded"}
+{"start": 19428, "end": 19494, "kind": "case_short", "jurisdiction": "us.fed.dist.flmd", "text": "Am. Sec. Ass'n. v. U.S. Dep't of Labor, 2023 WL 1967573, at\n*22-23", "normalized": "2023 WL 1967573, at *22", "form": "short case (at)"}
+{"start": 19587, "end": 19721, "kind": "case", "jurisdiction": "us.fed.dist.txnd", "text": "Fed'n of Ams. for Consumer Choice v.\nU.S. Dep't of Labor, No. 3:22-CV-00243-K-BT, 2023 WL 5682411, at\n*27-29 (N.D. Tex. June 30, 2023)", "normalized": "2023 WL 5682411", "form": "Westlaw", "note": "document title (Findings, Conclusions...) before case name excluded"}

@@ -1,0 +1,86 @@
+{"start": 0, "end": 64, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 1 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 226, "end": 245, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "No. 25-cv-13452-ADB", "normalized": "No. 25-cv-13452", "form": "docket number"}
+{"start": 469, "end": 479, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 29", "normalized": "ECF No. 29", "form": "record: ECF/Dkt"}
+{"start": 585, "end": 595, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 31", "normalized": "ECF No. 31", "form": "record: ECF/Dkt"}
+{"start": 1150, "end": 1153, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF", "normalized": "ECF No. 1", "form": "record: ECF/Dkt", "optional": true, "note": "first half of \"[ECF ... No. 1 at 3–5]\", split by footnote 1 and the page header"}
+{"start": 1284, "end": 1294, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 35", "normalized": "ECF No. 35", "form": "record: ECF/Dkt"}
+{"start": 1330, "end": 1340, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 37", "normalized": "ECF No. 37", "form": "record: ECF/Dkt"}
+{"start": 1365, "end": 1429, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 2 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 1431, "end": 1445, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "No. 1 at 3–5", "normalized": "ECF No. 1 at 3–5", "form": "record: ECF/Dkt", "note": "\"[ECF\" and \"No. 1 at 3–5]\" are split by footnote 1 and the page header; by the footnote rule the counted span starts at the docket number"}
+{"start": 1598, "end": 1663, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 16 (“second\namended complaint” or “SAC”) at 1–4", "normalized": "ECF No. 16 at 1–4", "form": "record: ECF/Dkt", "note": "definitional parenthetical sits between the docket entry and its pin"}
+{"start": 2184, "end": 2192, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. at 5", "normalized": "Id. at 5", "form": "Id."}
+{"start": 2196, "end": 2239, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id.\n¶¶ 19, 23, 34, 38–39, 101, 107, 114", "normalized": "Id. ¶¶ 19, 23, 34, 38–39, 101, 107, 114", "form": "Id."}
+{"start": 2382, "end": 2391, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "SAC ¶ 51", "normalized": "SAC ¶ 51", "form": "record: complaint/brief"}
+{"start": 2428, "end": 2444, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶\n28–29", "normalized": "Id. ¶¶ 28–29", "form": "Id."}
+{"start": 2486, "end": 2495, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶ 36", "normalized": "Id. ¶ 36", "form": "Id."}
+{"start": 2533, "end": 2542, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶\n51", "normalized": "Id. ¶ 51", "form": "Id."}
+{"start": 2564, "end": 2580, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶ 55–56", "normalized": "Id. ¶¶ 55–56", "form": "Id."}
+{"start": 2596, "end": 2615, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶ 48, 66, 81", "normalized": "Id. ¶¶ 48, 66, 81", "form": "Id."}
+{"start": 2683, "end": 2700, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶ 107, 110", "normalized": "Id. ¶¶ 107, 110", "form": "Id."}
+{"start": 2741, "end": 2751, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id.\n¶ 112", "normalized": "Id. ¶ 112", "form": "Id."}
+{"start": 2786, "end": 2796, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶ 113", "normalized": "Id. ¶ 113", "form": "Id."}
+{"start": 2833, "end": 2852, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶ 149–\n150", "normalized": "Id. ¶¶ 149– 150", "form": "Id."}
+{"start": 3084, "end": 3092, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "Id. at 5", "normalized": "Id. at 5", "form": "Id."}
+{"start": 3096, "end": 3116, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id. ¶¶ 69, 74, 138", "normalized": "Id. ¶¶ 69, 74, 138", "form": "Id."}
+{"start": 3236, "end": 3267, "kind": "statute", "jurisdiction": "us.fed", "text": "Americans with Disabilities Act", "normalized": "Americans with Disabilities Act", "form": "prose section reference", "optional": true}
+{"start": 3285, "end": 3326, "kind": "statute", "jurisdiction": "us.fed", "text": "Title VII of the\nCivil Rights Act of 1964", "normalized": "Civil Rights Act of 1964, Title VII", "form": "prose section reference", "optional": true}
+{"start": 3329, "end": 3343, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "SAC at 25–32", "normalized": "SAC at 25–32", "form": "record: complaint/brief"}
+{"start": 3462, "end": 3472, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 29", "normalized": "ECF No. 29", "form": "record: ECF/Dkt"}
+{"start": 3593, "end": 3657, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 3 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 3759, "end": 3769, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 32", "normalized": "ECF No. 32", "form": "record: ECF/Dkt"}
+{"start": 3822, "end": 3832, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 33", "normalized": "ECF No. 33", "form": "record: ECF/Dkt"}
+{"start": 3924, "end": 3964, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Federal Rule of Civil Procedure 12(b)(6)", "normalized": "Fed. R. Civ. P. 12(b)(6)", "form": "federal rule"}
+{"start": 4160, "end": 4220, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Gilbert v.\nCity of Chicopee, 915 F.3d 74, 80 (1st Cir. 2019)", "normalized": "915 F.3d 74", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 4350, "end": 4402, "kind": "case", "jurisdiction": "us.scotus", "text": "Bell Atl. Corp. v.\nTwombly, 550 U.S. 544, 555 (2007)", "normalized": "550 U.S. 544", "form": "U.S. Reports"}
+{"start": 4577, "end": 4633, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Gagliardi v. Sullivan, 513 F.3d 301, 305 (1st Cir. 2008)", "normalized": "513 F.3d 301", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 4673, "end": 4759, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Centro Médico del Turabo, Inc. v. Feliciano de Melecio, 406 F.3d 1, 6 (1st Cir.\n2005)", "normalized": "406 F.3d 1", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 4863, "end": 4887, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Twombly, 550 U.S. at 570", "normalized": "550 U.S. at 570", "form": "short case (at)"}
+{"start": 5037, "end": 5104, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Grajales v. P.R. Ports Auth., 682 F.3d 40, 44–\n45 (1st Cir. 2012)", "normalized": "682 F.3d 40", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 5113, "end": 5156, "kind": "case", "jurisdiction": "us.scotus", "text": "Ashcroft v. Iqbal, 556 U.S. 662, 678 (2009)", "normalized": "556 U.S. 662", "form": "U.S. Reports"}
+{"start": 5317, "end": 5326, "kind": "id", "jurisdiction": "us.fed.app.ca1", "text": "Id. at 44", "normalized": "Id. at 44", "form": "Id."}
+{"start": 5336, "end": 5358, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Iqbal, 556 U.S. at 679", "normalized": "556 U.S. at 679", "form": "short case (at)"}
+{"start": 5389, "end": 5399, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 15(a)", "normalized": "Fed. R. Civ. P. 15(a)", "form": "prose section reference", "optional": true}
+{"start": 5579, "end": 5673, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Fed. R.\n3\n\n\fCase 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 4 of 8\n\nCiv. P. 15(a)(2)", "normalized": "Fed. R. Civ. P. 15(a)(2)", "form": "federal rule", "note": "split by a page break; span covers the page number and header"}
+{"start": 5830, "end": 5903, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Kader v. Sarepta Therapeutics,\nInc., 887 F.3d 48, 60–61 (1st Cir. 2018)", "normalized": "887 F.3d 48", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6084, "end": 6157, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "ACA Fin. Guar. Corp v. Advest, Inc., 512 F.3d 46, 55–56 (1st Cir.\n2008)", "normalized": "512 F.3d 46", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6167, "end": 6208, "kind": "case", "jurisdiction": "us.scotus", "text": "Forman v. Davis, 371 U.S. 178, 182 (1962)", "normalized": "371 U.S. 178", "form": "U.S. Reports"}
+{"start": 6360, "end": 6420, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Rife v. One W. Bank, F.S.B., 873 F.3d 17, 21\n(1st Cir. 2017)", "normalized": "873 F.3d 17", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6430, "end": 6496, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Glassman v. Computervision Corp., 90 F.3d 617, 623 (1st Cir. 1966)", "normalized": "90 F.3d 617", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6631, "end": 6644, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(6)", "normalized": "Fed. R. Civ. P. 12(b)(6)", "form": "prose section reference", "optional": true}
+{"start": 6650, "end": 6726, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Amyndas Pharms., S.A. v.\nZealand Pharma A/S, 48 F.4th 18, 40 (1st Cir. 2022)", "normalized": "48 F.4th 18", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 7147, "end": 7162, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 30 at 8", "normalized": "ECF No. 30 at 8", "form": "record: ECF/Dkt"}
+{"start": 7252, "end": 7255, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "SAC", "normalized": "SAC", "form": "record: complaint/brief", "optional": true, "note": "\"See generally [SAC]\": whole-document record reference"}
+{"start": 7439, "end": 7468, "kind": "case_short", "jurisdiction": "us.fed.app.ca1", "text": "Grajales,\n682 F.3d at 44–45", "normalized": "682 F.3d at 44–45", "form": "short case (at)"}
+{"start": 7477, "end": 7499, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Iqbal, 556 U.S. at 678", "normalized": "556 U.S. at 678", "form": "short case (at)"}
+{"start": 7546, "end": 7610, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 5 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 7853, "end": 7875, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Iqbal, 556 U.S. at 676", "normalized": "556 U.S. at 676", "form": "short case (at)"}
+{"start": 7884, "end": 7947, "kind": "case", "jurisdiction": "us.scotus", "text": "Monell v.\nN.Y.C. Dept. of Soc. Servs., 436 U.S. 658, 691 (1978)", "normalized": "436 U.S. 658", "form": "U.S. Reports"}
+{"start": 8463, "end": 8522, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Sonoiki v. Harvard Univ., 37 F.4th 691, 703 (1st Cir. 2022)", "normalized": "37 F.4th 691", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 8872, "end": 8955, "kind": "case", "jurisdiction": "us.fed.dist.mad", "text": "Jeannite v. Saris, No. 23-cv11885, 2023 WL 6973689, at *1 (D. Mass. Sept. 15, 2023)", "normalized": "2023 WL 6973689", "form": "Westlaw"}
+{"start": 8964, "end": 9011, "kind": "case", "jurisdiction": "us.scotus", "text": "Hagans v. Lavine, 415 U.S.\n528, 536–37 (1974)", "normalized": "415 U.S. 528", "form": "U.S. Reports"}
+{"start": 9240, "end": 9243, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "id.", "normalized": "Id.", "form": "Id."}
+{"start": 9253, "end": 9301, "kind": "case", "jurisdiction": "us.fed.app.cadc", "text": "Best v. Kelly, 39 F.3d\n328, 331 (D.C. Cir. 1994)", "normalized": "39 F.3d 328", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9313, "end": 9406, "kind": "case", "jurisdiction": "us.fed.dist.nhd", "text": "Aboussa v. Keystone Mgmt. Co., No. 23-cv-00011, 2023\nWL 5311620, at *3 (D.N.H. June 27, 2023)", "normalized": "2023 WL 5311620", "form": "Westlaw"}
+{"start": 9453, "end": 9492, "kind": "case", "jurisdiction": "us.fed.dist.nhd", "text": "2023\nWL 11992339 (D.N.H. Sept. 5, 2023)", "normalized": "2023 WL 11992339", "form": "Westlaw"}
+{"start": 9749, "end": 9813, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 6 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 10143, "end": 10222, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Clemente Props., Inc. v. Pierluisi-Urrutia, 165 F.4th 1, 15 n.7 (1st Cir. 2026)", "normalized": "165 F.4th 1", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10232, "end": 10306, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Bazinet v.\nBeth Israel Lahey Health, Inc., 113 F.4th 9, 14 (1st Cir. 2024)", "normalized": "113 F.4th 9", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10617, "end": 10696, "kind": "case", "jurisdiction": "us.fed.dist.mad", "text": "Relf v. Pender, No. 21-cv-11734, 2023 WL 349849, at *5 (D. Mass. Jan. 20, 2023)", "normalized": "2023 WL 349849", "form": "Westlaw"}
+{"start": 10705, "end": 10781, "kind": "case", "jurisdiction": "us.fed.dist.prd", "text": "Jimenez-Tapia v. Santander Bank P.R., 257 F. Supp. 3d 193, 198 (D.P.R. 2017)", "normalized": "257 F. Supp. 3d 193", "form": "F. Supp."}
+{"start": 11475, "end": 11485, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 32", "normalized": "ECF No. 32", "form": "record: ECF/Dkt"}
+{"start": 11604, "end": 11668, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 7 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}
+{"start": 11726, "end": 11734, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "Id. at 2", "normalized": "Id. at 2", "form": "Id."}
+{"start": 11858, "end": 11866, "kind": "id", "jurisdiction": "us.fed.dist.mad", "text": "Id. at 3", "normalized": "Id. at 3", "form": "Id."}
+{"start": 11958, "end": 12030, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Efron v. UBS Fin. Servs. Inc. of P.R., 96 F.4th 430, 437 (1st Cir. 2024)", "normalized": "96 F.4th 430", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 12040, "end": 12103, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Aponte-Torres\nv. Univ. of P.R., 445 F.3d 50, 58 (1st Cir. 2006)", "normalized": "445 F.3d 50", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 12504, "end": 12513, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 5", "normalized": "ECF No. 5", "form": "record: ECF/Dkt"}
+{"start": 12517, "end": 12527, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 16", "normalized": "ECF No. 16", "form": "record: ECF/Dkt"}
+{"start": 12628, "end": 12638, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 15", "normalized": "ECF No. 15", "form": "record: ECF/Dkt"}
+{"start": 12770, "end": 12806, "kind": "case_short", "jurisdiction": "us.fed.app.ca1", "text": "ACA Fin. Guar.\nCorp., 512 F.3d at 56", "normalized": "512 F.3d at 56", "form": "short case (at)"}
+{"start": 12949, "end": 12959, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 29", "normalized": "ECF No. 29", "form": "record: ECF/Dkt"}
+{"start": 13100, "end": 13110, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 31", "normalized": "ECF No. 31", "form": "record: ECF/Dkt"}
+{"start": 13224, "end": 13287, "kind": "case", "jurisdiction": "us.fed.app.ca1", "text": "Hochendoner v.\nGenzyme Corp., 823 F.3d 724, 736 (1st Cir. 2016)", "normalized": "823 F.3d 724", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 13327, "end": 13340, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule\n12(b)(6)", "normalized": "Fed. R. Civ. P. 12(b)(6)", "form": "prose section reference", "optional": true, "note": "inside an explanatory parenthetical"}
+{"start": 13501, "end": 13511, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 35", "normalized": "ECF No. 35", "form": "record: ECF/Dkt"}
+{"start": 13547, "end": 13557, "kind": "record", "jurisdiction": "us.fed.dist.mad", "text": "ECF No. 37", "normalized": "ECF No. 37", "form": "record: ECF/Dkt"}
+{"start": 13585, "end": 13649, "kind": "docket", "jurisdiction": "us.fed.dist.mad", "text": "Case 1:25-cv-13452-ADB\n\nDocument 39\n\nFiled 09/14/26\n\nPage 8 of 8", "normalized": "No. 1:25-cv-13452", "form": "page furniture", "optional": true}

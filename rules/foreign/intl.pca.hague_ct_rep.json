@@ -1,0 +1,53 @@
+{
+  "id": "intl.pca.hague_ct_rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.pca",
+  "tags": [
+    "international",
+    "arbitration"
+  ],
+  "pattern": "\\bHague\\s+Ct\\.\\s+Rep\\.(?:\\s+(?P<series>2d))?\\s+\\(Scott\\)\\s+(?P<page>[0-9]{1,4})\\b(?:\\s+\\(Perm\\.\\s+Ct\\.\\s+Arb\\.\\s+(?P<year>[0-9]{4})\\))?",
+  "priority": 60,
+  "normalize": "Hague Ct. Rep. (Scott) {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): Hague Court Reports, First and Second Series, Hague Ct. Rep. (Scott) / Hague Ct. Rep. 2d (Scott)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Pious Fund Case (U.S. v. Mex.), Hague Ct. Rep. (Scott) 1 (Perm. Ct. Arb. 1902).",
+        "spans": [[32, 78]],
+        "groups": {
+          "page": "1",
+          "year": "1902"
+        }
+      },
+      {
+        "text": "Island of Palmas Case (Neth. v. U.S.), Hague Ct. Rep. 2d (Scott) 83 (Perm. Ct. Arb. 1928).",
+        "spans": [[39, 89]]
+      },
+      {
+        "text": "The tribunal relied on Hague Ct. Rep. (Scott) 226 in reaching its award.",
+        "spans": [[23, 49]]
+      }
+    ],
+    "negative": [
+      "The Hague court reported 83 cases.",
+      "Scott reported 1 award in 1902.",
+      "The Perm. Ct. Arb. sat in 1928."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: the two series share page numbers, and the series group is optional."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "us.pa.case.indigo_reporters",
+  "kind": "case",
+  "jurisdiction": "us.pa",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Ald\\.)\\s(?P<page>[0-9]{1,5})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Pennsylvania: reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Pennsylvania, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 647"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Hill v. Campbell, 153 Ald. 109 (Pa. 1783).",
+        "spans": [[22, 34]],
+        "groups": {
+          "volume": "153",
+          "reporter": "Ald.",
+          "page": "109"
+        }
+      },
+      {
+        "text": "See Adams v. Nelson, 84 Ald. 449, 457 (Pa. 1784).",
+        "spans": [[21, 32]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Ald. 345 (1990).",
+        "spans": [[16, 27]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Ald. is missing.",
+      "The Ald. printed 345 opinions.",
+      "In Pennsylvania, the Ald. began in 1993."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.dol.adjudication",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.dol",
+  "pattern": "\\b(?P<body>ARB|ALJ|BRB|ECAB)\\s+(?:Case\\s+)?No\\.\\s?(?P<number>[0-9]{2,4}-(?:[A-Z]{2,5}-)?[0-9]{2,5})\\b",
+  "priority": 60,
+  "normalize": "{body} No. {number}",
+  "authority_key": "us.dol/{body}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Department of Labor Administrative Review Board, ALJ, Benefits Review Board and ECAB decisions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for Department of Labor; compare with the case-number formats on dol.gov/agencies/arb; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Smith v. Acme Corp., ARB No. 2019-0034, slip op. at 5 (ARB Apr. 1, 2021).",
+        "spans": [
+          [
+            25,
+            42
+          ]
+        ],
+        "groups": {
+          "body": "ARB",
+          "number": "2019-0034"
+        }
+      },
+      {
+        "text": "The ALJ's decision, ALJ No. 2018-SOX-00012, was affirmed.",
+        "spans": [
+          [
+            20,
+            42
+          ]
+        ]
+      },
+      {
+        "text": "See ARB Case No. 13-022 and BRB No. 19-0123.",
+        "spans": [
+          [
+            4,
+            23
+          ],
+          [
+            28,
+            43
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ARB sat with 3 members.",
+      "The ALJ heard 12 witnesses.",
+      "Case No. 5 was set for trial."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

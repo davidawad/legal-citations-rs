@@ -1,0 +1,53 @@
+{
+  "id": "intl.treaty.lnts",
+  "kind": "treaty",
+  "jurisdiction": "intl.lon",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,3})\\s+L\\.\\s?N\\.\\s?T\\.\\s?S\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} L.N.T.S. {page}",
+  "authority_key": "lnts/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): League of Nations Treaty Series (1920-1945), <vol> L.N.T.S. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Convention on the Rights and Duties of States, Dec. 26, 1933, 165 L.N.T.S. 19.",
+        "spans": [[47, 77]],
+        "groups": {
+          "date": "Dec. 26, 1933",
+          "volume": "165",
+          "page": "19"
+        }
+      },
+      {
+        "text": "General Treaty for Renunciation of War, Aug. 27, 1928, 94 L.N.T.S. 57.",
+        "spans": [[40, 69]]
+      },
+      {
+        "text": "The court relied on 94 L.N.T.S. 57, 59-60 in reaching its holding.",
+        "spans": [[20, 41]]
+      }
+    ],
+    "negative": [
+      "The League of Nations met 19 times.",
+      "S. 19 was introduced in the Senate.",
+      "The L.N. archive holds 165 boxes."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

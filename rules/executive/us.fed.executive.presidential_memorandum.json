@@ -1,0 +1,69 @@
+{
+  "id": "us.fed.executive.presidential_memorandum",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b(?:Presidential\\s+Memorandum\\s+of\\s+(?P<date>(?:Jan\\.|January|Feb\\.|February|Mar\\.|March|Apr\\.|April|May|June?|July?|Aug\\.|August|Sept\\.|September|Oct\\.|October|Nov\\.|November|Dec\\.|December)\\s+[0-9]{1,2},\\s+[0-9]{4})|Memorandum\\s+of\\s+(?P<fr_date>(?:Jan\\.|January|Feb\\.|February|Mar\\.|March|Apr\\.|April|May|June?|July?|Aug\\.|August|Sept\\.|September|Oct\\.|October|Nov\\.|November|Dec\\.|December)\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+(?P<volume>[0-9]{1,3})\\s+Fed\\.\\s?Reg\\.\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6}))",
+  "priority": 65,
+  "normalize": "Memorandum",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.7 (presidential memoranda) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 and check the `Memorandum of January 20, 2021, 86 Fed. Reg. 7225 (Jan. 26, 2021)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Memorandum of January 20, 2021, 86 Fed. Reg. 7225 (Jan. 26, 2021).",
+        "spans": [
+          [
+            4,
+            53
+          ]
+        ],
+        "groups": {
+          "fr_date": "January 20, 2021",
+          "volume": "86",
+          "page": "7225"
+        }
+      },
+      {
+        "text": "The policy was announced in a Presidential Memorandum of Aug. 25, 2017 to the Secretary.",
+        "spans": [
+          [
+            30,
+            70
+          ]
+        ]
+      },
+      {
+        "text": "Compare Memorandum of Jan. 26, 2021, 86 Fed. Reg. 7,487 with Presidential Memorandum of March 6, 2017.",
+        "spans": [
+          [
+            8,
+            55
+          ],
+          [
+            61,
+            101
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The memorandum of law was filed January 20, 2021.",
+      "A Memorandum of Understanding was signed on Jan. 26, 2021.",
+      "See the Memorandum of January 20, 2021, from counsel."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A bare `Memorandum of <date>` is too common in litigation to match alone, so it must be followed by its Fed. Reg. cite (which this rule then absorbs) or say `Presidential`. No authority_key: the date alone does not identify one memorandum."
+}

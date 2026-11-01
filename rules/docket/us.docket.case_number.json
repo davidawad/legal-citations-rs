@@ -1,0 +1,50 @@
+{
+  "id": "us.docket.case_number",
+  "kind": "docket",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?P<docket>[0-9]{1,2}:[0-9]{2}-[A-Za-z]{2,4}-[0-9]{3,6}(?:-[A-Z]{2,4})*)\\b",
+  "priority": 35,
+  "normalize": "No. {docket}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Federal district court case numbers without `No.` (office:year-type-number[-judge]), as in a caption or ECF header",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with a district court's CM/ECF case-number format (e.g. the PACER case locator), and Bluebook B17.1.4 / R. 10.8.1.",
+    "derived_from": [
+      "crates/legal-citations/rules/docket/us.docket.number.json"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The case is 1:19-cv-01234 in the Southern District.",
+        "spans": [[12, 25]],
+        "groups": {
+          "docket": "1:19-cv-01234"
+        }
+      },
+      {
+        "text": "See Case 2:20-CV-00456-JRG-RSP, ECF No. 12.",
+        "spans": [[9, 30]]
+      },
+      {
+        "text": "Compare 3:19-cr-00012-JD with 4:21-mc-80001.",
+        "spans": [[8, 24], [30, 43]]
+      }
+    ],
+    "negative": [
+      "The ratio was 1:19 in the sample.",
+      "Call 1-800-555-0199 for help.",
+      "Version 2:10-rc-1 shipped."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "dot-1ij4xz.10: the district-court case number without `No.`. Priority 35, below us.docket.number (40), so `No. 1:19-cv-01234` stays that rule's cite."
+}

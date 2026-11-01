@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Policy",
+  "description": "The policy. Every field has a documented default.",
+  "type": "object",
+  "properties": {
+    "allowed_hosts": {
+      "description": "Hosts accepted as sources (subdomains included).",
+      "type": "array",
+      "default": [
+        "courtlistener.com",
+        "law.cornell.edu",
+        "govinfo.gov",
+        "ecfr.gov",
+        "uspto.gov",
+        "supremecourt.gov",
+        "justia.com",
+        "congress.gov",
+        "federalregister.gov",
+        "uscode.house.gov",
+        "uscourts.gov"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "check_congruence": {
+      "description": "Require a decodable URL to decode to the cited authority.",
+      "type": "boolean",
+      "default": true
+    },
+    "exclude": {
+      "description": "Rule selection: never report these collections; exclude wins.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "include": {
+      "description": "Rule selection: only rules in these collections report citations\n(empty = every rule), e.g. `[\"jurisdiction:us.oh\", \"kind:case\"]`.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kinds": {
+      "description": "Only report these kinds (empty = all).",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Kind"
+      }
+    },
+    "link_furniture": {
+      "description": "Require links on page furniture (running heads, repeated captions) too.",
+      "type": "boolean",
+      "default": false
+    },
+    "link_schemes": {
+      "description": "Non-http schemes and how to treat them.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/SchemeRule"
+      },
+      "default": {}
+    },
+    "min_confidence": {
+      "description": "Below this confidence, a citation only gets CITE020 (info).",
+      "type": "number",
+      "format": "double",
+      "default": 0.5
+    },
+    "profiles": {
+      "description": "Named profiles unioned with `include` (`cite-detect profiles list`).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "require_link": {
+      "description": "Kinds that must be linked.",
+      "type": "array",
+      "default": [
+        "case",
+        "case_short",
+        "id",
+        "supra",
+        "statute",
+        "session_law",
+        "regulation",
+        "federal_register",
+        "constitution",
+        "court_rule",
+        "agency_manual",
+        "agency_decision",
+        "secondary",
+        "treaty",
+        "foreign",
+        "legislative",
+        "executive",
+        "statute_short"
+      ],
+      "items": {
+        "$ref": "#/$defs/Kind"
+      }
+    },
+    "severity": {
+      "description": "Severity overrides by code, e.g. `{\"CITE003\": \"error\"}`.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/Severity"
+      },
+      "default": {}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "Kind": {
+      "description": "Closed citation-kind taxonomy. Extending it is a code change on purpose:\npolicy, findings and consumers all switch on it.",
+      "oneOf": [
+        {
+          "description": "Full case citation: volume, reporter, page.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Short case citation: `449 U.S. at 389`.",
+          "type": "string",
+          "const": "case_short"
+        },
+        {
+          "description": "`Id.` / `Ibid.`",
+          "type": "string",
+          "const": "id"
+        },
+        {
+          "description": "`Smith, supra`",
+          "type": "string",
+          "const": "supra"
+        },
+        {
+          "description": "Codified statute (U.S.C., state codes).",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Session law (Pub. L., Stat.).",
+          "type": "string",
+          "const": "session_law"
+        },
+        {
+          "description": "Codified regulation (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Federal Register.",
+          "type": "string",
+          "const": "federal_register"
+        },
+        {
+          "description": "Constitution.",
+          "type": "string",
+          "const": "constitution"
+        },
+        {
+          "description": "Court rule (FRCP, FRAP, FRE, circuit and local rules).",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency manual (MPEP, TBMP, TMEP).",
+          "type": "string",
+          "const": "agency_manual"
+        },
+        {
+          "description": "Agency decision or ruling (Rev. Rul., PTAB/TTAB decisions).",
+          "type": "string",
+          "const": "agency_decision"
+        },
+        {
+          "description": "Record cite (ER-139, JA 16, Ex. 1001, TTABVUE, ECF No.).",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary source (Restatement, treatise, law review).",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaty.",
+          "type": "string",
+          "const": "treaty"
+        },
+        {
+          "description": "Foreign authority.",
+          "type": "string",
+          "const": "foreign"
+        },
+        {
+          "description": "Docket number.",
+          "type": "string",
+          "const": "docket"
+        },
+        {
+          "description": "Legislative material (bills, committee reports, Cong. Rec., hearings, CRS reports).",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Executive material (executive orders, proclamations, presidential memoranda).",
+          "type": "string",
+          "const": "executive"
+        },
+        {
+          "description": "Short statute or regulation citation by section alone: `§ 1983`.",
+          "type": "string",
+          "const": "statute_short"
+        },
+        {
+          "description": "Citation-shaped text no specific rule matched (catch-all layer,\nconfidence below 0.5, finding CITE011).",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "SchemeRule": {
+      "description": "How an indirect link scheme (e.g. `toa:`) is treated.",
+      "oneOf": [
+        {
+          "description": "Trust the indirection; the target is resolved elsewhere.",
+          "type": "string",
+          "const": "accept"
+        }
+      ]
+    },
+    "Severity": {
+      "description": "Finding severity, ordered.",
+      "oneOf": [
+        {
+          "description": "Inventory or heuristic note; never fails by default.",
+          "type": "string",
+          "const": "info"
+        },
+        {
+          "description": "Should be fixed.",
+          "type": "string",
+          "const": "warn"
+        },
+        {
+          "description": "Must be fixed.",
+          "type": "string",
+          "const": "error"
+        }
+      ]
+    }
+  }
+}

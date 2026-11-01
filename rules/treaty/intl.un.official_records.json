@@ -1,0 +1,54 @@
+{
+  "id": "intl.un.official_records",
+  "kind": "treaty",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "un"
+  ],
+  "pattern": "\\bU\\.\\s?N\\.\\s+(?P<organ>GAOR|SCOR|ESCOR|TCOR)(?:,\\s+(?P<session>[0-9]{1,3})(?:st|nd|rd|th|d)\\s+(?:Sess\\.|Year))?(?:,\\s+(?P<meeting>[0-9]{1,5})(?:st|nd|rd|th|d)\\s+(?:plen\\.\\s+)?mtg\\.)?(?:,\\s+Supp\\.\\s+No\\.\\s+(?P<supp>[0-9]{1,3}[A-Z]?))?(?:,\\s+at\\s+(?P<pin>[0-9]{1,5}))?",
+  "priority": 62,
+  "normalize": "U.N. {organ}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations): U.N. official records, U.N. GAOR|SCOR|ESCOR|TCOR, <session>, Supp. No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "G.A. Res. 2625 (XXV), U.N. GAOR, 25th Sess., Supp. No. 28, U.N. Doc. A/8028 (1970).",
+        "spans": [[22, 57]],
+        "groups": {
+          "organ": "GAOR",
+          "session": "25",
+          "supp": "28"
+        }
+      },
+      {
+        "text": "U.N. SCOR, 58th Sess., 4701st mtg., U.N. Doc. S/PV.4701 (Feb. 5, 2003).",
+        "spans": [[0, 34]]
+      },
+      {
+        "text": "See U.N. ESCOR, 52d Sess., Supp. No. 3, at 12.",
+        "spans": [[4, 45]]
+      }
+    ],
+    "negative": [
+      "The U.N. score was 25 to 3.",
+      "GAOR staff met 58 times.",
+      "The U.N. records office holds 28 boxes."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The organ alone names no single authority, so there is no authority key; the U.N. Doc. symbol that usually follows carries it."
+}

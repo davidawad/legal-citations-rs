@@ -1,0 +1,16 @@
+{
+ "note": "fixture gate: fails",
+ "overall": {
+  "recall": 0.99,
+  "precision": 0.99,
+  "exact_span": 0.99
+ },
+ "kinds": {
+  "case": {
+   "recall": 0.5
+  },
+  "treaty": {
+   "recall": 0.5
+  }
+ }
+}

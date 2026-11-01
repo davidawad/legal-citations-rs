@@ -1,0 +1,74 @@
+{
+  "id": "us.ma.agency_decision.attorney_general_opinion",
+  "kind": "agency_decision",
+  "jurisdiction": "us.ma",
+  "tags": [
+    "attorney_general"
+  ],
+  "pattern": "\\b(?:(?P<year>(?:19|20)[0-9]{2})\\s+)?(?:(?:Mass\\.|Massachusetts)\\s+(?:Op(?:s|inions?|inion)?\\.?\\s+(?:of\\s+(?:the\\s+)?)?(?:Att(?:orney|['’]?y\\.?)\\s?Gen(?:eral|\\.)|A\\.\\s?G\\.)|(?:Att(?:orney|['’]?y\\.?)\\s?Gen(?:eral|\\.)|A\\.\\s?G\\.)(?:['’]s)?\\s*Op(?:s|inions?|inion)?\\.?)|Op(?:s|inions?|inion)?\\.?\\s+(?:(?:Mass\\.|Massachusetts)\\s+(?:Att(?:orney|['’]?y\\.?)\\s?Gen(?:eral|\\.)|A\\.\\s?G\\.)|(?:Att(?:orney|['’]?y\\.?)\\s?Gen(?:eral|\\.)|A\\.\\s?G\\.)\\s+(?:Mass\\.|Massachusetts)))\\s*,?\\s*(?:No\\.\\s*(?P<number>[A-Z]{0,4}-?[0-9]{1,5}(?:-[0-9A-Z]{1,5})*)|(?P<number2>(?:[A-Z]{1,4}-?)?[0-9]{2,4}-[0-9A-Z]{1,5}(?:-[0-9A-Z]{1,5})?))\\b",
+  "priority": 60,
+  "normalize": "Mass. Op. Att'y Gen. No. {number}{number2}",
+  "authority_key": "us.ma.ag_opinion/{number}{number2}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14 and T1.2 (state attorney general opinions: `Mass. Op. Att'y Gen. No.`), Massachusetts",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Massachusetts Attorney General's published opinions and compare the opinion numbering; Bluebook form `Mass. Op. Att'y Gen. No. X (year)`.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The office disagreed. Mass. Op. Att'y Gen. No. 2019-001 (2019).",
+        "spans": [
+          [
+            22,
+            55
+          ]
+        ],
+        "groups": {
+          "number": "2019-001"
+        }
+      },
+      {
+        "text": "See Op. Att'y Gen. Mass. No. 15-0042; Mass. Att’y Gen. Op. No. KP-0123.",
+        "spans": [
+          [
+            4,
+            36
+          ],
+          [
+            38,
+            72
+          ]
+        ]
+      },
+      {
+        "text": "Compare 2003 Mass. Op. Att'y Gen. 03-12 with Massachusetts Attorney General Opinion No. 88-7.",
+        "spans": [
+          [
+            8,
+            39
+          ],
+          [
+            45,
+            92
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Massachusetts Attorney General said so.",
+      "Mass. Op. Att'y Gen. pending",
+      "Mass. Att'y Gen. opinions of 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

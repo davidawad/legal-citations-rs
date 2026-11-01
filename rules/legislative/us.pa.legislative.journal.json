@@ -1,0 +1,71 @@
+{
+  "id": "us.pa.legislative.journal",
+  "kind": "legislative",
+  "jurisdiction": "us.pa",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\b(?P<year>(?:18|19|20)[0-9]{2})\\s+Pa\\.\\s+Legis\\.\\s+J\\.(?:\\s*[-–—]\\s*(?:House|Senate))?\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{year} Pa. Legis. J. {page}",
+  "authority_key": "us.pa.legis_journal/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Pennsylvania Legislative Journal (`1975 Pa. Legis. J. 123`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Pennsylvania Legislative Journal archive at https://www.legis.state.pa.us and compare the citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The sponsor explained the bill. 1975 Pa. Legis. J. 123.",
+        "spans": [
+          [
+            32,
+            54
+          ]
+        ],
+        "groups": {
+          "year": "1975",
+          "page": "123"
+        }
+      },
+      {
+        "text": "See 2019 Pa. Legis. J.—House 1456.",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare 1990 Pa. Legis. J. 2001 with 1974 Pa. Legis. J.-Senate 45.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Pa. Legis. J. index",
+      "1975 Pa. Legis. J.",
+      "Pa. Legis. J. 123"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

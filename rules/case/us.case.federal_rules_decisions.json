@@ -1,0 +1,55 @@
+{
+  "id": "us.case.federal_rules_decisions",
+  "kind": "case",
+  "jurisdiction": "us.fed.dist",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>F\\.\\s?R\\.\\s?D\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Federal Rules Decisions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Zubulake v. UBS Warburg LLC, 217 F.R.D. 309 (S.D.N.Y. 2003).",
+        "spans": [[33, 47]],
+        "groups": {
+          "volume": "217",
+          "reporter": "F.R.D.",
+          "page": "309"
+        }
+      },
+      {
+        "text": "The court relied on Doe v. Roe, 300 F.R.D. 1 (D.D.C. 2014) in reaching its holding.",
+        "spans": [[32, 44]]
+      },
+      {
+        "text": "Under Alpha v. Beta, 250 F. R. D. 10 (N.D. Cal. 2008), the claim fails.",
+        "spans": [[21, 36]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "us.ia.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.ia",
+  "pattern": "\\b(?:Iowa\\sAdmin\\.\\s?Code\\sr\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Iowa: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Iowa, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 246"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Iowa Admin. Code r. 13-17.33 (2015).",
+        "spans": [[4, 32]],
+        "groups": {}
+      },
+      {
+        "text": "See Iowa Admin. Code r. 41-25.17 (2014).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See Iowa Admin. Code r. 46-41.66 (5348).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See Iowa Admin. Code r. 74-58.41 (5347).",
+        "spans": [[4, 32]]
+      }
+    ],
+    "negative": [
+      "The Iowa code was amended in 2015.",
+      "Section 12 of the Iowa rules is long.",
+      "Title five of the Iowa compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

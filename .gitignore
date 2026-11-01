@@ -1,0 +1,14 @@
+/target
+/fuzz/target
+/fuzz/corpus
+/fuzz/artifacts
+/mutants.out*
+/corpus/cache
+*.profraw
+.worktrees/
+/dist
+
+# Local agent and task-tracker state; never part of the release tree.
+.beads/
+.claude/
+AGENTS.md

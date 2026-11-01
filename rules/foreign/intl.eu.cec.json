@@ -1,0 +1,53 @@
+{
+  "id": "intl.eu.cec",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+CEC\\s+\\(CCH\\)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} CEC (CCH) {page}",
+  "authority_key": "intl.eu/cec/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Community Cases (CCH) (1989-2007), <year> CEC (CCH) <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Union Royale Belge des Sociétés de Football Ass’n v. Bosman, 1996 CEC (CCH) 38.",
+        "spans": [[65, 82]],
+        "groups": {
+          "volume": "1996",
+          "page": "38"
+        }
+      },
+      {
+        "text": "The court relied on 1990 CEC (CCH) 120, 125–127 in its judgment.",
+        "spans": [[20, 49]]
+      },
+      {
+        "text": "Under 2001 CEC (CCH) 3, the claim fails.",
+        "spans": [[6, 22]]
+      }
+    ],
+    "negative": [
+      "The CEC met 38 times in 1996.",
+      "CCH printed 120 volumes.",
+      "The CEC (CCH) series ended."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

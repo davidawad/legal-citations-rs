@@ -1,0 +1,49 @@
+{
+  "id": "us.tx.court_rule.civ",
+  "kind": "court_rule",
+  "jurisdiction": "us.tx",
+  "pattern": "\\b(?:Tex\\.\\s?R\\.\\s?Civ\\.\\s?P\\.|TRCP)\\s?(?P<rule>[0-9]{1,3}[a-z]?(?:\\.[0-9]{1,2})?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Tex. R. Civ. P. {rule}{sub}",
+  "authority_key": "us.tx.rules.civ/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Texas) Texas Rules of Civil Procedure: Tex. R. Civ. P. N; local form TRCP N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Texas) and the official Texas Rules of Civil Procedure; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Tex. R. Civ. P. 91a.",
+        "spans": [[4, 23]],
+        "groups": {
+          "rule": "91a",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on TRCP 166a(c) in reaching its holding.",
+        "spans": [[20, 32]]
+      },
+      {
+        "text": "Under Tex. R. Civ. P. 91a.1, the claim fails.",
+        "spans": [[6, 27]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Texas rules committee met 12 times in 2020.",
+      "Under Tex. R. Civ. P. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

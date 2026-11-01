@@ -1,0 +1,55 @@
+{
+  "id": "us.case.federal_appendix",
+  "kind": "case",
+  "jurisdiction": "us.fed.app",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>F\\.\\s?App(?:'|’)x)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Federal Appendix) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Doe v. Roe, 500 F. App'x 12 (3d Cir. 2012).",
+        "spans": [[16, 31]],
+        "groups": {
+          "volume": "500",
+          "reporter": "F. App'x",
+          "page": "12"
+        }
+      },
+      {
+        "text": "The court relied on Smith v. Jones, 700 F. App’x 1 (Fed. Cir. 2017) in reaching its holding.",
+        "spans": [[36, 52]]
+      },
+      {
+        "text": "Under Alpha v. Beta, 800 F.App'x 99 (4th Cir. 2020), the claim fails.",
+        "spans": [[21, 35]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

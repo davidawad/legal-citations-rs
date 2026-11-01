@@ -1,0 +1,57 @@
+{
+  "id": "us.la.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.la",
+  "pattern": "\\bLa\\.?\\s+(?:Rev\\.\\s+)?Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?§?\\s*(?P<title>[0-9]+):(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)|La\\.\\s+R\\.S\\.\\s+(?P<title2>[0-9]+):(?P<section2>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Louisiana) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Louisiana entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py LA pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See La. Rev. Stat. § 14:30.",
+        "spans": [[4, 27]],
+        "groups": {
+          "title": "14",
+          "section": "30"
+        }
+      },
+      {
+        "text": "The court relied on La. R.S. 14:30 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under La. Stat. Ann. § 9:2800.6, the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "la",
+    "order": 15,
+    "pattern": "La(?:\\.|\\s+Rev)\\.\\s+(?:Rev\\.\\s+)?Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?§?\\s*(?P<title>\\d+):(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)|La\\.\\s+R\\.S\\.\\s+(?P<title2>\\d+):(?P<section2>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits and the lost-escape port bug fixed (the legacy pattern never matched the standard form). Examples written by hand."
+}

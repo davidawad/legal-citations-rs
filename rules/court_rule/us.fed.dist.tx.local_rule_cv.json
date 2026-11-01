@@ -1,0 +1,75 @@
+{
+  "id": "us.fed.dist.tx.local_rule_cv",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?:Local\\s+(?:Court\\s+)?Rules?|L\\.\\s?R\\.|LR)\\s+(?P<rule>(?:CV|CR|AT|AP)-[0-9]{1,3}(?:\\.[0-9]+)?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 56,
+  "normalize": "Local Rule {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "E.D. Tex. and W.D. Tex. Local Rules (CV- and CR- numbering)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the E.D. Tex. and W.D. Tex. local rules and compare the `Local Rule CV-7` numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Briefing is limited by Local Rule CV-7(h).",
+        "spans": [
+          [
+            23,
+            41
+          ]
+        ],
+        "groups": {
+          "rule": "CV-7",
+          "sub": "(h)"
+        }
+      },
+      {
+        "text": "See L.R. CV-56 and LR CV-10(a).",
+        "spans": [
+          [
+            4,
+            14
+          ],
+          [
+            19,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "Compare Local Rule CR-49 with Local Rule AT-4.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            45
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Local Rule CV pages",
+      "the CV-7 form",
+      "L.R. compliance"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

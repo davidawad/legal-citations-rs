@@ -1,0 +1,70 @@
+{
+  "id": "us.ny.agency_decision.tax_appeals_tribunal",
+  "kind": "agency_decision",
+  "jurisdiction": "us.ny",
+  "tags": [
+    "tax"
+  ],
+  "pattern": "\\bDTA\\s+Nos?\\.\\s*(?P<number>8[0-9]{5})\\b",
+  "priority": 60,
+  "normalize": "DTA No. {number}",
+  "authority_key": "us.ny.dta/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "New York Division of Tax Appeals and Tax Appeals Tribunal case numbers (`DTA No. 826123`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the NY Division of Tax Appeals decisions at https://www.dta.ny.gov and compare DTA numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Matter of Smith, DTA No. 826123 (N.Y. Tax App. Trib. 2019).",
+        "spans": [
+          [
+            17,
+            31
+          ]
+        ],
+        "groups": {
+          "number": "826123"
+        }
+      },
+      {
+        "text": "See DTA No. 828456.",
+        "spans": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "text": "Compare DTA Nos. 825001 with DTA No. 830012.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            43
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "DTA No. 12",
+      "The DTA ruled.",
+      "DTA No. 926123"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

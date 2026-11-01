@@ -1,0 +1,55 @@
+{
+  "id": "us.short.id",
+  "kind": "id",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:[Ii]d\\.|[Ii]bid\\.?)(?:,?\\s+at\\s+(?P<pin>[0-9]+(?:\\s*[-–‒—]\\s*[0-9]+)?))?",
+  "priority": 60,
+  "normalize": "Id.",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 4.1 (id.) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 4.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Id. at 495.",
+        "spans": [[4, 14]],
+        "groups": {
+          "pin": "495"
+        }
+      },
+      {
+        "text": "The court relied on Id. in reaching its holding.",
+        "spans": [[20, 23]]
+      },
+      {
+        "text": "Under Ibid., the claim fails.",
+        "spans": [[6, 11]]
+      },
+      {
+        "text": "Id. at 49‒52.",
+        "spans": [[0, 14]],
+        "groups": {
+          "pin": "49‒52"
+        }
+      }
+    ],
+    "negative": [
+      "Please bring a valid ID to the hearing.",
+      "The user id field was left blank.",
+      "The Idaho office was closed in 2019."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Refers to the immediately preceding authority; resolved backwards only. lcr-53x: pin and page ranges accept a hyphen, en dash (U+2013), figure dash (U+2012) or em dash."
+}

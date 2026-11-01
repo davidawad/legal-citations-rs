@@ -1,0 +1,55 @@
+{
+  "id": "foreign.hk.law_reports",
+  "kind": "foreign",
+  "jurisdiction": "foreign.hk",
+  "tags": [
+    "foreign",
+    "hong_kong"
+  ],
+  "pattern": "\\((?P<year>(?:19|20)[0-9]{2})\\)\\s+(?P<volume>[0-9]{1,2})\\s+(?P<reporter>HKCFAR|HKLRD|HKC)\\s+(?P<page>[0-9]{1,5})\\b|\\[(?P<byear>(?:19|20)[0-9]{2})\\]\\s+(?P<bvolume>[0-9])\\s+(?P<breporter>HKLRD|HKC|HKLR)\\s+(?P<bpage>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Hong Kong law reports ((<year>) <vol> HKCFAR <page>; [<year>] <vol> HKLRD <page>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Hong Kong Judiciary's neutral citation practice direction and Bluebook T2 (Hong Kong).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Ng Ka Ling v Director of Immigration (1999) 2 HKCFAR 4.",
+        "spans": [[37, 54]],
+        "groups": {
+          "year": "1999",
+          "volume": "2",
+          "reporter": "HKCFAR",
+          "page": "4"
+        }
+      },
+      {
+        "text": "See [2014] 2 HKLRD 1.",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "[2005] 1 HKC 100 was followed.",
+        "spans": [[0, 16]]
+      }
+    ],
+    "negative": [
+      "(1999) saw 2 HKCFAR volumes.",
+      "HKLRD staff number 2.",
+      "[2014] HK had 2 storms."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

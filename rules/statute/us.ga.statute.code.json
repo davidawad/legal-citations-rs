@@ -1,0 +1,56 @@
+{
+  "id": "us.ga.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ga",
+  "pattern": "O\\.?C\\.?G\\.?A\\.?\\s+§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Georgia) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Georgia entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py OCGA pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See O.C.G.A. § 16-5-21.",
+        "spans": [[4, 23]],
+        "groups": {
+          "section": "16-5-21"
+        }
+      },
+      {
+        "text": "The court relied on OCGA §§ 16-5-21(a) in reaching its holding.",
+        "spans": [[20, 40]]
+      },
+      {
+        "text": "Under O.C.G.A. § 16-5-28, the claim fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ocga",
+    "order": 22,
+    "pattern": "O\\.?C\\.?G\\.?A\\.?\\s+§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

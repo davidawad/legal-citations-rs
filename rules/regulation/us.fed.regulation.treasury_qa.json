@@ -1,0 +1,69 @@
+{
+  "id": "us.fed.regulation.treasury_qa",
+  "kind": "regulation",
+  "jurisdiction": "us.fed.treasury",
+  "pattern": "\\bTreas\\.\\s?Reg\\.\\s*§\\s*(?P<section>[0-9]+\\.[0-9]+[A-Za-z]?(?:\\([0-9a-z]{1,4}\\))*(?:-[0-9]+[A-Za-z]?)?)(?P<subsection>(?:\\([0-9A-Za-z]{1,6}\\))*),\\s+Q\\s?&\\s?A[-\\s]?(?P<qa>\\([0-9]{1,3}\\)|[0-9]{1,3})(?P<qa_sub>(?:\\([a-z0-9]{1,3}\\))*)",
+  "priority": 65,
+  "normalize": "Treas. Reg. § {section}{subsection}, Q&A {qa}{qa_sub}",
+  "authority_key": "us.cfr/26/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "tax"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of the Treasury (Regulations: specific questions and answers)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of the Treasury (Regulations: specific questions and answers), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Treas. Reg. § 1.72-16(a), Q&A (3)(a) (1963).",
+        "spans": [
+          [
+            4,
+            41
+          ]
+        ],
+        "groups": {
+          "section": "1.72-16",
+          "subsection": "(a)",
+          "qa": "(3)",
+          "qa_sub": "(a)"
+        }
+      },
+      {
+        "text": "The minimum distribution rule is Treas. Reg. § 1.401(a)(9)-6, Q&A-1(a).",
+        "spans": [
+          [
+            33,
+            71
+          ]
+        ]
+      },
+      {
+        "text": "Compare Treas. Reg. § 1.409A-1(b)(4), Q&A 2 with the proposal.",
+        "spans": [
+          [
+            8,
+            44
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Treasury Q&A 3 explains it.",
+      "Treas. Reg. FAQ, Q&A (3), is informal guidance.",
+      "In the Q&A (3)(a) session, the panel answered."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

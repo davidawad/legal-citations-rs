@@ -1,0 +1,54 @@
+{
+  "id": "intl.un.riaa",
+  "kind": "foreign",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "arbitration",
+    "un"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+R\\.\\s?I\\.\\s?A\\.\\s?A\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} R.I.A.A. {page}",
+  "authority_key": "intl.un/riaa/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): United Nations Reports of International Arbitral Awards, <vol> R.I.A.A. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Trail Smelter (U.S. v. Can.), 3 R.I.A.A. 1905 (1941).",
+        "spans": [[30, 45]],
+        "groups": {
+          "volume": "3",
+          "page": "1905"
+        }
+      },
+      {
+        "text": "Lake Lanoux (Fr. v. Spain), 12 R.I.A.A. 281 (1957).",
+        "spans": [[28, 43]]
+      },
+      {
+        "text": "The tribunal relied on 3 R.I.A.A. 1905, 1965–1967 in reaching its award.",
+        "spans": [[23, 51]]
+      }
+    ],
+    "negative": [
+      "The R.I. office filed 1905 forms.",
+      "The arbitral awards numbered 12.",
+      "RIAA volume 3 is missing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

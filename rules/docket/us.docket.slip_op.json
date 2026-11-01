@@ -1,0 +1,71 @@
+{
+  "id": "us.docket.slip_op",
+  "kind": "docket",
+  "jurisdiction": "us",
+  "pattern": "\\bNo\\.\\s?(?P<docket>[0-9]{1,2}\\s(?:Civ|Cr)\\.\\s[0-9]{1,6}|[0-9A-Z][0-9A-Za-z]{0,9}(?:[-–:][0-9A-Za-z]{1,8}){0,4}),\\s+slip\\s+op\\.\\s+at\\s+(?P<pin>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "No. {docket}, slip op. at {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R12.4.2 (Slip opinions)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R12.4.2 (Slip opinions), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Smith v. Jones, No. 14-1234, slip op. at 5 (4th Cir. Mar. 2, 2015).",
+        "spans": [
+          [
+            16,
+            42
+          ]
+        ],
+        "groups": {
+          "docket": "14-1234",
+          "pin": "5"
+        }
+      },
+      {
+        "text": "See No. 12 Civ. 6065, slip op. at 3.",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare No. 2014-1576, slip op. at 12 with No. 1728, slip op. at 1.",
+        "spans": [
+          [
+            8,
+            37
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The slip op. at 5 pages is short.",
+      "No. 14 was a slip.",
+      "Slip opinions number 1234 this year."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Not after an agency acronym (`ARB No. ..., slip op.`): those are agency decisions.",
+  "reject_before": [
+    "\\b[A-Z]{2,6}\\s$"
+  ]
+}

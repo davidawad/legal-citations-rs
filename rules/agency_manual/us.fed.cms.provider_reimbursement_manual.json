@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.cms.provider_reimbursement_manual",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.cms",
+  "tags": [
+    "health"
+  ],
+  "pattern": "\\b(?:PRM(?:-I{1,2}|\\s+15-[12])?|Provider\\s+Reimbursement\\s+Manual(?:,?\\s+(?:pt\\.|Part)\\s+I{1,2})?|CMS\\s+Pub\\.\\s+15-[12])\\s*,?\\s*§§?\\s*(?P<section>[0-9]{3,4}(?:\\.[0-9]+)*)\\b",
+  "priority": 60,
+  "normalize": "PRM § {section}",
+  "authority_key": "us.cms_prm/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "CMS Provider Reimbursement Manual (CMS Pub. 15-1 and 15-2)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Provider Reimbursement Manual (Pub. 15-1) at https://www.cms.gov and compare section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Costs must be reasonable. PRM § 2102.1.",
+        "spans": [
+          [
+            26,
+            39
+          ]
+        ],
+        "groups": {
+          "section": "2102.1"
+        }
+      },
+      {
+        "text": "See Provider Reimbursement Manual, pt. I, § 2102.3.",
+        "spans": [
+          [
+            4,
+            51
+          ]
+        ]
+      },
+      {
+        "text": "Compare PRM-I § 2304 with CMS Pub. 15-1, § 2102.1.",
+        "spans": [
+          [
+            8,
+            21
+          ],
+          [
+            27,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The PRM was revised.",
+      "PRM § 12",
+      "Provider Reimbursement Manual, pt. I"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

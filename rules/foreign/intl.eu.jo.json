@@ -1,0 +1,55 @@
+{
+  "id": "intl.eu.jo",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?P<year>19[0-9]{2})\\s+J\\.\\s?O\\.\\s+\\((?:(?P<series>L|C)\\s)?(?P<issue>[0-9]{1,4})\\)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{year} J.O. ({issue}) {page}",
+  "authority_key": "eu.jo/{year}/{issue}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): Journal Officiel des Communautés Européennes, <year> J.O. (L <issue>) <page> (issue alone before 1967)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Council Directive 68/151, 1968 J.O. (L 65) 8.",
+        "spans": [[26, 44]],
+        "groups": {
+          "year": "1968",
+          "series": "L",
+          "issue": "65",
+          "page": "8"
+        }
+      },
+      {
+        "text": "Council Regulation 17, 1962 J.O. (13) 204.",
+        "spans": [[23, 41]]
+      },
+      {
+        "text": "The court relied on 1970 J.O. (L 13) 1 in its judgment.",
+        "spans": [[20, 38]]
+      }
+    ],
+    "negative": [
+      "The J.O. was printed 65 times.",
+      "In 1968 the J.O. had 8 editors.",
+      "Journal officiel issue 13 was lost."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

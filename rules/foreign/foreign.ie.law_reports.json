@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ie.law_reports",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ie",
+  "tags": [
+    "foreign",
+    "ireland"
+  ],
+  "pattern": "\\[(?P<year>(?:18|19|20)[0-9]{2})\\]\\s+(?:(?P<volume>[0-9])\\s+)?(?P<reporter>I\\.?R\\.|IR|I\\.?L\\.?R\\.?M\\.?|ILRM|I\\.?L\\.?T\\.?R\\.?|ILTR)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "[{year}] {reporter} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Irish law reports ([<year>] <vol> IR <page>; [<year>] ILRM <page>), Bluebook T2 (Ireland)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Irish courts' neutral citation practice (courts.ie) and Bluebook T2 (Ireland).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "McGee v Attorney General [1974] IR 284.",
+        "spans": [[25, 38]],
+        "groups": {
+          "year": "1974",
+          "reporter": "IR",
+          "page": "284"
+        }
+      },
+      {
+        "text": "Norris v. Attorney General, [1984] I.R. 36.",
+        "spans": [[28, 42]]
+      },
+      {
+        "text": "See [1990] 1 ILRM 1.",
+        "spans": [[4, 19]]
+      }
+    ],
+    "negative": [
+      "[1974] saw the IR building open.",
+      "The ILRM office had 36 staff.",
+      "IR 284 is a road."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

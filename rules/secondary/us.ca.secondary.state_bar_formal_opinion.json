@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.secondary.state_bar_formal_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:Cal\\.\\s+State\\s+Bar|State\\s+Bar\\s+of\\s+Cal(?:\\.|ifornia)(?:\\s+Standing\\s+Comm(?:\\.|ittee)\\s+on\\s+Pro(?:\\.|f(?:['’]l|essional))\\s+Resp(?:\\.|onsibility)\\s+(?:&|and)\\s+Conduct)?|COPRAC|Cal\\.)\\s*,?\\s+Formal\\s+Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>(?:19|20)[0-9]{2}-[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "Cal. State Bar Formal Op. No. {number}",
+  "authority_key": "us.ca.state_bar_formal/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "State Bar of California Standing Committee on Professional Responsibility and Conduct formal opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the State Bar of California ethics opinions at https://www.calbar.ca.gov/Attorneys/Conduct-Discipline/Ethics/Opinions and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "A lawyer may not do so. Cal. State Bar Formal Op. No. 2015-193.",
+        "spans": [
+          [
+            24,
+            62
+          ]
+        ],
+        "groups": {
+          "number": "2015-193"
+        }
+      },
+      {
+        "text": "See State Bar of Cal. Standing Comm. on Pro. Resp. & Conduct, Formal Op. 2010-179.",
+        "spans": [
+          [
+            4,
+            81
+          ]
+        ]
+      },
+      {
+        "text": "Compare Cal. Formal Opn. 2012-184 with COPRAC Formal Op. 2020-203.",
+        "spans": [
+          [
+            8,
+            33
+          ],
+          [
+            39,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Cal. State Bar Formal Op. pending",
+      "The Cal. State Bar formal opinions",
+      "Cal. Formal Op. No. 12"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

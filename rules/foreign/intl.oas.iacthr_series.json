@@ -1,0 +1,54 @@
+{
+  "id": "intl.oas.iacthr_series",
+  "kind": "foreign",
+  "jurisdiction": "intl.oas",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\bInter-Am\\.\\s+Ct\\.\\s+H\\.\\s?R\\.\\s+\\(ser\\.\\s+(?P<series>[A-F])\\)\\s+No\\.\\s+(?P<number>[0-9]{1,4})\\b(?:,\\s+(?:¶¶?\\s+)?(?P<pin>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 62,
+  "normalize": "Inter-Am. Ct. H.R. (ser. {series}) No. {number}",
+  "authority_key": "iacthr/{series}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.3 (Inter-American and International Tribunal): Inter-American Court of Human Rights, Inter-Am. Ct. H.R. (ser. A-F) No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Velásquez-Rodríguez v. Honduras, Merits, Inter-Am. Ct. H.R. (ser. C) No. 4, ¶ 166 (July 29, 1988).",
+        "spans": [[43, 84]],
+        "groups": {
+          "series": "C",
+          "number": "4",
+          "pin": "166"
+        }
+      },
+      {
+        "text": "Juridical Condition and Rights of Undocumented Migrants, Advisory Opinion OC-18/03, Inter-Am. Ct. H.R. (ser. A) No. 18 (Sept. 17, 2003).",
+        "spans": [[84, 118]]
+      },
+      {
+        "text": "Barrios Altos v. Peru, Merits, Inter-Am. Ct. H.R. (ser. C) No. 75, ¶¶ 41–44 (Mar. 14, 2001).",
+        "spans": [[31, 79]]
+      }
+    ],
+    "negative": [
+      "H.R. 18 passed the House.",
+      "The Inter-American Court sat 4 judges.",
+      "Series C No. 4 was missing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

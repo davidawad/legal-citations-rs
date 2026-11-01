@@ -1,0 +1,67 @@
+{
+  "id": "us.nh.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.nh",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>N\\.H\\.\\s?Rulemaking\\sReg\\.|N\\.H\\.\\s?Gov['’]t\\sReg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 New Hampshire: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 New Hampshire, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 446",
+      "corpus/formats/indigo.jsonl line 447"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 40 N.H. Rulemaking Reg. 2356 (Sept. 21, 2015).",
+        "spans": [[4, 32]],
+        "groups": {
+          "volume": "40",
+          "series": "N.H. Rulemaking Reg.",
+          "page": "2356"
+        }
+      },
+      {
+        "text": "See 44 N.H. Rulemaking Reg. 1274 (Sept. 21, 2014).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See 9 N.H. Gov’t Reg. 894 (LexisNexis May 2015).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 1 N.H. Gov’t Reg. 1254 (LexisNexis Jan. 2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 12 N.H. Rulemaking Reg. 77.",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 12 N.H. Gov’t Reg. 77.",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The N.H. Gov’t Reg. is published monthly.",
+      "Volume 12 of the New Hampshire register has 77 pages.",
+      "In 2015 the N.H. Gov’t Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

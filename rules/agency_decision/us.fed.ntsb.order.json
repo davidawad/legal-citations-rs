@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.ntsb.order",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ntsb",
+  "pattern": "\\bNTSB\\s+Order\\s+No\\.\\s?(?P<number>E[AM]-[0-9]{2,4})\\b",
+  "priority": 60,
+  "normalize": "NTSB Order No. {number}",
+  "authority_key": "us.ntsb/order/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (National Transportation Safety Board orders) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for NTSB; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Administrator v. Smith, NTSB Order No. EA-5918 (2021).",
+        "spans": [
+          [
+            28,
+            50
+          ]
+        ],
+        "groups": {
+          "number": "EA-5918"
+        }
+      },
+      {
+        "text": "The Board affirmed in NTSB Order No. EM-210.",
+        "spans": [
+          [
+            22,
+            43
+          ]
+        ]
+      },
+      {
+        "text": "Compare NTSB Order No. EA-5000 with NTSB Order No.EA-4300.",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            57
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The NTSB issued an order in 2021.",
+      "NTSB Order No. 5 was a typo.",
+      "The EA-5918 aircraft was repaired."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

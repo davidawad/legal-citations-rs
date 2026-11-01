@@ -1,0 +1,52 @@
+{
+  "id": "foreign.in.constitution",
+  "kind": "foreign",
+  "jurisdiction": "foreign.in",
+  "tags": [
+    "foreign",
+    "india"
+  ],
+  "pattern": "\\b(?:India\\s+Const\\.|INDIA\\s+CONST\\.|Constitution\\s+of\\s+India,?)\\s+(?:arts?\\.|Arts?\\.|Article)\\s+(?P<article>[0-9]{1,3}[A-Z]{0,2}(?:\\([0-9a-z]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "India Const. art. {article}",
+  "authority_key": "in.const/{article}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (India: India Const. art. <n>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (India) and the Supreme Court of India's citation practice (SCC, AIR, neutral INSC citations).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "India Const. art. 21 protects life and liberty.",
+        "spans": [[0, 20]],
+        "groups": {
+          "article": "21"
+        }
+      },
+      {
+        "text": "See Constitution of India, art. 19(1)(a).",
+        "spans": [[4, 40]]
+      },
+      {
+        "text": "INDIA CONST. art. 32.",
+        "spans": [[0, 20]]
+      }
+    ],
+    "negative": [
+      "India's constitution has 395 articles.",
+      "Article 21 of the treaty.",
+      "U.S. Const. art. III"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

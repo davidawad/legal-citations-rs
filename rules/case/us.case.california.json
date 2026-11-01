@@ -1,0 +1,55 @@
+{
+  "id": "us.case.california",
+  "kind": "case",
+  "jurisdiction": "us.ca",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>Cal\\.\\s?Rptr\\.(?:\\s?[23]d)?|Cal\\.\\s?App\\.(?:\\s?(?:2d|3d|4th|5th))?|Cal\\.(?:\\s?(?:2d|3d|4th|5th))?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (California) reporters (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See People v. Doe, 50 Cal. 4th 1 (2010).",
+        "spans": [[19, 32]],
+        "groups": {
+          "volume": "50",
+          "reporter": "Cal. 4th",
+          "page": "1"
+        }
+      },
+      {
+        "text": "The court relied on Smith v. Jones, 100 Cal. Rptr. 3d 200 (Ct. App. 2009) in reaching its holding.",
+        "spans": [[36, 57]]
+      },
+      {
+        "text": "Under Alpha v. Beta, 20 Cal. App. 5th 300 (2018), the claim fails.",
+        "spans": [[21, 41]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

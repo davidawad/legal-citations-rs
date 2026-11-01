@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.legislative.usccan",
+  "kind": "legislative",
+  "jurisdiction": "us.fed.congress",
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+(?:U\\.\\s?S\\.\\s?C\\.\\s?C\\.\\s?A\\.\\s?N\\.|U\\.S\\.\\s?Code\\s+Cong\\.\\s+&\\s+Admin\\.\\s+News)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s(?P<pin>[0-9]{1,6}(?:[-–][0-9]{1,6})?)(?:\\s\\([^()]{0,40}?(?:1[6-9]|20)[0-9]{2}\\)|$))?",
+  "priority": 65,
+  "normalize": "{year} U.S.C.C.A.N. {page}",
+  "authority_key": "us.usccan/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 13.4 (reports reprinted in U.S.C.C.A.N.) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.4 and check the `as reprinted in 1978 U.S.C.C.A.N. 5787` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See S. Rep. No. 95-989, at 2 (1978), as reprinted in 1978 U.S.C.C.A.N. 5787, 5788.",
+        "spans": [
+          [
+            53,
+            75
+          ]
+        ],
+        "groups": {
+          "year": "1978",
+          "page": "5787"
+        }
+      },
+      {
+        "text": "The history is reprinted at 1976 U.S. Code Cong. & Admin. News 5659.",
+        "spans": [
+          [
+            28,
+            67
+          ]
+        ]
+      },
+      {
+        "text": "Compare 1990 U.S.C.C.A.N. 1 with 2006 U.S.C.C.A.N. 12.",
+        "spans": [
+          [
+            8,
+            27
+          ],
+          [
+            33,
+            53
+          ]
+        ]
+      },
+      {
+        "text": "Reprinted in 1976 U.S.C.C.A.N. 5659, 5675",
+        "spans": [[13, 41]]
+      }
+    ],
+    "negative": [
+      "The 1978 edition of U.S.C.C.A.N. has 5787 pages.",
+      "See 28 U.S.C. § 1331.",
+      "U.S.C.C.A.N. reprints legislative history."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

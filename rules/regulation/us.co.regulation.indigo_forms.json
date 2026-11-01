@@ -1,0 +1,71 @@
+{
+  "id": "us.co.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.co",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sColo\\.\\s?Code\\sRegs\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Colo\\.\\s?Code\\sRegs\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Colorado: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Colorado, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 90",
+      "corpus/formats/indigo.jsonl line 91"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Colo. Code Regs. § 5-57 (2015).",
+        "spans": [[4, 28]],
+        "groups": {}
+      },
+      {
+        "text": "See Colo. Code Regs. § 33-57 (2014).",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 44 Colo. Code Regs. § 49-33 (LexisNexis 2015).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See 26 Colo. Code Regs. § 53-33 (LexisNexis 2014).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See Colo. Code Regs. § 8-81 (5348).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See Colo. Code Regs. § 66-81 (5347).",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 77 Colo. Code Regs. § 72-66 (LexisNexis 5348).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See 59 Colo. Code Regs. § 86-66 (LexisNexis 5347).",
+        "spans": [[4, 32]]
+      }
+    ],
+    "negative": [
+      "The Colorado code was amended in 2015.",
+      "Section 12 of the Colorado rules is long.",
+      "Title five of the Colorado compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

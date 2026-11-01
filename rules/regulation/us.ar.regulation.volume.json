@@ -1,0 +1,67 @@
+{
+  "id": "us.ar.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ar",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Ark\\.\\s?Gov['’]t\\sReg\\.|Ark\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Arkansas: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Arkansas, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 54",
+      "corpus/formats/indigo.jsonl line 55"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 44 Ark. Reg. 2295 (Jan. 2015).",
+        "spans": [[4, 21]],
+        "groups": {
+          "volume": "44",
+          "series": "Ark. Reg.",
+          "page": "2295"
+        }
+      },
+      {
+        "text": "See 26 Ark. Reg. 1219 (Sept. 2014).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 17 Ark. Gov’t Reg. 600 (LexisNexis May 2015).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 17 Ark. Gov’t Reg. 250 (LexisNexis Sept. 2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 12 Ark. Reg. 77.",
+        "spans": [[4, 19]]
+      },
+      {
+        "text": "See 12 Ark. Gov’t Reg. 77.",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The Ark. Gov’t Reg. is published monthly.",
+      "Volume 12 of the Arkansas register has 77 pages.",
+      "In 2015 the Ark. Gov’t Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

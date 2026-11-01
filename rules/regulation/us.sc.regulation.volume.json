@@ -1,0 +1,54 @@
+{
+  "id": "us.sc.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.sc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>S\\.C\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 South Carolina: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 South Carolina, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 709"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 44 S.C. Reg. 660 (May 17, 2015).",
+        "spans": [[4, 20]],
+        "groups": {
+          "volume": "44",
+          "series": "S.C. Reg.",
+          "page": "660"
+        }
+      },
+      {
+        "text": "See 28 S.C. Reg. 340 (Sept. 25, 2014).",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "See 12 S.C. Reg. 77.",
+        "spans": [[4, 19]]
+      }
+    ],
+    "negative": [
+      "The S.C. Reg. is published monthly.",
+      "Volume 12 of the South Carolina register has 77 pages.",
+      "In 2015 the S.C. Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

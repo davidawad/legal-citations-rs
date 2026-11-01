@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.uspto.patent_application",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "tags": [
+    "uspto",
+    "patent"
+  ],
+  "pattern": "\\b(?:(?:U\\.\\s?S\\.\\s+)?(?:Patent\\s+)?(?:Appl(?:ication|\\.)|App\\.)(?:\\s+Ser(?:ial|\\.))?|Ser(?:ial|\\.))\\s+No\\.\\s*(?P<series>[0-3][0-9])/(?P<number>[0-9]{3},?[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "Application No. {series}/{number}",
+  "authority_key": "us.patent_application/{series}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "USPTO patent application numbers (series code / serial number), MPEP § 503",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open MPEP § 503 (application number) and compare the `16/123,456` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Priority is claimed to Application No. 16/123,456.",
+        "spans": [
+          [
+            23,
+            49
+          ]
+        ],
+        "groups": {
+          "series": "16",
+          "number": "123,456"
+        }
+      },
+      {
+        "text": "See U.S. Patent Appl. Ser. No. 14/987,654.",
+        "spans": [
+          [
+            4,
+            41
+          ]
+        ]
+      },
+      {
+        "text": "Compare Serial No. 12/345,678 with Appl. No. 09/123456.",
+        "spans": [
+          [
+            8,
+            29
+          ],
+          [
+            35,
+            54
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Application No. 12",
+      "Serial No. 16/12",
+      "the 16/123 ratio"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

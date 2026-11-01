@@ -1,0 +1,12 @@
+{
+  "name": "difc-adgm",
+  "description": "Dubai International Financial Centre and Abu Dhabi Global Market: DIFC and ADGM court neutral citations, DIFC laws and ADGM regulations.",
+  "include": [
+    "jurisdiction:foreign.ae.difc",
+    "jurisdiction:foreign.ae.adgm",
+    "tag:difc",
+    "tag:adgm"
+  ],
+  "exclude": [],
+  "note": "DIFC Regulations are not covered yet. Onshore UAE federal and emirate authority is in the uae profile."
+}

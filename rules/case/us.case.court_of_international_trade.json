@@ -1,0 +1,73 @@
+{
+  "id": "us.case.court_of_international_trade",
+  "kind": "case",
+  "jurisdiction": "us.fed.cit",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?P<reporter>Ct\\.\\s?Int(?:'|’)l\\s+Trade|C\\.\\s?I\\.\\s?T\\.|Cust\\.\\s?Ct\\.)\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.1 (Court of International Trade Reports; Customs Court Reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1.1 for the Ct. Int'l Trade and Cust. Ct. reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Am. Schack Co. v. United States, 1 Ct. Int'l Trade 1 (1980).",
+        "spans": [
+          [
+            37,
+            56
+          ]
+        ],
+        "groups": {
+          "volume": "1",
+          "reporter": "Ct. Int'l Trade",
+          "page": "1"
+        }
+      },
+      {
+        "text": "The court relied on 12 C.I.T. 345, 350 (1988).",
+        "spans": [
+          [
+            20,
+            33
+          ]
+        ]
+      },
+      {
+        "text": "Compare 45 Ct. Int’l Trade 123 with 1 Cust. Ct. 1.",
+        "spans": [
+          [
+            8,
+            32
+          ],
+          [
+            38,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Ct. Int'l Trade sits in New York.",
+      "The Court of International Trade sat in 2021.",
+      "C.I.T. 12 is a course number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-23 (resolve to the cited authority: 1 Ct. Int'l Trade 1 and 1 C.I.T. 1 -> American Schack Co. v. United States; 1 Cust. Ct. 1 -> United American Bosch Corp. v. United States)."
+}

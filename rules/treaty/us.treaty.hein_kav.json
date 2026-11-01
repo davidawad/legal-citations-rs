@@ -1,0 +1,52 @@
+{
+  "id": "us.treaty.hein_kav",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?Hein[’']s\\s+No\\.\\s?KAV\\s+(?P<number>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "Hein's No. KAV {number}",
+  "authority_key": "us.hein_kav/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Hein's United States Treaties and Other International Agreements (1984-date), Hein's No. KAV <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Agreement on Fisheries, U.S.-Can., June 30, 1990, Hein’s No. KAV 2615.",
+        "spans": [[35, 71]],
+        "groups": {
+          "date": "June 30, 1990",
+          "number": "2615"
+        }
+      },
+      {
+        "text": "Memorandum of Understanding, U.S.-Mex., Nov. 1, 2001, Hein’s No. KAV 5412.",
+        "spans": [[40, 75]]
+      },
+      {
+        "text": "The court relied on Hein's No. KAV 5412 in reaching its holding.",
+        "spans": [[20, 39]]
+      }
+    ],
+    "negative": [
+      "Hein's catalog lists 2615 titles.",
+      "The KAV unit number 5412 was sold.",
+      "Heinz No. 57 sauce is popular."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

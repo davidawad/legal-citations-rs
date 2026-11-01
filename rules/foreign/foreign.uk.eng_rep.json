@@ -1,0 +1,56 @@
+{
+  "id": "foreign.uk.eng_rep",
+  "kind": "foreign",
+  "jurisdiction": "foreign.gb",
+  "tags": [
+    "foreign",
+    "uk"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+(?P<reporter>Eng\\.\\s?Rep\\.|E\\.\\s?R\\.)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\b)?(?:\\s+\\((?P<court>[A-Z][A-Za-z.& ]{0,24}?)\\s*(?P<year>1[2-9][0-9]{2})\\))?",
+  "priority": 60,
+  "normalize": "{volume} Eng. Rep. {page}",
+  "authority_key": "uk.eng_rep/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (United Kingdom: English Reports, Full Reprint (1220-1865), <vol> Eng. Rep. <page> (<court> <year>))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (United Kingdom, English Reports) and OSCOLA appendix 3 (ER).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "King v. Wiseman, 92 Eng. Rep. 774, 775 (K. B. 1718).",
+        "spans": [[17, 51]],
+        "groups": {
+          "volume": "92",
+          "page": "774",
+          "pin": "775",
+          "court": "K. B.",
+          "year": "1718"
+        }
+      },
+      {
+        "text": "Hadley v. Baxendale, 156 Eng. Rep. 145 (Ex. 1854).",
+        "spans": [[21, 49]]
+      },
+      {
+        "text": "Pierson relied on 77 E.R. 1294.",
+        "spans": [[18, 30]]
+      }
+    ],
+    "negative": [
+      "The ER saw 92 patients.",
+      "English reports ran 774 pages.",
+      "Rep. 145 voted no in 1854."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The full-reprint volume and page are the authority; the nominate report it reprints is a separate parallel cite."
+}

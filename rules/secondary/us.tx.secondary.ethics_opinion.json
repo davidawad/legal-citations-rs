@@ -1,0 +1,70 @@
+{
+  "id": "us.tx.secondary.ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.tx",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:Tex\\.|Texas)\\s+(?:(?:Comm\\.|Committee)\\s+on\\s+Pro(?:\\.|f(?:['’]l|essional))\\s+Ethics|Pro(?:\\.|f(?:['’]l|essional))\\s+Ethics\\s+Comm(?:\\.|ittee)|Ethics)\\s*,?\\s+Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "Tex. Comm. on Pro. Ethics, Op. {number}",
+  "authority_key": "us.tx.ethics/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Professional Ethics Committee for the State Bar of Texas opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Texas Professional Ethics Committee opinions at https://www.legalethicstexas.com and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cloud storage is allowed. Tex. Comm. on Pro. Ethics, Op. 680 (2018).",
+        "spans": [
+          [
+            26,
+            60
+          ]
+        ],
+        "groups": {
+          "number": "680"
+        }
+      },
+      {
+        "text": "See Tex. Ethics Op. 648.",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare Texas Professional Ethics Committee Opinion 695 with Tex. Prof’l Ethics Comm., Op. 573.",
+        "spans": [
+          [
+            8,
+            55
+          ],
+          [
+            61,
+            96
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Tex. Comm. on Pro. Ethics met.",
+      "Tex. Ethics Op. pending",
+      "Texas Ethics Op. 12"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

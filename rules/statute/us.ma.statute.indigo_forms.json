@@ -1,0 +1,71 @@
+{
+  "id": "us.ma.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.ma",
+  "pattern": "\\b(?:Mass\\.\\s?Gen\\.\\s?Laws\\sAnn\\.\\s?ch\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Mass\\.\\s?Ann\\.\\s?Laws\\sch\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Massachusetts: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Massachusetts, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 353",
+      "corpus/formats/indigo.jsonl line 354"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mass. Gen. Laws Ann. ch. 57, § 81 (West 2015).",
+        "spans": [[4, 38]],
+        "groups": {}
+      },
+      {
+        "text": "See Mass. Gen. Laws Ann. ch. 33, § 65 (West 2014).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See Mass. Ann. Laws ch. 25, § 81 (LexisNexis 2015).",
+        "spans": [[4, 33]]
+      },
+      {
+        "text": "See Mass. Ann. Laws ch. 5, § 9 (LexisNexis 2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See Mass. Gen. Laws Ann. ch. 81, § 14 (West 5348).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See Mass. Gen. Laws Ann. ch. 66, § 98 (West 5347).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See Mass. Ann. Laws ch. 58, § 14 (LexisNexis 5348).",
+        "spans": [[4, 33]]
+      },
+      {
+        "text": "See Mass. Ann. Laws ch. 8, § 2 (LexisNexis 5347).",
+        "spans": [[4, 31]]
+      }
+    ],
+    "negative": [
+      "The Massachusetts code was amended in 2015.",
+      "Section 12 of the Massachusetts rules is long.",
+      "Title five of the Massachusetts compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "us.wa.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.wa",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Wash\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Washington: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Washington, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 825"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 9 Wash. Reg. 157 (May 25, 2015).",
+        "spans": [[4, 20]],
+        "groups": {
+          "volume": "9",
+          "series": "Wash. Reg.",
+          "page": "157"
+        }
+      },
+      {
+        "text": "See 17 Wash. Reg. 2028 (Sept. 13, 2014).",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 12 Wash. Reg. 77.",
+        "spans": [[4, 20]]
+      }
+    ],
+    "negative": [
+      "The Wash. Reg. is published monthly.",
+      "Volume 12 of the Washington register has 77 pages.",
+      "In 2015 the Wash. Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

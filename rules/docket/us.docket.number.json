@@ -1,0 +1,48 @@
+{
+  "id": "us.docket.number",
+  "kind": "docket",
+  "jurisdiction": "us",
+  "pattern": "\\bNos?\\.\\s*(?P<docket>[0-9]{1,2}:[0-9]{2}-[a-z]{2,4}-[0-9]{3,6}(?:-[A-Z]{2,4})*|[0-9]{2}-[0-9]{1,5})\\b",
+  "priority": 40,
+  "normalize": "No. {docket}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 10.8.1 (pending and unreported cases: docket numbers)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 10.8.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See No. 1:20-cv-01234.",
+        "spans": [[4, 21]],
+        "groups": {
+          "docket": "1:20-cv-01234"
+        }
+      },
+      {
+        "text": "The court relied on No. 22-1234 in reaching its holding.",
+        "spans": [[20, 31]]
+      },
+      {
+        "text": "Under Nos. 3:19-cr-00012-JD, the claim fails.",
+        "spans": [[6, 27]]
+      }
+    ],
+    "negative": [
+      "No. 1 on the list was approved.",
+      "The score was 20-12 at halftime.",
+      "Call No. 5 for details."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

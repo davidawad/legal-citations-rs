@@ -1,0 +1,69 @@
+{
+  "id": "us.fed.oshrc.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.oshrc",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+(?P<reporter>O\\.\\s?S\\.\\s?H\\.\\s?Cas\\.\\s?\\(BNA\\)|BNA\\s+OSHC)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "us.oshrc/{reporter}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.2 and T16 (Occupational Safety & Health Cases (BNA)) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T16 (services) for the `O.S.H. Cas. (BNA)` abbreviation.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Summit Contractors, Inc., 21 O.S.H. Cas. (BNA) 2020 (No. 03-1622, 2007).",
+        "spans": [
+          [
+            30,
+            55
+          ]
+        ],
+        "groups": {
+          "volume": "21",
+          "reporter": "O.S.H. Cas. (BNA)",
+          "page": "2020"
+        }
+      },
+      {
+        "text": "The Commission relied on 24 BNA OSHC 1234 for the rule.",
+        "spans": [
+          [
+            25,
+            41
+          ]
+        ]
+      },
+      {
+        "text": "Compare 19 O.S.H. Cas. (BNA) 1001 with 25 BNA OSHC 1.",
+        "spans": [
+          [
+            8,
+            33
+          ],
+          [
+            39,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The OSHA log listed 21 cases.",
+      "BNA publishes OSHC as a looseleaf.",
+      "The O.S.H. Act covers 21 industries."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

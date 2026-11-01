@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.dist.azd.local_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist.azd",
+  "tags": [
+    "local_rules"
+  ],
+  "pattern": "\\b(?P<label>LRCiv|LRCrim|LRBankr|LRPat)\\s?(?P<rule>[0-9]{1,2}(?:\\.[0-9]+)*[A-Za-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 56,
+  "normalize": "{label} {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "D. Ariz. Rules of Practice (`LRCiv`, `LRCrim`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the D. Ariz. Local Rules of Practice at https://www.azd.uscourts.gov/local-rules and compare the `LRCiv 7.2` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "A party may not file a reply over 11 pages. LRCiv 7.2(e).",
+        "spans": [
+          [
+            44,
+            56
+          ]
+        ],
+        "groups": {
+          "label": "LRCiv",
+          "rule": "7.2",
+          "sub": "(e)"
+        }
+      },
+      {
+        "text": "See LRCrim 12.1.",
+        "spans": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "text": "Compare LRCiv 7.2(i) with LRCiv 56.1(a).",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            39
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The LRCiv rules",
+      "LRCiv pages",
+      "LRCrim filings"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

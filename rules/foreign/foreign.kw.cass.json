@@ -1,0 +1,58 @@
+{
+  "id": "foreign.kw.cass",
+  "kind": "foreign",
+  "jurisdiction": "foreign.kw.cass",
+  "tags": [
+    "mena",
+    "gcc",
+    "kw"
+  ],
+  "pattern": "\\b(?:Kuwait(?:i)?\\s+)?Court\\s+of\\s+Cassation(?:\\s+of\\s+Kuwait)?,?\\s*\\(?(?:(?P<circuit>Civil|Commercial|Criminal)\\s+)?(?:Appeal|Case)\\s+No\\.?\\s*(?P<number>[0-9]{1,5})(?:\\s+of\\s+|\\s*/\\s*)(?P<year>(?:19|20)[0-9]{2})(?:\\s+(?P<circuit2>Commercial|Civil|Administrative|Personal\\s+Status|Criminal))?\\)?",
+  "reject": [
+    "^Court\\s+of\\s+Cassation(?:,|\\s+\\(|\\s+(?:Civil|Commercial|Criminal|Appeal|Case)\\b)"
+  ],
+  "priority": 60,
+  "normalize": "Kuwait Court of Cassation, Appeal No. {number}/{year}",
+  "authority_key": "kw.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Kuwait Court of Cassation cited as Appeal No. N/YYYY <circuit> (e.g. Commercial)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Kuwaiti Court of Cassation (Mahkamat al-Tamyiz) rulings reported in Kuwait law-firm client alerts for the form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Kuwait Court of Cassation, Appeal No. 1046/2015 Commercial, held.",
+        "spans": [[0, 58]],
+        "groups": {
+          "number": "1046",
+          "year": "2015",
+          "circuit2": "Commercial"
+        }
+      },
+      {
+        "text": "Court of Cassation of Kuwait (Appeal No. 33/2018).",
+        "spans": [[0, 49]]
+      },
+      {
+        "text": "Kuwaiti Court of Cassation, Appeal No. 7 of 2012 Civil",
+        "spans": [[0, 54]]
+      }
+    ],
+    "negative": [
+      "The Court of Cassation heard appeal 1046 in 2015.",
+      "The Kuwait Court of Cassation sits in Kuwait City.",
+      "The Kuwaiti appeal failed in 2015."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

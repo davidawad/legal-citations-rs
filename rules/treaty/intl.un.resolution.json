@@ -1,0 +1,63 @@
+{
+  "id": "intl.un.resolution",
+  "kind": "treaty",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "un"
+  ],
+  "pattern": "\\b(?P<organ>G\\.\\s?A\\.|S\\.\\s?C\\.|E\\.\\s?S\\.\\s?C\\.|T\\.\\s?C\\.|H\\.\\s?R\\.\\s?C\\.)\\s+Res\\.\\s+(?P<number>[0-9]{1,4}[A-C]?(?:/[0-9]{1,4})?)(?:\\s+\\((?P<session>[IVXLC]{1,7}|ES-[IVX]{1,5})\\))?(?:\\s+(?P<part>[A-C])\\b)?",
+  "priority": 62,
+  "normalize": "{organ} Res. {number}",
+  "authority_key": "un/res/{organ}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations) and the Indigo T8.1 U.N. documents form: <organ> Res. <no.> (<session>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See G.A. Res. 217 (III) A, Universal Declaration of Human Rights (Dec. 10, 1948).",
+        "spans": [[4, 25]],
+        "groups": {
+          "organ": "G.A.",
+          "number": "217",
+          "session": "III",
+          "part": "A"
+        }
+      },
+      {
+        "text": "S.C. Res. 1373, U.N. Doc. S/RES/1373 (Sept. 28, 2001).",
+        "spans": [[0, 14]]
+      },
+      {
+        "text": "G.A. Res. 2625 (XXV), U.N. GAOR, 25th Sess., Supp. No. 28, U.N. Doc. A/8028 (1970).",
+        "spans": [[0, 20]]
+      },
+      {
+        "text": "Under G.A. Res. 61/295, the claim fails.",
+        "spans": [[6, 22]]
+      },
+      {
+        "text": "Universal Declaration of Human Rights, G. A. Res. 217A (III), U. N. Doc. A/810 (1948).",
+        "spans": [[39, 60]]
+      }
+    ],
+    "negative": [
+      "H.R. 1373 passed the House.",
+      "The G.A. voted 217 to 3.",
+      "Res. 1373 of the city council."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

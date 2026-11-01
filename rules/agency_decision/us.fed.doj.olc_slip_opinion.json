@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.doj.olc_slip_opinion",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.doj.olc",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+Op\\.\\s?O\\.\\s?L\\.\\s?C\\.\\s+_{1,5}(?:,\\s+slip\\s+op\\.\\s+at\\s+(?P<pin>[0-9]{1,3}(?:[-–][0-9]{1,3})?))?",
+  "priority": 60,
+  "normalize": "{volume} Op. O.L.C. __",
+  "authority_key": "us.olc/{volume}/slip",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Office of Legal Counsel slip opinions (`45 Op. O.L.C. __, slip op. at 3 (2021)`); Bluebook R. 14.3",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open an OLC opinion at https://www.justice.gov/olc/opinions and compare its suggested citation line.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The President may do so. 45 Op. O.L.C. __, slip op. at 3 (2021).",
+        "spans": [
+          [
+            25,
+            56
+          ]
+        ],
+        "groups": {
+          "volume": "45",
+          "pin": "3"
+        }
+      },
+      {
+        "text": "See 44 Op. O.L.C. ___ (2020).",
+        "spans": [
+          [
+            4,
+            21
+          ]
+        ]
+      },
+      {
+        "text": "Compare 46 Op. O.L.C. __, slip op. at 12–13 with 43 Op. O.L.C. __.",
+        "spans": [
+          [
+            8,
+            45
+          ],
+          [
+            51,
+            67
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "45 Op. O.L.C. pending",
+      "The O.L.C. __ draft",
+      "Op. O.L.C. __"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

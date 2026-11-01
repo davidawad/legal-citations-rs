@@ -1,0 +1,112 @@
+{
+  "id": "us.ma.case.nominative_mass",
+  "kind": "case",
+  "jurisdiction": "us.ma",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Mass\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Allen|Cush\\.|Pick\\.|Will\\.|Gray|Met\\.|Tyng)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Mass. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 340",
+      "corpus/formats/indigo.jsonl line 341",
+      "corpus/formats/indigo.jsonl line 342",
+      "corpus/formats/indigo.jsonl line 343",
+      "corpus/formats/indigo.jsonl line 344",
+      "corpus/formats/indigo.jsonl line 345",
+      "corpus/formats/indigo.jsonl line 346"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Smith v. Jones, 83 Mass. (1 Allen) 449 (1862).",
+        "spans": [[20, 42]],
+        "groups": {
+          "volume": "83",
+          "reporter": "Mass.",
+          "nominative_volume": "1",
+          "nominative": "Allen",
+          "page": "449"
+        }
+      },
+      {
+        "text": "See State v. Miller, 83 Mass. (1 Allen) 585, 625 (1865).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Brown v. Davis, 67 Mass. (1 Gray) 361 (1855).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See Garcia v. Lee, 67 Mass. (1 Gray) 57, 601 (1858).",
+        "spans": [[19, 39]]
+      },
+      {
+        "text": "See Johnson v. Clark, 55 Mass. (1 Cush.) 201 (1849).",
+        "spans": [[22, 44]]
+      },
+      {
+        "text": "See In re Estate of Hall, 55 Mass. (1 Cush.) 425, 633 (1851).",
+        "spans": [[26, 48]]
+      },
+      {
+        "text": "See Walker v. Young, 42 Mass. (1 Met.) 249 (1842).",
+        "spans": [[21, 42]]
+      },
+      {
+        "text": "See Allen v. King, 42 Mass. (1 Met.) 97, 625 (1844).",
+        "spans": [[19, 39]]
+      },
+      {
+        "text": "See Wright v. Scott, 18 Mass. (1 Pick.) 465 (1827).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Green v. Baker, 18 Mass. (1 Pick.) 89, 617 (1833).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See Adams v. Nelson, 2 Mass. (1 Tyng) 113 (1810).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Hill v. Campbell, 2 Mass. (1 Tyng) 513, 625 (1816).",
+        "spans": [[22, 42]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 1 Mass. (1 Will.) 321 (1804).",
+        "spans": [[25, 46]]
+      },
+      {
+        "text": "See Carter v. Phillips, 1 Mass. (1 Will.) 281, 633 (1804).",
+        "spans": [[24, 45]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Mass. (2 Allen) 345 (1850).",
+        "spans": [[16, 38]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Mass. reports is missing.",
+      "The Allen reports cover Mass. cases from 1800 to 1850.",
+      "See Mass. (Allen) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

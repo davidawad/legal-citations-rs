@@ -1,0 +1,64 @@
+{
+  "id": "us.short.supra",
+  "kind": "supra",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<name>[A-Z][A-Za-z'’\\-]+)(?:\\s+&\\s+[A-Z][A-Za-z'’\\-]+)?\\s*,?\\s*supra\\b(?:\\s+note\\s+(?P<note>[0-9]+))?(?:,?\\s+at\\s+(?P<pin>[0-9]+(?:\\s?[-–‒—]\\s?[0-9]+)?)|,?\\s+§§?\\s*(?P<section>[0-9]+(?:[.:][0-9]+)*))?",
+  "priority": 60,
+  "normalize": "{name}, supra",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 4.2 (supra) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 4.2.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Upjohn, supra, at 389.",
+        "spans": [[4, 25]],
+        "groups": {
+          "name": "Upjohn",
+          "pin": "389"
+        }
+      },
+      {
+        "text": "The court relied on Smith, supra note 3 in reaching its holding.",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "Under Garner supra, the claim fails.",
+        "spans": [[6, 18]]
+      },
+      {
+        "text": "Garner, supra, at 505–506, says so.",
+        "spans": [[0, 27]],
+        "groups": {
+          "pin": "505–506"
+        }
+      },
+      {
+        "text": "See Nimmer & Nimmer, supra, § 14.02.",
+        "spans": [[4, 36]],
+        "groups": {
+          "name": "Nimmer",
+          "section": "14.02"
+        }
+      }
+    ],
+    "negative": [
+      "The supply chain was disrupted in 2021.",
+      "See the discussion above for details.",
+      "Superannuation rules differ by country."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Resolved to the nearest earlier citation whose case name or author contains the name. lcr-53x: pin and page ranges accept a hyphen, en dash (U+2013), figure dash (U+2012) or em dash. A section pin (`supra, § 14.02`, Indigo R29.2) is part of the span; a second author after `&` is spanned but only the first is the name used to find the antecedent."
+}

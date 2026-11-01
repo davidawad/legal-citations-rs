@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.labor.he",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.labor",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>ע[\"״]ע|דב[\"״]ע|ס[\"״]ע|ב[\"״]ל|סע[\"״]ש|עס[\"״]ק|עב[\"״]ל)\\s+(?:\\((?P<region>(?:ארצי|אזורי)(?:\\s+[א-ת\"״\\'׳-]{1,12})?)\\)\\s+)?(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 57,
+  "normalize": "{court} {number}",
+  "authority_key": "il.labor/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Israeli labor courts Hebrew citation: ע\"ע (national appeal), ס\"ע/סע\"ש (regional), דב\"ע (legacy), ב\"ל (national insurance)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ראו ע\"ע 1234/05 כהן נ' לוי.",
+        "spans": [[7, 20]],
+        "groups": {
+          "court": "ע\"ע",
+          "number": "1234/05"
+        }
+      },
+      {
+        "text": "ס\"ע (אזורי ת\"א) 4321-10-15 הוא תיק אזורי.",
+        "spans": [[0, 35]]
+      },
+      {
+        "text": "דב\"ע (ארצי) 99/12 נדחה.",
+        "spans": [[0, 24]]
+      }
+    ],
+    "negative": [
+      "בית הדין לעבודה דן בתיק.",
+      "ע\"ע בלי מספר.",
+      "הסעיף (אזורי) נמחק."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Hebrew labor-court forms; parenthetical region optional."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.sec.filing",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.sec",
+  "pattern": "\\b(?P<doc>Annual\\s+Report|Quarterly\\s+Report|Current\\s+Report|Proxy\\s+Statement|Registration\\s+Statement|Prospectus|Information\\s+Statement|Tender\\s+Offer\\s+Statement)\\s+\\((?P<form>Form\\s+(?:10-K|10-Q|8-K|S-1|S-3|S-4|S-8|F-1|20-F|40-F|6-K|DEF\\s14A|N-CSR)|Schedule\\s+(?:14A|14C|13D|13G|TO))\\)(?:,\\s+at\\s+(?P<page>[0-9]{1,4}))?",
+  "priority": 60,
+  "normalize": "{doc} ({form})",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "securities"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Securities and Exchange Commission (SEC Filings)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Securities and Exchange Commission (SEC Filings), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Apple Inc., Annual Report (Form 10-K), (Oct. 28, 2015).",
+        "spans": [
+          [
+            12,
+            37
+          ]
+        ],
+        "groups": {
+          "doc": "Annual Report",
+          "form": "Form 10-K"
+        }
+      },
+      {
+        "text": "Smith Corp., Proxy Statement (Schedule 14A), at 12 (Apr. 3, 2015).",
+        "spans": [
+          [
+            13,
+            50
+          ]
+        ]
+      },
+      {
+        "text": "See Quarterly Report (Form 10-Q), at 5 and Current Report (Form 8-K).",
+        "spans": [
+          [
+            4,
+            38
+          ],
+          [
+            43,
+            68
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Annual Report (2015) ran 10 pages.",
+      "Form 10-K is due in 90 days.",
+      "Proxy statement, Schedule 14A, is long."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

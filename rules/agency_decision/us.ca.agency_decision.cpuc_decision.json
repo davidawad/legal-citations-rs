@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.agency_decision.cpuc_decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "utilities"
+  ],
+  "pattern": "\\b(?:D\\.\\s?|Decision\\s+(?:\\(D\\.\\)\\s+|No\\.\\s*)?|(?:Cal\\.\\s+)?(?:P\\.\\s?U\\.\\s?C\\.|CPUC)\\s+Dec(?:ision|\\.)\\s+(?:No\\.\\s*)?)(?P<number>[0-9]{2}-[0-9]{2}-[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "D.{number}",
+  "authority_key": "us.ca.cpuc_decision/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "California Public Utilities Commission decision numbers (`D.20-12-021`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open CPUC decisions at https://docs.cpuc.ca.gov and compare the D.YY-MM-NNN numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Commission adopted the rate. D.20-12-021.",
+        "spans": [
+          [
+            33,
+            44
+          ]
+        ],
+        "groups": {
+          "number": "20-12-021"
+        }
+      },
+      {
+        "text": "See Decision (D.) 19-05-020.",
+        "spans": [
+          [
+            4,
+            27
+          ]
+        ]
+      },
+      {
+        "text": "Compare Cal. P.U.C. Dec. No. 18-09-034 with Decision 21-03-055.",
+        "spans": [
+          [
+            8,
+            38
+          ],
+          [
+            44,
+            62
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "D.20-12",
+      "The decision of 20-12-2021",
+      "D. 2020"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

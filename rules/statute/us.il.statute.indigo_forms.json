@@ -1,0 +1,88 @@
+{
+  "id": "us.il.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.il",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sIll\\.\\s?Comp\\.\\s?Stat\\.\\s?Ann\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\s/\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sIll\\.\\s?Comp\\.\\s?Stat\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\s/\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Illinois: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Illinois, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 212",
+      "corpus/formats/indigo.jsonl line 213",
+      "corpus/formats/indigo.jsonl line 214"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 72 Ill. Comp. Stat. 85 / 17 (2015).",
+        "spans": [[4, 31]],
+        "groups": {}
+      },
+      {
+        "text": "See 32 Ill. Comp. Stat. 53 / 33 (2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 32 Ill. Comp. Stat. Ann. 149 / 17 (West 2015).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 93 Ill. Comp. Stat. Ann. 141 / 1 (West 2014).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See 25 Ill. Comp. Stat. Ann. 161 / 33 (LexisNexis 2015).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 61 Ill. Comp. Stat. Ann. 145 / 25 (LexisNexis 2014).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 15 Ill. Comp. Stat. 18 / 41 (5348).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 65 Ill. Comp. Stat. 86 / 66 (5347).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 65 Ill. Comp. Stat. Ann. 472 / 41 (West 5348).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 26 Ill. Comp. Stat. Ann. 474 / 4 (West 5347).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See 58 Ill. Comp. Stat. Ann. 494 / 66 (LexisNexis 5348).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 94 Ill. Comp. Stat. Ann. 478 / 58 (LexisNexis 5347).",
+        "spans": [[4, 37]]
+      }
+    ],
+    "negative": [
+      "The Illinois code was amended in 2015.",
+      "Section 12 of the Illinois rules is long.",
+      "Title five of the Illinois compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "intl.coe.ehrr",
+  "kind": "foreign",
+  "jurisdiction": "intl.coe",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+Eur\\.\\s+H\\.\\s?R\\.\\s+Rep\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 62,
+  "normalize": "{volume} Eur. H.R. Rep. {page}",
+  "authority_key": "intl.coe/ehrr/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Human Rights Reports, <vol> Eur. H.R. Rep. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Soering v. United Kingdom, 11 Eur. H.R. Rep. 439 (1989).",
+        "spans": [[27, 48]],
+        "groups": {
+          "volume": "11",
+          "page": "439"
+        }
+      },
+      {
+        "text": "Dudgeon v. United Kingdom, 4 Eur. H.R. Rep. 149 (1981).",
+        "spans": [[27, 47]]
+      },
+      {
+        "text": "The court relied on 11 Eur. H.R. Rep. 439, 467–469 in its judgment.",
+        "spans": [[20, 52]]
+      }
+    ],
+    "negative": [
+      "European human rights reports number 11.",
+      "H.R. 439 passed.",
+      "The Eur. H.R. office had 4 staff."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

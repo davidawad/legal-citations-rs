@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.jpml.mdl",
+  "kind": "docket",
+  "jurisdiction": "us.fed.jpml",
+  "pattern": "\\bMDL\\s+(?:Docket\\s+)?No\\.\\s?(?P<number>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "MDL No. {number}",
+  "authority_key": "us.jpml/mdl/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Judicial Panel on Multidistrict Litigation docket numbering (`MDL No. 2741`); Bluebook R. 10.8.1",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a JPML transfer order on jpml.uscourts.gov and Bluebook R. 10.8.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See In re Roundup Prods. Liab. Litig., MDL No. 2741 (J.P.M.L. 2016).",
+        "spans": [
+          [
+            39,
+            51
+          ]
+        ],
+        "groups": {
+          "number": "2741"
+        }
+      },
+      {
+        "text": "The Panel centralized the actions in MDL Docket No. 875.",
+        "spans": [
+          [
+            37,
+            55
+          ]
+        ]
+      },
+      {
+        "text": "Compare MDL No. 3047 with MDL No.2873.",
+        "spans": [
+          [
+            8,
+            20
+          ],
+          [
+            26,
+            37
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The MDL court set 12 bellwethers.",
+      "An MDL is not a class action.",
+      "MDL proceedings in 2016 numbered 2741."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

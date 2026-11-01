@@ -1,0 +1,64 @@
+{
+  "id": "foreign.il.statute.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<title>[A-Z][A-Za-z'’-]*(?:\\s+(?:[A-Z][A-Za-z'’-]*|\\([A-Z][A-Za-z' ]{2,30}\\)|of|and|the|for)){0,8}?\\s+(?:Law|Ordinance)(?:\\s+\\[[A-Za-z ]{2,20}\\])?(?:\\s+\\([A-Z][A-Za-z' ]{2,30}\\))?),\\s+(?P<hyear>5[6-9][0-9]{2})-(?P<year>(?:19|20)[0-9]{2})\\b(?:,?\\s+(?:ss?|sec\\.?|section)\\s+(?P<section>[0-9]{1,4}[A-Za-z]{0,2}(?:\\([0-9a-zA-Z]{1,3}\\))*))?",
+  "priority": 58,
+  "normalize": "{title}, {hyear}-{year}",
+  "authority_key": "il.statute/{year}/{title}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "reject": [
+    "^(?:See|Under|In|The|Cf|But|And|Also|Accord|Compare|Contra|Per|Pursuant|Section|Sections|Following|Applying|Unlike|Like|Both|Neither|Its|Their|This|That|These|Those)\\b"
+  ],
+  "provenance": {
+    "encodes": "Israeli Uniform Rules (statutes): <Title>, <Hebrew year>-<Gregorian year>; English translations by the Knesset/Nevo/Gov.il",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check a Hebrew-year statute title at nevo.co.il or the Knesset English translations: 'Contracts Law (General Part), 5733-1973'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Contracts Law (General Part), 5733-1973.",
+        "spans": [[0, 39]],
+        "groups": {
+          "title": "Contracts Law (General Part)",
+          "hyear": "5733",
+          "year": "1973"
+        }
+      },
+      {
+        "text": "See the Penal Law, 5737-1977, s 300.",
+        "spans": [[8, 35]],
+        "groups": {
+          "title": "Penal Law",
+          "year": "1977",
+          "section": "300"
+        }
+      },
+      {
+        "text": "Torts Ordinance [New Version], 5728-1968 applies.",
+        "spans": [[0, 40]]
+      }
+    ],
+    "negative": [
+      "The Contracts Law was debated.",
+      "Penal Law 1977 is the English year only.",
+      "Section 12 of the law, 5733 version."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Hebrew-calendar year in Latin digits (5733) then Gregorian year."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "intl.iccwbo.int_comm_arb",
+  "kind": "foreign",
+  "jurisdiction": "intl.iccwbo",
+  "tags": [
+    "international",
+    "arbitration"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+Int[’']l\\s+Comm\\.\\s+Arb\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} Int'l Comm. Arb. {page}",
+  "authority_key": "intl.iccwbo/int_comm_arb/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): International Chamber of Commerce Arbitration, <vol> Int'l Comm. Arb. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Seller v. Buyer, Case No. 7331, 6 Int’l Comm. Arb. 73 (1994).",
+        "spans": [[32, 55]],
+        "groups": {
+          "volume": "6",
+          "page": "73"
+        }
+      },
+      {
+        "text": "Contractor v. Owner, Case No. 8486, 9 Int’l Comm. Arb. 72 (1996).",
+        "spans": [[36, 59]]
+      },
+      {
+        "text": "The tribunal relied on 9 Int'l Comm. Arb. 72, 75–77 in reaching its award.",
+        "spans": [[23, 53]]
+      }
+    ],
+    "negative": [
+      "International commercial arbitration grew 6 percent.",
+      "The ICC handled 73 cases.",
+      "Int’l Comm. meetings ran 9 days."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

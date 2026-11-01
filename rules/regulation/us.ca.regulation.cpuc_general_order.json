@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.regulation.cpuc_general_order",
+  "kind": "regulation",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "utilities"
+  ],
+  "pattern": "\\b(?:(?:CPUC|Cal\\.\\s+P\\.\\s?U\\.\\s?C\\.)\\s+(?:G\\.\\s?O\\.|General\\s+Order)\\s+(?:No\\.\\s*)?(?P<number>[0-9]{2,3}(?:-[A-Z])?)|G\\.\\s?O\\.\\s+(?P<number2>[0-9]{2,3}(?:-[A-Z])?)|General\\s+Order\\s+(?P<number3>[0-9]{2,3}-[A-Z]))\\b",
+  "priority": 60,
+  "normalize": "G.O. {number}{number2}{number3}",
+  "authority_key": "us.ca.cpuc_go/{number}{number2}{number3}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "California Public Utilities Commission General Orders (`G.O. 95`, `General Order 131-D`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the CPUC General Orders at https://www.cpuc.ca.gov/general-orders and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Pole loading is governed by G.O. 95.",
+        "spans": [
+          [
+            28,
+            35
+          ]
+        ],
+        "groups": {
+          "number2": "95"
+        }
+      },
+      {
+        "text": "See General Order 131-D.",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare CPUC General Order 96-B with G.O. 167.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            45
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "General Order No. 53",
+      "G.O. pending",
+      "the G.O. list"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

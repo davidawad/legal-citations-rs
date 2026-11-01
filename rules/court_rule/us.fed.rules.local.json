@@ -1,0 +1,51 @@
+{
+  "id": "us.fed.rules.local",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist",
+  "pattern": "\\b(?:Local\\s+(?:Civil\\s+|Criminal\\s+|Patent\\s+|Bankruptcy\\s+)?Rule|L\\.\\s?(?:Civ\\.|Cr\\.|Pat\\.|Bankr\\.)\\s?R\\.|Civ\\.\\s?L\\.\\s?R\\.|LCvR|L\\.\\s?R\\.)\\s*(?P<rule>[0-9]+(?:[.\\-][0-9]+)*[A-Za-z]?)(?P<sub>(?:\\([a-z0-9]{1,4}\\))*)",
+  "reject_before": ["[A-Za-z]\\.$"],
+  "priority": 55,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (local rules) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9.3; local rule numbering varies by district.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See L. Civ. R. 7.1(d).",
+        "spans": [[4, 21]],
+        "groups": {
+          "rule": "7.1",
+          "sub": "(d)"
+        }
+      },
+      {
+        "text": "The court relied on Local Rule 56.1 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under Civ. L.R. 7-3, the claim fails.",
+        "spans": [[6, 19]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The local rules of the game were posted.",
+      "See 12 A.L.R.3d 345 for the annotation."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: the court is usually named elsewhere in the sentence. reject_before keeps `L.R.` from matching inside `A.L.R.3d` (a letter-period right before it)."
+}

@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Finding",
+  "description": "One finding.",
+  "type": "object",
+  "properties": {
+    "citation": {
+      "description": "Citation index in the document, if any.",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint",
+      "minimum": 0
+    },
+    "code": {
+      "description": "Stable code.",
+      "type": "string"
+    },
+    "fix": {
+      "description": "Fix, when one can be built.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Fix"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "kind": {
+      "description": "Kind of the citation.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Kind"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "link": {
+      "description": "Link destination involved.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "message": {
+      "description": "Human message.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Code name.",
+      "type": "string"
+    },
+    "rule_id": {
+      "description": "Rule that detected the citation.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "severity": {
+      "description": "Severity after policy overrides.",
+      "$ref": "#/$defs/Severity"
+    },
+    "span": {
+      "description": "Where (the citation span; for suppressions, the comment).",
+      "$ref": "#/$defs/Span"
+    },
+    "suppressed": {
+      "description": "True when an inline suppression covered this finding.",
+      "type": "boolean"
+    },
+    "text": {
+      "description": "Citation text.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "name",
+    "severity",
+    "message",
+    "span",
+    "text",
+    "suppressed"
+  ],
+  "$defs": {
+    "Fix": {
+      "description": "A machine-applicable or suggested fix.",
+      "type": "object",
+      "properties": {
+        "replacement": {
+          "description": "Replacement text.",
+          "type": "string"
+        },
+        "safe": {
+          "description": "True only when the URL comes from a template of a rule whose encoded\nauthority was opened; `cite-detect fix --apply` applies only these.",
+          "type": "boolean"
+        },
+        "span": {
+          "description": "Bytes to replace.",
+          "$ref": "#/$defs/Span"
+        },
+        "url": {
+          "description": "Suggested URL.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "span",
+        "replacement",
+        "url",
+        "safe"
+      ]
+    },
+    "Kind": {
+      "description": "Closed citation-kind taxonomy. Extending it is a code change on purpose:\npolicy, findings and consumers all switch on it.",
+      "oneOf": [
+        {
+          "description": "Full case citation: volume, reporter, page.",
+          "type": "string",
+          "const": "case"
+        },
+        {
+          "description": "Short case citation: `449 U.S. at 389`.",
+          "type": "string",
+          "const": "case_short"
+        },
+        {
+          "description": "`Id.` / `Ibid.`",
+          "type": "string",
+          "const": "id"
+        },
+        {
+          "description": "`Smith, supra`",
+          "type": "string",
+          "const": "supra"
+        },
+        {
+          "description": "Codified statute (U.S.C., state codes).",
+          "type": "string",
+          "const": "statute"
+        },
+        {
+          "description": "Session law (Pub. L., Stat.).",
+          "type": "string",
+          "const": "session_law"
+        },
+        {
+          "description": "Codified regulation (C.F.R., state administrative codes).",
+          "type": "string",
+          "const": "regulation"
+        },
+        {
+          "description": "Federal Register.",
+          "type": "string",
+          "const": "federal_register"
+        },
+        {
+          "description": "Constitution.",
+          "type": "string",
+          "const": "constitution"
+        },
+        {
+          "description": "Court rule (FRCP, FRAP, FRE, circuit and local rules).",
+          "type": "string",
+          "const": "court_rule"
+        },
+        {
+          "description": "Agency manual (MPEP, TBMP, TMEP).",
+          "type": "string",
+          "const": "agency_manual"
+        },
+        {
+          "description": "Agency decision or ruling (Rev. Rul., PTAB/TTAB decisions).",
+          "type": "string",
+          "const": "agency_decision"
+        },
+        {
+          "description": "Record cite (ER-139, JA 16, Ex. 1001, TTABVUE, ECF No.).",
+          "type": "string",
+          "const": "record"
+        },
+        {
+          "description": "Secondary source (Restatement, treatise, law review).",
+          "type": "string",
+          "const": "secondary"
+        },
+        {
+          "description": "Treaty.",
+          "type": "string",
+          "const": "treaty"
+        },
+        {
+          "description": "Foreign authority.",
+          "type": "string",
+          "const": "foreign"
+        },
+        {
+          "description": "Docket number.",
+          "type": "string",
+          "const": "docket"
+        },
+        {
+          "description": "Legislative material (bills, committee reports, Cong. Rec., hearings, CRS reports).",
+          "type": "string",
+          "const": "legislative"
+        },
+        {
+          "description": "Executive material (executive orders, proclamations, presidential memoranda).",
+          "type": "string",
+          "const": "executive"
+        },
+        {
+          "description": "Short statute or regulation citation by section alone: `§ 1983`.",
+          "type": "string",
+          "const": "statute_short"
+        },
+        {
+          "description": "Citation-shaped text no specific rule matched (catch-all layer,\nconfidence below 0.5, finding CITE011).",
+          "type": "string",
+          "const": "unrecognized"
+        }
+      ]
+    },
+    "Severity": {
+      "description": "Finding severity, ordered.",
+      "oneOf": [
+        {
+          "description": "Inventory or heuristic note; never fails by default.",
+          "type": "string",
+          "const": "info"
+        },
+        {
+          "description": "Should be fixed.",
+          "type": "string",
+          "const": "warn"
+        },
+        {
+          "description": "Must be fixed.",
+          "type": "string",
+          "const": "error"
+        }
+      ]
+    },
+    "Span": {
+      "description": "A located range of the original input.",
+      "type": "object",
+      "properties": {
+        "char_end": {
+          "description": "Exclusive end, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "char_start": {
+          "description": "Inclusive start, Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "col": {
+          "description": "1-based column of `start`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end": {
+          "description": "Exclusive end, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_col": {
+          "description": "1-based column of `end`, in Unicode scalar values.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "end_line": {
+          "description": "1-based line of `end`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "line": {
+          "description": "1-based line of `start`.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "start": {
+          "description": "Inclusive start, UTF-8 bytes.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_end": {
+          "description": "Exclusive end, UTF-16 code units.",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        },
+        "utf16_start": {
+          "description": "Inclusive start, UTF-16 code units (editor/LSP positions).",
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "char_start",
+        "char_end",
+        "utf16_start",
+        "utf16_end",
+        "line",
+        "col",
+        "end_line",
+        "end_col"
+      ]
+    }
+  }
+}

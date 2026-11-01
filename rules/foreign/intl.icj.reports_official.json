@@ -1,0 +1,52 @@
+{
+  "id": "intl.icj.reports_official",
+  "kind": "foreign",
+  "jurisdiction": "intl.icj",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\bI\\.\\s?C\\.\\s?J\\.\\s+Reports\\s+(?P<year>(?:19|20)[0-9]{2}),\\s+p\\.\\s+(?P<page>[0-9]{1,4})(?:,\\s+paras?\\.\\s+(?P<para>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 60,
+  "normalize": "I.C.J. Reports {year}, p. {page}",
+  "authority_key": "intl.icj/reports/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Court's own citation style (I.C.J. Reports <year>, p. <page>, para. <n>), printed on every I.C.J. Reports judgment",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open any judgment in I.C.J. Reports (icj-cij.org) and its 'Official citation' line.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Legal Consequences of the Construction of a Wall, Advisory Opinion, I.C.J. Reports 2004, p. 136.",
+        "spans": [[68, 95]],
+        "groups": {
+          "year": "2004",
+          "page": "136"
+        }
+      },
+      {
+        "text": "Pulp Mills (Argentina v. Uruguay), Judgment, I.C.J. Reports 2010, p. 14, para. 204.",
+        "spans": [[45, 82]]
+      },
+      {
+        "text": "See I.C.J. Reports 1986, p. 14.",
+        "spans": [[4, 30]]
+      }
+    ],
+    "negative": [
+      "The I.C.J. reports for 2004 run 136 pages.",
+      "ICJ Reports 2010 were late.",
+      "Reports 2004, p. 136 of the agency."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Same authority key as intl.icj.reports (year, first page), so the Bluebook and Court forms of one judgment match."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "us.fed.statute.usc",
+  "kind": "statute",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\s+U\\.?\\s?S\\.?\\s?C\\.?(?:\\s?A\\.?)?\\s*(?:(?:§§*|[Ss]ec(?:tion|s)?\\.?)\\s*)?(?P<section>[0-9]+[0-9A-Za-z\\-]*(?:\\.[0-9A-Za-z\\-]+)*)(?P<subsection>(?:\\([0-9A-Za-z]{1,6}\\))*)",
+  "priority": 60,
+  "normalize": "{title} U.S.C. § {section}{subsection}",
+  "authority_key": "us.usc/{title}/{section}",
+  "url_templates": [
+    "https://www.law.cornell.edu/uscode/text/{title}/{section}"
+  ],
+  "url_decoders": [
+    "law.cornell.edu/uscode/text/{title}/{section}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.3 and T1 (United States Code) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.3 and Table T1 U.S.C. entry; confirm optional section symbol (Supreme Court briefs omit it, e.g. 28 U.S.C. 1254(1)).",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py FED_STAT_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 28 U.S.C. § 1331.",
+        "spans": [[4, 21]],
+        "groups": {
+          "title": "28",
+          "section": "1331",
+          "subsection": ""
+        }
+      },
+      {
+        "text": "The court relied on 42 U.S.C. § 1983 in reaching its holding.",
+        "spans": [[20, 37]]
+      },
+      {
+        "text": "Under 17 U.S.C. §§ 101, the claim fails.",
+        "spans": [[6, 24]]
+      },
+      {
+        "text": "Plaintiff cites 28 U.S.C. 1254(1) for this point.",
+        "spans": [[16, 33]]
+      },
+      {
+        "text": "As stated in 35 U.S.C. § 103(a), the rule applies.",
+        "spans": [[13, 32]]
+      },
+      {
+        "text": "See 42 USC § 5.",
+        "spans": [[4, 15]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts.",
+      "The U.S. Code is long.",
+      "In 1983 the 42nd Congress was long gone."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "usc",
+    "order": 1,
+    "pattern": "(?P<title>\\d+)\\s+U\\.S\\.C\\.?\\s*[§§]+\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

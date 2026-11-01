@@ -1,0 +1,53 @@
+{
+  "id": "intl.ita.inv_treaty_cases",
+  "kind": "foreign",
+  "jurisdiction": "intl",
+  "tags": [
+    "international",
+    "arbitration",
+    "investment"
+  ],
+  "pattern": "\\bITA\\s+Inv\\.\\s+Treaty\\s+Cases\\s+(?P<number>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "ITA Inv. Treaty Cases {number}",
+  "authority_key": "ita/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): Investment Treaty Arbitration, Investment Treaty Cases, ITA Inv. Treaty Cases <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Smith v. Republic, UNCITRAL, ITA Inv. Treaty Cases 512 (2010).",
+        "spans": [[29, 54]],
+        "groups": {
+          "number": "512"
+        }
+      },
+      {
+        "text": "The tribunal relied on ITA Inv. Treaty Cases 77 in reaching its award.",
+        "spans": [[23, 47]]
+      },
+      {
+        "text": "Under ITA Inv. Treaty Cases 1043, the claim fails.",
+        "spans": [[6, 32]]
+      }
+    ],
+    "negative": [
+      "The ITA reviewed 512 investment treaty cases.",
+      "Investment treaty cases rose to 77.",
+      "ITA Inv. Treaty Cases are online."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

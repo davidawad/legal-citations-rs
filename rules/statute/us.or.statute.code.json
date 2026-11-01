@@ -1,0 +1,56 @@
+{
+  "id": "us.or.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.or",
+  "pattern": "(?:Or(?:egon)?\\.\\s+Rev(?:ised)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|ORS\\s+)§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Oregon) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Oregon entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py ORS pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Or. Rev. Stat. § 163.185.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "163.185"
+        }
+      },
+      {
+        "text": "The court relied on ORS 163.185 in reaching its holding.",
+        "spans": [[20, 31]]
+      },
+      {
+        "text": "Under Oregon. Revised. Statutes. Ann. § 1, the claim fails.",
+        "spans": [[6, 42]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ors",
+    "order": 23,
+    "pattern": "(?:Or(?:egon)?\\.\\s+Rev(?:ised)?\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|ORS\\s+)§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

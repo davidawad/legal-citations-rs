@@ -1,0 +1,14 @@
+{
+  "name": "new-york",
+  "description": "New York state practice: New York statutes, cases, rules and regulations, the regional and database reporters that carry New York decisions, state constitutions, and record and docket cites.",
+  "include": [
+    "jurisdiction:us.ny",
+    "rule:us.case.regional",
+    "rule:us.state.constitution",
+    "rule:us.case.westlaw",
+    "rule:us.case.lexis",
+    "family:record"
+  ],
+  "exclude": [],
+  "note": "Federal law cited in a New York brief is not included; combine with the federal-litigation profile. The regional-reporter, Westlaw and Lexis rules carry every state's decisions, so they are included whole."
+}

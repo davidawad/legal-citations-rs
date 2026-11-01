@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.scc.ar",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg.scc",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "القضية\\s+رقم\\s+(?P<number>[0-9٠-٩]{1,5})\\s+لسنة\\s+(?P<year>[0-9٠-٩]{1,3})\\s+(?:قضائية|ق)\\s+[\\\"“]?دستورية",
+  "priority": 58,
+  "normalize": "القضية رقم {number} لسنة {year} ق دستورية",
+  "authority_key": "eg.scc/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Egypt Supreme Constitutional Court Arabic: القضية رقم <n> لسنة <y> قضائية دستورية",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check scc.gov.eg: judgments are headed القضية رقم N لسنة Y قضائية 'دستورية'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "القضية رقم 3 لسنة 21 قضائية دستورية حكم.",
+        "spans": [[0, 61]],
+        "groups": {
+          "number": "3",
+          "year": "21"
+        }
+      },
+      {
+        "text": "في القضية رقم ٥٦ لسنة ٦ ق \"دستورية\".",
+        "spans": [[5, 60]]
+      },
+      {
+        "text": "القضية رقم 7 لسنة 12 ق دستورية حكمت.",
+        "spans": [[0, 51]]
+      }
+    ],
+    "negative": [
+      "القضية رقم 3 لسنة 21 قضائية مدنية.",
+      "القضية الدستورية معروضة.",
+      "القضية رقم بلا سنة دستورية."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

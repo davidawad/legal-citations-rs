@@ -1,0 +1,50 @@
+{
+  "id": "us.gu.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.gu",
+  "pattern": "\\b(?P<year>(?:199[6-9]|20[0-9]{2}))\\s+Guam\\s+(?P<number>[0-9]{1,2})\\b",
+  "priority": 65,
+  "normalize": "{year} Guam {number}",
+  "authority_key": "us.gu.public_domain/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Supreme Court of Guam public-domain citation (year, Guam, number) as shown on the court's opinion list; no prescriptive rule opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Find and open the Supreme Court of Guam order adopting the public-domain citation; https://guamcourts.gov/courts-council/supreme-court/opinions shows the form in use but is not the rule.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Adams v. Duenas, 1998 Guam 15 ¶ 2.",
+        "spans": [[17, 29]],
+        "groups": {
+          "year": "1998",
+          "number": "15"
+        }
+      },
+      {
+        "text": "See People v. Cruz, 2026 Guam 12, ¶ 9.",
+        "spans": [[20, 32]]
+      },
+      {
+        "text": "Under 2010 Guam 3, the claim fails.",
+        "spans": [[6, 17]]
+      }
+    ],
+    "negative": [
+      "The 1998 Guam census counted 15 villages.",
+      "In 2026 Guam hosted 12 teams.",
+      "Guam 15 is a bus route.",
+      "She left Guam in 2010 after 3 years."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet."
+}

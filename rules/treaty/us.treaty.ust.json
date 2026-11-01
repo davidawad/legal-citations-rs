@@ -1,0 +1,53 @@
+{
+  "id": "us.treaty.ust",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,2})\\s+U\\.\\s?S\\.\\s?T\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} U.S.T. {page}",
+  "authority_key": "us.ust/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): United States Treaties and Other International Agreements (1950-date), <vol> U.S.T. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Vienna Convention on Consular Relations, Apr. 24, 1963, 21 U.S.T. 77.",
+        "spans": [[41, 68]],
+        "groups": {
+          "date": "Apr. 24, 1963",
+          "volume": "21",
+          "page": "77"
+        }
+      },
+      {
+        "text": "The court relied on 21 U.S.T. 77, 101–02 in reaching its holding.",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "Under 33 U.S.T. 1, the claim fails.",
+        "spans": [[6, 17]]
+      }
+    ],
+    "negative": [
+      "The United Nations held 3 sessions.",
+      "The U.S. team scored 5 goals.",
+      "The U.S.T. abbreviation means nothing alone."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.nlrb.case_number",
+  "kind": "docket",
+  "jurisdiction": "us.fed.nlrb",
+  "tags": [
+    "labor"
+  ],
+  "pattern": "\\bCases?\\s+(?:Nos?\\.\\s*)?(?P<number>[0-9]{2}-(?:CA|CB|CC|CD|CE|CG|CP|RC|RD|RM|UC|UD|AC|WH)-[0-9]{5,6})\\b",
+  "priority": 60,
+  "normalize": "Case {number}",
+  "authority_key": "us.nlrb_case/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "NLRB case numbers (region-type-number, `Case 13-CA-123456`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the NLRB case search at https://www.nlrb.gov/cases-decisions and compare case number format.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The charge was filed in Case 13-CA-123456.",
+        "spans": [
+          [
+            24,
+            41
+          ]
+        ],
+        "groups": {
+          "number": "13-CA-123456"
+        }
+      },
+      {
+        "text": "See Case No. 05-RC-270000.",
+        "spans": [
+          [
+            4,
+            25
+          ]
+        ]
+      },
+      {
+        "text": "Compare Cases 21-CA-12345 with Case 32-CB-200001.",
+        "spans": [
+          [
+            8,
+            25
+          ],
+          [
+            31,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Case 13 was dismissed.",
+      "The CA case",
+      "Case 13-CA"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,32 @@
+{
+ "schema": "legal-citations-rs.gold-manifest/1",
+ "note": "Test fixture for cite-eval (not real documents).",
+ "documents": [
+  {
+   "id": "doc-a",
+   "title": "Fixture A",
+   "court": "Fixture Court",
+   "category": "state",
+   "date": "2026-10-23",
+   "url": "https://example.invalid/doc-a.txt",
+   "extraction": "text",
+   "excerpt": {
+    "from": "See Roe",
+    "to": "(5th Cir. 2021).\n"
+   },
+   "sha256": "e53f11106d23a992c5902f30bdbc09d612dc56fb36cf338f12475e87cfe1089f",
+   "source": "fixture"
+  },
+  {
+   "id": "doc-b",
+   "title": "Fixture B",
+   "court": "U.S. Supreme Court",
+   "category": "scotus",
+   "date": "1954-05-17",
+   "url": "https://example.invalid/doc-b.html",
+   "extraction": "html",
+   "sha256": "33a58e0a21d9107f72ad224f70480d20cf43573ce7e36b40cd3457e546068637",
+   "source": "fixture"
+  }
+ ]
+}

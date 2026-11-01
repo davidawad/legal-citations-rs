@@ -1,0 +1,51 @@
+{
+  "id": "intl.icj.statute",
+  "kind": "treaty",
+  "jurisdiction": "intl.icj",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:Statute\\s+of\\s+the\\s+International\\s+Court\\s+of\\s+Justice|I\\.\\s?C\\.\\s?J\\.\\s+Statute|ICJ\\s+Statute)\\s*,?\\s+(?:arts?\\.|Article)\\s+(?P<article>[0-9]{1,2}(?:\\([0-9a-z]{1,3}\\))*)",
+  "priority": 62,
+  "normalize": "Statute of the International Court of Justice art. {article}",
+  "authority_key": "icj.statute/{article}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.7 (Statute of the International Court of Justice art. <n>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.7 and the Statute text (icj-cij.org/statute).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Sources of law are listed in Statute of the International Court of Justice art. 38(1).",
+        "spans": [[29, 85]],
+        "groups": {
+          "article": "38(1)"
+        }
+      },
+      {
+        "text": "See I.C.J. Statute art. 36(2).",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "ICJ Statute, Article 59 limits precedent.",
+        "spans": [[0, 23]]
+      }
+    ],
+    "negative": [
+      "The ICJ statute dates from 1945.",
+      "Article 38 of the treaty.",
+      "The statute, art. 36 of the code."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

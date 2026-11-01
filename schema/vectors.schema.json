@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vectors",
+  "description": "Expected rule-level matches on the rule examples, to check a port.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "Always `legal-citation-rules/test-vectors`.",
+      "type": "string"
+    },
+    "license": {
+      "description": "License of the rule data (`MIT`).",
+      "type": "string"
+    },
+    "rules_hash": {
+      "description": "`rules_hash` of the bundle these vectors belong to.",
+      "type": "string"
+    },
+    "vectors": {
+      "description": "One vector per example of every active rule.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Vector"
+      }
+    },
+    "version": {
+      "description": "Format version.",
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "license",
+    "rules_hash",
+    "vectors"
+  ],
+  "$defs": {
+    "Polarity": {
+      "description": "Whether an example is one the rule must match.",
+      "oneOf": [
+        {
+          "description": "`examples.positive`: the spans are the example's own.",
+          "type": "string",
+          "const": "positive"
+        },
+        {
+          "description": "`examples.negative`: the rule matches nothing.",
+          "type": "string",
+          "const": "negative"
+        }
+      ]
+    },
+    "Vector": {
+      "description": "One rule run on one text.",
+      "type": "object",
+      "properties": {
+        "groups": {
+          "description": "Named groups that took part in the first match.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "polarity": {
+          "description": "Positive or negative example.",
+          "$ref": "#/$defs/Polarity"
+        },
+        "rule": {
+          "description": "Rule id.",
+          "type": "string"
+        },
+        "spans": {
+          "description": "Every `[start, end)` UTF-8 byte span the rule matches, with `reject`\nand `reject_before` applied.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            },
+            "maxItems": 2,
+            "minItems": 2
+          }
+        },
+        "text": {
+          "description": "Input text.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "polarity",
+        "text",
+        "spans",
+        "groups"
+      ]
+    }
+  }
+}

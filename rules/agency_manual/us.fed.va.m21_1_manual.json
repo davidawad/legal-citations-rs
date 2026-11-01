@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.va.m21_1_manual",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.va",
+  "tags": [
+    "veterans"
+  ],
+  "pattern": "\\bM21-1(?:MR)?,?\\s+(?:(?:pt\\.|Part)\\s+(?P<part>[IVX]+|[0-9]+)(?:,?\\s*(?:subpt\\.|Subpart)\\s+(?P<subpart>[ivx]+))?(?:,?\\s*(?:ch\\.|Chapter)\\s+(?P<chapter>[0-9]+))?(?:,?\\s*(?:§|sec\\.|Section)\\s*(?P<section>[A-Z0-9](?:\\.[0-9a-z]+)*))?|(?P<dotted>[IVX]+\\.[ivx]+\\.[0-9]+\\.[A-Z](?:\\.[0-9a-z]+)*))",
+  "priority": 60,
+  "normalize": "M21-1, pt. {part}",
+  "authority_key": "us.va_m21_1/{part}{dotted}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "VA Adjudication Procedures Manual M21-1",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the M21-1 Adjudication Procedures Manual on the VA Knowledge Base and compare the part/subpart/chapter/section form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The rating activity must develop. M21-1, pt. III, subpt. iv, ch. 4, § C.",
+        "spans": [
+          [
+            34,
+            72
+          ]
+        ],
+        "groups": {
+          "part": "III",
+          "subpart": "iv"
+        }
+      },
+      {
+        "text": "See M21-1 III.iv.4.C.2.",
+        "spans": [
+          [
+            4,
+            22
+          ]
+        ]
+      },
+      {
+        "text": "Compare M21-1MR, Part IV, Subpart ii, Chapter 2 with M21-1, pt. V.",
+        "spans": [
+          [
+            8,
+            47
+          ],
+          [
+            53,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The M21-1 manual",
+      "M21-1 guidance",
+      "M21-1, page"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

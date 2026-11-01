@@ -1,0 +1,70 @@
+{
+  "id": "us.record.oral_argument",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "transcript"
+  ],
+  "pattern": "\\b(?:Oral\\s+Arg(?:\\.|ument)(?:\\s+(?:Tr\\.|Transcript|Recording|Rec\\.|Audio))?|Tr(?:\\.|anscript)\\s+of\\s+Oral\\s+Arg(?:\\.|ument))\\s*(?:at\\s+)?(?P<pin>[0-9]{1,4}(?::[0-9]{1,2}){0,2}(?:\\s?[-–]\\s?[0-9]{1,4}(?::[0-9]{1,2}){0,2})?)\\b",
+  "priority": 56,
+  "normalize": "Oral Arg. Tr. {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17 / R10.8.3 (court documents and record cites); Indigo Book R24",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Counsel conceded the point. Oral Arg. Tr. at 5:3-7.",
+        "spans": [
+          [
+            28,
+            50
+          ]
+        ],
+        "groups": {
+          "pin": "5:3-7"
+        }
+      },
+      {
+        "text": "See Tr. of Oral Arg. 12.",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "The court asked twice. Oral Argument Recording at 1:02:30; Oral Arg. 23:10–24:2.",
+        "spans": [
+          [
+            23,
+            57
+          ],
+          [
+            59,
+            81
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Oral argument was held on Monday.",
+      "The Oral Arg. transcript is sealed.",
+      "Tr. of Oral Arg. pending."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,66 @@
+{
+  "id": "us.fed.executive.order_federal_register",
+  "kind": "executive",
+  "jurisdiction": "us.fed.eop",
+  "pattern": "\\b(?:Exec(?:\\.|utive)\\s+Order|E\\.\\s?O\\.)\\s+(?:No\\.\\s?)?(?P<thousands>[0-9]{1,2}),?(?P<rest>[0-9]{3}),\\s+(?P<volume>[0-9]{1,3})\\s+(?:Fed\\.\\s?Reg\\.?|FR)\\s+(?P<page>[0-9]{1,3}(?:,[0-9]{3})+|[0-9]{1,6})",
+  "priority": 70,
+  "normalize": "Exec. Order No. {thousands},{rest}, {volume} Fed. Reg. {page}",
+  "authority_key": "us.eo/{thousands}{rest}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Executive Office of the President (Executive Orders not in C.F.R.: cite to the Federal Register)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Executive Office of the President (Executive Orders not in C.F.R.: cite to the Federal Register), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The order is Exec. Order 12,900, 59 FR 9061 (Feb. 22, 1994).",
+        "spans": [
+          [
+            13,
+            43
+          ]
+        ],
+        "groups": {
+          "thousands": "12",
+          "rest": "900",
+          "volume": "59",
+          "page": "9061"
+        }
+      },
+      {
+        "text": "See Exec. Order No. 13,769, 82 Fed. Reg. 8977 (Jan. 27, 2017).",
+        "spans": [
+          [
+            4,
+            45
+          ]
+        ]
+      },
+      {
+        "text": "Under Executive Order 14,028, 86 Fed. Reg. 26,633 (May 12, 2021), agencies act.",
+        "spans": [
+          [
+            6,
+            49
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Exec. Orders appear in the Federal Register.",
+      "The register printed 59 orders on page 9061.",
+      "Executive orders 12 and 59 were cited."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

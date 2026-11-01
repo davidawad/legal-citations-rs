@@ -1,0 +1,9 @@
+{
+  "name": "everything",
+  "description": "Every active rule (the default when nothing is selected).",
+  "include": [
+    "*"
+  ],
+  "exclude": [],
+  "note": ""
+}

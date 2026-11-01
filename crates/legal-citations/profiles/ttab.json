@@ -1,0 +1,20 @@
+{
+  "name": "ttab",
+  "description": "Trademark Trial and Appeal Board practice: TTABVUE record cites, the TBMP and TMEP, 15 U.S.C., 37 C.F.R., USPQ and Federal Circuit and Supreme Court reporters.",
+  "include": [
+    "tag:ttab",
+    "rule:us.fed.uspto.ttabvue",
+    "rule:us.fed.uspto.tbmp",
+    "rule:us.fed.uspto.tmep",
+    "rule:us.case.uspq",
+    "rule:us.fed.rules.circuit",
+    "rule:us.fed.statute.usc",
+    "rule:us.fed.regulation.cfr",
+    "rule:us.fed.federal_register",
+    "jurisdiction:us.scotus",
+    "jurisdiction:us.fed.app",
+    "family:record"
+  ],
+  "exclude": [],
+  "note": "tag:ttab collects rules that tag themselves; the rule ids cover the rules that exist today."
+}

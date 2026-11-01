@@ -1,0 +1,55 @@
+{
+  "id": "us.record.appendix",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:(?P<vol>[0-9]{1,2})-)?(?P<record>ER|SER|FER|EOR|Appx|JA|J\\.A\\.)[\\s-]?(?P<page>[0-9]{1,5}(?:\\s*[-–]\\s*[0-9]{1,5})?)\\b",
+  "reject_before": ["\\b(?:Fed|F)\\.?\\s?$"],
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Fed. R. App. P. 28(e) and 30; 9th Cir. R. 30-1 (excerpts of record); Fed. Cir. R. 30 (Appx)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open FRAP 28(e), 9th Cir. R. 30-1.4 and Fed. Cir. R. 30(a).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See ER-139.",
+        "spans": [[4, 10]],
+        "groups": {
+          "record": "ER",
+          "page": "139"
+        }
+      },
+      {
+        "text": "The court relied on 2-ER-174 in reaching its holding.",
+        "spans": [[20, 28]]
+      },
+      {
+        "text": "Under JA 16, the claim fails.",
+        "spans": [[6, 11]]
+      },
+      {
+        "text": "Plaintiff cites Appx1234 for this point.",
+        "spans": [[16, 24]]
+      }
+    ],
+    "negative": [
+      "The ER doctor saw 139 patients.",
+      "Exhibit hall 3 opens at noon.",
+      "The appendix lists 23 items.",
+      "See Smith v. Jones, 12 Fed. Appx 345 (9th Cir. 2001)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "reject_before keeps `Appx 345` from splitting the reporter `Fed. Appx` (Federal Appendix)."
+}

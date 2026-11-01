@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.agency_decision.cpuc_resolution",
+  "kind": "agency_decision",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "utilities"
+  ],
+  "pattern": "\\b(?:Resolution|Res\\.)\\s+(?P<number>(?:E|G|W|T|L|ALJ|SED|TL|UEB|M|ST|O|SX|TD|CSID)-[0-9]{3,4}[A-Z]?)\\b",
+  "priority": 60,
+  "normalize": "Res. {number}",
+  "authority_key": "us.ca.cpuc_resolution/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "California Public Utilities Commission resolutions (`Resolution E-5000`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open CPUC resolutions at https://docs.cpuc.ca.gov and compare the industry-letter numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The advice letter was approved by Resolution E-5000.",
+        "spans": [
+          [
+            34,
+            51
+          ]
+        ],
+        "groups": {
+          "number": "E-5000"
+        }
+      },
+      {
+        "text": "See Res. W-4567.",
+        "spans": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "text": "Compare Resolution ALJ-391 with Resolution G-3550.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            49
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Resolution E-5",
+      "The resolution passed.",
+      "Res. 5000"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

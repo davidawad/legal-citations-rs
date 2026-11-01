@@ -1,0 +1,82 @@
+{
+  "id": "us.oh.case.indigo_reporters",
+  "kind": "case",
+  "jurisdiction": "us.oh",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Ohio\\sUnrep\\.\\s?Cas\\.|Wilc\\.\\s?Cond\\.\\s?Rep\\.|Ohio\\sL\\.\\s?Bull\\.)\\s(?P<page>[0-9]{1,5})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Ohio: reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Ohio, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 572",
+      "corpus/formats/indigo.jsonl line 574",
+      "corpus/formats/indigo.jsonl line 589"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Walker v. Young, 18 Wilc. Cond. Rep. 593 (Ohio 1825).",
+        "spans": [[21, 44]],
+        "groups": {
+          "volume": "18",
+          "reporter": "Wilc. Cond. Rep.",
+          "page": "593"
+        }
+      },
+      {
+        "text": "See In re Estate of Hall, 23 Wilc. Cond. Rep. 737, 740 (Ohio 1826).",
+        "spans": [[26, 49]]
+      },
+      {
+        "text": "See Adams v. Nelson, 239 Ohio Unrep. Cas. 701 (1853).",
+        "spans": [[21, 45]]
+      },
+      {
+        "text": "See Green v. Baker, 50 Ohio Unrep. Cas. 609, 616 (1854).",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "See Evans v. Turner, 53 Ohio L. Bull. 837 (C.P. 1898).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Carter v. Phillips, 117 Ohio L. Bull. 1009, 1018 (C.P. 1899).",
+        "spans": [[24, 46]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Wilc. Cond. Rep. 345 (1990).",
+        "spans": [[16, 39]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Ohio Unrep. Cas. 345 (1990).",
+        "spans": [[16, 39]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Ohio L. Bull. 345 (1990).",
+        "spans": [[16, 36]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Ohio L. Bull. is missing.",
+      "The Ohio L. Bull. printed 345 opinions.",
+      "In Ohio, the Ohio L. Bull. began in 1993."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

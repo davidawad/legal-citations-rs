@@ -1,0 +1,50 @@
+{
+  "id": "us.fed.rules.circuit",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.app",
+  "pattern": "\\b(?P<circuit>Fed\\.|D\\.C\\.|1st|2d|3d|4th|5th|6th|7th|8th|9th|10th|11th)\\s?Cir\\.\\s?R\\.\\s*(?P<rule>[0-9]+(?:[.\\-][0-9]+)*)(?P<sub>(?:\\([a-z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "{circuit} Cir. R. {rule}",
+  "authority_key": "us.rules.circuit/{circuit}/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (circuit rules) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9.3 and the circuit's rules.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Fed. Cir. R. 32(b).",
+        "spans": [[4, 22]],
+        "groups": {
+          "circuit": "Fed.",
+          "rule": "32",
+          "sub": "(b)"
+        }
+      },
+      {
+        "text": "The court relied on 9th Cir. R. 28-2.7 in reaching its holding.",
+        "spans": [[20, 38]]
+      },
+      {
+        "text": "Under D.C. Cir. R. 28(a)(1), the claim fails.",
+        "spans": [[6, 27]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The local rules of the game were posted."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

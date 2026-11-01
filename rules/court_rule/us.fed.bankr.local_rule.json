@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.bankr.local_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.bankr",
+  "tags": [
+    "local_rules",
+    "bankruptcy"
+  ],
+  "pattern": "\\b(?:LBR|L\\.\\s?B\\.\\s?R\\.|Local\\s+Bankr\\.\\s+R\\.|Bankr\\.\\s+L\\.\\s?R\\.|L\\.\\s?Bankr\\.\\s?R\\.)\\s?(?P<rule>[0-9]{4}-[0-9]{1,2}(?:\\.[0-9]+)?[A-Za-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 57,
+  "normalize": "LBR {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Local bankruptcy rules numbered after the Fed. R. Bankr. P. (`LBR 9013-1`); Fed. R. Bankr. P. 9029",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a bankruptcy court's local rules (e.g. Bankr. S.D.N.Y. Local Bankruptcy Rules) and compare the `LBR 9013-1` numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Notice is governed by LBR 9013-1.",
+        "spans": [
+          [
+            22,
+            32
+          ]
+        ],
+        "groups": {
+          "rule": "9013-1"
+        }
+      },
+      {
+        "text": "See L.B.R. 4001-1(b).",
+        "spans": [
+          [
+            4,
+            20
+          ]
+        ]
+      },
+      {
+        "text": "Compare Local Bankr. R. 9014-2 with LBR 3007-1(a).",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            49
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "LBR 12 aircraft",
+      "The LBR rules",
+      "LBR 9013 form"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

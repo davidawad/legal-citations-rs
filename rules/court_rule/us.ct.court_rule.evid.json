@@ -1,0 +1,49 @@
+{
+  "id": "us.ct.court_rule.evid",
+  "kind": "court_rule",
+  "jurisdiction": "us.ct",
+  "pattern": "\\b(?:Conn\\.\\s?Code\\s?(?:of\\s)?Evid\\.\\s?§\\s?)\\s?(?P<rule>[0-9]{1,2}-[0-9]{1,2}[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Conn. Code Evid. § {rule}{sub}",
+  "authority_key": "us.ct.rules.evid/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Connecticut) Connecticut Code of Evidence: Conn. Code Evid. § N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Connecticut) and the official Connecticut Code of Evidence; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Conn. Code Evid. § 8-3(1).",
+        "spans": [[4, 30]],
+        "groups": {
+          "rule": "8-3",
+          "sub": "(1)"
+        }
+      },
+      {
+        "text": "The court relied on Conn. Code Evid. § 4-5 in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under Conn. Code Evid. § 7-2, the claim fails.",
+        "spans": [[6, 29]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Connecticut rules committee met 12 times in 2020.",
+      "Under Conn. Code Evid. § as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

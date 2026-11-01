@@ -1,0 +1,175 @@
+{
+  "id": "us.sc.case.nominative_s_c_eq",
+  "kind": "case",
+  "jurisdiction": "us.sc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>S\\.C\\.\\s?Eq\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>McCord\\sEq\\.|McMul\\.\\s?Eq\\.|Rich\\.\\s?Cas\\.|Speers\\sEq\\.|Strob\\.\\s?Eq\\.|Bail\\.\\s?Eq\\.|Chev\\.\\s?Eq\\.|Harp\\.\\s?Eq\\.|Rich\\.\\s?Eq\\.|Des\\.\\s?Eq\\.|Dud\\.\\s?Eq\\.|Hill\\sEq\\.|Rice\\sEq\\.|Ril\\.\\s?Eq\\.)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: S.C. Eq. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 692",
+      "corpus/formats/indigo.jsonl line 693",
+      "corpus/formats/indigo.jsonl line 694",
+      "corpus/formats/indigo.jsonl line 695",
+      "corpus/formats/indigo.jsonl line 696",
+      "corpus/formats/indigo.jsonl line 697",
+      "corpus/formats/indigo.jsonl line 698",
+      "corpus/formats/indigo.jsonl line 699",
+      "corpus/formats/indigo.jsonl line 700",
+      "corpus/formats/indigo.jsonl line 701",
+      "corpus/formats/indigo.jsonl line 702",
+      "corpus/formats/indigo.jsonl line 703",
+      "corpus/formats/indigo.jsonl line 704",
+      "corpus/formats/indigo.jsonl line 705"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Johnson v. Clark, 24 S.C. Eq. (3 Rich. Eq.) 569 (Eq. 1855).",
+        "spans": [[22, 51]],
+        "groups": {
+          "volume": "24",
+          "reporter": "S.C. Eq.",
+          "nominative_volume": "3",
+          "nominative": "Rich. Eq.",
+          "page": "569"
+        }
+      },
+      {
+        "text": "See In re Estate of Hall, 24 S.C. Eq. (3 Rich. Eq.) 97, 633 (Eq. 1862).",
+        "spans": [[26, 54]]
+      },
+      {
+        "text": "See Walker v. Young, 20 S.C. Eq. (1 Strob. Eq.) 513 (Eq. 1847).",
+        "spans": [[21, 51]]
+      },
+      {
+        "text": "See Allen v. King, 20 S.C. Eq. (1 Strob. Eq.) 409, 609 (Eq. 1848).",
+        "spans": [[19, 49]]
+      },
+      {
+        "text": "See Adams v. Nelson, 17 S.C. Eq. (Speers Eq.) 561 (Eq. 1842).",
+        "spans": [[21, 49]]
+      },
+      {
+        "text": "See Hill v. Campbell, 17 S.C. Eq. (Speers Eq.) 89, 633 (Eq. 1843).",
+        "spans": [[22, 49]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 16 S.C. Eq. (McMul. Eq.) 313 (Eq. 1840).",
+        "spans": [[25, 53]]
+      },
+      {
+        "text": "See Carter v. Phillips, 16 S.C. Eq. (McMul. Eq.) 401, 633 (Eq. 1841).",
+        "spans": [[24, 52]]
+      },
+      {
+        "text": "See Evans v. Turner, 15 S.C. Eq. (Chev. Eq.) 153 (Eq. 1839).",
+        "spans": [[21, 48]]
+      },
+      {
+        "text": "See Smith v. Jones, 15 S.C. Eq. (Chev. Eq.) 65, 625 (Eq. 1839).",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "See State v. Miller, 14 S.C. Eq. (Rice Eq.) 241 (Eq. 1838).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Brown v. Davis, 14 S.C. Eq. (Rice Eq.) 233, 601 (Eq. 1838).",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "See Garcia v. Lee, 13 S.C. Eq. (Dud. Eq.) 65 (Eq. 1837).",
+        "spans": [[19, 44]]
+      },
+      {
+        "text": "See Johnson v. Clark, 13 S.C. Eq. (Dud. Eq.) 409, 601 (Eq. 1837).",
+        "spans": [[22, 48]]
+      },
+      {
+        "text": "See In re Estate of Hall, 12 S.C. Eq. (Ril. Eq.) 425 (Eq. 1836).",
+        "spans": [[26, 52]]
+      },
+      {
+        "text": "See Walker v. Young, 12 S.C. Eq. (Ril. Eq.) 281, 633 (Eq. 1836).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Allen v. King, 10 S.C. Eq. (1 Hill Eq.) 577 (Eq. 1834).",
+        "spans": [[19, 47]]
+      },
+      {
+        "text": "See Wright v. Scott, 10 S.C. Eq. (1 Hill Eq.) 553, 633 (Eq. 1835).",
+        "spans": [[21, 49]]
+      },
+      {
+        "text": "See Green v. Baker, 9 S.C. Eq. (Rich. Cas.) 305 (Eq. 1831).",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "See Adams v. Nelson, 9 S.C. Eq. (Rich. Cas.) 465, 633 (Eq. 1831).",
+        "spans": [[21, 48]]
+      },
+      {
+        "text": "See Hill v. Campbell, 8 S.C. Eq. (Bail. Eq.) 513 (Eq. 1830).",
+        "spans": [[22, 48]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 8 S.C. Eq. (Bail. Eq.) 393, 601 (Eq. 1830).",
+        "spans": [[25, 51]]
+      },
+      {
+        "text": "See Carter v. Phillips, 6 S.C. Eq. (1 McCord Eq.) 457 (Eq. 1825).",
+        "spans": [[24, 53]]
+      },
+      {
+        "text": "See Evans v. Turner, 6 S.C. Eq. (1 McCord Eq.) 241, 633 (Eq. 1826).",
+        "spans": [[21, 50]]
+      },
+      {
+        "text": "See Smith v. Jones, 5 S.C. Eq. (Harp. Eq.) 233 (Eq. 1824).",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "See State v. Miller, 5 S.C. Eq. (Harp. Eq.) 361, 601 (Eq. 1824).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Brown v. Davis, 1 S.C. Eq. (1 Des. Eq.) 505 (Eq. 1793).",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "See Garcia v. Lee, 1 S.C. Eq. (1 Des. Eq.) 225, 633 (Eq. 1807).",
+        "spans": [[19, 46]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 S.C. Eq. (2 Rich. Eq.) 345 (1850).",
+        "spans": [[16, 45]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the S.C. Eq. reports is missing.",
+      "The Bail. Eq. reports cover S.C. Eq. cases from 1800 to 1850.",
+      "See S.C. Eq. (Bail. Eq.) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "us.la.court_rule.district",
+  "kind": "court_rule",
+  "jurisdiction": "us.la",
+  "pattern": "\\b(?:La\\.\\s?Dist\\.\\s?Ct\\.\\s?R\\.)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "La. Dist. Ct. R. {rule}{sub}",
+  "authority_key": "us.la.rules.district/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Louisiana) Louisiana District Court Rules: La. Dist. Ct. R. N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Louisiana) and the official Louisiana District Court Rules; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See La. Dist. Ct. R. 9.5.",
+        "spans": [[4, 24]],
+        "groups": {
+          "rule": "9.5",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on La. Dist. Ct. R. 10.1 in reaching its holding.",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "Under La. Dist. Ct. R. 9.8(b), the claim fails.",
+        "spans": [[6, 29]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Louisiana rules committee met 12 times in 2020.",
+      "Under La. Dist. Ct. R. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. The Code of Civil Procedure and the Code of Evidence are statutes."
+}

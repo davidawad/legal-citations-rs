@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.uspto.official_gazette",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+Off\\.\\s?Gaz\\.\\s+(?P<office>Pat\\.\\s+(?:&\\s+Trademark\\s+)?Off(?:ice|\\.)|Trademark\\s+Off(?:ice|\\.))\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} Off. Gaz. {office} {page}",
+  "authority_key": "us.off_gaz/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "patent",
+    "uspto"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Commerce, Patent and Trademark Office (Official Gazette)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Commerce, Patent and Trademark Office (Official Gazette), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "1093 Off. Gaz. Pat. & Trademark Office 8 (Aug. 3, 1988).",
+        "spans": [
+          [
+            0,
+            40
+          ]
+        ],
+        "groups": {
+          "volume": "1093",
+          "page": "8"
+        }
+      },
+      {
+        "text": "See 850 Off. Gaz. Pat. Office 1 (May 2, 1968).",
+        "spans": [
+          [
+            4,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "Compare 1200 Off. Gaz. Pat. & Trademark Off. 12 with 900 Off. Gaz. Trademark Office 3.",
+        "spans": [
+          [
+            8,
+            47
+          ],
+          [
+            53,
+            85
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Off. Gaz. is weekly.",
+      "Volume 1093 of the Official Gazette, page 8.",
+      "Off. Gaz. Pat. Office notices run 8 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

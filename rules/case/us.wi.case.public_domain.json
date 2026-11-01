@@ -1,0 +1,51 @@
+{
+  "id": "us.wi.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.wi",
+  "pattern": "\\b(?P<year>20[0-9]{2})\\s+(?P<court>WI(?:\\s+App)?)\\s+(?P<number>[0-9]{1,3})\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.wi.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Wis. SCR 80.02 (opinions on or after January 1, 2000: year, WI or WI App, number; paragraph pins)",
+    "opened": true,
+    "source_url": "https://web.archive.org/web/20260211121443/https://www.wicourts.gov/sc/rules/chap80.pdf",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Smith v. Jones, 2000 WI 14, ¶6, 232 Wis. 2d 1.",
+        "spans": [[16, 26]],
+        "groups": {
+          "year": "2000",
+          "court": "WI",
+          "number": "14"
+        }
+      },
+      {
+        "text": "Doe v. Roe, 2001 WI App 9, ¶17.",
+        "spans": [[12, 25]]
+      },
+      {
+        "text": "See State v. Roberson, 2019 WI 102, ¶ 25.",
+        "spans": [[23, 34]]
+      }
+    ],
+    "negative": [
+      "Highway WI 14 was closed in 2000.",
+      "The 2001 WI App store listed 9 apps.",
+      "In 2019 Wisconsin had 102 new laws.",
+      "We met in 2018 at WI headquarters."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet. Opened in lcr-uc3 via a Wayback Machine copy of SCR ch. 80 (the live file returned 403)."
+}

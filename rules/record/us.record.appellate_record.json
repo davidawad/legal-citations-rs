@@ -1,0 +1,108 @@
+{
+  "id": "us.record.appellate_record",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\bR\\.\\s+at\\s+(?P<page>[0-9]{1,5}(?:\\s?[–-]\\s?[0-9]{1,5})?)\\b",
+  "priority": 60,
+  "normalize": "R. at {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "reject_before": [
+    "\\b(?:[A-Z][a-z]{3,}|[A-Za-z]+['’]s)\\s$",
+    "\\b[A-Z][A-Za-z]*\\.\\s$",
+    "&\\s$",
+    "(?:[A-Za-z.&'’]|[0-9]\\s)$"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, R24.1 (appellate record abbreviated R.)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R24.1 (appellate record abbreviated R.), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The jury so found. R. at 112.",
+        "spans": [
+          [
+            19,
+            28
+          ]
+        ],
+        "groups": {
+          "page": "112"
+        }
+      },
+      {
+        "text": "See R. at 45–47.",
+        "spans": [
+          [
+            4,
+            17
+          ]
+        ]
+      },
+      {
+        "text": "(R. at 3; R. at 9-10).",
+        "spans": [
+          [
+            1,
+            8
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      {
+        "text": "The record shows it. R. at 112.",
+        "spans": [
+          [
+            21,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "See R. at 45–47.",
+        "spans": [
+          [
+            4,
+            17
+          ]
+        ]
+      },
+      {
+        "text": "Compare (R. at 3) with R. at 1200-01.",
+        "spans": [
+          [
+            9,
+            16
+          ],
+          [
+            23,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Michael R. at 5 p.m. arrived.",
+      "Fed. R. at 12 is not a rule.",
+      "The R. was 112 pages.",
+      "12 Pac.R. at 345, 12 Pitts. R. at 345, 12 N.Y.Spec.Term R. at 345 and 12 R. at 345 are reporter short forms.",
+      "R. at large",
+      "The R. at the start of the line.",
+      "Fed. R. Civ. P."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "reject_before drops a middle initial after a name (`Michael R. at 5`), a capitalized abbreviation (`Fed. R.`, `12 Pitts. R. at 345`), and other reporter short forms (`12 Pac.R. at 345`, `12 R. at 345`); `See R. at 5` and `found. R. at 5` still match. Merged with us.record.record_at (retired); a capitalized word before `R.` is read as a name, so `Compare R. at 3` is not detected (`Compare (R. at 3)` is)."
+}

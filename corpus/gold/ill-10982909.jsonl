@@ -1,0 +1,78 @@
+{"start": 0, "end": 14, "kind": "case", "jurisdiction": "us.il.sup", "text": "2026 IL 132383", "normalized": "2026 IL 132383", "form": "page furniture", "optional": true, "note": "the opinion's own public-domain cite as heading"}
+{"start": 64, "end": 81, "kind": "docket", "jurisdiction": "us.il.sup", "text": "Docket No. 132383", "normalized": "No. 132383", "form": "docket number"}
+{"start": 608, "end": 637, "kind": "statute", "jurisdiction": "us.il", "text": "735 ILCS 5/13-115 (West 2022)", "normalized": "735 ILCS 5/13-115", "form": "ILCS"}
+{"start": 987, "end": 1032, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116 of the Code of Civil Procedure", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 1041, "end": 1070, "kind": "statute", "jurisdiction": "us.il", "text": "735 ILCS 5/13-116\n(West 2022)", "normalized": "735 ILCS 5/13-116", "form": "ILCS"}
+{"start": 1197, "end": 1228, "kind": "case", "jurisdiction": "us.il.app", "text": "2025 IL App (1st) 241354,\n¶ 36", "normalized": "2025 IL App (1st) 241354", "form": "Illinois public-domain"}
+{"start": 3782, "end": 3791, "kind": "id", "jurisdiction": "us.il.app", "text": "Id. ¶ 38", "normalized": "Id. ¶ 38", "form": "Id."}
+{"start": 3941, "end": 3950, "kind": "id", "jurisdiction": "us.il.app", "text": "id. ¶ 23", "normalized": "Id. ¶ 23", "form": "Id."}
+{"start": 4134, "end": 4143, "kind": "id", "jurisdiction": "us.il.app", "text": "id. ¶ 35", "normalized": "Id. ¶ 35", "form": "Id."}
+{"start": 4167, "end": 4193, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116 of the Code", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 4285, "end": 4294, "kind": "id", "jurisdiction": "us.il.app", "text": "id. ¶ 25", "normalized": "Id. ¶ 25", "form": "Id."}
+{"start": 4305, "end": 4319, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 4330, "end": 4339, "kind": "id", "jurisdiction": "us.il.app", "text": "id.\n¶ 31", "normalized": "Id. ¶ 31", "form": "Id."}
+{"start": 4515, "end": 4524, "kind": "id", "jurisdiction": "us.il.app", "text": "Id. ¶ 36", "normalized": "Id. ¶ 36", "form": "Id."}
+{"start": 4599, "end": 4640, "kind": "court_rule", "jurisdiction": "us.il", "text": "Ill. S. Ct. R.\n315(a) (eff. Dec. 7, 2023)", "normalized": "Ill. S. Ct. R. 315(a)", "form": "state rule"}
+{"start": 4996, "end": 5022, "kind": "statute", "jurisdiction": "us.il", "text": "sections 13-206 and 13-115", "normalized": "735 ILCS 5/13-206, 13-115", "form": "prose section reference", "optional": true}
+{"start": 5718, "end": 5732, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 5824, "end": 5853, "kind": "statute", "jurisdiction": "us.il", "text": "735 ILCS 5/13-116 (West 2022)", "normalized": "735 ILCS 5/13-116", "form": "ILCS"}
+{"start": 5970, "end": 5984, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 6038, "end": 6098, "kind": "case", "jurisdiction": "us.il.sup", "text": "McHenry Township v. County of McHenry, 2022 IL 127258, ¶ 55", "normalized": "2022 IL 127258", "form": "Illinois public-domain"}
+{"start": 6166, "end": 6169, "kind": "id", "jurisdiction": "us.il.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 6284, "end": 6326, "kind": "case", "jurisdiction": "us.il.sup", "text": "Tillman v. Pritzker, 2021 IL 126387, ¶ 17", "normalized": "2021 IL 126387", "form": "Illinois public-domain"}
+{"start": 6442, "end": 6445, "kind": "id", "jurisdiction": "us.il.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 6610, "end": 6613, "kind": "id", "jurisdiction": "us.il.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 6622, "end": 6636, "kind": "statute", "jurisdiction": "us.il", "text": "Section 13-206", "normalized": "735 ILCS 5/13-206", "form": "prose section reference", "optional": true}
+{"start": 6749, "end": 6778, "kind": "statute", "jurisdiction": "us.il", "text": "735 ILCS 5/13-206 (West 2022)", "normalized": "735 ILCS 5/13-206", "form": "ILCS"}
+{"start": 6780, "end": 6794, "kind": "statute", "jurisdiction": "us.il", "text": "Section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 7022, "end": 7035, "kind": "id", "jurisdiction": "us.il", "text": "Id. § 13-115", "normalized": "Id. § 13-115", "form": "Id."}
+{"start": 7256, "end": 7270, "kind": "statute", "jurisdiction": "us.il", "text": "Section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 7826, "end": 7845, "kind": "id", "jurisdiction": "us.il", "text": "Id. § 13-116(a)(1)", "normalized": "Id. § 13-116(a)(1)", "form": "Id."}
+{"start": 7884, "end": 7910, "kind": "statute", "jurisdiction": "us.il", "text": "sections 13-115 and 13-116", "normalized": "735 ILCS 5/13-115, 13-116", "form": "prose section reference", "optional": true}
+{"start": 8006, "end": 8020, "kind": "statute", "jurisdiction": "us.il", "text": "section\n13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 8036, "end": 8050, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 8548, "end": 8589, "kind": "case", "jurisdiction": "us.il.sup", "text": "Emory v.\nKeighan, 88 Ill. 482, 485 (1878)", "normalized": "88 Ill. 482", "form": "state official reporter"}
+{"start": 8720, "end": 8754, "kind": "statute", "jurisdiction": "us.il", "text": "section 11b of the Limitations Act", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "prose section reference", "optional": true}
+{"start": 8756, "end": 8792, "kind": "statute", "jurisdiction": "us.il", "text": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "state code"}
+{"start": 8878, "end": 8904, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116 of the Code", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 8906, "end": 8940, "kind": "statute", "jurisdiction": "us.il", "text": "section 11b of the Limitations Act", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "prose section reference", "optional": true}
+{"start": 9513, "end": 9529, "kind": "id", "jurisdiction": "us.il", "text": "Id. § 11b(a)(1)", "normalized": "Id. § 11b(a)(1)", "form": "Id."}
+{"start": 9542, "end": 9589, "kind": "case", "jurisdiction": "us.il.sup", "text": "Livingston v. Meyers, 6 Ill. 2d 325, 333 (1955)", "normalized": "6 Ill. 2d 325", "form": "state official reporter"}
+{"start": 9603, "end": 9614, "kind": "statute", "jurisdiction": "us.il", "text": "section 11b", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "prose section reference", "optional": true}
+{"start": 9658, "end": 9669, "kind": "statute", "jurisdiction": "us.il", "text": "section 11b", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "prose section reference", "optional": true}
+{"start": 9905, "end": 9916, "kind": "statute", "jurisdiction": "us.il", "text": "section 11b", "normalized": "Ill. Rev. Stat. 1941, ch. 83, § 11b", "form": "prose section reference", "optional": true}
+{"start": 9975, "end": 9985, "kind": "id", "jurisdiction": "us.il.sup", "text": "id. at 334", "normalized": "Id. at 334", "form": "Id."}
+{"start": 10047, "end": 10057, "kind": "id", "jurisdiction": "us.il.sup", "text": "id. at\n336", "normalized": "Id. at 336", "form": "Id."}
+{"start": 10068, "end": 10082, "kind": "statute", "jurisdiction": "us.il", "text": "Section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 10552, "end": 10566, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 10709, "end": 10723, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 11149, "end": 11163, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 11174, "end": 11188, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 11413, "end": 11445, "kind": "statute", "jurisdiction": "us.il", "text": "735\nILCS 5/13-116(a) (West 2022)", "normalized": "735 ILCS 5/13-116(a)", "form": "ILCS"}
+{"start": 11518, "end": 11617, "kind": "case", "jurisdiction": "us.il.sup", "text": "Lakewood Nursing & Rehabilitation Center, LLC v. Department\nof Public Health, 2019 IL 124019, ¶ 17", "normalized": "2019 IL 124019", "form": "Illinois public-domain"}
+{"start": 11751, "end": 11765, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 11870, "end": 11942, "kind": "case", "jurisdiction": "us.il.sup", "text": "Sigcho-Lopez v. Illinois State Board\nof Elections, 2022 IL 127253, ¶ 27", "normalized": "2022 IL 127253", "form": "Illinois public-domain"}
+{"start": 12178, "end": 12192, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 12351, "end": 12365, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 12483, "end": 12497, "kind": "statute", "jurisdiction": "us.il", "text": "section\n13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 12578, "end": 12620, "kind": "session_law", "jurisdiction": "us.il", "text": "Pub. Act 104-101, § 5 (eff. Aug. 1, 2025)", "normalized": "Pub. Act 104-101, § 5", "form": "state session law"}
+{"start": 12629, "end": 12647, "kind": "statute", "jurisdiction": "us.il", "text": "765 ILCS 905/17(2)", "normalized": "765 ILCS 905/17(2)", "form": "ILCS"}
+{"start": 12987, "end": 13051, "kind": "case", "jurisdiction": "us.il.sup", "text": "Henrich v. Libertyville High School, 186 Ill. 2d 381, 391 (1998)", "normalized": "186 Ill. 2d 381", "form": "state official reporter"}
+{"start": 13081, "end": 13095, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 13584, "end": 13627, "kind": "statute", "jurisdiction": "us.ok", "text": "Okla. Stat. Ann. tit. 42, § 23 (West 2025)", "normalized": "Okla. Stat. tit. 42, § 23", "form": "state code"}
+{"start": 13802, "end": 13849, "kind": "statute", "jurisdiction": "us.co", "text": "Colo.\nRev. Stat. Ann., § 38-39-207 (West 2026)", "normalized": "Colo. Rev. Stat. § 38-39-207", "form": "state code"}
+{"start": 14117, "end": 14151, "kind": "statute", "jurisdiction": "us.ca", "text": "Cal. Civ. Code § 2911\n(West 2025)", "normalized": "Cal. Civ. Code § 2911", "form": "state code"}
+{"start": 14281, "end": 14320, "kind": "statute", "jurisdiction": "us.mt", "text": "Mont. Code Ann. § 71-3-122\n(West 2025)", "normalized": "Mont. Code Ann. § 71-3-122", "form": "state code"}
+{"start": 14447, "end": 14492, "kind": "statute", "jurisdiction": "us.wa", "text": "Wash. Rev. Code. Ann.\n§ 7.28.300 (West 2026)", "normalized": "Wash. Rev. Code § 7.28.300", "form": "state code"}
+{"start": 15180, "end": 15281, "kind": "case", "jurisdiction": "us.il.sup", "text": "Tom Olesker’s Exciting World of\nFashion, Inc. v. Dun & Bradstreet, Inc., 61 Ill. 2d 129, 137 (1975)", "normalized": "61 Ill. 2d 129", "form": "state official reporter"}
+{"start": 15394, "end": 15437, "kind": "case", "jurisdiction": "us.il.sup", "text": "Fleming v. Yeazel, 379 Ill. 343, 345 (1942)", "normalized": "379 Ill. 343", "form": "state official reporter"}
+{"start": 15569, "end": 15613, "kind": "case", "jurisdiction": "us.il.sup", "text": "Newland v. Marsh, 19 Ill. 376, 384-85 (1857)", "normalized": "19 Ill. 376", "form": "state official reporter"}
+{"start": 15989, "end": 16034, "kind": "case", "jurisdiction": "us.il.sup", "text": "DeLuna v. Burciaga, 223 Ill. 2d 49, 61 (2006)", "normalized": "223 Ill. 2d 49", "form": "state official reporter"}
+{"start": 16427, "end": 16441, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-115", "normalized": "735 ILCS 5/13-115", "form": "prose section reference", "optional": true}
+{"start": 16704, "end": 16728, "kind": "case_short", "jurisdiction": "us.il.sup", "text": "Fleming, 379 Ill. at 345", "normalized": "379 Ill. at 345", "form": "short case (at)"}
+{"start": 16837, "end": 16880, "kind": "case", "jurisdiction": "us.il.sup", "text": "DeWalsh v. Braman, 160 Ill. 415, 423 (1896)", "normalized": "160 Ill. 415", "form": "state official reporter"}
+{"start": 16929, "end": 16972, "kind": "case", "jurisdiction": "us.il.sup", "text": "Rabus v. Calcari, 16 Ill. 2d 99, 101 (1959)", "normalized": "16 Ill. 2d 99", "form": "state official reporter"}
+{"start": 17216, "end": 17240, "kind": "case_short", "jurisdiction": "us.il.sup", "text": "DeWalsh, 160 Ill. at\n420", "normalized": "160 Ill. at 420", "form": "short case (at)"}
+{"start": 18073, "end": 18087, "kind": "statute", "jurisdiction": "us.il", "text": "section 13-116", "normalized": "735 ILCS 5/13-116", "form": "prose section reference", "optional": true}
+{"start": 18163, "end": 18205, "kind": "session_law", "jurisdiction": "us.il", "text": "Pub. Act 104-101, § 5 (eff. Aug. 1, 2025)", "normalized": "Pub. Act 104-101, § 5", "form": "state session law"}
+{"start": 18214, "end": 18232, "kind": "statute", "jurisdiction": "us.il", "text": "765 ILCS 905/17(2)", "normalized": "765 ILCS 905/17(2)", "form": "ILCS"}

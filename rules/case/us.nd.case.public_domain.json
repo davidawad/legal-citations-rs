@@ -1,0 +1,51 @@
+{
+  "id": "us.nd.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.nd",
+  "pattern": "\\b(?P<year>(?:199[7-9]|20[0-9]{2}))\\s+(?P<court>ND(?:\\s+App)?)\\s+(?P<number>[0-9]{1,3})\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.nd.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "N.D.R.Ct. 11.6 (opinions on or after January 1, 1997: year, ND or ND App, sequential number; paragraph pin follows the number)",
+    "opened": true,
+    "source_url": "https://web.archive.org/web/20251105124750/https://www.ndcourts.gov/legal-resources/rules/ndrct/11-6",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Doe v. Roe, 1997 ND 15, ¶ 21, 560 N.W.2d 1.",
+        "spans": [[12, 22]],
+        "groups": {
+          "year": "1997",
+          "court": "ND",
+          "number": "15"
+        }
+      },
+      {
+        "text": "See Interest of A.B., 1998 ND App 4, ¶ 7.",
+        "spans": [[22, 35]]
+      },
+      {
+        "text": "State v. Smith, 2023 ND 112, ¶¶ 21-25.",
+        "spans": [[16, 27]]
+      }
+    ],
+    "negative": [
+      "Highway ND 15 runs north from the river.",
+      "In 1997 the ND team scored 15 points.",
+      "The 2019 ND App release had 12 bugs.",
+      "The 1997 N.D. Law Review ran 15 articles."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet. Opened in lcr-uc3 via a Wayback Machine copy of the official rule page (the live page returned 403). N.D. with periods is the North Dakota Reports, not this form."
+}

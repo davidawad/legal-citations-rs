@@ -1,0 +1,71 @@
+{
+  "id": "us.nj.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.nj",
+  "pattern": "\\b(?:N\\.J\\.\\s?Rev\\.\\s?Stat\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|N\\.J\\.\\s?Stat\\.\\s?Ann\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 New Jersey: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 New Jersey, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 459",
+      "corpus/formats/indigo.jsonl line 460"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.J. Stat. Ann. § 29:73 (West 2015).",
+        "spans": [[4, 28]],
+        "groups": {}
+      },
+      {
+        "text": "See N.J. Stat. Ann. § 29:1 (West 2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See N.J. Rev. Stat. § 33:33 (2015).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See N.J. Rev. Stat. § 29:41 (2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See N.J. Stat. Ann. § 52:16 (West 5348).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See N.J. Stat. Ann. § 52:4 (West 5347).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See N.J. Rev. Stat. § 66:66 (5348).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See N.J. Rev. Stat. § 52:74 (5347).",
+        "spans": [[4, 28]]
+      }
+    ],
+    "negative": [
+      "The New Jersey code was amended in 2015.",
+      "Section 12 of the New Jersey rules is long.",
+      "Title five of the New Jersey compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

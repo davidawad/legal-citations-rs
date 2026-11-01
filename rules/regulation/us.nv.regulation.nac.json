@@ -1,0 +1,49 @@
+{
+  "id": "us.nv.regulation.nac",
+  "kind": "regulation",
+  "jurisdiction": "us.nv",
+  "pattern": "\\b(?:Nev\\.\\s?Admin\\.\\s?Code\\s?§|NAC)\\s?(?P<section>[0-9]{1,3}[A-Z]{0,2}\\.[0-9]{3,5})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Nev. Admin. Code § {section}{sub}",
+  "authority_key": "us.nv.nac/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Nevada) administrative compilation: Nev. Admin. Code § N.N; local form NAC N.N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Nevada) and the official Nevada administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Nev. Admin. Code § 445A.070.",
+        "spans": [[4, 32]],
+        "groups": {
+          "section": "445A.070",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on NAC 616C.024 in reaching its holding.",
+        "spans": [[20, 32]]
+      },
+      {
+        "text": "Under NAC 445B.22067(1), the permit fails.",
+        "spans": [[6, 23]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Nevada agency adopted 12 new rules in 2020.",
+      "Under Nev. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

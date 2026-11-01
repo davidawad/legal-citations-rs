@@ -1,0 +1,52 @@
+{
+  "id": "us.treaty.senate_treaty_doc",
+  "kind": "treaty",
+  "jurisdiction": "us.fed.congress",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\bS\\.\\s?Treaty\\s+Doc\\.\\s+No\\.\\s?(?P<congress>[0-9]{1,3})-(?P<number>[0-9]{1,3})\\b(?:,\\s*at\\s+(?P<pin>[0-9]{1,5}))?",
+  "priority": 65,
+  "normalize": "S. Treaty Doc. No. {congress}-{number}",
+  "authority_key": "us.senate_treaty_doc/{congress}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Senate Treaty Documents (1981-date), S. Treaty Doc. No. <congress>-<no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See S. Treaty Doc. No. 103-39 (1994).",
+        "spans": [[4, 29]],
+        "groups": {
+          "congress": "103",
+          "number": "39"
+        }
+      },
+      {
+        "text": "The court relied on S. Treaty Doc. No. 110-13 (2008) in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under S. Treaty Doc. No. 106-1, at 5, the claim fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "S. Rep. No. 103-39 (1994).",
+      "The Senate treaty document was 39 pages.",
+      "S. Doc. No. 110-13 (2008)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Indigo T6 lists Senate Treaty Documents as a treaty source, so this outranks us.fed.legislative.report for that one series. url_templates: none; congress.gov answers scripted fetches with 403 (2026-10-23), and its treaty-document path needs the Congress ordinal (`101st`), which the template cannot build."
+}

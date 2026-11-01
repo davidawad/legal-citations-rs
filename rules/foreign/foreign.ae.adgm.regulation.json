@@ -1,0 +1,62 @@
+{
+  "id": "foreign.ae.adgm.regulation",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.adgm",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae",
+    "adgm"
+  ],
+  "pattern": "(?:\\bADGM\\s+(?P<title>[A-Z][A-Za-z]*(?:\\s+(?:[A-Z][A-Za-z]*|and|of|the|for)){0,8}\\s+(?:Regulations|Rules))\\s+(?P<year>20[0-9]{2})|\\b(?P<title2>[A-Z][A-Za-z]*(?:\\s+(?:[A-Z][A-Za-z]*|and|of|the|for)){0,8}\\s+(?:Regulations|Rules))\\s+(?P<year2>20[0-9]{2})\\s+\\(ADGM\\))",
+  "priority": 60,
+  "normalize": "{title}{title2} {year}{year2} (ADGM)",
+  "authority_key": "ae.adgm.reg/{title}{title2}/{year}{year2}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "ADGM enactments cited by title and year: 'ADGM Companies Regulations 2020' or 'Companies Regulations 2020 (ADGM)'",
+    "opened": false,
+    "source_url": "https://en.adgm.thomsonreuters.com",
+    "how_to_verify": "Check titles and years against the ADGM Legal Framework (en.adgm.thomsonreuters.com).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The ADGM Companies Regulations 2020 apply.",
+        "spans": [[4, 35]],
+        "groups": {
+          "title": "Companies Regulations",
+          "year": "2020"
+        }
+      },
+      {
+        "text": "See Insolvency Regulations 2015 (ADGM) s 5.",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "ADGM Application of English Law Regulations 2015 and ADGM Arbitration Regulations 2015.",
+        "spans": [[0, 48], [53, 86]]
+      },
+      {
+        "text": "Under the Insolvency Regulations 2015 (ADGM), the court may act.",
+        "spans": [[10, 44]]
+      }
+    ],
+    "negative": [
+      "The Companies Regulations 2020 were amended.",
+      "ADGM regulations are published online.",
+      "Rules 2020 (Cth) is Australian."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A match that starts with a signal or article ('See', 'The', 'Under', ...) is rejected and the search resumes, so the title starts at its first real word ('See Insolvency Regulations 2015 (ADGM)' matches from 'Insolvency'). Titles are not checked against the ADGM legislation list.",
+  "reject": [
+    "^(?:See|Under|In|The|Cf|But|And|Also|Accord|Compare|Contra|Per|Pursuant|Section|Sections|Following|Applying|Unlike|Like|Both|Neither|Its|Their|This|That|These|Those)\\b"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.pd",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.sup",
+  "tags": [
+    "foreign",
+    "israel",
+    "mena",
+    "il"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\((?P<part>[0-9])\\)\\s+(?P<reporter>P\\.?\\s?D\\.?|PD|IsrSC|Isr\\.\\s?S\\.\\s?C\\.)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}))?",
+  "priority": 60,
+  "normalize": "{volume}({part}) PD {page}",
+  "authority_key": "il.pd/{volume}/{part}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (Israel: Piskei Din, <vol>(<part>) PD <page>; IsrSC in English translations)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (Israel) and the Israeli Supreme Court's English citation practice (court prefix, docket, P.D. volume(part)).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "HCJ 5100/94 Pub. Comm. Against Torture in Israel v. State of Israel 53(4) PD 817 (1999).",
+        "spans": [[68, 80]],
+        "groups": {
+          "volume": "53",
+          "part": "4",
+          "page": "817"
+        }
+      },
+      {
+        "text": "CA 6821/93 United Mizrahi Bank Ltd. v. Migdal Coop. Village 49(4) P.D. 221 (1995).",
+        "spans": [[60, 74]]
+      },
+      {
+        "text": "See 49(4) IsrSC 221, 250.",
+        "spans": [[4, 24]]
+      }
+    ],
+    "negative": [
+      "Section 53(4) PD rules apply.",
+      "PD 817 is a police unit.",
+      "The 49(4) clause was cut."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Piskei Din (P.D.) reports Supreme Court judgments, so the jurisdiction is foreign.il.sup."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.irs.action_on_decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.irs",
+  "pattern": "\\b(?:action\\s+on\\s+dec\\.,?|AOD|A\\.O\\.D\\.)\\s+(?P<number>(?:19|20)[0-9]{2}-[0-9]{2,3})\\b",
+  "priority": 60,
+  "normalize": "action on dec. {number}",
+  "authority_key": "us.irs.aod/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "tax"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of the Treasury (Action on Decision)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of the Treasury (Action on Decision), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Brown v. Comm’r, 89 T.C. 1 (1987), action on dec., 1988-015 (Sept. 12, 1988).",
+        "spans": [
+          [
+            37,
+            61
+          ]
+        ],
+        "groups": {
+          "number": "1988-015"
+        }
+      },
+      {
+        "text": "The IRS announced nonacquiescence in AOD 2012-03.",
+        "spans": [
+          [
+            37,
+            48
+          ]
+        ]
+      },
+      {
+        "text": "Compare action on dec. 1999-012 with A.O.D. 2001-04.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            51
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The action on decision was issued in 1988.",
+      "AOD memos number 15 a year.",
+      "An action on dec. followed 3 months later."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

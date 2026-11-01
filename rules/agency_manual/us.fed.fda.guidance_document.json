@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.fda.guidance_document",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.fda",
+  "tags": [
+    "fda",
+    "health"
+  ],
+  "pattern": "\\b(?:FDA|U\\.S\\.\\s+Food\\s+(?:&|and)\\s+Drug\\s+Admin(?:\\.|istration)|Food\\s+(?:&|and)\\s+Drug\\s+Admin(?:\\.|istration)),\\s+(?P<type>(?:Draft\\s+)?Guidance\\s+for\\s+Industry(?:\\s+and\\s+(?:Food\\s+and\\s+Drug\\s+Administration\\s+)?Staff)?)(?::|,)\\s+(?P<title>(?:[^()]|\\([a-z0-9]{1,3}\\)){5,150}?)\\s+\\((?:(?:[A-Z][a-z]{2,8}\\.?\\s+)(?:[0-9]{1,2},\\s+)?)?(?P<year>(?:19|20)[0-9]{2})\\)",
+  "priority": 58,
+  "normalize": "FDA, {type}: {title} ({year})",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "FDA guidance documents (21 C.F.R. § 10.115), cited as agency reports under Bluebook R. 15",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open FDA's guidance search at https://www.fda.gov/regulatory-information/search-fda-guidance-documents and compare the title and date.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "FDA recommends a risk-based approach. FDA, Guidance for Industry: Q9 Quality Risk Management (June 2006).",
+        "spans": [
+          [
+            38,
+            104
+          ]
+        ],
+        "groups": {
+          "year": "2006"
+        }
+      },
+      {
+        "text": "See U.S. Food & Drug Admin., Draft Guidance for Industry: Clinical Trial Endpoints for the Approval of Cancer Drugs (2018).",
+        "spans": [
+          [
+            4,
+            122
+          ]
+        ]
+      },
+      {
+        "text": "Compare FDA, Guidance for Industry and Food and Drug Administration Staff, Deciding When to Submit a 510(k) (Oct. 25, 2017).",
+        "spans": [
+          [
+            8,
+            123
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "FDA issued guidance for industry in 2019.",
+      "FDA, Guidance for Industry",
+      "The guidance for industry (2006)"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

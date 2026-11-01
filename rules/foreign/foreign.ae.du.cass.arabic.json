@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ae.du.cass.arabic",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.du.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?P<court>محكمة\\s+تمييز\\s+دبي|محكمة\\s+التمييز\\s+بدبي)[\\s،,-]*(?P<kind>الطعن|طعن|الاستئناف|استئناف)\\s+رقم\\s*\\(?\\s*(?P<number>[0-9٠-٩]{1,5})\\s*\\)?\\s+لسنة\\s+(?P<year>[0-9٠-٩]{2,4})(?:\\s+(?P<chamber>قضائية|تجاري|مدني|جزائي|عقاري|أحوال\\s+شخصية|إداري))?",
+  "priority": 60,
+  "normalize": "{court} {kind} رقم {number} لسنة {year}",
+  "authority_key": "ae.case.ar/foreign.ae.du.cass.arabic/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Dubai Court of Cassation judgments cited in Arabic: محكمة تمييز دبي الطعن رقم N لسنة YYYY",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Unverified practice; check against Arabic judgments published by the courts.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "محكمة تمييز دبي الطعن رقم 898 لسنة 2019 تجاري",
+        "spans": [[0, 75]],
+        "groups": {
+          "number": "898",
+          "year": "2019"
+        }
+      },
+      {
+        "text": "محكمة التمييز بدبي، الطعن رقم (62) لسنة 2021",
+        "spans": [[0, 73]]
+      },
+      {
+        "text": "محكمة تمييز دبي - طعن رقم ٩٩٠ لسنة ٢٠١٩ تجاري",
+        "spans": [[0, 80]]
+      }
+    ],
+    "negative": [
+      "محكمة تمييز دبي في الإمارة",
+      "الطعن رقم 898 لسنة 2019",
+      "محكمة التمييز بالكويت الطعن رقم 5 لسنة 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

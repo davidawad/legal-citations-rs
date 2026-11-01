@@ -1,0 +1,56 @@
+{
+  "id": "us.nd.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.nd",
+  "pattern": "N\\.D\\.\\s+Cent(?:ral)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (North Dakota) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, North Dakota entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py ND pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.D. Cent. Code § 12.1-16-01.",
+        "spans": [[4, 33]],
+        "groups": {
+          "section": "12.1-16-01"
+        }
+      },
+      {
+        "text": "The court relied on N.D. Central. Code Ann. § 1 in reaching its holding.",
+        "spans": [[20, 48]]
+      },
+      {
+        "text": "Under N.D. Cent. Code § 12.1-16-8, the claim fails.",
+        "spans": [[6, 34]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "nd",
+    "order": 48,
+    "pattern": "N\\.D\\.\\s+Cent(?:ral)?\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.irs.general_counsel_memorandum",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.irs",
+  "pattern": "\\b(?:(?:I\\.R\\.S\\.\\s+)?Gen\\.\\s?Couns\\.\\s?Mem\\.|GCM|G\\.C\\.M\\.)\\s+(?P<number>[0-9]{2},?[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "Gen. Couns. Mem. {number}",
+  "authority_key": "us.irs.gcm/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "tax"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of the Treasury (General Counsel Memoranda)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of the Treasury (General Counsel Memoranda), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See I.R.S. Gen. Couns. Mem. 39,866 (Oct. 13, 1989).",
+        "spans": [
+          [
+            4,
+            34
+          ]
+        ],
+        "groups": {
+          "number": "39,866"
+        }
+      },
+      {
+        "text": "The IRS reasoned in I.R.S. Gen. Couns. Mem. 38,283 (Feb. 15, 1980).",
+        "spans": [
+          [
+            20,
+            50
+          ]
+        ]
+      },
+      {
+        "text": "Compare Gen. Couns. Mem. 37,789 with GCM 39,326.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            47
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The General Counsel wrote 39 memos.",
+      "Gen. Couns. Mem. was withdrawn in 1989.",
+      "The GCM program ended in 1990."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

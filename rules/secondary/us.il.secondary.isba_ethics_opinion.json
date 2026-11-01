@@ -1,0 +1,70 @@
+{
+  "id": "us.il.secondary.isba_ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.il",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:ISBA|Ill\\.\\s+State\\s+Bar\\s+Ass['’]n)(?:\\s+Advisory)?\\s+Op(?:inion|n|\\.)\\.?(?:\\s+on\\s+Pro(?:\\.|f(?:['’]l|essional))\\s+Conduct)?\\s+(?:No\\.\\s*)?(?P<number>[0-9]{2}-[0-9]{2})\\b",
+  "priority": 60,
+  "normalize": "ISBA Op. {number}",
+  "authority_key": "us.il.isba/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Illinois State Bar Association advisory opinions on professional conduct",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the ISBA ethics opinions at https://www.isba.org/ethics and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Referral fees are limited. ISBA Op. 19-02.",
+        "spans": [
+          [
+            27,
+            41
+          ]
+        ],
+        "groups": {
+          "number": "19-02"
+        }
+      },
+      {
+        "text": "See Ill. State Bar Ass'n Advisory Op. on Pro. Conduct 12-15.",
+        "spans": [
+          [
+            4,
+            59
+          ]
+        ]
+      },
+      {
+        "text": "Compare ISBA Advisory Op. 16-06 with ISBA Op. No. 21-01.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            55
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ISBA committee",
+      "ISBA Op. pending",
+      "ISBA Op. 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

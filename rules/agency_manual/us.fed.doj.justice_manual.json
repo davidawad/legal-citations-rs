@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.doj.justice_manual",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.doj",
+  "pattern": "\\b(?P<manual>Justice\\s+Manual|JM|U\\.S\\.\\s+Att(?:orneys|['’]ys)['’]\\s+Manual|USAM)\\s*(?:§\\s*)?(?P<section>[0-9]{1,2}-[0-9]{1,3}\\.[0-9]{3}[A-Z]?)\\b",
+  "priority": 60,
+  "normalize": "Justice Manual § {section}",
+  "authority_key": "us.justice_manual/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "U.S. Department of Justice, Justice Manual (formerly U.S. Attorneys' Manual), cited by title-section",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Justice Manual at https://www.justice.gov/jm and compare the `9-28.000` numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Corporate charging is addressed in Justice Manual § 9-28.000.",
+        "spans": [
+          [
+            35,
+            61
+          ]
+        ],
+        "groups": {
+          "section": "9-28.000"
+        }
+      },
+      {
+        "text": "See JM 9-27.220.",
+        "spans": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "text": "Compare U.S. Attorneys’ Manual § 9-28.700 with USAM 9-27.000.",
+        "spans": [
+          [
+            8,
+            44
+          ],
+          [
+            50,
+            63
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Justice Manual was revised.",
+      "JM 9 pages",
+      "Justice Manual § 9"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,56 @@
+{
+  "id": "foreign.ae.statute.resolution",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?:UAE\\s+)?(?P<body>Cabinet|Ministerial|Council\\s+of\\s+Ministers|Ministry\\s+of\\s+[A-Z][A-Za-z]+(?:\\s+[A-Z][A-Za-z]+)?)\\s+(?P<type>Resolution|Decision)\\s+No\\.?\\s*\\(?(?P<number>[0-9]{1,4})\\)?\\s+of\\s+(?P<year>(?:19|20)[0-9]{2})",
+  "priority": 60,
+  "normalize": "{body} {type} No. {number} of {year}",
+  "authority_key": "ae.resolution/{body}/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "UAE Cabinet and Ministerial Resolutions/Decisions as cited in English: Cabinet Resolution No. N of YYYY",
+    "opened": false,
+    "source_url": "https://elaws.moj.gov.ae",
+    "how_to_verify": "Cannot be opened in this run; verify against the UAE Ministry of Justice legislation portal (elaws.moj.gov.ae) and the Official Gazette.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cabinet Resolution No. 16 of 2020 sets the fees.",
+        "spans": [[0, 33]],
+        "groups": {
+          "body": "Cabinet",
+          "type": "Resolution",
+          "number": "16",
+          "year": "2020"
+        }
+      },
+      {
+        "text": "Under Ministerial Decision No. (45) of 2022, filings close.",
+        "spans": [[6, 43]]
+      },
+      {
+        "text": "UAE Council of Ministers Resolution No. 58 of 2020 applies.",
+        "spans": [[0, 50]]
+      }
+    ],
+    "negative": [
+      "The Cabinet resolved to adopt the plan in 2020.",
+      "Resolution No. 5 was withdrawn.",
+      "Ministerial staff met in 2022."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The 'Federal Decree' (without -Law) form and unnumbered regulations are not covered."
+}

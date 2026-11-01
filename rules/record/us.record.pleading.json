@@ -1,0 +1,90 @@
+{
+  "id": "us.record.pleading",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "pleading"
+  ],
+  "pattern": "\\b(?P<doc>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:(?:(?:First|Second|Third|Fourth|Fifth|1st|2d|3d|Consol\\.|Verified|Proposed|Corrected)\\s+)*(?:Am\\.\\s+)?(?:Compl\\.|Countercl\\.|Third-Party\\s+Compl\\.|Pet\\.\\s+for\\s+Writ)))\\s*(?:¶¶?\\s*|at\\s+)?(?P<pin>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b|\\b(?P<doc2>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:(?:First|Second|Third|Amended)\\s+)?(?:Answer|Ans\\.)|SAC|FAC|TAC|4AC)\\s*¶¶?\\s*(?P<pin2>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b",
+  "reject_before": [
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 54,
+  "normalize": "{doc}{doc2} {pin}{pin2}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook B17 / R10.8.3 (court documents and record cites); Indigo Book R24",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The defendant admits it. Answer ¶ 3.",
+        "spans": [
+          [
+            25,
+            36
+          ]
+        ],
+        "groups": {
+          "pin2": "3"
+        }
+      },
+      {
+        "text": "The facts are pleaded. Pl.’s Compl. ¶ 12, ECF No. 147.",
+        "spans": [
+          [
+            23,
+            43
+          ]
+        ]
+      },
+      {
+        "text": "See Am. Compl. ¶¶ 5–7; SAC ¶ 12.",
+        "spans": [
+          [
+            4,
+            25
+          ],
+          [
+            27,
+            36
+          ]
+        ]
+      },
+      {
+        "text": "Compare Compl. 5 with Answer ¶ 3 and First Am. Compl. at 9.",
+        "spans": [
+          [
+            8,
+            16
+          ],
+          [
+            22,
+            33
+          ],
+          [
+            38,
+            59
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The complaint was filed in May.",
+      "Answer 3 questions.",
+      "The FAC was dismissed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A party's pleading (`Pl.’s Compl. ¶ 12`) is reported by us.record.party_document (60) and a bare `Compl. ¶ 12` ties with us.record.bare_document (55); this rule adds SAC/FAC, Answer, Verified and Pet. for Writ."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "us.co.court_rule.evid",
+  "kind": "court_rule",
+  "jurisdiction": "us.co",
+  "pattern": "\\b(?:Colo\\.\\s?R\\.\\s?Evid\\.|CRE)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Colo. R. Evid. {rule}{sub}",
+  "authority_key": "us.co.rules.evid/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Colorado) Colorado Rules of Evidence: Colo. R. Evid. N; local form CRE N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Colorado) and the official Colorado Rules of Evidence; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Colo. R. Evid. 803(6).",
+        "spans": [[4, 25]],
+        "groups": {
+          "rule": "803",
+          "sub": "(6)"
+        }
+      },
+      {
+        "text": "The court relied on CRE 702 in reaching its holding.",
+        "spans": [[20, 27]]
+      },
+      {
+        "text": "Under CRE 404(b), the claim fails.",
+        "spans": [[6, 16]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Colorado rules committee met 12 times in 2020.",
+      "Under Colo. R. Evid. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

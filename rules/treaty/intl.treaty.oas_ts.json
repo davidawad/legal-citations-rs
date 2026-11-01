@@ -1,0 +1,52 @@
+{
+  "id": "intl.treaty.oas_ts",
+  "kind": "treaty",
+  "jurisdiction": "intl.oas",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?O\\.\\s?A\\.\\s?S\\.\\s?T\\.\\s?S\\.\\s+No\\.\\s?(?P<number>(?:[A-Z]-)?[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "O.A.S.T.S. No. {number}",
+  "authority_key": "oas_ts/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Organization of American States Treaty Series (1970-date), O.A.S.T.S. No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "American Convention on Human Rights, Nov. 22, 1969, O.A.S.T.S. No. 36.",
+        "spans": [[37, 69]],
+        "groups": {
+          "date": "Nov. 22, 1969",
+          "number": "36"
+        }
+      },
+      {
+        "text": "Inter-American Convention Against Corruption, Mar. 29, 1996, O.A.S.T.S. No. B-58.",
+        "spans": [[46, 80]]
+      },
+      {
+        "text": "The court relied on O.A.S.T.S. No. 36 in reaching its holding.",
+        "spans": [[20, 37]]
+      }
+    ],
+    "negative": [
+      "The O.A.S. met in 36 sessions.",
+      "OAS staff number 58.",
+      "The treaty was No. 36 on the list."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

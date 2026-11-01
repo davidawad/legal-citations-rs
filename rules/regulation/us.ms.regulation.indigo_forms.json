@@ -1,0 +1,54 @@
+{
+  "id": "us.ms.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.ms",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\-[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sMiss\\.\\s?Code\\sR\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Mississippi: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Mississippi, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 398"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 57-41 Miss. Code R. § 33 (LexisNexis 2015).",
+        "spans": [[4, 29]],
+        "groups": {}
+      },
+      {
+        "text": "See 5-39 Miss. Code R. § 41 (LexisNexis 2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 81-74 Miss. Code R. § 66 (LexisNexis 5348).",
+        "spans": [[4, 29]]
+      },
+      {
+        "text": "See 8-62 Miss. Code R. § 74 (LexisNexis 5347).",
+        "spans": [[4, 28]]
+      }
+    ],
+    "negative": [
+      "The Mississippi code was amended in 2015.",
+      "Section 12 of the Mississippi rules is long.",
+      "Title five of the Mississippi compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

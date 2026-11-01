@@ -1,0 +1,56 @@
+{
+  "id": "us.nm.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.nm",
+  "pattern": "(?:N\\.M\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|NMSA\\s+[0-9]{4}\\s+)§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New Mexico) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, New Mexico entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py NM pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.M. Stat. Ann. § 30-2-1.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "30-2-1"
+        }
+      },
+      {
+        "text": "The court relied on NMSA 1978 § 30-2-1 in reaching its holding.",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "Under N.M. Stat. Ann. § 30-2-8, the claim fails.",
+        "spans": [[6, 31]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "nm",
+    "order": 47,
+    "pattern": "(?:N\\.M\\.\\s+Stat(?:utes?)?\\.\\s+(?:Ann\\.\\s+)?|NMSA\\s+\\d{4}\\s+)§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

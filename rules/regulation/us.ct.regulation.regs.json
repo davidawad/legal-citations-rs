@@ -1,0 +1,49 @@
+{
+  "id": "us.ct.regulation.regs",
+  "kind": "regulation",
+  "jurisdiction": "us.ct",
+  "pattern": "\\b(?:Conn\\.\\s?Agencies\\s?Regs\\.|Regs\\.,?\\s?Conn\\.\\s?State\\s?Agencies)\\s?§\\s?(?P<section>[0-9]{1,3}[a-z]?-[0-9]{1,3}[a-z]?(?:\\([a-z]\\))?(?:-[0-9]{1,3}[a-z]?)?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Conn. Agencies Regs. § {section}{sub}",
+  "authority_key": "us.ct.regs/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Connecticut) administrative compilation: Conn. Agencies Regs. § N-N-N; local form Regs., Conn. State Agencies § N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Connecticut) and the official Connecticut administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Conn. Agencies Regs. § 22a-174-1.",
+        "spans": [[4, 37]],
+        "groups": {
+          "section": "22a-174-1",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Regs., Conn. State Agencies § 17b-262-342 in reaching its holding.",
+        "spans": [[20, 62]]
+      },
+      {
+        "text": "Under Conn. Agencies Regs. § 22a-449(c)-102(a), the permit fails.",
+        "spans": [[6, 47]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Connecticut agency adopted 12 new rules in 2020.",
+      "Under Conn. Agencies Regs., as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

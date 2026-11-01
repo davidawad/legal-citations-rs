@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.usda.agriculture_decisions",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.usda",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+Agric\\.?\\s+Dec\\.\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} Agric. Dec. {page}",
+  "authority_key": "us.agric_dec/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Agriculture (Decisions: Agric. Dec.)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Agriculture (Decisions: Agric. Dec.), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Arizona Livestock Auction, Inc., 55 Agric Dec. 1121 (U.S.D.A. 1996).",
+        "spans": [
+          [
+            33,
+            51
+          ]
+        ],
+        "groups": {
+          "volume": "55",
+          "page": "1121"
+        }
+      },
+      {
+        "text": "See In re Hickey, 53 Agric. Dec. 1087 (1994).",
+        "spans": [
+          [
+            18,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "Compare 60 Agric. Dec. 1 with 61 Agric Dec. 22.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            46
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Agric. Dec. volumes number 55.",
+      "The agriculture decision of 1996 is cited.",
+      "In 55 Agric. cases the Secretary ruled."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Reads Indigo's `Agric Dec.` (no period) and `Agric. Dec.`; the reporters-db generator leaves `Agric. Dec.` to this rule."
+}

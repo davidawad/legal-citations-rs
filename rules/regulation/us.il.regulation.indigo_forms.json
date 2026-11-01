@@ -1,0 +1,71 @@
+{
+  "id": "us.il.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.il",
+  "pattern": "\\b(?:Ill\\.\\s?Admin\\.\\s?Code\\stit\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sIll\\.\\s?Code\\sR\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Illinois: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Illinois, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 218",
+      "corpus/formats/indigo.jsonl line 219"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ill. Admin. Code tit. 13, § 89 (2015).",
+        "spans": [[4, 35]],
+        "groups": {}
+      },
+      {
+        "text": "See Ill. Admin. Code tit. 9, § 89 (2014).",
+        "spans": [[4, 34]]
+      },
+      {
+        "text": "See 36 Ill. Code R. 14 (LexisNexis 2015).",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 32 Ill. Code R. 35 (LexisNexis 2014).",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See Ill. Admin. Code tit. 46, § 12 (5348).",
+        "spans": [[4, 35]]
+      },
+      {
+        "text": "See Ill. Admin. Code tit. 2, § 12 (5347).",
+        "spans": [[4, 34]]
+      },
+      {
+        "text": "See 69 Ill. Code R. 47 (LexisNexis 5348).",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 65 Ill. Code R. 68 (LexisNexis 5347).",
+        "spans": [[4, 22]]
+      }
+    ],
+    "negative": [
+      "The Illinois code was amended in 2015.",
+      "Section 12 of the Illinois rules is long.",
+      "Title five of the Illinois compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

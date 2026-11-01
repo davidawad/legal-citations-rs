@@ -1,0 +1,40 @@
+{"start": 54, "end": 65, "kind": "docket", "jurisdiction": "us.tx.sup", "text": "No. 24-0905", "normalized": "No. 24-0905", "form": "docket number"}
+{"start": 3017, "end": 3040, "kind": "statute", "jurisdiction": "us.fed", "text": "Federal Arbitration Act", "normalized": "Federal Arbitration Act", "form": "prose section reference", "optional": true}
+{"start": 3046, "end": 3064, "kind": "statute", "jurisdiction": "us.fed", "text": "9 U.S.C. §§ 1-16", "normalized": "9 U.S.C. §§ 1-16", "form": "U.S.C."}
+{"start": 3415, "end": 3452, "kind": "statute", "jurisdiction": "us.tx", "text": "TEX. CIV.\nPRAC. & REM. CODE § 51.016", "normalized": "Tex. Civ. Prac. & Rem. Code § 51.016", "form": "state code"}
+{"start": 3454, "end": 3477, "kind": "statute", "jurisdiction": "us.fed", "text": "9 U.S.C. § 16(a)(1)(B)", "normalized": "9 U.S.C. § 16(a)(1)(B)", "form": "U.S.C."}
+{"start": 3719, "end": 3733, "kind": "case", "jurisdiction": "us.tx.app", "text": "___ S.W.3d ___", "normalized": "___ S.W.3d ___", "form": "regional reporter"}
+{"start": 3735, "end": 3809, "kind": "case", "jurisdiction": "us.tx.app", "text": "2024 WL 4163646, at *3-4 (Tex.\nApp.—Houston [14th Dist.] Sept. 12, 2024)", "normalized": "2024 WL 4163646", "form": "Westlaw"}
+{"start": 4080, "end": 4083, "kind": "id", "jurisdiction": "us.tx.app", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4223, "end": 4232, "kind": "id", "jurisdiction": "us.tx.app", "text": "Id. at *3", "normalized": "Id. at *3", "form": "Id."}
+{"start": 4453, "end": 4512, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Henry v. Cash Biz, LP, 551 S.W.3d 111, 115\n\n3\n\n\f(Tex. 2018)", "normalized": "551 S.W.3d 111", "form": "regional reporter"}
+{"start": 4598, "end": 4673, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Baby Dolls Topless Saloons, Inc. v. Sotero, 642\nS.W.3d 583, 586 (Tex. 2022)", "normalized": "642 S.W.3d 583", "form": "regional reporter"}
+{"start": 4890, "end": 4907, "kind": "case_short", "jurisdiction": "us.tx.app", "text": "___ S.W.3d at ___", "normalized": "___ S.W.3d at ___", "form": "short case (at)"}
+{"start": 4909, "end": 4931, "kind": "case_short", "jurisdiction": "us.tx.app", "text": "2024 WL 4163646, at *3", "normalized": "2024 WL 4163646, at *3", "form": "short case (at)"}
+{"start": 5393, "end": 5404, "kind": "id", "jurisdiction": "us.tx.app", "text": "Id. at *2-3", "normalized": "Id. at *2-3", "form": "Id."}
+{"start": 5413, "end": 5444, "kind": "case", "jurisdiction": "us.tx.sup", "text": "660\nS.W.3d 529, 534 (Tex. 2023)", "normalized": "660 S.W.3d 529", "form": "regional reporter"}
+{"start": 5693, "end": 5713, "kind": "case_short", "jurisdiction": "us.tx.sup", "text": "660 S.W.3d at 531-35", "normalized": "660 S.W.3d at 531-35", "form": "short case (at)"}
+{"start": 5894, "end": 5904, "kind": "id", "jurisdiction": "us.tx.sup", "text": "id. at 531", "normalized": "Id. at 531", "form": "Id."}
+{"start": 6054, "end": 6074, "kind": "court_rule", "jurisdiction": "us.tx", "text": "TEX. R.\nAPP. P. 53.1", "normalized": "Tex. R. App. P. 53.1", "form": "state rule"}
+{"start": 6391, "end": 6402, "kind": "statute", "jurisdiction": "us.tx", "text": "Family Code", "normalized": "Tex. Fam. Code", "form": "prose section reference", "optional": true}
+{"start": 6530, "end": 6540, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id. at 534", "normalized": "Id. at 534", "form": "Id."}
+{"start": 6550, "end": 6581, "kind": "statute", "jurisdiction": "us.tx", "text": "TEX. FAM.\nCODE § 151.001(a)(7)", "normalized": "Tex. Fam. Code § 151.001(a)(7)", "form": "state code"}
+{"start": 6710, "end": 6724, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id. at\n534 n.6", "normalized": "Id. at 534 n.6", "form": "Id."}
+{"start": 7220, "end": 7299, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Dairyland Cnty. Mut. Ins. Co. of Tex. v. Roman, 498\nS.W.2d 154, 158 (Tex. 1973)", "normalized": "498 S.W.2d 154", "form": "regional reporter"}
+{"start": 7471, "end": 7474, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 8188, "end": 8272, "kind": "case", "jurisdiction": "us.tx.sup", "text": "TotalEnergies\nE&P USA, Inc. v. MP Gulf of Mex., LLC, 667 S.W.3d 694, 702 (Tex.\n2023)", "normalized": "667 S.W.3d 694", "form": "regional reporter"}
+{"start": 8458, "end": 8461, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 8635, "end": 8712, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Cerna ex rel. R.W. v. Pearland Urb. Air, LLC, 714 S.W.3d\n585, 589 (Tex. 2025)", "normalized": "714 S.W.3d 585", "form": "regional reporter"}
+{"start": 8844, "end": 8922, "kind": "case", "jurisdiction": "us.tx.sup", "text": "G.T. Leach Builders, LLC v. Sapphire V.P., LP, 458 S.W.3d 502, 524\n(Tex. 2015)", "normalized": "458 S.W.3d 502", "form": "regional reporter"}
+{"start": 8932, "end": 8978, "kind": "case", "jurisdiction": "us.tx.sup", "text": "In re Rubiola, 334 S.W.3d 220, 224 (Tex. 2011)", "normalized": "334 S.W.3d 220", "form": "regional reporter"}
+{"start": 9186, "end": 9260, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Jody James\nFarms, JV v. Altman Grp., Inc., 547 S.W.3d 624, 633 (Tex. 2018)", "normalized": "547 S.W.3d 624", "form": "regional reporter"}
+{"start": 9444, "end": 9454, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id. at 629", "normalized": "Id. at 629", "form": "Id."}
+{"start": 9703, "end": 9713, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id. at 633", "normalized": "Id. at 633", "form": "Id."}
+{"start": 10087, "end": 10097, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id. at 635", "normalized": "Id. at 635", "form": "Id."}
+{"start": 10107, "end": 10169, "kind": "case", "jurisdiction": "us.tx.sup", "text": "In re Palm\nHarbor Homes, Inc., 195 S.W.3d 672, 677 (Tex. 2006)", "normalized": "195 S.W.3d 672", "form": "regional reporter"}
+{"start": 10396, "end": 10399, "kind": "id", "jurisdiction": "us.tx.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 10409, "end": 10487, "kind": "case", "jurisdiction": "us.tx.sup", "text": "MCI\nTelecomms. Corp. v. Tex. Utils. Elec. Co., 995 S.W.2d 647, 651 (Tex.\n1999)", "normalized": "995 S.W.2d 647", "form": "regional reporter"}
+{"start": 11379, "end": 11415, "kind": "case_short", "jurisdiction": "us.tx.sup", "text": "Palm Harbor Homes, 195 S.W.3d at 677", "normalized": "195 S.W.3d at 677", "form": "short case (at)"}
+{"start": 11639, "end": 11704, "kind": "case", "jurisdiction": "us.tx.sup", "text": "Valence Operating Co. v.\nDorsett, 164 S.W.3d 656, 662 (Tex. 2005)", "normalized": "164 S.W.3d 656", "form": "regional reporter"}
+{"start": 12029, "end": 12053, "kind": "case_short", "jurisdiction": "us.tx.sup", "text": "Cerna, 714 S.W.3d at 592", "normalized": "714 S.W.3d at 592", "form": "short case (at)"}
+{"start": 12206, "end": 12226, "kind": "court_rule", "jurisdiction": "us.tx", "text": "TEX. R. APP. P. 59.1", "normalized": "Tex. R. App. P. 59.1", "form": "state rule"}

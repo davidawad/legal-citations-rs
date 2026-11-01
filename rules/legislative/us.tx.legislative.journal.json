@@ -1,0 +1,72 @@
+{
+  "id": "us.tx.legislative.journal",
+  "kind": "legislative",
+  "jurisdiction": "us.tx",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\b(?:Tex\\.\\s+)?(?P<chamber>H|S)\\.\\s?J\\.(?:\\s+of\\s+Tex\\.)?,\\s+(?P<leg>[0-9]{1,3})(?:st|nd|rd|th|d)\\s+Leg\\.,\\s+(?P<sess>R\\.\\s?S\\.|[0-9](?:st|nd|rd|th|d)\\s+C\\.\\s?S\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{chamber}.J. of Tex., {leg}th Leg., {sess} {page}",
+  "authority_key": "us.tx.journal/{chamber}/{leg}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Texas House and Senate Journals (Texas Rules of Form: `H.J. of Tex., 80th Leg., R.S. 1234 (2007)`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Texas Legislative Reference Library journals at https://lrl.texas.gov and compare the citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The amendment was tabled. H.J. of Tex., 80th Leg., R.S. 1234 (2007).",
+        "spans": [
+          [
+            26,
+            60
+          ]
+        ],
+        "groups": {
+          "chamber": "H",
+          "leg": "80",
+          "page": "1234"
+        }
+      },
+      {
+        "text": "See Tex. H.J., 86th Leg., R.S. 1234 (2019).",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare S.J. of Tex., 81st Leg., 1st C.S. 56 with Tex. S.J., 87th Leg., R.S. 789.",
+        "spans": [
+          [
+            8,
+            44
+          ],
+          [
+            50,
+            80
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "H.J. of Tex. was printed.",
+      "S.J. of Tex., 80th Leg.",
+      "The House Journal of Texas"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

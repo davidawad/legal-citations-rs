@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.uspto.patent_application_publication",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "tags": [
+    "uspto",
+    "patent"
+  ],
+  "pattern": "\\b(?:U\\.\\s?S\\.\\s+(?:Patent\\s+)?(?:Appl(?:ication|\\.)\\s+)?Pub(?:lication|\\.)\\s+No\\.\\s*(?:US\\s?)?|US\\s?)(?P<number>(?:19|20)[0-9]{2}/?[0-9]{7})(?:\\s+(?P<kind_code>A[129]))?\\b",
+  "priority": 60,
+  "normalize": "U.S. Pub. No. {number}",
+  "authority_key": "us.patent_pub/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.9 (patents and published applications); USPTO WIPO ST.16 kind codes",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.9 and USPTO publication numbering (YYYY/NNNNNNN A1).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The reference is U.S. Patent Application Publication No. 2019/0123456.",
+        "spans": [
+          [
+            17,
+            69
+          ]
+        ],
+        "groups": {
+          "number": "2019/0123456"
+        }
+      },
+      {
+        "text": "See U.S. Pub. No. 2015/0012345 A1.",
+        "spans": [
+          [
+            4,
+            33
+          ]
+        ]
+      },
+      {
+        "text": "Compare US 2018/0234567 A1 with US20170012345.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            45
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "US 2019 sales",
+      "U.S. Pub. No. 12",
+      "the 2019/0123 ratio"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

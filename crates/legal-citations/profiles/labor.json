@@ -1,0 +1,20 @@
+{
+  "name": "labor",
+  "description": "Labor and employment practice: NLRB and Department of Labor materials tagged labor, 29 U.S.C., 29 C.F.R., the Federal Register, and federal and Supreme Court reporters.",
+  "include": [
+    "tag:labor",
+    "jurisdiction:us.fed.nlrb",
+    "jurisdiction:us.fed.dol",
+    "jurisdiction:us.fed.eeoc",
+    "rule:us.fed.statute.usc",
+    "rule:us.fed.regulation.cfr",
+    "rule:us.fed.federal_register",
+    "jurisdiction:us.scotus",
+    "jurisdiction:us.fed.app",
+    "jurisdiction:us.fed.dist",
+    "rule:us.case.westlaw",
+    "rule:us.case.lexis"
+  ],
+  "exclude": [],
+  "note": "No labor-specific rule exists yet (NLRB decisions, D.O.L. opinions); they join through tag:labor or the agency jurisdictions above."
+}

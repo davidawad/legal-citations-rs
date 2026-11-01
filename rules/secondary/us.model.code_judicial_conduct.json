@@ -1,0 +1,69 @@
+{
+  "id": "us.model.code_judicial_conduct",
+  "kind": "secondary",
+  "jurisdiction": "us.model.aba",
+  "pattern": "\\bModel\\s+Code\\s+of\\s+Jud(?:\\.|icial)\\s+Conduct\\s+(?P<part>r\\.|R\\.|Rule|Canon)\\s?(?P<number>[0-9]{1,2}(?:\\.[0-9]{1,3})?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "Model Code of Jud. Conduct {part} {number}{sub}",
+  "authority_key": "us.aba.mcjc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (ABA Model Code of Judicial Conduct) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (ethics codes) and check the `Model Code of Jud. Conduct r. 2.11 (Am. Bar Ass'n 2020)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Model Code of Jud. Conduct r. 2.11(A) (Am. Bar Ass'n 2020).",
+        "spans": [
+          [
+            4,
+            41
+          ]
+        ],
+        "groups": {
+          "part": "r.",
+          "number": "2.11",
+          "sub": "(A)"
+        }
+      },
+      {
+        "text": "Recusal is addressed by Model Code of Judicial Conduct Rule 2.11 in most states.",
+        "spans": [
+          [
+            24,
+            64
+          ]
+        ]
+      },
+      {
+        "text": "Compare Model Code of Judicial Conduct Canon 3 with Model Code of Jud. Conduct R. 1.2.",
+        "spans": [
+          [
+            8,
+            46
+          ],
+          [
+            52,
+            85
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Model Code of Judicial Conduct was revised in 2007.",
+      "The Model Code of Conduct for staff has 3 parts.",
+      "Canon 3 of the Model Code applies."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Canons (1-4) and rules (`2.11`) share the authority key namespace; `Canon 2` and `r. 2` would collide, but the 2007 Code numbers rules with a decimal."
+}

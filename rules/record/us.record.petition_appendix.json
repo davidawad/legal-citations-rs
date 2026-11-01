@@ -1,0 +1,48 @@
+{
+  "id": "us.record.petition_appendix",
+  "kind": "record",
+  "jurisdiction": "us.scotus",
+  "pattern": "\\bPet\\.\\s?App\\.\\s?(?P<page>[0-9]{1,4}[a-z]{1,2})(?:\\s*[-–]\\s*[0-9]{1,4}[a-z]{1,2})?",
+  "priority": 60,
+  "normalize": "Pet. App. {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Sup. Ct. R. 14.1(i) (petition appendix) and Bluebook B7 (record cites)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Sup. Ct. R. 14.1(i).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Pet. App. 23a.",
+        "spans": [[4, 17]],
+        "groups": {
+          "page": "23a"
+        }
+      },
+      {
+        "text": "The court relied on Pet. App. 1a-5a in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under Pet.App. 12b, the claim fails.",
+        "spans": [[6, 18]]
+      }
+    ],
+    "negative": [
+      "The ER doctor saw 139 patients.",
+      "Exhibit hall 3 opens at noon.",
+      "The appendix lists 23 items."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

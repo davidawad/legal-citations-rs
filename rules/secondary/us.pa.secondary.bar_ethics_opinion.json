@@ -1,0 +1,70 @@
+{
+  "id": "us.pa.secondary.bar_ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.pa",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:Pa\\.\\s+Bar\\s+Ass['’]n|PBA)(?:\\s+Comm(?:\\.|ittee)\\s+on\\s+Legal\\s+Ethics\\s+(?:&|and)\\s+Pro(?:\\.|f(?:['’]l|essional))\\s+Resp(?:\\.|onsibility))?,?\\s+(?:Formal|Informal)\\s+Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>(?:19|20)[0-9]{2}-[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "Pa. Bar Ass'n Formal Op. {number}",
+  "authority_key": "us.pa.pba/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Pennsylvania Bar Association Committee on Legal Ethics and Professional Responsibility opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the PBA ethics opinions at https://www.pabar.org and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Remote practice is allowed. Pa. Bar Ass'n Formal Op. 2020-300.",
+        "spans": [
+          [
+            28,
+            61
+          ]
+        ],
+        "groups": {
+          "number": "2020-300"
+        }
+      },
+      {
+        "text": "See PBA Formal Op. 2011-200.",
+        "spans": [
+          [
+            4,
+            27
+          ]
+        ]
+      },
+      {
+        "text": "Compare Pa. Bar Ass’n Comm. on Legal Ethics & Prof’l Resp., Informal Op. 2019-012 with PBA Informal Op. 2004-21.",
+        "spans": [
+          [
+            8,
+            85
+          ],
+          [
+            91,
+            115
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The PBA ethics committee",
+      "PBA Formal Op. pending",
+      "Pa. Bar Ass'n Formal Op. 12"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

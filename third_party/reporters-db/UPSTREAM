@@ -1,0 +1,7 @@
+repository: https://github.com/freelawproject/reporters-db
+commit: faddc86aad58ebde19d81b6f1ba64d229a801092
+commit_date: 2026-10-15
+file: reporters_db/data/reporters.json (vendored unmodified)
+license: BSD-2-Clause (LICENSE, copied unmodified from the upstream root)
+fetched: 2026-10-23
+used_by: crates/xtask-rules, which generates rules/case/generated/

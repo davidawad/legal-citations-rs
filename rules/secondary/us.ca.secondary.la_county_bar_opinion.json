@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.secondary.la_county_bar_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:L\\.\\s?A\\.\\s+(?:Cnty\\.|County)\\s+Bar\\s+Ass['’]n|LACBA)(?:\\s+Pro(?:\\.|f(?:['’]l|essional))\\s+Resp(?:\\.|onsibility)\\s+(?:&|and)\\s+Ethics\\s+Comm(?:\\.|ittee))?,?\\s+Formal\\s+Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>[0-9]{2,3})\\b",
+  "priority": 60,
+  "normalize": "L.A. Cnty. Bar Ass'n Formal Op. {number}",
+  "authority_key": "us.ca.lacba/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Los Angeles County Bar Association Professional Responsibility and Ethics Committee formal opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the LACBA ethics opinions at https://lacba.org and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Fee splitting is limited. L.A. Cnty. Bar Ass'n Formal Op. 525.",
+        "spans": [
+          [
+            26,
+            61
+          ]
+        ],
+        "groups": {
+          "number": "525"
+        }
+      },
+      {
+        "text": "See LACBA Formal Op. No. 518.",
+        "spans": [
+          [
+            4,
+            28
+          ]
+        ]
+      },
+      {
+        "text": "Compare L.A. County Bar Ass’n Prof’l Resp. & Ethics Comm., Formal Op. 500 with LACBA Formal Opinion 528.",
+        "spans": [
+          [
+            8,
+            77
+          ],
+          [
+            83,
+            107
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "LACBA Formal Op. pending",
+      "The LACBA committee",
+      "LACBA dinner 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

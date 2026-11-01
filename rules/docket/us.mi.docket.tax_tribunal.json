@@ -1,0 +1,70 @@
+{
+  "id": "us.mi.docket.tax_tribunal",
+  "kind": "docket",
+  "jurisdiction": "us.mi",
+  "tags": [
+    "tax"
+  ],
+  "pattern": "\\bMTT\\s+(?:Docket|File)\\s+No\\.\\s*(?P<number>[0-9]{2}-[0-9]{6}|[0-9]{6,7})\\b",
+  "priority": 60,
+  "normalize": "MTT Docket No. {number}",
+  "authority_key": "us.mi.mtt/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Michigan Tax Tribunal docket numbers",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Michigan Tax Tribunal docket search at https://www.michigan.gov/taxtrib and compare docket numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The petition was dismissed. MTT Docket No. 19-001234.",
+        "spans": [
+          [
+            28,
+            52
+          ]
+        ],
+        "groups": {
+          "number": "19-001234"
+        }
+      },
+      {
+        "text": "See MTT Docket No. 0412345.",
+        "spans": [
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      {
+        "text": "Compare MTT File No. 20-002345 with MTT Docket No. 345678.",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            57
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "MTT Docket No. 12",
+      "The MTT ruled.",
+      "MTT docket pending"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

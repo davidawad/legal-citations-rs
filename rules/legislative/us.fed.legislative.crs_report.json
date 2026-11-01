@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.legislative.crs_report",
+  "kind": "legislative",
+  "jurisdiction": "us.fed.congress.crs",
+  "pattern": "\\b(?:Cong\\.\\s?Rsch\\.\\s?Serv\\.|Congressional\\s+Research\\s+Service|CRS)(?:\\s+Report)?(?:\\s+for\\s+Congress)?,?\\s+(?:No\\.\\s?)?(?P<number>(?:RL|RS|IF|IN|LSB|R)[0-9]{5})\\b",
+  "priority": 60,
+  "normalize": "CRS {number}",
+  "authority_key": "us.crs/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 13.4 (Congressional Research Service reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.4 for the CRS report form and crsreports.congress.gov for the product-number prefixes (R, RL, RS, IF, IN, LSB).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Cong. Rsch. Serv., R45678, The Appropriations Process 3 (2021).",
+        "spans": [
+          [
+            4,
+            29
+          ]
+        ],
+        "groups": {
+          "number": "R45678"
+        }
+      },
+      {
+        "text": "The background is summarized in CRS Report RL31234 at 2.",
+        "spans": [
+          [
+            32,
+            50
+          ]
+        ]
+      },
+      {
+        "text": "Compare Congressional Research Service, IF10765 with CRS Report for Congress RS22123.",
+        "spans": [
+          [
+            8,
+            47
+          ],
+          [
+            53,
+            84
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "CRS analysts briefed 45 offices.",
+      "The Congressional Research Service published a report in 2021.",
+      "CRS Report 45 was never released."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

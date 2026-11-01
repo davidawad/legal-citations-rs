@@ -1,0 +1,65 @@
+{
+  "id": "us.fed.constitution.repealed",
+  "kind": "constitution",
+  "jurisdiction": "us.fed",
+  "pattern": "\\bU\\.\\s?S\\.\\s?Const\\.\\s?(?P<part>amend|art)\\.\\s?(?P<number>[IVXLC]+)(?:,\\s?§\\s?(?P<section>[0-9]+))?(?:,\\s?cl\\.\\s?(?P<clause>[0-9]+))?\\s\\((?P<status>repealed|superseded)\\s(?P<year>1[7-9][0-9]{2}|20[0-9]{2})\\)",
+  "priority": 65,
+  "normalize": "U.S. Const. {part}. {number} ({status} {year})",
+  "authority_key": "us.const/{part}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R23 (Constitutions), R23.1 and R23.3",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R23 (Constitutions), R23.1 and R23.3, and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Prohibition rested on U.S. Const. amend. XVIII (repealed 1933) for a time.",
+        "spans": [
+          [
+            22,
+            62
+          ]
+        ],
+        "groups": {
+          "part": "amend",
+          "number": "XVIII",
+          "year": "1933"
+        }
+      },
+      {
+        "text": "See U.S. Const. amend. XVIII, § 1 (repealed 1933).",
+        "spans": [
+          [
+            4,
+            50
+          ]
+        ]
+      },
+      {
+        "text": "Compare U.S. Const. art. I, § 9, cl. 4 (superseded 1913) with the Sixteenth Amendment.",
+        "spans": [
+          [
+            8,
+            57
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Eighteenth Amendment was repealed in 1933.",
+      "Article XVIII (repealed 1933) of the club bylaws is gone.",
+      "The amendment, repealed 1933, is history."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "R23.1 example `U.S. Const. amend. XVIII (repealed 1933)`: the status parenthetical is part of the cite, so this rule outranks us.fed.constitution (60) and spans it."
+}

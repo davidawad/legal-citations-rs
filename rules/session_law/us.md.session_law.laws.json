@@ -1,0 +1,80 @@
+{
+  "id": "us.md.session_law.laws",
+  "kind": "session_law",
+  "jurisdiction": "us.md",
+  "pattern": "\\b(?P<year>(?:1[6-9]|20)[0-9]{2})(?:-(?P<pamphlet>[0-9]{1,2}))?\\s(?P<series>Md\\.\\s?Code\\sAnn\\.\\s?Adv\\.\\s?Legis\\.\\s?Serv\\.|Md\\.\\s?Legis\\.\\s?Serv\\.|Md\\.\\s?Laws)\\s(?:ch\\.\\s?[0-9]{1,4},\\s?§\\s?[0-9]{1,4}[a-z]?,\\s)?(?:No\\.\\s?[0-9]{1,3},\\s)?(?P<page>[0-9]{1,5}(?:-[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{year} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Maryland: Session laws",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Maryland, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 333",
+      "corpus/formats/indigo.jsonl line 334",
+      "corpus/formats/indigo.jsonl line 335"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2015 Md. Laws 188.",
+        "spans": [[4, 21]],
+        "groups": {
+          "year": "2015",
+          "series": "Md. Laws",
+          "page": "188"
+        }
+      },
+      {
+        "text": "See 2014 Md. Laws 727.",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 2015-9 Md. Code Ann. Adv. Legis. Serv. 821 (LexisNexis).",
+        "spans": [[4, 46]]
+      },
+      {
+        "text": "See 2014-8 Md. Code Ann. Adv. Legis. Serv. 1755 (LexisNexis).",
+        "spans": [[4, 47]]
+      },
+      {
+        "text": "See 2015 Md. Legis. Serv. 1466 (West).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 2014 Md. Legis. Serv. 1320 (West).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See 2013 Md. Laws 77.",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "See 2013 Md. Code Ann. Adv. Legis. Serv. 77.",
+        "spans": [[4, 43]]
+      },
+      {
+        "text": "See 2013 Md. Legis. Serv. 77.",
+        "spans": [[4, 28]]
+      }
+    ],
+    "negative": [
+      "The Md. Code Ann. Adv. Legis. Serv. volumes are shelved by year.",
+      "In Maryland, 12 session laws took effect in 2015.",
+      "Page 2351 of the Maryland laws index is blank."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

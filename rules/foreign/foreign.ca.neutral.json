@@ -1,0 +1,62 @@
+{
+  "id": "foreign.ca.neutral",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ca",
+  "tags": [
+    "foreign",
+    "canada"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+(?P<court>SCC|FCA|FC|TCC|CMAC|CHRT|(?:ON|BC|AB|QC|NS|NB|MB|SK|NL|PE|YK|NWT|NU)(?:CA|SC|QB|KB|CJ|PC|SM|CS|CQ|SCTD|SCAD|CAJ|HRT|LRB|PROVCT|TC)|ONSC|NLSC|PESC|YKSC|NWTSC|NUCJ)\\s+(?P<number>[0-9]{1,5})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?|,?\\s+(?:at\\s+)?paras?\\.?\\s+(?P<para2>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 60,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "ca/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "McGill Guide 3.6 (neutral citation: <year> <tribunal> <number>, at para <n>); Bluebook T2 (Canada)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the McGill Guide (Canadian Guide to Uniform Legal Citation) chapters 2-3 and Bluebook T2 (Canada).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2019 SCC 65.",
+        "spans": [[4, 15]],
+        "groups": {
+          "year": "2019",
+          "court": "SCC",
+          "number": "65"
+        }
+      },
+      {
+        "text": "The court relied on 2015 ONCA 112 in reaching its holding.",
+        "spans": [[20, 33]]
+      },
+      {
+        "text": "Under 2020 BCCA 45, the claim fails.",
+        "spans": [[6, 18]]
+      },
+      {
+        "text": "R v Jordan, 2016 SCC 27 at para 105.",
+        "spans": [[12, 35]]
+      },
+      {
+        "text": "2021 ONSC 1234, para 12.",
+        "spans": [[0, 23]]
+      }
+    ],
+    "negative": [
+      "The SCC court system is old.",
+      "In 2019 the UKSC office moved.",
+      "The 2020 report had 12 chapters."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

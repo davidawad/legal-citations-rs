@@ -1,0 +1,53 @@
+{
+  "id": "foreign.in.insc",
+  "kind": "foreign",
+  "jurisdiction": "foreign.in",
+  "tags": [
+    "foreign",
+    "india"
+  ],
+  "pattern": "\\b(?P<year>20[0-9]{2})\\s+INSC\\s+(?P<number>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{year} INSC {number}",
+  "authority_key": "in.insc/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Supreme Court of India neutral citation (<year> INSC <number>, from 2023)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (India) and the Supreme Court of India's citation practice (SCC, AIR, neutral INSC citations).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2023 INSC 1.",
+        "spans": [[4, 15]],
+        "groups": {
+          "year": "2023",
+          "number": "1"
+        }
+      },
+      {
+        "text": "The court relied on 2024 INSC 512 in its judgment.",
+        "spans": [[20, 33]]
+      },
+      {
+        "text": "Under 2023 INSC 920, the claim fails.",
+        "spans": [[6, 19]]
+      }
+    ],
+    "negative": [
+      "INSC stands for a court since 2023.",
+      "The 2023 INSC rules are new.",
+      "INSC 512 is a room."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

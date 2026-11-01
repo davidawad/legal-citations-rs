@@ -1,0 +1,105 @@
+{
+  "id": "us.tx.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.tx",
+  "pattern": "\\b(?:Tex\\.\\s?Rev\\.\\s?Civ\\.\\s?Stat\\.\\s?Ann\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Tex\\.\\s?Code\\sCrim\\.\\s?Proc\\.\\s?Ann\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Tex\\.\\s?Bus\\.\\s?Corp\\.\\s?Act\\sAnn\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Tex\\.\\s?Ins\\.\\s?Code\\sAnn\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Texas: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Texas, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 758",
+      "corpus/formats/indigo.jsonl line 759",
+      "corpus/formats/indigo.jsonl line 760",
+      "corpus/formats/indigo.jsonl line 761"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Tex. Rev. Civ. Stat. Ann. art. 5, § 57 (West 2015).",
+        "spans": [[4, 43]],
+        "groups": {}
+      },
+      {
+        "text": "See Tex. Rev. Civ. Stat. Ann. art. 49, § 65 (West 2014).",
+        "spans": [[4, 44]]
+      },
+      {
+        "text": "See Tex. Bus. Corp. Act Ann. art. 13 (West 2015).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See Tex. Bus. Corp. Act Ann. art. 1 (West 2014).",
+        "spans": [[4, 35]]
+      },
+      {
+        "text": "See Tex. Code Crim. Proc. Ann. art. 9 (West 2015).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See Tex. Code Crim. Proc. Ann. art. 33 (West 2014).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See Tex. Ins. Code Ann. art. 13 (West 2015).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See Tex. Ins. Code Ann. art. 21 (West 2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See Tex. Rev. Civ. Stat. Ann. art. 8, § 81 (West 5348).",
+        "spans": [[4, 43]]
+      },
+      {
+        "text": "See Tex. Rev. Civ. Stat. Ann. art. 72, § 98 (West 5347).",
+        "spans": [[4, 44]]
+      },
+      {
+        "text": "See Tex. Bus. Corp. Act Ann. art. 46 (West 5348).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See Tex. Bus. Corp. Act Ann. art. 4 (West 5347).",
+        "spans": [[4, 35]]
+      },
+      {
+        "text": "See Tex. Code Crim. Proc. Ann. art. 2 (West 5348).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See Tex. Code Crim. Proc. Ann. art. 66 (West 5347).",
+        "spans": [[4, 38]]
+      },
+      {
+        "text": "See Tex. Ins. Code Ann. art. 46 (West 5348).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See Tex. Ins. Code Ann. art. 54 (West 5347).",
+        "spans": [[4, 31]]
+      }
+    ],
+    "negative": [
+      "The Texas code was amended in 2015.",
+      "Section 12 of the Texas rules is long.",
+      "Title five of the Texas compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

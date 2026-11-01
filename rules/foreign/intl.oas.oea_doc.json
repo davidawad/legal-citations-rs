@@ -1,0 +1,54 @@
+{
+  "id": "intl.oas.oea_doc",
+  "kind": "foreign",
+  "jurisdiction": "intl.oas",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\bOEA/Ser\\.\\s?(?P<series>[A-Z](?:/[IVX]{1,4})?(?:\\.[0-9]{1,3})?(?:/[IVX]{1,4})?(?:\\.[0-9]{1,3})?)(?:,\\s+doc\\.\\s+(?P<doc>[0-9]{1,4}(?:\\s?rev\\.\\s?[0-9])?))?(?:,?\\s+¶¶?\\s+(?P<pin>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 62,
+  "normalize": "OEA/Ser.{series}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.3 (Inter-American and International Tribunal) (OAS document series, OEA/Ser.L/V/II.<session>, doc. <no.>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Jessica Lenahan (Gonzales) v. United States, Case 12.626, Inter-Am. Comm’n H.R., Report No. 80/11, OEA/Ser.L/V/II.142, doc. 69 ¶ 160 (2011).",
+        "spans": [[101, 135]],
+        "groups": {
+          "series": "L/V/II.142",
+          "doc": "69",
+          "pin": "160"
+        }
+      },
+      {
+        "text": "Annual Report of the Inter-American Commission on Human Rights, OEA/Ser.L/V/II.118, doc. 5 rev. 1 (2003).",
+        "spans": [[64, 97]]
+      },
+      {
+        "text": "See OEA/Ser.G (1990).",
+        "spans": [[4, 13]]
+      }
+    ],
+    "negative": [
+      "The OEA series ran 142 issues.",
+      "Ser. L/V was not cited.",
+      "The OAS document was 69 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: an OEA symbol names a series, not a document, unless doc. follows."
+}

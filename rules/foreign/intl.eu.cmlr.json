@@ -1,0 +1,53 @@
+{
+  "id": "intl.eu.cmlr",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "(?:\\[(?P<byear>(?:19|20)[0-9]{2})\\]\\s+(?P<volume>[0-9]{1,2})|\\b(?P<year>(?:19|20)[0-9]{2}))\\s+C\\.\\s?M\\.\\s?L\\.\\s?R\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "C.M.L.R. {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): Common Market Law Reports (1962-date), [<year>] <vol> C.M.L.R. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Costa v. ENEL, 1964 C.M.L.R. 425.",
+        "spans": [[15, 32]],
+        "groups": {
+          "year": "1964",
+          "page": "425"
+        }
+      },
+      {
+        "text": "Case C-213/89, R v. Sec’y of State for Transp. ex parte Factortame Ltd., [1990] 3 C.M.L.R. 375.",
+        "spans": [[75, 96]]
+      },
+      {
+        "text": "The court relied on [2004] 4 C.M.L.R. 18, 22–24 in its judgment.",
+        "spans": [[20, 49]]
+      }
+    ],
+    "negative": [
+      "The CMLR editors met in 1964.",
+      "Common market law reports filled 425 pages.",
+      "[1990] was a busy year with 3 reports."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Bracketed years are volume-years with numbered volumes; no authority key because the bracketed and bare forms use different groups."
+}

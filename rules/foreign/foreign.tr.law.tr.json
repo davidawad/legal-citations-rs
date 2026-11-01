@@ -1,0 +1,54 @@
+{
+  "id": "foreign.tr.law.tr",
+  "kind": "foreign",
+  "jurisdiction": "foreign.tr",
+  "tags": [
+    "foreign",
+    "mena",
+    "tr"
+  ],
+  "pattern": "\\b(?P<number>[0-9]{3,5})\\s+sayılı\\s+(?P<title>[A-ZÇĞİÖŞÜ][a-zçğıöşüâîû]*(?:\\s+[A-ZÇĞİÖŞÜ][a-zçğıöşüâîû]*){0,5}\\s+Kanun[a-zçğıöşü]{0,4})",
+  "priority": 58,
+  "normalize": "{number} sayılı {title}",
+  "authority_key": "tr.law/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Turkish statute citation: <law number> sayılı <Title> Kanunu",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check mevzuat.gov.tr: laws are cited 'N sayılı <Ad> Kanunu' with Resmî Gazete date and issue.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "6098 sayılı Türk Borçlar Kanunu gereği.",
+        "spans": [[0, 35]],
+        "groups": {
+          "number": "6098",
+          "title": "Türk Borçlar Kanunu"
+        }
+      },
+      {
+        "text": "4857 sayılı İş Kanunu md. 17.",
+        "spans": [[0, 25]]
+      },
+      {
+        "text": "5237 sayılı Türk Ceza Kanunu'nun 86. maddesi.",
+        "spans": [[0, 31]]
+      }
+    ],
+    "negative": [
+      "6098 sayılı yasa kısaltılmış.",
+      "Türk Borçlar Kanunu 2011'de çıktı.",
+      "sayılı Kanun numarasız."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Lead named 'Law No. 6098'; Turkish original form chosen. A case suffix ('nun) is not in the span."
+}

@@ -1,0 +1,62 @@
+{
+  "id": "us.record.bates",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<prefix>[A-Z]{2,8}(?:[-_][A-Z]{2,8})?)(?P<sep>[-_]?)(?P<number>[0-9]{6,10})(?:\\s?[-–]\\s?(?P<end>(?:[A-Z]{2,8}(?:[-_][A-Z]{2,8})?[-_]?)?[0-9]{2,10}))?\\b",
+  "priority": 45,
+  "normalize": "{prefix}{sep}{number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Bates numbers in record cites (a producing party's prefix and a zero-padded page number, alone or as a range)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with the production-numbering conventions of a court's ESI order or the parties' protocol; Bluebook B17 covers record cites generally.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The email is in the production. ABC0001234.",
+        "spans": [[32, 42]],
+        "groups": {
+          "prefix": "ABC",
+          "sep": "",
+          "number": "0001234"
+        }
+      },
+      {
+        "text": "See ABC-0001234 and SMITH_0004567.",
+        "spans": [[4, 15], [20, 33]]
+      },
+      {
+        "text": "Compare ABC0001234-ABC0001240 with DEF-000123 – DEF-000130 and XYZ0012345-47.",
+        "spans": [[8, 29], [35, 60], [65, 78]]
+      }
+    ],
+    "negative": [
+      "The plant is ISO 9001 certified.",
+      "Order AB12345 shipped on time.",
+      "U.S. Patent No. 7,654,321 issued in 2010.",
+      "Tracking number:      ESTTA1601608",
+      "Filed through ESTTA1601608 on the opposition deadline.",
+      "The application was submitted as TEAS-1234567 by the applicant.",
+      "The board docket is at TTABVUE-91234567 for this proceeding.",
+      "Tracking number: ABC0001234"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "dot-1ij4xz.10: Bates numbers, from the forms the dotfiles legal-citation-validator kept locally. Six to ten digits after an upper-case prefix (two to eight letters, optionally two words joined by - or _), an optional - or _, and an optional range to a full number or its last digits. Patent publication prefixes (`US7654321`) are rejected. lcr-lb7: USPTO filing ids (ESTTA, TEAS and TTABVUE prefixes) and any token after `Tracking number:` are rejected.",
+  "reject": [
+    "^(?:US|EP|WO|JP|CN|DE|GB|FR|KR|CA|AU)[0-9]",
+    "^(?:ESTTA|TEAS|TTABVUE)(?:[-_]|[0-9])"
+  ],
+  "reject_before": [
+    "[Tt]racking\\s+[Nn]umber\\s*:\\s*$"
+  ]
+}

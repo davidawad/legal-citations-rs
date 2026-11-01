@@ -1,0 +1,51 @@
+{
+  "id": "us.fed.constitution",
+  "kind": "constitution",
+  "jurisdiction": "us.fed",
+  "pattern": "\\bU\\.\\s?S\\.\\s?Const\\.(?:\\s*(?P<part>art|amend|pmbl)\\.(?:\\s*(?P<number>[IVXLC]+|[0-9]+))?(?:\\s*,\\s*§\\s*(?P<section>[0-9]+))?(?:\\s*,\\s*cl\\.\\s*(?P<clause>[0-9]+))?)?",
+  "priority": 60,
+  "normalize": "U.S. Const.",
+  "authority_key": "us.const/{part}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 11 (constitutions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 11.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See U.S. Const. art. I, § 8, cl. 3.",
+        "spans": [[4, 35]],
+        "groups": {
+          "part": "art",
+          "number": "I",
+          "section": "8",
+          "clause": "3"
+        }
+      },
+      {
+        "text": "The court relied on U.S. Const. amend. XIV, § 1 in reaching its holding.",
+        "spans": [[20, 48]]
+      },
+      {
+        "text": "Under U.S. Const. art. III, the claim fails.",
+        "spans": [[6, 26]]
+      }
+    ],
+    "negative": [
+      "The club's constitution was amended in 2020.",
+      "Article 5 of the contract governs disputes.",
+      "The state constitution convention met in 1912."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

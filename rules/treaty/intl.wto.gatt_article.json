@@ -1,0 +1,53 @@
+{
+  "id": "intl.wto.gatt_article",
+  "kind": "treaty",
+  "jurisdiction": "intl.wto",
+  "tags": [
+    "international",
+    "trade"
+  ],
+  "pattern": "\\b(?:Art(?:icle|\\.)?|art\\.)\\s+(?P<article>[IVX]{1,6}(?::[0-9]{1,2})?(?:\\([a-z0-9]{1,3}\\))*)\\s+(?:of\\s+(?:the\\s+)?)?(?P<agreement>GATT(?:\\s+1994|\\s+1947)?|GATS)\\b|\\b(?P<agreement2>GATT(?:\\s+1994|\\s+1947)?|GATS)\\s+art(?:icle|\\.)?\\s+(?P<article2>[IVX]{1,6}(?::[0-9]{1,2})?(?:\\([a-z0-9]{1,3}\\))*)",
+  "priority": 60,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.8 (General Agreement on Tariffs and Trade art. <roman>) and WTO practice (Article XX(b) of the GATT 1994)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.8 (WTO) and the WTO document symbol guide (docs.wto.org): WT/DS<n>/R, WT/DS<n>/AB/R.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The measure is justified under Article XX(g) of the GATT 1994.",
+        "spans": [[31, 61]],
+        "groups": {
+          "article": "XX(g)",
+          "agreement": "GATT 1994"
+        }
+      },
+      {
+        "text": "See GATT art. III:4.",
+        "spans": [[4, 19]]
+      },
+      {
+        "text": "Art. XIV GATS was invoked.",
+        "spans": [[0, 13]]
+      }
+    ],
+    "negative": [
+      "Article XX of the bylaws.",
+      "The GATT rounds took years.",
+      "art. 3 of the GATT annex"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

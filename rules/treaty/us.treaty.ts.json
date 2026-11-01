@@ -1,0 +1,56 @@
+{
+  "id": "us.treaty.ts",
+  "kind": "treaty",
+  "jurisdiction": "us.treaty",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?T\\.\\s?S\\.\\s+No\\.\\s?(?P<number>[0-9]{1,4})\\b",
+  "reject_before": [
+    "[A-Z]\\.\\s?$",
+    "Consol\\.\\s?$"
+  ],
+  "priority": 60,
+  "normalize": "T.S. No. {number}",
+  "authority_key": "us.ts/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): Treaty Series (1778-1945), T.S. No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Treaty of Versailles, June 28, 1919, T.S. No. 4.",
+        "spans": [[22, 47]],
+        "groups": {
+          "date": "June 28, 1919",
+          "number": "4"
+        }
+      },
+      {
+        "text": "Kellogg-Briand Pact, Aug. 27, 1928, 46 Stat. 2343, T.S. No. 796.",
+        "spans": [[51, 63]]
+      },
+      {
+        "text": "The court relied on T.S. No. 796 in reaching its holding.",
+        "spans": [[20, 32]]
+      }
+    ],
+    "negative": [
+      "T.S. Eliot wrote 4 quartets.",
+      "The TS No. 4 engine failed.",
+      "The T.S. number was not listed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

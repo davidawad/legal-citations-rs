@@ -1,0 +1,53 @@
+{
+  "id": "intl.treaty.ilm",
+  "kind": "treaty",
+  "jurisdiction": "intl",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+)?(?P<volume>[0-9]{1,2})\\s+I\\.\\s?L\\.\\s?M\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} I.L.M. {page}",
+  "authority_key": "ilm/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): International Legal Materials (1962-date), <vol> I.L.M. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Rome Statute of the International Criminal Court, July 17, 1998, 37 I.L.M. 1002.",
+        "spans": [[50, 79]],
+        "groups": {
+          "date": "July 17, 1998",
+          "volume": "37",
+          "page": "1002"
+        }
+      },
+      {
+        "text": "North American Free Trade Agreement, Dec. 17, 1992, 32 I.L.M. 289.",
+        "spans": [[37, 65]]
+      },
+      {
+        "text": "The court relied on 37 I.L.M. 1002, 1004-05 in reaching its holding.",
+        "spans": [[20, 43]]
+      }
+    ],
+    "negative": [
+      "The ILM journal printed 37 issues.",
+      "International legal materials filled 1002 pages.",
+      "The I.L. office has 289 staff."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "International Legal Materials also prints judgments and resolutions; it is listed under treaty sources because Indigo T6 lists it there."
+}

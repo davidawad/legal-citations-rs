@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.frb.enforcement_docket",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.frb",
+  "pattern": "\\bDocket\\s+No\\.\\s?(?P<number>[0-9]{2}-[0-9]{3}-(?:WA|B|E|CMP|C|I|EC)(?:/[A-Z]{1,3})*(?:-[A-Z]{1,4}){0,3})\\b",
+  "priority": 60,
+  "normalize": "Docket No. {number}",
+  "authority_key": "us.frb/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "banking"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Federal Reserve System (Enforcement Actions: written agreements)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Federal Reserve System (Enforcement Actions: written agreements), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Written Agreement Between Allied First Bancorp, Inc. and Federal Reserve Bank of Chicago, Docket No. 14-006-WA/RB-HC (2014).",
+        "spans": [
+          [
+            90,
+            116
+          ]
+        ],
+        "groups": {
+          "number": "14-006-WA/RB-HC"
+        }
+      },
+      {
+        "text": "See Docket No. 12-031-WA/RB-HC (2012).",
+        "spans": [
+          [
+            4,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "Compare Docket No. 15-006-CMP-HC with Docket No. 09-112-B-HC.",
+        "spans": [
+          [
+            8,
+            32
+          ],
+          [
+            38,
+            60
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Docket No. 14 was dismissed.",
+      "The Federal Reserve docket listed 6 agreements.",
+      "Docket No. 14-006 is a court docket."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

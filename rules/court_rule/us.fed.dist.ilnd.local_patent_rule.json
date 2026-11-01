@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.dist.ilnd.local_patent_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist.ilnd",
+  "tags": [
+    "local_rules",
+    "patent"
+  ],
+  "pattern": "\\b(?:LPR|L\\.\\s?P\\.\\s?R\\.)\\s?(?P<rule>[1-6]\\.[0-9]{1,2}[a-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 57,
+  "normalize": "LPR {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "N.D. Ill. Local Patent Rules (`LPR 2.1`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the N.D. Ill. Local Patent Rules at https://www.ilnd.uscourts.gov and compare the `LPR 2.2` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Initial infringement contentions follow LPR 2.2.",
+        "spans": [
+          [
+            40,
+            47
+          ]
+        ],
+        "groups": {
+          "rule": "2.2"
+        }
+      },
+      {
+        "text": "See LPR 3.1(a).",
+        "spans": [
+          [
+            4,
+            14
+          ]
+        ]
+      },
+      {
+        "text": "Compare L.P.R. 4.1 with LPR 2.1.",
+        "spans": [
+          [
+            8,
+            18
+          ],
+          [
+            24,
+            31
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The LPR rules",
+      "LPR 9.9.9 form",
+      "LPR guidance"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

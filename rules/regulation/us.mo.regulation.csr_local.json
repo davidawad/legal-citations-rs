@@ -1,0 +1,50 @@
+{
+  "id": "us.mo.regulation.csr_local",
+  "kind": "regulation",
+  "jurisdiction": "us.mo",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\sCSR\\s?(?P<rule>[0-9]{1,2}-[0-9]{1,3}\\.[0-9]{3})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Mo. Code Regs. Ann. tit. {title}, § {rule}{sub}",
+  "authority_key": "us.mo.csr/{title}/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Missouri) administrative compilation: N CSR N-N.NNN (Missouri local form) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Missouri) and the official Missouri administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 10 CSR 20-7.031.",
+        "spans": [[4, 19]],
+        "groups": {
+          "title": "10",
+          "rule": "20-7.031",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 13 CSR 70-3.030 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under 19 CSR 30-82.010(1), the permit fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Missouri agency adopted 12 new rules in 2020.",
+      "Under CSR, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Same authority key as us.mo.regulation.csr."
+}

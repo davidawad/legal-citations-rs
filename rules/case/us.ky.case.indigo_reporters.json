@@ -1,0 +1,65 @@
+{
+  "id": "us.ky.case.indigo_reporters",
+  "kind": "case",
+  "jurisdiction": "us.ky",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Ky\\.\\s?Att['’]y\\sMemo)\\s(?P<page>[0-9]{1,5})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Kentucky: reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Kentucky, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 280",
+      "corpus/formats/indigo.jsonl line 284"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Hill v. Campbell, 20 Ky. Att’y Memo 437 (2003).",
+        "spans": [[22, 45]],
+        "groups": {
+          "volume": "20",
+          "reporter": "Ky. Att’y Memo",
+          "page": "437"
+        }
+      },
+      {
+        "text": "See Adams v. Nelson, 19 Ky. Att’y Memo 241, 242 (2004).",
+        "spans": [[21, 44]]
+      },
+      {
+        "text": "See Johnson v. Clark, 10 Ky. Att’y Memo 5 (Ct. App. 2003).",
+        "spans": [[22, 43]]
+      },
+      {
+        "text": "See Garcia v. Lee, 20 Ky. Att’y Memo 849, 852 (Ct. App. 2004).",
+        "spans": [[19, 42]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Ky. Att’y Memo 345 (1990).",
+        "spans": [[16, 39]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Ky. Att’y Memo is missing.",
+      "The Ky. Att’y Memo printed 345 opinions.",
+      "In Kentucky, the Ky. Att’y Memo began in 1993."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

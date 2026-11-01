@@ -1,0 +1,74 @@
+{
+  "id": "unrecognized.docket",
+  "kind": "unrecognized",
+  "jurisdiction": "unknown",
+  "pattern": "\\b(?P<label>(?:Case|Civil\\s+Action|Civ\\.\\s+A\\.|Criminal\\s+(?:Action|Case)|Cause|Index|Docket|Appeal|Adv\\.\\s+Pro\\.|Adversary\\s+Proceeding|Misc\\.|Bankr\\.)\\s+Nos?\\.?\\s*)(?P<number>[A-Z]{0,4}(?:[0-9]{3}[0-9A-Za-z]*|[0-9]{1,2}[A-Za-z]*)(?:[-:/.][0-9A-Za-z]+)*)",
+  "priority": 1,
+  "normalize": "{label}{number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.4,
+  "provenance": {
+    "encodes": "Docket-number shapes courts use in captions and citations (Bluebook R. 10.8.1); a heuristic for shapes the docket rule does not name",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Not a citation rule: compare each hit with the court's docket-number format; a common shape belongs in rules/docket/.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The petition, Index No. 654321/2019, was filed in Supreme Court.",
+        "spans": [
+          [
+            14,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "See Cause No. 2019-CI-12345 (Tex. Dist. Ct.).",
+        "spans": [
+          [
+            4,
+            27
+          ]
+        ]
+      },
+      {
+        "text": "Plaintiff filed Civil Action No. 3:19cv567 in Richmond.",
+        "spans": [
+          [
+            16,
+            42
+          ]
+        ]
+      },
+      {
+        "text": "It was Adv. Pro. No. 20-50123 in the bankruptcy court.",
+        "spans": [
+          [
+            7,
+            29
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The case number was never assigned.",
+      "In that case, no appeal was taken.",
+      "Docket entries are listed by date.",
+      "Appeal No. was left blank on the form.",
+      "Case No. 5 was set for trial."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Catch-all layer: docket numbers the us.docket.number rule already matches (No. 1:20-cv-01234, No. 21-1234) never reach it.",
+  "reject": [
+    "No\\.?\\s*[A-Z]{0,4}[0-9]{1,2}[A-Za-z]*$"
+  ]
+}

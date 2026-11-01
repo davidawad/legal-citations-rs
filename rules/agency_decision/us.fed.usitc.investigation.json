@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.usitc.investigation",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.usitc",
+  "pattern": "\\bInv\\.\\s+Nos?\\.\\s+(?P<inv>[0-9]{3}-(?:TA-)?[0-9]{1,4}(?:,\\s+(?:and\\s+)?[0-9]{3}-(?:TA-)?[0-9]{1,4})*)(?:,\\s+USITC\\s+Pub\\.\\s+(?P<pub>[0-9]{3,4}))?",
+  "priority": 60,
+  "normalize": "Inv. No. {inv}",
+  "authority_key": "us.usitc.inv/{inv}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "trade"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 International Trade Commission (USITC)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 International Trade Commission (USITC), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Trade and Investment Polices in India, 2014–2015, Inv. No. 332-550, USITC Pub. 4566 (Sep. 2015).",
+        "spans": [
+          [
+            52,
+            85
+          ]
+        ],
+        "groups": {
+          "inv": "332-550",
+          "pub": "4566"
+        }
+      },
+      {
+        "text": "Polyvinyl Alcohol from China, Japan, and Taiwan, Inv. Nos. 701-TA-309, 731-TA-528, 731-TA-529, USITC Pub. 4067 (Mar. 27, 2009) (Review).",
+        "spans": [
+          [
+            49,
+            110
+          ]
+        ]
+      },
+      {
+        "text": "See Inv. No. 337-TA-1234 and Inv. Nos. 701-TA-1, and 731-TA-2.",
+        "spans": [
+          [
+            4,
+            24
+          ],
+          [
+            29,
+            61
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Inv. No. was not assigned.",
+      "The investigation number 332 is old.",
+      "USITC investigators number 550."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

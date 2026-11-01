@@ -1,0 +1,59 @@
+{
+  "id": "us.case.federal_reporter",
+  "kind": "case",
+  "jurisdiction": "us.fed.app",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>F\\.(?:\\s?(?:2d|3d|4th))?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 10.3.1 and T1 (Federal Reporter) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Smith v. Jones, 123 F.3d 456 (9th Cir. 2001).",
+        "spans": [[20, 32]],
+        "groups": {
+          "volume": "123",
+          "reporter": "F.3d",
+          "page": "456"
+        }
+      },
+      {
+        "text": "The court relied on In re U.S. Dep't of Educ., 25 F.4th 692, 695 (9th Cir. 2022) in reaching its holding.",
+        "spans": [[47, 59]]
+      },
+      {
+        "text": "Under Doe v. Roe, 12 F.2d 34 (2d Cir. 1920), the claim fails.",
+        "spans": [[18, 28]]
+      },
+      {
+        "text": "Plaintiff cites Alpha Co. v. Beta Co., 200 F. 300 (2d Cir. 1912) for this point.",
+        "spans": [[39, 49]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

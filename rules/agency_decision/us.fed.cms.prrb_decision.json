@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.cms.prrb_decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.cms",
+  "tags": [
+    "health"
+  ],
+  "pattern": "\\bPRRB\\s+(?:Hearing\\s+)?(?:Dec(?:ision|\\.)|Dec\\.)\\s+No\\.\\s*(?P<number>(?:19|20)[0-9]{2}-D[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "PRRB Dec. No. {number}",
+  "authority_key": "us.prrb/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Provider Reimbursement Review Board decisions (`PRRB Dec. No. 2019-D12`), 42 C.F.R. § 405.1871",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open PRRB decisions at https://www.cms.gov/regulations-and-guidance/review-boards/prrbreview and compare decision numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board granted relief. PRRB Dec. No. 2019-D12.",
+        "spans": [
+          [
+            26,
+            48
+          ]
+        ],
+        "groups": {
+          "number": "2019-D12"
+        }
+      },
+      {
+        "text": "See PRRB Hearing Dec. No. 2015-D5.",
+        "spans": [
+          [
+            4,
+            33
+          ]
+        ]
+      },
+      {
+        "text": "Compare PRRB Decision No. 2020-D1 with PRRB Dec. No. 2008-D23.",
+        "spans": [
+          [
+            8,
+            33
+          ],
+          [
+            39,
+            61
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "PRRB Dec. pending",
+      "The PRRB decision",
+      "PRRB Dec. No. 12"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

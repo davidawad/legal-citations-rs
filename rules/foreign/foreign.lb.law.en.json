@@ -1,0 +1,54 @@
+{
+  "id": "foreign.lb.law.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.lb",
+  "tags": [
+    "foreign",
+    "mena",
+    "lb"
+  ],
+  "pattern": "\\bLebanese\\s+(?:Law|Legislative\\s+Decree|Decree[- ]Law)\\s+No\\.?\\s*(?P<number>[0-9]{1,4})(?:\\s+of\\s+|/)(?P<year>19[2-9][0-9]|20[0-9]{2})\\b",
+  "priority": 57,
+  "normalize": "Lebanese Law No. {number}/{year}",
+  "authority_key": "lb.law/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Lebanese legislation, English: Law / Legislative Decree No. <n> of <yyyy>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check an English or Arabic rendering of a Lebanese law at legiliban.ul.edu.lb or the Official Gazette.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Lebanese Law No. 134 of 1992 concerns it.",
+        "spans": [[0, 28]],
+        "groups": {
+          "number": "134",
+          "year": "1992"
+        }
+      },
+      {
+        "text": "See Lebanese Legislative Decree No. 150/1983.",
+        "spans": [[4, 44]]
+      },
+      {
+        "text": "Lebanese Law No. 81 of 2018 applies.",
+        "spans": [[0, 27]]
+      }
+    ],
+    "negative": [
+      "Law No. 134 of 1992 with no country.",
+      "Lebanese law is codified.",
+      "Lebanese Law No. 5 of 3."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Lebanese Arabic cites carry the date instead (القانون رقم 134 تاريخ ...); not covered."
+}

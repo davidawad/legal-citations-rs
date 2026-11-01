@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.usitc.publication",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.usitc",
+  "pattern": "\\bUSITC\\s+Pub\\.\\s+(?P<pub>[0-9]{3,4})\\b",
+  "priority": 60,
+  "normalize": "USITC Pub. {pub}",
+  "authority_key": "us.usitc.pub/{pub}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "trade"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 International Trade Commission (USITC publications)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 International Trade Commission (USITC publications), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Year in Trade 2014: Operation of the Trade Agreements Program, USITC Pub. 4543 (July 2015).",
+        "spans": [
+          [
+            67,
+            82
+          ]
+        ],
+        "groups": {
+          "pub": "4543"
+        }
+      },
+      {
+        "text": "See USITC Pub. 4067.",
+        "spans": [
+          [
+            4,
+            19
+          ]
+        ]
+      },
+      {
+        "text": "Compare USITC Pub. 3000 with USITC Pub. 4566.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            44
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "USITC Pub. lists are online.",
+      "The USITC published 4543 pages.",
+      "Pub. 4543 of the USITC canteen menu."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

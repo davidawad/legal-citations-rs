@@ -1,0 +1,77 @@
+{"start": 184, "end": 197, "kind": "docket", "jurisdiction": "us.de.sup", "text": "No. 149, 2026", "normalized": "No. 149, 2026", "form": "docket number"}
+{"start": 255, "end": 273, "kind": "docket", "jurisdiction": "us.de.trial", "text": "C.A. No. 2024-1308", "normalized": "C.A. No. 2024-1308", "form": "docket number", "note": "court-below docket in the caption"}
+{"start": 731, "end": 749, "kind": "record", "jurisdiction": "us.de.sup", "text": "A8 ¶¶ 12, 17, 18", "normalized": "A8 ¶¶ 12, 17, 18", "form": "record: appendix"}
+{"start": 1803, "end": 1812, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 12", "normalized": "Id. ¶ 12", "form": "Id."}
+{"start": 1818, "end": 1827, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 13", "normalized": "Id. ¶ 13", "form": "Id."}
+{"start": 1829, "end": 1838, "kind": "record", "jurisdiction": "us.de.sup", "text": "A10 ¶ 25", "normalized": "A10 ¶ 25", "form": "record: appendix"}
+{"start": 1844, "end": 1851, "kind": "record", "jurisdiction": "us.de.sup", "text": "A7 ¶ 3", "normalized": "A7 ¶ 3", "form": "record: appendix"}
+{"start": 1857, "end": 1872, "kind": "record", "jurisdiction": "us.de.sup", "text": "A8 ¶¶ 18–19", "normalized": "A8 ¶¶ 18–19", "form": "record: appendix"}
+{"start": 1878, "end": 1896, "kind": "record", "jurisdiction": "us.de.sup", "text": "A8–9 ¶¶ 20, 22", "normalized": "A8–9 ¶¶ 20, 22", "form": "record: appendix"}
+{"start": 1902, "end": 1905, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 1910, "end": 1924, "kind": "record", "jurisdiction": "us.de.sup", "text": "A9 ¶¶ 21, 23", "normalized": "A9 ¶¶ 21, 23", "form": "record: appendix"}
+{"start": 1931, "end": 1940, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 23", "normalized": "Id. ¶ 23", "form": "Id."}
+{"start": 1942, "end": 1951, "kind": "record", "jurisdiction": "us.de.sup", "text": "A12 ¶ 39", "normalized": "A12 ¶ 39", "form": "record: appendix"}
+{"start": 1958, "end": 1967, "kind": "record", "jurisdiction": "us.de.sup", "text": "A12 ¶ 39", "normalized": "A12 ¶ 39", "form": "record: appendix"}
+{"start": 1977, "end": 1980, "kind": "record", "jurisdiction": "us.de.sup", "text": "A20", "normalized": "A20", "form": "record: appendix"}
+{"start": 1982, "end": 1994, "kind": "record", "jurisdiction": "us.de.sup", "text": "Compl. Ex. A", "normalized": "Compl. Ex. A", "form": "record: exhibit"}
+{"start": 2001, "end": 2004, "kind": "record", "jurisdiction": "us.de.sup", "text": "A77", "normalized": "A77", "form": "record: appendix"}
+{"start": 2006, "end": 2018, "kind": "record", "jurisdiction": "us.de.sup", "text": "Compl. Ex. F", "normalized": "Compl. Ex. F", "form": "record: exhibit"}
+{"start": 3043, "end": 3052, "kind": "record", "jurisdiction": "us.de.sup", "text": "A12 ¶ 39", "normalized": "A12 ¶ 39", "form": "record: appendix"}
+{"start": 3059, "end": 3068, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 40", "normalized": "Id. ¶ 40", "form": "Id."}
+{"start": 3070, "end": 3079, "kind": "record", "jurisdiction": "us.de.sup", "text": "A13 ¶ 44", "normalized": "A13 ¶ 44", "form": "record: appendix"}
+{"start": 3086, "end": 3095, "kind": "record", "jurisdiction": "us.de.sup", "text": "A12 ¶ 43", "normalized": "A12 ¶ 43", "form": "record: appendix"}
+{"start": 3116, "end": 3182, "kind": "secondary", "jurisdiction": "us", "text": "Lam Research Corporation, Annual Report (Form 10-K) (Aug. 7, 2026)", "normalized": "Lam Research Corp., Annual Report (Form 10-K) (Aug. 7, 2026)", "form": "SEC filing"}
+{"start": 3203, "end": 3206, "kind": "id", "jurisdiction": "us", "text": "id.", "normalized": "Id.", "form": "Id."}
+{"start": 3212, "end": 3221, "kind": "id", "jurisdiction": "us", "text": "Id. at 30", "normalized": "Id. at 30", "form": "Id."}
+{"start": 3228, "end": 3237, "kind": "record", "jurisdiction": "us.de.sup", "text": "A13 ¶ 45", "normalized": "A13 ¶ 45", "form": "record: appendix"}
+{"start": 3244, "end": 3252, "kind": "record", "jurisdiction": "us.de.sup", "text": "A9 ¶ 23", "normalized": "A9 ¶ 23", "form": "record: appendix"}
+{"start": 3259, "end": 3268, "kind": "record", "jurisdiction": "us.de.sup", "text": "A10 ¶ 28", "normalized": "A10 ¶ 28", "form": "record: appendix"}
+{"start": 3275, "end": 3278, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 4197, "end": 4228, "kind": "court_rule", "jurisdiction": "us.de", "text": "Court of Chancery Rule 12(b)(6)", "normalized": "Ct. Ch. R. 12(b)(6)", "form": "state rule"}
+{"start": 4250, "end": 4259, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 29", "normalized": "Id. ¶ 29", "form": "Id."}
+{"start": 4266, "end": 4275, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 30", "normalized": "Id. ¶ 30", "form": "Id."}
+{"start": 4282, "end": 4291, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id. ¶ 32", "normalized": "Id. ¶ 32", "form": "Id."}
+{"start": 4298, "end": 4306, "kind": "record", "jurisdiction": "us.de.sup", "text": "A9 ¶ 24", "normalized": "A9 ¶ 24", "form": "record: appendix"}
+{"start": 4313, "end": 4329, "kind": "record", "jurisdiction": "us.de.sup", "text": "A10 ¶¶ 25–27", "normalized": "A10 ¶¶ 25–27", "form": "record: appendix"}
+{"start": 4336, "end": 4345, "kind": "record", "jurisdiction": "us.de.sup", "text": "A13 ¶ 50", "normalized": "A13 ¶ 50", "form": "record: appendix"}
+{"start": 4352, "end": 4361, "kind": "record", "jurisdiction": "us.de.sup", "text": "A14 ¶ 52", "normalized": "A14 ¶ 52", "form": "record: appendix"}
+{"start": 4368, "end": 4382, "kind": "record", "jurisdiction": "us.de.sup", "text": "A10–11 ¶ 32", "normalized": "A10–11 ¶ 32", "form": "record: appendix"}
+{"start": 4389, "end": 4398, "kind": "record", "jurisdiction": "us.de.sup", "text": "A14 ¶ 52", "normalized": "A14 ¶ 52", "form": "record: appendix"}
+{"start": 4405, "end": 4426, "kind": "record", "jurisdiction": "us.de.sup", "text": "A13–17 ¶¶ 46–70", "normalized": "A13–17 ¶¶ 46–70", "form": "record: appendix"}
+{"start": 5554, "end": 5557, "kind": "record", "jurisdiction": "us.de.sup", "text": "A86", "normalized": "A86", "form": "record: appendix"}
+{"start": 5564, "end": 5643, "kind": "record", "jurisdiction": "us.de.trial", "text": "Turner v. Lam Rsch. Corp., C.A. No. 2024-1308-KSJM, Docket Item (“D.I.”) 18", "normalized": "C.A. No. 2024-1308-KSJM, D.I. 18", "form": "record: ECF/Dkt", "note": "trial-court docket entry cited by caption and docket number"}
+{"start": 5650, "end": 5723, "kind": "case", "jurisdiction": "us.de.trial", "text": "Turner v. Lam Rsch. Corp., 2026 WL 788511, at *3 (Del. Ch. Mar. 20, 2026)", "normalized": "2026 WL 788511", "form": "Westlaw"}
+{"start": 5858, "end": 5871, "kind": "id", "jurisdiction": "us.de.trial", "text": "Id. at *3–4", "normalized": "Id. at *3–4", "form": "Id."}
+{"start": 5880, "end": 5966, "kind": "case", "jurisdiction": "us.de.trial", "text": "Eluv Hldgs. (BVI) Ltd. v. Dotomi, LLC, 2013 WL 1200273, at *7 (Del.\nCh. Mar. 26, 2013)", "normalized": "2013 WL 1200273", "form": "Westlaw"}
+{"start": 5973, "end": 5982, "kind": "id", "jurisdiction": "us.de.trial", "text": "Id. at *4", "normalized": "Id. at *4", "form": "Id."}
+{"start": 6693, "end": 6709, "kind": "statute", "jurisdiction": "us.de", "text": "8 Del.\nC. § 168", "normalized": "8 Del. C. § 168", "form": "state code"}
+{"start": 7113, "end": 7158, "kind": "case", "jurisdiction": "us.de.sup", "text": "Reid v. Spazio, 970 A.2d 176, 182 (Del. 2009)", "normalized": "970 A.2d 176", "form": "regional reporter"}
+{"start": 7168, "end": 7221, "kind": "case", "jurisdiction": "us.de.sup", "text": "Feldman v. Cutaia, 951 A.2d\n727, 730–31 (Del. 2008)", "normalized": "951 A.2d 727", "form": "regional reporter"}
+{"start": 7228, "end": 7303, "kind": "case", "jurisdiction": "us.de.trial", "text": "Bocock v. INNOVATE Corp., 2022 WL 15800273, at *11 (Del. Ch. Oct. 28, 2022)", "normalized": "2022 WL 15800273", "form": "Westlaw"}
+{"start": 7313, "end": 7334, "kind": "case_short", "jurisdiction": "us.de.sup", "text": "Reid, 970 A.2d at 183", "normalized": "970 A.2d at 183", "form": "short case (at)"}
+{"start": 7342, "end": 7398, "kind": "case", "jurisdiction": "us.de.sup", "text": "Homestore, Inc. v. Tafeen, 888 A.2d 204, 210 (Del. 2005)", "normalized": "888 A.2d 204", "form": "regional reporter"}
+{"start": 7405, "end": 7426, "kind": "record", "jurisdiction": "us.de.sup", "text": "A13–17 ¶¶ 46–70", "normalized": "A13–17 ¶¶ 46–70", "form": "record: appendix"}
+{"start": 7433, "end": 7442, "kind": "record", "jurisdiction": "us.de.sup", "text": "A14 ¶ 53", "normalized": "A14 ¶ 53", "form": "record: appendix"}
+{"start": 7449, "end": 7515, "kind": "case", "jurisdiction": "us.de.trial", "text": "Kraft v. WisdomTree Invs., Inc., 145 A.3d 969, 979 (Del. Ch. 2016)", "normalized": "145 A.3d 969", "form": "regional reporter"}
+{"start": 7557, "end": 7579, "kind": "statute", "jurisdiction": "us.de", "text": "Title 10, Section 8106", "normalized": "10 Del. C. § 8106", "form": "prose section reference", "optional": true, "note": "title and section named without the code"}
+{"start": 8449, "end": 8459, "kind": "id", "jurisdiction": "us.de.trial", "text": "Id. at 989", "normalized": "Id. at 989", "form": "Id."}
+{"start": 8467, "end": 8568, "kind": "case", "jurisdiction": "us.de.trial", "text": "ATP Marin, Inc. v. Sentinel Glob. P’rs USA, Inc., 2026 WL 1257792, at\n*3–4 (Del. Ch. May 7, 2026)", "normalized": "2026 WL 1257792", "form": "Westlaw"}
+{"start": 8675, "end": 8695, "kind": "statute", "jurisdiction": "us.de", "text": "10 Del C. § 8106(a)", "normalized": "10 Del. C. § 8106(a)", "form": "state code"}
+{"start": 8702, "end": 8801, "kind": "case", "jurisdiction": "us.de.trial", "text": "AssuredPartners of Virginia, LLC v. Sheehan, 2020 WL 2789706, at *12 (Del. Super.\nCt. May 29, 2020)", "normalized": "2020 WL 2789706", "form": "Westlaw"}
+{"start": 8807, "end": 8913, "kind": "case", "jurisdiction": "us.de.trial", "text": "Cent. Mortg. Co. v. Morgan Stanley Mortg. Cap. Hldgs. LLC, 2012\nWL 3201139, at *16 (Del. Ch. Aug. 7, 2012)", "normalized": "2012 WL 3201139", "form": "Westlaw"}
+{"start": 8920, "end": 8947, "kind": "case_short", "jurisdiction": "us.de.trial", "text": "Kraft, 145 A.3d at 982–83", "normalized": "145 A.3d at 982–83", "form": "short case (at)"}
+{"start": 9200, "end": 9284, "kind": "case", "jurisdiction": "us.de.sup", "text": "ISN Software Corp. v. Richards, Layton & Finger, P.A., 226 A.3d 727, 732 (Del. 2020)", "normalized": "226 A.3d 727", "form": "regional reporter"}
+{"start": 9294, "end": 9367, "kind": "case", "jurisdiction": "us.de.sup", "text": "Wal-Mart Stores, Inc. v. AIG Life Ins. Co., 860 A.2d 312, 319 (Del. 2004)", "normalized": "860 A.2d 312", "form": "regional reporter"}
+{"start": 9379, "end": 9425, "kind": "case", "jurisdiction": "us.scotus", "text": "Comm’r v. Gordon, 391 U.S. 83, 90 n.5 (1968)", "normalized": "391 U.S. 83", "form": "U.S. Reports"}
+{"start": 10893, "end": 10974, "kind": "case", "jurisdiction": "us.de.trial", "text": "In re Dean Witter P’ship Litig., 1998 WL 442456, at *6 (Del. Ch. July 17, 1998)", "normalized": "1998 WL 442456", "form": "Westlaw"}
+{"start": 10985, "end": 11009, "kind": "case", "jurisdiction": "us.de.sup", "text": "725 A.2d 441 (Del. 1999)", "normalized": "725 A.2d 441", "form": "regional reporter", "note": "subsequent history (aff'd); the trailing (TABLE) designation is excluded"}
+{"start": 11024, "end": 11027, "kind": "id", "jurisdiction": "us.de.trial", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 11033, "end": 11042, "kind": "record", "jurisdiction": "us.de.sup", "text": "A115–16", "normalized": "A115–16", "form": "record: appendix"}
+{"start": 11051, "end": 11116, "kind": "case", "jurisdiction": "us.de.sup", "text": "Levey v. Brownstone Asset Mgmt., LP, 76 A.3d 764, 772 (Del. 2013)", "normalized": "76 A.3d 764", "form": "regional reporter"}
+{"start": 11122, "end": 11189, "kind": "case", "jurisdiction": "us.de.sup", "text": "IAC/InterActiveCorp v. O’Brien, 26 A.3d 174, 178–79 (Del. 2011)", "normalized": "26 A.3d 174", "form": "regional reporter"}
+{"start": 11274, "end": 11283, "kind": "record", "jurisdiction": "us.de.sup", "text": "A131–33", "normalized": "A131–33", "form": "record: appendix"}
+{"start": 12299, "end": 12308, "kind": "record", "jurisdiction": "us.de.sup", "text": "A115–16", "normalized": "A115–16", "form": "record: appendix"}
+{"start": 12315, "end": 12368, "kind": "case", "jurisdiction": "us.de.trial", "text": "Orman v. Cullman, 794 A.2d 5, 28 n.59 (Del. Ch. 2002)", "normalized": "794 A.2d 5", "form": "regional reporter"}
+{"start": 13391, "end": 13431, "kind": "record", "jurisdiction": "us.de.sup", "text": "A8–10 ¶¶ 12–14, 21, 23, 25, 26, 28", "normalized": "A8–10 ¶¶ 12–14, 21, 23, 25, 26, 28", "form": "record: appendix"}
+{"start": 14085, "end": 14179, "kind": "case", "jurisdiction": "us.de.sup", "text": "Moelis & Co. v. W. Palm Beach Firefighters’ Pension Fund, 360 A.3d 215, 237–38 (Del.\n2026)", "normalized": "360 A.3d 215", "form": "regional reporter"}
+{"start": 14186, "end": 14189, "kind": "id", "jurisdiction": "us.de.sup", "text": "Id.", "normalized": "Id.", "form": "Id."}

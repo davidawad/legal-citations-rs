@@ -1,0 +1,69 @@
+{
+  "id": "us.fed.fcc.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.fcc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+(?P<reporter>FCC\\s?Rcd\\.?|F\\.\\s?C\\.\\s?C\\.(?:\\s?[23]d)?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "us.fcc/{reporter}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (FCC Record; Federal Communications Commission Reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for FCC Rcd. and F.C.C./F.C.C.2d; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Restoring Internet Freedom, 33 FCC Rcd. 311 (2018).",
+        "spans": [
+          [
+            32,
+            47
+          ]
+        ],
+        "groups": {
+          "volume": "33",
+          "reporter": "FCC Rcd.",
+          "page": "311"
+        }
+      },
+      {
+        "text": "The Commission relied on 30 FCC Rcd 5601, 5603 (2015).",
+        "spans": [
+          [
+            25,
+            40
+          ]
+        ]
+      },
+      {
+        "text": "Compare 45 F.C.C.2d 123 with 8 F.C.C. 59.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            40
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The FCC received 33 comments on the 311 proposal.",
+      "FCC Rcd. volumes are published annually.",
+      "In 2015 the F.C.C. voted 3-2."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

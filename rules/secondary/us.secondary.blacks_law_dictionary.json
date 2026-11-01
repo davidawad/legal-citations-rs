@@ -1,0 +1,55 @@
+{
+  "id": "us.secondary.blacks_law_dictionary",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "dictionary"
+  ],
+  "pattern": "\\bBlack[’']s\\s+Law\\s+Dictionary(?:\\s+(?P<page>[0-9]{1,4}))?\\s+\\((?P<edition>[0-9]{1,2}(?:st|nd|rd|th|d))\\s+ed\\.\\s+(?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)",
+  "reject_before": [
+    "[A-Za-z]$"
+  ],
+  "priority": 55,
+  "normalize": "Black's Law Dictionary ({edition} ed. {year})",
+  "authority_key": "blacks/{edition}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R15.8(c) (dictionaries: <term>, Black's Law Dictionary <page> (<ed.> ed. <year>))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R15.8 (encyclopedias) and R16.7.6 (A.L.R. annotations), and the Indigo Book R28 book form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Black's Law Dictionary (11th ed. 2019).",
+        "spans": [[4, 42]],
+        "groups": {
+          "edition": "11th",
+          "year": "2019"
+        }
+      },
+      {
+        "text": "Negligence, Black’s Law Dictionary (11th ed. 2019).",
+        "spans": [[12, 52]]
+      },
+      {
+        "text": "The court relied on Black's Law Dictionary 1234 (9th ed. 2009) in its opinion.",
+        "spans": [[20, 62]]
+      }
+    ],
+    "negative": [
+      "Black's Law Dictionary is widely used.",
+      "The 11th edition came out in 2019.",
+      "Blacks law dictionary, 2019 printing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

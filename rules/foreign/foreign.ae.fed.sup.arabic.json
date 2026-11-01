@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ae.fed.sup.arabic",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.fed.sup",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?P<court>المحكمة\\s+الاتحادية\\s+العليا)[\\s،,-]*(?P<kind>الطعن|طعن|الاستئناف|استئناف)\\s+رقم\\s*\\(?\\s*(?P<number>[0-9٠-٩]{1,5})\\s*\\)?\\s+لسنة\\s+(?P<year>[0-9٠-٩]{2,4})(?:\\s+(?P<chamber>قضائية|تجاري|مدني|جزائي|عقاري|أحوال\\s+شخصية|إداري))?",
+  "priority": 60,
+  "normalize": "{court} {kind} رقم {number} لسنة {year}",
+  "authority_key": "ae.case.ar/foreign.ae.fed.sup.arabic/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "UAE Federal Supreme Court judgments cited in Arabic: المحكمة الاتحادية العليا الطعن رقم N لسنة YYYY (or judicial year N قضائية)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Unverified practice; check against Arabic judgments published by the courts.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "المحكمة الاتحادية العليا الطعن رقم 123 لسنة 2019 تجاري",
+        "spans": [[0, 93]],
+        "groups": {
+          "number": "123",
+          "year": "2019"
+        }
+      },
+      {
+        "text": "المحكمة الاتحادية العليا، الطعن رقم (45) لسنة 41 قضائية",
+        "spans": [[0, 96]]
+      },
+      {
+        "text": "المحكمة الاتحادية العليا - طعن رقم ٧ لسنة ٢٠٢٠",
+        "spans": [[0, 83]]
+      }
+    ],
+    "negative": [
+      "المحكمة الاتحادية العليا في أبوظبي",
+      "الطعن رقم 123 لسنة 2019",
+      "محكمة النقض المصرية الطعن رقم 5 لسنة 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

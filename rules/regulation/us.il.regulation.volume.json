@@ -1,0 +1,54 @@
+{
+  "id": "us.il.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.il",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Ill\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Illinois: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Illinois, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 220"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 32 Ill. Reg. 1395 (Sept. 13, 2015).",
+        "spans": [[4, 21]],
+        "groups": {
+          "volume": "32",
+          "series": "Ill. Reg.",
+          "page": "1395"
+        }
+      },
+      {
+        "text": "See 30 Ill. Reg. 540 (May 9, 2014).",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "See 12 Ill. Reg. 77.",
+        "spans": [[4, 19]]
+      }
+    ],
+    "negative": [
+      "The Ill. Reg. is published monthly.",
+      "Volume 12 of the Illinois register has 77 pages.",
+      "In 2015 the Ill. Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

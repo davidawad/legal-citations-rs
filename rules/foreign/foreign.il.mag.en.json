@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.mag.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.mag",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>CC|CivC|CrimC|SCC|TrafC|SmallClaims)\\s+\\((?:Mag\\.?|Magistrates?['’]?s?)\\s+(?P<place>[A-Z][A-Za-z'’]*(?:[ -][A-Z][A-Za-z'’]*)?)\\)\\s+(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 57,
+  "normalize": "{court} (Mag. {place}) {number}",
+  "authority_key": "il.mag/{place}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Israeli Uniform Rules of Legal Citation: magistrates' court cite <case type> (<Mag. place>) <docket>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See CC (Mag. Tel Aviv) 1234/05 Cohen v. Levi.",
+        "spans": [[4, 30]],
+        "groups": {
+          "court": "CC",
+          "place": "Tel Aviv",
+          "number": "1234/05"
+        }
+      },
+      {
+        "text": "SCC (Mag. Haifa) 4321/10 was a small-claims case.",
+        "spans": [[0, 24]]
+      },
+      {
+        "text": "The charge, CrimC (Magistrate Jerusalem) 12345-05-19, was withdrawn.",
+        "spans": [[12, 52]]
+      }
+    ],
+    "negative": [
+      "The CC (Mag. Tel Aviv) office is closed.",
+      "CC (Mag.) without a place or number.",
+      "Mag. Tel Aviv 1234/05 alone."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Magistrates' court (Beit Mishpat Shalom). Exact English parenthetical convention not pinned down from a source; rule accepts Mag./Magistrate."
+}

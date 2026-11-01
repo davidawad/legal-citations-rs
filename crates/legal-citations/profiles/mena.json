@@ -1,0 +1,9 @@
+{
+  "name": "mena",
+  "description": "Middle East and North Africa: the UAE (with DIFC and ADGM), Saudi Arabia, Qatar, Bahrain, Kuwait, Oman, Israel, Egypt, Jordan, Lebanon, Iraq, Morocco, Tunisia, Algeria and Turkey, plus GCC and Arab League instruments.",
+  "include": [
+    "tag:mena"
+  ],
+  "exclude": [],
+  "note": "Selects every rule tagged mena. The narrower profiles are uae, difc-adgm, gcc (GCC states other than the UAE) and israel. Several shapes are shared across the region (Arabic قانون رقم N لسنة YYYY is read as Egyptian; a bare Royal Decree N/YYYY as Omani at 0.5 confidence), so check the jurisdiction of each hit."
+}

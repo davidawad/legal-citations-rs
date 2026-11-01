@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.docket.fcc_docket",
+  "kind": "docket",
+  "jurisdiction": "us.fed.fcc",
+  "tags": [
+    "telecom"
+  ],
+  "pattern": "\\b(?P<bureau>WC|MB|GN|CC|ET|PS|WT|IB|EB|MD|CG|OET|AU|CS|MM|PR|RM)\\s+Docket\\s+Nos?\\.\\s*(?P<number>[0-9]{2}-[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{bureau} Docket No. {number}",
+  "authority_key": "us.fcc_docket/{bureau}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "FCC docket numbers (bureau prefix, `WC Docket No. 17-108`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the FCC ECFS at https://www.fcc.gov/ecfs and compare docket prefixes.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The order was adopted in WC Docket No. 17-108.",
+        "spans": [
+          [
+            25,
+            45
+          ]
+        ],
+        "groups": {
+          "bureau": "WC",
+          "number": "17-108"
+        }
+      },
+      {
+        "text": "See MB Docket No. 19-1.",
+        "spans": [
+          [
+            4,
+            22
+          ]
+        ]
+      },
+      {
+        "text": "Compare CC Docket No. 96-45 with GN Docket Nos. 12-268.",
+        "spans": [
+          [
+            8,
+            27
+          ],
+          [
+            33,
+            54
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "WC Docket pending",
+      "The WC docket",
+      "The WC Docket No. list"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

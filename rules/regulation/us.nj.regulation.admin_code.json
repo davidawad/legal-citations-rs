@@ -1,0 +1,49 @@
+{
+  "id": "us.nj.regulation.admin_code",
+  "kind": "regulation",
+  "jurisdiction": "us.nj",
+  "pattern": "\\bN\\.J\\.\\s?Admin\\.\\s?Code\\s?§\\s?(?P<key>[0-9]+[A-Z]?:[0-9]+[A-Z]?-[0-9]+(?:\\.[0-9]+)?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "N.J. Admin. Code § {key}{sub}",
+  "authority_key": "us.nj.njac/{key}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New Jersey) administrative compilation: N.J. Admin. Code § N:N-N.N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (New Jersey) and the official New Jersey administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.J. Admin. Code § 10:49-7.1.",
+        "spans": [[4, 33]],
+        "groups": {
+          "key": "10:49-7.1",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on N.J. Admin. Code § 7:7-9.27 in reaching its holding.",
+        "spans": [[20, 48]]
+      },
+      {
+        "text": "Under N.J. Admin. Code § 6A:14-1.1(a), the permit fails.",
+        "spans": [[6, 38]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The New Jersey agency adopted 12 new rules in 2020.",
+      "Under N.J. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Bluebook form; the local N.J.A.C. form is us.nj.regulation.njac, and both share its authority key."
+}

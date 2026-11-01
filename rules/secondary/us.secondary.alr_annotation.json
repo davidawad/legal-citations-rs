@@ -1,0 +1,55 @@
+{
+  "id": "us.secondary.alr_annotation",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "alr"
+  ],
+  "pattern": "\\bAnnotation,\\s+(?P<title>[^;()]{3,300}?),\\s+(?P<volume>[0-9]{1,4})\\s+(?P<series>A\\.\\s?L\\.\\s?R\\.\\s?(?:(?:2d|3d|4th|5th|6th|7th)|Fed\\.\\s?(?:2d|3d|4th)?|Int[’']l)?)\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\b)?(?:\\s+\\((?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\))?",
+  "priority": 62,
+  "normalize": "Annotation, {title}, {volume} {series} {page}",
+  "authority_key": "alr/{series}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R16.7.6 (annotations: <author>, Annotation, <title>, <vol> A.L.R.<series> <page> (<year>))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R15.8 (encyclopedias) and R16.7.6 (A.L.R. annotations), and the Indigo Book R28 book form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Jane Doe, Annotation, Validity, Construction, and Application of State Anti-SLAPP Statutes, 12 A.L.R.5th 345 (1993).",
+        "spans": [[10, 115]],
+        "groups": {
+          "title": "Validity, Construction, and Application of State Anti-SLAPP Statutes",
+          "volume": "12",
+          "series": "A.L.R.5th",
+          "page": "345",
+          "year": "1993"
+        }
+      },
+      {
+        "text": "Richard Roe, Annotation, Liability of Landlord for Injuries, 64 A.L.R.6th 1, 25 (2011).",
+        "spans": [[13, 86]]
+      },
+      {
+        "text": "See Annotation, Construction of Federal Rule 23, 4 A.L.R. Fed. 3d 1 (2015).",
+        "spans": [[4, 74]]
+      }
+    ],
+    "negative": [
+      "The annotation ran 12 pages.",
+      "Annotation, as a practice, is useful.",
+      "A.L.R. annotations fill 345 shelves."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Outranks the reporters-db A.L.R. rules (kind case) when the cite says Annotation: an annotation is a secondary source."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.scc.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg.scc",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "\\bCase\\s+No\\.?\\s*(?P<number>[0-9]{1,5})\\s+of\\s+(?:Judicial\\s+Year|JY)\\s+(?P<year>[0-9]{1,3})\\b(?:\\s+\\(?Constitutional\\)?)?",
+  "priority": 56,
+  "normalize": "Case No. {number} of Judicial Year {year}",
+  "authority_key": "eg.scc/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Egypt Supreme Constitutional Court case numbering: Case No. <n> of Judicial Year <y> (Constitutional)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check scc.gov.eg judgments: 'القضية رقم N لسنة Y قضائية دستورية' translated as Case No. N of Judicial Year Y.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Case No. 3 of Judicial Year 21 .",
+        "spans": [[4, 34]],
+        "groups": {
+          "number": "3",
+          "year": "21"
+        }
+      },
+      {
+        "text": "Case No. 56 of Judicial Year 6 Constitutional struck down the article.",
+        "spans": [[0, 45]]
+      },
+      {
+        "text": "Case No. 7 of JY 12 was decided.",
+        "spans": [[0, 19]]
+      }
+    ],
+    "negative": [
+      "Case No. 3 of 2021 was filed.",
+      "The case of Judicial Year 21 is old.",
+      "Case 3 pending."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "English wording from lead brief, not a fetched style guide."
+}

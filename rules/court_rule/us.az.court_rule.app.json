@@ -1,0 +1,49 @@
+{
+  "id": "us.az.court_rule.app",
+  "kind": "court_rule",
+  "jurisdiction": "us.az",
+  "pattern": "\\b(?:Ariz\\.\\s?R\\.\\s?Civ\\.\\s?App\\.\\s?P\\.|ARCAP)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Ariz. R. Civ. App. P. {rule}{sub}",
+  "authority_key": "us.az.rules.app/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Arizona) Arizona Rules of Civil Appellate Procedure: Ariz. R. Civ. App. P. N; local form ARCAP N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Arizona) and the official Arizona Rules of Civil Appellate Procedure; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ariz. R. Civ. App. P. 13(a)(7).",
+        "spans": [[4, 34]],
+        "groups": {
+          "rule": "13",
+          "sub": "(a)(7)"
+        }
+      },
+      {
+        "text": "The court relied on ARCAP 13 in reaching its holding.",
+        "spans": [[20, 28]]
+      },
+      {
+        "text": "Under Ariz. R. Civ. App. P. 21(a), the claim fails.",
+        "spans": [[6, 33]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Arizona rules committee met 12 times in 2020.",
+      "Under Ariz. R. Civ. App. P. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet."
+}

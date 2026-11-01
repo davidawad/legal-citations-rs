@@ -1,0 +1,58 @@
+{
+  "id": "us.secondary.book_page",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<title>[A-Z][A-Za-z'’:-]*(?:\\s+(?:[A-Z][A-Za-z'’:-]*|of|and|the|in|on|for|to|a|an|&|at|by|with|from)){0,14})\\s+(?P<page>[0-9]{1,5}(?:[-–][0-9]{1,5})?)\\s+\\((?:(?P<edition>[0-9]{1,2}(?:st|nd|rd|th|d)|Rev\\.|[A-Z][a-z]{2,7}\\.)\\s+ed\\.\\s+)?(?P<year>(?:1[5-9][0-9]{2}|20[0-9]{2}))\\)",
+  "reject_before": [
+    "(?:^|[^,\\s])\\s*$"
+  ],
+  "priority": 20,
+  "normalize": "{title} {page} ({year})",
+  "authority_key": "book/{title}/{year}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Indigo Book R28 (Full Citation for Books & Non-Periodicals): <author(s)>, <title> <page> (<ed.> <year>)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Marc A. Franklin et al., Mass Media Law Cases and Materials 472 (8th ed. 2011).",
+        "spans": [[25, 78]],
+        "groups": {
+          "title": "Mass Media Law Cases and Materials",
+          "page": "472",
+          "edition": "8th",
+          "year": "2011"
+        }
+      },
+      {
+        "text": "B.F. Skinner, Beyond Freedom and Dignity 32 (2002).",
+        "spans": [[14, 50]]
+      },
+      {
+        "text": "Graham C. Lilly et al., Principles of Evidence 122 (6th ed. 2012).",
+        "spans": [[24, 65]]
+      },
+      {
+        "text": "See Bryan A. Garner, Garner's Dictionary of Legal Usage 505–06 (3d ed. 2011).",
+        "spans": [[21, 78]]
+      }
+    ],
+    "negative": [
+      "Beyond Freedom and Dignity was published in 2002.",
+      "The firm hired Mass Media Law Cases 4 (2011) as counsel",
+      "We read chapter 32 (2002 edition) of the book."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Requires `, ` before the title (the author's name ends there), so a capitalized phrase mid-sentence does not start a book. Low base confidence: titles are free text."
+}

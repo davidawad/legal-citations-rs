@@ -1,0 +1,54 @@
+{
+  "id": "intl.icsid.rev",
+  "kind": "foreign",
+  "jurisdiction": "intl.icsid",
+  "tags": [
+    "international",
+    "arbitration",
+    "investment"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+ICSID\\s+Rev\\.(?:\\s?[–-]\\s?FILJ)?\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} ICSID Rev. {page}",
+  "authority_key": "intl.icsid/rev/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): ICSID Review (Foreign Investment Law Journal), <vol> ICSID Rev. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Tecmed v. Mexico, 19 ICSID Rev. 158 (2004).",
+        "spans": [[18, 35]],
+        "groups": {
+          "volume": "19",
+          "page": "158"
+        }
+      },
+      {
+        "text": "Salini v. Morocco, 18 ICSID Rev. 448 (2003).",
+        "spans": [[19, 36]]
+      },
+      {
+        "text": "See 30 ICSID Rev.–FILJ 1, 12–14 (2015).",
+        "spans": [[4, 35]]
+      }
+    ],
+    "negative": [
+      "The ICSID review took 19 months.",
+      "Revision 158 was adopted.",
+      "ICSID revised 448 rules."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

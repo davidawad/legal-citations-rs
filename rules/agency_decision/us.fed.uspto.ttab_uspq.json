@@ -1,0 +1,74 @@
+{
+  "id": "us.fed.uspto.ttab_uspq",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.uspto",
+  "tags": [
+    "ttab",
+    "uspto",
+    "trademark"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+U\\.?\\s?S\\.?\\s?P\\.?\\s?Q\\.?\\s?2d\\s+(?P<page>[0-9]{1,6})(?:,\\s*(?:at\\s+)?\\*?[0-9]{1,6}(?:\\s?[-–]\\s?\\*?[0-9]{1,6})?)?\\s+\\((?:TTAB|T\\.T\\.A\\.B\\.)\\s+(?:[A-Z][a-z]{2,4}\\.?\\s+[0-9]{1,2},\\s+)?(?P<year>(?:19|20)[0-9]{2})\\)",
+  "priority": 62,
+  "normalize": "{volume} USPQ2d {page} (TTAB {year})",
+  "authority_key": "us.uspq2d/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "TBMP § 101.03 and TMEP § 705.05 (citing TTAB precedent to USPQ2d with a TTAB parenthetical; from 2020, `2020 USPQ2d 10000` year-volume cites)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open TBMP § 101.03 at https://tbmp.uspto.gov and compare the USPQ2d citation form for precedential Board decisions.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The mark is generic. In re Brunetti, 2022 USPQ2d 764 (TTAB 2022).",
+        "spans": [
+          [
+            37,
+            64
+          ]
+        ],
+        "groups": {
+          "volume": "2022",
+          "page": "764",
+          "year": "2022"
+        }
+      },
+      {
+        "text": "See 123 USPQ2d 1234, 1240 (TTAB 2017).",
+        "spans": [
+          [
+            4,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "Compare 2020 USPQ2d 10837, at *4 (TTAB Nov. 10, 2020) with 90 U.S.P.Q.2d 1393 (T.T.A.B. 2009).",
+        "spans": [
+          [
+            8,
+            53
+          ],
+          [
+            59,
+            93
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "In re Fox, 702 F.3d 633, 105 USPQ2d 1247 (Fed. Cir. 2012)",
+      "The TTAB cites USPQ2d.",
+      "USPQ2d (TTAB 2022)"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

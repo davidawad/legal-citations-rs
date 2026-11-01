@@ -1,0 +1,50 @@
+{
+  "id": "us.ny.regulation.nycrr_local",
+  "kind": "regulation",
+  "jurisdiction": "us.ny",
+  "pattern": "\\b(?P<title>[0-9]{1,2}[A-Z]?)\\s?NYCRR\\s?(?:§\\s?)?(?P<section>[0-9]{1,4}(?:\\.[0-9]{1,3})*[a-z]?(?:-[a-z])?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "N.Y. Comp. Codes R. & Regs. tit. {title}, § {section}{sub}",
+  "authority_key": "us.ny.nycrr/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New York) administrative compilation: N NYCRR N (New York local form) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (New York) and the official New York administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 10 NYCRR 405.1.",
+        "spans": [[4, 18]],
+        "groups": {
+          "title": "10",
+          "section": "405.1",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 22 NYCRR 202.8-g in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under 6 NYCRR § 617.7(c), the permit fails.",
+        "spans": [[6, 25]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The New York agency adopted 12 new rules in 2020.",
+      "Under NYCRR, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Same authority key as us.ny.regulation.nycrr."
+}

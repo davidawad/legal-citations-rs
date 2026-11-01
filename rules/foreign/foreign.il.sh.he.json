@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.sh.he",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\bס[\"״]ח(?:\\s+(?P<hyear>ה?ת[א-ת]{1,3}(?:[\"״][א-ת])?))?,?\\s+(?:מס[\\'׳]\\s*)?(?P<number>[0-9]{1,4}),?\\s+(?:בעמ[\\'׳]|עמ[\\'׳])\\s*(?P<page>[0-9]{1,4})\\b",
+  "priority": 58,
+  "normalize": "ס\"ח {number} עמ' {page}",
+  "authority_key": "il.sh/{number}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Sefer HaHukim (ס\"ח) Hebrew form: ס\"ח <Hebrew year>, מס' <number>, עמ' <page>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check the Knesset Sefer HaHukim: Hebrew citation is ס\"ח <year> <number> עמ' <page>.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "ס\"ח התשל\"ג, מס' 694, עמ' 118.",
+        "spans": [[0, 39]],
+        "groups": {
+          "hyear": "התשל\"ג",
+          "number": "694",
+          "page": "118"
+        }
+      },
+      {
+        "text": "ראו ס\"ח 1822 עמ' 39.",
+        "spans": [[7, 26]]
+      },
+      {
+        "text": "ס\"ח תשנ\"ב מס' 1391 בעמ' 150.",
+        "spans": [[0, 38]]
+      }
+    ],
+    "negative": [
+      "ס\"ח בלי מספר.",
+      "ספר החוקים התפרסם.",
+      "ס\"ח התשל\"ג בלבד."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

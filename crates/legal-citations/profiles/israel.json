@@ -1,0 +1,10 @@
+{
+  "name": "israel",
+  "description": "Israeli practice: Supreme Court dockets (English and Hebrew), P.D. and IsrLR reports, district, magistrates' and labour court dockets, Knesset laws (English and Hebrew), Sefer HaHukim and LSI, and Nevo/Takdin database cites.",
+  "include": [
+    "jurisdiction:foreign.il",
+    "tag:israel"
+  ],
+  "exclude": [],
+  "note": "District courts have court-level ids (foreign.il.dist.tlv, .jer, .hfa, .bsh, .naz, .ctr): use --jurisdiction 'foreign.il.dist*' for district courts alone. Supreme Court dockets and P.D. reports are foreign.il.sup. Ordinances in Hebrew (פקודה) are not covered."
+}

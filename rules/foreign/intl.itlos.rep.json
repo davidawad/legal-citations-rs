@@ -1,0 +1,52 @@
+{
+  "id": "intl.itlos.rep",
+  "kind": "foreign",
+  "jurisdiction": "intl.itlos",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+ITLOS\\s+Rep\\.\\s+(?P<page>[0-9]{1,4})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{year} ITLOS Rep. {page}",
+  "authority_key": "itlos/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters) and T8.3: ITLOS Reports of Judgments, Advisory Opinions and Orders, <year> ITLOS Rep. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "M/V “Saiga” (No. 2) (St. Vincent v. Guinea), Case No. 2, 1999 ITLOS Rep. 10.",
+        "spans": [[61, 79]],
+        "groups": {
+          "year": "1999",
+          "page": "10"
+        }
+      },
+      {
+        "text": "Southern Bluefin Tuna (N.Z. v. Japan; Austl. v. Japan), Cases No. 3 & 4, 1999 ITLOS Rep. 280.",
+        "spans": [[73, 92]]
+      },
+      {
+        "text": "The tribunal relied on 2011 ITLOS Rep. 10, 74–76 in its opinion.",
+        "spans": [[23, 50]]
+      }
+    ],
+    "negative": [
+      "ITLOS reported 10 cases in 1999.",
+      "The 1999 ITLOS session ran 280 days.",
+      "Rep. 10 of the ITLOS staff."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

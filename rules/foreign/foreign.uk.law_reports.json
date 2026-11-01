@@ -1,0 +1,67 @@
+{
+  "id": "foreign.uk.law_reports",
+  "kind": "foreign",
+  "jurisdiction": "foreign.gb",
+  "tags": [
+    "foreign",
+    "uk"
+  ],
+  "pattern": "\\[(?P<year>1[89][0-9]{2}|20[0-9]{2})\\]\\s+(?:(?P<volume>[0-9])\\s+)?(?P<series>A\\.?\\s?C\\.?|Q\\.?\\s?B\\.?|K\\.?\\s?B\\.?|Ch\\.?|Fam\\.?|P\\.|W\\.?\\s?L\\.?\\s?R\\.?|All\\s?E\\.?\\s?R\\.?(?:\\s\\(Comm\\)|\\s\\(EC\\))?|Lloyd['’]s\\s+Rep\\.?|I\\.?C\\.?R\\.?|I\\.?R\\.?L\\.?R\\.?|Cr\\.?\\s?App\\.?\\s?R\\.?|E\\.?M\\.?L\\.?R\\.?|F\\.?S\\.?R\\.?|R\\.?P\\.?C\\.?|B\\.?C\\.?L\\.?C\\.?|B\\.?C\\.?C\\.?|S\\.?T\\.?C\\.?|E\\.?H\\.?R\\.?R\\.?|S\\.?C\\.?\\s?\\(H\\.?L\\.?\\)|S\\.?L\\.?T\\.?|N\\.?I\\.?)\\s+(?P<page>[0-9]{1,5})\\b(?:\\s+\\((?P<court>HL|H\\.L\\.|PC|P\\.C\\.|CA|C\\.A\\.|SC|UKSC|Ch\\s?D|QBD|KBD)\\))?",
+  "priority": 60,
+  "normalize": "[{year}] {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "OSCOLA (4th ed.) 2.1 and appendix 3 (law report abbreviations): [<year>] <vol> <series> <page> (<court>); Bluebook T2 (United Kingdom)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open OSCOLA (4th ed.) section 2 (cases) and the Practice Direction (Citation of Authorities) [2012] 1 WLR 780; compare with Bluebook T2 (United Kingdom).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Donoghue v Stevenson [1932] AC 562 (HL).",
+        "spans": [[21, 39]],
+        "groups": {
+          "year": "1932",
+          "series": "AC",
+          "page": "562",
+          "court": "HL"
+        }
+      },
+      {
+        "text": "Caparo Indus. plc v. Dickman, [1990] 2 A.C. 605 (H.L.) (appeal taken from Eng.).",
+        "spans": [[30, 54]]
+      },
+      {
+        "text": "Hadley v Baxendale applied in [1949] 2 KB 528 (CA).",
+        "spans": [[30, 50]]
+      },
+      {
+        "text": "See [2015] 1 WLR 2961.",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "Wainwright v Home Office [2004] 2 All ER 1.",
+        "spans": [[25, 42]]
+      },
+      {
+        "text": "The Achilleas [2008] 2 Lloyd's Rep 275.",
+        "spans": [[14, 38]]
+      }
+    ],
+    "negative": [
+      "[1932] was a hard year for 562 families.",
+      "The AC unit cost 562 pounds.",
+      "Section [2] of the QB rules."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: a bracketed volume-year with numbered volumes, the court parenthetical optional. A round-bracket year (pre-1891 and year-less series) is foreign.uk.law_reports_round."
+}

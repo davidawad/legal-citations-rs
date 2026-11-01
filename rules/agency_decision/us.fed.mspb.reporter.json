@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.mspb.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.mspb",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+M\\.?\\s?S\\.?\\s?P\\.?\\s?R\\.?\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} M.S.P.R. {page}",
+  "authority_key": "us.mspb/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Merit Systems Protection Board Reporter) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for M.S.P.R.; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Smith v. Dep't of the Army, 118 M.S.P.R. 123, ¶ 5 (2012).",
+        "spans": [
+          [
+            32,
+            48
+          ]
+        ],
+        "groups": {
+          "volume": "118",
+          "page": "123"
+        }
+      },
+      {
+        "text": "The Board relied on 5 MSPR 280 in setting penalties.",
+        "spans": [
+          [
+            20,
+            30
+          ]
+        ]
+      },
+      {
+        "text": "Compare 94 M.S.P.R. 10 with 120 M.S.P.R. 1.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            42
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The MSPB has 3 members.",
+      "Appeals to the M.S.P.R. are frequent.",
+      "In 2012 the MSPB issued 118 decisions."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

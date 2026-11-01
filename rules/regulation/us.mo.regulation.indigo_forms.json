@@ -1,0 +1,54 @@
+{
+  "id": "us.mo.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.mo",
+  "pattern": "\\b(?:Mo\\.\\s?Code\\sRegs\\.\\s?Ann\\.\\s?tit\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Missouri: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Missouri, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 408"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mo. Code Regs. Ann. tit. 25, § 33-17.73 (2015).",
+        "spans": [[4, 44]],
+        "groups": {}
+      },
+      {
+        "text": "See Mo. Code Regs. Ann. tit. 41, § 9-1.1 (2014).",
+        "spans": [[4, 41]]
+      },
+      {
+        "text": "See Mo. Code Regs. Ann. tit. 58, § 66-41.16 (5348).",
+        "spans": [[4, 44]]
+      },
+      {
+        "text": "See Mo. Code Regs. Ann. tit. 74, § 2-4.4 (5347).",
+        "spans": [[4, 41]]
+      }
+    ],
+    "negative": [
+      "The Missouri code was amended in 2015.",
+      "Section 12 of the Missouri rules is long.",
+      "Title five of the Missouri compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

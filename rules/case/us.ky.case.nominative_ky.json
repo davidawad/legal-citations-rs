@@ -1,0 +1,175 @@
+{
+  "id": "us.ky.case.nominative_ky",
+  "kind": "case",
+  "jurisdiction": "us.ky",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Ky\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Litt\\.\\s?Sel\\.\\s?Cas\\.|A\\.K\\.\\s?Marsh\\.|J\\.J\\.\\s?Marsh\\.|T\\.B\\.\\s?Mon\\.|B\\.\\s?Mon\\.|Hughes|Hard\\.|Litt\\.|Sneed|Bibb|Bush|Dana|Duv\\.|Met\\.)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Ky. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 263",
+      "corpus/formats/indigo.jsonl line 264",
+      "corpus/formats/indigo.jsonl line 265",
+      "corpus/formats/indigo.jsonl line 266",
+      "corpus/formats/indigo.jsonl line 267",
+      "corpus/formats/indigo.jsonl line 268",
+      "corpus/formats/indigo.jsonl line 269",
+      "corpus/formats/indigo.jsonl line 270",
+      "corpus/formats/indigo.jsonl line 271",
+      "corpus/formats/indigo.jsonl line 272",
+      "corpus/formats/indigo.jsonl line 273",
+      "corpus/formats/indigo.jsonl line 274",
+      "corpus/formats/indigo.jsonl line 275",
+      "corpus/formats/indigo.jsonl line 276"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Walker v. Young, 66 Ky. (3 Bush) 497 (1869).",
+        "spans": [[21, 40]],
+        "groups": {
+          "volume": "66",
+          "reporter": "Ky.",
+          "nominative_volume": "3",
+          "nominative": "Bush",
+          "page": "497"
+        }
+      },
+      {
+        "text": "See Allen v. King, 66 Ky. (3 Bush) 497, 601 (1875).",
+        "spans": [[19, 38]]
+      },
+      {
+        "text": "See Wright v. Scott, 62 Ky. (1 Duv.) 153 (1863).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Green v. Baker, 62 Ky. (1 Duv.) 145, 601 (1865).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See Adams v. Nelson, 58 Ky. (1 Met.) 561 (1859).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Hill v. Campbell, 58 Ky. (1 Met.) 353, 625 (1861).",
+        "spans": [[22, 41]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 53 Ky. (14 B. Mon.) 41 (1845).",
+        "spans": [[25, 47]]
+      },
+      {
+        "text": "See Carter v. Phillips, 53 Ky. (14 B. Mon.) 425, 617 (1851).",
+        "spans": [[24, 47]]
+      },
+      {
+        "text": "See Evans v. Turner, 35 Ky. (5 Dana) 233 (1835).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Smith v. Jones, 35 Ky. (5 Dana) 305, 617 (1837).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See State v. Miller, 27 Ky. (4 J.J. Marsh.) 481 (1829).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Brown v. Davis, 27 Ky. (4 J.J. Marsh.) 353, 601 (1831).",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "See Garcia v. Lee, 19 Ky. (3 T.B. Mon.) 121 (1825).",
+        "spans": [[19, 43]]
+      },
+      {
+        "text": "See Johnson v. Clark, 19 Ky. (3 T.B. Mon.) 41, 601 (1826).",
+        "spans": [[22, 45]]
+      },
+      {
+        "text": "See In re Estate of Hall, 13 Ky. (3 Litt.) 265 (1822).",
+        "spans": [[26, 46]]
+      },
+      {
+        "text": "See Walker v. Young, 13 Ky. (3 Litt.) 217, 601 (1823).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Allen v. King, 16 Ky. (1 Litt. Sel. Cas.) 297 (1802).",
+        "spans": [[19, 49]]
+      },
+      {
+        "text": "See Wright v. Scott, 16 Ky. (1 Litt. Sel. Cas.) 425, 609 (1813).",
+        "spans": [[21, 51]]
+      },
+      {
+        "text": "See Green v. Baker, 10 Ky. (3 A.K. Marsh.) 289 (1818).",
+        "spans": [[20, 46]]
+      },
+      {
+        "text": "See Adams v. Nelson, 10 Ky. (3 A.K. Marsh.) 137, 633 (1819).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Hill v. Campbell, 6 Ky. (3 Bibb) 225 (1810).",
+        "spans": [[22, 40]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 6 Ky. (3 Bibb) 241, 617 (1814).",
+        "spans": [[25, 43]]
+      },
+      {
+        "text": "See Carter v. Phillips, 3 Ky. (Hard.) 41 (1805).",
+        "spans": [[24, 40]]
+      },
+      {
+        "text": "See Evans v. Turner, 3 Ky. (Hard.) 257, 609 (1807).",
+        "spans": [[21, 38]]
+      },
+      {
+        "text": "See Smith v. Jones, 2 Ky. (Sneed) 577 (1802).",
+        "spans": [[20, 37]]
+      },
+      {
+        "text": "See State v. Miller, 2 Ky. (Sneed) 385, 625 (1803).",
+        "spans": [[21, 38]]
+      },
+      {
+        "text": "See Brown v. Davis, 1 Ky. (Hughes) 89 (1789).",
+        "spans": [[20, 37]]
+      },
+      {
+        "text": "See Garcia v. Lee, 1 Ky. (Hughes) 241, 625 (1796).",
+        "spans": [[19, 37]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Ky. (2 Bush) 345 (1850).",
+        "spans": [[16, 35]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Ky. reports is missing.",
+      "The A.K. Marsh. reports cover Ky. cases from 1800 to 1850.",
+      "See Ky. (A.K. Marsh.) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

@@ -1,0 +1,53 @@
+{
+  "id": "us.de.regulation.admin_code",
+  "kind": "regulation",
+  "jurisdiction": "us.de",
+  "pattern": "\\b(?P<code>[0-9]{1,2}(?:-[0-9]{1,4}){0,2})\\s?Del\\.\\s?Admin\\.\\s?Code\\s?(?:§\\s?)?(?P<section>[0-9]{1,4}(?:\\.[0-9]{1,2})*)",
+  "priority": 65,
+  "normalize": "{code} Del. Admin. Code § {section}",
+  "authority_key": "us.de.admin_code/{code}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Delaware) administrative compilation: T-AAAA-RRRR Del. Admin. Code § N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Delaware) and the official Delaware administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 7-1000-1101 Del. Admin. Code § 1.0.",
+        "spans": [[4, 39]],
+        "groups": {
+          "code": "7-1000-1101",
+          "section": "1.0"
+        }
+      },
+      {
+        "text": "The court relied on 14 Del. Admin. Code 925 in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under 16-3000-3225 Del. Admin. Code § 4.1, the permit fails.",
+        "spans": [[6, 42]]
+      },
+      {
+        "text": "Indigo prints the form as 57-81-1 Del. Admin. Code § 41 (2015).",
+        "spans": [[26, 56]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Delaware agency adopted 12 new rules in 2020.",
+      "Under Del. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

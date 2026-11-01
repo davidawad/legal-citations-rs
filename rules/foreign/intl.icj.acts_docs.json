@@ -1,0 +1,52 @@
+{
+  "id": "intl.icj.acts_docs",
+  "kind": "foreign",
+  "jurisdiction": "intl.icj",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2})\\s+I\\.\\s?C\\.\\s?J\\.\\s+Acts\\s+&\\s+Docs\\.?\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} I.C.J. Acts & Docs {page}",
+  "authority_key": "intl.icj/acts_docs/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.1 (United Nations and League of Nations): I.C.J. Acts and Documents (1946-date), <year> I.C.J. Acts & Docs <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 1978 I.C.J. Acts & Docs 93.",
+        "spans": [[4, 30]],
+        "groups": {
+          "volume": "1978",
+          "page": "93"
+        }
+      },
+      {
+        "text": "The court relied on 1946 I.C.J. Acts & Docs 2 in its order.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under 1978 I.C.J. Acts & Docs. 93, 95–97, the claim fails.",
+        "spans": [[6, 42]]
+      }
+    ],
+    "negative": [
+      "The acts and docs filled 93 boxes.",
+      "Acts and documents of 1978 ran 93 pages.",
+      "I.C.J. Acts & Docs volumes number 2."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

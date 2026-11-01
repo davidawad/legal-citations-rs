@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.ssa.hallex",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.ssa",
+  "tags": [
+    "social_security"
+  ],
+  "pattern": "\\bHALLEX\\s+(?P<section>I{1,3}-[0-9]-[0-9]{1,2}-[0-9]{1,3}(?:\\([A-Z0-9]{1,2}\\))*)",
+  "priority": 60,
+  "normalize": "HALLEX {section}",
+  "authority_key": "us.hallex/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "SSA Hearings, Appeals and Litigation Law Manual (`HALLEX I-2-5-69`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open HALLEX at https://www.ssa.gov/OP_Home/hallex/ and compare the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The ALJ must proffer the evidence. HALLEX I-2-7-30.",
+        "spans": [
+          [
+            35,
+            50
+          ]
+        ],
+        "groups": {
+          "section": "I-2-7-30"
+        }
+      },
+      {
+        "text": "See HALLEX I-2-5-69.",
+        "spans": [
+          [
+            4,
+            19
+          ]
+        ]
+      },
+      {
+        "text": "Compare HALLEX I-2-8-25(A) with HALLEX II-4-1-1.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            47
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "HALLEX guidance",
+      "HALLEX I-2",
+      "The HALLEX manual"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

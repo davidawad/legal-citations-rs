@@ -1,0 +1,81 @@
+{
+  "id": "us.fed.legislative.bill",
+  "kind": "legislative",
+  "jurisdiction": "us.fed.congress",
+  "pattern": "\\b(?P<chamber>H\\.\\s?R\\.\\s?|H\\.\\s?J\\.\\s?Res\\.\\s|S\\.\\s?J\\.\\s?Res\\.\\s|H\\.\\s?Con\\.\\s?Res\\.\\s|S\\.\\s?Con\\.\\s?Res\\.\\s|H\\.\\s?Res\\.\\s|S\\.\\s?Res\\.\\s|S\\.\\s)(?P<number>[0-9]{1,5})\\b(?:,\\s*(?P<congress>[0-9]{1,3})(?:st|nd|rd|th|d)\\s+Cong\\.(?:\\s§\\s?(?P<section>[0-9]+[a-z]?(?:\\([0-9A-Za-z]{1,4}\\))*))?)?",
+  "priority": 40,
+  "normalize": "{chamber}{number}",
+  "authority_key": "us.bill/{congress}/{chamber|slug}{number}",
+  "url_templates": [
+    "https://www.govinfo.gov/link/bills/{congress}/{chamber|slug}/{number}"
+  ],
+  "url_decoders": [
+    "govinfo.gov/link/bills/{congress}/{chamber}/{number}"
+  ],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Bluebook R. 13.2 (unenacted federal bills and resolutions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.2 and check the `H.R. 3055, 94th Cong. § 2 (1976)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See H.R. 1, 117th Cong. (2021).",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ],
+        "groups": {
+          "chamber": "H.R. ",
+          "number": "1",
+          "congress": "117"
+        }
+      },
+      {
+        "text": "The Senate passed S. 567 by voice vote.",
+        "spans": [
+          [
+            18,
+            24
+          ]
+        ]
+      },
+      {
+        "text": "Compare H.J. Res. 45, 92d Cong. with S. Con. Res. 3 and H.R.3055.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            51
+          ],
+          [
+            56,
+            64
+          ]
+        ]
+      },
+      {
+        "text": "Paycheck Fairness Act, H.R. 11, 111th Cong. § 203 (2009), and S. 1083, 107th Cong. § 2(b) (2001).",
+        "spans": [[23, 50], [63, 91]]
+      }
+    ],
+    "negative": [
+      "The House voted 217 to 213.",
+      "H.R. staff reviewed the file.",
+      "H.R. members met in Room 2141."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Priority 40 so a reporter cite wins any overlap (`410 U.S. 113` contains `S. 113`). The authority key needs the Congress; a bare `S. 567` has none. url_templates: govinfo link service, verified by HTTP fetch on 2026-10-23: https://www.govinfo.gov/link/bills/117/s/567 redirects to BILLS-117s567is (also hr, hres, hjres, sjres, hconres, sconres and sres); govinfo holds bills from the 103d Congress (1993) on, earlier ones answer 400. The key's chamber is slugged (`H.R.` -> `hr`), the govinfo bill type, so a link decodes to the cited bill. congress.gov answers scripts with 403: not used."
+}

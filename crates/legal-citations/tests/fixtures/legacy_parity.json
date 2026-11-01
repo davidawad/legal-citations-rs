@@ -1,0 +1,5749 @@
+{
+ "types": [
+  "case",
+  "usc",
+  "cfr",
+  "restatement",
+  "revrul",
+  "njsa",
+  "njac",
+  "cal",
+  "ny",
+  "tex",
+  "ill",
+  "mass",
+  "pa",
+  "mich",
+  "fla",
+  "la",
+  "nh",
+  "va",
+  "ohio",
+  "wash",
+  "wv",
+  "md",
+  "ocga",
+  "ors",
+  "colo",
+  "conn",
+  "minn",
+  "mo",
+  "wis",
+  "ind",
+  "tenn",
+  "ariz",
+  "nev",
+  "ky",
+  "sc",
+  "nc",
+  "ala",
+  "ark",
+  "del",
+  "haw",
+  "idaho",
+  "iowa",
+  "kan",
+  "me",
+  "miss",
+  "mont",
+  "neb",
+  "nm",
+  "nd",
+  "okla",
+  "ri",
+  "sd",
+  "utah",
+  "vt",
+  "wyo",
+  "ak",
+  "dc",
+  "generic_state"
+ ],
+ "statute_types": [
+  "ak",
+  "ala",
+  "ariz",
+  "ark",
+  "cal",
+  "cfr",
+  "colo",
+  "conn",
+  "dc",
+  "del",
+  "fla",
+  "generic_state",
+  "haw",
+  "idaho",
+  "ill",
+  "ind",
+  "iowa",
+  "kan",
+  "ky",
+  "la",
+  "mass",
+  "md",
+  "me",
+  "mich",
+  "minn",
+  "miss",
+  "mo",
+  "mont",
+  "nc",
+  "nd",
+  "neb",
+  "nev",
+  "nh",
+  "njac",
+  "njsa",
+  "nm",
+  "ny",
+  "ocga",
+  "ohio",
+  "okla",
+  "ors",
+  "pa",
+  "restatement",
+  "revrul",
+  "ri",
+  "sc",
+  "sd",
+  "tenn",
+  "tex",
+  "usc",
+  "utah",
+  "va",
+  "vt",
+  "wash",
+  "wis",
+  "wv",
+  "wyo"
+ ],
+ "cases": [
+  {
+   "text": "Smith v. Jones, 123 F.3d 456 (9th Cir. 2001) held otherwise.",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "See Brown versus Board of Education, 347 U.S. 483, 495 (1954).",
+   "matches": {
+    "case": [
+     {
+      "span": [
+       0,
+       61
+      ],
+      "groups": {
+       "case_name": "See Brown versus Board of Education",
+       "volume": "347",
+       "reporter": "U.S.",
+       "page": "483",
+       "paren": "1954"
+      }
+     }
+    ],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "42 U.S.C. § 1983 and 17 U.S.C. §§ 101, 1201 apply; also 42 USC § 5.",
+   "matches": {
+    "case": [],
+    "usc": [
+     {
+      "span": [
+       0,
+       17
+      ],
+      "groups": {
+       "title": "42",
+       "section": "1983"
+      }
+     },
+     {
+      "span": [
+       22,
+       40
+      ],
+      "groups": {
+       "title": "17",
+       "section": "101"
+      }
+     }
+    ],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "45 C.F.R. § 164.502(a)(1)(i) and 29 CFR § 1910.1200.",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "title": "45",
+       "section": "164.502(a)(1)(i)"
+      }
+     }
+    ],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Restatement (Second) of Contracts § 90; Restatement (Third) of Torts § 1.2",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [
+     {
+      "span": [
+       0,
+       39
+      ],
+      "groups": {
+       "edition": "Second",
+       "subject": "Contracts",
+       "section": "90"
+      }
+     },
+     {
+      "span": [
+       41,
+       76
+      ],
+      "groups": {
+       "edition": "Third",
+       "subject": "Torts",
+       "section": "1.2"
+      }
+     }
+    ],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Rev. Rul. 85-13, 1985-1 C.B. 184 and Rev. Rul. 2004-64",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [
+     {
+      "span": [
+       0,
+       32
+      ],
+      "groups": {
+       "number": "85-13",
+       "cb": "1985-1 C.B. 184"
+      }
+     },
+     {
+      "span": [
+       37,
+       54
+      ],
+      "groups": {
+       "number": "2004-64",
+       "cb": null
+      }
+     }
+    ],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.J.S.A. 34:11-56a25, N.J.S.A. 10:5-1 et seq., N.J.S.A. § 3B:31-39(a)(1), NJSA 2A:14-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [
+     {
+      "span": [
+       0,
+       20
+      ],
+      "groups": {
+       "key": "34:11-56a25"
+      }
+     },
+     {
+      "span": [
+       22,
+       45
+      ],
+      "groups": {
+       "key": "10:5-1 et seq."
+      }
+     },
+     {
+      "span": [
+       47,
+       70
+      ],
+      "groups": {
+       "key": "3B:31-39(a)"
+      }
+     },
+     {
+      "span": [
+       75,
+       87
+      ],
+      "groups": {
+       "key": "2A:14-1"
+      }
+     }
+    ],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.J.A.C. 10:49-7.1 and NJAC 13:45A-1.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [
+     {
+      "span": [
+       0,
+       18
+      ],
+      "groups": {
+       "key": "10:49-7.1"
+      }
+     },
+     {
+      "span": [
+       23,
+       38
+      ],
+      "groups": {
+       "key": "13:45A-1.1"
+      }
+     }
+    ],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Cal. Civ. Code § 1550; Cal. Bus. & Prof. Code § 17200; Cal. Penal Code § 187(a)",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [
+     {
+      "span": [
+       0,
+       22
+      ],
+      "groups": {
+       "code": "Civ.",
+       "section": "1550"
+      }
+     },
+     {
+      "span": [
+       57,
+       82
+      ],
+      "groups": {
+       "code": "Penal",
+       "section": "187(a)"
+      }
+     }
+    ],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       62,
+       82
+      ],
+      "groups": {
+       "state": "Penal",
+       "section": "187(a)"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "N.Y. Gen. Bus. Law § 349 and N.Y. Penal Law § 120.05; N.Y. Civ. Prac. Code §§ 1-2",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "code": "Gen. Bus.",
+       "section": "349"
+      }
+     },
+     {
+      "span": [
+       30,
+       54
+      ],
+      "groups": {
+       "code": "Penal",
+       "section": "120.05"
+      }
+     },
+     {
+      "span": [
+       56,
+       85
+      ],
+      "groups": {
+       "code": "Civ. Prac.",
+       "section": "1-2"
+      }
+     }
+    ],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       35,
+       54
+      ],
+      "groups": {
+       "state": "Penal",
+       "section": "120.05"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Tex. Bus. & Com. Code Ann. § 17.46 / Tex. Penal Code § 21.11 / Texas. Fam. Code §§ 5.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [
+     {
+      "span": [
+       0,
+       35
+      ],
+      "groups": {
+       "code": "Bus. & Com.",
+       "section": "17.46"
+      }
+     },
+     {
+      "span": [
+       38,
+       62
+      ],
+      "groups": {
+       "code": "Penal",
+       "section": "21.11"
+      }
+     },
+     {
+      "span": [
+       65,
+       90
+      ],
+      "groups": {
+       "code": "Fam.",
+       "section": "5.1"
+      }
+     }
+    ],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       43,
+       62
+      ],
+      "groups": {
+       "state": "Penal",
+       "section": "21.11"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "720 Ill. Comp. Stat. 5/12-3; Ill. Comp. Stat. ch. 815, § 505/2; Illinois. Compiled. Statutes. 735/5-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [
+     {
+      "span": [
+       0,
+       27
+      ],
+      "groups": {
+       "chapter": "720",
+       "ch_num": null,
+       "section_ch": null,
+       "sub": "5",
+       "section_sub": "12-3"
+      }
+     },
+     {
+      "span": [
+       29,
+       63
+      ],
+      "groups": {
+       "chapter": null,
+       "ch_num": "815",
+       "section_ch": "505/2",
+       "sub": null,
+       "section_sub": null
+      }
+     },
+     {
+      "span": [
+       65,
+       102
+      ],
+      "groups": {
+       "chapter": null,
+       "ch_num": null,
+       "section_ch": null,
+       "sub": "735",
+       "section_sub": "5-1"
+      }
+     }
+    ],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Mass. Gen. Laws ch. 93A, § 2; Massachusetts. General. Laws ch. 12 §§ 11H",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "chapter": "93A",
+       "section": "2"
+      }
+     },
+     {
+      "span": [
+       31,
+       75
+      ],
+      "groups": {
+       "chapter": "12",
+       "section": "11H"
+      }
+     }
+    ],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "18 Pa. Cons. Stat. § 3701 and 42 Pa. Cons. Stat. Ann. § 7301; 18 Pa. Stat. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Mich. Comp. Laws § 750.520b, MCL 750.520b, Mich. Comp. Laws Ann. § 600.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [
+     {
+      "span": [
+       0,
+       28
+      ],
+      "groups": {
+       "section": "750.520b"
+      }
+     },
+     {
+      "span": [
+       30,
+       42
+      ],
+      "groups": {
+       "section": "750.520b"
+      }
+     },
+     {
+      "span": [
+       44,
+       74
+      ],
+      "groups": {
+       "section": "600.1"
+      }
+     }
+    ],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Fla. Stat. § 784.045; Fla. Stat. Ann. § 784.045; Fla Stat. Stat. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [
+     {
+      "span": [
+       51,
+       71
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "La. Rev. Stat. § 14:30 and La. R.S. 14:30 and La. Stat. Ann. 14:30.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [
+     {
+      "span": [
+       28,
+       42
+      ],
+      "groups": {
+       "title": null,
+       "section": null,
+       "title2": "14",
+       "section2": "30"
+      }
+     }
+    ],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.H. Rev. Stat. Ann. § 651:2; RSA 651:2; RSA § 1:1(a)",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "section": "651:2"
+      }
+     },
+     {
+      "span": [
+       31,
+       40
+      ],
+      "groups": {
+       "section": "651:2"
+      }
+     },
+     {
+      "span": [
+       42,
+       55
+      ],
+      "groups": {
+       "section": "1:1(a)"
+      }
+     }
+    ],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Va. Code Ann. § 18.2-51; Va. Code § 8.01-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ohio Rev. Code § 2907.02 / ORC 2907.02 / Ohio Rev. Code Ann. § 1.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "2907.02"
+      }
+     },
+     {
+      "span": [
+       28,
+       39
+      ],
+      "groups": {
+       "section": "2907.02"
+      }
+     },
+     {
+      "span": [
+       42,
+       68
+      ],
+      "groups": {
+       "section": "1.1"
+      }
+     }
+    ],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "state": "Ohio",
+       "section": "2907.02"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Wash. Rev. Code § 9A.36.011 / RCW 9A.36.011 / Washington. Revised. Code Ann. § 4.5",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [
+     {
+      "span": [
+       0,
+       28
+      ],
+      "groups": {
+       "section": "9A.36.011"
+      }
+     },
+     {
+      "span": [
+       31,
+       44
+      ],
+      "groups": {
+       "section": "9A.36.011"
+      }
+     },
+     {
+      "span": [
+       47,
+       84
+      ],
+      "groups": {
+       "section": "4.5"
+      }
+     }
+    ],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "W. Va. Code § 61-2-1 / W.Va. Code Ann. § 61-2-1 / W Va. Code § 5",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Md. Code Ann., Crim. Law § 3-303; Md. Code Ann. Crim. Law § 3-303; Md. Code Fam. Law § 1-201",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [
+     {
+      "span": [
+       0,
+       33
+      ],
+      "groups": {
+       "code": "Crim. Law",
+       "section": "3-303"
+      }
+     },
+     {
+      "span": [
+       35,
+       67
+      ],
+      "groups": {
+       "code": "Crim. Law",
+       "section": "3-303"
+      }
+     },
+     {
+      "span": [
+       69,
+       95
+      ],
+      "groups": {
+       "code": "Fam. Law",
+       "section": "1-201"
+      }
+     }
+    ],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "O.C.G.A. § 16-5-21; OCGA §§ 16-5-21(a)",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [
+     {
+      "span": [
+       0,
+       19
+      ],
+      "groups": {
+       "section": "16-5-21"
+      }
+     },
+     {
+      "span": [
+       21,
+       41
+      ],
+      "groups": {
+       "section": "16-5-21(a)"
+      }
+     }
+    ],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Or. Rev. Stat. § 163.185 / ORS 163.185 / Oregon. Revised. Statutes. Ann. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "163.185"
+      }
+     },
+     {
+      "span": [
+       28,
+       39
+      ],
+      "groups": {
+       "section": "163.185"
+      }
+     },
+     {
+      "span": [
+       42,
+       78
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Colo. Rev. Stat. § 18-3-402 / C.R.S. § 18-3-402 / CRS § 1-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [
+     {
+      "span": [
+       0,
+       28
+      ],
+      "groups": {
+       "section": "18-3-402"
+      }
+     },
+     {
+      "span": [
+       31,
+       49
+      ],
+      "groups": {
+       "section": "18-3-402"
+      }
+     }
+    ],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Conn. Gen. Stat. § 53a-59 / C.G.S. § 53a-59",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "53a-59"
+      }
+     },
+     {
+      "span": [
+       29,
+       45
+      ],
+      "groups": {
+       "section": "53a-59"
+      }
+     }
+    ],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Minn. Stat. § 609.221 / Minn. Stat. Ann. § 609.221 / Minnesota. Statutes. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [
+     {
+      "span": [
+       0,
+       22
+      ],
+      "groups": {
+       "section": "609.221"
+      }
+     },
+     {
+      "span": [
+       25,
+       52
+      ],
+      "groups": {
+       "section": "609.221"
+      }
+     },
+     {
+      "span": [
+       55,
+       80
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Mo. Rev. Stat. § 565.021 / Mo Rev. Stat. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [
+     {
+      "span": [
+       28,
+       46
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Wis. Stat. § 940.19 / Wis. Stat. Ann. § 940.19",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [
+     {
+      "span": [
+       0,
+       20
+      ],
+      "groups": {
+       "section": "940.19"
+      }
+     },
+     {
+      "span": [
+       23,
+       48
+      ],
+      "groups": {
+       "section": "940.19"
+      }
+     }
+    ],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ind. Code § 35-42-2-1 / I.C. § 35-42-2-1 / IC § 1-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [
+     {
+      "span": [
+       0,
+       22
+      ],
+      "groups": {
+       "section": "35-42-2-1"
+      }
+     },
+     {
+      "span": [
+       25,
+       42
+      ],
+      "groups": {
+       "section": "35-42-2-1"
+      }
+     }
+    ],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Tenn. Code Ann. § 39-13-102; Tenn. Code § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [
+     {
+      "span": [
+       0,
+       28
+      ],
+      "groups": {
+       "section": "39-13-102"
+      }
+     },
+     {
+      "span": [
+       30,
+       45
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ariz. Rev. Stat. § 13-1204 / A.R.S. § 13-1204 / Arizona. Revised. Statutes. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [
+     {
+      "span": [
+       0,
+       27
+      ],
+      "groups": {
+       "section": "13-1204"
+      }
+     },
+     {
+      "span": [
+       30,
+       47
+      ],
+      "groups": {
+       "section": "13-1204"
+      }
+     },
+     {
+      "span": [
+       50,
+       82
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Nev. Rev. Stat. § 200.030 / NRS 200.030",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "200.030"
+      }
+     },
+     {
+      "span": [
+       29,
+       40
+      ],
+      "groups": {
+       "section": "200.030"
+      }
+     }
+    ],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ky. Rev. Stat. Ann. § 508.010 / KRS § 508.010 / Ky Rev. Stat. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [
+     {
+      "span": [
+       33,
+       47
+      ],
+      "groups": {
+       "section": "508.010"
+      }
+     },
+     {
+      "span": [
+       50,
+       68
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "S.C. Code Ann. § 16-3-600; S.C. Code § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "16-3-600"
+      }
+     },
+     {
+      "span": [
+       28,
+       42
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.C. Gen. Stat. § 14-17 / N.C.G.S. § 14-17",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [
+     {
+      "span": [
+       29,
+       44
+      ],
+      "groups": {
+       "section": "14-17"
+      }
+     }
+    ],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [
+     {
+      "span": [
+       0,
+       24
+      ],
+      "groups": {
+       "section": "14-17"
+      }
+     },
+     {
+      "span": [
+       27,
+       44
+      ],
+      "groups": {
+       "section": "14-17"
+      }
+     }
+    ],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ala. Code § 13A-6-43; Ala. Code 1975 § 13A-6-43; Alabama. Code Ann. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [
+     {
+      "span": [
+       0,
+       21
+      ],
+      "groups": {
+       "section": "13A-6-43"
+      }
+     },
+     {
+      "span": [
+       23,
+       49
+      ],
+      "groups": {
+       "section": "13A-6-43"
+      }
+     },
+     {
+      "span": [
+       51,
+       74
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Ark. Code Ann. § 5-13-201; Ark. Code § 5-13-201",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "5-13-201"
+      }
+     },
+     {
+      "span": [
+       28,
+       49
+      ],
+      "groups": {
+       "section": "5-13-201"
+      }
+     }
+    ],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Del. Code Ann. tit. 11, § 636; Delaware. Code tit. 11 §§ 4",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [
+     {
+      "span": [
+       0,
+       30
+      ],
+      "groups": {
+       "title": "11",
+       "section": "636"
+      }
+     },
+     {
+      "span": [
+       32,
+       61
+      ],
+      "groups": {
+       "title": "11",
+       "section": "4"
+      }
+     }
+    ],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Haw. Rev. Stat. § 707-701 / HRS § 707-701",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "707-701"
+      }
+     },
+     {
+      "span": [
+       29,
+       43
+      ],
+      "groups": {
+       "section": "707-701"
+      }
+     }
+    ],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Idaho Code § 18-4001; Idaho Code Ann. § 18-4001",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [
+     {
+      "span": [
+       0,
+       21
+      ],
+      "groups": {
+       "section": "18-4001"
+      }
+     },
+     {
+      "span": [
+       23,
+       49
+      ],
+      "groups": {
+       "section": "18-4001"
+      }
+     }
+    ],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       21
+      ],
+      "groups": {
+       "state": "Idaho",
+       "section": "18-4001"
+      }
+     },
+     {
+      "span": [
+       23,
+       49
+      ],
+      "groups": {
+       "state": "Idaho",
+       "section": "18-4001"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Iowa Code § 707.1; Iowa Code Ann. § 707.1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [
+     {
+      "span": [
+       0,
+       18
+      ],
+      "groups": {
+       "section": "707.1"
+      }
+     },
+     {
+      "span": [
+       20,
+       43
+      ],
+      "groups": {
+       "section": "707.1"
+      }
+     }
+    ],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       18
+      ],
+      "groups": {
+       "state": "Iowa",
+       "section": "707.1"
+      }
+     },
+     {
+      "span": [
+       20,
+       43
+      ],
+      "groups": {
+       "state": "Iowa",
+       "section": "707.1"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Kan. Stat. Ann. § 21-5401 / K.S.A. § 21-5401",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "21-5401"
+      }
+     },
+     {
+      "span": [
+       29,
+       46
+      ],
+      "groups": {
+       "section": "21-5401"
+      }
+     }
+    ],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Me. Rev. Stat. tit. 17-A, § 202 / M.R.S.A. tit. 17-A, § 202 / Maine. Rev. Stat. tit. 1 § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [
+     {
+      "span": [
+       35,
+       61
+      ],
+      "groups": {
+       "title": "17-A",
+       "section": "202"
+      }
+     }
+    ],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Miss. Code Ann. § 97-3-19; Mississippi. Code § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "97-3-19"
+      }
+     },
+     {
+      "span": [
+       28,
+       50
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Mont. Code Ann. § 45-5-102 / MCA § 45-5-102 / the DMCA § 512 is not MCA § 5",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [
+     {
+      "span": [
+       0,
+       27
+      ],
+      "groups": {
+       "section": "45-5-102"
+      }
+     },
+     {
+      "span": [
+       30,
+       45
+      ],
+      "groups": {
+       "section": "45-5-102"
+      }
+     }
+    ],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Neb. Rev. Stat. § 28-303; Nebraska. Revised. Statutes. Ann. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "28-303"
+      }
+     },
+     {
+      "span": [
+       27,
+       65
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.M. Stat. Ann. § 30-2-1 / NMSA 1978 § 30-2-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "30-2-1"
+      }
+     },
+     {
+      "span": [
+       28,
+       47
+      ],
+      "groups": {
+       "section": "30-2-1"
+      }
+     }
+    ],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "N.D. Cent. Code § 12.1-16-01; N.D. Central. Code Ann. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "section": "12.1-16-01"
+      }
+     },
+     {
+      "span": [
+       31,
+       59
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Okla. Stat. tit. 21, § 701.7; Okla. Stat. Ann. tit. 21, § 701.7",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "title": "21",
+       "section": "701.7"
+      }
+     },
+     {
+      "span": [
+       31,
+       65
+      ],
+      "groups": {
+       "title": "21",
+       "section": "701.7"
+      }
+     }
+    ],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "R.I. Gen. Laws § 11-23-1; R.I. General. Law Ann. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "11-23-1"
+      }
+     },
+     {
+      "span": [
+       27,
+       54
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "S.D. Codified Laws § 22-16-1 / SDCL § 22-16-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [
+     {
+      "span": [
+       0,
+       29
+      ],
+      "groups": {
+       "section": "22-16-1"
+      }
+     },
+     {
+      "span": [
+       32,
+       47
+      ],
+      "groups": {
+       "section": "22-16-1"
+      }
+     }
+    ],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       5,
+       29
+      ],
+      "groups": {
+       "state": "Codified",
+       "section": "22-16-1"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Utah Code Ann. § 76-5-203; Utah Code § 76-5-203",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "76-5-203"
+      }
+     },
+     {
+      "span": [
+       28,
+       49
+      ],
+      "groups": {
+       "section": "76-5-203"
+      }
+     }
+    ],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "state": "Utah",
+       "section": "76-5-203"
+      }
+     },
+     {
+      "span": [
+       28,
+       49
+      ],
+      "groups": {
+       "state": "Utah",
+       "section": "76-5-203"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Vt. Stat. Ann. tit. 13, § 2301; Vt Stat. Stat. tit. 1 § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [
+     {
+      "span": [
+       33,
+       59
+      ],
+      "groups": {
+       "title": "1",
+       "section": "1"
+      }
+     }
+    ],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Wyo. Stat. Ann. § 6-2-101; Wyoming. Statutes. § 1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "section": "6-2-101"
+      }
+     },
+     {
+      "span": [
+       28,
+       51
+      ],
+      "groups": {
+       "section": "1"
+      }
+     }
+    ],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Alaska Stat. § 11.41.100 / AS § 11.41.100 / AS 11.41.100",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "section": "11.41.100"
+      }
+     },
+     {
+      "span": [
+       28,
+       43
+      ],
+      "groups": {
+       "section": "11.41.100"
+      }
+     },
+     {
+      "span": [
+       46,
+       58
+      ],
+      "groups": {
+       "section": "11.41.100"
+      }
+     }
+    ],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       25
+      ],
+      "groups": {
+       "state": "Alaska",
+       "section": "11.41.100"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "D.C. Code § 22-2101; D.C. Code Ann. § 1-1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [
+     {
+      "span": [
+       0,
+       20
+      ],
+      "groups": {
+       "section": "22-2101"
+      }
+     },
+     {
+      "span": [
+       22,
+       43
+      ],
+      "groups": {
+       "section": "1-1"
+      }
+     }
+    ],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Guam Code Ann. § 16.30; P.R. Laws Ann. tit. 33, § 4061; Puerto Rico Laws § 33",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       23
+      ],
+      "groups": {
+       "state": "Guam",
+       "section": "16.30"
+      }
+     },
+     {
+      "span": [
+       58,
+       80
+      ],
+      "groups": {
+       "state": "Puerto",
+       "section": "33"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Virgin Islands Code Ann. § 14.922; Wake Island Stat. § 12-3",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": [
+     {
+      "span": [
+       0,
+       34
+      ],
+      "groups": {
+       "state": "Virgin",
+       "section": "14.922"
+      }
+     },
+     {
+      "span": [
+       36,
+       61
+      ],
+      "groups": {
+       "state": "Wake",
+       "section": "12-3"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Müller v. Straße, 12 F.2d 34 (2d Cir. 1920) – naïve café ‘quotes’ 42 U.S.C. § 1983 ünïcode",
+   "matches": {
+    "case": [],
+    "usc": [
+     {
+      "span": [
+       76,
+       93
+      ],
+      "groups": {
+       "title": "42",
+       "section": "1983"
+      }
+     }
+    ],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "§ only §§ 4 U.S.C.§§1 and 4 U.S.C. §§§ 5",
+   "matches": {
+    "case": [],
+    "usc": [
+     {
+      "span": [
+       13,
+       26
+      ],
+      "groups": {
+       "title": "4",
+       "section": "1"
+      }
+     },
+     {
+      "span": [
+       31,
+       48
+      ],
+      "groups": {
+       "title": "4",
+       "section": "5"
+      }
+     }
+    ],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "no citations here at all, just prose.",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "A v. B, 1 U.S. 1\nC v. D, 2 U.S. 2 (1800)\nRestatement  (First)  of  Agency  §  1",
+   "matches": {
+    "case": [],
+    "usc": [],
+    "cfr": [],
+    "restatement": [
+     {
+      "span": [
+       41,
+       80
+      ],
+      "groups": {
+       "edition": "First",
+       "subject": "Agency",
+       "section": "1"
+      }
+     }
+    ],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "Doe v. Roe, 100 F. Supp. 2d 200, 205 (S.D.N.Y. 2000); In re X, 5 B.R. 6",
+   "matches": {
+    "case": [
+     {
+      "span": [
+       0,
+       26
+      ],
+      "groups": {
+       "case_name": "Doe v. Roe",
+       "volume": "100",
+       "reporter": "F. Supp.",
+       "page": "2",
+       "paren": null
+      }
+     }
+    ],
+    "usc": [],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  },
+  {
+   "text": "٤٢ U.S.C. § ٣٤ arabic-indic digits and １２ U.S.C. § １ fullwidth",
+   "matches": {
+    "case": [],
+    "usc": [
+     {
+      "span": [
+       0,
+       19
+      ],
+      "groups": {
+       "title": "٤٢",
+       "section": "٣٤"
+      }
+     },
+     {
+      "span": [
+       44,
+       64
+      ],
+      "groups": {
+       "title": "１２",
+       "section": "１"
+      }
+     }
+    ],
+    "cfr": [],
+    "restatement": [],
+    "revrul": [],
+    "njsa": [],
+    "njac": [],
+    "cal": [],
+    "ny": [],
+    "tex": [],
+    "ill": [],
+    "mass": [],
+    "pa": [],
+    "mich": [],
+    "fla": [],
+    "la": [],
+    "nh": [],
+    "va": [],
+    "ohio": [],
+    "wash": [],
+    "wv": [],
+    "md": [],
+    "ocga": [],
+    "ors": [],
+    "colo": [],
+    "conn": [],
+    "minn": [],
+    "mo": [],
+    "wis": [],
+    "ind": [],
+    "tenn": [],
+    "ariz": [],
+    "nev": [],
+    "ky": [],
+    "sc": [],
+    "nc": [],
+    "ala": [],
+    "ark": [],
+    "del": [],
+    "haw": [],
+    "idaho": [],
+    "iowa": [],
+    "kan": [],
+    "me": [],
+    "miss": [],
+    "mont": [],
+    "neb": [],
+    "nm": [],
+    "nd": [],
+    "okla": [],
+    "ri": [],
+    "sd": [],
+    "utah": [],
+    "vt": [],
+    "wyo": [],
+    "ak": [],
+    "dc": [],
+    "generic_state": []
+   }
+  }
+ ]
+}

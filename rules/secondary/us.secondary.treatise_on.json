@@ -1,0 +1,51 @@
+{
+  "id": "us.secondary.treatise_on",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "pattern": "\\b(?:(?P<volume>[0-9]{1,2})\\s+)?(?P<author>[A-Z][A-Za-z]+)\\s+on\\s+(?P<title>[A-Z][A-Za-z]+(?:\\s(?:and\\s)?[A-Z][A-Za-z]+){0,4})\\s+§\\s*(?P<section>[0-9]+(?::[0-9]+)?(?:\\.[0-9]+)*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "treatise/{author}/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 15 (books and treatises) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 15.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2 McCarthy on Trademarks and Unfair Competition § 15:2.",
+        "spans": [[4, 59]],
+        "groups": {
+          "volume": "2",
+          "author": "McCarthy",
+          "title": "Trademarks and Unfair Competition",
+          "section": "15:2"
+        }
+      },
+      {
+        "text": "The court relied on Chisum on Patents § 5.04 in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under 4 Nimmer on Copyright § 13.03, the claim fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "The law review editors met on Tuesday.",
+      "The restatement of earnings was filed in 2020.",
+      "A treatise on gardening runs 400 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

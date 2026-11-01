@@ -1,0 +1,54 @@
+{
+  "id": "intl.eu.ecli",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\bECLI:EU:(?P<court>[CTF]):(?P<year>(?:19|20)[0-9]{2}):(?P<number>[0-9]{1,6})\\b",
+  "priority": 62,
+  "normalize": "ECLI:EU:{court}:{year}:{number}",
+  "authority_key": "ecli/eu/{court}/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Council conclusions on the European Case Law Identifier (ECLI), OJ C 127, 29.4.2011, p. 1: ECLI:<country>:<court>:<year>:<ordinal>; EU courts C, T, F",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Council conclusions (OJ C 127, 29.4.2011, p. 1) annex on the ECLI format, and an EUR-Lex judgment page.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Case C-311/18, Data Prot. Comm’r v. Facebook Ireland Ltd., ECLI:EU:C:2020:559.",
+        "spans": [[61, 79]],
+        "groups": {
+          "court": "C",
+          "year": "2020",
+          "number": "559"
+        }
+      },
+      {
+        "text": "The court relied on ECLI:EU:T:2007:289 in its judgment.",
+        "spans": [[20, 38]]
+      },
+      {
+        "text": "Under ECLI:EU:C:2019:123, the claim fails.",
+        "spans": [[6, 24]]
+      }
+    ],
+    "negative": [
+      "The ECLI scheme began in 2011.",
+      "EU:C:2020 was a tag in the file.",
+      "ECLI numbers run to 559 a year."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates: none; EUR-Lex answered a scripted fetch of an ECLI URL with an empty 202 on 2026-10-23, so the template could not be verified."
+}

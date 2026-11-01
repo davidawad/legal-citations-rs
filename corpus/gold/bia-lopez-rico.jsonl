@@ -1,0 +1,84 @@
+{"start": 0, "end": 34, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 36, "end": 58, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 1363, "end": 1417, "kind": "statute", "jurisdiction": "us.fed", "text": "section 240A(a) of the Immigration and Nationality Act", "normalized": "INA § 240A(a)", "form": "prose section reference", "optional": true}
+{"start": 1431, "end": 1458, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C.\n§ 1229b(a) (2024)", "normalized": "8 U.S.C. § 1229b(a)", "form": "U.S.C."}
+{"start": 2163, "end": 2191, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 2193, "end": 2222, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6) (2012)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 2255, "end": 2289, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 2291, "end": 2313, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 2444, "end": 2475, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(3)(D) of the INA", "normalized": "INA § 237(a)(3)(D)", "form": "prose section reference", "optional": true}
+{"start": 2477, "end": 2509, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(3)(D) (2012)", "normalized": "8 U.S.C. § 1227(a)(3)(D)", "form": "U.S.C."}
+{"start": 2671, "end": 2699, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 2701, "end": 2723, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 2929, "end": 2957, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 2959, "end": 2981, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 3136, "end": 3195, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Fitzpatrick, 26 I&N Dec. 559, 560–61 (BIA 2015)", "normalized": "26 I&N Dec. 559", "form": "I&N Dec."}
+{"start": 3225, "end": 3244, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611(a)", "normalized": "18 U.S.C. § 611(a)", "form": "U.S.C."}
+{"start": 3357, "end": 3385, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 3387, "end": 3409, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 3447, "end": 3466, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611(a)", "normalized": "18 U.S.C. § 611(a)", "form": "U.S.C."}
+{"start": 4230, "end": 4258, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 4260, "end": 4282, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C.\n§ 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 4350, "end": 4410, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "McDonald v. Gonzales, 400 F.3d 684, 688–89 (9th Cir. 2005)", "normalized": "400 F.3d 684", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 4626, "end": 4645, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C.\n§ 611(a)", "normalized": "18 U.S.C. § 611(a)", "form": "U.S.C."}
+{"start": 4774, "end": 4805, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6)(B) of the INA", "normalized": "INA § 237(a)(6)(B)", "form": "prose section reference", "optional": true}
+{"start": 4807, "end": 4839, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)(B) (2024)", "normalized": "8 U.S.C. § 1227(a)(6)(B)", "form": "U.S.C."}
+{"start": 4931, "end": 4965, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 4967, "end": 4989, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 5042, "end": 5065, "kind": "case_short", "jurisdiction": "us.fed.eoir", "text": "26 I&N Dec. at 560–61", "normalized": "26 I&N Dec. at 560–61", "form": "short case (at)"}
+{"start": 5076, "end": 5127, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Kimani v. Holder, 695 F.3d 666, 669 (7th Cir. 2012)", "normalized": "695 F.3d 666", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 5142, "end": 5158, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611", "normalized": "18 U.S.C. § 611", "form": "U.S.C."}
+{"start": 5215, "end": 5281, "kind": "case", "jurisdiction": "us.fed.app.ca11", "text": "United States v. Knight, 490 F.3d 1268, 1270−71 (11th Cir. 2007)", "normalized": "490 F.3d 1268", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 5296, "end": 5312, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611", "normalized": "18 U.S.C. § 611", "form": "U.S.C."}
+{"start": 5495, "end": 5514, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611(a)", "normalized": "18 U.S.C. § 611(a)", "form": "U.S.C."}
+{"start": 5587, "end": 5617, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "McDonald, 400 F.3d\nat 688–89", "normalized": "400 F.3d at 688–89", "form": "short case (at)"}
+{"start": 5900, "end": 5928, "kind": "statute", "jurisdiction": "us.fed", "text": "section\n237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 5930, "end": 5952, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 6098, "end": 6126, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 6128, "end": 6150, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C.\n§ 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 6308, "end": 6370, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of CastilloPerez, 27 I&N Dec. 664, 670–71 (A.G. 2019)", "normalized": "27 I&N Dec. 664", "form": "I&N Dec.", "note": "Attorney General decision; Castillo-Perez with hyphen lost in extraction"}
+{"start": 6453, "end": 6504, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of C-V-T-, 22 I&N\nDec. 7, 11–12 (BIA 1998)", "normalized": "22 I&N Dec. 7", "form": "I&N Dec."}
+{"start": 6601, "end": 6627, "kind": "statute", "jurisdiction": "us.fed", "text": "section 240A(a) of the INA", "normalized": "INA § 240A(a)", "form": "prose section reference", "optional": true}
+{"start": 6629, "end": 6649, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1229b(a)", "normalized": "8 U.S.C. § 1229b(a)", "form": "U.S.C."}
+{"start": 6955, "end": 6964, "kind": "id", "jurisdiction": "us.fed.eoir", "text": "Id. at 11", "normalized": "Id. at 11", "form": "Id."}
+{"start": 6974, "end": 7027, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Marin, 16 I&N Dec. 581, 584–85\n(BIA 1978)", "normalized": "16 I&N Dec. 581", "form": "I&N Dec."}
+{"start": 7369, "end": 7372, "kind": "id", "jurisdiction": "us.fed.eoir", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 7669, "end": 7700, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(3)(D) of the INA", "normalized": "INA § 237(a)(3)(D)", "form": "prose section reference", "optional": true}
+{"start": 7702, "end": 7727, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(3)(D)", "normalized": "8 U.S.C. § 1227(a)(3)(D)", "form": "U.S.C."}
+{"start": 7892, "end": 7920, "kind": "statute", "jurisdiction": "us.fed", "text": "section 237(a)(6) of the INA", "normalized": "INA § 237(a)(6)", "form": "prose section reference", "optional": true}
+{"start": 7922, "end": 7944, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 7962, "end": 7996, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 7998, "end": 8020, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 8126, "end": 8129, "kind": "id", "jurisdiction": "us.fed.eoir", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 9594, "end": 9629, "kind": "case_short", "jurisdiction": "us.fed.eoir", "text": "Matter of Marin, 16 I&N Dec. at 584", "normalized": "16 I&N Dec. at 584", "form": "short case (at)"}
+{"start": 9726, "end": 9773, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Thomas, 21 I&N Dec. 20, 23 (BIA 1995)", "normalized": "21 I&N Dec. 20", "form": "I&N Dec."}
+{"start": 10392, "end": 10442, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Bain,\n29 I&N Dec. 72, 74–75 (BIA 2025)", "normalized": "29 I&N Dec. 72", "form": "I&N Dec."}
+{"start": 10619, "end": 10667, "kind": "case", "jurisdiction": "us.scotus", "text": "Begay v. United\nStates, 553 U.S. 137, 141 (2008)", "normalized": "553 U.S. 137", "form": "U.S. Reports"}
+{"start": 10825, "end": 10859, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 10861, "end": 10883, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 12399, "end": 12449, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Marques, 16 I&N Dec. 314, 316 (BIA 1977)", "normalized": "16 I&N Dec. 314", "form": "I&N Dec."}
+{"start": 12974, "end": 12977, "kind": "id", "jurisdiction": "us.fed.eoir", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 12986, "end": 13031, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Li, 15 I&N Dec. 514, 515 (BIA 1975)", "normalized": "15 I&N Dec. 514", "form": "I&N Dec."}
+{"start": 13033, "end": 13088, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Mariani, 11 I&N\nDec. 210, 211–12 (BIA 1965)", "normalized": "11 I&N Dec. 210", "form": "I&N Dec."}
+{"start": 13520, "end": 13575, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Matter of Guevara, 20 I&N Dec.\n238, 242–44 (BIA 1991)", "normalized": "20 I&N Dec. 238", "form": "I&N Dec."}
+{"start": 13771, "end": 13808, "kind": "case_short", "jurisdiction": "us.fed.eoir", "text": "Matter of Marques, 16 I&N Dec. at 316", "normalized": "16 I&N Dec. at 316", "form": "short case (at)"}
+{"start": 14011, "end": 14045, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Cite as 29 I&N Dec. 780 (BIA 2026)", "normalized": "29 I&N Dec. 780", "form": "page furniture", "optional": true}
+{"start": 14047, "end": 14069, "kind": "agency_decision", "jurisdiction": "us.fed.eoir", "text": "Interim Decision #4223", "normalized": "Interim Decision #4223", "form": "page furniture", "optional": true}
+{"start": 14118, "end": 14164, "kind": "case", "jurisdiction": "us.scotus", "text": "Pereida v. Wilkinson, 592 U.S.\n224, 240 (2021)", "normalized": "592 U.S. 224", "form": "U.S. Reports"}
+{"start": 14308, "end": 14378, "kind": "case", "jurisdiction": "us.scotus", "text": "United States ex rel. Bilokumsky v. Tod, 263 U.S. 149, 153–54 (1923)", "normalized": "263 U.S. 149", "form": "U.S. Reports"}
+{"start": 14389, "end": 14435, "kind": "case", "jurisdiction": "us.scotus", "text": "Baxter v. Palmigiano, 425 U.S. 308, 318 (1976)", "normalized": "425 U.S. 308", "form": "U.S. Reports"}
+{"start": 14839, "end": 14895, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Gutierrez v. Holder, 662 F.3d 1083, 1091 (9th Cir. 2011)", "normalized": "662 F.3d 1083", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 14904, "end": 14958, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Zuniga v. Garland, 86 F.4th 1236, 1240 (9th Cir. 2023)", "normalized": "86 F.4th 1236", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 16201, "end": 16220, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. § 611(a)", "normalized": "18 U.S.C. § 611(a)", "form": "U.S.C."}
+{"start": 16297, "end": 16313, "kind": "statute", "jurisdiction": "us.fed", "text": "INA § 237(a)(6)", "normalized": "INA § 237(a)(6)", "form": "INA section"}
+{"start": 16315, "end": 16337, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1227(a)(6)", "normalized": "8 U.S.C. § 1227(a)(6)", "form": "U.S.C."}
+{"start": 16339, "end": 16379, "kind": "case_short", "jurisdiction": "us.fed.eoir", "text": "Matter of Marin, 16 I&N Dec. at 584–85", "normalized": "16 I&N Dec. at 584–85", "form": "short case (at)"}
+{"start": 16821, "end": 16884, "kind": "case", "jurisdiction": "us.scotus", "text": "Crawford v. Marion\nCnty. Election Bd., 553 U.S. 181, 196 (2008)", "normalized": "553 U.S. 181", "form": "U.S. Reports"}
+{"start": 16893, "end": 17027, "kind": "case", "jurisdiction": "us.scotus", "text": "Brnovich v.\npage\n\n785\n\n\fCite as 29 I&N Dec. 780 (BIA 2026)\n\nInterim Decision #4223\n\nDemocratic Nat’l Comm., 594 U.S. 647, 685 (2021)", "normalized": "594 U.S. 647", "form": "U.S. Reports", "note": "case name split by a page break; span includes the page number and running head"}
+{"start": 17029, "end": 17071, "kind": "case", "jurisdiction": "us.scotus", "text": "Doe v. Reed, 561 U.S.\n186, 197–98 (2010)", "normalized": "561 U.S. 186", "form": "U.S. Reports"}
+{"start": 17073, "end": 17114, "kind": "case", "jurisdiction": "us.scotus", "text": "Purcell v. Gonzalez, 549 U.S. 1, 4 (2006)", "normalized": "549 U.S. 1", "form": "U.S. Reports"}
+{"start": 18627, "end": 18650, "kind": "statute", "jurisdiction": "us.fed", "text": "section\n274D of the INA", "normalized": "INA § 274D", "form": "prose section reference", "optional": true}
+{"start": 18652, "end": 18676, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1324d (2024)", "normalized": "8 U.S.C. § 1324d", "form": "U.S.C."}
+{"start": 18678, "end": 18710, "kind": "regulation", "jurisdiction": "us.fed", "text": "8 C.F.R. § 280.53(b)(14) (2026)", "normalized": "8 C.F.R. § 280.53(b)(14)", "form": "C.F.R."}
+{"start": 19039, "end": 19052, "kind": "statute", "jurisdiction": "us.fed", "text": "INA § 276(a)", "normalized": "INA § 276(a)", "form": "INA section"}
+{"start": 19054, "end": 19080, "kind": "statute", "jurisdiction": "us.fed", "text": "8 U.S.C. § 1326(a) (2024)", "normalized": "8 U.S.C. § 1326(a)", "form": "U.S.C."}

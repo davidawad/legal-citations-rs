@@ -1,0 +1,75 @@
+{
+  "id": "us.scotus.docket.slip_op",
+  "kind": "docket",
+  "jurisdiction": "us.scotus",
+  "pattern": "\\bNo\\.\\s?(?P<docket>[0-9]{2}-[0-9]{1,5}|[0-9]{2}A[0-9]{1,4}),\\s+slip\\s+op\\.\\s+at\\s+(?P<pin>[0-9]{1,4}(?:[-–][0-9]{1,4})?)\\s\\(U\\.\\s?S\\.\\s(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s[0-9]{1,2},\\s(?:19|20)[0-9]{2})\\)",
+  "priority": 62,
+  "normalize": "No. {docket}, slip op. at {pin} (U.S. {date})",
+  "authority_key": "us.scotus.docket/{docket}",
+  "url_templates": [
+    "https://www.supremecourt.gov/docket/docketfiles/html/public/{docket}.html"
+  ],
+  "url_decoders": [
+    "supremecourt.gov/docket/docketfiles/html/public/{docket}.html"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R12.4.2 (Slip opinions), for a United States Supreme Court slip opinion",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, R12.4.2 (Slip opinions), and compare the form with this pattern; open the Supreme Court docket page the template builds for a docket number.",
+    "derived_from": [
+      "crates/legal-citations/rules/docket/us.docket.slip_op.json"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Moore v. Harper, No. 21-1271, slip op. at 5 (U.S. June 27, 2023).",
+        "spans": [
+          [
+            17,
+            64
+          ]
+        ],
+        "groups": {
+          "docket": "21-1271",
+          "pin": "5",
+          "date": "June 27, 2023"
+        }
+      },
+      {
+        "text": "See 303 Creative LLC v. Elenis, No. 21-476, slip op. at 8-9 (U.S. June 30, 2023).",
+        "spans": [
+          [
+            32,
+            80
+          ]
+        ]
+      },
+      {
+        "text": "Compare No. 20-1199, slip op. at 12 (U.S. June 29, 2023) with No. 22A884, slip op. at 1 (U.S. Apr. 21, 2023).",
+        "spans": [
+          [
+            8,
+            56
+          ],
+          [
+            62,
+            108
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The U.S. slip opinion came out on June 30, 2023.",
+      "Docket 21-476 (U.S. June 30, 2023) was argued in December.",
+      "The slip op. at the Supreme Court runs 70 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A Supreme Court slip opinion: the `(U.S. <date>)` parenthetical names the Court, so the docket number has a home. Priority 62: above us.docket.slip_op (60, the same cite without the court), below us.case.slip_op_online (65, a slip opinion followed by its URL). Slip-opinion PDFs carry a suffix the cite does not give (21-476_c185.pdf), so the template is the docket page, which lists the opinion. url_templates verified by HTTP fetch on 2026-10-23: https://www.supremecourt.gov/docket/docketfiles/html/public/21-476.html answers 200 (also 20-1199 and the application docket 23A12; 99-99999 answers 404)."
+}

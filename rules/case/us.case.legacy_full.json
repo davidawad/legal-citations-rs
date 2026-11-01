@@ -1,0 +1,60 @@
+{
+  "id": "us.case.legacy_full",
+  "kind": "case",
+  "jurisdiction": "us",
+  "pattern": "(?P<case_name>[A-Z][A-Za-z ,.\\'\\-]+?(?:v\\.|versus)\\s+[A-Z][A-Za-z ,.\\'\\-]+?),\\s*(?P<volume>[0-9]+)\\s+(?P<reporter>[A-Z][A-Za-z. ]{1,18}?)\\s+(?P<page>[0-9]+)(?:,\\s*[0-9]+)?(?:\\s*\\((?P<paren>[^)]{3,40})\\))?",
+  "priority": 1,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Legacy full case citation shape",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Superseded; see us.case.* reporter rules.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py CASE_FULL_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Brown v. Board, 347 U.S. 483.",
+        "spans": [[0, 32]],
+        "groups": {
+          "case_name": "See Brown v. Board",
+          "volume": "347",
+          "reporter": "U.S.",
+          "page": "483"
+        }
+      },
+      {
+        "text": "The court relied on Brown v. Board, 347 U.S. 490 in reaching its holding.",
+        "spans": [[0, 48]]
+      },
+      {
+        "text": "Under Brown v. Board, 347 U.S. 497, the claim fails.",
+        "spans": [[0, 34]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "case",
+    "order": 0,
+    "pattern": "(?P<case_name>[A-Z][A-Za-z ,.\\'\\-]+?(?:v\\.|versus)\\s+[A-Z][A-Za-z ,.\\'\\-]+?),\\s*(?P<volume>\\d+)\\s+(?P<reporter>[A-Z][A-Za-z. ]{1,18}?)\\s+(?P<page>\\d+)(?:,\\s*\\d+)?(?:\\s*\\((?P<paren>[^)]{3,40})\\))?"
+  },
+  "retired": "Superseded by reporter-family rules: the legacy reporter class has no digits, so it misses F.2d/F.3d/F.4th (e.g. 'Smith v. Jones, 123 F.3d 456' is not matched). Kept for legacy parity mode only.",
+  "note": ""
+}

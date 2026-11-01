@@ -1,0 +1,55 @@
+{
+  "id": "foreign.sa.scca",
+  "kind": "foreign",
+  "jurisdiction": "foreign.sa",
+  "tags": [
+    "mena",
+    "gcc",
+    "sa",
+    "arbitration"
+  ],
+  "pattern": "\\b(?:SCCA|Saudi\\s+Center\\s+for\\s+Commercial\\s+Arbitration)\\s+(?:Case|Arbitration)\\s+No\\.?\\s*(?P<number>[0-9]{1,6})(?:\\s+of\\s+|\\s*[/-]\\s*)(?P<year>(?:19|20)[0-9]{2})",
+  "priority": 60,
+  "normalize": "SCCA Case No. {number} of {year}",
+  "authority_key": "sa.scca/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "SCCA case references (assumed form: SCCA Case No. N of YYYY)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "SCCA awards are mostly unpublished; check SCCA rules and any published award citing a case number to confirm the real numbering form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See SCCA Case No. 123 of 2021.",
+        "spans": [[4, 29]],
+        "groups": {
+          "number": "123",
+          "year": "2021"
+        }
+      },
+      {
+        "text": "Saudi Center for Commercial Arbitration Case No. 45/2019 was filed.",
+        "spans": [[0, 56]]
+      },
+      {
+        "text": "SCCA Arbitration No. 8-2022 and SCCA Case No. 9 of 2023",
+        "spans": [[0, 27], [32, 55]]
+      }
+    ],
+    "negative": [
+      "SCCA is based in Riyadh.",
+      "SCCA Case management rules apply.",
+      "The SCCA case was filed in 2021."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Numbering form not pinned down: SCCA publishes no public case-citation convention; this is a guessed reasonable form."
+}

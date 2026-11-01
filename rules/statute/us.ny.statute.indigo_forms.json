@@ -1,0 +1,112 @@
+{
+  "id": "us.ny.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.ny",
+  "pattern": "\\b(?:N\\.Y\\.\\s?[A-Z][A-Za-z.'’&-]*(?:\\s(?:&\\s)?[A-Z][A-Za-z.'’&-]*){0,5}\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 New York: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 New York, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 519",
+      "corpus/formats/indigo.jsonl line 520",
+      "corpus/formats/indigo.jsonl line 521"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.Y. Fam. Ct. Act § 45 (McKinney 2015).",
+        "spans": [[4, 27]],
+        "groups": {}
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 53 (McKinney 2014).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 41 (McKinney 2013).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See N.Y. Fam. Ct. Act § 13 (Consol. 2015).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 45 (Consol. 2014).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 29 (Consol. 2013).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See N.Y. Fam. Ct. Act § 1 (LexisNexis 2015).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 45 (LexisNexis 2014).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 29 (LexisNexis 2013).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See N.Y. Fam. Ct. Act § 78 (McKinney 5348).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 86 (McKinney 5347).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 74 (McKinney 5346).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See N.Y. Fam. Ct. Act § 46 (Consol. 5348).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 78 (Consol. 5347).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 52 (Consol. 5346).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See N.Y. Fam. Ct. Act § 4 (LexisNexis 5348).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Ct. Cl. Act § 78 (LexisNexis 5347).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See N.Y. Uniform Dist. Ct. Act § 52 (LexisNexis 5346).",
+        "spans": [[4, 36]]
+      }
+    ],
+    "negative": [
+      "The New York code was amended in 2015.",
+      "Section 12 of the New York rules is long.",
+      "Title five of the New York compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

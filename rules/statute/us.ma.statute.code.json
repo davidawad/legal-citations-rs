@@ -1,0 +1,57 @@
+{
+  "id": "us.ma.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ma",
+  "pattern": "Mass(?:achusetts)?\\.\\s+Gen(?:eral)?\\.\\s+Laws?\\s+ch\\.\\s*(?P<chapter>[0-9\\w]+),?\\s*§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Massachusetts) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Massachusetts entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py MASS pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mass. Gen. Laws ch. 93A, § 2.",
+        "spans": [[4, 33]],
+        "groups": {
+          "chapter": "93A",
+          "section": "2"
+        }
+      },
+      {
+        "text": "The court relied on Massachusetts. General. Laws ch. 12 §§ 11H in reaching its holding.",
+        "spans": [[20, 64]]
+      },
+      {
+        "text": "Under Mass. Gen. Laws ch. 93A, § 9, the claim fails.",
+        "spans": [[6, 35]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "mass",
+    "order": 11,
+    "pattern": "Mass(?:achusetts)?\\.\\s+Gen(?:eral)?\\.\\s+Laws?\\s+ch\\.\\s*(?P<chapter>[\\d\\w]+),?\\s*§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

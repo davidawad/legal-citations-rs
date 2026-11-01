@@ -1,0 +1,55 @@
+{
+  "id": "foreign.sg.slr",
+  "kind": "foreign",
+  "jurisdiction": "foreign.sg",
+  "tags": [
+    "foreign",
+    "singapore"
+  ],
+  "pattern": "\\[(?P<year>(?:19|20)[0-9]{2})\\]\\s+(?P<volume>[0-9])\\s+(?P<reporter>SLR\\(R\\)|SLR|MLJ)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "[{year}] {volume} {reporter} {page}",
+  "authority_key": "sg.slr/{reporter}/{year}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Singapore Law Reports ([<year>] <vol> SLR <page>; reissue SLR(R))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Singapore Academy of Law's Singapore Law Reports citation guide and Bluebook T2 (Singapore).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Spandeck Engineering v DSTA [2007] 4 SLR(R) 100.",
+        "spans": [[28, 47]],
+        "groups": {
+          "year": "2007",
+          "volume": "4",
+          "reporter": "SLR(R)",
+          "page": "100"
+        }
+      },
+      {
+        "text": "See [2014] 1 SLR 372.",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "[1990] 1 MLJ 1 was followed.",
+        "spans": [[0, 14]]
+      }
+    ],
+    "negative": [
+      "The SLR camera cost 100 dollars.",
+      "[2014] saw 1 SLR change.",
+      "MLJ volume 1 is out."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

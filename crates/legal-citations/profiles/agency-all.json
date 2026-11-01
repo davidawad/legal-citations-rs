@@ -1,0 +1,11 @@
+{
+  "name": "agency-all",
+  "description": "Every agency material: the Federal Register, agency manuals, agency decisions and rulings, and regulations.",
+  "include": [
+    "family:agency",
+    "family:regulation",
+    "tag:agency"
+  ],
+  "exclude": [],
+  "note": ""
+}

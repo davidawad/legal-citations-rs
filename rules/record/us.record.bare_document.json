@@ -1,0 +1,81 @@
+{
+  "id": "us.record.bare_document",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<doc>(?:(?:First|Second|Third)\\s+)?Am\\.\\s+Compl\\.|Compl\\.|Countercl\\.|Mem\\.\\s+(?:in\\s+)?(?:Opp(?:’|')n|Supp\\.)|(?:Opening|Reply|Answering|Response)\\s+Br\\.)\\s+(?:at\\s+)?(?P<pin>¶¶?\\s?[0-9]{1,4}(?:\\s?[–-]\\s?[0-9]{1,4})?|[0-9]{1,4}(?:\\s?[–-]\\s?[0-9]{1,4})?)\\b(?:,\\s(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s[0-9]{1,2},\\s(?:19|20)[0-9]{2}))?(?:,\\s(?P<ecf>ECF\\s+No\\.\\s?[0-9]{1,5}))?",
+  "priority": 55,
+  "normalize": "{doc} {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R24.5 (parenthetical court document cite)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R24.5 (parenthetical court document cite), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The facts are undisputed (Mem. Opp’n 7).",
+        "spans": [
+          [
+            26,
+            40
+          ]
+        ],
+        "groups": {
+          "doc": "Mem. Opp’n",
+          "pin": "7"
+        }
+      },
+      {
+        "text": "See Compl. ¶ 12 and Am. Compl. ¶¶ 4–6.",
+        "spans": [
+          [
+            4,
+            16
+          ],
+          [
+            21,
+            42
+          ]
+        ]
+      },
+      {
+        "text": "Compare Opening Br. 22 with Reply Br. at 3, May 2, 2016.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            55
+          ]
+        ]
+      },
+      {
+        "text": "The facts are pleaded (Compl. ¶ 5).",
+        "spans": [
+          [
+            23,
+            34
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Compl. was filed in 2014.",
+      "Mem. Opp’n due May 5.",
+      "Reply Br. pages are short."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A party-less document title; us.record.party_document (60) wins when a party abbreviation precedes it."
+}

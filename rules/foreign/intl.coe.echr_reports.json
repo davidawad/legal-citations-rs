@@ -1,0 +1,62 @@
+{
+  "id": "intl.coe.echr_reports",
+  "kind": "foreign",
+  "jurisdiction": "intl.coe",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2}-[IVXL]{1,5}|[0-9]{1,3})\\s+Eur\\.\\s+Ct\\.\\s+H\\.\\s?R\\.(?:\\s+\\(ser\\.\\s+(?P<series>[AB])\\))?(?:\\s+(?:at\\s+)?(?P<page>[0-9]{1,5})(?:,\\s+(?P<pin>[0-9]{1,5}))?\\b|\\s+\\((?P<year>(?:19|20)[0-9]{2})\\)(?:,?\\s+¶¶?\\s*(?P<para>[0-9]{1,4}))?)",
+  "priority": 62,
+  "normalize": "{volume} Eur. Ct. H.R. {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Court of Human Rights Reports of Judgments and Decisions, <vol> Eur. Ct. H.R. (ser. A) <page> and <year>-<part> Eur. Ct. H.R. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Handyside v. United Kingdom, 24 Eur. Ct. H.R. (ser. A) at 23 (1976).",
+        "spans": [[29, 60]],
+        "groups": {
+          "volume": "24",
+          "series": "A",
+          "page": "23"
+        }
+      },
+      {
+        "text": "Hirst v. United Kingdom (No. 2), 2005-IX Eur. Ct. H.R. 187.",
+        "spans": [[33, 58]]
+      },
+      {
+        "text": "Selmouni v. France, 1999-V Eur. Ct. H.R. 149, 182.",
+        "spans": [[20, 49]]
+      },
+      {
+        "text": "Dudgeon v. United Kingdom, 45 Eur. Ct. H. R. (1981) ¶ 52.",
+        "spans": [[27, 57]]
+      },
+      {
+        "text": "Norris v. Ireland, 142 Eur. Ct. H. R. (1988).",
+        "spans": [[19, 44]]
+      }
+    ],
+    "negative": [
+      "H.R. 187 was referred to committee.",
+      "The Eur. Ct. sat 24 judges.",
+      "The court heard 187 human rights cases."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: series A volume pages and Reports year-part pages are different keys and the series group is optional."
+}

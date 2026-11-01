@@ -1,0 +1,64 @@
+{
+  "id": "us.short.case_at",
+  "kind": "case_short",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>U\\.\\s?S\\.|S\\.\\s?Ct\\.|L\\.\\s?Ed\\.(?:\\s?2d)?|F\\.\\s?Supp\\.(?:\\s?[23]d)?|F\\.\\s?App(?:'|’)x|F\\.(?:\\s?(?:2d|3d|4th))?|F\\.R\\.D\\.|B\\.R\\.|Fed\\.\\s?Cl\\.|U\\.?S\\.?P\\.?Q\\.?\\s?(?:2d)?|(?:A|P|N\\.E|N\\.W|S\\.E|S\\.W|So)\\.(?:\\s?[23]d)?|Cal\\.\\s?Rptr\\.(?:\\s?[23]d)?|N\\.Y\\.S\\.(?:\\s?[23]d)?)\\s+at\\s+(?P<pin>[0-9]{1,5}(?:\\s?[-–‒—]\\s?[0-9]{1,5})?)\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} at {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 10.9 (short forms for cases) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 10.9(a).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Upjohn, 449 U.S. at 389.",
+        "spans": [[12, 27]],
+        "groups": {
+          "volume": "449",
+          "reporter": "U.S.",
+          "pin": "389"
+        }
+      },
+      {
+        "text": "The court relied on Smith, 123 F.3d at 460 in reaching its holding.",
+        "spans": [[27, 42]]
+      },
+      {
+        "text": "Under Bauer, 332 F. Supp. 3d at 190, the claim fails.",
+        "spans": [[13, 35]]
+      },
+      {
+        "text": "See Bruen, 597 U.S. at 31–32.",
+        "spans": [[11, 30]],
+        "groups": {
+          "pin": "31–32"
+        }
+      },
+      {
+        "text": "Bousley, 523 U.S. at 49‒52, controls.",
+        "spans": [[9, 28]],
+        "groups": {
+          "pin": "49‒52"
+        }
+      }
+    ],
+    "negative": [
+      "The meeting started at 9 and ended at 11.",
+      "He arrived at 5 p.m. with 3 boxes.",
+      "Volume 12 at the library is missing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authority is inherited from the nearest earlier full cite with the same volume and reporter. lcr-53x: pin and page ranges accept a hyphen, en dash (U+2013), figure dash (U+2012) or em dash."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.irs.delegation_order",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.irs",
+  "pattern": "\\bDeleg\\.\\s+Order\\s+(?:No\\.\\s?)?(?P<number>[0-9]{1,3}-[0-9]{1,3}[A-Z]?)(?:\\s+\\(Rev\\.\\s+(?P<rev>[0-9]{1,2})\\))?",
+  "priority": 60,
+  "normalize": "Deleg. Order {number}",
+  "authority_key": "us.irs.deleg_order/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "tax"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of the Treasury (Other Treasury Determinations: Deleg. Order)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of the Treasury (Other Treasury Determinations: Deleg. Order), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Deleg. Order 25-7 (Rev. 1) (Apr. 28, 2011).",
+        "spans": [
+          [
+            4,
+            30
+          ]
+        ],
+        "groups": {
+          "number": "25-7",
+          "rev": "1"
+        }
+      },
+      {
+        "text": "Authority comes from Deleg. Order 4-24.",
+        "spans": [
+          [
+            21,
+            38
+          ]
+        ]
+      },
+      {
+        "text": "Compare Deleg. Order No. 5-1 (Rev. 2) with Deleg. Order 1-23.",
+        "spans": [
+          [
+            8,
+            37
+          ],
+          [
+            43,
+            60
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The delegation order of 2011 is cited.",
+      "Deleg. Order was revised 7 times.",
+      "Order 25-7 of the delegation."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

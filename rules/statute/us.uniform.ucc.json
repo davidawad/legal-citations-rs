@@ -1,0 +1,71 @@
+{
+  "id": "us.uniform.ucc",
+  "kind": "statute",
+  "jurisdiction": "us.uniform",
+  "tags": [
+    "uniform-law"
+  ],
+  "pattern": "\\bU\\.?\\s?C\\.?\\s?C\\.?\\s+§{1,2}\\s?(?P<section>[0-9]{1,2}A?-[0-9]{3}[A-Za-z]?)(?P<subsection>(?:\\([0-9a-z]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "U.C.C. § {section}{subsection}",
+  "authority_key": "us.ucc/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (uniform acts: U.C.C.) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (uniform acts) and check the `U.C.C. § 2-207 (Am. L. Inst. & Unif. L. Comm'n 2022)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See U.C.C. § 2-207(2) (Am. L. Inst. & Unif. L. Comm'n 2022).",
+        "spans": [
+          [
+            4,
+            22
+          ]
+        ],
+        "groups": {
+          "section": "2-207",
+          "subsection": "(2)"
+        }
+      },
+      {
+        "text": "Perfection is governed by UCC § 9-310 and its comments.",
+        "spans": [
+          [
+            26,
+            38
+          ]
+        ]
+      },
+      {
+        "text": "Compare U.C.C. § 2A-103(1)(j) with U.C.C. §§ 1-201.",
+        "spans": [
+          [
+            8,
+            30
+          ],
+          [
+            36,
+            53
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The UCC applies to sales of goods.",
+      "U.C.C. Article 9 governs secured transactions.",
+      "See N.Y. U.C.C. Law art. 2."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "A state's enacted U.C.C. cited through its own code (`N.Y. U.C.C. Law § 2-207`) also matches from `U.C.C.`; the state prefix is not in the span. Kind statute: Bluebook R. 12.9.4 and the Indigo Book cite uniform acts as statutes (section form, not a title and page)."
+}

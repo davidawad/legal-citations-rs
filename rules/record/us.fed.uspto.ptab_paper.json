@@ -1,0 +1,75 @@
+{
+  "id": "us.fed.uspto.ptab_paper",
+  "kind": "record",
+  "jurisdiction": "us.fed.uspto",
+  "tags": [
+    "ptab",
+    "uspto"
+  ],
+  "pattern": "\\bPaper\\s+(?:No\\.\\s*)?(?P<paper>[0-9]{1,4})\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,4}(?:\\s?[-–]\\s?[0-9]{1,4})?))?",
+  "reject_before": [
+    "(?:White|Working|Discussion|Green|Position|Issue|Research|Policy|Concept|Staff|Term|Occasional|Background)\\s$"
+  ],
+  "priority": 55,
+  "normalize": "Paper {paper}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "PTAB citation practice (`IPR2018-00752, Paper 8 at 5`); 37 C.F.R. § 42.6 papers",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a PTAB precedential decision list at https://www.uspto.gov/patents/ptab/precedential-informative-decisions and compare the `Paper N` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Board instituted review. IPR2018-00752, Paper 8 at 5.",
+        "spans": [
+          [
+            44,
+            56
+          ]
+        ],
+        "groups": {
+          "paper": "8",
+          "pin": "5"
+        }
+      },
+      {
+        "text": "See Paper No. 12.",
+        "spans": [
+          [
+            4,
+            16
+          ]
+        ]
+      },
+      {
+        "text": "Compare Paper 10, at 4–6 with Paper 15.",
+        "spans": [
+          [
+            8,
+            26
+          ],
+          [
+            32,
+            40
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The paper was long.",
+      "White Paper 3 explains it.",
+      "Paper No. pending"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us.fl.secondary.bar_ethics_opinion",
+  "kind": "secondary",
+  "jurisdiction": "us.fl",
+  "tags": [
+    "ethics"
+  ],
+  "pattern": "\\b(?:Fla\\.|Florida)\\s+Bar\\s+(?:Pro(?:\\.|f(?:['’]l|essional))\\s+Ethics\\s+Comm(?:\\.|ittee),?\\s+)?(?:Ethics\\s+|Advisory\\s+)?Op(?:inion|n|\\.)\\.?\\s+(?:No\\.\\s*)?(?P<number>[0-9]{2}-[0-9]{1,2})\\b",
+  "priority": 60,
+  "normalize": "Fla. Bar Ethics Op. {number}",
+  "authority_key": "us.fl.bar_ethics/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Florida Bar Professional Ethics Committee opinions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Florida Bar ethics opinions at https://www.floridabar.org/etopinions/ and compare the numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Metadata must be protected. Fla. Bar Ethics Op. 06-2.",
+        "spans": [
+          [
+            28,
+            52
+          ]
+        ],
+        "groups": {
+          "number": "06-2"
+        }
+      },
+      {
+        "text": "See Florida Bar Prof’l Ethics Comm., Op. 90-1.",
+        "spans": [
+          [
+            4,
+            47
+          ]
+        ]
+      },
+      {
+        "text": "Compare Fla. Bar Op. 12-3 with Florida Bar Advisory Op. 21-1.",
+        "spans": [
+          [
+            8,
+            25
+          ],
+          [
+            31,
+            60
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Fla. Bar ethics hotline",
+      "Fla. Bar Ethics Op. pending",
+      "Florida Bar Op. 2"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

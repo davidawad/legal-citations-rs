@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.legislative.congressional_record",
+  "kind": "legislative",
+  "jurisdiction": "us.fed.congress",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+(?P<series>Cong\\.\\s?Rec\\.|Cong\\.\\s?Globe)\\s+(?P<page>[HSE][0-9]{1,5}|[0-9]{1,3},[0-9]{3}|[0-9]{1,5})\\b(?:\\s*[-–]\\s*(?P<page_end>[HSE]?[0-9]{1,5}))?(?:\\s*\\((?P<edition>daily\\s+ed\\.\\s+)?(?:(?P<date>(?:Jan\\.|January|Feb\\.|February|Mar\\.|March|Apr\\.|April|May|June?|July?|Aug\\.|August|Sept\\.|September|Oct\\.|October|Nov\\.|November|Dec\\.|December)\\s+[0-9]{1,2}),\\s+)?(?P<year>[0-9]{4})\\))?",
+  "priority": 60,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "us.crec/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 13.5 (congressional debates) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 13.5 and check the `167 Cong. Rec. S1234 (daily ed. Mar. 1, 2021)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 167 Cong. Rec. S1234 (daily ed. Mar. 1, 2021) (statement of Sen. Smith).",
+        "spans": [
+          [
+            4,
+            49
+          ]
+        ],
+        "groups": {
+          "volume": "167",
+          "page": "S1234",
+          "edition": "daily ed. ",
+          "year": "2021"
+        }
+      },
+      {
+        "text": "Floor debate is reported at 152 Cong. Rec. 12,345 (2006).",
+        "spans": [
+          [
+            28,
+            56
+          ]
+        ]
+      },
+      {
+        "text": "Compare 116 Cong. Rec. H5678-H5680 with 45 Cong. Globe 123.",
+        "spans": [
+          [
+            8,
+            34
+          ],
+          [
+            40,
+            58
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Congressional Record for 2021 runs 167 volumes.",
+      "Cong. Rec. entries are indexed.",
+      "The Senate met 167 days."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

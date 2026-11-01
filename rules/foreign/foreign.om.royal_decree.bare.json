@@ -1,0 +1,54 @@
+{
+  "id": "foreign.om.royal_decree.bare",
+  "kind": "foreign",
+  "jurisdiction": "foreign.om",
+  "tags": [
+    "mena",
+    "gcc",
+    "om"
+  ],
+  "pattern": "\\bRoyal\\s+Decree\\s+(?:No\\.?\\s*)?\\(?(?P<number>[0-9]{1,3})/(?P<year>(?:19|20)[0-9]{2})\\)?",
+  "priority": 59,
+  "normalize": "Royal Decree No. {number}/{year}",
+  "authority_key": "om.royal_decree/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.5,
+  "provenance": {
+    "encodes": "Oman legislation convention: Royal Decree No. N/YYYY (WIPO Lex: Law on Civil and Commercial Procedure promulgated by Royal Decree No. 29/2002)",
+    "opened": false,
+    "source_url": "https://www.wipo.int/wipolex/en/legislation/details/22430",
+    "how_to_verify": "Open https://www.wipo.int/wipolex/en/legislation/details/22430 and decree.om entries for the Royal Decree No. N/YYYY form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Promulgated by Royal Decree No. 29/2002.",
+        "spans": [[15, 39]],
+        "groups": {
+          "number": "29",
+          "year": "2002"
+        }
+      },
+      {
+        "text": "See Royal Decree 6/2020 and Royal Decree No. (42/2013).",
+        "spans": [[4, 23], [28, 54]]
+      },
+      {
+        "text": "Royal Decree No. 55/1990 predates it.",
+        "spans": [[0, 24]]
+      }
+    ],
+    "negative": [
+      "The Royal Decree was issued in 2002.",
+      "Royal Decree No. 29 was issued.",
+      "The Royal Decree 2002 archive is closed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Bare 'Royal Decree N/YYYY', the usual Omani form, but the same shape names Spanish (Real Decreto), Moroccan and Jordanian decrees, so it starts at 0.5 confidence and runs below foreign.om.royal_decree (priority 59). Use --exclude rule:foreign.om.royal_decree.bare outside Omani matter."
+}

@@ -1,0 +1,64 @@
+{
+  "id": "us.oh.statute.rc",
+  "kind": "statute",
+  "jurisdiction": "us.oh",
+  "pattern": "\\bR\\.\\s?C\\.\\s+(?:§§?\\s*)?(?P<section>[0-9]{1,4}\\.[0-9]{2,3}[0-9A-Za-z]*(?:\\([0-9A-Za-z]{1,4}\\))*)",
+  "priority": 50,
+  "normalize": "R.C. {section}",
+  "authority_key": "us.oh.rc/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Supreme Court of Ohio Writing Manual: Ohio Revised Code cited as R.C. followed by the section number, no section symbol",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Supreme Court of Ohio Writing Manual (statutes section) and confirm the R.C. form; compare section numbering with codes.ohio.gov.",
+    "derived_from": [
+      "docs/measurements/2026-10-22-real-text.md (78 missed R.C. cites in State v. Dowell)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Appellant was convicted of obstructing justice under R.C. 2921.31(A).",
+        "spans": [[53, 68]],
+        "groups": {
+          "section": "2921.31(A)"
+        }
+      },
+      {
+        "text": "See R.C. 2953.21(A)(1)(a) for the petition deadline.",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "The definition in R.C. 2901.01 applies.",
+        "spans": [[18, 30]],
+        "groups": {
+          "section": "2901.01"
+        }
+      },
+      {
+        "text": "Former R.C. § 2945.71 set the speedy-trial clock.",
+        "spans": [[7, 22]]
+      },
+      {
+        "text": "Under R.C. 109.02, the attorney general represents the state.",
+        "spans": [[6, 17]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "Our code of conduct, at section 4, covers gifts.",
+      "R.C. Cola sold 2,921 cases in 31 states.",
+      "Letters from R.C. Smith, dated 1.5 years apart, were admitted.",
+      "The R.C. 2000 model car costs $49.99."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Added in lcr-f8h from the 2026-10-22 real-text measurement. The section must be digit-first and dotted (chapter.section), so initials like R.C. Smith do not match. Requires the trailing space after R.C. or one optional section symbol."
+}

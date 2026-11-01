@@ -1,0 +1,53 @@
+{
+  "id": "us.fed.rules.criminal_procedure",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?:Fed\\.\\s?R\\.\\s?Crim\\.\\s?P\\.)\\s*(?P<rule>[0-9]+(?:\\.[0-9]+)?)(?P<sub>(?:\\([a-zA-Z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "",
+  "authority_key": "us.rules.frcrmp/{rule}",
+  "url_templates": [
+    "https://www.law.cornell.edu/rules/frcrmp/rule_{rule}"
+  ],
+  "url_decoders": [
+    "law.cornell.edu/rules/frcrmp/rule_{rule}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9.3 (Federal Rules of Criminal Procedure) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9.3 and the rule set itself.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Fed. R. Crim. P. 11.",
+        "spans": [[4, 23]],
+        "groups": {
+          "rule": "11",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Fed. R. Crim. P. 12(b)(3) in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under Fed.R.Crim.P. 33, the claim fails.",
+        "spans": [[6, 22]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The local rules of the game were posted."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

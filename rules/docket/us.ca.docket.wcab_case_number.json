@@ -1,0 +1,70 @@
+{
+  "id": "us.ca.docket.wcab_case_number",
+  "kind": "docket",
+  "jurisdiction": "us.ca",
+  "tags": [
+    "workers_comp"
+  ],
+  "pattern": "\\b(?:WCAB\\s+(?:Case\\s+)?No\\.\\s*)?(?P<number>ADJ[0-9]{6,8})\\b",
+  "priority": 60,
+  "normalize": "WCAB No. {number}",
+  "authority_key": "us.ca.wcab/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "California Workers' Compensation Appeals Board case numbers (EAMS `ADJ` numbers)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the WCAB EAMS public search at https://www.dir.ca.gov/dwc/eams and compare ADJ case numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The applicant filed WCAB No. ADJ1234567.",
+        "spans": [
+          [
+            20,
+            39
+          ]
+        ],
+        "groups": {
+          "number": "ADJ1234567"
+        }
+      },
+      {
+        "text": "See ADJ10234567.",
+        "spans": [
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "text": "Compare WCAB Case No. ADJ7654321 with ADJ123456.",
+        "spans": [
+          [
+            8,
+            32
+          ],
+          [
+            38,
+            47
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "ADJ12 form",
+      "The ADJ case",
+      "WCAB No. 12345"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

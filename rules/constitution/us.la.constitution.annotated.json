@@ -1,0 +1,63 @@
+{
+  "id": "us.la.constitution.annotated",
+  "kind": "constitution",
+  "jurisdiction": "us.la",
+  "pattern": "\\bLa\\.\\s?Const\\.\\s?Ann\\.\\s?art\\.\\s?(?P<article>[IVXLC]+|[0-9]{1,3})(?:,\\s?§\\s?(?P<section>[0-9]{1,3}(?:\\.[0-9])?))?",
+  "priority": 60,
+  "normalize": "La. Const. art. {article}",
+  "authority_key": "us.la.const/art/{article}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T3 Louisiana (West's Louisiana Constitution Annotated)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T3 Louisiana (West's Louisiana Constitution Annotated), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "West prints it as La. Const. Ann. art. 57 (2015).",
+        "spans": [
+          [
+            18,
+            41
+          ]
+        ],
+        "groups": {
+          "article": "57"
+        }
+      },
+      {
+        "text": "Under La. Const. Ann. art. I, § 5, searches need a warrant.",
+        "spans": [
+          [
+            6,
+            34
+          ]
+        ]
+      },
+      {
+        "text": "See La. Const. Ann. art. VII, § 14.",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Louisiana Constitution, art. 5, is long.",
+      "La. Const. Ann. is a West publication.",
+      "Ann. art. 5 of the catalog lists prints."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

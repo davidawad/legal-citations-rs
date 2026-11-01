@@ -1,0 +1,49 @@
+{
+  "id": "us.mi.regulation.admin_code",
+  "kind": "regulation",
+  "jurisdiction": "us.mi",
+  "pattern": "\\bMich\\.?\\s?Admin\\.?\\s?Code,?\\s?[rR]\\.?\\s?(?P<rule>[0-9]{3}\\.[0-9]{1,5}[a-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Mich. Admin. Code r. {rule}{sub}",
+  "authority_key": "us.mi.admin_code/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Michigan) administrative compilation: Mich. Admin. Code r. N.N; local form Mich Admin Code, R N.N (Michigan Uniform System) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Michigan) and the official Michigan administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Mich. Admin. Code r. 323.1041.",
+        "spans": [[4, 33]],
+        "groups": {
+          "rule": "323.1041",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on Mich Admin Code, R 400.1151 in reaching its holding.",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "Under Mich. Admin. Code r. 336.1201(1), the permit fails.",
+        "spans": [[6, 38]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Michigan agency adopted 12 new rules in 2020.",
+      "Under Mich. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

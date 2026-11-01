@@ -1,0 +1,53 @@
+{
+  "id": "intl.eu.parl_deb",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\bEur\\.\\s+Parl\\.\\s+Deb\\.\\s+\\((?P<number>[0-9]{1,4})\\)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "Eur. Parl. Deb. ({number}) {page}",
+  "authority_key": "eu.parl_deb/{number}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): European Parliamentary Debates, Eur. Parl. Deb. (<debate number>) <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Eur. Parl. Deb. (264) 112 (Mar. 12, 1981).",
+        "spans": [[4, 29]],
+        "groups": {
+          "number": "264",
+          "page": "112"
+        }
+      },
+      {
+        "text": "The court relied on Eur. Parl. Deb. (310) 15 in its judgment.",
+        "spans": [[20, 44]]
+      },
+      {
+        "text": "Under Eur. Parl. Deb. (4) 77, the claim fails.",
+        "spans": [[6, 28]]
+      }
+    ],
+    "negative": [
+      "The European Parliament debated for 264 hours.",
+      "Eur. Parl. sessions ran 112 days.",
+      "Debate (264) was adjourned."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

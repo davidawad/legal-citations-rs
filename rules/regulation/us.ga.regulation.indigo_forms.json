@@ -1,0 +1,54 @@
+{
+  "id": "us.ga.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.ga",
+  "pattern": "\\b(?:Ga\\.\\s?Comp\\.\\s?R\\.\\s?\\&\\sRegs\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Georgia: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Georgia, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 176"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ga. Comp. R. & Regs. 25-113-33.81 (2015).",
+        "spans": [[4, 37]],
+        "groups": {}
+      },
+      {
+        "text": "See Ga. Comp. R. & Regs. 1-81-113.33 (2014).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See Ga. Comp. R. & Regs. 58-446-66.14 (5348).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See Ga. Comp. R. & Regs. 4-14-446.66 (5347).",
+        "spans": [[4, 36]]
+      }
+    ],
+    "negative": [
+      "The Georgia code was amended in 2015.",
+      "Section 12 of the Georgia rules is long.",
+      "Title five of the Georgia compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

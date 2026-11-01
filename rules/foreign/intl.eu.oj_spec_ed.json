@@ -1,0 +1,53 @@
+{
+  "id": "intl.eu.oj_spec_ed",
+  "kind": "foreign",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?P<volume>(?:19|20)[0-9]{2}(?:[–-](?:19|20)[0-9]{2})?)\\s+O\\.\\s?J\\.\\s+Spec\\.\\s+Ed\\.\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} O.J. Spec. Ed. {page}",
+  "authority_key": "intl.eu/oj_spec_ed/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T8.2 (Europe): Official Journal of the European Community, Special Edition (1952-1972), <year> O.J. Spec. Ed. <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Council Regulation 17/62, 1959–1962 O.J. Spec. Ed. 87.",
+        "spans": [[26, 55]],
+        "groups": {
+          "volume": "1959–1962",
+          "page": "87"
+        }
+      },
+      {
+        "text": "Council Directive 64/221, 1963–1964 O.J. Spec. Ed. 117.",
+        "spans": [[26, 56]]
+      },
+      {
+        "text": "The court relied on 1968 O.J. Spec. Ed. 475 in its judgment.",
+        "spans": [[20, 43]]
+      }
+    ],
+    "negative": [
+      "The special edition ran 87 pages.",
+      "O.J. Spec. Ed. volumes number 1962.",
+      "1962 O.J. index is lost."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

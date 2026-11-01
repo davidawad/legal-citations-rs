@@ -1,0 +1,54 @@
+{
+  "id": "us.ny.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ny",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>N\\.Y\\.\\s?Reg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 New York: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 New York, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 526"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 34 N.Y. Reg. 195 (Sept. 9, 2015).",
+        "spans": [[4, 20]],
+        "groups": {
+          "volume": "34",
+          "series": "N.Y. Reg.",
+          "page": "195"
+        }
+      },
+      {
+        "text": "See 44 N.Y. Reg. 2210 (Jan. 13, 2014).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 12 N.Y. Reg. 77.",
+        "spans": [[4, 19]]
+      }
+    ],
+    "negative": [
+      "The N.Y. Reg. is published monthly.",
+      "Volume 12 of the New York register has 77 pages.",
+      "In 2015 the N.Y. Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

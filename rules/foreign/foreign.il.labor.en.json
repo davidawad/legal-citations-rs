@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.labor.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.labor",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>LabA|LabC|LabCA|NLC|NatLabA)\\s+(?:\\((?P<region>Nat['’]?l|National|Reg(?:ional)?(?:\\s+[A-Z][a-z]+)?|TA|Jer|Hai|BS|Naz|Tel Aviv|Jerusalem|Haifa|Beersheba|Nazareth)\\)\\s+)?(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 56,
+  "normalize": "{court} {number}",
+  "authority_key": "il.labor/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.65,
+  "provenance": {
+    "encodes": "Israeli labor courts: National Labor Court appeals (Hebrew ע\"ע) and regional courts (ס\"ע)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See LabA 1234/05 Cohen v. Levi.",
+        "spans": [[4, 16]],
+        "groups": {
+          "court": "LabA",
+          "number": "1234/05"
+        }
+      },
+      {
+        "text": "LabC (TA) 4321/10 was a regional labor case.",
+        "spans": [[0, 17]]
+      },
+      {
+        "text": "The appeal, LabA (Nat'l) 12345-05-19, was dismissed.",
+        "spans": [[12, 36]]
+      }
+    ],
+    "negative": [
+      "The LabA office is closed.",
+      "LabA without a number.",
+      "Labour Appeal 1234 pending."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "English labor-court abbreviations (LabA etc.) not pinned down against a published source."
+}

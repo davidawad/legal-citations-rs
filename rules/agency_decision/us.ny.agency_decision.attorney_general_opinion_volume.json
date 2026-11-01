@@ -1,0 +1,71 @@
+{
+  "id": "us.ny.agency_decision.attorney_general_opinion_volume",
+  "kind": "agency_decision",
+  "jurisdiction": "us.ny",
+  "tags": [
+    "attorney_general"
+  ],
+  "pattern": "\\b(?P<year>(?:19|20)[0-9]{2})\\s+(?:N\\.\\s?Y\\.\\s+Op(?:s)?\\.\\s+(?:\\((?:Inf|Informal)\\.?\\)\\s+)?Att['’]y\\s+Gen\\.|Op(?:s)?\\.\\s+Att['’]y\\s+Gen\\.\\s+(?:\\((?:Inf|Informal)\\.?\\)\\s+)?N\\.\\s?Y\\.)\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{year} N.Y. Op. Att'y Gen. {page}",
+  "authority_key": "us.ny.ag_opinion/{year}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1.2 / R. 14 (New York attorney general opinions, year-page form)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the New York Attorney General opinions at https://ag.ny.gov/appeals-and-opinions and compare the year and page.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The office declined. 1985 Op. Att'y Gen. N.Y. 45.",
+        "spans": [
+          [
+            21,
+            48
+          ]
+        ],
+        "groups": {
+          "year": "1985",
+          "page": "45"
+        }
+      },
+      {
+        "text": "See 1999 N.Y. Op. Att'y Gen. 12.",
+        "spans": [
+          [
+            4,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "Compare 2001 N.Y. Op. (Inf.) Att’y Gen. 1034 with 1979 Op. Att'y Gen. (Inf.) N.Y. 210.",
+        "spans": [
+          [
+            8,
+            46
+          ],
+          [
+            52,
+            87
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The 1985 N.Y. Att'y Gen. opinion",
+      "1985 Op. Att'y Gen. N.Y.",
+      "N.Y. Op. Att'y Gen. 45"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

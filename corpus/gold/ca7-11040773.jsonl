@@ -1,0 +1,44 @@
+{"start": 84, "end": 95, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "docket number"}
+{"start": 310, "end": 327, "kind": "docket", "jurisdiction": "us.fed.dist.wied", "text": "No. 1:23-cv-01110", "normalized": "No. 1:23-cv-01110", "form": "docket number"}
+{"start": 945, "end": 956, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 2648, "end": 2659, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 4328, "end": 4355, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U.S.C. § 1382c(a)(3)(A)", "normalized": "42 U.S.C. § 1382c(a)(3)(A)", "form": "U.S.C."}
+{"start": 4374, "end": 4385, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 4483, "end": 4513, "kind": "regulation", "jurisdiction": "us.fed", "text": "20 C.F.R. § 404.1520(a)–(g)", "normalized": "20 C.F.R. § 404.1520(a)-(g)", "form": "C.F.R."}
+{"start": 5010, "end": 5060, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Gedatus v.\nSaul, 994 F.3d 893, 898 (7th Cir. 2021)", "normalized": "994 F.3d 893", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6212, "end": 6223, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 6535, "end": 6589, "kind": "regulation", "jurisdiction": "us.fed", "text": "20 C.F.R. pt. 404, subpt. P, app. 1, § 12.00(A)(2)(b)", "normalized": "20 C.F.R. pt. 404, subpt. P, app. 1, § 12.00(A)(2)(b)", "form": "C.F.R."}
+{"start": 6845, "end": 6848, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 8059, "end": 8070, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 9885, "end": 9896, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 11698, "end": 11709, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 13648, "end": 13659, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 15235, "end": 15259, "kind": "case_short", "jurisdiction": "us.fed.app.ca7", "text": "Gedatus, 994 F.3d at 900", "normalized": "994 F.3d at 900", "form": "short case (at)"}
+{"start": 15359, "end": 15370, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 15449, "end": 15507, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Jarnutowski v. Kijakazi, 48 F.4th 769, 773 (7th Cir.\n2022)", "normalized": "48 F.4th 769", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 15686, "end": 15742, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Rabdeau\nv. Bisignano, 155 F.4th 908, 912 (7th Cir. 2025)", "normalized": "155 F.4th 908", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 15752, "end": 15797, "kind": "case", "jurisdiction": "us.scotus", "text": "Biestek\nv. Berryhill, 587 U.S. 97, 103 (2019)", "normalized": "587 U.S. 97", "form": "U.S. Reports"}
+{"start": 16017, "end": 16041, "kind": "case_short", "jurisdiction": "us.fed.app.ca7", "text": "Gedatus, 994 F.3d at 900", "normalized": "994 F.3d at 900", "form": "short case (at)"}
+{"start": 16412, "end": 16490, "kind": "secondary", "jurisdiction": "us", "text": "Diagnostic and Statistical Manual System of Mental\nHealth, 5th Edition (DSM-5)", "normalized": "DSM-5", "form": "book/treatise", "optional": true, "note": "DSM-5 named as a source, not formally cited"}
+{"start": 17198, "end": 17209, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 17259, "end": 17294, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "97 F.4th 1050, 1053\n(7th Cir. 2024)", "normalized": "97 F.4th 1050", "form": "F./F.2d/F.3d/F.4th", "note": "case name Warnell v. O’Malley separated from cite by words"}
+{"start": 17586, "end": 17597, "kind": "id", "jurisdiction": "us.fed.app.ca7", "text": "Id. at 1054", "normalized": "Id. at 1054", "form": "Id."}
+{"start": 17607, "end": 17659, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Moore v. Colvin, 743 F.3d 1118, 1121 (7th Cir. 2014)", "normalized": "743 F.3d 1118", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 18340, "end": 18355, "kind": "case_short", "jurisdiction": "us.fed.app.ca7", "text": "994\nF.3d at 900", "normalized": "994 F.3d at 900", "form": "short case (at)"}
+{"start": 18516, "end": 18526, "kind": "id", "jurisdiction": "us.fed.app.ca7", "text": "Id. at 901", "normalized": "Id. at 901", "form": "Id."}
+{"start": 18727, "end": 18730, "kind": "id", "jurisdiction": "us.fed.app.ca7", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 18902, "end": 18913, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 20517, "end": 20528, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 20923, "end": 20928, "kind": "secondary", "jurisdiction": "us", "text": "DSM-5", "normalized": "DSM-5", "form": "book/treatise", "optional": true}
+{"start": 21111, "end": 21116, "kind": "secondary", "jurisdiction": "us", "text": "DSM-5", "normalized": "DSM-5", "form": "book/treatise", "optional": true}
+{"start": 21734, "end": 21785, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Ray v. Berryhill, 915\nF.3d 486, 492 (7th Cir. 2019)", "normalized": "915 F.3d 486", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 22124, "end": 22135, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 22485, "end": 22518, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "627 F.3d 614, 621 (7th Cir.\n2010)", "normalized": "627 F.3d 614", "form": "F./F.2d/F.3d/F.4th", "note": "case name O’Connor-Spinner v. Astrue separated from cite by words"}
+{"start": 23071, "end": 23122, "kind": "regulation", "jurisdiction": "us.fed", "text": "20 C.F.R. pt. 404, subpt. P, app. 1,\n§ 12.00(E)(3)", "normalized": "20 C.F.R. pt. 404, subpt. P, app. 1, § 12.00(E)(3)", "form": "C.F.R."}
+{"start": 23301, "end": 23304, "kind": "id", "jurisdiction": "us.fed", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 23685, "end": 23735, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Spiva v. Astrue, 628\nF.3d 346, 348 (7th Cir. 2010)", "normalized": "628 F.3d 346", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 23746, "end": 23802, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Parker v. Astrue, 597 F.3d\n920, 923–25 (7th Cir. 2010)", "normalized": "597 F.3d 920", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 23877, "end": 23935, "kind": "case", "jurisdiction": "us.fed.app.ca7", "text": "Martinez v. Astrue,\n630 F.3d 693, 695–98 (7th Cir. 2011)", "normalized": "630 F.3d 693", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 24028, "end": 24039, "kind": "docket", "jurisdiction": "us.fed.app.ca7", "text": "No. 25-1328", "normalized": "No. 25-1328", "form": "page furniture", "optional": true}
+{"start": 24213, "end": 24235, "kind": "case_short", "jurisdiction": "us.fed.app.ca7", "text": "Spiva, 628 F.3d at 350", "normalized": "628 F.3d at 350", "form": "short case (at)"}
+{"start": 24471, "end": 24502, "kind": "case_short", "jurisdiction": "us.fed.app.ca7", "text": "Warnell, 97 F.4th\nat 1051, 1054", "normalized": "97 F.4th at 1051", "form": "short case (at)"}

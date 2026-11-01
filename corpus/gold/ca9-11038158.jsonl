@@ -1,0 +1,64 @@
+{"start": 169, "end": 180, "kind": "docket", "jurisdiction": "us.fed.app.ca9", "text": "No. 24-2385", "normalized": "No. 24-2385", "form": "docket number"}
+{"start": 191, "end": 209, "kind": "docket", "jurisdiction": "us.fed.dist.idd", "text": "1:21-cr-00089DCN-1", "normalized": "No. 1:21-cr-00089", "form": "docket number"}
+{"start": 210, "end": 226, "kind": "docket", "jurisdiction": "us.fed.dist.idd", "text": "1:23-cv-00316DCN", "normalized": "No. 1:23-cv-00316", "form": "docket number"}
+{"start": 534, "end": 549, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 561, "end": 578, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255", "normalized": "28 U.S.C. § 2255", "form": "U.S.C."}
+{"start": 721, "end": 738, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255", "normalized": "28 U.S.C. § 2255", "form": "U.S.C."}
+{"start": 1215, "end": 1222, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 1874, "end": 1881, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 2067, "end": 2082, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 2518, "end": 2535, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255", "normalized": "28 U.S.C. § 2255", "form": "U.S.C."}
+{"start": 3118, "end": 3125, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 3346, "end": 3361, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 3872, "end": 3889, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255", "normalized": "28 U.S.C. § 2255", "form": "U.S.C."}
+{"start": 4047, "end": 4096, "kind": "constitution", "jurisdiction": "us.fed", "text": "Sixth\nAmendment to the United States Constitution", "normalized": "U.S. Const. amend. VI", "form": "constitution", "optional": true, "note": "amendment named in prose, quoted pro se motion"}
+{"start": 4532, "end": 4566, "kind": "case", "jurisdiction": "us.scotus", "text": "Roe v. Flores-Ortega, 528 U.S.\n470", "normalized": "528 U.S. 470", "form": "U.S. Reports", "note": "quoted from pro se motion"}
+{"start": 4568, "end": 4590, "kind": "case", "jurisdiction": "us.scotus", "text": "145 L.Ed.2d 985 (2000)", "normalized": "145 L. Ed. 2d 985", "form": "L. Ed."}
+{"start": 4655, "end": 4670, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 6333, "end": 6348, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 6422, "end": 6429, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 6438, "end": 6495, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Reves, 774 F.3d 562, 564 (9th Cir.\n2014)", "normalized": "774 F.3d 562", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6569, "end": 6644, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Chacon-Palomares,\n208 F.3d 1157, 1158–59 (9th Cir. 2000)", "normalized": "208 F.3d 1157", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 6674, "end": 6681, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 6869, "end": 6889, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255(b)", "normalized": "28 U.S.C. § 2255(b)", "form": "U.S.C."}
+{"start": 7039, "end": 7100, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Withers, 638 F.3d 1055,\n1062 (9th Cir. 2011)", "normalized": "638 F.3d 1055", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 7181, "end": 7247, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v.\nRodriguez-Vega, 797 F.3d 781, 791 (9th Cir. 2015)", "normalized": "797 F.3d 781", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 7494, "end": 7551, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Watts v. United States, 841 F.2d 275, 277 (9th Cir.\n1988)", "normalized": "841 F.2d 275", "form": "F./F.2d/F.3d/F.4th", "note": "(per curiam) excluded"}
+{"start": 7575, "end": 7633, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Shah v. United States, 878 F.2d\n1156, 1159 (9th Cir. 1989)", "normalized": "878 F.2d 1156", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 7841, "end": 7856, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 8104, "end": 8155, "kind": "case", "jurisdiction": "us.scotus", "text": "Roe v. Flores-Ortega, 528\nU.S. 470, 476–77 (2000)", "normalized": "528 U.S. 470", "form": "U.S. Reports"}
+{"start": 8268, "end": 8314, "kind": "case", "jurisdiction": "us.scotus", "text": "Garza v. Idaho, 586 U.S. 232, 241–\n42 (2019)", "normalized": "586 U.S. 232", "form": "U.S. Reports"}
+{"start": 8385, "end": 8400, "kind": "id", "jurisdiction": "us.scotus", "text": "id. at 242–43", "normalized": "Id. at 242", "form": "Id."}
+{"start": 8563, "end": 8631, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Sandoval-Lopez, 409 F.3d 1193,\n1197 (9th Cir. 2005)", "normalized": "409 F.3d 1193", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9173, "end": 9220, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "Brown v. Roe, 279 F.3d\n742, 746 (9th Cir. 2002)", "normalized": "279 F.3d 742", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 9441, "end": 9472, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "SandovalLopez, 409 F.3d at 1198", "normalized": "409 F.3d at 1198", "form": "short case (at)"}
+{"start": 9492, "end": 9507, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 9803, "end": 9828, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Withers, 638 F.3d at 1062", "normalized": "638 F.3d at 1062", "form": "short case (at)"}
+{"start": 9830, "end": 9852, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Watts, 841 F.2d at 277", "normalized": "841 F.2d at 277", "form": "short case (at)"}
+{"start": 9854, "end": 9876, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Shah, 878 F.2d at 1159", "normalized": "878 F.2d at 1159", "form": "short case (at)"}
+{"start": 10359, "end": 10422, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Werle, 35 F.4th 1195, 1201 n.3 (9th Cir.\n2022)", "normalized": "35 F.4th 1195", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10563, "end": 10619, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "United States v. Mejia, 69 F.3d 309,\n315 (9th Cir. 1995)", "normalized": "69 F.3d 309", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 10878, "end": 10881, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 11388, "end": 11403, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 11723, "end": 11745, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Garza, 586 U.S. at 247", "normalized": "586 U.S. at 247", "form": "short case (at)"}
+{"start": 11755, "end": 11785, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Flores-Ortega, 528\nU.S. at 484", "normalized": "528 U.S. at 484", "form": "short case (at)"}
+{"start": 11947, "end": 11976, "kind": "case_short", "jurisdiction": "us.scotus", "text": "FloresOrtega, 528 U.S. at 484", "normalized": "528 U.S. at 484", "form": "short case (at)"}
+{"start": 12063, "end": 12070, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 12314, "end": 12336, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Watts, 841 F.2d at 278", "normalized": "841 F.2d at 278", "form": "short case (at)"}
+{"start": 12338, "end": 12358, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 2255(b)", "normalized": "28 U.S.C. § 2255(b)", "form": "U.S.C."}
+{"start": 12678, "end": 12705, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Shah, 878 F.2d at 1161–62", "normalized": "878 F.2d at 1161", "form": "short case (at)"}
+{"start": 12707, "end": 12729, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Watts, 841 F.2d at\n278", "normalized": "841 F.2d at 278", "form": "short case (at)"}
+{"start": 13001, "end": 13021, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "841 F.2d at 276–77", "normalized": "841 F.2d at 276", "form": "short case (at)"}
+{"start": 13122, "end": 13132, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "Id. at 277", "normalized": "Id. at 277", "form": "Id."}
+{"start": 13239, "end": 13249, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "Id. at 278", "normalized": "Id. at 278", "form": "Id."}
+{"start": 13296, "end": 13303, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 13368, "end": 13378, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "Id. at 277", "normalized": "Id. at 277", "form": "Id."}
+{"start": 13391, "end": 13406, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 13669, "end": 13684, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "Id. at 276–78", "normalized": "Id. at 276", "form": "Id."}
+{"start": 13788, "end": 13798, "kind": "id", "jurisdiction": "us.fed.app.ca9", "text": "id. at 278", "normalized": "Id. at 278", "form": "Id."}
+{"start": 13813, "end": 13820, "kind": "statute_short", "jurisdiction": "us.fed", "text": "§ 2255", "normalized": "28 U.S.C. § 2255", "form": "bare § short form"}
+{"start": 14366, "end": 14393, "kind": "case_short", "jurisdiction": "us.scotus", "text": "Garza, 586 U.S. at\n242–44", "normalized": "586 U.S. at 242", "form": "short case (at)"}
+{"start": 14616, "end": 14654, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Sandoval-Lopez, 409 F.3d at 1195, 1198", "normalized": "409 F.3d at 1195", "form": "short case (at)"}
+{"start": 15186, "end": 15218, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "Sandoval-Lopez, 409 F.3d at 1198", "normalized": "409 F.3d at 1198", "form": "short case (at)"}
+{"start": 15291, "end": 15306, "kind": "case", "jurisdiction": "us.fed.app.ca9", "text": "USA V. ANDERSON", "normalized": "United States v. Anderson", "form": "page furniture", "optional": true, "note": "running head caption"}
+{"start": 15366, "end": 15404, "kind": "case_short", "jurisdiction": "us.fed.app.ca9", "text": "ChaconPalomares, 208 F.3d at 1159–60", "normalized": "208 F.3d at 1159", "form": "short case (at)"}

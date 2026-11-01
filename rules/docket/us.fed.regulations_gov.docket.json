@@ -1,0 +1,79 @@
+{
+  "id": "us.fed.regulations_gov.docket",
+  "kind": "docket",
+  "jurisdiction": "us.fed",
+  "tags": [
+    "agency",
+    "rulemaking"
+  ],
+  "pattern": "\\b(?P<docket>(?:EPA|FDA|CMS|USCIS|ICEB|DHS|NHTSA|FWS|NOAA|DOT|OST|FAA|FMCSA|PHMSA|FRA|FTA|OSHA|WHD|EBSA|ETA|DOL|CFPB|ED|HHS|IRS|TTB|OCC|FINCEN|USTR|BIS|ITA|USDA|APHIS|FSIS|AMS|FNS|NRC|DOE|EERE|BOEM|BSEE|BLM|NPS|OSM|DOI|SBA|SSA|VA|DOD|DARS|FAR|GSA|OPM|HUD|DOJ|ATF|DEA|EOIR|FEMA|USCG|TSA|CBP|FTC|FCC|CPSC|NCUA|FHFA|FDIC|EEOC|MSHA|ACF|HRSA|CDC|NIH|SAMHSA|IHS|PTO|NIST|NTIA|NARA|RUS|NRCS|FS|BIA|COE|USACE|DOS|USAID|TREAS|OFAC|BOP|OJP|ICE|PBGC|CEQ|OMB|OSC|FMC|STB|FEC|NASA|NSF|RRB|CEQ|BOR|FSA|ATBCB|AID|ONRR|OPPM|FINRA)(?:-[A-Z0-9]{1,8}){0,3}-(?:19|20)[0-9]{2}(?:-[A-Z]{1,5})?-[0-9]{3,6})(?:-(?P<document>[0-9]{4}))?\\b",
+  "priority": 58,
+  "normalize": "Docket No. {docket}",
+  "authority_key": "us.regulations_gov/{docket}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Regulations.gov docket and document IDs (agency-[subagency-]year-number[-document])",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open https://www.regulations.gov/docket/EPA-HQ-OAR-2021-0317 and compare the docket and document ID format.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The rule was proposed in EPA-HQ-OAR-2021-0317.",
+        "spans": [
+          [
+            25,
+            45
+          ]
+        ],
+        "groups": {
+          "docket": "EPA-HQ-OAR-2021-0317"
+        }
+      },
+      {
+        "text": "See Docket No. FDA-2019-N-1234; CMS-2021-0001-0012.",
+        "spans": [
+          [
+            15,
+            30
+          ],
+          [
+            32,
+            50
+          ]
+        ]
+      },
+      {
+        "text": "Compare FWS-R8-ES-2019-0012 with ED-2021-OCR-0166 and NHTSA-2021-0053.",
+        "spans": [
+          [
+            8,
+            27
+          ],
+          [
+            33,
+            49
+          ],
+          [
+            54,
+            69
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "EPA-HQ staff",
+      "The EPA 2021 docket",
+      "ISO-9001-2015"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

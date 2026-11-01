@@ -1,0 +1,10 @@
+{
+  "name": "uae",
+  "description": "United Arab Emirates practice: federal laws and decree-laws, Cabinet and Ministerial resolutions, the Official Gazette, federal and emirate court judgments (English and Arabic), and the DIFC and ADGM free-zone laws and courts.",
+  "include": [
+    "jurisdiction:foreign.ae",
+    "tag:uae"
+  ],
+  "exclude": [],
+  "note": "Includes the DIFC and ADGM rules; use the difc-adgm profile for the free zones alone. Arabic Cabinet and Ministerial resolutions are not covered."
+}

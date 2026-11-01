@@ -1,0 +1,54 @@
+{
+  "id": "us.ak.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.ak",
+  "pattern": "\\b(?:Alaska\\sAdmin\\.\\s?Code\\stit\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*,\\s§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Alaska: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Alaska, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 30"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Alaska Admin. Code tit. 753, § 82.97 (2015).",
+        "spans": [[4, 41]],
+        "groups": {}
+      },
+      {
+        "text": "See Alaska Admin. Code tit. 173, § 81.97 (2014).",
+        "spans": [[4, 41]]
+      },
+      {
+        "text": "See Alaska Admin. Code tit. 186, § 15.21 (5348).",
+        "spans": [[4, 41]]
+      },
+      {
+        "text": "See Alaska Admin. Code tit. 416, § 14.21 (5347).",
+        "spans": [[4, 41]]
+      }
+    ],
+    "negative": [
+      "The Alaska code was amended in 2015.",
+      "Section 12 of the Alaska rules is long.",
+      "Title five of the Alaska compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

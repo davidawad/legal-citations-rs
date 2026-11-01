@@ -1,0 +1,202 @@
+{
+  "id": "us.sc.case.nominative_s_c_l",
+  "kind": "case",
+  "jurisdiction": "us.sc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>S\\.C\\.L\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>Nott\\s\\&\\sMcC\\.|McCord|McMul\\.|Speers|Strob\\.|Tread\\.|Bail\\.|Brev\\.|Chev\\.|Harp\\.|Rich\\.|Dud\\.|Hill|Mill|Rice|Ril\\.|Bay)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: S.C.L. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 675",
+      "corpus/formats/indigo.jsonl line 676",
+      "corpus/formats/indigo.jsonl line 677",
+      "corpus/formats/indigo.jsonl line 678",
+      "corpus/formats/indigo.jsonl line 679",
+      "corpus/formats/indigo.jsonl line 680",
+      "corpus/formats/indigo.jsonl line 681",
+      "corpus/formats/indigo.jsonl line 682",
+      "corpus/formats/indigo.jsonl line 683",
+      "corpus/formats/indigo.jsonl line 684",
+      "corpus/formats/indigo.jsonl line 685",
+      "corpus/formats/indigo.jsonl line 686",
+      "corpus/formats/indigo.jsonl line 687",
+      "corpus/formats/indigo.jsonl line 688",
+      "corpus/formats/indigo.jsonl line 689",
+      "corpus/formats/indigo.jsonl line 690",
+      "corpus/formats/indigo.jsonl line 691"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Carter v. Phillips, 37 S.C.L. (3 Rich.) 553 (S.C. 1855).",
+        "spans": [[24, 47]],
+        "groups": {
+          "volume": "37",
+          "reporter": "S.C.L.",
+          "nominative_volume": "3",
+          "nominative": "Rich.",
+          "page": "553"
+        }
+      },
+      {
+        "text": "See Evans v. Turner, 37 S.C.L. (3 Rich.) 209, 633 (S.C. 1862).",
+        "spans": [[21, 44]]
+      },
+      {
+        "text": "See Smith v. Jones, 32 S.C.L. (1 Strob.) 249 (S.C. 1847).",
+        "spans": [[20, 44]]
+      },
+      {
+        "text": "See State v. Miller, 32 S.C.L. (1 Strob.) 313, 625 (S.C. 1848).",
+        "spans": [[21, 45]]
+      },
+      {
+        "text": "See Johnson v. Clark, 28 S.C.L. (1 Speers) 9 (S.C. 1842).",
+        "spans": [[22, 44]]
+      },
+      {
+        "text": "See In re Estate of Hall, 28 S.C.L. (1 Speers) 553, 601 (S.C. 1843).",
+        "spans": [[26, 50]]
+      },
+      {
+        "text": "See Walker v. Young, 26 S.C.L. (1 McMul.) 449 (S.C. 1840).",
+        "spans": [[21, 45]]
+      },
+      {
+        "text": "See Allen v. King, 26 S.C.L. (1 McMul.) 593, 609 (S.C. 1841).",
+        "spans": [[19, 43]]
+      },
+      {
+        "text": "See Wright v. Scott, 25 S.C.L. (Chev.) 49 (S.C. 1839).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Green v. Baker, 25 S.C.L. (Chev.) 585, 617 (S.C. 1839).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See Adams v. Nelson, 24 S.C.L. (Rice) 537 (S.C. 1838).",
+        "spans": [[21, 41]]
+      },
+      {
+        "text": "See Hill v. Campbell, 24 S.C.L. (Rice) 105, 625 (S.C. 1838).",
+        "spans": [[22, 42]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 23 S.C.L. (Dud.) 321 (S.C. 1837).",
+        "spans": [[25, 45]]
+      },
+      {
+        "text": "See Carter v. Phillips, 23 S.C.L. (Dud.) 441, 609 (S.C. 1837).",
+        "spans": [[24, 44]]
+      },
+      {
+        "text": "See Evans v. Turner, 22 S.C.L. (Ril.) 9 (S.C. 1836).",
+        "spans": [[21, 39]]
+      },
+      {
+        "text": "See Smith v. Jones, 22 S.C.L. (Ril.) 73, 609 (S.C. 1836).",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "See State v. Miller, 19 S.C.L. (1 Hill) 345 (S.C. 1834).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Brown v. Davis, 19 S.C.L. (1 Hill) 97, 633 (S.C. 1835).",
+        "spans": [[20, 41]]
+      },
+      {
+        "text": "See Garcia v. Lee, 17 S.C.L. (1 Bail.) 217 (S.C. 1829).",
+        "spans": [[19, 42]]
+      },
+      {
+        "text": "See Johnson v. Clark, 17 S.C.L. (1 Bail.) 369, 609 (S.C. 1830).",
+        "spans": [[22, 45]]
+      },
+      {
+        "text": "See In re Estate of Hall, 16 S.C.L. (Harp.) 265 (S.C. 1823).",
+        "spans": [[26, 47]]
+      },
+      {
+        "text": "See Walker v. Young, 16 S.C.L. (Harp.) 1, 617 (S.C. 1823).",
+        "spans": [[21, 40]]
+      },
+      {
+        "text": "See Allen v. King, 12 S.C.L. (1 McCord) 449 (S.C. 1823).",
+        "spans": [[19, 43]]
+      },
+      {
+        "text": "See Wright v. Scott, 12 S.C.L. (1 McCord) 73, 633 (S.C. 1825).",
+        "spans": [[21, 44]]
+      },
+      {
+        "text": "See Green v. Baker, 10 S.C.L. (1 Nott & McC.) 105 (S.C. 1817).",
+        "spans": [[20, 49]]
+      },
+      {
+        "text": "See Adams v. Nelson, 10 S.C.L. (1 Nott & McC.) 577, 633 (S.C. 1819).",
+        "spans": [[21, 50]]
+      },
+      {
+        "text": "See Hill v. Campbell, 8 S.C.L. (1 Mill) 257 (S.C. 1817).",
+        "spans": [[22, 43]]
+      },
+      {
+        "text": "See Mitchell v. Roberts, 8 S.C.L. (1 Mill) 233, 625 (S.C. 1817).",
+        "spans": [[25, 46]]
+      },
+      {
+        "text": "See Carter v. Phillips, 6 S.C.L. (1 Tread.) 169 (S.C. 1813).",
+        "spans": [[24, 47]]
+      },
+      {
+        "text": "See Evans v. Turner, 6 S.C.L. (1 Tread.) 25, 601 (S.C. 1814).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Smith v. Jones, 3 S.C.L. (1 Brev.) 409 (S.C. 1799).",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "See State v. Miller, 3 S.C.L. (1 Brev.) 545, 625 (S.C. 1809).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Brown v. Davis, 1 S.C.L. (1 Bay) 513 (S.C. 1789).",
+        "spans": [[20, 40]]
+      },
+      {
+        "text": "See Garcia v. Lee, 1 S.C.L. (1 Bay) 521, 625 (S.C. 1797).",
+        "spans": [[19, 39]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 S.C.L. (2 Rich.) 345 (1850).",
+        "spans": [[16, 39]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the S.C.L. reports is missing.",
+      "The Bail. reports cover S.C.L. cases from 1800 to 1850.",
+      "See S.C.L. (Bail.) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

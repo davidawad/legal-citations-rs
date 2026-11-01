@@ -1,0 +1,57 @@
+{
+  "id": "us.wv.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.wv",
+  "pattern": "\\bW\\.?\\s?Va\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9][0-9\\w\\-]*(?:\\.[0-9\\w\\-]+)*)(?P<subsection>(?:\\([^)\\s]{1,6}\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (West Virginia) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, West Virginia entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py WV pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See W. Va. Code § 61-2-1.",
+        "spans": [[4, 25]],
+        "groups": {
+          "section": "61-2-1",
+          "subsection": ""
+        }
+      },
+      {
+        "text": "The court relied on W.Va. Code Ann. § 61-2-1 in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under W. Va. Code § 5, the claim fails.",
+        "spans": [[6, 22]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "wv",
+    "order": 20,
+    "pattern": "W\\.?\\s+Va(?:\\.|\\s+Code)\\.\\s+Code\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits and the lost-escape port bug fixed (the legacy pattern never matched the standard form). Examples written by hand."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.flra.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.flra",
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+F\\.?\\s?L\\.?\\s?R\\.?\\s?A\\.?\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} F.L.R.A. {page}",
+  "authority_key": "us.flra/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Decisions of the Federal Labor Relations Authority) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for F.L.R.A.; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See U.S. Dep't of the Air Force, 71 F.L.R.A. 1 (2019).",
+        "spans": [
+          [
+            33,
+            46
+          ]
+        ],
+        "groups": {
+          "volume": "71",
+          "page": "1"
+        }
+      },
+      {
+        "text": "The Authority relied on 70 FLRA 572, 573 (2018).",
+        "spans": [
+          [
+            24,
+            35
+          ]
+        ]
+      },
+      {
+        "text": "Compare 48 F.L.R.A. 1188 with 1 FLRA 2.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            38
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The FLRA has 3 members.",
+      "In 2019 the F.L.R.A. issued 71 decisions.",
+      "FLRA staff numbered 1 in 1979."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

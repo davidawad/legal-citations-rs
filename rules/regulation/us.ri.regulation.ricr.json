@@ -1,0 +1,52 @@
+{
+  "id": "us.ri.regulation.ricr",
+  "kind": "regulation",
+  "jurisdiction": "us.ri",
+  "pattern": "\\b(?P<title>[0-9]{3})-RICR-(?P<chapter>[0-9]{2,3})-(?P<subchapter>[0-9]{2})-(?P<part>[0-9]{1,2})(?:\\.[0-9]{1,2}(?:\\.[0-9]{1,2})*)?(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "{title}-RICR-{chapter}-{subchapter}-{part}",
+  "authority_key": "us.ri.ricr/{title}/{chapter}/{subchapter}/{part}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Rhode Island) administrative compilation: TTT-RICR-CCC-SS-P (Rhode Island Code of Regulations) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Rhode Island) and the official Rhode Island administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 250-RICR-150-05-1.",
+        "spans": [[4, 21]],
+        "groups": {
+          "title": "250",
+          "chapter": "150",
+          "subchapter": "05",
+          "part": "1",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 230-RICR-20-30-4 in reaching its holding.",
+        "spans": [[20, 36]]
+      },
+      {
+        "text": "Under 210-RICR-30-05-2.3(A), the permit fails.",
+        "spans": [[6, 27]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Rhode Island agency adopted 12 new rules in 2020.",
+      "Under RICR, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

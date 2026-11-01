@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.asbca.docket",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.asbca",
+  "pattern": "\\bASBCA\\s+Nos?\\.\\s?(?P<number>[0-9]{4,6}(?:,\\s(?:and\\s)?[0-9]{4,6})*)\\b",
+  "priority": 60,
+  "normalize": "ASBCA No. {number}",
+  "authority_key": "us.asbca/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "government-contracts"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Armed Services Board of Contract Appeals (ASBCA)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Armed Services Board of Contract Appeals (ASBCA), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "RMTC Sys., Inc., ASBCA No. 43466, 93-1 BCA ¶ 25,508.",
+        "spans": [
+          [
+            17,
+            32
+          ]
+        ],
+        "groups": {
+          "number": "43466"
+        }
+      },
+      {
+        "text": "See Smith Constr. Co., ASBCA No. 58761.",
+        "spans": [
+          [
+            23,
+            38
+          ]
+        ]
+      },
+      {
+        "text": "Compare ASBCA Nos. 61234, 61235 with ASBCA No. 55555.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ASBCA heard 43 appeals.",
+      "ASBCA No. is assigned at docketing.",
+      "Our ASBCA team has 5 members."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

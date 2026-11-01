@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ie.neutral",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ie",
+  "tags": [
+    "foreign",
+    "ireland"
+  ],
+  "pattern": "\\[(?P<year>(?:19|20)[0-9]{2})\\]\\s+(?P<court>IESC(?:DET)?|IECA|IEHC|IECCA|IECC|IEDC|IECAT)\\s+(?P<number>[0-9]{1,5})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?|,?\\s+(?:at\\s+)?paras?\\.?\\s+(?P<para2>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 60,
+  "normalize": "[{year}] {court} {number}",
+  "authority_key": "ie/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Irish neutral citations ([<year>] IESC|IECA|IEHC <number>), Bluebook T2 (Ireland)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Irish courts' neutral citation practice (courts.ie) and Bluebook T2 (Ireland).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Data Protection Commissioner v Facebook [2019] IESC 46.",
+        "spans": [[40, 54]],
+        "groups": {
+          "year": "2019",
+          "court": "IESC",
+          "number": "46"
+        }
+      },
+      {
+        "text": "The court relied on [2020] IECA 128 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under [2017] IEHC 545 at [12], the claim fails.",
+        "spans": [[6, 29]]
+      }
+    ],
+    "negative": [
+      "The IESC sat 46 days in 2019.",
+      "IEHC staff number 545.",
+      "[2020] Ireland had 128 cases."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,56 @@
+{
+  "id": "foreign.ae.difc.cfi",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.difc.cfi",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae",
+    "difc"
+  ],
+  "pattern": "\\[(?P<year>20[0-9]{2})\\]\\s+DIFC\\s+CFI\\s+(?P<number>[0-9]{1,4})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?)?",
+  "priority": 60,
+  "normalize": "[{year}] DIFC CFI {number}",
+  "authority_key": "ae.difc/{year}/CFI/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "DIFC Courts Practice Direction No. 4 of 2016: neutral citation [year] DIFC CFI n for the Court of First Instance, paragraphs cited 'at [29]'",
+    "opened": true,
+    "source_url": "https://www.difccourts.ae/rules-decisions/practice-directions/practice-direction-no-4-2016-neutral-citation-difc-courts-judgments",
+    "how_to_verify": "Read DIFC Courts PD 4/2016 (read 2026-10-23).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Smith v Jones [2016] DIFC CFI 12 at [29].",
+        "spans": [[14, 40]],
+        "groups": {
+          "year": "2016",
+          "number": "12",
+          "para": "29"
+        }
+      },
+      {
+        "text": "See [2019] DIFC CFI 012.",
+        "spans": [[4, 23]]
+      },
+      {
+        "text": "Applied in [2021] DIFC CFI 7, at [4]-[6].",
+        "spans": [[11, 40]]
+      }
+    ],
+    "negative": [
+      "The DIFC CFI sat in 2020.",
+      "In 2020 DIFC CFI 12 matters were filed.",
+      "[2020] DIFC Annual Report CFI 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "One rule per DIFC court series, so the citation's jurisdiction is court-level (--jurisdiction foreign.ae.difc.cfi)."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "gcc",
+  "description": "GCC states other than the UAE: Saudi Arabia, Qatar, Bahrain, Kuwait and Oman legislation, decrees, court decisions and arbitration references, plus GCC-wide and Arab League instruments.",
+  "include": [
+    "tag:gcc"
+  ],
+  "exclude": [],
+  "note": "Selects every rule tagged gcc. UAE rules are tagged uae, not gcc, so a UAE citation is not in this profile; add --profile uae for it."
+}

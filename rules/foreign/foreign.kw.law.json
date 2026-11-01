@@ -1,0 +1,58 @@
+{
+  "id": "foreign.kw.law",
+  "kind": "foreign",
+  "jurisdiction": "foreign.kw",
+  "tags": [
+    "mena",
+    "gcc",
+    "kw"
+  ],
+  "pattern": "\\b(?:Kuwait(?:i)?\\s+)?(?P<kind>Amiri\\s+Decree[- ]Law|Amiri\\s+Decree|Decree[- ]Law|Law)\\s+No\\.?\\s*\\(?(?P<number>[0-9]{1,3})\\)?\\s+of\\s+(?P<year>(?:19|20)[0-9]{2})(?:\\s+\\(Kuwait\\))?",
+  "reject": [
+    "^(?:Amiri\\s+Decree(?:[- ]Law)?|(?:Decree[- ])?Law)\\s+No\\.?\\s*\\(?[0-9]{1,3}\\)?\\s+of\\s+(?:19|20)[0-9]{2}$"
+  ],
+  "priority": 60,
+  "normalize": "{kind} No. {number} of {year}",
+  "authority_key": "kw.law/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Kuwait legislation convention: Law No. N of YYYY; Amiri Decree(-Law) No. N of YYYY (Kuwait Al-Youm gazette)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Kuwait Al-Youm (Official Gazette) index or Kuwait Legal Opinion and Legislation Department pages for the heading form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Kuwait Law No. 1 of 2016 governs companies.",
+        "spans": [[0, 24]],
+        "groups": {
+          "kind": "Law",
+          "number": "1",
+          "year": "2016"
+        }
+      },
+      {
+        "text": "Kuwait Amiri Decree-Law No. 67 of 1980 and Law No. 116 of 2014 (Kuwait)",
+        "spans": [[0, 38], [43, 71]]
+      },
+      {
+        "text": "Kuwaiti Amiri Decree No. 15 of 1959 was cited.",
+        "spans": [[0, 35]]
+      }
+    ],
+    "negative": [
+      "Law No. 1 of 2016 was enacted.",
+      "Kuwait Law is online.",
+      "Amiri Decree No. 15 of 1959 was cited."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Bare Law, Decree-Law and Amiri Decree (Qatar uses the same title) without a Kuwait prefix or '(Kuwait)' suffix are rejected."
+}

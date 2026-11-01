@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.cass.ar",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "الطعن\\s+رقم\\s+(?P<number>[0-9٠-٩]{1,6})\\s+لسنة\\s+(?P<year>[0-9٠-٩]{1,3})\\s+(?:قضائية|ق)\\b",
+  "priority": 58,
+  "normalize": "الطعن رقم {number} لسنة {year} ق",
+  "authority_key": "eg.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Egyptian Court of Cassation Arabic form: الطعن رقم <n> لسنة <y> ق",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check judgments on cc.gov.eg: each cites الطعن رقم N لسنة Y ق (قضائية) and the session date (جلسة).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "الطعن رقم 123 لسنة 70 ق جلسة 2001.",
+        "spans": [[0, 36]],
+        "groups": {
+          "number": "123",
+          "year": "70"
+        }
+      },
+      {
+        "text": "راجع الطعن رقم ١٢٣٤ لسنة ٦٥ قضائية.",
+        "spans": [[9, 62]]
+      },
+      {
+        "text": "في الطعن رقم 5678 لسنة 71 ق - مدني.",
+        "spans": [[5, 42]]
+      }
+    ],
+    "negative": [
+      "الطعن بالنقض مقبول.",
+      "الطعن رقم 123 لسنة 70 قانون.",
+      "الطعن رقم بلا سنة."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Accepts ASCII and Arabic-Indic digits."
+}

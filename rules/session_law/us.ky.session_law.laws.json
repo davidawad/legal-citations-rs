@@ -1,0 +1,80 @@
+{
+  "id": "us.ky.session_law.laws",
+  "kind": "session_law",
+  "jurisdiction": "us.ky",
+  "pattern": "\\b(?P<year>(?:1[6-9]|20)[0-9]{2})(?:-(?P<pamphlet>[0-9]{1,2}))?\\s(?P<series>Ky\\.\\s?Rev\\.\\s?Stat\\.\\s?Adv\\.\\s?Legis\\.\\s?Serv\\.|Ky\\.\\s?Rev\\.\\s?Stat\\.\\s?\\&\\sR\\.\\s?Serv\\.|Ky\\.\\s?Acts)\\s(?:ch\\.\\s?[0-9]{1,4},\\s?§\\s?[0-9]{1,4}[a-z]?,\\s)?(?:No\\.\\s?[0-9]{1,3},\\s)?(?P<page>[0-9]{1,5}(?:-[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{year} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Kentucky: Session laws",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Kentucky, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 288",
+      "corpus/formats/indigo.jsonl line 289",
+      "corpus/formats/indigo.jsonl line 290"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 2015 Ky. Acts 2228.",
+        "spans": [[4, 22]],
+        "groups": {
+          "year": "2015",
+          "series": "Ky. Acts",
+          "page": "2228"
+        }
+      },
+      {
+        "text": "See 2014 Ky. Acts 299.",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See 2015 Ky. Rev. Stat. & R. Serv. 1685 (West).",
+        "spans": [[4, 39]]
+      },
+      {
+        "text": "See 2014 Ky. Rev. Stat. & R. Serv. 2300 (West).",
+        "spans": [[4, 39]]
+      },
+      {
+        "text": "See 2015-9 Ky. Rev. Stat. Adv. Legis. Serv. 194 (LexisNexis).",
+        "spans": [[4, 47]]
+      },
+      {
+        "text": "See 2014-8 Ky. Rev. Stat. Adv. Legis. Serv. 738 (LexisNexis).",
+        "spans": [[4, 47]]
+      },
+      {
+        "text": "See 2013 Ky. Acts 77.",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "See 2013 Ky. Rev. Stat. & R. Serv. 77.",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See 2013 Ky. Rev. Stat. Adv. Legis. Serv. 77.",
+        "spans": [[4, 44]]
+      }
+    ],
+    "negative": [
+      "The Ky. Acts volumes are shelved by year.",
+      "In Kentucky, 12 session laws took effect in 2015.",
+      "Page 2351 of the Kentucky laws index is blank."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

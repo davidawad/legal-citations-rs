@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.cass.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "\\b(?:(?:Civil|Criminal|Commercial|Cassation)\\s+)?Appeal\\s+No\\.?\\s*(?P<number>[0-9]{1,6})\\s+of\\s+(?:Judicial\\s+Year|JY|Judicial\\s+Yr\\.?)\\s+(?P<year>[0-9]{1,3})\\b",
+  "priority": 58,
+  "normalize": "Appeal No. {number} of Judicial Year {year}",
+  "authority_key": "eg.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.75,
+  "provenance": {
+    "encodes": "Egyptian Court of Cassation (Mahkamat al-Naqd) appeal numbering: No. <n> of Judicial Year <y>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check a Court of Cassation bulletin (cc.gov.eg) or English-language Egyptian scholarship: 'Appeal No. 123 of Judicial Year 70'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Appeal No. 123 of Judicial Year 70 (Cassation).",
+        "spans": [[4, 38]],
+        "groups": {
+          "number": "123",
+          "year": "70"
+        }
+      },
+      {
+        "text": "Civil Appeal No. 4567 of Judicial Year 65 held.",
+        "spans": [[0, 41]]
+      },
+      {
+        "text": "Appeal No. 88 of JY 71 (session of 2002).",
+        "spans": [[0, 22]]
+      }
+    ],
+    "negative": [
+      "The appeal of 2005 was dismissed.",
+      "The appeal of Judicial Year 70 is missing.",
+      "Appeal 123 pending."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Judicial years are the court's session years, not calendar years. Form from lead brief; the web search returned only Arabic Cassation archive pages, not a style guide. 'Appeal No. n of JY y' may also name other Egyptian courts."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "us.fed.fda.application_number",
+  "kind": "docket",
+  "jurisdiction": "us.fed.fda",
+  "tags": [
+    "fda",
+    "health"
+  ],
+  "pattern": "\\b(?P<type>s?NDA|ANDA|s?BLA|IND|PMA|NADA|ANADA)\\s+(?:No\\.\\s*)?(?P<number>[0-9]{2}-[0-9]{3}|[0-9]{6}|P[0-9]{6})\\b",
+  "priority": 60,
+  "normalize": "{type} {number}",
+  "authority_key": "us.fda_application/{type}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "FDA application numbers (NDA, ANDA, BLA, IND, PMA); 21 C.F.R. parts 312, 314, 601, 814",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Drugs@FDA at https://www.accessdata.fda.gov/scripts/cder/daf/ and compare application numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The approval was under NDA 021436.",
+        "spans": [
+          [
+            23,
+            33
+          ]
+        ],
+        "groups": {
+          "type": "NDA",
+          "number": "021436"
+        }
+      },
+      {
+        "text": "See ANDA No. 205123; BLA 125057.",
+        "spans": [
+          [
+            4,
+            19
+          ],
+          [
+            21,
+            31
+          ]
+        ]
+      },
+      {
+        "text": "Compare NDA No. 20-505 with PMA P170019.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            39
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The NDA was signed by both parties.",
+      "NDA 12",
+      "ANDA filers"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

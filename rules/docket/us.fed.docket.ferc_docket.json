@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.docket.ferc_docket",
+  "kind": "docket",
+  "jurisdiction": "us.fed.ferc",
+  "tags": [
+    "energy"
+  ],
+  "pattern": "\\b(?:(?:Docket\\s+Nos?\\.\\s*)(?P<number>(?:ER|EL|EC|ES|RM|CP|RP|PL|AD|OA|QF|IN|PR|EG|IS|OR|TS|RT|RR|EF|EM|AC|PF|PA|RC|RD|NJ|TX|IC|ID|OR|ER|P)[0-9]{2}-[0-9]{1,5}(?:-[0-9]{3})?)|(?P<number2>(?:ER|EL|EC|ES|RM|CP|RP|PL|AD|OA|QF|IN|EG|IS|OR|RR|EF|RC|RD)[0-9]{2}-[0-9]{1,5}-[0-9]{3}))\\b",
+  "priority": 60,
+  "normalize": "Docket No. {number}{number2}",
+  "authority_key": "us.ferc_docket/{number}{number2}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "FERC docket numbers (`ER19-1234-000`), 18 C.F.R. § 385.2001",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open FERC eLibrary at https://elibrary.ferc.gov and compare docket prefixes and sub-docket numbers.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The tariff was accepted in ER19-1234-000.",
+        "spans": [
+          [
+            27,
+            40
+          ]
+        ],
+        "groups": {
+          "number2": "ER19-1234-000"
+        }
+      },
+      {
+        "text": "See Docket No. RM21-17.",
+        "spans": [
+          [
+            4,
+            22
+          ]
+        ]
+      },
+      {
+        "text": "Compare Docket Nos. EL20-45-001 with CP16-10-000.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "ER19 visits",
+      "the ER-19 ward",
+      "RM21 project"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

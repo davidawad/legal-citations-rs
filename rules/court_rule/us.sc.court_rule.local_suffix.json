@@ -1,0 +1,50 @@
+{
+  "id": "us.sc.court_rule.local_suffix",
+  "kind": "court_rule",
+  "jurisdiction": "us.sc",
+  "pattern": "\\bRule\\s(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,2})?)(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*),\\s(?P<set>SCRCP|SCRE|SCACR|SCRCrimP)\\b",
+  "priority": 60,
+  "normalize": "Rule {rule}{sub}, {set}",
+  "authority_key": "us.sc.rules.{set}/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "South Carolina local citation form for court rules (Rule N, SCRCP / SCRE / SCACR / SCRCrimP), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the South Carolina Appellate Court Rules and a recent South Carolina Supreme Court opinion and confirm the Rule N, SET suffix form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Rule 12(b)(6), SCRCP.",
+        "spans": [[4, 24]],
+        "groups": {
+          "rule": "12",
+          "sub": "(b)(6)",
+          "set": "SCRCP"
+        }
+      },
+      {
+        "text": "The court relied on Rule 803(6), SCRE in reaching its holding.",
+        "spans": [[20, 37]]
+      },
+      {
+        "text": "Under Rule 208(b)(1)(B), SCACR, the claim fails.",
+        "spans": [[6, 30]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "Rule 12 of the club bylaws covers dues.",
+      "The SCRCP committee met 12 times in 2020."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. The rule set name follows the number, so it is a separate rule from us.sc.court_rule.civ, .evid and .app (Bluebook prefix forms). The authority key uses the set acronym, not the Bluebook name."
+}

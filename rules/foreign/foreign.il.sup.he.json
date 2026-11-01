@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.sup.he",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il.sup",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<court>בג[\"״]ץ|בגץ|רע[\"״]א|רע[\"״]פ|רע[\"״]מ|ע[\"״]א|ע[\"״]פ|ע[\"״]מ|עע[\"״]מ|דנ[\"״]א|דנ[\"״]פ|דנג[\"״]ץ|דנ[\"״]מ|בש[\"״]פ|בר[\"״]ם|ע[\"״]ב|ע[\"״]ש|עפ[\"״]ת)\\s+(?P<number>[0-9]{1,6}/[0-9]{2,4}|[0-9]{1,6}-[0-9]{2}-[0-9]{2})\\b",
+  "priority": 58,
+  "normalize": "{court} {number}",
+  "authority_key": "il.sup/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Israeli Supreme Court Hebrew docket prefixes (בג\"ץ, ע\"א, ע\"פ, רע\"א, דנ\"א, עע\"מ ...) with n/yy docket",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Israeli Uniform Rules of Legal Citation (הכללים האחידים לאזכור, Israeli law-review style guide) and compare with the Nevo/Takdin rendering of a real judgment.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "בג\"ץ 5100/94 הוועד הציבורי נגד עינויים.",
+        "spans": [[0, 15]],
+        "groups": {
+          "court": "בג\"ץ",
+          "number": "5100/94"
+        }
+      },
+      {
+        "text": "ע\"א 6821/93 בנק המזרחי המאוחד נ' מגדל כפר שיתופי.",
+        "spans": [[0, 13]]
+      },
+      {
+        "text": "נדחתה רע\"א 1234/05 וגם דנ\"א 8765/12.",
+        "spans": [[11, 26], [34, 49]]
+      }
+    ],
+    "negative": [
+      "ההחלטה בבג\"ץ ללא מספר.",
+      "ע\"א בלי מספר.",
+      "מספר 1234/05 בלבד."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Supreme Court (Hebrew). Judgments are sometimes cited with the PD reporter; see foreign.il.pd and foreign.il.pd.he."
+}

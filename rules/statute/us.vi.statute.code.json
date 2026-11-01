@@ -1,0 +1,64 @@
+{
+  "id": "us.vi.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.vi",
+  "pattern": "\\bV\\.\\s?I\\.\\s+Code\\s+Ann\\.\\s+tit\\.\\s+(?P<title>[0-9]{1,2}[A-Z]?),\\s+§§?\\s?(?P<section>[0-9]{1,4}[a-z]?(?:-[0-9]{1,4}[a-z]?)?)(?P<subsection>(?:\\([0-9A-Za-z]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "V.I. Code Ann. tit. {title}, § {section}",
+  "authority_key": "us.vi.code/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T3 Virgin Islands (Virgin Islands Code Annotated)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T3 Virgin Islands (Virgin Islands Code Annotated), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Indigo prints V.I. Code Ann. tit. 1, § 97-89 (2015).",
+        "spans": [
+          [
+            14,
+            45
+          ]
+        ],
+        "groups": {
+          "title": "1",
+          "section": "97-89"
+        }
+      },
+      {
+        "text": "Under V.I. Code Ann. tit. 14, § 1052, the charge stands.",
+        "spans": [
+          [
+            6,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "See V.I. Code Ann. tit. 5, § 3509(a).",
+        "spans": [
+          [
+            4,
+            37
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The V.I. Code Ann. volumes are blue.",
+      "Title 14 of the V.I. Code covers crimes.",
+      "V.I. Code Ann. tit. 5 is the procedure title."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

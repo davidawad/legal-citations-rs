@@ -1,0 +1,56 @@
+{
+  "id": "foreign.uk.hansard",
+  "kind": "foreign",
+  "jurisdiction": "foreign.gb",
+  "tags": [
+    "foreign",
+    "uk",
+    "legislative"
+  ],
+  "pattern": "\\b(?P<house>HC|HL)\\s+Deb\\s+(?:\\((?P<series>[0-9]{1,2})(?:st|nd|rd|th)\\s+series\\)\\s+)?(?P<date>[0-9]{1,2}\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+(?:1[89]|20)[0-9]{2}),?\\s+vol\\.?\\s+(?P<volume>[0-9]{1,4}),?\\s+cols?\\.?\\s+(?P<column>[0-9]{1,5}[A-Z]{0,2}(?:[-–][0-9]{1,5}[A-Z]{0,2})?)",
+  "priority": 60,
+  "normalize": "{house} Deb {date}, vol {volume}, col {column}",
+  "authority_key": "uk.hansard/{house}/{volume}/{column}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "OSCOLA (4th ed.) 2.5.1 (Hansard: HC Deb <date>, vol <n>, col <n>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open OSCOLA (4th ed.) 2.5.1.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "HC Deb 3 February 1977, vol 925, col 973.",
+        "spans": [[0, 40]],
+        "groups": {
+          "house": "HC",
+          "date": "3 February 1977",
+          "volume": "925",
+          "column": "973"
+        }
+      },
+      {
+        "text": "See HL Deb 12 June 2018, vol 791, cols 1532–34.",
+        "spans": [[4, 48]]
+      },
+      {
+        "text": "HC Deb (6th series) 15 March 1988, vol 129, col 993W.",
+        "spans": [[0, 52]]
+      }
+    ],
+    "negative": [
+      "The HC debate on 3 February 1977 ran long.",
+      "Volume 925 of the debates is lost.",
+      "HL members met 12 times."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

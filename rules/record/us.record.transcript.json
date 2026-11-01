@@ -1,0 +1,121 @@
+{
+  "id": "us.record.transcript",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\b(?P<label>(?:(?:Trial|Hr['’]g|Hearing|Sent(?:['’]g|encing|\\.)|Plea|Suppression|Evidentiary|Status\\s+Conf\\.|Mot\\.|Prelim\\.(?:\\s+Inj\\.)?|Oral\\s+Arg\\.|Markman|Claim\\s+Constr\\.|Bench\\s+Trial|Jury\\s+Trial|Detention|Daubert|Pretrial\\s+Conf\\.)\\s+)*Tr\\.)(?:\\s+vol\\.\\s+(?P<volume>[0-9]{1,2}|[IVX]{1,4}),?)?\\s+(?:at\\s+)?(?P<pin>¶¶?\\s?[0-9]{1,4}(?:\\s?[–-]\\s?[0-9]{1,4})?|[0-9]{1,5}(?::[0-9]{1,2})?(?:\\s?[-–]\\s?[0-9]{1,5}(?::[0-9]{1,2})?)?)\\b(?:,\\s+(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+(?:19|20)[0-9]{2}))?(?:,\\s+(?P<ecf>ECF\\s+No\\.\\s?[0-9]{1,5}))?",
+  "priority": 54,
+  "normalize": "{label} {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R24 (Citing Court or Litigation Documents from Your Case)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R24 (Citing Court or Litigation Documents from Your Case), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Trial Tr. vol. 3, 45, Mar. 5, 2015.",
+        "spans": [
+          [
+            0,
+            34
+          ]
+        ],
+        "groups": {
+          "label": "Trial Tr.",
+          "volume": "3",
+          "pin": "45",
+          "date": "Mar. 5, 2015"
+        }
+      },
+      {
+        "text": "The witness recanted. Hr’g Tr. 12:4–9.",
+        "spans": [
+          [
+            22,
+            41
+          ]
+        ]
+      },
+      {
+        "text": "See Sent’g Tr. at 22, ECF No. 90 and Oral Arg. Tr. 5.",
+        "spans": [
+          [
+            4,
+            34
+          ],
+          [
+            39,
+            54
+          ]
+        ]
+      },
+      {
+        "text": "The witness recanted. Hr’g Tr. 12:3-5.",
+        "spans": [
+          [
+            22,
+            39
+          ]
+        ]
+      },
+      {
+        "text": "See Trial Tr. vol. 3, 45, Mar. 5, 2015.",
+        "spans": [
+          [
+            4,
+            38
+          ]
+        ]
+      },
+      {
+        "text": "He objected (Tr. 45:3) and was overruled (Sent’g Tr. at 7–8).",
+        "spans": [
+          [
+            13,
+            21
+          ],
+          [
+            42,
+            63
+          ]
+        ]
+      },
+      {
+        "text": "He said so (Hr'g Tr. 12:3).",
+        "spans": [
+          [
+            12,
+            25
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The trial transcript ran 45 pages.",
+      "Trial Tr. was sealed in 2015.",
+      "Hr’g Tr. vol. pending since 3 May.",
+      "The transcript (Tr.) was filed.",
+      "Trial Tr. was lost in the mail.",
+      "Hr’g Tr. vol. three is missing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Merged from two branches: Indigo R24 (typed transcripts, ¶ pins, a trailing ECF No.) and Bluebook B17 forms (stacked qualifiers such as Markman Hr’g Tr., a bare Tr. 45:3; not opened). reject_before keeps `Tr.` after Co./St./Bank and reporter-like volumes out.",
+  "tags": [
+    "transcript"
+  ],
+  "reject_before": [
+    "(?:Co\\.|St\\.|Bank|&|Ins\\.|Sav\\.)\\s?$",
+    "[0-9]\\s?$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ]
+}

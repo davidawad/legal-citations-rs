@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.ftc.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ftc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+F\\.\\s?T\\.\\s?C\\.\\s+(?P<page>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} F.T.C. {page}",
+  "authority_key": "us.ftc/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Federal Trade Commission Decisions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for F.T.C.; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See In re Intel Corp., 150 F.T.C. 420 (2010).",
+        "spans": [
+          [
+            23,
+            37
+          ]
+        ],
+        "groups": {
+          "volume": "150",
+          "page": "420"
+        }
+      },
+      {
+        "text": "The Commission's policy statement appears at 104 F.T.C. 949, 1070 (1984).",
+        "spans": [
+          [
+            45,
+            59
+          ]
+        ]
+      },
+      {
+        "text": "Compare 103 F.T.C. 110 with 1 F.T.C. 1.",
+        "spans": [
+          [
+            8,
+            22
+          ],
+          [
+            28,
+            38
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The F.T.C. has 5 commissioners.",
+      "FTC 150 was a staff report.",
+      "In 2010 the F.T.C. brought 420 actions."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

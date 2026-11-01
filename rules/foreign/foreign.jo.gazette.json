@@ -1,0 +1,53 @@
+{
+  "id": "foreign.jo.gazette",
+  "kind": "foreign",
+  "jurisdiction": "foreign.jo",
+  "tags": [
+    "foreign",
+    "mena",
+    "jo"
+  ],
+  "pattern": "\\bJordan(?:ian)?\\s+Official\\s+Gazette\\s+(?:No\\.?|Issue)\\s*(?P<number>[0-9]{3,5})\\b(?:,?\\s+pp?\\.\\s*(?P<page>[0-9]{1,5}))?",
+  "priority": 55,
+  "normalize": "Official Gazette No. {number}",
+  "authority_key": "jo.gazette/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Jordanian Official Gazette (al-Jarida al-Rasmiyya) issue number and page",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check the Jordanian Official Gazette archive (lob.gov.jo or the Lower House site) for issue numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Jordanian Official Gazette No. 2645 published it.",
+        "spans": [[0, 35]],
+        "groups": {
+          "number": "2645"
+        }
+      },
+      {
+        "text": "Jordan Official Gazette No. 4567, p. 5290 (2002).",
+        "spans": [[0, 41]]
+      },
+      {
+        "text": "See Jordanian Official Gazette Issue 5100.",
+        "spans": [[4, 41]]
+      }
+    ],
+    "negative": [
+      "Official Gazette No. 2645 without a country.",
+      "Jordanian Gazette is a newspaper.",
+      "Jordanian Official Gazette lists laws."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,69 @@
+{
+  "id": "us.model.code_professional_responsibility",
+  "kind": "secondary",
+  "jurisdiction": "us.model.aba",
+  "pattern": "\\bModel\\s+Code\\s+of\\s+Pro(?:f(?:'|’)l|\\.|fessional)\\s+Resp(?:\\.|onsibility)\\s+(?P<part>DR|EC|Canon)\\s?(?P<number>[0-9]{1,2}(?:-[0-9]{1,3})?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "Model Code of Pro. Resp. {part} {number}{sub}",
+  "authority_key": "us.aba.mcpr/{part}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (ABA Model Code of Professional Responsibility) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (ethics codes) and check the `Model Code of Pro. Resp. DR 5-101 (Am. Bar Ass'n 1980)` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The old rule is Model Code of Prof'l Resp. DR 5-101(A) (Am. Bar Ass'n 1980).",
+        "spans": [
+          [
+            16,
+            54
+          ]
+        ],
+        "groups": {
+          "part": "DR",
+          "number": "5-101",
+          "sub": "(A)"
+        }
+      },
+      {
+        "text": "The aspiration appears in Model Code of Professional Responsibility EC 7-1.",
+        "spans": [
+          [
+            26,
+            74
+          ]
+        ]
+      },
+      {
+        "text": "Compare Model Code of Pro. Resp. Canon 9 with Model Code of Prof’l Resp. DR 7-102.",
+        "spans": [
+          [
+            8,
+            40
+          ],
+          [
+            46,
+            83
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Model Code of Professional Responsibility was replaced in 1983.",
+      "DR 5-101 is a room number.",
+      "Model Code of Prof'l Resp. pmbl."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,6 @@
+{"start": 4, "end": 41, "kind": "case", "jurisdiction": "us.scotus", "text": "Roe v. Wade, 410 U.S. 113, 115 (1973)", "normalized": "410 U.S. 113", "form": "U.S. Reports"}
+{"start": 43, "end": 53, "kind": "id", "jurisdiction": "us.scotus", "text": "Id. at 116", "normalized": "Id. at 116", "form": "Id."}
+{"start": 79, "end": 103, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U.S.C. § 1983 (2018)", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 108, "end": 137, "kind": "statute", "jurisdiction": "us.il", "text": "735 ILCS 5/13-116 (West 2022)", "normalized": "735 ILCS 5/13-116", "form": "ILCS"}
+{"start": 147, "end": 164, "kind": "case", "jurisdiction": "us.hi", "text": "45 Haw. Trib. 112", "normalized": "45 Haw. Trib. 112", "form": ""}
+{"start": 183, "end": 193, "kind": "record", "jurisdiction": "us", "text": "ECF No. 12", "normalized": "ECF No. 12", "form": "record: ECF/Dkt", "optional": true, "note": "fixture: an optional label"}

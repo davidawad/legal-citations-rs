@@ -1,0 +1,49 @@
+{
+  "id": "us.ok.regulation.oac",
+  "kind": "regulation",
+  "jurisdiction": "us.ok",
+  "pattern": "\\b(?:Okla\\.\\s?Admin\\.\\s?Code\\s?(?:§\\s?)?|OAC\\s?)(?P<rule>[0-9]{1,3}:[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}(?:\\.[0-9]{1,2})?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "Okla. Admin. Code § {rule}{sub}",
+  "authority_key": "us.ok.oac/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Oklahoma) administrative compilation: Okla. Admin. Code § N:N-N-N; local form OAC N:N-N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Oklahoma) and the official Oklahoma administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Okla. Admin. Code § 252:100-1-3.",
+        "spans": [[4, 36]],
+        "groups": {
+          "rule": "252:100-1-3",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on OAC 317:30-5-1 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under Okla. Admin. Code 165:10-3-1(a), the permit fails.",
+        "spans": [[6, 37]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Oklahoma agency adopted 12 new rules in 2020.",
+      "Under Okla. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet."
+}

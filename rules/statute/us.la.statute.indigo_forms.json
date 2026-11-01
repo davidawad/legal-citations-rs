@@ -1,0 +1,122 @@
+{
+  "id": "us.la.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.la",
+  "pattern": "\\b(?:La\\.\\s?Code\\sCrim\\.\\s?Proc\\.\\s?Ann\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|La\\.\\s?Code\\sCiv\\.\\s?Proc\\.\\s?Ann\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|La\\.\\s?Child\\.\\s?Code\\sAnn\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|La\\.\\s?Code\\sEvid\\.\\s?Ann\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|La\\.\\s?Civ\\.\\s?Code\\sAnn\\.\\s?art\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Louisiana: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Louisiana, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 305",
+      "corpus/formats/indigo.jsonl line 306",
+      "corpus/formats/indigo.jsonl line 307",
+      "corpus/formats/indigo.jsonl line 308",
+      "corpus/formats/indigo.jsonl line 309"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See La. Child. Code Ann. art. 53 (2015).",
+        "spans": [[4, 32]],
+        "groups": {}
+      },
+      {
+        "text": "See La. Child. Code Ann. art. 53 (2014).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See La. Civ. Code Ann. art. 17 (2015).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See La. Civ. Code Ann. art. 49 (2014).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See La. Code Civ. Proc. Ann. art. 1 (2015).",
+        "spans": [[4, 35]]
+      },
+      {
+        "text": "See La. Code Civ. Proc. Ann. art. 57 (2014).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See La. Code Crim. Proc. Ann. art. 21 (2015).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See La. Code Crim. Proc. Ann. art. 17 (2014).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See La. Code Evid. Ann. art. 25 (2015).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See La. Code Evid. Ann. art. 45 (2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See La. Child. Code Ann. art. 86 (5348).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See La. Child. Code Ann. art. 86 (5347).",
+        "spans": [[4, 32]]
+      },
+      {
+        "text": "See La. Civ. Code Ann. art. 41 (5348).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See La. Civ. Code Ann. art. 72 (5347).",
+        "spans": [[4, 30]]
+      },
+      {
+        "text": "See La. Code Civ. Proc. Ann. art. 4 (5348).",
+        "spans": [[4, 35]]
+      },
+      {
+        "text": "See La. Code Civ. Proc. Ann. art. 81 (5347).",
+        "spans": [[4, 36]]
+      },
+      {
+        "text": "See La. Code Crim. Proc. Ann. art. 54 (5348).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See La. Code Crim. Proc. Ann. art. 41 (5347).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "See La. Code Evid. Ann. art. 58 (5348).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See La. Code Evid. Ann. art. 78 (5347).",
+        "spans": [[4, 31]]
+      }
+    ],
+    "negative": [
+      "The Louisiana code was amended in 2015.",
+      "Section 12 of the Louisiana rules is long.",
+      "Title five of the Louisiana compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

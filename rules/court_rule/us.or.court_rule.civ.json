@@ -1,0 +1,49 @@
+{
+  "id": "us.or.court_rule.civ",
+  "kind": "court_rule",
+  "jurisdiction": "us.or",
+  "pattern": "\\b(?:Or\\.\\s?R\\.\\s?Civ\\.\\s?P\\.|ORCP)\\s?(?P<rule>[0-9]{1,3}(?:\\.[0-9]{1,4})?[a-z]?)(?P<sub>(?:\\s[A-Z](?:\\([0-9]{1,2}\\))*)?)",
+  "priority": 60,
+  "normalize": "Or. R. Civ. P. {rule}{sub}",
+  "authority_key": "us.or.rules.civ/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Oregon) Oregon Rules of Civil Procedure: Or. R. Civ. P. N; local form ORCP N A(1) (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Oregon) and the official Oregon Rules of Civil Procedure; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Or. R. Civ. P. 21.",
+        "spans": [[4, 21]],
+        "groups": {
+          "rule": "21",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on ORCP 47 in reaching its holding.",
+        "spans": [[20, 27]]
+      },
+      {
+        "text": "Under Or. R. Civ. P. 71, the claim fails.",
+        "spans": [[6, 23]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Oregon rules committee met 12 times in 2020.",
+      "Under Or. R. Civ. P. as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. Oregon subdivisions are letters without parentheses (ORCP 21 A(8)). The Oregon Evidence Code is a statute (ORS ch. 40)."
+}

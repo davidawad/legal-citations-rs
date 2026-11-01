@@ -1,0 +1,53 @@
+{
+  "id": "intl.un.charter",
+  "kind": "treaty",
+  "jurisdiction": "intl.un",
+  "tags": [
+    "international",
+    "un"
+  ],
+  "pattern": "\\b(?:U\\.\\s?N\\.\\s+Charter|Charter\\s+of\\s+the\\s+United\\s+Nations|UN\\s+Charter)\\s*,?\\s+(?:arts?\\.|Arts?\\.|Article)\\s+(?P<article>[0-9]{1,3})(?:,?\\s+(?:¶|para\\.|paragraph)\\s*(?P<para>[0-9]{1,2}))?",
+  "priority": 62,
+  "normalize": "U.N. Charter art. {article}",
+  "authority_key": "un.charter/{article}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.7.1 (U.N. Charter art. <n>, ¶ <n>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.7.1 and the U.N. Charter text (un.org/en/about-us/un-charter).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The use of force is barred by U.N. Charter art. 2, ¶ 4.",
+        "spans": [[30, 55]],
+        "groups": {
+          "article": "2",
+          "para": "4"
+        }
+      },
+      {
+        "text": "See U.N. Charter art. 51.",
+        "spans": [[4, 24]]
+      },
+      {
+        "text": "Charter of the United Nations, Article 39 empowers the Council.",
+        "spans": [[0, 41]]
+      }
+    ],
+    "negative": [
+      "The U.N. Charter was signed in 1945.",
+      "Article 51 of the bylaws.",
+      "The charter, art. 2 of the club rules."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

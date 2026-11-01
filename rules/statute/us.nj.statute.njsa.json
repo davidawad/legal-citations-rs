@@ -1,0 +1,56 @@
+{
+  "id": "us.nj.statute.njsa",
+  "kind": "statute",
+  "jurisdiction": "us.nj",
+  "pattern": "\\bN\\.?J\\.?S\\.?A\\.?\\s*§?\\s*(?P<key>[0-9]+[A-Z]?:[0-9]+[\\w\\-\\.]*(?:\\([^)]*\\))?(?:\\s+et\\s+seq\\.?)?)",
+  "priority": 55,
+  "normalize": "N.J.S.A. {key}",
+  "authority_key": "us.nj.njsa/{key}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (New Jersey) N.J. Stat. Ann. (21st ed.); N.J.S.A. is the local form",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 New Jersey and BT2 local rules for N.J.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py NJSA_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See N.J.S.A. 34:11-56a25.",
+        "spans": [[4, 25]],
+        "groups": {
+          "key": "34:11-56a25."
+        }
+      },
+      {
+        "text": "The court relied on N.J.S.A. 10:5-1 et seq. in reaching its holding.",
+        "spans": [[20, 43]]
+      },
+      {
+        "text": "Under NJSA 2A:14-1, the claim fails.",
+        "spans": [[6, 18]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "njsa",
+    "order": 5,
+    "pattern": "N\\.?J\\.?S\\.?A\\.?\\s*§?\\s*(?P<key>\\d+[A-Z]?:\\d+[\\w\\-\\.]*(?:\\([^)]*\\))?(?:\\s+et\\s+seq\\.?)?)"
+  },
+  "note": "Trailing dot of a section is part of the key when the sentence ends right after it."
+}

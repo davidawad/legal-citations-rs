@@ -1,0 +1,58 @@
+{
+  "id": "foreign.au.neutral",
+  "kind": "foreign",
+  "jurisdiction": "foreign.au",
+  "tags": [
+    "foreign",
+    "australia"
+  ],
+  "pattern": "\\[(?P<year>(?:19|20)[0-9]{2})\\]\\s+(?P<court>HCA(?:Trans)?|FCAFC|FCA|FCCA|FMCA|FedCFamC[12][AF]|FamCAFC|FamCA|NSWCA|NSWCCA|NSWSC|NSWLEC|NSWDC|NSWCATAP|NSWCATAD|VSCA|VSC|VCC|VCAT|QCA|QSC|QDC|QCAT|WASCA|WASC|WADC|SASCFC|SASC|SADC|TASFC|TASCCA|TASSC|ACTCA|ACTSC|NTCA|NTSC|AATA|ARTA)\\s+(?P<number>[0-9]{1,5})\\b(?:,?\\s+at\\s+\\[(?P<para>[0-9]{1,4})\\](?:[-–]\\[[0-9]{1,4}\\])?|,?\\s+(?:at\\s+)?paras?\\.?\\s+(?P<para2>[0-9]{1,4}(?:[-–][0-9]{1,4})?))?",
+  "priority": 60,
+  "normalize": "[{year}] {court} {number}",
+  "authority_key": "au/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "AGLC (4th ed.) 2.3 (medium neutral citations: [<year>] <court> <number>, [<para>])",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Australian Guide to Legal Citation (4th ed.) rules 2.1-2.3 and 3.1, and Bluebook T2 (Australia).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Mabo v Queensland (No 2) [1992] HCA 23.",
+        "spans": [[25, 38]],
+        "groups": {
+          "year": "1992",
+          "court": "HCA",
+          "number": "23"
+        }
+      },
+      {
+        "text": "The court relied on [2015] FCAFC 50 in reaching its holding.",
+        "spans": [[20, 35]]
+      },
+      {
+        "text": "Under [2019] NSWCA 300, the claim fails.",
+        "spans": [[6, 22]]
+      },
+      {
+        "text": "[2020] HCA 5 at [12].",
+        "spans": [[0, 20]]
+      }
+    ],
+    "negative": [
+      "The HCA met 23 times in 1992.",
+      "In 2019 NSW passed 300 laws.",
+      "[2020] was a year with 5 HCA cases."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

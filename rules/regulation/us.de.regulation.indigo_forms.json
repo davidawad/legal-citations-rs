@@ -1,0 +1,54 @@
+{
+  "id": "us.de.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.de",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sDel\\.\\s?Code\\sRegs\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Delaware: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Delaware, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 134"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 29-25-25 Del. Code Regs. § 9 (LexisNexis 2015).",
+        "spans": [[4, 33]],
+        "groups": {}
+      },
+      {
+        "text": "See 33-9-89 Del. Code Regs. § 113 (LexisNexis 2014).",
+        "spans": [[4, 34]]
+      },
+      {
+        "text": "See 52-58-58 Del. Code Regs. § 2 (LexisNexis 5348).",
+        "spans": [[4, 33]]
+      },
+      {
+        "text": "See 66-2-12 Del. Code Regs. § 446 (LexisNexis 5347).",
+        "spans": [[4, 34]]
+      }
+    ],
+    "negative": [
+      "The Delaware code was amended in 2015.",
+      "Section 12 of the Delaware rules is long.",
+      "Title five of the Delaware compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

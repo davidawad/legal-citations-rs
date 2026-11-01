@@ -1,0 +1,74 @@
+{
+  "id": "us.record.statement_of_facts",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "pleading"
+  ],
+  "pattern": "\\b(?P<doc>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:(?:Local\\s+)?(?:Rule\\s+|R\\.\\s+)?56\\.1\\s+(?:Stmt\\.|Statement|Counterstmt\\.|Counterstatement|Resp\\.)|(?:(?:Joint|Resp\\.|Counter|Reply|Supp\\.)\\s+)?(?:Stmt\\.|Statement)\\s+of\\s+(?:Undisputed\\s+)?(?:Material\\s+)?Facts|[PDJCR]?S(?:U|O|UM)F|[PDJ]SUMF))\\s*¶¶?\\s*(?P<pin>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b",
+  "priority": 55,
+  "normalize": "{doc} ¶ {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "S.D.N.Y. and E.D.N.Y. Local Civ. R. 56.1; Fed. R. Civ. P. 56(c)(1)(A) statements of undisputed fact; Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open S.D.N.Y./E.D.N.Y. Local Civil Rule 56.1 and the summary-judgment local rule of the district; compare the abbreviations used in briefs.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The date is undisputed. SUF ¶ 12.",
+        "spans": [
+          [
+            24,
+            33
+          ]
+        ],
+        "groups": {
+          "pin": "12"
+        }
+      },
+      {
+        "text": "See Pl.’s 56.1 Stmt. ¶ 4; Defs.’ SUMF ¶¶ 5–7.",
+        "spans": [
+          [
+            4,
+            27
+          ],
+          [
+            29,
+            53
+          ]
+        ]
+      },
+      {
+        "text": "Compare Statement of Undisputed Material Facts ¶ 3 with DSOF ¶ 9.",
+        "spans": [
+          [
+            8,
+            51
+          ],
+          [
+            57,
+            66
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The SUF was filed late.",
+      "Rule 56.1 statements must be concise.",
+      "A statement of facts follows."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

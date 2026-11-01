@@ -1,0 +1,77 @@
+{
+  "id": "us.fed.dist.local_civil_rule",
+  "kind": "court_rule",
+  "jurisdiction": "us.fed.dist",
+  "tags": [
+    "local_rules",
+    "sdny",
+    "edny"
+  ],
+  "pattern": "\\bLocal\\s+(?P<label>Civ\\.|Crim\\.|Adm\\.|Admiralty|Patent|Pat\\.)\\s+R\\.\\s?(?P<rule>(?:[A-G]\\.)?[0-9]+(?:\\.[0-9]+)*[A-Za-z]?)(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 56,
+  "normalize": "Local {label} R. {rule}{sub}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Local Rules of the S.D.N.Y. and E.D.N.Y. (`Local Civ. R. 56.1`); Bluebook R. 12.9.3",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Joint Local Rules of the S.D.N.Y. and E.D.N.Y. at https://www.nysd.uscourts.gov/rules and compare the cited form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The movant must file a statement under Local Civ. R. 56.1.",
+        "spans": [
+          [
+            39,
+            57
+          ]
+        ],
+        "groups": {
+          "label": "Civ.",
+          "rule": "56.1"
+        }
+      },
+      {
+        "text": "See Local Civ. R. 6.3; Local Crim. R. 16.1.",
+        "spans": [
+          [
+            4,
+            21
+          ],
+          [
+            23,
+            42
+          ]
+        ]
+      },
+      {
+        "text": "Compare Local Civ. R. 7.1(a)(2) with Local Adm. R. B.1.",
+        "spans": [
+          [
+            8,
+            31
+          ],
+          [
+            37,
+            54
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "Local Civ. R. statements",
+      "The Local Civil rules",
+      "a local civ. r. note"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

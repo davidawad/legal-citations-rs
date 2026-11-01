@@ -1,0 +1,52 @@
+{
+  "id": "intl.treaty.short_at",
+  "kind": "treaty",
+  "jurisdiction": "intl",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<series>U\\.\\s?N\\.\\s?T\\.\\s?S\\.|L\\.\\s?N\\.\\s?T\\.\\s?S\\.|U\\.\\s?S\\.\\s?T\\.|I\\.\\s?L\\.\\s?M\\.|Consol\\.\\s?T\\.\\s?S\\.|Bevans|Pan-Am\\.\\s?T\\.\\s?S\\.),\\s+at\\s+(?P<pin>[0-9]{1,6}(?:\\s?[-–]\\s?[0-9]{1,6})?)",
+  "priority": 62,
+  "normalize": "{volume} {series}, at {pin}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources) series in the short form <vol> <series>, at <page> (Indigo R26 / Bluebook R21.17 short forms)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.17 (treaty short forms) and Indigo R26.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See ICCPR, Art. 6(5), 999 U. N. T. S., at 175 (prohibiting capital punishment).",
+        "spans": [[22, 45]],
+        "groups": {
+          "volume": "999",
+          "pin": "175"
+        }
+      },
+      {
+        "text": "Compensation is required. 999 U.N.T.S., at 175-176.",
+        "spans": [[26, 50]]
+      },
+      {
+        "text": "The parties agreed, 21 U.S.T., at 101.",
+        "spans": [[20, 37]]
+      }
+    ],
+    "negative": [
+      "The 999 delegates met at 175 Main Street.",
+      "U.N.T.S. volumes run at 175 a year.",
+      "Volume 21, at page 101, is torn."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: the short form names the volume only; the first page is in the full cite it shortens."
+}

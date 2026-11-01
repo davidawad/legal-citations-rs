@@ -1,0 +1,71 @@
+{
+  "id": "us.il.session_law.public_act",
+  "kind": "session_law",
+  "jurisdiction": "us.il",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\b(?:(?:Ill\\.\\s+)?(?:P\\.\\s?A\\.|Pub(?:lic|\\.)\\s+Act)\\s+(?P<ga>1[0-9]{2})-(?P<number>[0-9]{1,4})|Ill\\.\\s+(?:P\\.\\s?A\\.|Pub(?:lic|\\.)\\s+Act)\\s+(?P<ga2>[0-9]{2})-(?P<number2>[0-9]{1,4}))\\b",
+  "priority": 60,
+  "normalize": "P.A. {ga}{ga2}-{number}{number2}",
+  "authority_key": "us.il.public_act/{ga}{ga2}-{number}{number2}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Illinois Public Acts (General Assembly-number, `P.A. 101-27`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Illinois General Assembly public acts at https://www.ilga.gov/legislation/publicacts and compare numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The amendment took effect under P.A. 101-27.",
+        "spans": [
+          [
+            32,
+            43
+          ]
+        ],
+        "groups": {
+          "ga": "101",
+          "number": "27"
+        }
+      },
+      {
+        "text": "See Public Act 102-0004.",
+        "spans": [
+          [
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "text": "Compare Ill. P.A. 91-357 with Pub. Act 100-1033.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            47
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "P.A. 101",
+      "The P.A. system",
+      "P.A. 1-27"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

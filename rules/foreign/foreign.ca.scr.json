@@ -1,0 +1,59 @@
+{
+  "id": "foreign.ca.scr",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ca",
+  "tags": [
+    "foreign",
+    "canada"
+  ],
+  "pattern": "\\[(?P<year>(?:18|19|20)[0-9]{2})\\]\\s+(?P<volume>[1-4])\\s+(?P<reporter>S\\.?\\s?C\\.?\\s?R\\.?|F\\.?\\s?C\\.?\\s?R\\.?|F\\.?\\s?C\\.?)\\s+(?P<page>[0-9]{1,5})\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,5}))?",
+  "priority": 60,
+  "normalize": "[{year}] {volume} {reporter} {page}",
+  "authority_key": "ca.scr/{year}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "McGill Guide 3.7 (official reporters: [<year>] <vol> SCR <page>; Federal Courts Reports FCR); Bluebook T2 (Canada)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the McGill Guide (Canadian Guide to Uniform Legal Citation) chapters 2-3 and Bluebook T2 (Canada).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "R v Oakes, [1986] 1 SCR 103.",
+        "spans": [[11, 27]],
+        "groups": {
+          "year": "1986",
+          "volume": "1",
+          "reporter": "SCR",
+          "page": "103"
+        }
+      },
+      {
+        "text": "Hill v. Church of Scientology, [1995] 2 S.C.R. 1130.",
+        "spans": [[31, 51]]
+      },
+      {
+        "text": "Canada v Khadr, [2008] 2 SCR 125, at 140.",
+        "spans": [[16, 40]]
+      },
+      {
+        "text": "Baker, [1999] 2 FCR 39.",
+        "spans": [[7, 22]]
+      }
+    ],
+    "negative": [
+      "[1986] saw 1 SCR revision.",
+      "The SCR has 103 seats.",
+      "In 1995 there were 2 SCR volumes."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Volumes 1-4 per year; Indian S.C.R. volumes run higher and are not matched here."
+}

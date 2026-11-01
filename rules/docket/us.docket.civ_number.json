@@ -1,0 +1,67 @@
+{
+  "id": "us.docket.civ_number",
+  "kind": "docket",
+  "jurisdiction": "us",
+  "pattern": "\\bNos?\\.\\s?(?P<docket>[0-9]{1,2}\\s(?:Civ|Cr|Crim|CV|Misc|MC)\\.?\\s[0-9]{1,6})(?:\\s\\((?P<judge>[A-Z]{2,4})\\))?",
+  "priority": 60,
+  "normalize": "No. {docket}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R12.4.2 (Slip opinions) and R12.4.4",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R12.4.2 (Slip opinions) and R12.4.4, and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Beastie Boys v. Monster Energy Co., No. 12 Civ. 6065 (S.D.N.Y. Dec. 4, 2014).",
+        "spans": [
+          [
+            36,
+            52
+          ]
+        ],
+        "groups": {
+          "docket": "12 Civ. 6065"
+        }
+      },
+      {
+        "text": "See No. 91 Civ. 5442 (RPP).",
+        "spans": [
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      {
+        "text": "Compare No. 08 Cr. 1213 with Nos. 15 CV 2001.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            44
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "No. 12 in the series sold out.",
+      "Civ. 6065 alone is not a cite.",
+      "No. 12 civil cases were filed."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The S.D.N.Y. style docket (`<yy> Civ. <n>`, optional judge initials), which us.docket.number does not read."
+}

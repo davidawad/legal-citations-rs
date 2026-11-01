@@ -1,0 +1,69 @@
+{
+  "id": "us.fed.executive.presidential_documents",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<series>Weekly\\s+Comp\\.\\s?Pres\\.\\s?Doc\\.|Daily\\s+Comp\\.\\s?Pres\\.\\s?Doc\\.|Pub\\.\\s?Papers)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "us.presdoc/{series}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.7 (presidential papers) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 for the Weekly Comp. Pres. Doc., Daily Comp. Pres. Doc. and Pub. Papers forms.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 37 Weekly Comp. Pres. Doc. 1310 (Sept. 20, 2001).",
+        "spans": [
+          [
+            4,
+            35
+          ]
+        ],
+        "groups": {
+          "volume": "37",
+          "series": "Weekly Comp. Pres. Doc.",
+          "page": "1310"
+        }
+      },
+      {
+        "text": "The President's remarks appear at 2021 Daily Comp. Pres. Doc. 45 (Jan. 20, 2021).",
+        "spans": [
+          [
+            34,
+            64
+          ]
+        ]
+      },
+      {
+        "text": "Compare 1995 Pub. Papers 123 with 2 Pub. Papers 1012.",
+        "spans": [
+          [
+            8,
+            28
+          ],
+          [
+            34,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Weekly Compilation of Presidential Documents ran 37 years.",
+      "Pub. Papers volumes are indexed.",
+      "In 2021 the Daily Comp. Pres. Doc. began."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

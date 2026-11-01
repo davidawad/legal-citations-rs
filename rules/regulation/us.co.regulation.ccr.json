@@ -1,0 +1,49 @@
+{
+  "id": "us.co.regulation.ccr",
+  "kind": "regulation",
+  "jurisdiction": "us.co",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\s(?:Colo\\.\\s?Code\\s?Regs\\.\\s?§|CCR)\\s?(?P<rule>[0-9]{3,4}-[0-9]{1,2}(?::[0-9]{1,3}(?:\\.[0-9]{1,3})*)?)",
+  "priority": 65,
+  "normalize": "{title} Colo. Code Regs. § {rule}",
+  "authority_key": "us.co.ccr/{title}/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Colorado) administrative compilation: N Colo. Code Regs. § N-N; local form N CCR N-N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Colorado) and the official Colorado administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 5 Colo. Code Regs. § 1002-31:31.1.",
+        "spans": [[4, 38]],
+        "groups": {
+          "title": "5",
+          "rule": "1002-31:31.1"
+        }
+      },
+      {
+        "text": "The court relied on 5 CCR 1002-31 in reaching its holding.",
+        "spans": [[20, 33]]
+      },
+      {
+        "text": "Under 10 CCR 2505-10:8.100, the permit fails.",
+        "spans": [[6, 26]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Colorado agency adopted 12 new rules in 2020.",
+      "Under Colo. Code Regs. §, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. The section must contain a hyphen, which keeps the N CCR form apart from California's."
+}

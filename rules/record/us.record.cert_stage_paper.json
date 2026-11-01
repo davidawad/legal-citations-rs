@@ -1,0 +1,80 @@
+{
+  "id": "us.record.cert_stage_paper",
+  "kind": "record",
+  "jurisdiction": "us.scotus",
+  "tags": [
+    "brief"
+  ],
+  "pattern": "\\b(?P<doc>Pet\\.\\s+for\\s+(?:a\\s+)?(?:Writ\\s+of\\s+)?Cert\\.|Cert\\.\\s+Pet\\.|Br\\.\\s+in\\s+Opp(?:['’]n|\\.)|BIO|Pet\\.|Pet['’]r\\s+Reply)\\s+(?:at\\s+)?(?P<page>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b",
+  "reject_before": [
+    "(?:Sup\\.\\s?Ct\\.|App\\.|Rev\\.)\\s?$",
+    "[0-9]\\s$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 55,
+  "normalize": "{doc} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Supreme Court practice cites to cert-stage papers (Pet., BIO); Bluebook B17; Sup. Ct. R. 14 and 15",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with the cert-stage abbreviations in Supreme Court opinions and briefs (Pet., Br. in Opp., BIO).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The petitioner says otherwise. Pet. 12.",
+        "spans": [
+          [
+            31,
+            38
+          ]
+        ],
+        "groups": {
+          "doc": "Pet.",
+          "page": "12"
+        }
+      },
+      {
+        "text": "See Pet. for Cert. 15–16; BIO 9.",
+        "spans": [
+          [
+            4,
+            26
+          ],
+          [
+            28,
+            33
+          ]
+        ]
+      },
+      {
+        "text": "Compare Cert. Pet. at 5 with Br. in Opp. 20.",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            43
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Pet. was denied.",
+      "Pet. for Cert. pending",
+      "BIO pages"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

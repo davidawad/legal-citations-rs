@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.cms.internet_only_manual",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.cms",
+  "tags": [
+    "health"
+  ],
+  "pattern": "\\b(?P<manual>Medicare\\s+(?:Benefit\\s+Policy|Claims\\s+Processing|Program\\s+Integrity|Financial\\s+Management|Secondary\\s+Payer|National\\s+Coverage\\s+Determinations|Managed\\s+Care|Prescription\\s+Drug\\s+Benefit)\\s+Manual(?:\\s+\\(CMS\\s+Pub\\.\\s+100-[0-9]{2}\\))?|State\\s+Operations\\s+Manual|CMS\\s+Pub\\.\\s+100-[0-9]{2}|MBPM|MCPM|MPIM|SOM)\\s*,?\\s*ch\\.\\s*(?P<chapter>[0-9]{1,2})(?:,?\\s*§§?\\s*(?P<section>[0-9]+(?:\\.[0-9]+)*(?:\\.[A-Z])?))?",
+  "priority": 60,
+  "normalize": "{manual}, ch. {chapter}, § {section}",
+  "authority_key": "us.cms_iom/{manual}/{chapter}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "CMS Internet-Only Manuals (Pub. 100-xx), cited by chapter and section",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the CMS Internet-Only Manuals at https://www.cms.gov/medicare/regulations-guidance/manuals/internet-only-manuals-ioms and compare chapter and section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Coverage requires a physician order. Medicare Benefit Policy Manual, ch. 15, § 50.2.",
+        "spans": [
+          [
+            37,
+            84
+          ]
+        ],
+        "groups": {
+          "chapter": "15",
+          "section": "50.2"
+        }
+      },
+      {
+        "text": "See Medicare Claims Processing Manual (CMS Pub. 100-04), ch. 12, § 30.6.",
+        "spans": [
+          [
+            4,
+            72
+          ]
+        ]
+      },
+      {
+        "text": "Compare CMS Pub. 100-02, ch. 15, § 50 with MBPM ch. 7, § 30.1.1.",
+        "spans": [
+          [
+            8,
+            38
+          ],
+          [
+            44,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Medicare Benefit Policy Manual is long.",
+      "CMS Pub. 100-02",
+      "Medicare Claims Processing Manual, chapter"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

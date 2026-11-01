@@ -1,0 +1,67 @@
+{
+  "id": "us.de.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.de",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Del\\.\\s?Reg\\.\\s?Regs\\.|Del\\sGov['’]t\\sReg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Delaware: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Delaware, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 135",
+      "corpus/formats/indigo.jsonl line 136"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 34 Del. Reg. Regs. 1301 (Jan. 25, 2015).",
+        "spans": [[4, 27]],
+        "groups": {
+          "volume": "34",
+          "series": "Del. Reg. Regs.",
+          "page": "1301"
+        }
+      },
+      {
+        "text": "See 20 Del. Reg. Regs. 1522 (May 13, 2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 17 Del Gov’t Reg. 1558 (LexisNexis May 2015).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 9 Del Gov’t Reg. 2154 (LexisNexis Sept. 2014).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 12 Del. Reg. Regs. 77.",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See 12 Del Gov’t Reg. 77.",
+        "spans": [[4, 26]]
+      }
+    ],
+    "negative": [
+      "The Del Gov’t Reg. is published monthly.",
+      "Volume 12 of the Delaware register has 77 pages.",
+      "In 2015 the Del Gov’t Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

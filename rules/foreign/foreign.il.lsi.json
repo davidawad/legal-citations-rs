@@ -1,0 +1,56 @@
+{
+  "id": "foreign.il.lsi",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+LSI\\s+(?P<page>[0-9]{1,4})\\b(?:\\s+\\((?P<years>(?:19|20)[0-9]{2}(?:[-/][0-9]{1,4})?)\\))?",
+  "priority": 58,
+  "normalize": "{volume} LSI {page}",
+  "authority_key": "il.lsi/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Laws of the State of Israel (LSI): <vol> LSI <page> (<years>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check the Laws of the State of Israel English volumes: volume number, 'LSI', first page, and publication years.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "27 LSI 117 (1972-73) is the Contracts Law.",
+        "spans": [[0, 20]],
+        "groups": {
+          "volume": "27",
+          "page": "117",
+          "years": "1972-73"
+        }
+      },
+      {
+        "text": "See 24 LSI 11.",
+        "spans": [[4, 13]]
+      },
+      {
+        "text": "Laws of the State of Israel, 17 LSI 5.",
+        "spans": [[29, 37]]
+      }
+    ],
+    "negative": [
+      "The LSI volume is old.",
+      "LSI 117 alone.",
+      "27 LSIs were published."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Sample volume/page values illustrative."
+}

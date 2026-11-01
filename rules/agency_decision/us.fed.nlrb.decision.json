@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.nlrb.decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.nlrb",
+  "pattern": "\\b(?P<volume>[0-9]{3})\\s+N\\.?\\s?L\\.?\\s?R\\.?\\s?B\\.?\\s+No\\.\\s?(?P<number>[0-9]{1,4})\\b",
+  "priority": 60,
+  "normalize": "{volume} N.L.R.B. No. {number}",
+  "authority_key": "us.nlrb/{volume}/no/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (National Labor Relations Board slip decisions) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for N.L.R.B.; NLRB cites slip decisions as `371 NLRB No. 109`; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Rieth-Riley Constr. Co., 371 N.L.R.B. No. 109 (2022).",
+        "spans": [
+          [
+            29,
+            49
+          ]
+        ],
+        "groups": {
+          "volume": "371",
+          "number": "109"
+        }
+      },
+      {
+        "text": "The Board overruled that standard in 368 NLRB No. 66, slip op. at 4.",
+        "spans": [
+          [
+            37,
+            52
+          ]
+        ]
+      },
+      {
+        "text": "Compare 372 N.L.R.B. No. 58 with 369 NLRB No. 35.",
+        "spans": [
+          [
+            8,
+            27
+          ],
+          [
+            33,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The NLRB issued 109 decisions that year.",
+      "The charge was filed with the N.L.R.B. regional office last spring.",
+      "Section 8(a)(1) of the National Labor Relations Act applies."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

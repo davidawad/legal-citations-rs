@@ -1,0 +1,59 @@
+{
+  "id": "foreign.de.reporter",
+  "kind": "foreign",
+  "jurisdiction": "foreign.de",
+  "tags": [
+    "foreign",
+    "germany"
+  ],
+  "pattern": "\\b(?P<reporter>BVerfGE|BGHZ|BGHSt|BVerwGE|BFHE|BAGE|BSGE|RGZ|RGSt)\\s+(?P<volume>[0-9]{1,3}),\\s+(?P<page>[0-9]{1,4})\\b(?:\\s+\\((?P<pin>[0-9]{1,4}(?:\\s?(?:ff?\\.|[-–][0-9]{1,4}))?)\\))?",
+  "priority": 60,
+  "normalize": "{reporter} {volume}, {page}",
+  "authority_key": "de/{reporter}/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T2 (Germany: official reports of the federal courts, BVerfGE <vol>, <page> (<pin>))",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (Germany): BVerfGE <vol>, <page>; BGHZ <vol>, <page>; § <n> BGB.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Lüth, BVerfGE 7, 198 (205).",
+        "spans": [[7, 27]],
+        "groups": {
+          "reporter": "BVerfGE",
+          "volume": "7",
+          "page": "198",
+          "pin": "205"
+        }
+      },
+      {
+        "text": "See BGHZ 26, 349.",
+        "spans": [[4, 16]]
+      },
+      {
+        "text": "The court relied on BVerfGE 39, 1 in its judgment.",
+        "spans": [[20, 33]]
+      },
+      {
+        "text": "RGZ 99, 140 was followed.",
+        "spans": [[0, 11]]
+      }
+    ],
+    "negative": [
+      "The BVerfGE volume 7 is old.",
+      "BGHZ editors met 26 times.",
+      "BVerfG 7, 198 is a docket."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

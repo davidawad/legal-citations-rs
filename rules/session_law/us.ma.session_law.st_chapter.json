@@ -1,0 +1,72 @@
+{
+  "id": "us.ma.session_law.st_chapter",
+  "kind": "session_law",
+  "jurisdiction": "us.ma",
+  "tags": [
+    "legislative"
+  ],
+  "pattern": "\\bSt\\.\\s+(?P<year>(?:17|18|19|20)[0-9]{2}),\\s+c\\.\\s+(?P<chapter>[0-9]{1,4})(?:,\\s+§\\s*(?P<section>[0-9]+[A-Z]?))?",
+  "priority": 60,
+  "normalize": "St. {year}, c. {chapter}",
+  "authority_key": "us.ma.st/{year}/{chapter}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Massachusetts session laws (Mass. Reporter of Decisions Style Manual: `St. 1990, c. 123, § 4`)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Massachusetts Reporter of Decisions Style Manual and compare the `St. 1990, c. 123` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The provision was enacted by St. 1990, c. 123, § 4.",
+        "spans": [
+          [
+            29,
+            51
+          ]
+        ],
+        "groups": {
+          "year": "1990",
+          "chapter": "123",
+          "section": "4"
+        }
+      },
+      {
+        "text": "See St. 2016, c. 219.",
+        "spans": [
+          [
+            4,
+            20
+          ]
+        ]
+      },
+      {
+        "text": "Compare St. 1975, c. 808 with St. 2022, c. 126, § 3.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "St. 1990 summary",
+      "St. c. 123",
+      "the St. 1990 table"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

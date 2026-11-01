@@ -1,0 +1,438 @@
+{
+  "schema": "legal-citations-rs.per-rule-precision/1",
+  "run": {
+    "date": "2026-10-23",
+    "revision": "d5c2ba8",
+    "registry_hash": "c1be49aca83f02a1"
+  },
+  "min_n": 5,
+  "note": "Precision of each rule on the gold corpus: a detection is a true positive when it overlaps a gold citation (span exactness is not required), a false positive when it overlaps none; detections on optional labels are not scored. Labels by one AI agent. Not yet written to any rule's `measured` block.",
+  "rules": [
+    {
+      "rule_id": "foreign.ae.difc.neutral",
+      "kind": "foreign",
+      "true_positives": 5,
+      "false_positives": 0,
+      "precision": {
+        "k": 5,
+        "n": 5,
+        "value": 1.0,
+        "lo": 0.565508505247919,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "foreign.uk.law_reports",
+      "kind": "foreign",
+      "true_positives": 12,
+      "false_positives": 0,
+      "precision": {
+        "k": 12,
+        "n": 12,
+        "value": 1.0,
+        "lo": 0.7574992425007574,
+        "hi": 0.9999999999999998
+      }
+    },
+    {
+      "rule_id": "foreign.uk.neutral",
+      "kind": "foreign",
+      "true_positives": 13,
+      "false_positives": 0,
+      "precision": {
+        "k": 13,
+        "n": 13,
+        "value": 1.0,
+        "lo": 0.7718981569447084,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.federal_reporter",
+      "kind": "case",
+      "true_positives": 78,
+      "false_positives": 0,
+      "precision": {
+        "k": 78,
+        "n": 78,
+        "value": 1.0,
+        "lo": 0.9530605462258802,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.federal_supplement",
+      "kind": "case",
+      "true_positives": 10,
+      "false_positives": 0,
+      "precision": {
+        "k": 10,
+        "n": 10,
+        "value": 1.0,
+        "lo": 0.7224598312333834,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.regional",
+      "kind": "case",
+      "true_positives": 33,
+      "false_positives": 0,
+      "precision": {
+        "k": 33,
+        "n": 33,
+        "value": 1.0,
+        "lo": 0.8957265699643882,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.us_reports",
+      "kind": "case",
+      "true_positives": 62,
+      "false_positives": 0,
+      "precision": {
+        "k": 62,
+        "n": 62,
+        "value": 1.0,
+        "lo": 0.9416539087749994,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.westlaw",
+      "kind": "case",
+      "true_positives": 14,
+      "false_positives": 0,
+      "precision": {
+        "k": 14,
+        "n": 14,
+        "value": 1.0,
+        "lo": 0.7846829880728186,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.case.westlaw_docket",
+      "kind": "case",
+      "true_positives": 6,
+      "false_positives": 0,
+      "precision": {
+        "k": 6,
+        "n": 6,
+        "value": 1.0,
+        "lo": 0.6096569663469354,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.docket.number",
+      "kind": "docket",
+      "true_positives": 8,
+      "false_positives": 0,
+      "precision": {
+        "k": 8,
+        "n": 8,
+        "value": 1.0,
+        "lo": 0.6755843804891231,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.eoir.decision",
+      "kind": "agency_decision",
+      "true_positives": 11,
+      "false_positives": 0,
+      "precision": {
+        "k": 11,
+        "n": 11,
+        "value": 1.0,
+        "lo": 0.7411599827511859,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.federal_register.fr_abbrev",
+      "kind": "federal_register",
+      "true_positives": 14,
+      "false_positives": 0,
+      "precision": {
+        "k": 14,
+        "n": 14,
+        "value": 1.0,
+        "lo": 0.7846829880728186,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.irs.revenue_ruling",
+      "kind": "agency_decision",
+      "true_positives": 5,
+      "false_positives": 0,
+      "precision": {
+        "k": 5,
+        "n": 5,
+        "value": 1.0,
+        "lo": 0.565508505247919,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.nlrb.reporter",
+      "kind": "agency_decision",
+      "true_positives": 11,
+      "false_positives": 0,
+      "precision": {
+        "k": 11,
+        "n": 11,
+        "value": 1.0,
+        "lo": 0.7411599827511859,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.session_law.statutes_at_large",
+      "kind": "session_law",
+      "true_positives": 7,
+      "false_positives": 0,
+      "precision": {
+        "k": 7,
+        "n": 7,
+        "value": 1.0,
+        "lo": 0.6456611570247934,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.statute.usc",
+      "kind": "statute",
+      "true_positives": 56,
+      "false_positives": 0,
+      "precision": {
+        "k": 56,
+        "n": 56,
+        "value": 1.0,
+        "lo": 0.9358038555118847,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.uspto.ptab_paper",
+      "kind": "record",
+      "true_positives": 17,
+      "false_positives": 0,
+      "precision": {
+        "k": 17,
+        "n": 17,
+        "value": 1.0,
+        "lo": 0.8156763396284354,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.fed.uspto.ptab_proceeding",
+      "kind": "agency_decision",
+      "true_positives": 19,
+      "false_positives": 0,
+      "precision": {
+        "k": 19,
+        "n": 19,
+        "value": 1.0,
+        "lo": 0.8318156346315495,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.il.case.public_domain",
+      "kind": "case",
+      "true_positives": 5,
+      "false_positives": 0,
+      "precision": {
+        "k": 5,
+        "n": 5,
+        "value": 1.0,
+        "lo": 0.565508505247919,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.il.case.rdb.ill",
+      "kind": "case",
+      "true_positives": 9,
+      "false_positives": 0,
+      "precision": {
+        "k": 9,
+        "n": 9,
+        "value": 1.0,
+        "lo": 0.7008472464490406,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.ny.case.rdb.n_y",
+      "kind": "case",
+      "true_positives": 7,
+      "false_positives": 0,
+      "precision": {
+        "k": 7,
+        "n": 7,
+        "value": 1.0,
+        "lo": 0.6456611570247934,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.oh.case.webcite",
+      "kind": "case",
+      "true_positives": 17,
+      "false_positives": 0,
+      "precision": {
+        "k": 17,
+        "n": 17,
+        "value": 1.0,
+        "lo": 0.8156763396284354,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.oh.statute.rc",
+      "kind": "statute",
+      "true_positives": 38,
+      "false_positives": 0,
+      "precision": {
+        "k": 38,
+        "n": 38,
+        "value": 1.0,
+        "lo": 0.90818706741616,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.record.ecf",
+      "kind": "record",
+      "true_positives": 33,
+      "false_positives": 0,
+      "precision": {
+        "k": 33,
+        "n": 33,
+        "value": 1.0,
+        "lo": 0.8957265699643882,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.short.case_at",
+      "kind": "case_short",
+      "true_positives": 67,
+      "false_positives": 0,
+      "precision": {
+        "k": 67,
+        "n": 67,
+        "value": 1.0,
+        "lo": 0.9457719757882372,
+        "hi": 0.9999999999999998
+      }
+    },
+    {
+      "rule_id": "us.short.id",
+      "kind": "id",
+      "true_positives": 146,
+      "false_positives": 0,
+      "precision": {
+        "k": 146,
+        "n": 146,
+        "value": 1.0,
+        "lo": 0.9743622598797664,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.short.id_section",
+      "kind": "id",
+      "true_positives": 11,
+      "false_positives": 0,
+      "precision": {
+        "k": 11,
+        "n": 11,
+        "value": 1.0,
+        "lo": 0.7411599827511859,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.short.section",
+      "kind": "statute_short",
+      "true_positives": 86,
+      "false_positives": 0,
+      "precision": {
+        "k": 86,
+        "n": 86,
+        "value": 1.0,
+        "lo": 0.9572402984808818,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.short.supra",
+      "kind": "supra",
+      "true_positives": 6,
+      "false_positives": 0,
+      "precision": {
+        "k": 6,
+        "n": 6,
+        "value": 1.0,
+        "lo": 0.6096569663469354,
+        "hi": 1.0
+      }
+    },
+    {
+      "rule_id": "us.state.statute.generic",
+      "kind": "statute",
+      "true_positives": 7,
+      "false_positives": 0,
+      "precision": {
+        "k": 7,
+        "n": 7,
+        "value": 1.0,
+        "lo": 0.6456611570247934,
+        "hi": 1.0
+      }
+    }
+  ],
+  "below_min_n": [
+    "us.ca.statute.code",
+    "us.case.california",
+    "us.case.federal_rules_decisions",
+    "us.case.lawyers_edition",
+    "us.case.rdb.c_b",
+    "us.fed.case.rdb.f",
+    "us.fed.case.rdb.f_app_x",
+    "us.fed.case.rdb.u_s",
+    "us.fed.irs.statute.indigo_forms",
+    "us.fed.regulation.cfr",
+    "us.fed.rules.civil_procedure",
+    "us.fed.sec.filing",
+    "us.fed.session_law.public_law",
+    "us.il.court_rule.supreme_court",
+    "us.il.session_law.public_act",
+    "us.la.statute.code",
+    "us.mt.statute.code",
+    "us.ny.session_law.laws_chapter",
+    "us.ny.statute.code",
+    "us.ny.statute.indigo_forms",
+    "us.oh.case.ohio_state",
+    "us.ok.statute.code",
+    "us.record.appendix",
+    "us.record.bare_document",
+    "us.record.docket_entry",
+    "us.record.exhibit",
+    "us.record.pleading",
+    "us.scotus.case.nominative_u_s",
+    "us.secondary.blacks_law_dictionary",
+    "us.secondary.book_page",
+    "us.secondary.cjs",
+    "us.secondary.federalist",
+    "us.secondary.web_dated",
+    "us.short.rdb.case_at"
+  ]
+}

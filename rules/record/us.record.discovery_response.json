@@ -1,0 +1,74 @@
+{
+  "id": "us.record.discovery_response",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "discovery"
+  ],
+  "pattern": "\\b(?P<doc>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:(?:Suppl?\\.\\s+|Am\\.\\s+)?(?:Resp(?:onses?|\\.)|Answers?|Ans\\.|Objs?\\.\\s+(?:&|and)\\s+Resps?\\.)\\s+to\\s+)?(?:(?:First|Second|Third)\\s+(?:Set\\s+of\\s+)?)?(?:Interrog(?:atory|\\.)|RFA|RFP|Req(?:uest|\\.)\\s+for\\s+Admis(?:sion|\\.)|Req(?:uest|\\.)\\s+for\\s+Produc(?:tion|\\.)))\\s+Nos?\\.\\s*(?P<number>[0-9]{1,3}(?:\\s?[-–]\\s?[0-9]{1,3})?)\\b",
+  "priority": 55,
+  "normalize": "{doc} No. {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Discovery response cites (Fed. R. Civ. P. 33, 34, 36); Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The defendant admitted it. Resp. to Interrog. No. 5.",
+        "spans": [
+          [
+            27,
+            51
+          ]
+        ],
+        "groups": {
+          "number": "5"
+        }
+      },
+      {
+        "text": "See Def.’s Resp. to RFA No. 12; RFP No. 3.",
+        "spans": [
+          [
+            4,
+            32
+          ],
+          [
+            34,
+            43
+          ]
+        ]
+      },
+      {
+        "text": "Compare Pl.’s Suppl. Answers to Interrogatory No. 7 with Req. for Admis. No. 4–6.",
+        "spans": [
+          [
+            8,
+            53
+          ],
+          [
+            59,
+            84
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The interrogatory was answered.",
+      "RFA No. pending",
+      "Interrogatory responses in 2019"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

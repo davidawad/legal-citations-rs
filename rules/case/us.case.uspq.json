@@ -1,0 +1,55 @@
+{
+  "id": "us.case.uspq",
+  "kind": "case",
+  "jurisdiction": "us.fed.ip",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>U\\.?\\s?S\\.?\\s?P\\.?\\s?Q\\.?\\s?(?:2d)?)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (United States Patents Quarterly); TBMP § 101.03 cites USPQ (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See In re Smith, 100 USPQ2d 1234 (Fed. Cir. 2011).",
+        "spans": [[17, 32]],
+        "groups": {
+          "volume": "100",
+          "reporter": "USPQ2d",
+          "page": "1234"
+        }
+      },
+      {
+        "text": "The court relied on Doe v. Roe, 50 U.S.P.Q.2d 1001 (Fed. Cir. 1999) in reaching its holding.",
+        "spans": [[32, 50]]
+      },
+      {
+        "text": "Under In re Alpha, 2020 USPQ2d 10837 (TTAB 2020), the claim fails.",
+        "spans": [[19, 36]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority). TTAB precedent is cited by USPQ volume or year."
+}

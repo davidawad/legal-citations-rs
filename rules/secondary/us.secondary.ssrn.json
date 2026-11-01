@@ -1,0 +1,55 @@
+{
+  "id": "us.secondary.ssrn",
+  "kind": "secondary",
+  "jurisdiction": "us",
+  "tags": [
+    "web",
+    "law_review"
+  ],
+  "pattern": "\\bhttps?://(?:papers\\.)?ssrn\\.com/(?:abstract=|sol3/papers\\.cfm\\?abstract_id=)(?P<id>[0-9]{4,8})\\b",
+  "priority": 55,
+  "normalize": "https://ssrn.com/abstract={id}",
+  "authority_key": "ssrn/{id}",
+  "url_templates": [],
+  "url_decoders": [
+    "ssrn.com/abstract={id}",
+    "papers.ssrn.com/sol3/papers.cfm?abstract_id={id}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R17.3 (working papers available online: <author>, <title> (<date>) (unpublished manuscript), <URL>) and SSRN's permanent abstract URLs",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R17.3 and an SSRN abstract page's 'Suggested Citation'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Jane Roe, Title (Jan. 1, 2020) (unpublished manuscript), https://ssrn.com/abstract=3512345.",
+        "spans": [[57, 90]],
+        "groups": {
+          "id": "3512345"
+        }
+      },
+      {
+        "text": "See https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1234567.",
+        "spans": [[4, 63]]
+      },
+      {
+        "text": "Available at http://ssrn.com/abstract=987654 (last visited May 1, 2021).",
+        "spans": [[13, 44]]
+      }
+    ],
+    "negative": [
+      "SSRN hosts 1234567 papers.",
+      "The abstract=3512345 tag is a typo.",
+      "Visit ssrn.com for papers."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Only the SSRN URL is spanned; it is the citation's identity. url_templates: none; ssrn.com answers scripted fetches with 403 (2026-10-23)."
+}

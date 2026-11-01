@@ -1,0 +1,79 @@
+{
+  "id": "us.dc.case.nominative_d_c",
+  "kind": "case",
+  "jurisdiction": "us.dc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>D\\.C\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>MacArth\\.\\s?\\&\\sM\\.|Tuck\\.\\s?\\&\\sCl\\.|MacArth\\.|Cranch|Mackey)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: D.C. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 141",
+      "corpus/formats/indigo.jsonl line 142",
+      "corpus/formats/indigo.jsonl line 928"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Allen v. King, 21 D.C. (Tuck. & Cl.) 369 (Cir. 1892).",
+        "spans": [[19, 44]],
+        "groups": {
+          "volume": "21",
+          "reporter": "D.C.",
+          "nominative": "Tuck. & Cl.",
+          "page": "369"
+        }
+      },
+      {
+        "text": "See Wright v. Scott, 21 D.C. (Tuck. & Cl.) 9, 625 (Cir. 1892).",
+        "spans": [[21, 44]]
+      },
+      {
+        "text": "See Green v. Baker, 11 D.C. (MacArth. & M.) 113 (Cir. 1879).",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "See Adams v. Nelson, 11 D.C. (MacArth. & M.) 33, 617 (Cir. 1879).",
+        "spans": [[21, 47]]
+      },
+      {
+        "text": "See Smith v. Jones, 12 D.C. (1 Mackey) 145 (1881).",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "See Brown v. Davis, 8 D.C. (1 MacArth.) 40 (1873).",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "See United States v. Allen, 1 D.C. (1 Cranch) 61 (1801).",
+        "spans": [[28, 48]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 D.C. (2 Tuck. & Cl.) 345 (1850).",
+        "spans": [[16, 43]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the D.C. reports is missing.",
+      "The Cranch reports cover D.C. cases from 1800 to 1850.",
+      "See D.C. (Cranch) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

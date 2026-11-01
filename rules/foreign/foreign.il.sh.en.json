@@ -1,0 +1,55 @@
+{
+  "id": "foreign.il.sh.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.il",
+  "tags": [
+    "foreign",
+    "mena",
+    "il",
+    "israel"
+  ],
+  "pattern": "\\b(?:SH|S\\.H\\.)\\s+(?P<number>[0-9]{1,4}),?\\s+(?:p\\.|pp\\.|at)\\s*(?P<page>[0-9]{1,4})\\b",
+  "priority": 56,
+  "normalize": "SH {number} p. {page}",
+  "authority_key": "il.sh/{number}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Sefer HaHukim (SH), Israel's statute book: SH <number>, p. <page>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check the Knesset Sefer HaHukim index: each issue has a number and the page where a law begins.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "SH 694 p. 118 publishes the Contracts Law.",
+        "spans": [[0, 13]],
+        "groups": {
+          "number": "694",
+          "page": "118"
+        }
+      },
+      {
+        "text": "See S.H. 1822, p. 39.",
+        "spans": [[4, 20]]
+      },
+      {
+        "text": "SH 1000 at 12 is later.",
+        "spans": [[0, 13]]
+      }
+    ],
+    "negative": [
+      "The SH department closed.",
+      "SH 694 without a page.",
+      "S.H. Smith, p. 12 is an author."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Rule trusts the Sefer HaHukim issue-number plus page convention."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "us.fed.sec.no_action_letter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.sec",
+  "pattern": "\\bSEC\\s+No-Action\\s+Letter\\b(?:\\s*\\((?P<date>(?:Jan\\.|January|Feb\\.|February|Mar\\.|March|Apr\\.|April|May|June?|July?|Aug\\.|August|Sept\\.|September|Oct\\.|October|Nov\\.|November|Dec\\.|December)\\s+[0-9]{1,2},\\s+[0-9]{4})\\))?",
+  "priority": 60,
+  "normalize": "SEC No-Action Letter",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (SEC no-action letters) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1.2 (SEC) for the no-action letter form `Name, SEC No-Action Letter (date)`.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Apple Inc., SEC No-Action Letter (Jan. 5, 2023).",
+        "spans": [
+          [
+            16,
+            51
+          ]
+        ],
+        "groups": {
+          "date": "Jan. 5, 2023"
+        }
+      },
+      {
+        "text": "Staff confirmed the view in Walmart Inc., SEC No-Action Letter, 2021 WL 123456 (Mar. 1, 2021).",
+        "spans": [
+          [
+            42,
+            62
+          ]
+        ]
+      },
+      {
+        "text": "Cf. Exxon Mobil Corp., SEC No-Action Letter (March 20, 2019).",
+        "spans": [
+          [
+            23,
+            60
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The SEC took no action on the letter.",
+      "A no-action letter is staff guidance, not law.",
+      "The company sent the SEC a letter on Jan. 5, 2023."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The requester's name before the comma is not part of the span; there is no stable identifier, so no authority_key."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "us.al.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.al",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Ala\\.\\s?Admin\\.\\s?Monthly)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Alabama: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Alabama, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 15"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 28 Ala. Admin. Monthly 1894 (Jan. 13, 2015).",
+        "spans": [[4, 31]],
+        "groups": {
+          "volume": "28",
+          "series": "Ala. Admin. Monthly",
+          "page": "1894"
+        }
+      },
+      {
+        "text": "See 34 Ala. Admin. Monthly 2004 (Jan. 9, 2014).",
+        "spans": [[4, 31]]
+      },
+      {
+        "text": "See 12 Ala. Admin. Monthly 77.",
+        "spans": [[4, 29]]
+      }
+    ],
+    "negative": [
+      "The Ala. Admin. Monthly is published monthly.",
+      "Volume 12 of the Alabama register has 77 pages.",
+      "In 2015 the Ala. Admin. Monthly had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

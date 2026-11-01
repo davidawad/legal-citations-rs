@@ -1,0 +1,57 @@
+{
+  "id": "foreign.fr.cass",
+  "kind": "foreign",
+  "jurisdiction": "foreign.fr",
+  "tags": [
+    "foreign",
+    "france"
+  ],
+  "pattern": "\\b(?P<court>Cass\\.\\s?(?:civ\\.|com\\.|crim\\.|soc\\.|ass\\.\\s?pl[ée]n\\.|ch\\.\\s?mixte|req\\.)?(?:\\s?(?:1re|2e|3e|1ère))?|CE(?:\\s+Ass\\.|\\s+Sect\\.)?|Cons\\.\\s?const\\.|CA\\s+[A-Z][a-zé]+),?\\s+(?P<date>[0-9]{1,2}(?:er)?\\s+(?:janv\\.|févr\\.|mars|avr\\.|mai|juin|juill\\.|août|sept\\.|oct\\.|nov\\.|déc\\.|janvier|février|avril|juillet|septembre|octobre|novembre|décembre|[A-Z][a-z]{2,8}\\.?)\\s+(?:1[89]|20)[0-9]{2}),\\s+(?:n[°o]\\.?|No\\.)\\s*(?P<number>[0-9]{2}-[0-9]{2}\\.[0-9]{3}|[0-9]{2,4}-[0-9]{1,4}\\s?(?:DC|QPC)|[0-9]{4,6})",
+  "priority": 60,
+  "normalize": "{court}, {date}, n° {number}",
+  "authority_key": "fr/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "French decision citation practice: <court and chamber>, <date>, n° <pourvoi or decision number>; Bluebook T2 (France)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (France) and the Cour de cassation's citation practice (Cass. civ. 1re, <date>, n° <pourvoi>).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cass. civ. 1re, 12 janv. 2010, n° 08-12.345.",
+        "spans": [[0, 44]],
+        "groups": {
+          "date": "12 janv. 2010",
+          "number": "08-12.345"
+        }
+      },
+      {
+        "text": "See CE Ass., 20 oct. 1989, n° 108243 (Nicolo).",
+        "spans": [[4, 37]]
+      },
+      {
+        "text": "Cons. const., 16 juill. 1971, n° 71-44 DC.",
+        "spans": [[0, 42]]
+      },
+      {
+        "text": "Cass. com., 22 oct. 1996, n° 93-18.632 (Chronopost).",
+        "spans": [[0, 39]]
+      }
+    ],
+    "negative": [
+      "The Cour de cassation sat on 12 janv. 2010.",
+      "CE 20 oct. 1989 was a holiday.",
+      "Cass. civ. issued 345 rulings."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

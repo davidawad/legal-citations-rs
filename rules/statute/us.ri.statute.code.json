@@ -1,0 +1,60 @@
+{
+  "id": "us.ri.statute.code",
+  "kind": "statute",
+  "jurisdiction": "us.ri",
+  "pattern": "(?:\\b[0-9]{1,2}\\s+)?R\\.I\\.\\s+Gen(?:eral)?\\.\\s+Laws?\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[0-9\\w\\-]+(?:\\.[0-9\\w\\-]+)*(?:\\([^)]*\\))*)",
+  "priority": 50,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Rhode Island) statutory compilation abbreviations (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook Table T1, Rhode Island entry, and compare the code names and abbreviations this pattern accepts.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py RI pattern (legal-citation-patterns crate)"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See R.I. Gen. Laws § 11-23-1.",
+        "spans": [[4, 29]],
+        "groups": {
+          "section": "11-23-1"
+        }
+      },
+      {
+        "text": "The court relied on R.I. General. Law Ann. § 1 in reaching its holding.",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "Under R.I. Gen. Laws § 11-23-8, the claim fails.",
+        "spans": [[6, 31]]
+      },
+      {
+        "text": "Indigo prints 1 R.I. Gen. Laws § 37-41-9 (2015) and 57 R.I. Gen. Laws Ann. § 45-97-17 (West 2015).",
+        "spans": [[14, 41], [53, 87]]
+      }
+    ],
+    "negative": [
+      "Section 5 of the lease governs renewal.",
+      "The building code was revised in 2019.",
+      "He paid $1,983 for 42 units of stock.",
+      "Our code of conduct, at section 4, covers gifts."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "ri",
+    "order": 50,
+    "pattern": "R\\.I\\.\\s+Gen(?:eral)?\\.\\s+Laws?\\s+(?:Ann\\.\\s+)?§§?\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "Forward pattern = legacy pattern with ASCII digits. Examples bootstrapped from parity.json."
+}

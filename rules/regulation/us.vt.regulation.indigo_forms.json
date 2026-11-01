@@ -1,0 +1,54 @@
+{
+  "id": "us.vt.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.vt",
+  "pattern": "\\b(?:[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\-[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*\\sVt\\.\\s?Code\\sR\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Vermont: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Vermont, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 790"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 29-35 Vt. Code R. § 45 (2015).",
+        "spans": [[4, 27]],
+        "groups": {}
+      },
+      {
+        "text": "See 9-20 Vt. Code R. § 29 (2014).",
+        "spans": [[4, 26]]
+      },
+      {
+        "text": "See 52-68 Vt. Code R. § 78 (5348).",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "See 2-53 Vt. Code R. § 52 (5347).",
+        "spans": [[4, 26]]
+      }
+    ],
+    "negative": [
+      "The Vermont code was amended in 2015.",
+      "Section 12 of the Vermont rules is long.",
+      "Title five of the Vermont compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

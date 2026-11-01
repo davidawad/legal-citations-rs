@@ -1,0 +1,68 @@
+{
+  "id": "us.model.rules_professional_conduct",
+  "kind": "secondary",
+  "jurisdiction": "us.model.aba",
+  "pattern": "\\bModel\\s+(?:Rules?\\s+of\\s+Pro(?:f(?:'|’)l|\\.|fessional)\\s+Conduct\\s+(?:r\\.|R\\.|[Rr]ule)\\s?|Rule\\s+)(?P<rule>[0-9]\\.[0-9]{1,2})(?P<sub>(?:\\([a-z0-9]{1,4}\\))*)",
+  "priority": 60,
+  "normalize": "Model Rules of Pro. Conduct r. {rule}{sub}",
+  "authority_key": "us.aba.mrpc/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 12.9 (ABA Model Rules of Professional Conduct) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 12.9 (ethics codes) and check the `Model Rules of Pro. Conduct r. 1.7 (Am. Bar Ass'n 2020)` form (`Prof'l` in older editions).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Model Rules of Prof'l Conduct r. 1.7(a) (Am. Bar Ass'n 2020).",
+        "spans": [
+          [
+            4,
+            43
+          ]
+        ],
+        "groups": {
+          "rule": "1.7",
+          "sub": "(a)"
+        }
+      },
+      {
+        "text": "Confidentiality is governed by Model Rules of Pro. Conduct r. 1.6 (Am. Bar Ass'n 2023).",
+        "spans": [
+          [
+            31,
+            65
+          ]
+        ]
+      },
+      {
+        "text": "Compare Model Rule 1.10 with Model Rules of Professional Conduct Rule 5.5(c)(2).",
+        "spans": [
+          [
+            8,
+            23
+          ],
+          [
+            29,
+            79
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The Model Rules were adopted in 1983.",
+      "The model rule of thumb is 1.7 times.",
+      "Model Rules of Prof'l Conduct pmbl."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

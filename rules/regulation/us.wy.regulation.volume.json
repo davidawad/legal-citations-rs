@@ -1,0 +1,54 @@
+{
+  "id": "us.wy.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.wy",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Wyo\\.\\s?Gov['’]t\\sReg\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Wyoming: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Wyoming, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 856"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 9 Wyo. Gov’t Reg. 2262 (LexisNexis Jan. 2015).",
+        "spans": [[4, 28]],
+        "groups": {
+          "volume": "9",
+          "series": "Wyo. Gov’t Reg.",
+          "page": "2262"
+        }
+      },
+      {
+        "text": "See 9 Wyo. Gov’t Reg. 1985 (LexisNexis Sept. 2014).",
+        "spans": [[4, 28]]
+      },
+      {
+        "text": "See 12 Wyo. Gov’t Reg. 77.",
+        "spans": [[4, 27]]
+      }
+    ],
+    "negative": [
+      "The Wyo. Gov’t Reg. is published monthly.",
+      "Volume 12 of the Wyoming register has 77 pages.",
+      "In 2015 the Wyo. Gov’t Reg. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

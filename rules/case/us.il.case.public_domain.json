@@ -1,0 +1,55 @@
+{
+  "id": "us.il.case.public_domain",
+  "kind": "case",
+  "jurisdiction": "us.il",
+  "pattern": "\\b(?P<year>20[1-9][0-9])\\s+(?P<court>IL(?:\\s+App\\s+\\((?:1st|2d|3d|4th|5th)\\))?)\\s+(?P<number>[0-9]{6})(?P<suffix>WC)?(?P<rev>-[A-Z])?\\b",
+  "priority": 65,
+  "normalize": "{year} {court} {number}",
+  "authority_key": "us.il.public_domain/{year}/{court}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Ill. S. Ct. R. 6 and Commentary (public-domain citation for opinions filed on or after July 1, 2011: year, IL or IL App (district), docket-based number; WC, -B and -U suffixes)",
+    "opened": true,
+    "source_url": "https://ilcourtsaudio.blob.core.windows.net/antilles-resources/resources/2374deda-2eed-448e-8b4b-24a22a348f28/Rule%206.pdf",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "People v. Smith, 2011 IL 102345, ¶ 15.",
+        "spans": [[17, 31]],
+        "groups": {
+          "year": "2011",
+          "court": "IL",
+          "number": "102345"
+        }
+      },
+      {
+        "text": "See Doe v. Roe, 2011 IL App (1st) 101234, ¶¶ 21-23.",
+        "spans": [[16, 40]]
+      },
+      {
+        "text": "People v. Roe, 2011 IL App (5th) 101237-U, ¶ 9.",
+        "spans": [[15, 41]]
+      },
+      {
+        "text": "Acme Co. v. Illinois Workers' Compensation Comm'n, 2014 IL App (4th) 130123WC, ¶ 30.",
+        "spans": [[51, 77]]
+      }
+    ],
+    "negative": [
+      "The 2011 IL tax return listed 102345 dollars of income.",
+      "Route IL 102 was resurfaced in 2011.",
+      "In 2011 Illinois enacted 102345 pages of new law.",
+      "The 2015 IL App (1st) conference ran 3 days."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Public-domain (vendor-neutral) citation; the span is the citation core only, so a pinpoint paragraph and a parallel reporter cite stay outside it. No URL template: no fetch-verified host decodes this form yet. Opened in lcr-uc3: the official Rule 6 PDF with Commentary."
+}

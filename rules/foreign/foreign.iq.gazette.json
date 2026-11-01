@@ -1,0 +1,53 @@
+{
+  "id": "foreign.iq.gazette",
+  "kind": "foreign",
+  "jurisdiction": "foreign.iq",
+  "tags": [
+    "foreign",
+    "mena",
+    "iq"
+  ],
+  "pattern": "(?:\\bIraqi\\s+Official\\s+Gazette|\\bAl-Waqa['’]i['’]?\\s+Al-Iraqiyya)\\s+(?:\\(Iraqi\\s+Official\\s+Gazette\\)\\s+)?No\\.?\\s*(?P<number>[0-9]{3,5})\\b|الوقائع\\s+العراقية\\s*[-–،,]?\\s*العدد\\s*(?P<number2>[0-9٠-٩]{3,5})",
+  "priority": 55,
+  "normalize": "Iraqi Official Gazette No. {number}",
+  "authority_key": "iq.gazette/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Iraqi Official Gazette (al-Waqa'i' al-Iraqiyya) issue number",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check an issue of al-Waqa'i' al-Iraqiyya or the Iraqi Legal Database (iraqld.iq).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Published in the Iraqi Official Gazette No. 3789.",
+        "spans": [[17, 48]],
+        "groups": {
+          "number": "3789"
+        }
+      },
+      {
+        "text": "Al-Waqa'i' Al-Iraqiyya No. 4330 in 2013.",
+        "spans": [[0, 31]]
+      },
+      {
+        "text": "الوقائع العراقية العدد 3789 في 2000.",
+        "spans": [[0, 47]]
+      }
+    ],
+    "negative": [
+      "Official Gazette No. 3789 with no country.",
+      "الوقائع العراقية بلا عدد.",
+      "Iraqi Gazette is a paper."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Arabic form captured as number2."
+}

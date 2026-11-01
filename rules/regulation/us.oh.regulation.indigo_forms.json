@@ -1,0 +1,88 @@
+{
+  "id": "us.oh.regulation.indigo_forms",
+  "kind": "regulation",
+  "jurisdiction": "us.oh",
+  "pattern": "\\b(?:Ohio\\sMonthly\\sRec\\.\\s?[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Ohio\\sDep['’]t\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*|Ohio\\sGov['’]t\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Ohio: Administrative compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Ohio, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 600",
+      "corpus/formats/indigo.jsonl line 601",
+      "corpus/formats/indigo.jsonl line 602"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Ohio Monthly Rec. 487 (Jan. 2015).",
+        "spans": [[4, 25]],
+        "groups": {}
+      },
+      {
+        "text": "See Ohio Monthly Rec. 114 (Jan. 2014).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See Ohio Gov’t 61 (May 13, 1971).",
+        "spans": [[4, 19]]
+      },
+      {
+        "text": "See Ohio Gov’t 1220 (Jan. 17, 1970).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See Ohio Dep’t 2038 (May 17, 1939).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See Ohio Dep’t 1385 (Sept. 13, 1938).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See Ohio Monthly Rec. 711 (Jan. 5348).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See Ohio Monthly Rec. 447 (Jan. 5347).",
+        "spans": [[4, 25]]
+      },
+      {
+        "text": "See Ohio Gov’t 94 (May 46, 4214).",
+        "spans": [[4, 19]]
+      },
+      {
+        "text": "See Ohio Gov’t 4553 (Jan. 41, 4213).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See Ohio Dep’t 5361 (May 41, 4262).",
+        "spans": [[4, 21]]
+      },
+      {
+        "text": "See Ohio Dep’t 4618 (Sept. 46, 4261).",
+        "spans": [[4, 21]]
+      }
+    ],
+    "negative": [
+      "The Ohio code was amended in 2015.",
+      "Section 12 of the Ohio rules is long.",
+      "Title five of the Ohio compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

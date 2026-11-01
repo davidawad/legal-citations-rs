@@ -1,0 +1,85 @@
+{
+  "id": "us.record.exhibit",
+  "kind": "record",
+  "jurisdiction": "us",
+  "tags": [
+    "exhibit"
+  ],
+  "pattern": "\\b(?P<doc>(?:(?:[A-Z][A-Za-z.]*['’]s|[A-Z][A-Za-z.]*s\\.?['’]|Gov['’]t|U\\.S\\.)\\s+)?(?:(?:Pl\\.|Def\\.|Defs\\.|Pls\\.|Gov['’]t|Joint|Trial|Hr['’]g|Dep\\.)\\s+)?Ex(?:hibit|s?\\.)\\s+(?P<number>[0-9]{1,3}[A-Z]?|[A-Z]{1,2}(?:-[0-9]{1,3})?))\\b(?:,?\\s+at\\s+(?P<pin>[0-9]{1,4}))?",
+  "reject": [
+    "^(?:See|Cf|Compare|But|Accord|Contra|Also|And|Or|The|In|Under|Per|With|From|E\\.g|Our|My|His|Her|Its|Their|Your|This|That|These|Those|A|An|Each|Every|Any|No|Its|Which|Whose)\\b"
+  ],
+  "reject_before": [
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 54,
+  "normalize": "{doc}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Exhibit cites (`Ex. A`, `Pl.’s Ex. 4`, `Exhibit 12 at 3`); Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The contract is attached. Ex. 12 at 3.",
+        "spans": [
+          [
+            26,
+            37
+          ]
+        ],
+        "groups": {
+          "number": "12",
+          "pin": "3"
+        }
+      },
+      {
+        "text": "See Pl.’s Ex. 4; Exhibit B.",
+        "spans": [
+          [
+            4,
+            17
+          ],
+          [
+            19,
+            28
+          ]
+        ]
+      },
+      {
+        "text": "Compare Def. Ex. 12 with Joint Exhibit 7 and Ex. A-1.",
+        "spans": [
+          [
+            8,
+            19
+          ],
+          [
+            25,
+            40
+          ],
+          [
+            45,
+            52
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ex. was long.",
+      "Exhibit hall 12a",
+      "Ex parte Smith"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

@@ -1,0 +1,78 @@
+stages:
+  - verify
+  - extended
+
+default:
+  image: rust:1
+  before_script:
+    - rustup component add clippy rustfmt llvm-tools-preview
+    - cargo install just cargo-nextest --locked
+
+verify:
+  stage: verify
+  script:
+    - cargo install cargo-deny --locked
+    - just check
+
+coverage:
+  stage: verify
+  script:
+    - cargo install cargo-llvm-cov --locked
+    - just cov
+  artifacts:
+    when: always
+    paths:
+      - target/artifacts/coverage.lcov
+
+mutation:
+  stage: extended
+  script:
+    - cargo install cargo-mutants --locked
+    - just mutants
+  artifacts:
+    when: always
+    paths:
+      - target/artifacts/mutants
+
+fuzz:
+  stage: extended
+  script:
+    - apt-get update && apt-get install -y clang
+    - rustup toolchain install nightly
+    - cargo +nightly install cargo-fuzz --locked
+    - just fuzz 120
+
+# The gate: scripts/box-verify.sh records the tested tree and its result in
+# target/artifacts/gate.json and a git note on refs/notes/gate. The note is
+# pushed when the CI/CD variable GATE_NOTES_REMOTE (a push URL with a
+# write-scoped token) is set; without it only the artifact keeps the record.
+gate:
+  stage: verify
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+  variables:
+    ARTIFACTS: target/artifacts
+    NOTES: target/artifacts/notes
+  script:
+    - git fetch origin "+refs/notes/gate:refs/notes/gate" || true
+    - bash scripts/box-verify.sh quick
+  artifacts:
+    when: always
+    paths:
+      - target/artifacts/gate.json
+      - target/artifacts/notes
+
+# main may only move to a commit whose tree has a PASS gate note, by
+# fast-forward from the previous main.
+land-check:
+  stage: verify
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  variables:
+    GIT_DEPTH: "0"
+    GATE_RECORDS: ""
+  before_script: []
+  script:
+    - git fetch origin "+refs/notes/gate:refs/notes/gate" || true
+    - base=-; case "$CI_COMMIT_BEFORE_SHA" in ''|0000000000000000000000000000000000000000) ;; *) base=$CI_COMMIT_BEFORE_SHA ;; esac
+    - sh scripts/land-check.sh "$CI_COMMIT_SHA" "$base"

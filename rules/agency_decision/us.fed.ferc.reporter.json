@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.ferc.reporter",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.ferc",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s+FERC\\s+¶\\s?(?P<paragraph>6[1-5],[0-9]{3})\\b",
+  "priority": 60,
+  "normalize": "{volume} FERC ¶ {paragraph}",
+  "authority_key": "us.ferc/{volume}/{paragraph}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.3 and T1.2 (Federal Energy Regulatory Commission Reports) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.3 and the T1.2 entry for FERC; FERC cites its own orders as `136 FERC ¶ 61,051`; compare with the agency's own citation guidance.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Order No. 1000, 136 FERC ¶ 61,051 (2011).",
+        "spans": [
+          [
+            20,
+            38
+          ]
+        ],
+        "groups": {
+          "volume": "136",
+          "paragraph": "61,051"
+        }
+      },
+      {
+        "text": "The ALJ's initial decision, 167 FERC ¶ 63,012, was affirmed.",
+        "spans": [
+          [
+            28,
+            46
+          ]
+        ]
+      },
+      {
+        "text": "Compare 170 FERC ¶61,123 with 99 FERC ¶ 62,001.",
+        "spans": [
+          [
+            8,
+            25
+          ],
+          [
+            31,
+            48
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "FERC approved 136 projects.",
+      "The FERC ¶ citations are paragraph numbers.",
+      "Paragraph 61 of the FERC order is key."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

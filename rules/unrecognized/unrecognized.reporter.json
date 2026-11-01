@@ -1,0 +1,88 @@
+{
+  "id": "unrecognized.reporter",
+  "kind": "unrecognized",
+  "jurisdiction": "unknown",
+  "pattern": "\\b(?P<volume>[0-9]{1,4}(?:-[0-9]{1,2})?)\\s+(?P<reporter>[A-Z][A-Za-z']{0,9}\\.(?:\\s?(?:[A-Z][A-Za-z']{0,9}\\.|[0-9](?:d|th)\\b)){0,4})\\s+(?P<page>[0-9]{1,5})\\b",
+  "reject": [
+    "^[0-9]+\\s+(?:Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Fig|Figs|No|Nos|Vol|Vols|Ch|Chs|Art|Arts|Sec|Secs|Pt|Pts|Para|Paras|Ex|Exs|Exh|Tab|Tabs|Doc|Dkt|Tr|Hr|Hrs|Col|Cols|Ln|Pg|Pp|Pl|Mr|Mrs|Ms|Dr|St|Ave|Rd|Inc|Co|Corp|Ltd|Id|Ibid|Pet|App|Rev|Ed|Eds|Ver|Rel|Ser|Sch|Sess|Supp)\\."
+  ],
+  "priority": 1,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.4,
+  "provenance": {
+    "encodes": "Case-citation shape (volume, reporter abbreviation, first page) of Bluebook R. 10.1; a heuristic for reporters no rule names",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Not a citation rule: check each hit against Bluebook T1 or reporters-db; a real reporter belongs in a case rule.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The panel followed Doe v. Roe, 45 Haw. Trib. 112 (2010), on remand.",
+        "spans": [
+          [
+            31,
+            48
+          ]
+        ]
+      },
+      {
+        "text": "See 12 Wyo. Comp. 3d 456.",
+        "spans": [
+          [
+            4,
+            24
+          ]
+        ]
+      },
+      {
+        "text": "That rule appears in 11 Disc. Bd. Rep. 4, and nowhere else.",
+        "spans": [
+          [
+            21,
+            40
+          ]
+        ]
+      },
+      {
+        "text": "Compare 3 Zan. Rptr. 400 with 5 Zan. Rptr. 12.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            45
+          ]
+        ]
+      },
+      {
+        "text": "The ruling was published at 1985-1 C.B. 184 that year.",
+        "spans": [
+          [
+            28,
+            43
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The meeting was held on 5 Jan. 2020 in the annex.",
+      "Results are shown in 3 Fig. 4 of the appendix.",
+      "Volume 2 No. 7 of the newsletter covered the event.",
+      "He lives at 100 N. Main St. near the court.",
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Version 2 Rev. 3 of the manual added 14 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Catch-all layer: runs after every other rule and never inside a span a real rule matched. Confidence stays below 0.5; each hit is CITE011 (warn). Examples use abbreviations no real reporter has, so reporter rules added later cannot claim them."
+}

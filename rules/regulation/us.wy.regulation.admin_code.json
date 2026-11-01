@@ -1,0 +1,50 @@
+{
+  "id": "us.wy.regulation.admin_code",
+  "kind": "regulation",
+  "jurisdiction": "us.wy",
+  "pattern": "\\bWyo\\.\\s?Admin\\.\\s?Code\\s?(?P<agency>[A-Z]{2,5}(?:\\s[A-Z]{2,5})?)\\s?Ch\\.\\s?(?P<chapter>[0-9]{1,3})(?:,?\\s?§\\s?(?P<section>[0-9]{1,3}))?",
+  "priority": 65,
+  "normalize": "Wyo. Admin. Code {agency} Ch. {chapter}",
+  "authority_key": "us.wy.admin_code/{agency}/{chapter}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Wyoming) administrative compilation: Wyo. Admin. Code AGENCY SUB Ch. N § N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Wyoming) and the official Wyoming administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Wyo. Admin. Code ENV WQD Ch. 1 § 2.",
+        "spans": [[4, 39]],
+        "groups": {
+          "agency": "ENV WQD",
+          "chapter": "1",
+          "section": "2"
+        }
+      },
+      {
+        "text": "The court relied on Wyo. Admin. Code AG Ch. 3 in reaching its holding.",
+        "spans": [[20, 45]]
+      },
+      {
+        "text": "Under Wyo. Admin. Code ENV AQD Ch. 6, § 2, the permit fails.",
+        "spans": [[6, 42]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Wyoming agency adopted 12 new rules in 2020.",
+      "Under Wyo. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Low confidence in the exact Bluebook shape; keyed on agency and chapter."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "us.ut.regulation.volume",
+  "kind": "regulation",
+  "jurisdiction": "us.ut",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<series>Utah\\sBull\\.)\\s(?P<page>[0-9]{1,5}(?:\\.[0-9]{1,4})?)\\b",
+  "priority": 62,
+  "normalize": "{volume} {series} {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 Utah: Administrative register and compilation",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 Utah, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 777"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 17 Utah Bull. 2316 (Jan. 9, 2015).",
+        "spans": [[4, 22]],
+        "groups": {
+          "volume": "17",
+          "series": "Utah Bull.",
+          "page": "2316"
+        }
+      },
+      {
+        "text": "See 17 Utah Bull. 1666 (May 13, 2014).",
+        "spans": [[4, 22]]
+      },
+      {
+        "text": "See 12 Utah Bull. 77.",
+        "spans": [[4, 20]]
+      }
+    ],
+    "negative": [
+      "The Utah Bull. is published monthly.",
+      "Volume 12 of the Utah register has 77 pages.",
+      "In 2015 the Utah Bull. had no issue 12."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

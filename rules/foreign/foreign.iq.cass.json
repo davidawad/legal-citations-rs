@@ -1,0 +1,55 @@
+{
+  "id": "foreign.iq.cass",
+  "kind": "foreign",
+  "jurisdiction": "foreign.iq.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "iq"
+  ],
+  "pattern": "قرار\\s+رقم\\s+(?P<number>[0-9٠-٩]{1,6})/(?P<panel>[ء-ي][ء-ي ]{2,30}[ء-ي])/(?P<year>(?:19|20)[0-9]{2}|[١٢][٩٠][٠-٩]{2})",
+  "priority": 56,
+  "normalize": "قرار رقم {number}/{panel}/{year}",
+  "authority_key": "iq.cass/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Iraqi Court of Cassation decision form: قرار رقم <n>/<panel>/<year>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Iraqi Federal Court of Cassation (iraqld.iq) decisions: numbering has the form رقم القرار/الهيئة/السنة.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "قرار رقم 123/الهيئة المدنية/2010 محكمة التمييز.",
+        "spans": [[0, 52]],
+        "groups": {
+          "number": "123",
+          "panel": "الهيئة المدنية",
+          "year": "2010"
+        }
+      },
+      {
+        "text": "انظر قرار رقم 45/الهيئة الموسعة المدنية/2008.",
+        "spans": [[9, 75]]
+      },
+      {
+        "text": "قرار رقم 9/هيئة الأحوال الشخصية/2015 حكم.",
+        "spans": [[0, 61]]
+      }
+    ],
+    "negative": [
+      "قرار رقم 123 بلا هيئة.",
+      "القرار صدر عن المحكمة.",
+      "قرار رقم 5/ab/2010 مرمز."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Panel names vary; Latin-script equivalents ('Decision No. 123/Civil Panel/2010') are not added because the English phrasing is not pinned down."
+}

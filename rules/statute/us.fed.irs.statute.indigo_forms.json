@@ -1,0 +1,54 @@
+{
+  "id": "us.fed.irs.statute.indigo_forms",
+  "kind": "statute",
+  "jurisdiction": "us.fed.irs",
+  "pattern": "\\b(?:I\\.R\\.C\\.\\s?§§?\\s[0-9]{1,5}[A-Za-z]?(?:[-.:][0-9]{1,5}[A-Za-z]?)*(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 45,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T3 us.fed.irs: Statutory compilations",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T3 us.fed.irs, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 1062"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See I.R.C. § 312 (2014).",
+        "spans": [[4, 17]],
+        "groups": {}
+      },
+      {
+        "text": "See I.R.C. § 501(c)(3) (2012).",
+        "spans": [[4, 23]]
+      },
+      {
+        "text": "See I.R.C. § 645 (5347).",
+        "spans": [[4, 17]]
+      },
+      {
+        "text": "See I.R.C. § 834(c)(6) (5345).",
+        "spans": [[4, 23]]
+      }
+    ],
+    "negative": [
+      "The us.fed.irs code was amended in 2015.",
+      "Section 12 of the us.fed.irs rules is long.",
+      "Title five of the us.fed.irs compilation has no number."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The trailing (West)/(LexisNexis)/date parenthetical is not part of the match. No authority key: these sources have no stable identifier scheme here."
+}

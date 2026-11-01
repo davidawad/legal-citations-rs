@@ -1,0 +1,68 @@
+{
+  "id": "us.short.id_section",
+  "kind": "id",
+  "jurisdiction": "us",
+  "pattern": "\\b[Ii]d\\.\\s?§§?\\s?(?P<section>[0-9]+[0-9A-Za-z]*(?:[.\\-–:][0-9A-Za-z]+)*)(?P<subsection>(?:\\([0-9A-Za-z]{1,6}\\))*)",
+  "priority": 65,
+  "normalize": "Id. § {section}{subsection}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, R22.3 (Use of id.)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), R22.3 (Use of id.), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "7 U.S.C. § 7101 (2012). Id. § 7102(26).",
+        "spans": [
+          [
+            25,
+            40
+          ]
+        ],
+        "groups": {
+          "section": "7102",
+          "subsection": "(26)"
+        }
+      },
+      {
+        "text": "9 C.F.R. § 54.1 (2014). Id. § 151.9.",
+        "spans": [
+          [
+            25,
+            37
+          ]
+        ]
+      },
+      {
+        "text": "See id. §§ 3–4 and Id. § 12.",
+        "spans": [
+          [
+            4,
+            18
+          ],
+          [
+            23,
+            32
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The ID § 5 badge expired.",
+      "Section 7102(26) of the Act.",
+      "Idaho § 5 is not a cite."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "`Id. § <section>`: same code as the antecedent, another section. L3 keeps the antecedent's authority key with this section in its last segment."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "foreign.ma.cass",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ma.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "ma"
+  ],
+  "pattern": "\\bCour\\s+de\\s+cassation\\s+(?:du\\s+Maroc|marocaine)\\s*,?\\s*(?:ch(?:ambre|\\.)\\s+[a-zé]+\\s*,?\\s*)?arrêt\\s+n°\\s*(?P<number>[0-9]{1,5}(?:/[0-9]{1,4})?)(?:\\s+du\\s+(?P<date>[0-9]{1,2}(?:er)?\\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\\s+(?:19|20)[0-9]{2}))?",
+  "priority": 56,
+  "normalize": "Cour de cassation du Maroc, arrêt n° {number}",
+  "authority_key": "ma.cass/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.7,
+  "provenance": {
+    "encodes": "Moroccan Court of Cassation (formerly Cour suprême) French cite: arrêt n° <n> du <date>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Moroccan Revue de la Cour suprême / juriscassation.cspj.ma decisions for 'arrêt n°' with decision date.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cour de cassation du Maroc, arrêt n° 123 du 12 mars 2010.",
+        "spans": [[0, 58]],
+        "groups": {
+          "number": "123",
+          "date": "12 mars 2010"
+        }
+      },
+      {
+        "text": "Cour de cassation marocaine, ch. civile, arrêt n° 456/1.",
+        "spans": [[0, 57]]
+      },
+      {
+        "text": "Cour de cassation du Maroc arrêt n° 77.",
+        "spans": [[0, 40]]
+      }
+    ],
+    "negative": [
+      "La Cour de cassation du Maroc siège à Rabat.",
+      "Cour de cassation, arrêt n° 123.",
+      "arrêt n° 123 marocain."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Form constructed; country marker required to avoid French Cour de cassation. Arabic form (محكمة النقض قرار عدد) shared with Egypt, not added."
+}

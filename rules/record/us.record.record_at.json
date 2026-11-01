@@ -1,0 +1,73 @@
+{
+  "id": "us.record.record_at",
+  "kind": "record",
+  "jurisdiction": "us",
+  "pattern": "\\bR\\.\\s+at\\s+(?P<page>[0-9]{1,5}(?:\\s?[-–]\\s?[0-9]{1,5})?)\\b",
+  "reject_before": [
+    "(?:Court|Ct\\.|Circ\\.|Cir\\.|Rep\\.)\\s$",
+    "[A-Za-z]\\.$",
+    "\\b[0-9]{1,4}\\s+(?:[A-Z&][A-Za-z.'’&,]*\\s?){0,6}$"
+  ],
+  "priority": 55,
+  "normalize": "R. at {page}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book R24.1 (appellate record); Bluebook B17",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Compare with Bluebook Bluepages B17.1 and Indigo Book R24 (https://law.resource.org/pub/us/code/blue/IndigoBook.html); record abbreviations follow the court's own local practice.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The record shows it. R. at 112.",
+        "spans": [
+          [
+            21,
+            30
+          ]
+        ],
+        "groups": {
+          "page": "112"
+        }
+      },
+      {
+        "text": "See R. at 45–47.",
+        "spans": [
+          [
+            4,
+            17
+          ]
+        ]
+      },
+      {
+        "text": "Compare R. at 3 with R. at 1200-01.",
+        "spans": [
+          [
+            8,
+            15
+          ],
+          [
+            21,
+            34
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "R. at large",
+      "The R. at the start of the line.",
+      "Fed. R. Civ. P."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "",
+  "retired": "Duplicate of us.record.appellate_record (two branches added `R. at 112`); merged into it, which keeps the stricter reject_before guards."
+}

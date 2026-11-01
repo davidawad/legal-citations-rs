@@ -1,0 +1,66 @@
+{
+  "id": "us.fed.regulation.cfr",
+  "kind": "regulation",
+  "jurisdiction": "us.fed",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\s+C\\.?\\s?F\\.?\\s?R\\.?\\s*(?:(?:§§?|[Pp]arts?|[Ss]ec(?:tion)?\\.?)\\s*)?(?P<section>[0-9]+(?:\\.[0-9]+[a-z]?)*)(?P<subsection>(?:\\([0-9A-Za-z]{1,6}\\))*)",
+  "priority": 60,
+  "normalize": "{title} C.F.R. § {section}{subsection}",
+  "authority_key": "us.cfr/{title}/{section}",
+  "url_templates": [
+    "https://www.law.cornell.edu/cfr/text/{title}/{section}"
+  ],
+  "url_decoders": [
+    "law.cornell.edu/cfr/text/{title}/{section}",
+    "ecfr.gov/current/title-{title}/section-{section}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.2 and T1 (Code of Federal Regulations) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.2.",
+    "derived_from": [
+      "dotfiles legal_citation_patterns.py CFR_RE"
+    ],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 45 C.F.R. § 164.502(a)(1)(i).",
+        "spans": [[4, 33]],
+        "groups": {
+          "title": "45",
+          "section": "164.502",
+          "subsection": "(a)(1)(i)"
+        }
+      },
+      {
+        "text": "The court relied on 29 CFR § 1910.1200 in reaching its holding.",
+        "spans": [[20, 39]]
+      },
+      {
+        "text": "Under 37 C.F.R. § 42.100(b), the claim fails.",
+        "spans": [[6, 28]]
+      },
+      {
+        "text": "Plaintiff cites 37 C.F.R. 1.56 for this point.",
+        "spans": [[16, 30]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "Form 10-K was filed in March.",
+      "The guidelines run 12 pages."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "legacy": {
+    "type": "cfr",
+    "order": 2,
+    "pattern": "(?P<title>\\d+)\\s+C\\.F\\.R\\.?\\s*[§§]+\\s*(?P<section>[\\d\\w\\-]+(?:\\.[\\d\\w\\-]+)*(?:\\([^)]*\\))*)"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority). ecfr.gov blocks scripted fetches: decoder only, no template."
+}

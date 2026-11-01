@@ -1,0 +1,71 @@
+{
+  "id": "us.fed.oshrc.slip_decision",
+  "kind": "agency_decision",
+  "jurisdiction": "us.fed.oshrc",
+  "pattern": "\\bNo\\.\\s?(?P<number>[0-9]{2}-[0-9]{3,5})\\s+\\(OSHRC\\s+(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s[0-9]{1,2},?\\s(?:19|20)[0-9]{2})\\)",
+  "priority": 60,
+  "normalize": "No. {number} (OSHRC {date})",
+  "authority_key": "us.oshrc/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "tags": [
+    "labor"
+  ],
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Occupational Safety and Health Review Commission (slip decisions, R12.4.2(b))",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Occupational Safety and Health Review Commission (slip decisions, R12.4.2(b)), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Prime Roofing Corp., No. 07-1409 (OSHRC Feb. 5, 2008).",
+        "spans": [
+          [
+            21,
+            53
+          ]
+        ],
+        "groups": {
+          "number": "07-1409",
+          "date": "Feb. 5, 2008"
+        }
+      },
+      {
+        "text": "Smith Constr. Co., No. 12-1201 (OSHRC Mar. 3, 2014).",
+        "spans": [
+          [
+            19,
+            51
+          ]
+        ]
+      },
+      {
+        "text": "Compare No. 13-0323 (OSHRC May 1, 2015) with No. 95-1449 (OSHRC Sept. 9, 1999).",
+        "spans": [
+          [
+            8,
+            39
+          ],
+          [
+            45,
+            78
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "No. 07-1409 (2008) was heard.",
+      "OSHRC No. 07 was assigned in Feb. 2008.",
+      "No. 07-1409 (Feb. 5, 2008)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "The OSHRC date parenthetical makes a bare `No. 07-1409` an OSHRC decision; it outranks us.docket.number."
+}

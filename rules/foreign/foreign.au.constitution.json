@@ -1,0 +1,52 @@
+{
+  "id": "foreign.au.constitution",
+  "kind": "foreign",
+  "jurisdiction": "foreign.au",
+  "tags": [
+    "foreign",
+    "australia"
+  ],
+  "pattern": "\\b(?:Australian\\s+Constitution|Commonwealth\\s+Constitution|Constitution\\s+\\(Cth\\))\\s+(?:ss?\\.?|§§?)\\s*(?P<section>[0-9]{1,3}[A-Z]?(?:\\([ivxl0-9a-z]{1,6}\\))*)",
+  "priority": 60,
+  "normalize": "Australian Constitution s {section}",
+  "authority_key": "au.constitution/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "AGLC (4th ed.) 3.6 (Australian Constitution s <n>)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open AGLC (4th ed.) 3.6 (constitutions) and Bluebook T2 (Australia).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Power under Australian Constitution s 51(xx) covers corporations.",
+        "spans": [[12, 44]],
+        "groups": {
+          "section": "51(xx)"
+        }
+      },
+      {
+        "text": "See Constitution (Cth) s 92.",
+        "spans": [[4, 27]]
+      },
+      {
+        "text": "Commonwealth Constitution s 109 resolves inconsistency.",
+        "spans": [[0, 31]]
+      }
+    ],
+    "negative": [
+      "The Australian Constitution came into force in 1901.",
+      "Constitution s 51 of the club.",
+      "U.S. Const. art. I, § 8."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

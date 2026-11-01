@@ -1,0 +1,50 @@
+{
+  "id": "us.tx.regulation.tac",
+  "kind": "regulation",
+  "jurisdiction": "us.tx",
+  "pattern": "\\b(?P<title>[0-9]{1,2})\\s(?:Tex\\.\\s?Admin\\.\\s?Code|T\\.A\\.C\\.|TAC)\\s?§\\s?(?P<section>[0-9]{1,3}\\.[0-9]{1,4})(?P<sub>(?:\\([A-Za-z0-9]{1,4}\\))*)",
+  "priority": 65,
+  "normalize": "{title} Tex. Admin. Code § {section}{sub}",
+  "authority_key": "us.tx.tac/{title}/{section}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Texas) administrative compilation: N Tex. Admin. Code § N.N; local form N TAC § N.N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Texas) and the official Texas administrative code; confirm the citation form and the section numbering.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See 30 Tex. Admin. Code § 307.4.",
+        "spans": [[4, 32]],
+        "groups": {
+          "title": "30",
+          "section": "307.4",
+          "sub": ""
+        }
+      },
+      {
+        "text": "The court relied on 16 TAC § 3.13 in reaching its holding.",
+        "spans": [[20, 34]]
+      },
+      {
+        "text": "Under 1 T.A.C. § 355.8052(b), the permit fails.",
+        "spans": [[6, 29]]
+      }
+    ],
+    "negative": [
+      "The team read 45 chapters of the novel.",
+      "The Texas agency adopted 12 new rules in 2020.",
+      "Under Tex. Admin. Code, as amended, the permit fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State administrative code. The span covers the section and any parenthesized subdivisions. No URL template: no fetch-verified host serves this code yet. Priority 65 beats us.tx.statute.code, which also matches the Tex. Admin. Code § N part."
+}

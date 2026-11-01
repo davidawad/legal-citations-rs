@@ -1,0 +1,63 @@
+{
+  "id": "us.fed.executive.cfr_title3",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b3\\s+(?:C\\.\\s?F\\.\\s?R\\.\\s+(?P<page>[0-9]{1,4})\\s+\\((?P<year>(?:19|20)[0-9]{2})(?:\\s+Comp\\.)?\\)|CFR,\\s+(?P<comp_year>(?:19|20)[0-9]{2})\\s+Comp\\.,\\s+p\\.\\s+(?P<comp_page>[0-9]{1,4}))",
+  "priority": 65,
+  "normalize": "3 C.F.R.",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R. 14.7 (executive orders and proclamations in 3 C.F.R. compilations) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 for `3 C.F.R. 638 (1994)`; compare with the Federal Register's `3 CFR, 2002 Comp., p. 409` form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The order is at 3 C.F.R. 638 (1994).",
+        "spans": [[16, 35]],
+        "groups": {
+          "page": "638",
+          "year": "1994"
+        }
+      },
+      {
+        "text": "The order is reprinted at 3 CFR, 2002 Comp., p. 409.",
+        "spans": [
+          [
+            26,
+            51
+          ]
+        ]
+      },
+      {
+        "text": "Compare 3 C.F.R. 409 (2002 Comp.) with 3 C.F.R. 1 (2020).",
+        "spans": [
+          [
+            8,
+            33
+          ],
+          [
+            39,
+            56
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "See 3 C.F.R. § 100.1 for the standards of conduct.",
+      "Title 3 of the CFR holds presidential documents.",
+      "3 C.F.R. Part 101 applies to staff."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Compilation page cites only; section cites to 3 C.F.R. parts 100-102 stay with us.fed.regulation.cfr. No authority_key: a page in a compilation year is not stable across reprints."
+}

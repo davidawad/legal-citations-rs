@@ -1,0 +1,53 @@
+{
+  "id": "intl.coe.echr_reports_official",
+  "kind": "foreign",
+  "jurisdiction": "intl.coe",
+  "tags": [
+    "international",
+    "human_rights"
+  ],
+  "pattern": "\\bECHR\\s+(?P<year>(?:19|20)[0-9]{2})-(?P<part>[IVX]{1,5})\\b",
+  "priority": 60,
+  "normalize": "ECHR {year}-{part}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "European Court of Human Rights official Reports citation (ECHR <year>-<volume>), as printed in Reports of Judgments and Decisions",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Court's 'Reports of Judgments and Decisions' citation guidance (echr.coe.int) or any reported judgment's citation line.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Hirst v. the United Kingdom (no. 2) [GC], no. 74025/01, ECHR 2005-IX.",
+        "spans": [[56, 68]],
+        "groups": {
+          "year": "2005",
+          "part": "IX"
+        }
+      },
+      {
+        "text": "Selmouni v. France [GC], no. 25803/94, ECHR 1999-V.",
+        "spans": [[39, 50]]
+      },
+      {
+        "text": "See ECHR 2000-XI.",
+        "spans": [[4, 16]]
+      }
+    ],
+    "negative": [
+      "The ECHR in 2005 had IX sections.",
+      "ECHR 2005 annual report.",
+      "ECHR-IX is a code."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "No authority key: the year-part names a volume, and the page is rarely given."
+}

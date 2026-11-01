@@ -1,0 +1,72 @@
+{
+  "id": "us.fed.uscis.policy_manual_long",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.uscis",
+  "tags": [
+    "immigration"
+  ],
+  "pattern": "\\bUSCIS\\s+Policy\\s+Manual,?\\s+(?:Vol(?:ume|\\.)\\s+(?P<volume>[0-9]{1,2}),?\\s+(?:Pt\\.|Part)\\s+(?P<part>[A-Z]),?\\s+(?:Ch\\.|Chapter)\\s+(?P<chapter>[0-9]{1,2}))",
+  "priority": 60,
+  "normalize": "{volume} USCIS-PM {part}.{chapter}",
+  "authority_key": "us.uscis_pm/{volume}/{part}/{chapter}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "USCIS Policy Manual, volume/part/chapter form",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the USCIS Policy Manual at https://www.uscis.gov/policy-manual and compare the volume, part and chapter headings.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See USCIS Policy Manual, Vol. 6, Pt. F, Ch. 5.",
+        "spans": [
+          [
+            4,
+            45
+          ]
+        ],
+        "groups": {
+          "volume": "6",
+          "part": "F",
+          "chapter": "5"
+        }
+      },
+      {
+        "text": "The guidance is in USCIS Policy Manual, Volume 7, Part A, Chapter 2.",
+        "spans": [
+          [
+            19,
+            67
+          ]
+        ]
+      },
+      {
+        "text": "Compare USCIS Policy Manual Vol. 12, Pt. D, Ch. 2 with USCIS Policy Manual, Vol. 1, Part E, Ch. 6.",
+        "spans": [
+          [
+            8,
+            49
+          ],
+          [
+            55,
+            97
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The USCIS Policy Manual was updated.",
+      "USCIS Policy Manual, Vol. 6",
+      "USCIS Policy Manual, Part F"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

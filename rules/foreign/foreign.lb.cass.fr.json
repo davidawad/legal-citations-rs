@@ -1,0 +1,53 @@
+{
+  "id": "foreign.lb.cass.fr",
+  "kind": "foreign",
+  "jurisdiction": "foreign.lb.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "lb"
+  ],
+  "pattern": "\\bCour\\s+de\\s+cassation\\s+libanaise\\s*,?\\s*(?:(?:[0-9]{1,2}(?:e|ème)|[IVX]{1,4})\\s+ch(?:ambre|\\.)\\s*,?\\s*)?(?:arrêt|décision)\\s+n°\\s*(?P<number>[0-9]{1,5})(?:/(?P<year>(?:19|20)[0-9]{2}))?",
+  "priority": 56,
+  "normalize": "Cour de cassation libanaise, arrêt n° {number}",
+  "authority_key": "lb.cass/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.75,
+  "provenance": {
+    "encodes": "Lebanese Court of Cassation French citation: Cour de cassation libanaise, ch., arrêt n° <n>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check Cassandre/Legiliban or French-language Lebanese doctrine (e.g. Revue Judiciaire Libanaise) for the 'arrêt n°' form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Cour de cassation libanaise, arrêt n° 45 du 12 mai 2010.",
+        "spans": [[0, 42]],
+        "groups": {
+          "number": "45"
+        }
+      },
+      {
+        "text": "Cour de cassation libanaise, 3e chambre, arrêt n° 120/2005.",
+        "spans": [[0, 60]]
+      },
+      {
+        "text": "Cour de cassation libanaise, III ch. décision n° 9.",
+        "spans": [[0, 52]]
+      }
+    ],
+    "negative": [
+      "Cour de cassation libanaise a siégé.",
+      "Cour de cassation, arrêt n° 45 du 12 mai 2010.",
+      "arrêt n° 45 libanais."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "French form unverified; Arabic Lebanese form (محكمة التمييز، الغرفة ... قرار رقم) not added because the phrasing is shared with Iraq/Jordan."
+}

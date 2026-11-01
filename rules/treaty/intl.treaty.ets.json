@@ -1,0 +1,60 @@
+{
+  "id": "intl.treaty.ets",
+  "kind": "treaty",
+  "jurisdiction": "intl.coe",
+  "tags": [
+    "international",
+    "coe"
+  ],
+  "pattern": "(?:\\b(?:(?P<date>(?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\\.?\\s+[0-9]{1,2},\\s+[0-9]{4}),\\s+))?(?:\\bE\\.\\s?T\\.\\s?S\\.|\\bC\\.\\s?E\\.\\s?T\\.\\s?S\\.)\\s+No\\.\\s?(?P<number>[0-9]{1,3})\\b",
+  "reject_before": [
+    "[A-Z]\\.\\s?$"
+  ],
+  "priority": 60,
+  "normalize": "E.T.S. No. {number}",
+  "authority_key": "coe_ts/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T6 (Required Abbreviations for Treaty Sources): European Treaty Series (1948-2003) E.T.S. No. <no.> and Council of Europe Treaty Series (2004-date) C.E.T.S. No. <no.>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Convention for the Protection of Human Rights and Fundamental Freedoms, Nov. 4, 1950, E.T.S. No. 5.",
+        "spans": [[72, 98]],
+        "groups": {
+          "date": "Nov. 4, 1950",
+          "number": "5"
+        }
+      },
+      {
+        "text": "Convention on Cybercrime, Nov. 23, 2001, E.T.S. No. 185.",
+        "spans": [[26, 55]]
+      },
+      {
+        "text": "Convention on Preventing and Combating Violence Against Women, May 11, 2011, C.E.T.S. No. 210.",
+        "spans": [[63, 93]]
+      },
+      {
+        "text": "Convention on Action against Trafficking in Human Beings, May 16, 2005, C.E.T.S. No. 197.",
+        "spans": [[58, 88]]
+      }
+    ],
+    "negative": [
+      "The ETS number 5 was dialed.",
+      "The E.T. movie came out in 1982.",
+      "Our C.E.T. score was 210."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "One series continued under a new name in 2004 (the numbering continues), so E.T.S. and C.E.T.S. are one form and one authority key."
+}

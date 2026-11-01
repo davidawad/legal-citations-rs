@@ -1,0 +1,54 @@
+{
+  "id": "foreign.in.air",
+  "kind": "foreign",
+  "jurisdiction": "foreign.in",
+  "tags": [
+    "foreign",
+    "india"
+  ],
+  "pattern": "\\bA\\.?I\\.?R\\.?\\s+(?P<year>(?:19|20)[0-9]{2})\\s+(?P<court>SC|S\\.C\\.|PC|P\\.C\\.|All|Bom|Cal|Del|Mad|Ker|Kant|Guj|Raj|Ori|Pat|P&H|AP|MP|HP|J&K|Gau|Mys|Lah|Nag|Sikkim|Tri|Mani|Meg|Uttarakhand|Chh|Jhar)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "AIR {year} {court} {page}",
+  "authority_key": "in.air/{year}/{court}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "All India Reporter: AIR <year> <court> <page> (Bluebook T2 India)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T2 (India) and the Supreme Court of India's citation practice (SCC, AIR, neutral INSC citations).",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Kesavananda Bharati v. State of Kerala, AIR 1973 SC 1461.",
+        "spans": [[40, 56]],
+        "groups": {
+          "year": "1973",
+          "court": "SC",
+          "page": "1461"
+        }
+      },
+      {
+        "text": "Maneka Gandhi v. Union of India, A.I.R. 1978 S.C. 597.",
+        "spans": [[33, 53]]
+      },
+      {
+        "text": "See AIR 1951 Bom 12.",
+        "spans": [[4, 19]]
+      }
+    ],
+    "negative": [
+      "The air in 1973 was clean.",
+      "AIR 1973 was a vintage year.",
+      "Air SC 1461 flight left late."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

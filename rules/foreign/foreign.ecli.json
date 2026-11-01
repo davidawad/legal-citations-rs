@@ -1,0 +1,57 @@
+{
+  "id": "foreign.ecli",
+  "kind": "foreign",
+  "jurisdiction": "foreign",
+  "tags": [
+    "international"
+  ],
+  "pattern": "\\bECLI:(?P<country>[A-Z]{2}):(?P<court>[A-Za-z0-9]{1,7}):(?P<year>(?:19|20)[0-9]{2}):(?P<number>[A-Za-z0-9.]{1,25}[A-Za-z0-9])",
+  "reject": [
+    "^ECLI:EU:"
+  ],
+  "priority": 60,
+  "normalize": "ECLI:{country}:{court}:{year}:{number}",
+  "authority_key": "ecli/{country}/{court}/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.85,
+  "provenance": {
+    "encodes": "Council conclusions on the European Case Law Identifier (ECLI), OJ C 127, 29.4.2011, p. 1: ECLI:<country>:<court>:<year>:<ordinal>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the Council conclusions (OJ C 127, 29.4.2011, p. 1) annex on the ECLI format.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The Hoge Raad decided ECLI:NL:HR:2019:2006 (Urgenda).",
+        "spans": [[22, 42]],
+        "groups": {
+          "country": "NL",
+          "court": "HR",
+          "year": "2019",
+          "number": "2006"
+        }
+      },
+      {
+        "text": "See ECLI:DE:BVerfG:2020:rs20200505.2bvr085915.",
+        "spans": [[4, 45]]
+      },
+      {
+        "text": "The Strasbourg court decided ECLI:CE:ECHR:2005:1006JUD007402501.",
+        "spans": [[29, 63]]
+      }
+    ],
+    "negative": [
+      "ECLI adoption in NL started in 2013.",
+      "The code NL:HR:2019 is not an identifier.",
+      "ECLI:EU courts were first."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "National and Council of Europe ECLIs; the EU courts' own ECLIs are intl.eu.ecli. The jurisdiction is the bare foreign namespace because the country is a group, not fixed."
+}

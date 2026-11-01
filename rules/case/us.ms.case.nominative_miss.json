@@ -1,0 +1,76 @@
+{
+  "id": "us.ms.case.nominative_miss",
+  "kind": "case",
+  "jurisdiction": "us.ms",
+  "pattern": "\\b(?P<volume>[0-9]{1,3})\\s(?P<reporter>Miss\\.)\\s\\((?:(?P<nominative_volume>[0-9]{1,2}(?:\\s?&\\s?[0-9]{1,2})?)\\s)?(?P<nominative>S\\.\\s?\\&\\sM\\.|Howard|Walker)\\)\\s(?P<page>[0-9]{1,4})\\b",
+  "priority": 62,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Indigo Book T1/T3: Miss. with nominative reporters",
+    "opened": false,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book, T1/T3, and compare each series with the alternation.",
+    "derived_from": [
+      "corpus/formats/indigo.jsonl line 388",
+      "corpus/formats/indigo.jsonl line 389",
+      "corpus/formats/indigo.jsonl line 390"
+    ],
+    "third_party": [
+      "The Indigo Book (Public Resource, CC0); see NOTICE"
+    ]
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Walker v. Young, 9 Miss. (1 S. & M.) 25 (1845).",
+        "spans": [[21, 43]],
+        "groups": {
+          "volume": "9",
+          "reporter": "Miss.",
+          "nominative_volume": "1",
+          "nominative": "S. & M.",
+          "page": "25"
+        }
+      },
+      {
+        "text": "See Allen v. King, 9 Miss. (1 S. & M.) 305, 617 (1847).",
+        "spans": [[19, 42]]
+      },
+      {
+        "text": "See Wright v. Scott, 2 Miss. (1 Howard) 105 (1836).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Green v. Baker, 2 Miss. (1 Howard) 465, 609 (1840).",
+        "spans": [[20, 42]]
+      },
+      {
+        "text": "See Adams v. Nelson, 1 Miss. (1 Walker) 545 (1822).",
+        "spans": [[21, 43]]
+      },
+      {
+        "text": "See Hill v. Campbell, 1 Miss. (1 Walker) 137, 609 (1827).",
+        "spans": [[22, 44]]
+      },
+      {
+        "text": "See Doe v. Roe, 12 Miss. (2 S. & M.) 345 (1850).",
+        "spans": [[16, 40]]
+      }
+    ],
+    "negative": [
+      "Volume 12 of the Miss. reports is missing.",
+      "The Howard reports cover Miss. cases from 1800 to 1850.",
+      "See Miss. (Howard) generally."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Authored by `cargo run -p xtask-rules -- indigo` from the Indigo inventory (lcr-g). The case name, pincite and date parenthetical are assembled around the match; the authority key is the official reporter's, so a nominative cite and the bare official cite are one authority. url_templates: none; no fetch of CourtListener /c/ is recorded for these reporters (the decoder stays)."
+}

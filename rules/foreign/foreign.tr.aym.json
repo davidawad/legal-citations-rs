@@ -1,0 +1,53 @@
+{
+  "id": "foreign.tr.aym",
+  "kind": "foreign",
+  "jurisdiction": "foreign.tr.aym",
+  "tags": [
+    "foreign",
+    "mena",
+    "tr"
+  ],
+  "pattern": "\\b(?:Başvuru\\s+No|B\\.\\s?No):\\s*(?P<number>(?:19|20)[0-9]{2}/[0-9]{1,6})\\b",
+  "priority": 56,
+  "normalize": "B. No: {number}",
+  "authority_key": "tr.aym/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Turkish Constitutional Court (AYM) individual application: B. No: <yyyy/n>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check kararlarbilgibankasi.anayasa.gov.tr: individual application decisions give 'Başvuru Numarası: 2013/1234'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Anayasa Mahkemesi, Başvuru No: 2013/1234, 2015.",
+        "spans": [[19, 41]],
+        "groups": {
+          "number": "2013/1234"
+        }
+      },
+      {
+        "text": "AYM, B. No: 2012/756, 17.9.2013.",
+        "spans": [[5, 20]]
+      },
+      {
+        "text": "B.No: 2014/6789 kararı.",
+        "spans": [[0, 15]]
+      }
+    ],
+    "negative": [
+      "Başvuru numarası yazılmadı.",
+      "B. No bilgisi yok.",
+      "Başvuru No: 12 eksik."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

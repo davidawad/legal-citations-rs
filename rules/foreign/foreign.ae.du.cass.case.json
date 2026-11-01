@@ -1,0 +1,55 @@
+{
+  "id": "foreign.ae.du.cass.case",
+  "kind": "foreign",
+  "jurisdiction": "foreign.ae.du.cass",
+  "tags": [
+    "foreign",
+    "mena",
+    "uae"
+  ],
+  "pattern": "(?P<court>Dubai\\s+(?:Court\\s+of\\s+Cassation|Cassation\\s+Court)),?\\s+(?:(?P<kind>Appeal|Petition|Case|Challenge|Cassation|Claim)\\s+)?No\\.?\\s*\\(?(?P<number>[0-9]{1,5})\\)?\\s*(?:of|/)\\s*(?P<year>(?:19|20)[0-9]{2})(?:\\s*\\(\\s*(?P<chamber>Commercial|Civil|Criminal|Personal\\s+Status|Real\\s+Estate|Labou?r|Administrative)\\s*\\)|\\s+(?P<chamber2>Commercial|Civil|Criminal|Personal\\s+Status|Real\\s+Estate|Labou?r|Administrative))?",
+  "priority": 60,
+  "normalize": "{court}, No. {number} of {year}",
+  "authority_key": "ae.case/foreign.ae.du.cass.case/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Dubai Court of Cassation judgments cited by court, appeal/petition number and year, with optional chamber (e.g. 'Appeal No. 123 of 2019 (Commercial)')",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Unverified practice; check against reported decisions in law firm client alerts and the court's published judgments.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Dubai Court of Cassation, Appeal No. 898 of 2019 (Commercial)",
+        "spans": [[0, 61]],
+        "groups": {
+          "court": "Dubai Court of Cassation",
+          "number": "898",
+          "year": "2019"
+        }
+      },
+      {
+        "text": "Dubai Cassation Court, Petition No. 62 of 2021",
+        "spans": [[0, 46]]
+      },
+      {
+        "text": "Dubai Court of Cassation Appeal No. 990/2019 Commercial",
+        "spans": [[0, 55]]
+      }
+    ],
+    "negative": [
+      "The Dubai Court of Cassation sits in Dubai.",
+      "Dubai courts handled 12 cases in 2019.",
+      "Cassation No. 9 of 2019 (DIFC)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

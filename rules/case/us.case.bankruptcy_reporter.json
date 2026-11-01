@@ -1,0 +1,55 @@
+{
+  "id": "us.case.bankruptcy_reporter",
+  "kind": "case",
+  "jurisdiction": "us.fed.bankr",
+  "pattern": "\\b(?P<volume>[0-9]{1,4})\\s+(?P<reporter>B\\.\\s?R\\.)\\s+(?P<page>[0-9]{1,5})\\b",
+  "priority": 60,
+  "normalize": "{volume} {reporter} {page}",
+  "authority_key": "case/{volume}/{reporter}/{page}",
+  "url_templates": [
+    "https://www.courtlistener.com/c/{reporter}/{volume}/{page}/"
+  ],
+  "url_decoders": [
+    "courtlistener.com/c/{reporter}/{volume}/{page}"
+  ],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Bankruptcy Reporter) (21st ed.)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 for the reporter abbreviations; compare with reporters-db reporters.json.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See In re X, 5 B.R. 6 (Bankr. D. Del. 1980).",
+        "spans": [[13, 21]],
+        "groups": {
+          "volume": "5",
+          "reporter": "B.R.",
+          "page": "6"
+        }
+      },
+      {
+        "text": "The court relied on In re Smith, 600 B.R. 1 (Bankr. S.D.N.Y. 2019) in reaching its holding.",
+        "spans": [[33, 43]]
+      },
+      {
+        "text": "Under In re Doe, 450 B. R. 12 (B.A.P. 9th Cir. 2011), the claim fails.",
+        "spans": [[17, 29]]
+      }
+    ],
+    "negative": [
+      "The parties met 3 times in 2019 and signed 2 agreements.",
+      "Chapter 11 of the book runs from page 483 to page 495.",
+      "We shipped 347 units to the U.S. in 1954 and 12 more later.",
+      "Smith versus Jones was the headline in the local paper on May 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "url_templates verified by HTTP fetch on 2026-10-22 (resolve to the cited authority)."
+}

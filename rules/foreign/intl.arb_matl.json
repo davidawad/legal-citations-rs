@@ -1,0 +1,53 @@
+{
+  "id": "intl.arb_matl",
+  "kind": "foreign",
+  "jurisdiction": "intl",
+  "tags": [
+    "international",
+    "arbitration"
+  ],
+  "pattern": "\\b(?P<volume>[0-9]{1,2})\\s+Arb\\.\\s+Mat[’']\\s?l\\s+(?P<page>[0-9]{1,5})\\b(?:,\\s+(?P<pin>[0-9]{1,5}[-–][0-9]{1,5})\\b)?",
+  "priority": 60,
+  "normalize": "{volume} Arb. Mat'l {page}",
+  "authority_key": "intl/arb_matl/{volume}/{page}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Indigo Book T7 (Required Abbreviations for Arbitral Reporters): Arbitration Materials, <vol> Arb. Mat'l <page>",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Seller v. Buyer, 3 Arb. Mat’l 211 (1991).",
+        "spans": [[17, 35]],
+        "groups": {
+          "volume": "3",
+          "page": "211"
+        }
+      },
+      {
+        "text": "The tribunal relied on 3 Arb. Mat'l 211, 214–216 in reaching its award.",
+        "spans": [[23, 50]]
+      },
+      {
+        "text": "Under 5 Arb. Mat’l 46, the claim fails.",
+        "spans": [[6, 23]]
+      }
+    ],
+    "negative": [
+      "Arbitration materials filled 3 boxes.",
+      "The Arb. team had 211 members.",
+      "Material 46 was missing."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

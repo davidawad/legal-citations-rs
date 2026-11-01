@@ -1,0 +1,66 @@
+{
+  "id": "us.fed.usda.directive",
+  "kind": "agency_manual",
+  "jurisdiction": "us.fed.usda",
+  "pattern": "\\b(?P<agency>FSIS|APHIS|AMS|ARS|CNPP|CSREES|ERS|FSA|FNS|FAS|FS|GIPSA|NAL|NASS|NIFA|NRCS|RMA|RD|RHS|RUS)\\s+(?:(?P<type>Directive|Notice|Manual|Handbook|Instruction)\\s+)?(?P<number>[0-9]{3,5}(?:\\.[0-9]{1,3}){0,2}),\\s+(?P<title>[A-Z][^()]{2,150}?)\\s+\\(U\\.S\\.D\\.A\\.\\s+(?P<year>(?:19|20)[0-9]{2})\\)",
+  "priority": 60,
+  "normalize": "{agency} {number}, {title} (U.S.D.A. {year})",
+  "authority_key": "us.usda/{agency}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "The Indigo Book, T2 Department of Agriculture (Directives)",
+    "opened": true,
+    "source_url": "https://law.resource.org/pub/us/code/blue/IndigoBook.html",
+    "how_to_verify": "Open the Indigo Book (https://law.resource.org/pub/us/code/blue/IndigoBook.html, CC0), T2 Department of Agriculture (Directives), and compare the form and examples with this pattern.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "FSIS Directive 7120.1, Safe and Suitable Ingredients Used in the Production of Meat and Poultry Products (U.S.D.A. 2015).",
+        "spans": [
+          [
+            0,
+            120
+          ]
+        ],
+        "groups": {
+          "agency": "FSIS",
+          "type": "Directive",
+          "number": "7120.1",
+          "year": "2015"
+        }
+      },
+      {
+        "text": "FS 2300, Recreation, Wilderness, and Related Resource Management (U.S.D.A. 2010).",
+        "spans": [
+          [
+            0,
+            80
+          ]
+        ]
+      },
+      {
+        "text": "See APHIS 1220.1, Animal Welfare Inspection Guide (U.S.D.A. 2013).",
+        "spans": [
+          [
+            4,
+            65
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "FSIS Directive 7120.1 was revised.",
+      "The FS 2300 manual covers recreation (2010).",
+      "APHIS staff, 1220 of them, met (U.S.D.A. report)."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Needs the closing `(U.S.D.A. <year>)`: a bare `FS 2300` is too ambiguous to read alone."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "us.fed.dist.laed.record_document",
+  "kind": "record",
+  "jurisdiction": "us.fed.dist.laed",
+  "pattern": "\\b(?:R\\.|Rec\\.)\\s+Doc\\.\\s+(?:No\\.\\s*)?(?P<number>[0-9]{1,5})(?:-(?P<attachment>[0-9]{1,3}))?\\b",
+  "priority": 56,
+  "normalize": "R. Doc. {number}",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "E.D. La. and W.D. La. record document cites (R. Doc.); Bluebook B17",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open a recent E.D. La. opinion on its website and compare the `R. Doc.` record cite form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The motion is opposed. R. Doc. 45.",
+        "spans": [
+          [
+            23,
+            33
+          ]
+        ],
+        "groups": {
+          "number": "45"
+        }
+      },
+      {
+        "text": "See Rec. Doc. 12-3 at 4.",
+        "spans": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "text": "Compare R. Doc. No. 7 with R. Doc. 9.",
+        "spans": [
+          [
+            8,
+            21
+          ],
+          [
+            27,
+            36
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The R. Doc. index is attached.",
+      "R. Docs. were filed.",
+      "Rec. Doc. pending"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

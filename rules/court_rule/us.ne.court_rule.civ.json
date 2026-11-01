@@ -1,0 +1,49 @@
+{
+  "id": "us.ne.court_rule.civ",
+  "kind": "court_rule",
+  "jurisdiction": "us.ne",
+  "pattern": "\\b(?:Neb\\.\\s?Ct\\.\\s?R\\.\\s?Pldg\\.\\s?§\\s?)\\s?(?P<rule>[0-9]-[0-9]{3,4})(?P<sub>(?:\\([A-Za-z0-9.]{1,5}\\))*)",
+  "priority": 60,
+  "normalize": "Neb. Ct. R. Pldg. § {rule}{sub}",
+  "authority_key": "us.ne.rules.civ/{rule}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook T1 (Nebraska) Nebraska Court Rules of Pleading in Civil Cases: Neb. Ct. R. Pldg. § N (21st ed.), as recalled, not opened",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook T1 (Nebraska) and the official Nebraska Court Rules of Pleading in Civil Cases; confirm the abbreviation, the numbering and any local citation form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See Neb. Ct. R. Pldg. § 6-1112(b)(6).",
+        "spans": [[4, 37]],
+        "groups": {
+          "rule": "6-1112",
+          "sub": "(b)(6)"
+        }
+      },
+      {
+        "text": "The court relied on Neb. Ct. R. Pldg. § 6-1108 in reaching its holding.",
+        "spans": [[20, 47]]
+      },
+      {
+        "text": "Under Neb. Ct. R. Pldg. § 6-1115(a), the claim fails.",
+        "spans": [[6, 36]]
+      }
+    ],
+    "negative": [
+      "The rule of thumb is to file early.",
+      "The Nebraska rules committee met 12 times in 2020.",
+      "Under Neb. Ct. R. Pldg. § as amended, the motion fails."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "State court rule. The span covers the rule number and any parenthesized subdivisions. No URL template: no fetch-verified host serves this rule set yet. Nebraska's evidence rules are a statute (Neb. Rev. Stat. ch. 27)."
+}

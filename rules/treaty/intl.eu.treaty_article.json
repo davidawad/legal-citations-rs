@@ -1,0 +1,57 @@
+{
+  "id": "intl.eu.treaty_article",
+  "kind": "treaty",
+  "jurisdiction": "intl.eu",
+  "tags": [
+    "international",
+    "eu"
+  ],
+  "pattern": "\\b(?:Art(?:icle|\\.)?|art\\.)\\s+(?P<article>[0-9]{1,3}[a-z]?(?:\\([0-9a-z]{1,3}\\))*)\\s+(?:of\\s+the\\s+)?(?P<treaty>TFEU|TEU|EC\\s+Treaty|EEC\\s+Treaty|TEC|Charter(?:\\s+of\\s+Fundamental\\s+Rights)?|CFR)\\b|\\b(?P<treaty2>TFEU|TEU|TEC)\\s+art(?:icle|\\.)?\\s+(?P<article2>[0-9]{1,3}[a-z]?(?:\\([0-9a-z]{1,3}\\))*)",
+  "priority": 60,
+  "normalize": "",
+  "authority_key": "",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Bluebook R21.9 and T3 (Treaty on the Functioning of the European Union art. <n>; EU practice: Article <n> TFEU)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R21.9 and T3 (European Union treaties) and the consolidated TFEU/TEU on EUR-Lex.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Under Article 101 TFEU, agreements that restrict competition are void.",
+        "spans": [[6, 22]],
+        "groups": {
+          "article": "101",
+          "treaty": "TFEU"
+        }
+      },
+      {
+        "text": "TFEU art. 102 bars abuse.",
+        "spans": [[0, 13]]
+      },
+      {
+        "text": "See Art. 6(1) TEU.",
+        "spans": [[4, 17]]
+      },
+      {
+        "text": "Article 8 of the Charter protects personal data.",
+        "spans": [[0, 24]]
+      }
+    ],
+    "negative": [
+      "Article 101 of the bylaws.",
+      "The TFEU has many articles.",
+      "art. 6 of the contract"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Both orders are one form (EU practice puts the treaty after the article, Bluebook before it), so the article and treaty groups appear twice; no shared authority key."
+}

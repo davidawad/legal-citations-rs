@@ -1,0 +1,68 @@
+{
+  "id": "us.fed.executive.presidential_directive",
+  "kind": "executive",
+  "jurisdiction": "us.fed.president",
+  "pattern": "\\b(?P<series>NSPM|PPD|HSPD|NSPD|PDD|NSDD|NSDM|PSD)-(?P<number>[0-9]{1,3})\\b",
+  "priority": 60,
+  "normalize": "{series}-{number}",
+  "authority_key": "us.president/{series}-{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "Presidential directive numbering (NSPM, PPD, HSPD, NSPD, PDD, NSDD, NSDM, PSD); Bluebook R. 14.7",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open Bluebook R. 14.7 and a directive's text (e.g. PPD-21 on the archived White House site) to confirm the series prefixes.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "See National Security Presidential Memorandum, NSPM-33 (Jan. 14, 2021).",
+        "spans": [
+          [
+            47,
+            54
+          ]
+        ],
+        "groups": {
+          "series": "NSPM",
+          "number": "33"
+        }
+      },
+      {
+        "text": "Critical infrastructure policy is set by PPD-21 (Feb. 12, 2013).",
+        "spans": [
+          [
+            41,
+            47
+          ]
+        ]
+      },
+      {
+        "text": "Compare HSPD-12 with NSDD-145.",
+        "spans": [
+          [
+            8,
+            15
+          ],
+          [
+            21,
+            29
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "The PPD department hired 21 officers.",
+      "NSPM guidance changed in 2021.",
+      "HSPD 12 badges are issued by agencies."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

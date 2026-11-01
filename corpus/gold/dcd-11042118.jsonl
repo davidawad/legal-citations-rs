@@ -1,0 +1,73 @@
+{"start": 100, "end": 114, "kind": "docket", "jurisdiction": "us.fed.dist.dcd", "text": "No. 25-cv-2200", "normalized": "No. 25-cv-2200", "form": "docket number"}
+{"start": 441, "end": 457, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1 at 15, 19", "normalized": "Dkt. 1 at 15, 19", "form": "record: ECF/Dkt"}
+{"start": 459, "end": 477, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Compl. ¶¶ 28, 46", "normalized": "Compl. ¶¶ 28, 46", "form": "record: complaint/brief"}
+{"start": 624, "end": 636, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 7, 11", "normalized": "Id. at 7, 11", "form": "Id."}
+{"start": 638, "end": 655, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Compl. ¶¶ 6, 21", "normalized": "Compl. ¶¶ 6, 21", "form": "record: complaint/brief"}
+{"start": 811, "end": 824, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 11, 19", "normalized": "Id. at 11, 19", "form": "Id."}
+{"start": 826, "end": 844, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Compl. ¶¶ 21, 40", "normalized": "Compl. ¶¶ 21, 40", "form": "record: complaint/brief"}
+{"start": 1015, "end": 1030, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 10 at 1, 3", "normalized": "Dkt. 10 at 1, 3", "form": "record: ECF/Dkt"}
+{"start": 1163, "end": 1170, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 16", "normalized": "Dkt. 16", "form": "record: ECF/Dkt"}
+{"start": 1254, "end": 1342, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rules 8\nand 12(b)(1), (b)(2), (b)(3), and (b)(6) of the Federal Rules of Civil Procedure", "normalized": "Fed. R. Civ. P. 8, 12(b)(1), (b)(2), (b)(3), (b)(6)", "form": "federal rule"}
+{"start": 1544, "end": 1586, "kind": "case", "jurisdiction": "us.scotus", "text": "Haines v. Kerner, 404 U.S. 519, 520 (1972)", "normalized": "404 U.S. 519", "form": "U.S. Reports"}
+{"start": 1666, "end": 1719, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Jarrell v. Tisch, 656 F. Supp. 237, 239\n(D.D.C. 1987)", "normalized": "656 F. Supp. 237", "form": "F. Supp."}
+{"start": 1789, "end": 1795, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 8", "normalized": "Fed. R. Civ. P. 8", "form": "prose section reference", "optional": true}
+{"start": 1997, "end": 2017, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Fed. R. Civ.\nP. 8(a)", "normalized": "Fed. R. Civ. P. 8(a)", "form": "federal rule"}
+{"start": 2023, "end": 2071, "kind": "case", "jurisdiction": "us.scotus", "text": "Ashcroft v. Iqbal, 556 U.S. 662, 678–79 (2009)", "normalized": "556 U.S. 662", "form": "U.S. Reports"}
+{"start": 2073, "end": 2130, "kind": "case", "jurisdiction": "us.fed.app.cadc", "text": "Ciralsky v. CIA, 355 F.3d 661, 668–\n71 (D.C. Cir. 2004)", "normalized": "355 F.3d 661", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 2386, "end": 2437, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Brown v. Califano, 75\nF.R.D. 497, 498 (D.D.C. 1977)", "normalized": "75 F.R.D. 497", "form": "F.R.D."}
+{"start": 2550, "end": 2556, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 8", "normalized": "Fed. R. Civ. P. 8", "form": "prose section reference", "optional": true}
+{"start": 2561, "end": 2633, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Cheeks v. Fort Myer Constr.\nCorp., 71 F. Supp. 3d 163, 169 (D.D.C. 2014)", "normalized": "71 F. Supp. 3d 163", "form": "F. Supp."}
+{"start": 2787, "end": 2793, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1", "normalized": "Dkt. 1", "form": "record: ECF/Dkt"}
+{"start": 2987, "end": 3004, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1 at 7–133", "normalized": "Dkt. 1 at 7–133", "form": "record: ECF/Dkt"}
+{"start": 3107, "end": 3124, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C.\n§ 1332", "normalized": "28 U.S.C. § 1332", "form": "U.S.C."}
+{"start": 3233, "end": 3250, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 1331", "normalized": "28 U.S.C. § 1331", "form": "U.S.C."}
+{"start": 3450, "end": 3467, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U.S.C. § 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 3473, "end": 3486, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 15 at 12", "normalized": "Dkt. 15 at 12", "form": "record: ECF/Dkt"}
+{"start": 3795, "end": 3806, "kind": "statute", "jurisdiction": "us.fed", "text": "42 USC 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C.", "note": "quoted from the complaint"}
+{"start": 3834, "end": 3845, "kind": "statute", "jurisdiction": "us.fed", "text": "28 USC\n3002", "normalized": "28 U.S.C. § 3002", "form": "U.S.C.", "note": "quoted from the complaint"}
+{"start": 3863, "end": 3874, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1 at 3", "normalized": "Dkt. 1 at 3", "form": "record: ECF/Dkt"}
+{"start": 3955, "end": 3966, "kind": "statute", "jurisdiction": "us.fed", "text": "15 USC 1692", "normalized": "15 U.S.C. § 1692", "form": "U.S.C.", "note": "quoted from the complaint"}
+{"start": 4060, "end": 4086, "kind": "statute", "jurisdiction": "us.fed", "text": "18 U.S.C. §§ 1331 – 34", "normalized": "18 U.S.C. §§ 1331–34", "form": "U.S.C."}
+{"start": 4130, "end": 4138, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "Id. at 4", "normalized": "Id. at 4", "form": "Id."}
+{"start": 4182, "end": 4199, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U.S.C. § 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 4509, "end": 4532, "kind": "case_short", "jurisdiction": "us.fed.dist.dcd", "text": "Brown, 75 F.R.D. at 498", "normalized": "75 F.R.D. at 498", "form": "short case (at)"}
+{"start": 4774, "end": 4787, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(1)", "normalized": "Fed. R. Civ. P. 12(b)(1)", "form": "prose section reference", "optional": true}
+{"start": 4833, "end": 4857, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Fed. R. Civ. P. 12(b)(1)", "normalized": "Fed. R. Civ. P. 12(b)(1)", "form": "federal rule"}
+{"start": 4859, "end": 4929, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Moran v. U.S. Capitol Police Bd., 820 F. Supp.\n2d 48, 53 (D.D.C. 2011)", "normalized": "820 F. Supp. 2d 48", "form": "F. Supp."}
+{"start": 4940, "end": 4953, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(1)", "normalized": "Fed. R. Civ. P. 12(b)(1)", "form": "prose section reference", "optional": true, "note": "inside a quoting parenthetical"}
+{"start": 5262, "end": 5275, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1 at 137", "normalized": "Dkt. 1 at 137", "form": "record: ECF/Dkt"}
+{"start": 5442, "end": 5452, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 141", "normalized": "Id. at 141", "form": "Id."}
+{"start": 5575, "end": 5590, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 145–48", "normalized": "Id. at 145–48", "form": "Id."}
+{"start": 5762, "end": 5779, "kind": "statute", "jurisdiction": "us.fed", "text": "42 U.S.C. § 1983", "normalized": "42 U.S.C. § 1983", "form": "U.S.C."}
+{"start": 5792, "end": 5801, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 25", "normalized": "Id. at 25", "form": "Id."}
+{"start": 5941, "end": 5968, "kind": "statute", "jurisdiction": "us.fed", "text": "Title 42\nSections 1983–85", "normalized": "42 U.S.C. §§ 1983–85", "form": "U.S.C.", "optional": true, "note": "informal form quoted from the complaint"}
+{"start": 6215, "end": 6223, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 3", "normalized": "Id. at 3", "form": "Id."}
+{"start": 6474, "end": 6482, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "id. at 5", "normalized": "Id. at 5", "form": "Id."}
+{"start": 6730, "end": 6740, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "Id. at 133", "normalized": "Id. at 133", "form": "Id."}
+{"start": 6996, "end": 7047, "kind": "case", "jurisdiction": "us.fed.app.cadc", "text": "Gray v. Poole, 275 F.3d\n1113, 1119 (D.C. Cir. 2002)", "normalized": "275 F.3d 1113", "form": "F./F.2d/F.3d/F.4th"}
+{"start": 7062, "end": 7115, "kind": "case", "jurisdiction": "us.scotus", "text": "D.C. Court of Appeals v. Feldman, 460 U.S. 462 (1983)", "normalized": "460 U.S. 462", "form": "U.S. Reports"}
+{"start": 7133, "end": 7178, "kind": "case", "jurisdiction": "us.scotus", "text": "Rooker v. Fid. Trust Co., 263 U.S. 413 (1923)", "normalized": "263 U.S. 413", "form": "U.S. Reports"}
+{"start": 7425, "end": 7496, "kind": "case", "jurisdiction": "us.scotus", "text": "Exxon Mobil Corp. v. Saudi Basic Indus. Corp., 544 U.S. 280, 284 (2005)", "normalized": "544 U.S. 280", "form": "U.S. Reports"}
+{"start": 7507, "end": 7575, "kind": "case", "jurisdiction": "us.scotus", "text": "T. M. v. Univ. of Maryland Med. Sys. Corp., 608 U.S. 668, 680 (2026)", "normalized": "608 U.S. 668", "form": "U.S. Reports"}
+{"start": 7872, "end": 7885, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule\n12(b)(1)", "normalized": "Fed. R. Civ. P. 12(b)(1)", "form": "prose section reference", "optional": true}
+{"start": 7897, "end": 7903, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 8", "normalized": "Fed. R. Civ. P. 8", "form": "prose section reference", "optional": true}
+{"start": 8165, "end": 8178, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(2)", "normalized": "Fed. R. Civ. P. 12(b)(2)", "form": "prose section reference", "optional": true}
+{"start": 8200, "end": 8213, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(3)", "normalized": "Fed. R. Civ. P. 12(b)(3)", "form": "prose section reference", "optional": true}
+{"start": 8250, "end": 8263, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule\n12(b)(6)", "normalized": "Fed. R. Civ. P. 12(b)(6)", "form": "prose section reference", "optional": true}
+{"start": 8287, "end": 8300, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(2)", "normalized": "Fed. R. Civ. P. 12(b)(2)", "form": "prose section reference", "optional": true}
+{"start": 8442, "end": 8511, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Clay v. Blue\nHackle N. Am., LLC, 907 F. Supp. 2d 85, 87 (D.D.C. 2012)", "normalized": "907 F. Supp. 2d 85", "form": "F. Supp."}
+{"start": 9032, "end": 9045, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 12(b)(3)", "normalized": "Fed. R. Civ. P. 12(b)(3)", "form": "prose section reference", "optional": true}
+{"start": 9050, "end": 9070, "kind": "statute", "jurisdiction": "us.fed", "text": "28 U.S.C. § 1406(a)", "normalized": "28 U.S.C. § 1406(a)", "form": "U.S.C."}
+{"start": 9192, "end": 9270, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Haysbert v. Word, No. 20-cv-2152, 2021\nWL 254105, at *2 (D.D.C. Jan. 25, 2021)", "normalized": "2021 WL 254105", "form": "Westlaw"}
+{"start": 9280, "end": 9344, "kind": "case", "jurisdiction": "us.scotus", "text": "Atl. Marine Const. Co. v. U.S. Dist. Ct., 571\nU.S. 49, 55 (2013)", "normalized": "571 U.S. 49", "form": "U.S. Reports"}
+{"start": 9732, "end": 9745, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 15 at 15", "normalized": "Dkt. 15 at 15", "form": "record: ECF/Dkt"}
+{"start": 9895, "end": 9908, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 1 at 133", "normalized": "Dkt. 1 at 133", "form": "record: ECF/Dkt"}
+{"start": 9996, "end": 10034, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "968 F. Supp. 2d 123, 129 (D.D.C. 2013)", "normalized": "968 F. Supp. 2d 123", "form": "F. Supp.", "note": "case name Ananiev v. Wells Fargo Bank, N.A. is split from the cite by footnote 2; span starts at the volume"}
+{"start": 10302, "end": 10389, "kind": "case", "jurisdiction": "us.fed.dist.dcd", "text": "Chrishon-Skinner v. Jones, No. 24-cv-2220, 2025 WL 1575674, at *4\n(D.D.C. Jan. 8, 2025)", "normalized": "2025 WL 1575674", "form": "Westlaw"}
+{"start": 10652, "end": 10655, "kind": "id", "jurisdiction": "us.fed.dist.dcd", "text": "Id.", "normalized": "Id.", "form": "Id."}
+{"start": 10950, "end": 10963, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 15 at 13", "normalized": "Dkt. 15 at 13", "form": "record: ECF/Dkt"}
+{"start": 11532, "end": 11538, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rule 8", "normalized": "Fed. R. Civ. P. 8", "form": "prose section reference", "optional": true}
+{"start": 12359, "end": 12380, "kind": "court_rule", "jurisdiction": "us.dc", "text": "DC Civil Rule 4(c)(4)", "normalized": "D.C. Super. Ct. Civ. R. 4(c)(4)", "form": "state rule", "note": "quoted from the plaintiff's motion"}
+{"start": 12456, "end": 12468, "kind": "record", "jurisdiction": "us.fed.dist.dcd", "text": "Dkt. 16 at 3", "normalized": "Dkt. 16 at 3", "form": "record: ECF/Dkt"}
+{"start": 12598, "end": 12621, "kind": "court_rule", "jurisdiction": "us.dc", "text": "D.C. Civil Rule 4(c)(4)", "normalized": "D.C. Super. Ct. Civ. R. 4(c)(4)", "form": "state rule"}
+{"start": 12732, "end": 12783, "kind": "court_rule", "jurisdiction": "us.fed", "text": "Rules 8, 12(b)(1), 12(b)(2), 12(b)(3), and 12(b)(6)", "normalized": "Fed. R. Civ. P. 8, 12(b)(1), 12(b)(2), 12(b)(3), 12(b)(6)", "form": "prose section reference", "optional": true}

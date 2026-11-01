@@ -1,0 +1,53 @@
+{
+  "id": "foreign.tr.law.en",
+  "kind": "foreign",
+  "jurisdiction": "foreign.tr",
+  "tags": [
+    "foreign",
+    "mena",
+    "tr"
+  ],
+  "pattern": "\\bTurkish\\s+(?:Law|Act|Code)\\s+No\\.?\\s*(?P<number>[0-9]{3,5})\\b",
+  "priority": 56,
+  "normalize": "Turkish Law No. {number}",
+  "authority_key": "tr.law/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.8,
+  "provenance": {
+    "encodes": "Turkish statutes in English: Law No. <n> (e.g. Law No. 6098, Turkish Code of Obligations)",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check English translations at mevzuat.gov.tr/ or Turkish Ministry of Justice: 'Law No. 6098'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "Turkish Law No. 6098 is the Code of Obligations.",
+        "spans": [[0, 20]],
+        "groups": {
+          "number": "6098"
+        }
+      },
+      {
+        "text": "See Turkish Act No. 4857.",
+        "spans": [[4, 24]]
+      },
+      {
+        "text": "Turkish Code No. 5237 is the Penal Code.",
+        "spans": [[0, 21]]
+      }
+    ],
+    "negative": [
+      "Law No. 6098 with no country.",
+      "Turkish law is codified.",
+      "Turkish Law No. 5."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}

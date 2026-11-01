@@ -1,0 +1,54 @@
+{
+  "id": "foreign.eg.law.ar",
+  "kind": "foreign",
+  "jurisdiction": "foreign.eg",
+  "tags": [
+    "foreign",
+    "mena",
+    "eg"
+  ],
+  "pattern": "(?:القانون|قانون)\\s+رقم\\s+(?P<number>[0-9٠-٩]{1,4})\\s+لسنة\\s+(?P<year>1[89][0-9]{2}|20[0-9]{2}|[١][٨٩][٠-٩]{2}|[٢][٠][٠-٩]{2})",
+  "priority": 50,
+  "normalize": "القانون رقم {number} لسنة {year}",
+  "authority_key": "eg.law/{year}/{number}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.6,
+  "provenance": {
+    "encodes": "Egyptian statute Arabic form: القانون رقم <n> لسنة <yyyy>",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Check any Al-Waqa'i' al-Misriyya (Official Gazette) entry or manshurat.org: 'القانون رقم N لسنة Y'.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "القانون رقم 131 لسنة 1948 بإصدار القانون المدني.",
+        "spans": [[0, 39]],
+        "groups": {
+          "number": "131",
+          "year": "1948"
+        }
+      },
+      {
+        "text": "راجع قانون رقم 17 لسنة 1999 التجاري.",
+        "spans": [[9, 43]]
+      },
+      {
+        "text": "القانون رقم ١٥١ لسنة ٢٠٢٠ لحماية البيانات.",
+        "spans": [[0, 46]]
+      }
+    ],
+    "negative": [
+      "القانون المدني نافذ.",
+      "القانون رقم 5 لسنة 3.",
+      "قانون بلا رقم لسنة 1948."
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": "Same words are used by other Arab states (Jordan, Iraq). Assigned to Egypt; Gulf forms carry الاتحادي or parentheses and are not matched."
+}

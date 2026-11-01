@@ -1,0 +1,70 @@
+{
+  "id": "us.fed.epa.enforcement_docket",
+  "kind": "docket",
+  "jurisdiction": "us.fed.epa",
+  "tags": [
+    "environment"
+  ],
+  "pattern": "\\b(?P<docket>(?:FIFRA|TSCA|CAA|CWA|RCRA|EPCRA|CERCLA|SDWA|MPRSA)-(?:HQ|[0-9]{2})-(?:19|20)[0-9]{2}-[0-9]{4})\\b",
+  "priority": 60,
+  "normalize": "Docket No. {docket}",
+  "authority_key": "us.epa_docket/{docket}",
+  "url_templates": [],
+  "url_decoders": [],
+  "base_confidence": 0.9,
+  "provenance": {
+    "encodes": "EPA administrative enforcement docket numbers (statute-region-year-number), 40 C.F.R. part 22",
+    "opened": false,
+    "source_url": "",
+    "how_to_verify": "Open the EPA Administrative Enforcement Dockets at https://yosemite.epa.gov/OA/RHC/EPAAdmin.nsf and compare the docket form.",
+    "derived_from": [],
+    "third_party": []
+  },
+  "examples": {
+    "positive": [
+      {
+        "text": "The complaint is FIFRA-09-2019-0001.",
+        "spans": [
+          [
+            17,
+            35
+          ]
+        ],
+        "groups": {
+          "docket": "FIFRA-09-2019-0001"
+        }
+      },
+      {
+        "text": "See Docket No. TSCA-03-2018-0123.",
+        "spans": [
+          [
+            15,
+            32
+          ]
+        ]
+      },
+      {
+        "text": "Compare CAA-05-2019-0012 with RCRA-HQ-2011-7503.",
+        "spans": [
+          [
+            8,
+            24
+          ],
+          [
+            30,
+            47
+          ]
+        ]
+      }
+    ],
+    "negative": [
+      "FIFRA-09 pesticides",
+      "the TSCA-2018 review",
+      "CAA-05-19-0012"
+    ]
+  },
+  "measured": {
+    "precision": "unmeasured"
+  },
+  "note": ""
+}
